@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 402 | 19,893 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 403 | 19,919 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -443,7 +443,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core-part-2.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core-part-2.md#module-9ff25be30275) | Becoming pure core |
-| [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
+| [GrammarMap.lean](lean-declarations/becoming-core-part-2.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarPath.lean](lean-declarations/becoming-core-part-3.md#module-f9c8cd7b5a1a) | Becoming pure core |
 | [GrammarReadings.lean](lean-declarations/becoming-core-part-3.md#module-ae9784542ef0) | Becoming pure core |
 | [GrammarRegularity.lean](lean-declarations/becoming-core-part-3.md#module-e198dd2b176a) | Becoming pure core |
@@ -630,6 +630,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OneProcessAudit.lean](lean-declarations/valuation.md#module-297e01080273) | Valuation development and liangzhi |
 | [OneStep.lean](lean-declarations/becoming-core-part-4.md#module-181010f81637) | Becoming pure core |
 | [Onward.lean](lean-declarations/becoming-core-part-4.md#module-d8b9f7e31a6f) | Becoming pure core |
+| [OpenComposition.lean](lean-declarations/becoming-core-part-4.md#module-a396ec7984ea) | Becoming pure core |
 | [OpenFutureRevision.lean](lean-declarations/ethics-part-2.md#module-a5f26298589c) | The ethics and the generative direction |
 | [OpenedCorrection.lean](lean-declarations/becoming-ring.md#module-a7b3d8e562d5) | Becoming instances and applications |
 | [Openness.lean](lean-declarations/becoming-core-part-4.md#module-5be60c839fbf) | Becoming pure core |

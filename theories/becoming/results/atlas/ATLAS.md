@@ -12,7 +12,7 @@ The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the te
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-198 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+199 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
@@ -23,7 +23,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [E. Waiting and reciprocity](families/e.md) | 10 |
 | [F. Cycles and alternation](families/f.md) | 24 |
 | [G. Closure and stagnation](families/g.md) | 18 |
-| [H. Kept regions, renewal, generation](families/h.md) | 41 |
+| [H. Kept regions, renewal, generation](families/h.md) | 42 |
 
 <a id="family-a"></a>
 ## A. Absorption and ending
@@ -286,6 +286,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | <a id="paced-stock-and-cadence-margin-sandwich"></a><a id="fine-step-stock-under-coarse-rule-cadences-and-the-pacemargin-sandwich-粗节律下之细步存量与节奏裕度夹击"></a>[Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](families/h.md#paced-stock-and-cadence-margin-sandwich) | [paced-stock-and-cadence-margin-sandwich](../records/paced-stock-and-cadence-margin-sandwich.md) | any type | recorded-checked (theorem) | 2 | 1 |
 | <a id="lax-multi-scale-viability"></a><a id="lax-multi-scale-viability-simulation-and-vertical-tower-composition-松弛多尺度存续模拟与塔式纵向复合"></a>[Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](families/h.md#lax-multi-scale-viability) | [lax-multi-scale-viability](../records/lax-multi-scale-viability.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | <a id="transformative-viability-order"></a><a id="viability-preserving-transformative-continuation-order-保续转化序"></a>[Viability-preserving transformative continuation order (保续转化序)](families/h.md#transformative-viability-order) | [transformative-viability-order](../records/transformative-viability-order.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| <a id="open-interface-composition-and-replacement"></a><a id="open-interface-composition-boundary-hiding-structural-replacement-and-laxity-开放接口组合边界隐藏异构替换与松弛仿真"></a>[Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](families/h.md#open-interface-composition-and-replacement) | [open-interface-composition-and-replacement](../records/open-interface-composition-and-replacement.md) | any type | recorded-checked (theorem) | 1 | 1 |
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 

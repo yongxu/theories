@@ -3981,6 +3981,18 @@
    "page": "theories/becoming/results/records/open-form-realization-under-revision.md"
   },
   {
+   "id": "record:open-interface-composition-and-replacement",
+   "type": "result",
+   "record": "open-interface-composition-and-replacement",
+   "title": "Open-interface composition, boundary hiding, structural replacement, and laxity",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/open-interface-composition-and-replacement.md"
+  },
+  {
    "id": "record:optima-rebuild-a-depleted-base",
    "type": "result",
    "record": "optima-rebuild-a-depleted-base",
@@ -11805,6 +11817,17 @@
    "name": "Becoming.MultiScaleViability",
    "level": "L1",
    "theorems": 36,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OpenComposition",
+   "type": "module",
+   "name": "Becoming.OpenComposition",
+   "level": "L1",
+   "theorems": 26,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -35347,6 +35370,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OpenComposition",
+   "to": "module:Becoming.AdaptiveLoops",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenComposition",
+   "to": "module:Becoming.MultiScaleViability",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.OpenedCorrection",
    "to": "module:Becoming.GuardHorizon",
    "type": "imports"
@@ -51041,6 +51074,26 @@
    "from": "record:open-form-realization-under-revision",
    "to": "record:practical-judgment-under-living-significance",
    "type": "related"
+  },
+  {
+   "from": "record:open-interface-composition-and-replacement",
+   "to": "module:Becoming.OpenComposition",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:open-interface-composition-and-replacement",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:open-interface-composition-and-replacement",
+   "to": "record:coupled-adaptive-loops-and-race",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:open-interface-composition-and-replacement",
+   "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
   },
   {
    "from": "record:optima-rebuild-a-depleted-base",

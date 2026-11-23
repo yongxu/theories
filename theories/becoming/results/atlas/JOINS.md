@@ -14,12 +14,12 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 | What | Measured |
 |---|---:|
-| Exits that name a destination (a dynamic, or a state in words) that a law shows | 333 of 350 |
-| Exits that name a destination no law shows (argued, conjectured, read or open) | 17 of 350 |
-| Dynamics with no exit | 60 of 198 |
+| Exits that name a destination (a dynamic, or a state in words) that a law shows | 334 of 351 |
+| Exits that name a destination no law shows (argued, conjectured, read or open) | 17 of 351 |
+| Dynamics with no exit | 60 of 199 |
 | Transitions that name what they lie between | 97 of 110 |
-| Exits that say which premise they drop (none, where they leave within the premises) | 324 of 350 |
-| Dynamics read for the premises their laws take | 198 of 198 |
+| Exits that say which premise they drop (none, where they leave within the premises) | 325 of 351 |
+| Dynamics read for the premises their laws take | 199 of 199 |
 | Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 57 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
 | Tests joined to records only through a folder other tests share | 26 of 66 |
@@ -28,13 +28,13 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | Crosswalk targets that resolve to a record (named, or by its home anchor) | 2,200 of 3,772 |
 | Crosswalk entries none of whose targets resolves to a record (or with no target) | 277 of 1,183 |
 | Crosswalk entries that reach a dynamic through a record | 724 of 1,183 |
-| Live theorem records the atlas's dynamics do not cite | 282 of 546 |
-| Nodes of the theory graph that are a dynamic, exit, transition, test, premise or correspondence | 0 of 3,319 |
-| Live hypotheses, and their distinct wordings | 1,338, 1,310 |
+| Live theorem records the atlas's dynamics do not cite | 282 of 547 |
+| Nodes of the theory graph that are a dynamic, exit, transition, test, premise or correspondence | 0 of 3,321 |
+| Live hypotheses, and their distinct wordings | 1,339, 1,311 |
 
 ## Exits and transitions
 
-350 exits on 198 dynamics. 72 name another dynamic as their destination and 278 name a state in words (17 of these 350 with no law showing it: argued, conjectured, read or open); 0 name none. 165 are witnesses: a constructed example that shows a course can leave, with no condition for it. 60 dynamics have no exit. 97 of 110 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+351 exits on 199 dynamics. 72 name another dynamic as their destination and 279 name a state in words (17 of these 351 with no law showing it: argued, conjectured, read or open); 0 name none. 165 are witnesses: a constructed example that shows a course can leave, with no condition for it. 60 dynamics have no exit. 97 of 110 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|
@@ -45,7 +45,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | E. Waiting and reciprocity | 10 | 4 | 14 | 14 | 4 | 5 |
 | F. Cycles and alternation | 24 | 17 | 8 | 8 | 2 | 7 |
 | G. Closure and stagnation | 18 | 1 | 59 | 59 | 36 | 0 |
-| H. Kept regions, renewal, generation | 41 | 11 | 80 | 80 | 36 | 25 |
+| H. Kept regions, renewal, generation | 42 | 11 | 81 | 81 | 36 | 25 |
 
 **The exits that name a destination.**
 
@@ -219,6 +219,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [no-finite-part-bears-taking](families/b.md#no-finite-part-bears-taking) (exit 1) | [closed-cycle-without-dissipation](families/f.md#closed-cycle-without-dissipation) | witness |
 | [no-finite-part-bears-taking](families/b.md#no-finite-part-bears-taking) (exit 2) | the flow balances, gives and takes only while active, keeps activity supported and is dissipative, yet no step is enclosed: at every step the renewer gives the pool one unit while taking nothing, and a formation takes from the pool (a witness) | witness |
 | [not-going-out-of-a-region](families/a.md#not-going-out-of-a-region) (exit 1) | a step of continuation from a member of P to something outside P, placed on the line: reached from the line's start and reaching its end | necessary |
+| [open-interface-composition-and-replacement](families/h.md#open-interface-composition-and-replacement) (exit 1) | closed Viability.Kernel and synchronous-product LaxSim stability preserved across gluing, hiding, replacement, and live reconfiguration | sufficient |
 | [optima-rebuild-a-depleted-base](families/h.md#optima-rebuild-a-depleted-base) (exit 1) | [a-weighting-faster-than-renewal-ends-the-base](families/b.md#a-weighting-faster-than-renewal-ends-the-base) | witness |
 | [others-drawing-first-end-the-base](families/b.md#others-drawing-first-end-the-base) (exit 1) | where nothing stands at nothing and some level y within what stands at the start, with what stands at y at least y at every step, rises faster than the weighting falls at each step, over at least two steps, with a capacity drawing down to y and holding it: every optimum of every order rising with the weighted draw stands above nothing after the first step (0 < x 1) | sufficient |
 | [others-drawing-first-end-the-base](families/b.md#others-drawing-first-end-the-base) (exit 2) | [optima-rebuild-a-depleted-base](families/h.md#optima-rebuild-a-depleted-base) | sufficient |
@@ -487,7 +488,7 @@ Where a folder holds several tests, a join through it cannot tell which: 9 folde
 
 ## The crosswalk
 
-1,183 entries read against 3,772 targets. Every target resolves in its file, as the atlas render checks. In the index, 2,099 name a record and 101 name only an anchor that is a record's home (`#r-<id>`); 1,572 name a section, a heading or a page that no record or dynamic stands for, and join nothing. An entry reaches a dynamic only through a record the dynamic cites: 714 entries reach 160 dynamics through the records they name (714 and 157 counting only a dynamic's own list of records, as the joint reading counted), and 724 reach 160 counting the home anchors; 38 dynamics are reached by none. 121 entries have no target (105 not-carried, 16 history-only), and 156 have targets of which none resolves to a record.
+1,183 entries read against 3,772 targets. Every target resolves in its file, as the atlas render checks. In the index, 2,099 name a record and 101 name only an anchor that is a record's home (`#r-<id>`); 1,572 name a section, a heading or a page that no record or dynamic stands for, and join nothing. An entry reaches a dynamic only through a record the dynamic cites: 714 entries reach 160 dynamics through the records they name (714 and 157 counting only a dynamic's own list of records, as the joint reading counted), and 724 reach 160 counting the home anchors; 39 dynamics are reached by none. 121 entries have no target (105 not-carried, 16 history-only), and 156 have targets of which none resolves to a record.
 
 | Domain | Entries | Reaching a dynamic | Targets | Resolving to a record |
 |---|---:|---:|---:|---:|
@@ -507,11 +508,11 @@ Where a folder holds several tests, a join through it cannot tell which: 9 folde
 
 ## The atlas and the theory graph
 
-The theory graph has 3,319 nodes (1,724 text, 576 result, 559 section, 416 module, 41 concept, 3 dossier), and none of them is a dynamic, exit, transition, test, premise or correspondence: the atlas and the graph share no node. They meet only through records: 191 of 198 dynamics cite a record that is a result node of the graph, and 7 cite no record ([four-routes-of-transition](families/a.md#four-routes-of-transition), reading; [capture-reaching-the-routes-of-correction](families/c.md#capture-reaching-the-routes-of-correction), reading; [selection-for-narrowing-what-couples-in](families/c.md#selection-for-narrowing-what-couples-in), reading; [self-reproducing-selection-across-carriers](families/c.md#self-reproducing-selection-across-carriers), open; [locked-seeking](families/d.md#locked-seeking), reading; [obscuration-and-reopening](families/d.md#obscuration-and-reopening), reading; [cooperation-read-as-giving-that-waits](families/e.md#cooperation-read-as-giving-that-waits), reading).
+The theory graph has 3,321 nodes (1,724 text, 577 result, 559 section, 417 module, 41 concept, 3 dossier), and none of them is a dynamic, exit, transition, test, premise or correspondence: the atlas and the graph share no node. They meet only through records: 192 of 199 dynamics cite a record that is a result node of the graph, and 7 cite no record ([four-routes-of-transition](families/a.md#four-routes-of-transition), reading; [capture-reaching-the-routes-of-correction](families/c.md#capture-reaching-the-routes-of-correction), reading; [selection-for-narrowing-what-couples-in](families/c.md#selection-for-narrowing-what-couples-in), reading; [self-reproducing-selection-across-carriers](families/c.md#self-reproducing-selection-across-carriers), open; [locked-seeking](families/d.md#locked-seeking), reading; [obscuration-and-reopening](families/d.md#obscuration-and-reopening), reading; [cooperation-read-as-giving-that-waits](families/e.md#cooperation-read-as-giving-that-waits), reading).
 
 ## Declarations
 
-The core run lists 28,580 declarations. The atlas's dynamics name 2,929, of which 2,745 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 3,044 times a dynamic names a declaration, 22 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 387 of the declarations named are listed by more than one record. The records list 26,001 declarations, 23,748 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 28,640 declarations. The atlas's dynamics name 2,947, of which 2,763 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 3,062 times a dynamic names a declaration, 22 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 387 of the declarations named are listed by more than one record. The records list 26,044 declarations, 23,791 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 
@@ -522,13 +523,13 @@ The core run lists 28,580 declarations. The atlas's dynamics name 2,929, of whic
 
 ## Records the atlas does not cite
 
-568 records are live, 546 of them theorems. The atlas's dynamics cite 264 of the theorems (in their records, exits, transitions, hypotheses or standings; 263 in an entry's own list of records) and leave 282. Of those, 153 are reached by a crosswalk target, which ties them to a domain and no dynamic. 10 live theorems have no home section in a chapter in the theory graph.
+569 records are live, 547 of them theorems. The atlas's dynamics cite 265 of the theorems (in their records, exits, transitions, hypotheses or standings; 264 in an entry's own list of records) and leave 282. Of those, 153 are reached by a crosswalk target, which ties them to a domain and no dynamic. 11 live theorems have no home section in a chapter in the theory graph.
 
 **By family.** The family is the record's own field, the session map's of 8 October 2026, not the atlas's.
 
 | Family | Live theorems | Not cited |
 |---|---:|---:|
-| F01 Relational core and explanatory adequacy | 339 | 166 |
+| F01 Relational core and explanatory adequacy | 340 | 166 |
 | F02 Shared support and plan composition | 11 | 9 |
 | F03 Readiness and actual progress | 4 | 3 |
 | F04 Description and feedback reliability | 52 | 6 |
@@ -546,7 +547,7 @@ The core run lists 28,580 declarations. The atlas's dynamics name 2,929, of whic
 
 | Chapter | Live theorems | Not cited |
 |---|---:|---:|
-| no home section in a chapter | 10 | 0 |
+| no home section in a chapter | 11 | 0 |
 | [01-ROOT.md](../../chapters/01-ROOT.md) | 86 | 69 |
 | [02-MAP.md](../../chapters/02-MAP.md) | 102 | 20 |
 | [03-KNOWING.md](../../chapters/03-KNOWING.md) | 102 | 71 |
@@ -583,7 +584,7 @@ Where two rows share a folder (LA4's two stages, IN1's two rounds), only an id c
 
 ## Pilot: premise ids
 
-K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 437 of the 1,338 live hypotheses match some premise, and 98 match more than one.
+K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 437 of the 1,339 live hypotheses match some premise, and 98 match more than one.
 
 | Premise | Proposed id | Hypotheses naming it (records) | Matching its pattern (records) | Dynamics quoting one | Witnesses in the core |
 |---|---|---:|---:|---:|---:|

@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Atlas](theories/becoming/results/atlas/ATLAS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-576 registered results: 545 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). 1439 curated edges join 501 results to the results they draw on.
+577 registered results: 546 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). 1442 curated edges join 502 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -270,6 +270,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [one-step-missing-laws][] ← <a id="one-step-missing-laws--laws-of-one-step-complete"></a>[laws-of-one-step-complete][]
 - [only-the-order-of-change-shows][] ← <a id="only-the-order-of-change-shows--laws-at-coarser-steps"></a>[laws-at-coarser-steps][]
 - [open-form-realization-under-revision][] ← <a id="open-form-realization-under-revision--positive-ground-open-futures"></a>[positive-ground-open-futures][] · <a id="open-form-realization-under-revision--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][]
+- [open-interface-composition-and-replacement][] ← <a id="open-interface-composition-and-replacement--coupled-adaptive-loops-and-race"></a>[coupled-adaptive-loops-and-race][] · <a id="open-interface-composition-and-replacement--lax-multi-scale-viability"></a>[lax-multi-scale-viability][] · <a id="open-interface-composition-and-replacement--conditions-kept-together"></a>[conditions-kept-together][]
 - [optima-rebuild-a-depleted-base][] ← <a id="optima-rebuild-a-depleted-base--a-weighting-faster-than-renewal-ends-the-base"></a>[a-weighting-faster-than-renewal-ends-the-base][] · <a id="optima-rebuild-a-depleted-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="optima-rebuild-a-depleted-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [order-of-exchanges-is-the-invariant][] ← <a id="order-of-exchanges-is-the-invariant--exchanges-commute-unless-joined"></a>[exchanges-commute-unless-joined][]
 - [order-of-exchanges-sharing-a-relatum][] ← <a id="order-of-exchanges-sharing-a-relatum--the-step-index-from-own-courses"></a>[the-step-index-from-own-courses][]
@@ -797,6 +798,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [one-step-missing-laws]: theories/becoming/results/records/one-step-missing-laws.md
 [only-the-order-of-change-shows]: theories/becoming/results/records/only-the-order-of-change-shows.md
 [open-form-realization-under-revision]: theories/becoming/results/records/open-form-realization-under-revision.md
+[open-interface-composition-and-replacement]: theories/becoming/results/records/open-interface-composition-and-replacement.md
 [optima-rebuild-a-depleted-base]: theories/becoming/results/records/optima-rebuild-a-depleted-base.md
 [order-of-exchanges-is-the-invariant]: theories/becoming/results/records/order-of-exchanges-is-the-invariant.md
 [order-of-exchanges-sharing-a-relatum]: theories/becoming/results/records/order-of-exchanges-sharing-a-relatum.md

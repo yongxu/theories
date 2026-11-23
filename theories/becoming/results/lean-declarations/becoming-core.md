@@ -11,14 +11,14 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 402 modules are listed on 7 parts of about equal size, the largest 747,970 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 403 modules are listed on 7 parts of about equal size, the largest 747,998 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
 | [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 68, from GenerativeCore.lean to Counting.lean | 2,761 |
-| [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 60, from CoupledDrawers.lean to GrammarLaws.lean | 2,880 |
-| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 65, from GrammarMap.lean to LevelCoupling.lean | 2,916 |
-| [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 41, from Lexical.lean to OverExchange.lean | 2,938 |
+| [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 61, from CoupledDrawers.lean to GrammarMap.lean | 2,930 |
+| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 64, from GrammarPath.lean to LevelCoupling.lean | 2,866 |
+| [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 42, from Lexical.lean to OverExchange.lean | 2,964 |
 | [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 51, from OwnClass.lean to ReflexivePrediction.lean | 2,655 |
 | [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 57, from RegimeMargin.lean to Settling.lean | 2,887 |
 | [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 60, from SharedCodes.lean to InquirySufficiency.lean | 2,856 |
@@ -153,7 +153,7 @@ This group's 402 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-cc6fc7f03b4e"></a>[GrammarCourse.lean](../lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | part 2 | 32 |
 | <a id="module-e861b9c79f9d"></a>[GrammarCrossing.lean](../lean-declarations/becoming-core-part-2.md#module-e861b9c79f9d) | part 2 | 9 |
 | <a id="module-9ff25be30275"></a>[GrammarLaws.lean](../lean-declarations/becoming-core-part-2.md#module-9ff25be30275) | part 2 | 217 |
-| <a id="module-3c1996315d3a"></a>[GrammarMap.lean](../lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | part 3 | 50 |
+| <a id="module-3c1996315d3a"></a>[GrammarMap.lean](../lean-declarations/becoming-core-part-2.md#module-3c1996315d3a) | part 2 | 50 |
 | <a id="module-f9c8cd7b5a1a"></a>[GrammarPath.lean](../lean-declarations/becoming-core-part-3.md#module-f9c8cd7b5a1a) | part 3 | 108 |
 | <a id="module-ae9784542ef0"></a>[GrammarReadings.lean](../lean-declarations/becoming-core-part-3.md#module-ae9784542ef0) | part 3 | 13 |
 | <a id="module-e198dd2b176a"></a>[GrammarRegularity.lean](../lean-declarations/becoming-core-part-3.md#module-e198dd2b176a) | part 3 | 25 |
@@ -254,6 +254,7 @@ This group's 402 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-13d3b7e74c6a"></a>[Observation.lean](../lean-declarations/becoming-core-part-4.md#module-13d3b7e74c6a) | part 4 | 27 |
 | <a id="module-181010f81637"></a>[OneStep.lean](../lean-declarations/becoming-core-part-4.md#module-181010f81637) | part 4 | 301 |
 | <a id="module-d8b9f7e31a6f"></a>[Onward.lean](../lean-declarations/becoming-core-part-4.md#module-d8b9f7e31a6f) | part 4 | 28 |
+| <a id="module-a396ec7984ea"></a>[OpenComposition.lean](../lean-declarations/becoming-core-part-4.md#module-a396ec7984ea) | part 4 | 26 |
 | <a id="module-5be60c839fbf"></a>[Openness.lean](../lean-declarations/becoming-core-part-4.md#module-5be60c839fbf) | part 4 | 78 |
 | <a id="module-86be84561604"></a>[Optimum.lean](../lean-declarations/becoming-core-part-4.md#module-86be84561604) | part 4 | 509 |
 | <a id="module-0116411bbe45"></a>[OptimumSeason.lean](../lean-declarations/becoming-core-part-4.md#module-0116411bbe45) | part 4 | 63 |

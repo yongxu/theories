@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-41 of the atlas's 198 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+42 of the atlas's 199 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -55,6 +55,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [Fine-step stock under coarse rule cadences and the pace–margin sandwich (粗节律下之细步存量与节奏裕度夹击)](#paced-stock-and-cadence-margin-sandwich) | [paced-stock-and-cadence-margin-sandwich](../../records/paced-stock-and-cadence-margin-sandwich.md) | any type | recorded-checked (theorem) | 2 | 1 |
 | [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability) | [lax-multi-scale-viability](../../records/lax-multi-scale-viability.md) | any type | recorded-checked (theorem) | 1 | 1 |
 | [Viability-preserving transformative continuation order (保续转化序)](#transformative-viability-order) | [transformative-viability-order](../../records/transformative-viability-order.md) | any type | recorded-checked (theorem) | 1 | 1 |
+| [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement) | [open-interface-composition-and-replacement](../../records/open-interface-composition-and-replacement.md) | any type | recorded-checked (theorem) | 1 | 1 |
 
 <a id="generation-and-degeneration-at-two-grains"></a>
 ### Generation, keeping and degeneration at two grains (生成、守、退化)
@@ -1810,7 +1811,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
   - *Used directly by proofs here.*
     - `Becoming.Viability.kernel_iff_certificate`, in `Becoming.lax_kernel_of_kernel`, listed under [Never leaving a guard, conditions kept together, and lasting](#never-leaving-a-guard).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.lax_kernel_of_certificate`: in `Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel`, listed under [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](#open-interface-composition-and-replacement).
 
 <a id="transformative-viability-order"></a>
 ### Viability-preserving transformative continuation order (保续转化序)
@@ -1834,6 +1836,32 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
   - *Used directly by proofs here.*
     - `Becoming.Flow.whole_not_keepsWidening`, in `Becoming.FiniteGainless.not_keepsWidening`, listed under [What keeping widening needs, and what carries it](g.md#what-keeping-widening-needs).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+
+<a id="open-interface-composition-and-replacement"></a>
+### Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)
+
+- **Mechanism.** Splits adaptive systems into internal Int and exposed Ext ports (OpenComponent) with assume-guarantee InterfaceContracts, glues systems along shared Ext via associative OpenComponent.compose and seals subsets via OpenComponent.hide, preserves closed Viability.Kernel under compose_close_interchange (contrasted with HiddenCouplingFailure.witness on unmonitored shared sites), certifies heterogeneous replacement (ContractRefines, replace_left_viable), live mid-run structural rewrites (ReconfigProcess, rewrite_step_viable), and interface widening (widen_interface_heals_blindness), and lifts synchronous product LaxSims via SlackDist.max / SlackDist.sum.
+- **Base.** any type
+- **How far seen.** [open-interface-composition-and-replacement](../../records/open-interface-composition-and-replacement.md) recorded-checked (theorem)
+- **Declarations.** `Becoming.OpenComposition.OpenComponent`, `Becoming.OpenComposition.InterfaceContract`, `Becoming.OpenComposition.OpenComponent.compose`, `Becoming.OpenComposition.composeContract`, `Becoming.OpenComposition.composeAssocEquiv`, `Becoming.OpenComposition.OpenComponent.hide`, `Becoming.OpenComposition.hideContract`, `Becoming.OpenComposition.close_contract_kernel`, `Becoming.OpenComposition.compose_close_interchange`, `Becoming.OpenComposition.hidden_coupling_interchange_failure`, `Becoming.OpenComposition.ContractRefines`, `Becoming.OpenComposition.replace_left_viable`, `Becoming.OpenComposition.ReconfigProcess`, `Becoming.OpenComposition.rewrite_step_viable`, `Becoming.OpenComposition.widen_interface_heals_blindness`, `Becoming.OpenComposition.compose_laxSim_max`, `Becoming.OpenComposition.compose_laxSim_sum`, `Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel`
+- **Hypotheses, quoted from the records.**
+  - [open-interface-composition-and-replacement](../../records/open-interface-composition-and-replacement.md), hypothesis 1: No axiom. Requires RegimeMargin.Coupled.Indexed.Rises, conservative observation and warning detection before crossing warn_margin, channel delivery within combined maxSilence, lag-buffered initial margin x_crit + eta * cap ≤ x₀, ContractRefines bounds for replacement/reconfig, and synchronous prodProcess for compose_laxSim_max/sum.
+- **Premises, by law.** None.
+- **Forbids.** Violation of hidden or exposed substrate x_crit margins under associative composition, hiding, heterogeneous ContractRefines replacement, or live ReconfigProcess transitions (hidden_coupling_interchange_failure shows failure when shared sites go unmonitored).
+- **Exits.**
+  - To a state, in words: “closed Viability.Kernel and synchronous-product LaxSim stability preserved across gluing, hiding, replacement, and live reconfiguration”: sufficient, by `Becoming.OpenComposition.compose_close_interchange`. Its edge: Monitored shared boundary channels and lag buffers keep combined closedProcess inside closedGuard across composition and reconfig.. Drops no premise: it leaves within them. Records: [open-interface-composition-and-replacement](../../records/open-interface-composition-and-replacement.md) recorded-checked (theorem). ([open-interface-composition-and-replacement.md#laws--规律](../../records/open-interface-composition-and-replacement.md#laws--规律))
+- **Transitions.** None.
+- **Tests.** None.
+- **Open.**
+  - Instantiating OpenComponent, InterfaceContract, and ReconfigProcess across endogenous turning, parametric local-accuracy drawdown, scope invasion guards, and direct closedProcess LaxSim decoupling. ([open-interface-composition-and-replacement.md#does-not-show--未表明](../../records/open-interface-composition-and-replacement.md#does-not-show--未表明))
+- **Beyond its couplings.** Requires explicit shared-site monitoring within combined lag headroom and synchronous prodProcess for compose_laxSim.
+- **Sources.** [open-interface-composition-and-replacement.md#laws--规律](../../records/open-interface-composition-and-replacement.md#laws--规律)
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.*
+    - `Becoming.lax_kernel_of_certificate`, in `Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel`, listed under [Lax multi-scale viability simulation and vertical tower composition (松弛多尺度存续模拟与塔式纵向复合)](#lax-multi-scale-viability).
+  - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
+    - `Becoming.OpenComposition.close_contract_kernel` → `Becoming.Viability.Certificate.kernel` → `Becoming.Viability.kernel_iff_held`, listed under [A reading kept by its update, and the reading its own history carries](d.md#a-reading-kept-by-its-update).
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), **H**.

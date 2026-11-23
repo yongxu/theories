@@ -357,7 +357,7 @@
   "E": 10,
   "F": 24,
   "G": 18,
-  "H": 41
+  "H": 42
  },
  "dynamics": [
   {
@@ -59081,7 +59081,15 @@
      }
     ],
     "chains": [],
-    "used_by": [],
+    "used_by": [
+     {
+      "used": "Becoming.lax_kernel_of_certificate",
+      "dynamic": "open-interface-composition-and-replacement",
+      "in": [
+       "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+      ]
+     }
+    ],
     "shared": [],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
@@ -59446,6 +59454,169 @@
      "receipt_declarations_not_theorems": [
       "Becoming.StockFlowBridge.unitWeb",
       "Becoming.StockFlowBridge.unitFlow"
+     ],
+     "not_in_the_receipt_as_written": []
+    },
+    "no_row": {
+     "in_modules_behind": [],
+     "other": []
+    }
+   }
+  },
+  {
+   "id": "open-interface-composition-and-replacement",
+   "name": {
+    "en": "Open-interface composition, boundary hiding, structural replacement, and laxity",
+    "zh": "开放接口组合、边界隐藏、异构替换与松弛仿真"
+   },
+   "family": "H",
+   "mechanism": {
+    "en": "Splits adaptive systems into internal Int and exposed Ext ports (OpenComponent) with assume-guarantee InterfaceContracts, glues systems along shared Ext via associative OpenComponent.compose and seals subsets via OpenComponent.hide, preserves closed Viability.Kernel under compose_close_interchange (contrasted with HiddenCouplingFailure.witness on unmonitored shared sites), certifies heterogeneous replacement (ContractRefines, replace_left_viable), live mid-run structural rewrites (ReconfigProcess, rewrite_step_viable), and interface widening (widen_interface_heals_blindness), and lifts synchronous product LaxSims via SlackDist.max / SlackDist.sum."
+   },
+   "records": [
+    "open-interface-composition-and-replacement"
+   ],
+   "standing": [
+    {
+     "record": "open-interface-composition-and-replacement",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    }
+   ],
+   "declarations": [
+    "Becoming.OpenComposition.OpenComponent",
+    "Becoming.OpenComposition.InterfaceContract",
+    "Becoming.OpenComposition.OpenComponent.compose",
+    "Becoming.OpenComposition.composeContract",
+    "Becoming.OpenComposition.composeAssocEquiv",
+    "Becoming.OpenComposition.OpenComponent.hide",
+    "Becoming.OpenComposition.hideContract",
+    "Becoming.OpenComposition.close_contract_kernel",
+    "Becoming.OpenComposition.compose_close_interchange",
+    "Becoming.OpenComposition.hidden_coupling_interchange_failure",
+    "Becoming.OpenComposition.ContractRefines",
+    "Becoming.OpenComposition.replace_left_viable",
+    "Becoming.OpenComposition.ReconfigProcess",
+    "Becoming.OpenComposition.rewrite_step_viable",
+    "Becoming.OpenComposition.widen_interface_heals_blindness",
+    "Becoming.OpenComposition.compose_laxSim_max",
+    "Becoming.OpenComposition.compose_laxSim_sum",
+    "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+   ],
+   "base": "any type",
+   "hypotheses": [
+    {
+     "record": "open-interface-composition-and-replacement",
+     "index": 1,
+     "text": {
+      "en": "No axiom. Requires RegimeMargin.Coupled.Indexed.Rises, conservative observation and warning detection before crossing warn_margin, channel delivery within combined maxSilence, lag-buffered initial margin x_crit + eta * cap ≤ x₀, ContractRefines bounds for replacement/reconfig, and synchronous prodProcess for compose_laxSim_max/sum."
+     }
+    }
+   ],
+   "forbids": {
+    "en": "Violation of hidden or exposed substrate x_crit margins under associative composition, hiding, heterogeneous ContractRefines replacement, or live ReconfigProcess transitions (hidden_coupling_interchange_failure shows failure when shared sites go unmonitored)."
+   },
+   "exits": [
+    {
+     "to": {
+      "en": "closed Viability.Kernel and synchronous-product LaxSim stability preserved across gluing, hiding, replacement, and live reconfiguration"
+     },
+     "law": "Becoming.OpenComposition.compose_close_interchange",
+     "edge": {
+      "en": "Monitored shared boundary channels and lag buffers keep combined closedProcess inside closedGuard across composition and reconfig."
+     },
+     "strength": "sufficient",
+     "records": [
+      "open-interface-composition-and-replacement"
+     ],
+     "source": "theories/becoming/results/records/open-interface-composition-and-replacement.md#laws--规律",
+     "drops": [],
+     "standing": [
+      {
+       "record": "open-interface-composition-and-replacement",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    }
+   ],
+   "transitions": [],
+   "tests": [],
+   "open": [
+    {
+     "en": "Instantiating OpenComponent, InterfaceContract, and ReconfigProcess across endogenous turning, parametric local-accuracy drawdown, scope invasion guards, and direct closedProcess LaxSim decoupling.",
+     "source": "theories/becoming/results/records/open-interface-composition-and-replacement.md#does-not-show--未表明"
+    }
+   ],
+   "valence": "none asserted",
+   "beyond": {
+    "en": "Requires explicit shared-site monitoring within combined lag headroom and synchronous prodProcess for compose_laxSim."
+   },
+   "sources": [
+    "theories/becoming/results/records/open-interface-composition-and-replacement.md#laws--规律"
+   ],
+   "standing_without_record": null,
+   "premises": [],
+   "uses_between_proofs": {
+    "read": 7,
+    "uses": [
+     {
+      "dynamic": "lax-multi-scale-viability",
+      "used": "Becoming.lax_kernel_of_certificate",
+      "in": [
+       "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
+      ]
+     }
+    ],
+    "chains": [
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.OpenComposition.close_contract_kernel",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.OpenComposition.hidden_coupling_interchange_failure",
+       "Becoming.OpenComposition.HiddenCouplingFailure.witness",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-reading-kept-by-its-update"
+      ],
+      "chain": [
+       "Becoming.OpenComposition.rewrite_step_viable",
+       "Becoming.Viability.Certificate.kernel",
+       "Becoming.Viability.kernel_iff_held"
+      ]
+     }
+    ],
+    "used_by": [],
+    "shared": [],
+    "not_read": {
+     "theorems_of_the_receipt_without_row": [],
+     "receipt_declarations_not_theorems": [
+      "Becoming.OpenComposition.OpenComponent",
+      "Becoming.OpenComposition.InterfaceContract",
+      "Becoming.OpenComposition.OpenComponent.compose",
+      "Becoming.OpenComposition.composeContract",
+      "Becoming.OpenComposition.composeAssocEquiv",
+      "Becoming.OpenComposition.OpenComponent.hide",
+      "Becoming.OpenComposition.hideContract",
+      "Becoming.OpenComposition.ContractRefines",
+      "Becoming.OpenComposition.ReconfigProcess",
+      "Becoming.OpenComposition.compose_laxSim_max",
+      "Becoming.OpenComposition.compose_laxSim_sum"
      ],
      "not_in_the_receipt_as_written": []
     },
@@ -200217,18 +200388,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "c2cf26b575f598f29c8b24815aaf6a035f4db78b",
-   "core_run": "20261123T131636.294555Z"
+   "commit": "887735b795e57fd843fb5e927109d513ee40aee4",
+   "core_run": "20261123T170322.365233Z"
   },
-  "core_sources_sha256": "aa308a6593896f85062e0a5d2eaee789837a37bc6416dee7f4d1a990a350ff9b",
+  "core_sources_sha256": "6e82ddba53e19b281b707f2df4dc3bd40287c9e7205718ffa20514aa1935830f",
   "counts": {
-   "modules": 420,
-   "theorems": 21186,
+   "modules": 421,
+   "theorems": 21238,
    "uses_without_row": 22
   },
   "counted": {
-   "modules": 420,
-   "theorems": 21186,
+   "modules": 421,
+   "theorems": 21238,
    "uses_without_row": 22
   },
   "binds_receipt": true,
