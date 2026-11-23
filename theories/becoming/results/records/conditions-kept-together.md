@@ -72,7 +72,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: Finitely many configurations. [Onward.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean)
 - related, not a proved adapter: [finite-continuation-plans](finite-continuation-plans.md). Keeping for n steps through moves taken; here kept jointly versus kept each.
 
-**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md)
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [lax-multi-scale-viability](lax-multi-scale-viability.md) · [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md)
 
 <a id="sources--来源"></a>
 ### Sources

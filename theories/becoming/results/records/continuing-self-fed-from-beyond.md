@@ -82,7 +82,7 @@ Ren's proposal says: “the pure "self" is an illusion, where only when outside 
 - related, not a proved adapter: [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md). With conveyance read as related, a continuing family's region is no cut in the relations.
 - related, not a proved adapter: [rest-from-a-finite-reading](rest-from-a-finite-reading.md). Over any amounts, where an amount read off configurations a list holds does not rise from some step on, its strict falls do not recur; no list holds the values of the halving stock, which never rests. This result's laws are stated over whole-number flows.
 
-**Used by:** [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md) · [derived-extent-limits](derived-extent-limits.md)
+**Used by:** [conveyance-crosses-the-boundary](conveyance-crosses-the-boundary.md) · [derived-extent-limits](derived-extent-limits.md) · [unclamped-stock-flow-bridge](unclamped-stock-flow-bridge.md)
 
 <a id="sources--来源"></a>
 ### Sources

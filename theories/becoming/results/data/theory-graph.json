@@ -3333,6 +3333,18 @@
    "page": "theories/becoming/results/records/laws-with-noise.md"
   },
   {
+   "id": "record:lax-multi-scale-viability",
+   "type": "result",
+   "record": "lax-multi-scale-viability",
+   "title": "Lax multi-scale viability simulation, vertical tower composition, and non-lumping kernel transfer",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/lax-multi-scale-viability.md"
+  },
+  {
    "id": "record:learnable-through-a-map",
    "type": "result",
    "record": "learnable-through-a-map",
@@ -6081,6 +6093,18 @@
    "page": "theories/becoming/results/records/trace-law-equivalence.md"
   },
   {
+   "id": "record:transformative-viability-order",
+   "type": "result",
+   "record": "transformative-viability-order",
+   "title": "Viability-preserving transformative continuation order separating evolution from widening and churn",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/transformative-viability-order.md"
+  },
+  {
    "id": "record:transition-grouping-word-partition",
    "type": "result",
    "record": "transition-grouping-word-partition",
@@ -6211,6 +6235,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/unceasing-generation-needs-renewal.md"
+  },
+  {
+   "id": "record:unclamped-stock-flow-bridge",
+   "type": "result",
+   "record": "unclamped-stock-flow-bridge",
+   "title": "Unclamped pre-overdraw stock–flow embedding, finite-horizon trap, and coupled indexed correspondence",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/unclamped-stock-flow-bridge.md"
   },
   {
    "id": "record:unequal-groups-not-decided-by-the-spread-among-groups",
@@ -11761,6 +11797,39 @@
    "region": "map",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.MultiScaleViability",
+   "type": "module",
+   "name": "Becoming.MultiScaleViability",
+   "level": "L1",
+   "theorems": 36,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.TransformativeViability",
+   "type": "module",
+   "name": "Becoming.TransformativeViability",
+   "level": "L2",
+   "theorems": 29,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.StockFlowBridge",
+   "type": "module",
+   "name": "Becoming.StockFlowBridge",
+   "level": "L2",
+   "theorems": 40,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -35203,6 +35272,21 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.MultiScaleViability",
+   "to": "module:Becoming.ProjectedLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MultiScaleViability",
+   "to": "module:Becoming.Tower",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MultiScaleViability",
+   "to": "module:Becoming.Viability",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.MutualDependence",
    "to": "module:Becoming.BoundedSignificance",
    "type": "imports"
@@ -36808,6 +36892,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.StockFlowBridge",
+   "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.StockFlowBridge",
+   "to": "module:Becoming.WayUnderARule",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.StrengthFlows",
    "to": "module:Becoming.CourseWorlds",
    "type": "imports"
@@ -36930,6 +37024,11 @@
   {
    "from": "module:Becoming.Transactions",
    "to": "module:Becoming.TreeSearch",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TransformativeViability",
+   "to": "module:Becoming.WideningOnTheMap",
    "type": "imports"
   },
   {
@@ -48473,6 +48572,31 @@
    "type": "related"
   },
   {
+   "from": "record:lax-multi-scale-viability",
+   "to": "module:Becoming.MultiScaleViability",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:lax-multi-scale-viability",
+   "to": "record:a-response-common-over-a-reading",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:lax-multi-scale-viability",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:lax-multi-scale-viability",
+   "to": "record:continuous-time-as-tower",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:lax-multi-scale-viability",
+   "to": "record:laws-at-coarser-steps",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:learnable-through-a-map",
    "to": "module:Becoming.Identification",
    "type": "proved-in"
@@ -59078,6 +59202,31 @@
    "interface": true
   },
   {
+   "from": "record:transformative-viability-order",
+   "to": "module:Becoming.TransformativeViability",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:transformative-viability-order",
+   "to": "record:classes-along-a-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:transformative-viability-order",
+   "to": "record:keeping-widening-is-generation-losing-nothing",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:transformative-viability-order",
+   "to": "record:loss-beyond-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:transformative-viability-order",
+   "to": "record:what-keeping-widening-needs",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:transition-grouping-word-partition",
    "to": "module:Becoming.Courses",
    "type": "proved-in"
@@ -59735,6 +59884,31 @@
    "from": "record:unceasing-generation-needs-renewal",
    "to": "record:theory-of-becoming-foundation",
    "type": "related"
+  },
+  {
+   "from": "record:unclamped-stock-flow-bridge",
+   "to": "module:Becoming.StockFlowBridge",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:unclamped-stock-flow-bridge",
+   "to": "record:a-line-on-a-stock",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unclamped-stock-flow-bridge",
+   "to": "record:a-way-of-units-under-a-rule-set-again",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unclamped-stock-flow-bridge",
+   "to": "record:continuing-self-fed-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unclamped-stock-flow-bridge",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
   },
   {
    "from": "record:unequal-groups-not-decided-by-the-spread-among-groups",

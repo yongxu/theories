@@ -66,6 +66,8 @@ Continuous time is built in the core as a tower of ever-finer discrete readings,
   - Preserved conditions: A census of what stands. [Locality.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean)
 - related, not a proved adapter: [laws-at-finer-units](laws-at-finer-units.md). Refining the unit of amounts; this result refines time.
 
+**Used by:** [lax-multi-scale-viability](lax-multi-scale-viability.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

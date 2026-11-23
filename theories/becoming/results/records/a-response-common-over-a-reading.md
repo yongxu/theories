@@ -74,6 +74,8 @@ At a process's steps the kernel is what discrete-time viability theory (Aubin 19
 - related, not a proved adapter: [readings-a-response-needs](readings-a-response-needs.md). Its three routes, each pair with a common route and the three with none, are this record's pairs witness at a model.
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped of a map and an act map is the condition of the one-act law at an act map, unfolded.
 
+**Used by:** [lax-multi-scale-viability](lax-multi-scale-viability.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

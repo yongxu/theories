@@ -66,6 +66,8 @@ None claimed beyond the theory's own notions: the map's two grains (generation-a
 - related, not a proved adapter: [where-the-possible-grows](where-the-possible-grows.md). Its law on the map, 全生成 at (the one, what is held) where the held possible keeps widening, runs one way; at (the one, the same possible) the reason is that the one does not count loss, and its held class is a further fine class, whose converse fails on Oscillating.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What keeping widening needs along a reading of formations, and the kind relay on which it and 全生成 hold together; here the join is exact on the moments.
 
+**Used by:** [transformative-viability-order](transformative-viability-order.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

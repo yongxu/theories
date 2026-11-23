@@ -75,7 +75,7 @@ Reading (AI-written): a selection that reads only its own share is reached by th
 - **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). Its step of a level under a use and a giving, its premises on giving, and its law that a level at or above the margin holds.
 - **formal-reuse**: [turning-in-time](turning-in-time.md). Its pair step of a way and a level, its cap under a draw, and the two orders of its worked case, reused for the built courses.
 
-**Used by:** [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md)
+**Used by:** [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md) · [unclamped-stock-flow-bridge](unclamped-stock-flow-bridge.md)
 
 <a id="sources--来源"></a>
 ### Sources
