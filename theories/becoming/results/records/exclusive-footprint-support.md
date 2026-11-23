@@ -57,7 +57,7 @@ Resource identity and exclusivity are local model premises, not universal primit
 - none
 - related, not a proved adapter: [draws-on-a-shared-stock](draws-on-a-shared-stock.md). Different representations of shared support; neither is registered as a proved generalization of the other.
 
-**Used by:** [code-plan-global-support](code-plan-global-support.md) · [division-by-exclusive-footprints](division-by-exclusive-footprints.md)
+**Used by:** [code-plan-global-support](code-plan-global-support.md) · [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [division-by-exclusive-footprints](division-by-exclusive-footprints.md)
 
 <a id="sources--来源"></a>
 ### Sources

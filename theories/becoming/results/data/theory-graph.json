@@ -1905,6 +1905,18 @@
    "page": "theories/becoming/results/records/counts-exist-where-decided.md"
   },
   {
+   "id": "record:coupled-adaptive-loops-and-race",
+   "type": "result",
+   "record": "coupled-adaptive-loops-and-race",
+   "title": "Open adaptive loops, assume-guarantee joint viability, the coupled race, and adaptive collapse",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/coupled-adaptive-loops-and-race.md"
+  },
+  {
    "id": "record:coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
    "type": "result",
    "record": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
@@ -11715,6 +11727,17 @@
    "region": "significance",
    "base": "grammar",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.AdaptiveLoops",
+   "type": "module",
+   "name": "Becoming.AdaptiveLoops",
+   "level": "L1",
+   "theorems": 60,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -32582,6 +32605,56 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.Composition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.CoupledDrawers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.Pace",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.SelectionPool",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Admission",
    "to": "module:Becoming.Space",
    "type": "imports"
@@ -43308,6 +43381,66 @@
    "from": "record:counts-exist-where-decided",
    "to": "record:whole-law-of-counting",
    "type": "related"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "module:Becoming.AdaptiveLoops",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:a-pool-read-by-its-majority",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:causal-models-as-processes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:closed-capture",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:exclusive-footprint-support",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:how-fast-a-rule-may-change",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "type": "formal-reuse"
   },
   {
    "from": "record:coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",

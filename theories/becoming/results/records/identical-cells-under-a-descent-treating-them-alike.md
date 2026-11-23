@@ -68,7 +68,7 @@ Symmetry breaking needs an asymmetric cause (Curie 1894, Journal de Physique 3);
 - related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). The other third part of the free-energy principle stated in the same module.
 - related, not a proved adapter: [identical-cells-under-noise](identical-cells-under-noise.md). Identical cells under noise: over the reals, in the periphery, under the descent with an exchangeable field and noise of one law at every cell, the law stays exchangeable, deciding nothing of which cell takes which place; the exchanges of neighbouring cells generate every rearrangement.
 
-**Used by:** [identical-cells-under-noise](identical-cells-under-noise.md)
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [identical-cells-under-noise](identical-cells-under-noise.md)
 
 <a id="sources--来源"></a>
 ### Sources

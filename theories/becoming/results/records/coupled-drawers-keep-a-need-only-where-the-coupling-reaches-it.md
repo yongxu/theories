@@ -73,6 +73,8 @@ A specialization of pivotal provision of a discrete public good (Palfrey and Ros
 - related, not a proved adapter: [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md). One optimizer ranking whole courses keeps the need where the coupling covers the renewal forgone a step and exceeds the end; for every perfect profile to keep it, several drawers in turn need, under the gate, a coupling above the need itself, and below it they drain whatever the renewal, in a different model.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers drain one step as one would with their joint capacity. Among drawers in turn on a gated renewal, two or more drain where one drawer keeps, even with no coupling where 0 < q; that contrast is inside drawers in turn, not inside the model of mutual best responses.
 
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

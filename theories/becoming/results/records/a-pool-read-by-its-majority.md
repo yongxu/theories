@@ -52,6 +52,8 @@ Majority aggregation: a minority distinction is outvoted (Condorcet-style aggreg
 - **formal-reuse**: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). Its pool separates wherever one member does; the majority pool by shares.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries wuzi-qun-chen-mo-ji, hanfei-san-shou, hanfei-er-bing).
 
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

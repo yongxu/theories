@@ -77,7 +77,7 @@ A deterministic case of a model right along the course its own choices take and 
 - related, not a proved adapter: [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md). The kept reading on one carrier of world and state; here the reading that a candidate is kept, on the loop.
 - related, not a proved adapter: [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md). The worth of a reading in counts, of one telling the candidate and of one telling only a cell; and a witness on the same loop, a listing right along its course and wrong off it, there with a stopping reading never sensed.
 
-**Used by:** [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources
