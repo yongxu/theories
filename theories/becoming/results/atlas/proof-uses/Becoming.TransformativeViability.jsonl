@@ -1,0 +1,57 @@
+{"name": "Becoming.FiniteGainless.along_capSame", "uses": ["Becoming.FiniteGainless.transformsViably", "Becoming.transformsViably_iff_along_capSame"]}
+{"name": "Becoming.FiniteGainless.balances", "uses": []}
+{"name": "Becoming.FiniteGainless.closed", "uses": ["Becoming.FiniteGainless.every"]}
+{"name": "Becoming.FiniteGainless.conserving", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_mem_of_ne_zero", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.total_eq_at_of_distinct"]}
+{"name": "Becoming.FiniteGainless.distinct", "uses": []}
+{"name": "Becoming.FiniteGainless.every", "uses": []}
+{"name": "Becoming.FiniteGainless.finite_gainless_transformsViably", "uses": ["Becoming.FiniteGainless.balances", "Becoming.FiniteGainless.closed", "Becoming.FiniteGainless.conserving", "Becoming.FiniteGainless.gainless", "Becoming.FiniteGainless.micro_turnover", "Becoming.FiniteGainless.not_keepsWidening", "Becoming.FiniteGainless.requiresWithin", "Becoming.FiniteGainless.transformsViably"]}
+{"name": "Becoming.FiniteGainless.gainless", "uses": ["Becoming.FiniteGainless.conserving", "Becoming.Flow.Conserving.gainless"]}
+{"name": "Becoming.FiniteGainless.micro_turnover", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_A_of_true", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_B_of_false", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_A_of_false", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_B_of_true"]}
+{"name": "Becoming.FiniteGainless.not_along_itself", "uses": ["Becoming.not_along_itself_of_transformsViably"]}
+{"name": "Becoming.FiniteGainless.not_keepsWidening", "uses": ["Becoming.FiniteGainless.balances", "Becoming.FiniteGainless.distinct", "Becoming.FiniteGainless.every", "Becoming.FiniteGainless.gainless", "Becoming.FiniteGainless.requiresWithin", "Becoming.Flow.whole_not_keepsWidening"]}
+{"name": "Becoming.FiniteGainless.requiresWithin", "uses": ["Becoming.FiniteGainless.every"]}
+{"name": "Becoming.FiniteGainless.transformsViably", "uses": ["Becoming.FiniteGainless.micro_turnover", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_A_of_true", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_B_of_false", "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_sub"]}
+{"name": "Becoming.ThreeRegime.churn_also_fails_macroIncludes", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_sub", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_admits_sub"]}
+{"name": "Becoming.ThreeRegime.churn_generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.generation_iff_begins", "Becoming.le_dest", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_admits_at", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_next"]}
+{"name": "Becoming.ThreeRegime.churn_mixed_legacy", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_admits_at", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_sub", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_admits_sub", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_churn"]}
+{"name": "Becoming.ThreeRegime.churn_not_transformativeViable", "uses": []}
+{"name": "Becoming.ThreeRegime.evolve_mixed_legacy", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_new", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_not_admits_old", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_admits_old", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_new"]}
+{"name": "Becoming.ThreeRegime.evolve_not_widens_legacy", "uses": ["Becoming.ThreeRegime.evolve_mixed_legacy", "Becoming.Web.Widens.not_mixed"]}
+{"name": "Becoming.ThreeRegime.evolve_strict_transformativeViable", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_new", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_plus", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_sub", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_churn", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_new", "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_plus"]}
+{"name": "Becoming.ThreeRegime.three_regime_separation", "uses": ["Becoming.ThreeRegime.churn_generation", "Becoming.ThreeRegime.churn_mixed_legacy", "Becoming.ThreeRegime.churn_not_transformativeViable", "Becoming.ThreeRegime.evolve_mixed_legacy", "Becoming.ThreeRegime.evolve_not_widens_legacy", "Becoming.ThreeRegime.evolve_strict_transformativeViable"]}
+{"name": "Becoming.TransformsViablyAlong.mono", "uses": ["Becoming.Web.Linked.mono"]}
+{"name": "Becoming.TransformsViablyAlong.to_transformsViably", "uses": []}
+{"name": "Becoming.Web.Includes.macroIncludes", "uses": []}
+{"name": "Becoming.Web.MacroIncludes.refl", "uses": []}
+{"name": "Becoming.Web.MacroIncludes.trans", "uses": []}
+{"name": "Becoming.not_along_itself_of_transformsViably", "uses": ["Becoming.Web.Linked.itself_same"]}
+{"name": "Becoming.transformsViably_iff_along_capSame", "uses": ["Becoming.TransformsViablyAlong.to_transformsViably", "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_of_le"]}
+{"name": "Becoming.widens_implies_transformativeViable", "uses": ["Becoming.Web.Includes.macroIncludes"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_A_of_true", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_B_of_false", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.admits_sub", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_eq_or_ne", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_mem_of_ne_zero", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_mem_or_not"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_mem_or_not", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.cond_eq_or_ne"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_A_of_false", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_B_of_true", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.total_eq_at_of_distinct", "uses": ["Becoming.total_eq_zero"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_admits_at", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_self"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_new", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_next", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_succ_false"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_old", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_plus", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_sub", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_new", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_plus", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_admits_sub", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.evolve_not_admits_old", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_admits_old", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_admits_sub", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_churn", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_new", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_plus", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_self", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_succ_false", "uses": []}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_of_le", "uses": ["Becoming.le_dest", "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_steps"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_steps", "uses": []}

@@ -1,0 +1,91 @@
+{"name": "Becoming.LaxSim.TowerSimPack.ep_eq", "uses": []}
+{"name": "Becoming.LaxSim.TowerSimPack.lip", "uses": []}
+{"name": "Becoming.LaxSim.TowerSimPack.μ_mono", "uses": []}
+{"name": "Becoming.LaxSim.advance_blocks", "uses": ["Becoming.LaxSim.epoch_trace", "Becoming.LaxSim.sim_block", "Becoming.LaxSim.strict", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.add_right_cancel", "Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right", "Becoming.strict_mono_le", "Becoming.sub_self_nat", "Becoming.trace_split"]}
+{"name": "Becoming.LaxSim.epoch_proj", "uses": []}
+{"name": "Becoming.LaxSim.epoch_step", "uses": []}
+{"name": "Becoming.LaxSim.epoch_trace", "uses": ["Becoming.LaxSim.epoch_step", "Generative.Trace.brecOn"]}
+{"name": "Becoming.LaxSim.excursion", "uses": []}
+{"name": "Becoming.LaxSim.keptFor_linear_run", "uses": ["Becoming.Run.window_trace", "Becoming.lax_keptFor_linear", "_private.Becoming.MultiScaleViability.0.Becoming.LaxSim.run_window_length"]}
+{"name": "Becoming.LaxSim.sim_block", "uses": []}
+{"name": "Becoming.LaxSim.slack_id", "uses": []}
+{"name": "Becoming.LaxSim.slack_le_of_absorb", "uses": []}
+{"name": "Becoming.LaxSim.strict", "uses": []}
+{"name": "Becoming.LaxSim.α_mono", "uses": []}
+{"name": "Becoming.LaxSim.β_ge_id", "uses": []}
+{"name": "Becoming.LaxSim.β_mono", "uses": []}
+{"name": "Becoming.SlackDist.refl", "uses": []}
+{"name": "Becoming.SlackDist.tri", "uses": []}
+{"name": "Becoming.WitnessTwoScale.back₁", "uses": []}
+{"name": "Becoming.WitnessTwoScale.back₁₂", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add"]}
+{"name": "Becoming.WitnessTwoScale.back₂", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add"]}
+{"name": "Becoming.WitnessTwoScale.damp_lip", "uses": ["Becoming.distNat_symm", "Becoming.sub_eq_zero_of_le", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_lip_ordered"]}
+{"name": "Becoming.WitnessTwoScale.distNat_div2", "uses": ["Becoming.SupportGated.sub_pos_of_lt", "Becoming.sub_eq_zero_of_le", "Becoming.sub_self_nat", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.sub_div2_le_half", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.succ_div2_le_self"]}
+{"name": "Becoming.WitnessTwoScale.kernel_cert", "uses": []}
+{"name": "Becoming.WitnessTwoScale.no_reduced_law₁", "uses": ["Becoming.ProjectedLaws.reduced_law_exists_iff", "Becoming.WitnessTwoScale.back₁", "Becoming.WitnessTwoScale.not_fibreConsistent₁"]}
+{"name": "Becoming.WitnessTwoScale.no_reduced_law₁₂", "uses": ["Becoming.ProjectedLaws.reduced_law_exists_iff", "Becoming.WitnessTwoScale.back₁₂", "Becoming.WitnessTwoScale.not_fibreConsistent₁₂"]}
+{"name": "Becoming.WitnessTwoScale.no_reduced_law₂", "uses": ["Becoming.ProjectedLaws.reduced_law_exists_iff", "Becoming.WitnessTwoScale.back₂", "Becoming.WitnessTwoScale.not_fibreConsistent₂"]}
+{"name": "Becoming.WitnessTwoScale.not_fibreConsistent₁", "uses": []}
+{"name": "Becoming.WitnessTwoScale.not_fibreConsistent₁₂", "uses": []}
+{"name": "Becoming.WitnessTwoScale.not_fibreConsistent₂", "uses": []}
+{"name": "Becoming.WitnessTwoScale.sim₁₂_params", "uses": []}
+{"name": "Becoming.WitnessTwoScale.viability_kernel", "uses": ["Becoming.WitnessTwoScale.kernel_cert", "Becoming.lax_kernel_of_certificate", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.margin_two_scale"]}
+{"name": "Becoming.block_of_strict", "uses": ["Becoming.strict_unbounded", "_private.Becoming.MultiScaleViability.0.Becoming.block_below"]}
+{"name": "Becoming.distNat_add_one", "uses": ["Becoming.distNat_tri", "Becoming.sub_eq_zero_of_le", "Becoming.succ_sub_self"]}
+{"name": "Becoming.distNat_self", "uses": ["Becoming.sub_self_nat"]}
+{"name": "Becoming.distNat_sub_one", "uses": ["Becoming.distNat_symm", "Becoming.distNat_tri", "Becoming.sub_eq_zero_of_le", "Becoming.succ_sub_self"]}
+{"name": "Becoming.distNat_symm", "uses": []}
+{"name": "Becoming.distNat_tri", "uses": ["Becoming.Naturals.add_regroup", "Becoming.sub_le_add_sub_nat"]}
+{"name": "Becoming.lax_keptFor_linear", "uses": ["Becoming.Invariant.reach", "Becoming.LaxSim.advance_blocks", "Becoming.LaxSim.epoch_proj", "Becoming.LaxSim.excursion", "Becoming.LaxSim.slack_id", "Becoming.LaxSim.strict", "Becoming.LaxSim.β_mono", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Naturals.sub_le_of_le_add", "Becoming.SlackDist.refl", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.add_sub_of_le", "Becoming.block_of_strict", "Becoming.strict_lt_of_lt", "Becoming.strict_mono_le"]}
+{"name": "Becoming.lax_keptFor_linear_of_kernel", "uses": ["Becoming.Viability.kernel_iff_certificate", "Becoming.lax_keptFor_linear"]}
+{"name": "Becoming.lax_kernel_of_certificate", "uses": ["Becoming.Invariant.reach", "Becoming.LaxSim.advance_blocks", "Becoming.LaxSim.epoch_proj", "Becoming.LaxSim.excursion", "Becoming.LaxSim.slack_le_of_absorb", "Becoming.LaxSim.strict", "Becoming.LaxSim.α_mono", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Naturals.sub_le_of_le_add", "Becoming.SlackDist.refl", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.add_sub_of_le", "Becoming.block_of_strict", "Becoming.strict_mono_le"]}
+{"name": "Becoming.lax_kernel_of_kernel", "uses": ["Becoming.Viability.kernel_iff_certificate", "Becoming.lax_kernel_of_certificate"]}
+{"name": "Becoming.le_sub_add_nat", "uses": ["Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.strict_lt_of_lt", "uses": ["Becoming.strict_mono_le"]}
+{"name": "Becoming.strict_mono_le", "uses": ["Becoming.Strict.lt"]}
+{"name": "Becoming.strict_unbounded", "uses": ["Becoming.Strict.le_self"]}
+{"name": "Becoming.sub_le_add_sub_nat", "uses": ["Becoming.Naturals.sub_le_of_le_add", "Becoming.le_sub_add_nat"]}
+{"name": "Becoming.sub_self_nat", "uses": []}
+{"name": "Becoming.trace_split", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.LaxSim.comp_epoch", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.LaxSim.macro_excursion_split", "uses": ["Becoming.LaxSim.advance_blocks", "Becoming.LaxSim.epoch_proj", "Becoming.LaxSim.strict", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Naturals.sub_le_of_le_add", "Becoming.SlackDist.refl", "Becoming.add_sub_of_le", "Becoming.block_of_strict", "Becoming.le_dest", "Becoming.strict_lt_of_lt", "Becoming.strict_mono_le"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.LaxSim.run_window_length", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.add_div2_le", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.add_sub_mid", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp40_add1_dist", "uses": ["Becoming.WitnessTwoScale.damp_lip", "Becoming.distNat_add_one", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add2", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_le_self", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp40_half_dist", "uses": ["Becoming.ListTests.all_mem", "Becoming.Naturals.add_sub_cancel_left", "Becoming.distNat_self", "Becoming.le_dest", "Becoming.mem_downFrom", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_ge_of_ge", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_four_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.le_of_ble_true"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_ge_of_ge", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_neg'"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_le_of_le", "uses": ["Becoming.sub_self_nat", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_neg'", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_pos'"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_lip_ordered", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_antitone", "Becoming.add_right_cancel", "Becoming.le_dest", "Becoming.sub_eq_zero_of_le", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.add_div2_le", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.add_sub_mid", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_ge_of_ge", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.damp_le_of_le", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_le_self", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.sub_div2_le_half", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.sub_sub_mid"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.dite_neg'", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.dite_pos'", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add2", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div_add_self"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add_le", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_le_self", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.succ_div2_le_self"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_mono", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_four_mul_add", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add2"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add2"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div4_rem", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div_add_self", "uses": ["Becoming.Naturals.add_sub_cancel", "Nat.div.eq_1", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div_go_irrel"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div_go_irrel", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.epoch0_2j_cases", "uses": ["Becoming.mul_assoc_nat", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div4_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_of_four_mul_add"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.epoch_proj₁_aux", "uses": ["Becoming.mul_assoc_nat", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_four_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div4_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_of_four_mul_add"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_neg'", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_pos'", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.le_of_ble_true", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.list_len2_cases", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.list_lt2_cases", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.margin_two_scale", "uses": ["Becoming.le_of_add_le_add_right", "Becoming.le_sub_add_nat", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_add2", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod_add_self"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_of_two_mul_add", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_add2"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_add4", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod_add_self"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_of_four_mul_add", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_add4"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_succ", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div4_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod4_of_four_mul_add"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod_add_self", "uses": ["Becoming.Naturals.add_sub_cancel", "Nat.modCore.eq_1", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.dite_neg'", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.dite_pos'", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.ite_pos'", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod_go_irrel"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod_go_irrel", "uses": []}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.sub_div2_le_half", "uses": ["Becoming.Naturals.sub_le_of_le_add", "Becoming.add_sub_of_le", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_add_le"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.sub_sub_mid", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_antitone", "Becoming.add_right_cancel"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.succ_div2_le_self", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_of_two_mul_add", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.succ_mod2_beq", "uses": ["_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.div2_rem", "_private.Becoming.MultiScaleViability.0.Becoming.WitnessTwoScale.mod2_of_two_mul_add"]}
+{"name": "_private.Becoming.MultiScaleViability.0.Becoming.block_below", "uses": []}

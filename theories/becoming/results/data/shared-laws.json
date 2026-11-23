@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T125647.945308Z",
- "core_sources_sha256": "01b27040a41acc5c2c48781c1a60c62e20c62b2bbc491bc6e416b5292800c680",
+ "core_receipt": "20261123T131636.294555Z",
+ "core_sources_sha256": "aa308a6593896f85062e0a5d2eaee789837a37bc6416dee7f4d1a990a350ff9b",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4442,
+  "laws": 4451,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1083,
-  "balance, represented": 638,
-  "anchor, not reached": 134,
-  "no shared law": 2187,
+  "grammar": 1088,
+  "balance, represented": 639,
+  "anchor, not reached": 135,
+  "no shared law": 2189,
   "vocabulary_only": 106,
-  "closure": 594,
-  "balance": 907,
+  "closure": 596,
+  "balance": 910,
   "return": 255,
   "lumping": 94,
-  "order": 105
+  "order": 107
  },
  "counts_at_model": {
   "laws": 23,
@@ -29340,6 +29340,82 @@
     ]
    }
   ],
+  "lax-multi-scale-viability": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.distNat",
+     "Becoming.SlackDist",
+     "Becoming.SlackDist.nat",
+     "Becoming.SlackDist.pullback",
+     "Becoming.block_of_strict",
+     "Becoming.trace_split",
+     "Becoming.LaxSim",
+     "Becoming.LaxSim.slack",
+     "Becoming.LaxSim.slack_le_of_absorb",
+     "Becoming.LaxSim.slack_id",
+     "Becoming.LaxSim.epoch_trace",
+     "Becoming.LaxSim.advance_blocks",
+     "Becoming.lax_kernel_of_certificate",
+     "Becoming.lax_kernel_of_kernel",
+     "Becoming.lax_keptFor_linear",
+     "Becoming.lax_keptFor_linear_of_kernel",
+     "Becoming.LaxSim.keptFor_linear_run"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LaxSim.comp",
+     "Becoming.LaxSim.compAdditive",
+     "Becoming.LaxSim.TowerSimPack",
+     "Becoming.LaxSim.towerSim"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.WitnessTwoScale.damp",
+     "Becoming.WitnessTwoScale.damp40",
+     "Becoming.WitnessTwoScale.damp20",
+     "Becoming.WitnessTwoScale.damp_lip",
+     "Becoming.WitnessTwoScale.next",
+     "Becoming.WitnessTwoScale.P",
+     "Becoming.WitnessTwoScale.guardS",
+     "Becoming.WitnessTwoScale.s₀",
+     "Becoming.WitnessTwoScale.next₁",
+     "Becoming.WitnessTwoScale.R₁",
+     "Becoming.WitnessTwoScale.R₂",
+     "Becoming.WitnessTwoScale.guardQ₂",
+     "Becoming.WitnessTwoScale.K",
+     "Becoming.WitnessTwoScale.Epoch₀",
+     "Becoming.WitnessTwoScale.Epoch₁",
+     "Becoming.WitnessTwoScale.Epoch₂",
+     "Becoming.WitnessTwoScale.no_reduced_law₁",
+     "Becoming.WitnessTwoScale.no_reduced_law₂",
+     "Becoming.WitnessTwoScale.no_reduced_law₁₂",
+     "Becoming.WitnessTwoScale.sim₁",
+     "Becoming.WitnessTwoScale.sim₂",
+     "Becoming.WitnessTwoScale.sim₁₂",
+     "Becoming.WitnessTwoScale.sim₁₂_params",
+     "Becoming.WitnessTwoScale.kernel_cert",
+     "Becoming.WitnessTwoScale.viability_kernel"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "learnable-through-a-map": [
    {
     "law": 1,
@@ -55203,6 +55279,74 @@
     "dependence": "no shared law"
    }
   ],
+  "transformative-viability-order": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Web.MacroAdmits",
+     "Becoming.Web.MacroIncludes",
+     "Becoming.Web.MacroExceeds",
+     "Becoming.ReserveSafe",
+     "Becoming.ReserveGuarded",
+     "Becoming.TransformativeViable",
+     "Becoming.StrictTransformativeViable",
+     "Becoming.widens_implies_transformativeViable",
+     "Becoming.TransformsViably",
+     "Becoming.TransformsViablyAlong",
+     "Becoming.TransformsViablyAlong.to_transformsViably",
+     "Becoming.transformsViably_iff_along_capSame",
+     "Becoming.not_along_itself_of_transformsViably"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ThreeRegime.Cond",
+     "Becoming.ThreeRegime.Form",
+     "Becoming.ThreeRegime.Cap",
+     "Becoming.ThreeRegime.web",
+     "Becoming.ThreeRegime.evolve_mixed_legacy",
+     "Becoming.ThreeRegime.evolve_not_widens_legacy",
+     "Becoming.ThreeRegime.evolve_strict_transformativeViable",
+     "Becoming.ThreeRegime.churn_mixed_legacy",
+     "Becoming.ThreeRegime.churn_generation",
+     "Becoming.ThreeRegime.churn_not_transformativeViable",
+     "Becoming.ThreeRegime.churn_also_fails_macroIncludes",
+     "Becoming.ThreeRegime.three_regime_separation"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FiniteGainless.web",
+     "Becoming.FiniteGainless.flow",
+     "Becoming.FiniteGainless.conserving",
+     "Becoming.FiniteGainless.gainless",
+     "Becoming.FiniteGainless.closed",
+     "Becoming.FiniteGainless.balances",
+     "Becoming.FiniteGainless.requiresWithin",
+     "Becoming.FiniteGainless.not_keepsWidening",
+     "Becoming.FiniteGainless.micro_turnover",
+     "Becoming.FiniteGainless.transformsViably",
+     "Becoming.FiniteGainless.finite_gainless_transformsViably"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   }
+  ],
   "transition-grouping-word-partition": [
    {
     "law": 1,
@@ -57172,6 +57316,75 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   }
+  ],
+  "unclamped-stock-flow-bridge": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Flow.held_below_within",
+     "Becoming.Flow.never_returns_below_within",
+     "Becoming.WayUnderARule.ReachUnit",
+     "Becoming.WayUnderARule.Needing",
+     "Becoming.WayUnderARule.reachUnit_course",
+     "Becoming.WayUnderARule.taken_below",
+     "Becoming.WayUnderARule.unending_taken_below",
+     "Becoming.StockFlowBridge.unitWeb",
+     "Becoming.StockFlowBridge.unitFlow",
+     "Becoming.StockFlowBridge.unitBalancesOn_of_le",
+     "Becoming.StockFlowBridge.unitAccumulates_of_balances",
+     "Becoming.StockFlowBridge.unitAccumulates_of_global_balances",
+     "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.StockFlowBridge.lineWeb",
+     "Becoming.StockFlowBridge.lineFlow",
+     "Becoming.StockFlowBridge.line_taken_lt_of_goes",
+     "Becoming.StockFlowBridge.line_balancesOn_of_within",
+     "Becoming.StockFlowBridge.line_balancesOn_of_goes",
+     "Becoming.StockFlowBridge.line_balances_of_unending",
+     "Becoming.StockFlowBridge.line_accumulates_of_goes",
+     "Becoming.StockFlowBridge.line_account_of_goes",
+     "Becoming.StockFlowBridge.line_account_unending_via_flow",
+     "Becoming.StockFlowBridge.line_never_returns_below_within",
+     "Becoming.StockFlowBridge.wayWeb",
+     "Becoming.StockFlowBridge.wayFlow",
+     "Becoming.StockFlowBridge.way_taken_lt_of_goes",
+     "Becoming.StockFlowBridge.way_balancesOn_of_within",
+     "Becoming.StockFlowBridge.way_balancesOn_of_goes",
+     "Becoming.StockFlowBridge.way_balances_of_unending",
+     "Becoming.StockFlowBridge.way_accumulates_of_goes",
+     "Becoming.StockFlowBridge.way_account_of_goes",
+     "Becoming.StockFlowBridge.way_account_unending",
+     "Becoming.StockFlowBridge.way_never_returns_below_within"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq",
+     "Becoming.StockFlowBridge.line_taken_const_of_even_met",
+     "Becoming.StockFlowBridge.line_coupled_indexed_correspondence",
+     "Becoming.StockFlowBridge.way_taken_const_of_met",
+     "Becoming.StockFlowBridge.way_coupled_indexed_correspondence",
+     "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "unequal-groups-not-decided-by-the-spread-among-groups": [
@@ -68270,7 +68483,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "41fc419a0198875b1ee1e70f482ecd909df0af89e30295aa60e58f2396787773",
+   "modules_sha256": "bf297a78766c7045f07b952a8b0e8676f002560590c4776a771e1a538a173c4e",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

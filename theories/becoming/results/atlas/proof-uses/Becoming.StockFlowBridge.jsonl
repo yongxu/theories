@@ -1,0 +1,41 @@
+{"name": "Becoming.Flow.held_below_within", "uses": ["Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.Flow.never_returns_below_within", "uses": ["Becoming.Flow.held_below_within"]}
+{"name": "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq", "uses": []}
+{"name": "Becoming.StockFlowBridge.line_account_of_goes", "uses": ["Becoming.StockFlowBridge.line_accumulates_of_goes"]}
+{"name": "Becoming.StockFlowBridge.line_account_unending_via_flow", "uses": ["Becoming.StockFlowBridge.line_balances_of_unending", "Becoming.StockFlowBridge.unitAccumulates_of_global_balances"]}
+{"name": "Becoming.StockFlowBridge.line_accumulates_of_goes", "uses": ["Becoming.StockFlowBridge.line_balancesOn_of_goes", "Becoming.StockFlowBridge.unitAccumulates_of_balances"]}
+{"name": "Becoming.StockFlowBridge.line_accumulates_of_within", "uses": ["Becoming.StockFlowBridge.line_balancesOn_of_within", "Becoming.StockFlowBridge.unitAccumulates_of_balances"]}
+{"name": "Becoming.StockFlowBridge.line_balancesOn_of_goes", "uses": ["Becoming.StockFlowBridge.line_balancesOn_of_within", "Becoming.StockFlowBridge.line_taken_lt_of_goes"]}
+{"name": "Becoming.StockFlowBridge.line_balancesOn_of_within", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le"]}
+{"name": "Becoming.StockFlowBridge.line_balances_of_unending", "uses": ["Becoming.LineOnAStock.unending_taken_below", "Becoming.StockFlowBridge.unitBalancesOn_of_le"]}
+{"name": "Becoming.StockFlowBridge.line_coupled_indexed_correspondence", "uses": ["Becoming.StockFlowBridge.line_taken_const_of_even_met"]}
+{"name": "Becoming.StockFlowBridge.line_never_returns_below_within", "uses": ["Becoming.Flow.never_returns_below_within", "Becoming.StockFlowBridge.line_balancesOn_of_goes"]}
+{"name": "Becoming.StockFlowBridge.line_never_returns_below_within_of_within", "uses": ["Becoming.Flow.never_returns_below_within", "Becoming.StockFlowBridge.line_balancesOn_of_within"]}
+{"name": "Becoming.StockFlowBridge.line_taken_const_of_even_met", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_allKids"]}
+{"name": "Becoming.StockFlowBridge.line_taken_lt_of_goes", "uses": ["Becoming.LineOnAStock.taken_below"]}
+{"name": "Becoming.StockFlowBridge.unitAccumulates_of_balances", "uses": ["Becoming.Flow.accumulates_on", "Becoming.StockFlowBridge.unitFlow_replenishment", "Becoming.StockFlowBridge.unitFlow_uptake", "Becoming.StockFlowBridge.unitWeb_stock", "Becoming.total_congr"]}
+{"name": "Becoming.StockFlowBridge.unitAccumulates_of_global_balances", "uses": ["Becoming.Flow.Balances.accumulates", "Becoming.StockFlowBridge.unitFlow_replenishment", "Becoming.StockFlowBridge.unitFlow_uptake", "Becoming.StockFlowBridge.unitWeb_stock", "Becoming.total_congr"]}
+{"name": "Becoming.StockFlowBridge.unitBalancesOn_of_le", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken"]}
+{"name": "Becoming.StockFlowBridge.unitFlow_given", "uses": []}
+{"name": "Becoming.StockFlowBridge.unitFlow_replenishment", "uses": ["Becoming.StockFlowBridge.unitFlow_given"]}
+{"name": "Becoming.StockFlowBridge.unitFlow_taken", "uses": []}
+{"name": "Becoming.StockFlowBridge.unitFlow_uptake", "uses": ["Becoming.StockFlowBridge.unitFlow_taken"]}
+{"name": "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin", "uses": ["Becoming.Flow.never_returns_below_within", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken"]}
+{"name": "Becoming.StockFlowBridge.unitWeb_stock", "uses": []}
+{"name": "Becoming.StockFlowBridge.way_account_of_goes", "uses": ["Becoming.StockFlowBridge.way_accumulates_of_goes"]}
+{"name": "Becoming.StockFlowBridge.way_account_unending", "uses": ["Becoming.StockFlowBridge.unitAccumulates_of_global_balances", "Becoming.StockFlowBridge.way_balances_of_unending"]}
+{"name": "Becoming.StockFlowBridge.way_accumulates_of_goes", "uses": ["Becoming.StockFlowBridge.unitAccumulates_of_balances", "Becoming.StockFlowBridge.way_balancesOn_of_goes"]}
+{"name": "Becoming.StockFlowBridge.way_accumulates_of_within", "uses": ["Becoming.StockFlowBridge.unitAccumulates_of_balances", "Becoming.StockFlowBridge.way_balancesOn_of_within"]}
+{"name": "Becoming.StockFlowBridge.way_balancesOn_of_goes", "uses": ["Becoming.StockFlowBridge.way_balancesOn_of_within", "Becoming.StockFlowBridge.way_taken_lt_of_goes"]}
+{"name": "Becoming.StockFlowBridge.way_balancesOn_of_within", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le"]}
+{"name": "Becoming.StockFlowBridge.way_balances_of_unending", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le", "Becoming.WayUnderARule.unending_taken_below"]}
+{"name": "Becoming.StockFlowBridge.way_coupled_indexed_correspondence", "uses": ["Becoming.StockFlowBridge.way_taken_const_of_met"]}
+{"name": "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured", "uses": ["Becoming.StockFlowBridge.way_coupled_indexed_correspondence"]}
+{"name": "Becoming.StockFlowBridge.way_never_returns_below_within", "uses": ["Becoming.Flow.never_returns_below_within", "Becoming.StockFlowBridge.way_balancesOn_of_goes"]}
+{"name": "Becoming.StockFlowBridge.way_never_returns_below_within_of_within", "uses": ["Becoming.Flow.never_returns_below_within", "Becoming.StockFlowBridge.way_balancesOn_of_within"]}
+{"name": "Becoming.StockFlowBridge.way_taken_const_of_met", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_allKids"]}
+{"name": "Becoming.StockFlowBridge.way_taken_lt_of_goes", "uses": ["Becoming.WayUnderARule.taken_below"]}
+{"name": "Becoming.WayUnderARule.ReachUnit.brecOn", "uses": []}
+{"name": "Becoming.WayUnderARule.reachUnit_course", "uses": ["Becoming.LineOnAStock.mem_after_iff"]}
+{"name": "Becoming.WayUnderARule.taken_below", "uses": ["Becoming.LineOnAStock.step_zero", "Becoming.WayUnderARule.reachUnit_course"]}
+{"name": "Becoming.WayUnderARule.unending_taken_below", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayUnderARule.taken_below"]}

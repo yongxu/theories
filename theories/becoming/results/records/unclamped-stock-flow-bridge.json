@@ -1,0 +1,218 @@
+{
+ "schema_version": 2,
+ "id": "unclamped-stock-flow-bridge",
+ "title": {
+  "en": "Unclamped pre-overdraw stock–flow embedding, finite-horizon trap, and coupled indexed correspondence"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T13:18:00+00:00",
+ "statement": {
+  "en": "Before overdraw (and globally on unending courses), LineOnAStock and WayUnderARule trajectories embed verbatim without clamping into Flow.BalancesOn, transferring finite-horizon drawdown trapping (Flow.never_returns_below_within) and matching Coupled.Indexed.step on constant-draw runs."
+ },
+ "laws": [
+  {
+   "en": "Finite-horizon drawdown trap and unclamped Flow embedding: Flow.never_returns_below_within generalizes Continuation's infinite-tail trap to finite pre-overdraw intervals [T, T + N) given initial below : W.level T c < m, [T, T + N) BalancesOn, and sub-threshold given ≤ taken. WayUnderARule.taken_below / unending_taken_below supply strict taken < x on goes ≤ T + N (respectively globally).",
+   "declarations": [
+    "Becoming.Flow.held_below_within",
+    "Becoming.Flow.never_returns_below_within",
+    "Becoming.WayUnderARule.ReachUnit",
+    "Becoming.WayUnderARule.Needing",
+    "Becoming.WayUnderARule.reachUnit_course",
+    "Becoming.WayUnderARule.taken_below",
+    "Becoming.WayUnderARule.unending_taken_below",
+    "Becoming.StockFlowBridge.unitWeb",
+    "Becoming.StockFlowBridge.unitFlow",
+    "Becoming.StockFlowBridge.unitBalancesOn_of_le",
+    "Becoming.StockFlowBridge.unitAccumulates_of_balances",
+    "Becoming.StockFlowBridge.unitAccumulates_of_global_balances",
+    "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin"
+   ]
+  },
+  {
+   "en": "Pre-overdraw LineOnAStock and WayUnderARule bridges: line_balancesOn_of_goes, way_balancesOn_of_goes (and global balances on unending courses) embed both trajectories without clamping into Web Unit Unit and Flow Unit Unit, deriving conservation equations (line_account_of_goes, line_account_unending_via_flow, way_account_of_goes, way_account_unending) and drawdown traps (line_never_returns_below_within, way_never_returns_below_within).",
+   "declarations": [
+    "Becoming.StockFlowBridge.lineWeb",
+    "Becoming.StockFlowBridge.lineFlow",
+    "Becoming.StockFlowBridge.line_taken_lt_of_goes",
+    "Becoming.StockFlowBridge.line_balancesOn_of_within",
+    "Becoming.StockFlowBridge.line_balancesOn_of_goes",
+    "Becoming.StockFlowBridge.line_balances_of_unending",
+    "Becoming.StockFlowBridge.line_accumulates_of_goes",
+    "Becoming.StockFlowBridge.line_account_of_goes",
+    "Becoming.StockFlowBridge.line_account_unending_via_flow",
+    "Becoming.StockFlowBridge.line_never_returns_below_within",
+    "Becoming.StockFlowBridge.wayWeb",
+    "Becoming.StockFlowBridge.wayFlow",
+    "Becoming.StockFlowBridge.way_taken_lt_of_goes",
+    "Becoming.StockFlowBridge.way_balancesOn_of_within",
+    "Becoming.StockFlowBridge.way_balancesOn_of_goes",
+    "Becoming.StockFlowBridge.way_balances_of_unending",
+    "Becoming.StockFlowBridge.way_accumulates_of_goes",
+    "Becoming.StockFlowBridge.way_account_of_goes",
+    "Becoming.StockFlowBridge.way_account_unending",
+    "Becoming.StockFlowBridge.way_never_returns_below_within"
+   ]
+  },
+  {
+   "en": "Constant-draw Coupled.Indexed correspondence: on ι := Unit (Drawn.whole), whenever all needs are met (< k) and active rules keep total draw constant at H₀, LineOnAStock.left and WayUnderARule levels coincide verbatim with Law.orbit (RegimeMargin.Coupled.Indexed.step Drawn.whole G H) (fun _ => x₀) k () (line_coupled_indexed_correspondence, way_coupled_indexed_correspondence, way_coupled_indexed_of_unfavoured).",
+   "declarations": [
+    "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq",
+    "Becoming.StockFlowBridge.line_taken_const_of_even_met",
+    "Becoming.StockFlowBridge.line_coupled_indexed_correspondence",
+    "Becoming.StockFlowBridge.way_taken_const_of_met",
+    "Becoming.StockFlowBridge.way_coupled_indexed_correspondence",
+    "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. Pre-overdraw Flow balances hold only up to T + N (requires Goes ≤ T + N, FromNothing giving, Needing); Flow.never_returns_below_within requires initial below : W.level T c < m; Coupled.Indexed correspondence requires all needs met and constant draw across rules."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "Overdrawing steps where x < taken (Nat subtraction truncates, so Flow conservation breaks at failure rather than being salvaged by min-clamping).",
+   "kind": "scope"
+  },
+  {
+   "en": "Absorption of LineOnAStock.way_ends / WayUnderARule.tested_or_ends by Flow.family_excess_ends or Stage 2 deletion of ends_all.",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples": [],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T131636.294555Z): all 48 audited declarations (40 theorems) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; verified independently (5c95ea6d: PASS). No person has read it."
+ },
+ "next_delta": {
+  "en": "Index WayUnderARule, PacedStock, AdaptiveLoops, and Milestone 1C pillars into atlas dynamics.json and author alignment situations (Phase 2)."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): October–November flow conservation and drawdown trapping govern single-stock unit processes strictly up to overdraw without inventing fake min-clamping conservation, while multi-substrate Coupled.Indexed strictly extends fixed-draw dynamics."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean",
+ "aliases": [
+  "Becoming.Flow.never_returns_below_within",
+  "Becoming.WayUnderARule.taken_below",
+  "Becoming.WayUnderARule.unending_taken_below",
+  "Becoming.StockFlowBridge.line_balancesOn_of_goes",
+  "Becoming.StockFlowBridge.line_never_returns_below_within",
+  "Becoming.StockFlowBridge.way_balancesOn_of_goes",
+  "Becoming.StockFlowBridge.way_never_returns_below_within",
+  "Becoming.StockFlowBridge.line_coupled_indexed_correspondence",
+  "Becoming.StockFlowBridge.way_coupled_indexed_correspondence"
+ ],
+ "dependencies": [
+  {
+   "id": "a-line-on-a-stock",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Bridges LineOnAStock (taken_below, unending_taken_below, account) without clamping."
+   }
+  },
+  {
+   "id": "a-way-of-units-under-a-rule-set-again",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Bridges WayUnderARule courses to Flow.BalancesOn and Coupled.Indexed.step while preserving Stage 2 rfl checks."
+   }
+  },
+  {
+   "id": "continuing-self-fed-from-beyond",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Adapts Continuation Flow balance and drawdown trap to finite pre-overdraw intervals."
+   }
+  },
+  {
+   "id": "margin-of-a-regime",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Establishes exact single-substrate agreement with RegimeMargin.Coupled.Indexed.step Drawn.whole."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.Flow.held_below_within",
+    "Becoming.Flow.never_returns_below_within",
+    "Becoming.WayUnderARule.ReachUnit",
+    "Becoming.WayUnderARule.Needing",
+    "Becoming.WayUnderARule.reachUnit_course",
+    "Becoming.WayUnderARule.taken_below",
+    "Becoming.WayUnderARule.unending_taken_below",
+    "Becoming.StockFlowBridge.unitWeb",
+    "Becoming.StockFlowBridge.unitFlow",
+    "Becoming.StockFlowBridge.unitBalancesOn_of_le",
+    "Becoming.StockFlowBridge.unitAccumulates_of_balances",
+    "Becoming.StockFlowBridge.unitAccumulates_of_global_balances",
+    "Becoming.StockFlowBridge.unitNeverReturnsBelowWithin",
+    "Becoming.StockFlowBridge.lineWeb",
+    "Becoming.StockFlowBridge.lineFlow",
+    "Becoming.StockFlowBridge.line_taken_lt_of_goes",
+    "Becoming.StockFlowBridge.line_balancesOn_of_within",
+    "Becoming.StockFlowBridge.line_balancesOn_of_goes",
+    "Becoming.StockFlowBridge.line_balances_of_unending",
+    "Becoming.StockFlowBridge.line_accumulates_of_goes",
+    "Becoming.StockFlowBridge.line_account_of_goes",
+    "Becoming.StockFlowBridge.line_account_unending_via_flow",
+    "Becoming.StockFlowBridge.line_never_returns_below_within",
+    "Becoming.StockFlowBridge.wayWeb",
+    "Becoming.StockFlowBridge.wayFlow",
+    "Becoming.StockFlowBridge.way_taken_lt_of_goes",
+    "Becoming.StockFlowBridge.way_balancesOn_of_within",
+    "Becoming.StockFlowBridge.way_balancesOn_of_goes",
+    "Becoming.StockFlowBridge.way_balances_of_unending",
+    "Becoming.StockFlowBridge.way_accumulates_of_goes",
+    "Becoming.StockFlowBridge.way_account_of_goes",
+    "Becoming.StockFlowBridge.way_account_unending",
+    "Becoming.StockFlowBridge.way_never_returns_below_within",
+    "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq",
+    "Becoming.StockFlowBridge.line_taken_const_of_even_met",
+    "Becoming.StockFlowBridge.line_coupled_indexed_correspondence",
+    "Becoming.StockFlowBridge.way_taken_const_of_met",
+    "Becoming.StockFlowBridge.way_coupled_indexed_correspondence",
+    "Becoming.StockFlowBridge.way_coupled_indexed_of_unfavoured"
+   ],
+   "sha256": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
+   "role": "receipt",
+   "sha256": "d766de1c0b88043c6b09bb3f73b6f3beb68817f6762eab638bb06d35be5b39b2"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1c-multiscale-transformative-2026-11-23/NOTE.md",
+   "role": "review",
+   "sha256": "039af447c4af42505009854ff6414ddddc208ea7be68bee9929190e628d72f0a"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.StockFlowBridge",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "23 November 2026: added for Milestone 1C (Becoming.StockFlowBridge) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
+  }
+ ]
+}
