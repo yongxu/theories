@@ -4,13 +4,13 @@
 
 Every record in the directive groups `15-*`, `16-*` of [sources](../sources/README.md): 421 files, newest first. The [directive register](RESEARCH-DIRECTIVES.md) curates the authorizations among them and is incomplete; read the record itself when an authorization matters. The records keep Ren's words verbatim; an AI-authored section is labelled, its earlier text in git history.
 
-**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 161, direction 131, decision 56, correction 23, question 22, clarification 11, assessment 6, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
+**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 162, direction 130, decision 56, correction 23, question 22, clarification 11, assessment 6, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
 | 2026-11-23 | [2026-11-23-merge-everything-a-unified-head.md](../sources/15-codex-theory-conversations/2026-11-23-merge-everything-a-unified-head.md) | record | Ren: "I want to merge everything and create a unified head" | yes |
 | 2026-11-23 | [2026-11-23-first-merge-back-then-finish-them.md](../sources/15-codex-theory-conversations/2026-11-23-first-merge-back-then-finish-them.md) | record | Ren: "let's first merge back, then finish them on latest main" | yes |
-| 2026-11-23 | [2026-11-23-be-the-new-coordinator.md](../sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md) | direction | Ren: "Be the new coordinator" | yes |
+| 2026-11-23 | [2026-11-23-be-the-new-coordinator.md](../sources/15-codex-theory-conversations/2026-11-23-be-the-new-coordinator.md) | record | Ren: "Be the new coordinator" | yes |
 | 2026-11-23 | [2026-11-23-agree-with-your-approach.md](../sources/15-codex-theory-conversations/2026-11-23-agree-with-your-approach.md) | record | Ren: "explain and suggest approach that align with our direction"; "agree with your approach" | yes |
 | 2026-11-22 | [2026-11-22-yes-build-it-links-drawn-from-the-lean.md](../sources/15-codex-theory-conversations/2026-11-22-yes-build-it-links-drawn-from-the-lean.md) | record | Ren: "Yes, build it" | yes |
 | 2026-11-22 | [2026-11-22-update-our-objectives-and-directions.md](../sources/15-codex-theory-conversations/2026-11-22-update-our-objectives-and-directions.md) | direction | Ren: "alright - update our objectives and directions, and update other sessions" | yes |
