@@ -16,9 +16,9 @@ One joined, machine-checked map of how goings-on form, persist, adapt, and end w
 
 ## Where the map stands
 
-- **Overview and results:** [the one page](../theories/becoming/ONE-PAGE.md) and [the register](../RESULTS.md) (571 results, 540 Lean-checked at 0 core axioms across 412 `Becoming` modules).
-- **Atlas and structural gaps:** [the atlas](../theories/becoming/results/atlas/ATLAS.md) (186 dynamics) and [what does not join](../theories/becoming/results/atlas/JOINS.md). Proof-term audits (`e2dcc5ce5`) show a strong shared trunk (`Grammar`, `Flow`, `Continuation`) alongside ~136 unused leaf modules and three missing connective layers: carrier translators, transitions between regimes, and cross-scale loop composition.
-- **Empirical contact:** [the tests](../TESTS.md) (66 frozen tests) and [bindings](../theories/becoming/results/atlas/BINDINGS.md). Failures in 22 bound C/D tests broke at *the binding* to generalizing/noisy learners rather than in the Lean proofs.
+- **Canonical map, overview & results:** [the canonical map](../theories/becoming/CANONICAL-MAP.md) (cold-read synthesis), [the one page](../theories/becoming/ONE-PAGE.md), and [the register](../RESULTS.md) (576 registered results, 545 recorded-checked at 0 core axioms; K1–K7 met).
+- **Atlas and structural joins:** [the atlas](../theories/becoming/results/atlas/ATLAS.md) (198 dynamics, 1,728 premises, 4 situations) and [what does not join](../theories/becoming/results/atlas/JOINS.md). Following proof-term audits (`e2dcc5ce5`), Milestones 1A–1C landed the three missing connective layers (`PacedStock`, `AdaptiveLoops`, `MultiScaleViability`, `TransformativeViability`, `StockFlowBridge`), while `results/map/` remains frozen at 186 dynamics / 66 tests.
+- **Empirical contact:** [the tests](../TESTS.md) (66 frozen tests), [bindings](../theories/becoming/results/atlas/BINDINGS.md) (66/66 entered; 57 bearing on dynamics), and [Phase 2 CPU stress tests](research/2026-10-05-generative-foundation-review/root-foundation/development/p2-alignment-stress-test-2026-11-23/NOTE.md). Failures in C/D bindings and Phase 2 stress tests mark where real generalizing/noisy learners break identification bridges rather than Lean deductions.
 - **Operational state:** [hand-over](HANDOVER.md), [work board](BECOMING-WORKBOARD.md), and [Phase 0 compaction record](research/2026-10-05-generative-foundation-review/root-foundation/development/phase0-context-compaction-2026-11-23/NOTE.md).
 
 ## What we are trying next
@@ -31,7 +31,7 @@ Every milestone clears an ungameable bar before landing — **net simplification
    - **1B (`AdaptiveLoops`):** Open adaptive loops with assume-guarantee interface certificates (`Viability.disturbed`, `ReadingLoop`, `PoolFromCourse`, `SelectionPool`, `RegimeMargin.Coupled.Indexed`) to prove the **Coupled Race Theorem** (epistemic turning vs. silencing/capture vs. coordination vs. stock margin) and compositional viability vs. joint-depletion failure with endogenous rule change (not dominant-kind extinction).
    - **1C (Lax Multi-Scale Abstraction & Transformative Continuation):** Slack-bounded viability simulation across `(π, σ)` (`ProjectedLaws`, `Tower`) with a witness breaking exact lumping; formal viability-preserving transformation strictly between zero-loss `Widens` and aimless churn; surgical `Flow`–stock bridge only where non-trivial.
 3. **Phase 2 (Unified Map Tooling & Local Reality Checks, Rule 7 compliant):** Anchor the map on three authoritative layers (Lean receipt/`proof-uses`, `records/`, `atlas/entries/` via `atlas_index.py`), add time-indexed couplings and feedback loops to `atlas.py`'s situation checker, bind remaining local tests, and stress-test 1A/1B locally on CPU against noisy/generalizing learners.
-4. **Phase 3 (Canonical Map for Cold Read):** Distill the unified spine into one `< 15`-page `CANONICAL-MAP.md` Ren can read cold without AI translation, then bring chapters up to date once.
+4. **Phase 3 (Canonical Map for Cold Read — landed on `main`):** Distilled the unified spine into [`CANONICAL-MAP.md`](../theories/becoming/CANONICAL-MAP.md) (`< 15` pages) for Ren to read cold without AI translation (Phases 0–3 landed on `main`); chapter sync waits on Ren's review.
 
 ## What we do not know
 
