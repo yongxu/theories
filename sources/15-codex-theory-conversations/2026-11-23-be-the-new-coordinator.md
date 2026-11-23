@@ -80,3 +80,29 @@ He did not say which four sessions he meant, or that the session that had kept t
 **The whole gate, once, on the head after them.** `gate.py run --base main --full` at `f77c4bd31` (tree `49482107ab10`), 06:53 to 07:06 WIB: 48 checks, all passed, none reused. The log is filed in [the coordinator's kit](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/coordinator-kit-2026-11-23/NOTE.md). The landing that carries this section is text, with its own gate; it was made some hours after the gate ended, main not having moved in between.
 
 **What stays open, none of it begun,** as the rows name it on the board. Row DJ: the four links of the read of 16 November that wait since the 17th; whether chapter 7 tells what `Flow.Balances.includes_of_renewed` concludes beside its corollary; the chapters' telling of the laws of 15 and 16 November; the six proofs kept outside the package, which wait on his word; one section comment in `TurningInTime` as landed that morning, which says three laws are also stated under less where four are, owed at the module's next change. Row FM: the order-dual of `Iteration.postfixed_in_iter`; the eight tidying calls; `gather_listed` and `Prelude.not_not_all` as one induction said twice; `LevelAlone`'s form in the use under the weaker premise. Row GR: the same question asked of a pool's selections; and its sentence for AGENTS.md, which waits for his read. Of what this file's reading says the head points to next, nothing is started.
+
+## His question and two answers of the afternoon of 23 November (AI-written, the same session, 13:27 WIB by the clock; his words verbatim)
+
+12:46:56 WIB (05:46:56 UTC, transcript stamp); how it was entered the transcript does not say:
+
+> How's our goal and getting to the full picture? Are we moving forward? How much have we moved forward? And how's the general progress of getting to something that's representable?
+
+The session answered, as its own view: that the work moves forward in exactness around the edges and not at the centre; that in every law the rows' reads opened with a rule and a share, what the selection responds to is handed in; that the presentable side has not moved since 13 November; and that it would put the next effort into one claim at that gap. Its message ended on a question, which the app also showed in a box with two buttons, "Yes, propose it" and "Not yet": "Should the next step be one claim at the central gap, a selection's response derived?"
+
+12:50:05 WIB:
+
+> Yes, propose it
+
+A button's label, sent as his message. The session then read row DJ's record of 19 November whole, which it had not done before it asked, and wrote a proposal that builds what that record found and left on paper, not a new model; it told him so, and that it had named that day's paper model to him before reading the record. It put the proposal to rows DJ and FM to attack on paper. Under its message the box asked "Build stage 1 if rows DJ and FM do not break it on paper?", with the buttons "Yes, if it survives" and "Show me their answers".
+
+Before his next line the session wrote him four messages. They told him: row FM's attack, which found two statements run together and one sentence that said too much; row DJ's, which found that the statement without a rule cannot be proved with an empty axiom report, that the statement with the rule looks provable by a measure, and seven sentences of the proposal not as the record has them; that what would be built is the statement with the rule, first as both outcomes with their steps; row DJ's sentence that this is not what his first yes was to, since it derives no response beyond an unmet need leaving nothing; row DJ's caution that it answers the direction page's paragraph "What is not there" and not its sentence on a way that itself remakes what it rests on; and row DJ's figure, 2.0 million tokens as a stop, with a stop at 1.2 million. Each of the four ended on the question whether row DJ should build it under that cap.
+
+13:26:04 WIB:
+
+> Yes, if it survives
+
+A button's label, of the box told above.
+
+**How the session read the two (its own reading, held loosely).** The first as a yes to a proposal and to nothing built. The second as a yes to row DJ's build in the changed form and under row DJ's cap: the proposal had survived both attacks in that form, and the change and the cost were in the session's messages before he pressed. The button's own question was of the first form and named no cost, so this is a reading; the session told him so in its next message, so that he can stop the build if he meant otherwise. It told row DJ his words, the question each answered and this reading, and row DJ claims before it builds.
+
+**What is not said.** He wrote no sentence of his own after the question of 12:46. He did not say that the statement as changed is what he meant by the full picture, or that the course it would build shows a turning; row DJ's record of 19 November keeps that as his to recognise. He did not say to push. The proposal with the rows' answers appended is in scratch until row DJ files it as text with its landing (`/Users/ren/tmp/coord2/PROPOSAL-one-course-both-outcomes.md`).
