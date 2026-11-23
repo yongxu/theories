@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T075124.334546Z",
- "core_sources_sha256": "f3468762d5980b5de9836557bd4ca0108181f42e966e9ae1d82001e1c4980531",
+ "core_receipt": "20261123T123041.825153Z",
+ "core_sources_sha256": "b61cc2670f7c8801b656edaf38775f21a481a82e853ecd9875013a9b8cae5f9a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,18 +58,18 @@
   ]
  },
  "counts": {
-  "laws": 4435,
+  "laws": 4439,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1078,
+  "grammar": 1081,
   "balance, represented": 638,
   "anchor, not reached": 134,
-  "no shared law": 2185,
+  "no shared law": 2186,
   "vocabulary_only": 106,
-  "closure": 590,
-  "balance": 906,
+  "closure": 592,
+  "balance": 907,
   "return": 254,
-  "lumping": 92,
+  "lumping": 94,
   "order": 105
  },
  "counts_at_model": {
@@ -15315,6 +15315,131 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   }
+  ],
+  "coupled-adaptive-loops-and-race": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.AdaptiveLoops.OpenLoop",
+     "Becoming.AdaptiveLoops.OpenLoop.process",
+     "Becoming.AdaptiveLoops.LoopCertificate",
+     "Becoming.AdaptiveLoops.indexedStep_mono",
+     "Becoming.AdaptiveLoops.indexedStep_antitone_H",
+     "Becoming.AdaptiveLoops.indexedStep_ge_sub",
+     "Becoming.AdaptiveLoops.sumDraws",
+     "Becoming.AdaptiveLoops.globalMaxLag",
+     "Becoming.AdaptiveLoops.maxEta",
+     "Becoming.AdaptiveLoops.preTotal",
+     "Becoming.AdaptiveLoops.jointStep",
+     "Becoming.AdaptiveLoops.jointAdmAll",
+     "Becoming.AdaptiveLoops.jointProcess",
+     "Becoming.AdaptiveLoops.jointGuard",
+     "Becoming.AdaptiveLoops.jointInv",
+     "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+     "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.AdaptiveLoops.RaceMember",
+     "Becoming.AdaptiveLoops.raceMembers",
+     "Becoming.AdaptiveLoops.raceMemberRead",
+     "Becoming.AdaptiveLoops.signalLevel",
+     "Becoming.AdaptiveLoops.majorityBool",
+     "Becoming.AdaptiveLoops.race_pool_majority_of_lt",
+     "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted",
+     "Becoming.AdaptiveLoops.CoordMode",
+     "Becoming.AdaptiveLoops.drawerRules",
+     "Becoming.AdaptiveLoops.shorePortion",
+     "Becoming.AdaptiveLoops.postDraw",
+     "Becoming.AdaptiveLoops.postDraw_coordinated",
+     "Becoming.AdaptiveLoops.postDraw_uncoordinated",
+     "Becoming.AdaptiveLoops.coordinated_pool_leaves_one",
+     "Becoming.AdaptiveLoops.uncoordinated_drain_perfect",
+     "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains",
+     "Becoming.AdaptiveLoops.RaceParams",
+     "Becoming.AdaptiveLoops.RaceState",
+     "Becoming.AdaptiveLoops.raceStep",
+     "Becoming.AdaptiveLoops.raceInit",
+     "Becoming.AdaptiveLoops.raceOrbit",
+     "Becoming.AdaptiveLoops.race_alarm_gate_iff",
+     "Becoming.AdaptiveLoops.WitnessGood",
+     "Becoming.AdaptiveLoops.WitnessNoDiscovery",
+     "Becoming.AdaptiveLoops.WitnessSilenced",
+     "Becoming.AdaptiveLoops.WitnessUncoordinated",
+     "Becoming.AdaptiveLoops.WitnessTooSlow",
+     "Becoming.AdaptiveLoops.coupled_race_theorem"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.AdaptiveLoops.paced_fast_succ_local",
+     "Becoming.AdaptiveLoops.unread_orbit_le",
+     "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.ruleDraw",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds",
+     "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness"
+    ],
+    "shared_laws": [
+     "balance",
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.giving",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogLoop",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initRestrained",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun",
+     "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+    ],
+    "shared_laws": [
+     "closure",
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it": [
@@ -68072,7 +68197,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "b6868ac636684ecce2b72d10789a9282f397abbacd9753d6635ed383aa12c0a8",
+   "modules_sha256": "75fd80710878c88afb4b068a4de2c88797777bd6f335834e9fd60cbc8f09fac5",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

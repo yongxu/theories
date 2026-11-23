@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "152fecdefdac490011213f6ecc393d2f6742c329",
-  "core_run": "20261123T075124.334546Z"
+  "commit": "1837e3689bc791a3cff27cbd479420f55574a57f",
+  "core_run": "20261123T123041.825153Z"
  },
- "core_sources_sha256": "f3468762d5980b5de9836557bd4ca0108181f42e966e9ae1d82001e1c4980531",
+ "core_sources_sha256": "b61cc2670f7c8801b656edaf38775f21a481a82e853ecd9875013a9b8cae5f9a",
  "modules": {
   "Becoming": {
-   "source_sha256": "07582231e0bce228a28dfb9f50e70cf3c73044f1a65d0577a6dd1c8227de0219",
+   "source_sha256": "082503e937f66ce04b9823a34a905970670df84f8c0d02f51a237de2d6799092",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -28,6 +28,10 @@
   "Becoming.Actuation": {
    "source_sha256": "a35c1c3d8b0dbfe367c43059b6ee940e4348f08202de6be1fcec90ebb7922d59",
    "theorems": 47
+  },
+  "Becoming.AdaptiveLoops": {
+   "source_sha256": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
+   "theorems": 66
   },
   "Becoming.Admission": {
    "source_sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115",
@@ -1671,8 +1675,8 @@
   }
  },
  "counts": {
-  "modules": 415,
-  "theorems": 20838,
+  "modules": 416,
+  "theorems": 20904,
   "uses_without_row": 20
  }
 }

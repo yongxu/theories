@@ -1,0 +1,66 @@
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined", "uses": ["Becoming.adaptive_determined"]}
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters", "uses": ["Becoming.adaptive_state_law_iff"]}
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises", "uses": []}
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive", "uses": []}
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation", "uses": ["Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable", "uses": ["Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises", "Becoming.AdaptiveLoops.assume_guarantee_joint_viable", "Becoming.AdaptiveLoops.natBlt_true_iff", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.or_left", "Becoming.ListTests.or_right"]}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.cert", "uses": []}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.emits_on_warn", "uses": []}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.eta_alarm_step", "uses": []}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.eta_alarm_zero", "uses": []}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.eta_bound", "uses": []}
+{"name": "Becoming.AdaptiveLoops.LoopCertificate.init_in", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_fromNothing", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_mono", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_short_four", "uses": ["Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost"]}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three", "uses": []}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness", "uses": ["Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_fromNothing", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_mono", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_short_four", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three", "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true", "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse"]}
+{"name": "Becoming.AdaptiveLoops.WitnessGood", "uses": ["Becoming.AdaptiveLoops.good_after_four"]}
+{"name": "Becoming.AdaptiveLoops.WitnessNoDiscovery", "uses": ["Becoming.AdaptiveLoops.noDisc_stays"]}
+{"name": "Becoming.AdaptiveLoops.WitnessSilenced", "uses": ["Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted", "Becoming.AdaptiveLoops.silenced_never_alarms"]}
+{"name": "Becoming.AdaptiveLoops.WitnessTooSlow", "uses": []}
+{"name": "Becoming.AdaptiveLoops.WitnessUncoordinated", "uses": ["Becoming.AdaptiveLoops.uncoordinated_drain_perfect"]}
+{"name": "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains", "uses": ["Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.Optimum.Coupled.stepCoupling_zero"]}
+{"name": "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel", "uses": ["Becoming.AdaptiveLoops.assume_guarantee_joint_viable", "Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.AdaptiveLoops.assume_guarantee_joint_viable", "uses": ["Becoming.AdaptiveLoops.LoopCertificate.cert", "Becoming.AdaptiveLoops.LoopCertificate.emits_on_warn", "Becoming.AdaptiveLoops.LoopCertificate.eta_alarm_step", "Becoming.AdaptiveLoops.LoopCertificate.eta_alarm_zero", "Becoming.AdaptiveLoops.LoopCertificate.eta_bound", "Becoming.AdaptiveLoops.LoopCertificate.init_in", "Becoming.AdaptiveLoops.foldNatMax_eq_zero", "Becoming.AdaptiveLoops.foldNatMax_le_of_all", "Becoming.AdaptiveLoops.foldNatMax_succ_le", "Becoming.AdaptiveLoops.indexedStep_antitone_H", "Becoming.AdaptiveLoops.indexedStep_ge_sub", "Becoming.AdaptiveLoops.indexedStep_mono", "Becoming.AdaptiveLoops.le_foldNatMax_of_mem", "Becoming.AdaptiveLoops.sumDraws_le", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_antitone", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.Viability.certificate_disturbed_iff", "Becoming.add_mul_split"]}
+{"name": "Becoming.AdaptiveLoops.coordinated_pool_leaves_one", "uses": []}
+{"name": "Becoming.AdaptiveLoops.coupled_race_theorem", "uses": ["Becoming.AdaptiveLoops.WitnessGood", "Becoming.AdaptiveLoops.WitnessNoDiscovery", "Becoming.AdaptiveLoops.WitnessSilenced", "Becoming.AdaptiveLoops.WitnessTooSlow", "Becoming.AdaptiveLoops.WitnessUncoordinated", "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted"]}
+{"name": "Becoming.AdaptiveLoops.foldNatMax_eq_zero", "uses": ["Becoming.AdaptiveLoops.natMax_le"]}
+{"name": "Becoming.AdaptiveLoops.foldNatMax_le_of_all", "uses": ["Becoming.AdaptiveLoops.natMax_le"]}
+{"name": "Becoming.AdaptiveLoops.foldNatMax_succ_le", "uses": []}
+{"name": "Becoming.AdaptiveLoops.good_after_four", "uses": []}
+{"name": "Becoming.AdaptiveLoops.indexedStep_antitone_H", "uses": ["Becoming.Naturals.sub_antitone"]}
+{"name": "Becoming.AdaptiveLoops.indexedStep_ge_sub", "uses": []}
+{"name": "Becoming.AdaptiveLoops.indexedStep_mono", "uses": ["Becoming.RegimeMargin.Coupled.Indexed.step_mono"]}
+{"name": "Becoming.AdaptiveLoops.le_foldNatMax_of_mem", "uses": ["Becoming.AdaptiveLoops.le_natMax_left", "Becoming.AdaptiveLoops.le_natMax_right", "Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.AdaptiveLoops.le_natMax_left", "uses": []}
+{"name": "Becoming.AdaptiveLoops.le_natMax_right", "uses": []}
+{"name": "Becoming.AdaptiveLoops.majorityBool_true_iff", "uses": ["Becoming.AdaptiveLoops.natBlt_true_iff"]}
+{"name": "Becoming.AdaptiveLoops.natBeq_true_iff", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.AdaptiveLoops.natBlt_false_iff", "uses": ["Becoming.AdaptiveLoops.natBlt_true_iff", "Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.AdaptiveLoops.natBlt_true_iff", "uses": []}
+{"name": "Becoming.AdaptiveLoops.natMax_le", "uses": []}
+{"name": "Becoming.AdaptiveLoops.noDisc_stays", "uses": []}
+{"name": "Becoming.AdaptiveLoops.paced_fast_succ_local", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.AdaptiveLoops.postDraw_coordinated", "uses": []}
+{"name": "Becoming.AdaptiveLoops.postDraw_uncoordinated", "uses": []}
+{"name": "Becoming.AdaptiveLoops.raceGiving_atMost", "uses": []}
+{"name": "Becoming.AdaptiveLoops.raceGiving_fromNothing", "uses": []}
+{"name": "Becoming.AdaptiveLoops.raceGiving_short_three", "uses": ["Becoming.AdaptiveLoops.raceGiving_atMost"]}
+{"name": "Becoming.AdaptiveLoops.raceGiving_short_two", "uses": ["Becoming.AdaptiveLoops.raceGiving_atMost"]}
+{"name": "Becoming.AdaptiveLoops.raceStep_silenced_step", "uses": ["Becoming.AdaptiveLoops.natBlt_false_iff", "Becoming.ListTests.false_iff_not"]}
+{"name": "Becoming.AdaptiveLoops.race_alarm_gate_iff", "uses": ["Becoming.AdaptiveLoops.majorityBool_true_iff", "Becoming.AdaptiveLoops.natBlt_true_iff", "Becoming.ListTests.and_true_iff"]}
+{"name": "Becoming.AdaptiveLoops.race_pool_majority_of_lt", "uses": ["Becoming.AdaptiveLoops.natBlt_true_iff"]}
+{"name": "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted", "uses": ["Becoming.AdaptiveLoops.natBlt_false_iff", "Becoming.Web.majority_outvoted"]}
+{"name": "Becoming.AdaptiveLoops.silenced_never_alarms", "uses": ["Becoming.AdaptiveLoops.raceStep_silenced_step"]}
+{"name": "Becoming.AdaptiveLoops.sumDraws_le", "uses": []}
+{"name": "Becoming.AdaptiveLoops.uncoordinated_drain_perfect", "uses": ["Becoming.Optimum.Coupled.AtOnce.Shores.drain_perfect"]}
+{"name": "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse", "uses": ["Becoming.AdaptiveLoops.unread_orbit_le", "Becoming.ClosedCapture.unread_course", "Becoming.Law.orbit_add", "Becoming.RegimeMargin.ends_below", "Becoming.RegimeMargin.falls_within"]}
+{"name": "Becoming.AdaptiveLoops.unread_orbit_le", "uses": ["Becoming.AdaptiveLoops.paced_fast_succ_local", "Becoming.Naturals.sub_antitone", "Becoming.RegimeMargin.step_mono"]}
+{"name": "Becoming.AdaptiveLoops.valueEq_true_iff", "uses": []}

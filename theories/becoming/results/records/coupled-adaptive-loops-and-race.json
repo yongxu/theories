@@ -1,0 +1,381 @@
+{
+ "schema_version": 2,
+ "id": "coupled-adaptive-loops-and-race",
+ "title": {
+  "en": "Open adaptive loops, assume-guarantee joint viability, the coupled race, and adaptive collapse"
+ },
+ "kind": "theorem",
+ "status": "recorded-checked",
+ "family": "F01",
+ "reviewed_at_utc": "2026-11-23T12:32:00+00:00",
+ "statement": {
+  "en": "Open adaptive agents compose as black boxes over coupled substrates when warning margin exceeds draw times alarm lag; when discovery, pool silence, post-turn drawers, and lag compete, viability turns on their race; unread adapting loops collapse jointly while bidirectional adaptation holds."
+ },
+ "laws": [
+  {
+   "en": "Open adaptive loop interface and opaque assume-guarantee composition: OpenLoop processes disturbances under state-independent admissibility (Viability.disturbed), carrying observation-triggered alarms (emitAlarm), silence loads, pre-countdown/post-countdown draw bounds, and bounded countdown lag eta ≤ maxLag inside LoopCertificate. Under pooled site monitoring, an observation-driven channel blind to raw substrate stock st.1, monotone rising coupled dynamics (Coupled.Indexed.Rises Drawn.whole), post-turn threshold viability, and warning buffer x_crit + (globalMaxLag + 1) * preTotal ≤ warnLevel plus initial buffer x_crit + maxEta init * preTotal ≤ x_0, assume_guarantee_joint_viable proves joint Viability.Certificate (and assume_guarantee_joint_kernel proves Viability.Kernel) without unfolding (L i).next or (certs i).K.",
+   "declarations": [
+    "Becoming.AdaptiveLoops.OpenLoop",
+    "Becoming.AdaptiveLoops.OpenLoop.process",
+    "Becoming.AdaptiveLoops.LoopCertificate",
+    "Becoming.AdaptiveLoops.indexedStep_mono",
+    "Becoming.AdaptiveLoops.indexedStep_antitone_H",
+    "Becoming.AdaptiveLoops.indexedStep_ge_sub",
+    "Becoming.AdaptiveLoops.sumDraws",
+    "Becoming.AdaptiveLoops.globalMaxLag",
+    "Becoming.AdaptiveLoops.maxEta",
+    "Becoming.AdaptiveLoops.preTotal",
+    "Becoming.AdaptiveLoops.jointStep",
+    "Becoming.AdaptiveLoops.jointAdmAll",
+    "Becoming.AdaptiveLoops.jointProcess",
+    "Becoming.AdaptiveLoops.jointGuard",
+    "Becoming.AdaptiveLoops.jointInv",
+    "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+    "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel"
+   ]
+  },
+  {
+   "en": "Coupled Race Theorem: inside raceStep, alarm gating directly evaluates five-member pool majority (SelectionPool.Web.holdsCount / MajorityHolds, silenced at K_silence ≤ loss by SelectionPool.Web.majority_outvoted) and post-turn drawdown embeds two-drawer coordination on CoupledDrawers.Optimum.Coupled.AtOnce.Shores.shore 1 (H_coord = 1 ≤ 1 vs any Perfect uncoordinated profile H_uncoord = 2 via Shores.drain_perfect). Across identical start stock 13 and critical floor 5, WitnessGood survives from step 4 onward, while WitnessNoDiscovery (probeAt = none), WitnessSilenced (probeAt = some 2 after watcher loss reaches 2), WitnessUncoordinated (post-turn drain = 2), and WitnessTooSlow (ruleLag = 2) each collapse to 0.",
+   "declarations": [
+    "Becoming.AdaptiveLoops.RaceMember",
+    "Becoming.AdaptiveLoops.raceMembers",
+    "Becoming.AdaptiveLoops.raceMemberRead",
+    "Becoming.AdaptiveLoops.signalLevel",
+    "Becoming.AdaptiveLoops.majorityBool",
+    "Becoming.AdaptiveLoops.race_pool_majority_of_lt",
+    "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted",
+    "Becoming.AdaptiveLoops.CoordMode",
+    "Becoming.AdaptiveLoops.drawerRules",
+    "Becoming.AdaptiveLoops.shorePortion",
+    "Becoming.AdaptiveLoops.postDraw",
+    "Becoming.AdaptiveLoops.postDraw_coordinated",
+    "Becoming.AdaptiveLoops.postDraw_uncoordinated",
+    "Becoming.AdaptiveLoops.coordinated_pool_leaves_one",
+    "Becoming.AdaptiveLoops.uncoordinated_drain_perfect",
+    "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains",
+    "Becoming.AdaptiveLoops.RaceParams",
+    "Becoming.AdaptiveLoops.RaceState",
+    "Becoming.AdaptiveLoops.raceStep",
+    "Becoming.AdaptiveLoops.raceInit",
+    "Becoming.AdaptiveLoops.raceOrbit",
+    "Becoming.AdaptiveLoops.race_alarm_gate_iff",
+    "Becoming.AdaptiveLoops.WitnessGood",
+    "Becoming.AdaptiveLoops.WitnessNoDiscovery",
+    "Becoming.AdaptiveLoops.WitnessSilenced",
+    "Becoming.AdaptiveLoops.WitnessUncoordinated",
+    "Becoming.AdaptiveLoops.WitnessTooSlow",
+    "Becoming.AdaptiveLoops.coupled_race_theorem"
+   ]
+  },
+  {
+   "en": "Joint collapse of unread adapting loops: under monotone substrate giving gSub and unread local shares (ClosedCapture.unread_course), when combined rule-dependent draws exceed H_joint while solo draws stay within solo viability, unread_adaptive_joint_collapse transfers RegimeMargin failure onto the joint substrate. UnreadAdaptiveCollapse.witness constructs two loops whose rules genuinely flip true ↔ false every step (draw 2 vs 3): each survives solo at stock 6, jointly crashes to 0 within 7 steps, and exhibits identical local shares, rule flips, and LocalOK to a high-stock 100 run.",
+   "declarations": [
+    "Becoming.AdaptiveLoops.paced_fast_succ_local",
+    "Becoming.AdaptiveLoops.unread_orbit_le",
+    "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.ruleDraw",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness"
+   ]
+  },
+  {
+   "en": "Endogenous composite witness: concrete two-agent ReadingLoop.Loop.keep + PoolFromCourse.windowRead + Mechanism.adaptive system over Unit sharing one LoopCertificate. assume_guarantee_joint_viable certifies Viability.Kernel from both favours and restrained initial states, and endog_bidirectional_adaptation proves one admissible run transitions ¬ favours → favours (while x ≥ 16) and back favours → ¬ favours (once x drops below warnLevel 16) while permanently keeping 6 ≤ x.",
+   "declarations": [
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.giving",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogLoop",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initRestrained",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "en": "No axiom. For assume_guarantee_joint_viable: finite lists sites and agents, full site coverage, state-independent admissibility on OpenLoop.process, blind channel firing within maxSilence, monotone Coupled.Indexed.Rises Drawn.whole dynamics, post-turn threshold viability at x_crit, and warning buffer x_crit + (globalMaxLag + 1) * preTotal ≤ warnLevel plus initial slack x_crit + maxEta init * preTotal ≤ x_0."
+  },
+  {
+   "en": "For unread_adaptive_joint_collapse: monotone substrate giving gSub, unread local shares, and joint draw floor H_joint ≤ jointDraw."
+  }
+ ],
+ "does_not_show": [
+  {
+   "en": "That real-world AI training, evaluation, or multi-agent deployment loops meet LoopCertificate lag bounds, monotone Coupled.Indexed dynamics, or deterministic Nat resource arithmetic without empirical calibration.",
+   "kind": "correspondence"
+  },
+  {
+   "en": "Optimality or performance within the safe region: assume_guarantee_joint_viable certifies invariant safety above x_crit, not capability maximization.",
+   "kind": "scope"
+  },
+  {
+   "en": "Stochastic or continuous-time slack bounds (those remain out of the prelude-only discrete Nat core).",
+   "kind": "scope"
+  }
+ ],
+ "counterexamples": [],
+ "standard_boundaries": [
+  "no-ethical-premise",
+  "no-evaluation",
+  "discrete-steps",
+  "formal-not-empirical",
+  "names-provisional",
+  "omission-not-refutation"
+ ],
+ "validation_scope": {
+  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261123T123041.825153Z): all 123 audited declarations (60 theorems) in Becoming.AdaptiveLoops compile from Lean's prelude alone with empty axiom reports (core_axioms: []); environment audit clean. AI-written from a frozen brief attacked on paper (f3737f1c) and audited line-by-line by an independent verifier (1d9d23f1: PASS). No person has read it."
+ },
+ "next_delta": {
+  "en": "Couple observation-driven adaptive loops across coarse rule cadences and macro scales (Milestones 1A and 1C) and empirically stress-test the buffer bounds on noisy/generalizing learners (Phase 2)."
+ },
+ "correspondence": {
+  "en": "Reading (AI-written): compositional safety for coupled adaptive systems fails if any of four links breaks — untested-action discovery, watcher pool silence, post-turn drawer coordination, or adaptation lag exceeding the buffer between warning threshold and point of no return."
+ },
+ "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean",
+ "aliases": [
+  "Becoming.AdaptiveLoops.OpenLoop",
+  "Becoming.AdaptiveLoops.OpenLoop.process",
+  "Becoming.AdaptiveLoops.LoopCertificate",
+  "Becoming.AdaptiveLoops.jointStep",
+  "Becoming.AdaptiveLoops.jointAdmAll",
+  "Becoming.AdaptiveLoops.jointProcess",
+  "Becoming.AdaptiveLoops.jointGuard",
+  "Becoming.AdaptiveLoops.jointInv",
+  "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+  "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel",
+  "Becoming.AdaptiveLoops.raceStep",
+  "Becoming.AdaptiveLoops.raceOrbit",
+  "Becoming.AdaptiveLoops.WitnessGood",
+  "Becoming.AdaptiveLoops.WitnessNoDiscovery",
+  "Becoming.AdaptiveLoops.WitnessSilenced",
+  "Becoming.AdaptiveLoops.WitnessUncoordinated",
+  "Becoming.AdaptiveLoops.WitnessTooSlow",
+  "Becoming.AdaptiveLoops.coupled_race_theorem",
+  "Becoming.AdaptiveLoops.unread_orbit_le",
+  "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+  "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness",
+  "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable",
+  "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+ ],
+ "dependencies": [
+  {
+   "id": "what-a-course-chosen-through-its-model-does-not-test",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses ReadingLoop (Untested.reply, Loop.keep) in the race probe and endogenous loop witness."
+   }
+  },
+  {
+   "id": "a-pool-read-off-the-course",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses PoolFromCourse (Stands, windowRead) for pool watcher silencing and endogenous window reads."
+   }
+  },
+  {
+   "id": "a-pool-read-by-its-majority",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses SelectionPool (Web.holdsCount, Web.MajorityHolds, Web.majority_outvoted) directly in raceStep and WitnessSilenced."
+   }
+  },
+  {
+   "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses CoupledDrawers.Optimum.Coupled.AtOnce.Shores (shore 1, drain_perfect) directly in postDraw and WitnessUncoordinated."
+   }
+  },
+  {
+   "id": "identical-cells-under-a-descent-treating-them-alike",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Imports FreeEnergyGuarantees framing shared substrate risk and collapse."
+   }
+  },
+  {
+   "id": "margin-of-a-regime",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses RegimeMargin (step, Coupled.Indexed.step, Rises, step_mono, falls_within, ends_below)."
+   }
+  },
+  {
+   "id": "conditions-kept-together",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses Viability (Certificate, Kernel, disturbed, kernel_iff_certificate) from JointKeeping/Viability."
+   }
+  },
+  {
+   "id": "causal-models-as-processes",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses Mechanism.adaptive for the rule-dependent endogenous adaptation witness."
+   }
+  },
+  {
+   "id": "exclusive-footprint-support",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Imports Composition for modular multi-agent process framing."
+   }
+  },
+  {
+   "id": "how-fast-a-rule-may-change",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses Pace.paced in unread_adaptive_joint_collapse."
+   }
+  },
+  {
+   "id": "closed-capture",
+   "relation": "formal-reuse",
+   "detail": {
+    "en": "Reuses ClosedCapture.unread_course for joint collapse of unread local loops."
+   }
+  }
+ ],
+ "related": [],
+ "references": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean",
+   "role": "proof",
+   "declarations": [
+    "Becoming.AdaptiveLoops.OpenLoop",
+    "Becoming.AdaptiveLoops.OpenLoop.process",
+    "Becoming.AdaptiveLoops.LoopCertificate",
+    "Becoming.AdaptiveLoops.indexedStep_mono",
+    "Becoming.AdaptiveLoops.indexedStep_antitone_H",
+    "Becoming.AdaptiveLoops.indexedStep_ge_sub",
+    "Becoming.AdaptiveLoops.sumDraws",
+    "Becoming.AdaptiveLoops.globalMaxLag",
+    "Becoming.AdaptiveLoops.maxEta",
+    "Becoming.AdaptiveLoops.preTotal",
+    "Becoming.AdaptiveLoops.jointStep",
+    "Becoming.AdaptiveLoops.jointAdmAll",
+    "Becoming.AdaptiveLoops.jointProcess",
+    "Becoming.AdaptiveLoops.jointGuard",
+    "Becoming.AdaptiveLoops.jointInv",
+    "Becoming.AdaptiveLoops.assume_guarantee_joint_viable",
+    "Becoming.AdaptiveLoops.assume_guarantee_joint_kernel",
+    "Becoming.AdaptiveLoops.RaceMember",
+    "Becoming.AdaptiveLoops.raceMembers",
+    "Becoming.AdaptiveLoops.raceMemberRead",
+    "Becoming.AdaptiveLoops.signalLevel",
+    "Becoming.AdaptiveLoops.majorityBool",
+    "Becoming.AdaptiveLoops.race_pool_majority_of_lt",
+    "Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted",
+    "Becoming.AdaptiveLoops.CoordMode",
+    "Becoming.AdaptiveLoops.drawerRules",
+    "Becoming.AdaptiveLoops.shorePortion",
+    "Becoming.AdaptiveLoops.postDraw",
+    "Becoming.AdaptiveLoops.postDraw_coordinated",
+    "Becoming.AdaptiveLoops.postDraw_uncoordinated",
+    "Becoming.AdaptiveLoops.coordinated_pool_leaves_one",
+    "Becoming.AdaptiveLoops.uncoordinated_drain_perfect",
+    "Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains",
+    "Becoming.AdaptiveLoops.RaceParams",
+    "Becoming.AdaptiveLoops.RaceState",
+    "Becoming.AdaptiveLoops.raceStep",
+    "Becoming.AdaptiveLoops.raceInit",
+    "Becoming.AdaptiveLoops.raceOrbit",
+    "Becoming.AdaptiveLoops.race_alarm_gate_iff",
+    "Becoming.AdaptiveLoops.WitnessGood",
+    "Becoming.AdaptiveLoops.WitnessNoDiscovery",
+    "Becoming.AdaptiveLoops.WitnessSilenced",
+    "Becoming.AdaptiveLoops.WitnessUncoordinated",
+    "Becoming.AdaptiveLoops.WitnessTooSlow",
+    "Becoming.AdaptiveLoops.coupled_race_theorem",
+    "Becoming.AdaptiveLoops.paced_fast_succ_local",
+    "Becoming.AdaptiveLoops.unread_orbit_le",
+    "Becoming.AdaptiveLoops.unread_adaptive_joint_collapse",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.ruleDraw",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds",
+    "Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.giving",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogLoop",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.initRestrained",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun",
+    "Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation"
+   ],
+   "sha256": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T123041.825153Z/verification.json",
+   "role": "receipt",
+   "sha256": "0165f79771ff7ba8f3368c9a2d4f97333e207da08f86ed28fc9ce71924bbbcea"
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1b-adaptive-loops-2026-11-23/NOTE.md",
+   "role": "review",
+   "sha256": "4d150ddbea14b72c3f897224f82d6877b876332f9293408d3918cd200d9d312a"
+  }
+ ],
+ "proof_bindings": [
+  {
+   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean",
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T123041.825153Z/verification.json",
+   "sha256_pointer": "/source_sha256/Becoming.AdaptiveLoops",
+   "success_pointer": "/status",
+   "success_value": "passed"
+  }
+ ],
+ "history": [
+  {
+   "en": "23 November 2026: added for Milestone 1B (Becoming.AdaptiveLoops) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
+  }
+ ]
+}
