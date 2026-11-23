@@ -31,7 +31,7 @@
 {"name": "Becoming.Steps.keepsWidening_of_generation", "uses": ["Becoming.Steps.includes_not_back_of_generation"]}
 {"name": "Becoming.Steps.le_twice", "uses": []}
 {"name": "Becoming.Steps.markov_of_keepsWidening_of_generation", "uses": ["Becoming.Steps.begins_iff", "Becoming.Steps.buqiong_includes_iff", "Becoming.Steps.generation_iff_begins", "Becoming.Steps.generation_includes_iff"]}
-{"name": "Becoming.Steps.new_in_list_or_none", "uses": []}
+{"name": "Becoming.Steps.new_in_list_or_none", "uses": ["Becoming.gather_listed"]}
 {"name": "Becoming.Steps.reached_le", "uses": ["Becoming.Map.step_reached_le"]}
 {"name": "Becoming.Steps.reaches_of_buqiong", "uses": ["Becoming.Steps.reached_of_buqiong", "Becoming.le_dest"]}
 {"name": "Becoming.Steps.same_class", "uses": []}

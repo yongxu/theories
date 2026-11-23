@@ -715,7 +715,7 @@
         "Becoming.CausalGrowth.stems_of_two",
         "Becoming.CausalGrowth.step_holdsPast"
       ],
-      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+      "sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
@@ -766,12 +766,18 @@
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
       "sha256": "32ae6da01932c264cb8b73eadb17bddf713f7ff185d1afe00b7c4672558746f1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
+      "role": "receipt",
+      "sha256": "ef8b80ac778a1ca63f941503dd00ff59baa9387bbf7e237013f4cf154820d85f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CausalGrowth",
       "success_pointer": "/status",
       "success_value": "passed"

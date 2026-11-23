@@ -10,4 +10,4 @@
 {"name": "Becoming.Refining.symm", "uses": []}
 {"name": "Becoming.Refining.trans", "uses": []}
 {"name": "Becoming.le_pred_of_succ_le", "uses": []}
-{"name": "Becoming.not_not_within", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.not_not_within", "uses": ["Becoming.not_not_all"]}

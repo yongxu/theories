@@ -558,7 +558,7 @@
         "Becoming.refutable_holds_iff",
         "Becoming.runClass"
       ],
-      "sha256": "258e3db3065bef5514d4f9b10d01ef5af5c5911b66246038844d648ec1026206"
+      "sha256": "5027ffd7f16170a3997c9b71134a76724b3d183c93ea2737af82e8fb298c7928"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Horizon.lean",
@@ -773,6 +773,12 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
+      "role": "receipt",
+      "sha256": "ef8b80ac778a1ca63f941503dd00ff59baa9387bbf7e237013f4cf154820d85f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -785,7 +791,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdeals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HistoryIdeals",
       "success_pointer": "/status",
       "success_value": "passed"

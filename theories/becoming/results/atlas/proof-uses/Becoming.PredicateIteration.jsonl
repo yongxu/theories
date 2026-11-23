@@ -13,10 +13,11 @@
 {"name": "Becoming.Iteration.iter_shift", "uses": ["Becoming.Iteration.iter_iff_stages"]}
 {"name": "Becoming.Iteration.iter_shortens", "uses": ["Becoming.Iteration.iter_gives_persists"]}
 {"name": "Becoming.Iteration.iter_succ", "uses": []}
-{"name": "Becoming.Iteration.iter_within", "uses": ["Becoming.Iteration.iter_pred"]}
+{"name": "Becoming.Iteration.iter_within", "uses": ["Becoming.Iteration.prefixed_above_iter"]}
 {"name": "Becoming.Iteration.iter_within_length", "uses": ["Becoming.Iteration.gives_mono", "Becoming.Iteration.gives_start", "Becoming.Iteration.imp_iff_iter_gives", "Becoming.Iteration.iter_iff_all"]}
 {"name": "Becoming.Iteration.iter_within_pred_length", "uses": ["Becoming.Iteration.gives_mono", "Becoming.Iteration.gives_start", "Becoming.Iteration.imp_iff_iter_gives", "Becoming.Iteration.iter_persists_from_all", "Becoming.Iteration.iter_within", "Becoming.Iteration.postfixed_in_iter"]}
 {"name": "Becoming.Iteration.not_iter_of_not_succ", "uses": ["Becoming.Iteration.iter_persists"]}
 {"name": "Becoming.Iteration.postfixed_in_iter", "uses": []}
+{"name": "Becoming.Iteration.prefixed_above_iter", "uses": []}
 {"name": "Becoming.gather_listed", "uses": ["Becoming.mem_cons_cases"]}
 {"name": "Becoming.remove_mem", "uses": ["Becoming.mem_cons_cases"]}

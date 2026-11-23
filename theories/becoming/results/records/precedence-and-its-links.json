@@ -240,7 +240,7 @@
         "Becoming.CausalGrowth.searchBelow",
         "Becoming.CausalGrowth.searchBelow_or"
       ],
-      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+      "sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
@@ -276,12 +276,18 @@
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
       "sha256": "d4bdf16f85baaabaa5278222e4ad0285886c50d58b0eec56ddf04ee170601ac7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
+      "role": "receipt",
+      "sha256": "ef8b80ac778a1ca63f941503dd00ff59baa9387bbf7e237013f4cf154820d85f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CausalGrowth",
       "success_pointer": "/status",
       "success_value": "passed"

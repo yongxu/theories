@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T11:00:00+00:00",
+  "reviewed_at_utc": "2026-11-23T21:31:01+00:00",
   "statement": {
     "en": "Where a condition is observed, the margin to its own end couples into its fluctuations: the stationary variance Var E/(1 − a²) and lag-1 autocorrelation a rise as the return multiplier a rises to one before a fold or transcritical end, and give back the margin; a dependent's need enters neither.",
     "zh": "条件本身被观察之处，到其自身终止的余量耦合入其涨落：在折叠或跨临界终止之前，回复乘数 a 升向一，平稳方差 Var E/(1 − a²) 与一阶自相关 a 随之上升，并读回余量；依存者的需要不进入任一者。"
@@ -79,6 +79,14 @@
         "Becoming.SlowingDown.need_not_read",
         "Becoming.SlowingDown.need_margin_read"
       ]
+    },
+    {
+      "en": "Bridge to Becoming.RegimeMargin: safe discrete regime headroom pairs with non-ending discrete runs (RegimeMargin.holds) and sub-unit transcritical multipliers, while below-threshold collapse pairs with need_not_read.",
+      "zh": "通向 Becoming.RegimeMargin 之桥：安全的离散体制余量与不终止的离散运行及小于一的跨临界乘数配对，而低于阈值的坍缩与需要不被读出配对。",
+      "declarations": [
+        "Becoming.SlowingDown.drawn_safe_with_regime_holds",
+        "Becoming.SlowingDown.regime_below_threshold_vs_need_not_read"
+      ]
     }
   ],
   "hypotheses": [
@@ -114,8 +122,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked: the periphery module SlowingDown's 22 theorems (30 declaration audits) by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261022T104044.892409Z), each on Lean's standard axioms only; it imports no core module. Built and reviewed in one session, with no separate reviewer; author review in study section 349; not independently reviewed by a person.",
-    "zh": "机器检查：外围模块 SlowingDown 的 22 个定理（30 项声明审计）由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261022T104044.892409Z），只用 Lean 标准公理；它不导入核心模块。一个会话中构建并审查，无另设审查者；作者审查见研究第 349 节；未经人的独立审查。"
+    "en": "Machine-checked: SlowingDown's 24 theorems (32 declaration audits) under Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261123T213101.896904Z, 68 inherited Becoming deps via RegimeMargin), standard axioms only. Author review in study §349; Wave U1 bridge AI-added.",
+    "zh": "机器检查：SlowingDown 的 24 个定理（32 项声明审计）在 Lean 4.30.0-rc2 与固定 Mathlib 下实查（回执 20261123T213101.896904Z，经 RegimeMargin 继承 68 项核心依赖），只用标准公理。作者审查见研究 §349；U1 桥由 AI 添加。"
   },
   "next_delta": {
     "en": "Convergence of the variance recursion to the stationary value from any start with a² < 1; red noise and several variables; a bound on the linearization near the fold; a core statement in natural amounts if one is natural; an independent review.",
@@ -135,7 +143,15 @@
     "Becoming.SlowingDown.fold_variance_tendsto",
     "Becoming.SlowingDown.drawn_multiplier_level"
   ],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses RegimeMargin.Meets, Keeps, Short, FromNothing, holds, and ends_iff_below to join continuous slowing-down statistics with discrete regime persistence and collapse."
+      }
+    }
+  ],
   "related": [
     {
       "id": "runaway-distance-uncoupled",
@@ -179,19 +195,21 @@
         "Becoming.SlowingDown.drawn_variance_strictMonoOn",
         "Becoming.SlowingDown.drawn_variance_tendsto",
         "Becoming.SlowingDown.need_not_read",
-        "Becoming.SlowingDown.need_margin_read"
+        "Becoming.SlowingDown.need_margin_read",
+        "Becoming.SlowingDown.drawn_safe_with_regime_holds",
+        "Becoming.SlowingDown.regime_below_threshold_vs_need_not_read"
       ],
-      "sha256": "4ab7d5f9b66e6f63bbaac790117af0377a130b997a54b1ed6fbffdb00fa14291"
+      "sha256": "f1305abe3b8cf360b2ca0f05fb022f29d925838c3e8f77004a5ff8d9bac0fa57"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261123T213101.896904Z/verification.json",
       "role": "receipt",
-      "sha256": "8eeff3e7583634fb6fd68080f8ef29895902019808a8eb416b787ff69aeec457"
+      "sha256": "b3dd38739afb8f8ccc466c3d91f917b235514bfcf4df8499a9917c6d0a66de87"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/check_slowing_down.py",
       "role": "integration",
-      "sha256": "0035ecaab01dc25c9fbe1aa6a8692850ba64a614a4fd117bd7ec18bf1f4dd700"
+      "sha256": "82da7b91e95ea40e5a5e08cef3f2ff4b5e0b404e7ed05e37f74d32a3ae510f3b"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -207,7 +225,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261022T104044.892409Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/warning/slowing-down-checks/20261123T213101.896904Z/verification.json",
       "sha256_pointer": "/source_sha256/SlowingDown",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -217,6 +235,10 @@
     {
       "en": "22 October 2026: added (CS1), T6's seen half proved in its model in the periphery: stationary variance and lag-1 autocorrelation of a linear step with independent noise, their rise at a fold and at a transcritical end, the margin read back, and the need not read; study section 349.",
       "zh": "2026年10月22日：新增（CS1），T6 可见的一半在外围于其模型中已证：带独立噪声的线性之步的平稳方差与一阶自相关，它们在折叠与跨临界终止处的上升，余量的读回，以及需要不被读出；研究第 349 节。"
+    },
+    {
+      "en": "24 November 2026: bridged SlowingDown onto Becoming.RegimeMargin (drawn_safe_with_regime_holds, regime_below_threshold_vs_need_not_read) in Lean Unification Wave U1 (receipt 20261123T213101.896904Z). AI-written.",
+      "zh": "2026年11月24日：在 Lean 统一波次 U1 中将 SlowingDown 桥接至 Becoming.RegimeMargin（回执 20261123T213101.896904Z）。AI 所写。"
     }
   ]
 }

@@ -29,6 +29,8 @@
 {"name": "Becoming.Viability.keptFor_iff_plan", "uses": ["Becoming.Viability.choiceOver_fin", "Becoming.Viability.keptFor_iff_plan_of_choice"]}
 {"name": "Becoming.Viability.keptFor_iff_plan_of_choice", "uses": ["Becoming.Viability.KeptFor.plan_of_choice", "Becoming.Viability.Plan.Keeps.keptFor"]}
 {"name": "Becoming.Viability.keptFor_of_closed", "uses": []}
+{"name": "Becoming.Viability.keptFor_one_iff", "uses": []}
+{"name": "Becoming.Viability.keptFor_one_iff_change_reading", "uses": ["Becoming.Viability.keptFor_one_iff"]}
 {"name": "Becoming.Viability.plans_iff_choice", "uses": ["Becoming.Viability.Answering.answered", "Becoming.Viability.Answering.kept", "Becoming.Viability.Answering.related", "Becoming.Viability.KeptFor.plan_of_choice", "Becoming.Viability.get_of_eq_some"]}
 {"name": "Becoming.Viability.reading_mono", "uses": []}
 {"name": "Becoming.Viability.seen_eq_after", "uses": []}

@@ -19,7 +19,7 @@
 {"name": "Becoming.HistoryIdeals.initial_initialWord_iff", "uses": []}
 {"name": "Becoming.HistoryIdeals.initial_le_initialWord", "uses": ["Becoming.HistoryIdeals.initialWord_initial", "Becoming.HistoryIdeals.initialWord_length", "Becoming.HistoryIdeals.initial_le_of_length"]}
 {"name": "Becoming.HistoryIdeals.initial_le_of_length", "uses": []}
-{"name": "Becoming.HistoryIdeals.least_true_or_below", "uses": []}
+{"name": "Becoming.HistoryIdeals.least_true_or_below", "uses": ["Becoming.Clear.false_before", "Becoming.Clear.or_first"]}
 {"name": "Becoming.HistoryIdeals.length_le_of_le", "uses": ["Becoming.ListTests.length_append"]}
 {"name": "Becoming.HistoryIdeals.letter_append", "uses": ["Becoming.HistoryIdeals.letter._proof_1"]}
 {"name": "Becoming.HistoryIdeals.letter_congr", "uses": []}

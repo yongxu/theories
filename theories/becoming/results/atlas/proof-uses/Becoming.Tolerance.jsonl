@@ -63,5 +63,5 @@
 {"name": "Becoming.Tolerance.web_activity_tolerating", "uses": ["Becoming.Tolerance.KeepsInclusion.course_iff", "Becoming.Tolerance.tolerating_keeps", "Becoming.Tolerance.web_tolerating"]}
 {"name": "Becoming.Tolerance.web_answers", "uses": ["Becoming.Tolerance.AllBut.mono_set", "Becoming.Tolerance.tolerating_zero", "Becoming.Tolerance.web_tolerating"]}
 {"name": "Becoming.Tolerance.web_tolerating", "uses": ["Becoming.Tolerance.AllBut.mono_set", "Becoming.Tolerance.allBut_sub_iff"]}
-{"name": "Becoming.Tolerance.withheld_kept", "uses": []}
+{"name": "Becoming.Tolerance.withheld_kept", "uses": ["Becoming.Iteration.prefixed_above_iter", "Becoming.Tolerance.iter_eq_orbit", "Becoming.Tolerance.monotone_iff_keepsInclusion"]}
 {"name": "Becoming.Tolerance.worst_start", "uses": ["Becoming.Tolerance.KeepsInclusion.course"]}

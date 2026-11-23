@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "e76e87885346c74a621dcc2a92a9108d6d0127f5",
-  "core_run": "20261123T195223.591569Z"
+  "commit": "230d247a726ff8d7aff83b852af19161e46f82df",
+  "core_run": "20261123T212116.218407Z"
  },
- "core_sources_sha256": "8bda5d20ff2744e493ab1f6cec6d3211e83a26213270413bcfef40a9f29b9f01",
+ "core_sources_sha256": "8c210e78890d05cee06a5a602dec180d9a0d0732e9dc17b6b1016635bdd522ce",
  "modules": {
   "Becoming": {
-   "source_sha256": "e272ba805812815686ac4ef0661416f4f4e666f0de691905d162e79ff57cce16",
+   "source_sha256": "796608e76457292a6688deb820655b422efd84d1078604de0ee23ff3a9a8d059",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -126,7 +126,7 @@
    "theorems": 7
   },
   "Becoming.CausalGrowth": {
-   "source_sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726",
+   "source_sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827",
    "theorems": 168
   },
   "Becoming.CensusBinding": {
@@ -206,7 +206,7 @@
    "theorems": 3
   },
   "Becoming.Contacts": {
-   "source_sha256": "be9d4120078d923ab3565a5dae85bc0a613c51372fdf5dd64f1d21f9a3e91c41",
+   "source_sha256": "3848e98cb1dcf4d27886e7a6cf03489b90b15ee9734b359c5e011d9b65a6525a",
    "theorems": 23
   },
   "Becoming.Context": {
@@ -622,7 +622,7 @@
    "theorems": 26
   },
   "Becoming.HistoryIdeals": {
-   "source_sha256": "258e3db3065bef5514d4f9b10d01ef5af5c5911b66246038844d648ec1026206",
+   "source_sha256": "5027ffd7f16170a3997c9b71134a76724b3d183c93ea2737af82e8fb298c7928",
    "theorems": 72
   },
   "Becoming.HistoryIdealsTraces": {
@@ -746,8 +746,8 @@
    "theorems": 10
   },
   "Becoming.Keeping": {
-   "source_sha256": "c3ac97db19df01d93bfcb8c136b0c0565ef177c4c7b99f2ff0517ca99c77d064",
-   "theorems": 34
+   "source_sha256": "746e129b6140ad62f94ed9bf5958f9e6c2e8a80c9489c6d5c65ea66ff6732dec",
+   "theorems": 36
   },
   "Becoming.KeepingWidening": {
    "source_sha256": "590a35e49029e7a714eb0c0733bd299a707fa81074939f029943646c29b5985e",
@@ -814,8 +814,8 @@
    "theorems": 55
   },
   "Becoming.LevelAlone": {
-   "source_sha256": "efa141c9552125f7ed9cae89f6aad179fbfc925496199391f38791969f30e83d",
-   "theorems": 56
+   "source_sha256": "23acb62985cc6ffca325ecee7145d57dc590c516b05f3a6875bd4baec5c01176",
+   "theorems": 57
   },
   "Becoming.LevelCoupling": {
    "source_sha256": "b611cdb30a8fa786af7a1dfca1f515f0cbff08458bc61c558b7d9cfa71515a8b",
@@ -1074,8 +1074,8 @@
    "theorems": 16
   },
   "Becoming.PredicateIteration": {
-   "source_sha256": "dec3a2642a66a57b712935df84e5adac529e08a1ecd14823536b2a95be27a817",
-   "theorems": 22
+   "source_sha256": "113dc53073eafd4510ada5ea3d5bc9398bb8f71bb818b6eccc6ab90c815baaa6",
+   "theorems": 23
   },
   "Becoming.Prelude": {
    "source_sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
@@ -1198,7 +1198,7 @@
    "theorems": 55
   },
   "Becoming.Refinement": {
-   "source_sha256": "cc15760fc147391c8c88f959e4574ca351b0b4daacabb857e7fa252d56540340",
+   "source_sha256": "5c31a7b3a1f4a68ff42e9274e498ed353154a07add12b8e70720b76b604389ce",
    "theorems": 13
   },
   "Becoming.ReflexivePrediction": {
@@ -1550,7 +1550,7 @@
    "theorems": 23
   },
   "Becoming.Tolerance": {
-   "source_sha256": "0396f461645750097b19c6dd4703b87a1bda35c2bf3aaaa140e8c66e9f310c2c",
+   "source_sha256": "6a8715dd3905909667e4db07f8f6f2f38515c5dd6b82024d0c10eadb7766c45e",
    "theorems": 67
   },
   "Becoming.Tower": {
@@ -1590,7 +1590,7 @@
    "theorems": 50
   },
   "Becoming.Undecided": {
-   "source_sha256": "19dc774cdd420350ea7da35283debe242a4bdcfbc778eb17dfff5e620b1d7812",
+   "source_sha256": "255f452b2b56ddf928c101696b0e9bd85ef28af0daffb1096f936ec4b5f1eede",
    "theorems": 64
   },
   "Becoming.Unfolding": {
@@ -1666,7 +1666,7 @@
    "theorems": 98
   },
   "Becoming.WideningOnTheMap": {
-   "source_sha256": "3ea2398556568cef2ec618b0019df63d983521db273fc1b4e39eb98a5a99077b",
+   "source_sha256": "2a6f27e0169d6166143e500d83bfc68aa725a39e92012ea0f0bd56bbc0ee4898",
    "theorems": 43
   },
   "Becoming.WindowedWaiting": {
@@ -1712,7 +1712,7 @@
  },
  "counts": {
   "modules": 425,
-  "theorems": 21658,
+  "theorems": 21662,
   "uses_without_row": 34
  }
 }

@@ -447,7 +447,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
       "role": "proof",
-      "sha256": "8a1c8e9c9d9ed0dc9ec7955424905c901747756302354b6048d2ffe56e5b3726"
+      "sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",

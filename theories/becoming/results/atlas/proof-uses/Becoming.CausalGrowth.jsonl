@@ -156,7 +156,7 @@
 {"name": "Becoming.CausalGrowth.reach_links_of_decided", "uses": ["Becoming.CausalGrowth.reach_links_within_of_decided"]}
 {"name": "Becoming.CausalGrowth.reach_links_within", "uses": ["Becoming.«及之传递»"]}
 {"name": "Becoming.CausalGrowth.reach_links_within_of_decided", "uses": ["Becoming.CausalGrowth.searchBelow_or", "Becoming.«及之传递»"]}
-{"name": "Becoming.CausalGrowth.searchBelow_or", "uses": []}
+{"name": "Becoming.CausalGrowth.searchBelow_or", "uses": ["Becoming.Decided.exists_below"]}
 {"name": "Becoming.CausalGrowth.size_of_run", "uses": ["Becoming.Run.step"]}
 {"name": "Becoming.CausalGrowth.stem_all", "uses": ["Becoming.CausalGrowth.Causet.Ordered.labelled"]}
 {"name": "Becoming.CausalGrowth.stem_possible_from_start", "uses": ["Becoming.Reach.refl", "Becoming.Run.possible_from_start"]}

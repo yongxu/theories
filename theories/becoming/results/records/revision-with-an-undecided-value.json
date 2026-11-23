@@ -300,7 +300,7 @@
         "Becoming.Undecided.undecided_of_moves",
         "Becoming.Undecided.upto_length"
       ],
-      "sha256": "19dc774cdd420350ea7da35283debe242a4bdcfbc778eb17dfff5e620b1d7812"
+      "sha256": "255f452b2b56ddf928c101696b0e9bd85ef28af0daffb1096f936ec4b5f1eede"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -382,12 +382,18 @@
       "role": "receipt",
       "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
+      "role": "receipt",
+      "sha256": "ef8b80ac778a1ca63f941503dd00ff59baa9387bbf7e237013f4cf154820d85f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Undecided",
       "success_pointer": "/status",
       "success_value": "passed"

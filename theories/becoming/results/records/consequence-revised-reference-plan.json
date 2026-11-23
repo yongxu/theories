@@ -503,7 +503,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Contacts.lean",
       "role": "proof",
-      "sha256": "be9d4120078d923ab3565a5dae85bc0a613c51372fdf5dd64f1d21f9a3e91c41",
+      "sha256": "3848e98cb1dcf4d27886e7a6cf03489b90b15ee9734b359c5e011d9b65a6525a",
       "declarations": [
         "Becoming.Contacts.keeps_iff_retains",
         "Becoming.Contacts.retired_loses",
@@ -594,6 +594,12 @@
       "role": "receipt",
       "sha256": "9dffe9a99119a9921018fb7a8b71e392c7ec2e1301a80130344c10b4f1db9ee3",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
+      "role": "receipt",
+      "sha256": "ef8b80ac778a1ca63f941503dd00ff59baa9387bbf7e237013f4cf154820d85f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -606,7 +612,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Contacts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Contacts",
       "success_pointer": "/status",
       "success_value": "passed"
