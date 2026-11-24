@@ -2,6 +2,7 @@ import Mathlib.Analysis.LocallyConvex.Separation
 import Mathlib.Analysis.Convex.StdSimplex
 import Mathlib.Analysis.Normed.Module.FiniteDimension
 import Mathlib.Tactic
+import FiniteProbKrylov
 import ConsequenceDuality
 
 /-!
@@ -309,7 +310,7 @@ theorem strict_entry_improvement_witness {J_pub : Type*} [Fintype J_pub]
     have hf₁ : PrimalFeasible F_blind ε_b2 μ₁ ν₁ := fun j => by
       have h0 : (∑ s : Fin 2, F_blind j s * (μ₁.w s - ν₁.w s)) = 0 := by
         fin_cases j
-        simp [F_blind, μ₁, ν₁, diracDist, Fin.sum_univ_two]
+        simp [F_blind, μ₁, ν₁, FiniteProb.diracDist, Fin.sum_univ_two]
       rw [h0, abs_zero]
       norm_num [ε_b2]
     have hd₁ : dualBound F_blind h_b2 ε_b2 b₁ c₁ = (1 / 2 : ℝ) := by
@@ -327,7 +328,7 @@ theorem strict_entry_improvement_witness {J_pub : Type*} [Fintype J_pub]
           linarith [hsub0, hle])
     have hp₁ : primalGap h_b2 μ₁ ν₁ = (1 / 2 : ℝ) := by
       unfold primalGap
-      simp [h_b2, μ₁, ν₁, diracDist, Fin.sum_univ_two]
+      simp [h_b2, μ₁, ν₁, FiniteProb.diracDist, Fin.sum_univ_two]
     have hp_opt₁ : ∀ μ' ν' : FinDist (Fin 2), PrimalFeasible F_blind ε_b2 μ' ν' →
         primalGap h_b2 μ' ν' ≤ primalGap h_b2 μ₁ ν₁ := by
       intro μ' ν' hf'
@@ -396,152 +397,60 @@ theorem zero_dualBound_iff_affine_span {S J : Type*} [Fintype S] [Nonempty S] [F
 
 /-! ## Bridge 4: Finite Krylov Stabilization & Zero Minimax Error -/
 
-/-- One-step linear transfer operator for transition matrix `M : S → S → ℝ`. -/
-noncomputable def stepOp {S : Type*} [Fintype S] (M : S → S → ℝ) (v : S → ℝ) : S → ℝ :=
-  fun s => ∑ s' : S, M s s' * v s'
+/-- One-step linear transfer operator for transition matrix `M : S → S → ℝ` (re-exported from `FiniteKrylov`). -/
+noncomputable abbrev stepOp {S : Type*} [Fintype S] (M : S → S → ℝ) (v : S → ℝ) : S → ℝ :=
+  FiniteKrylov.stepOp M v
 
 /-- `stepOp` as a linear map on `S → ℝ`. -/
-noncomputable def stepLinearMap {S : Type*} [Fintype S] (M : S → S → ℝ) :
-    (S → ℝ) →ₗ[ℝ] (S → ℝ) where
-  toFun := stepOp M
-  map_add' x y := by
-    ext s
-    simp only [stepOp, Pi.add_apply, mul_add, Finset.sum_add_distrib]
-  map_smul' r x := by
-    ext s
-    simp only [stepOp, Pi.smul_apply, smul_eq_mul, RingHom.id_apply, Finset.mul_sum]
-    refine Finset.sum_congr rfl fun s' _ => by ring
+noncomputable abbrev stepLinearMap {S : Type*} [Fintype S] (M : S → S → ℝ) :
+    (S → ℝ) →ₗ[ℝ] (S → ℝ) :=
+  FiniteKrylov.stepLinearMap M
 
 /-- Action-word transfer applied to initial potential `v₀ : S → ℝ`. -/
-noncomputable def wordVec {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) (v₀ : S → ℝ) :
-    List Act → S → ℝ
-  | [] => v₀
-  | a :: w => stepOp (K a) (wordVec K v₀ w)
+noncomputable abbrev wordVec {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) (v₀ : S → ℝ) :
+    List Act → S → ℝ :=
+  FiniteKrylov.wordVec K v₀
 
 /-- Finite-horizon survival vector `wordVec K (fun _ => 1) w`. -/
-noncomputable def survVec {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) : List Act → S → ℝ :=
-  wordVec K (fun _ => 1)
+noncomputable abbrev survVec {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) : List Act → S → ℝ :=
+  FiniteKrylov.survVec K
 
 /-- Subspace spanned by all `wordVec K v₀ w` of word length at most `k`. -/
-noncomputable def krylovSub {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) (v₀ : S → ℝ)
+noncomputable abbrev krylovSub {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) (v₀ : S → ℝ)
     (k : ℕ) : Submodule ℝ (S → ℝ) :=
-  Submodule.span ℝ {v : S → ℝ | ∃ w : List Act, w.length ≤ k ∧ v = wordVec K v₀ w}
+  FiniteKrylov.krylovSub K v₀ k
 
 theorem krylovSub_mono {S Act : Type*} [Fintype S] (K : Act → S → S → ℝ) (v₀ : S → ℝ)
     {j k : ℕ} (hjk : j ≤ k) :
-    krylovSub K v₀ j ≤ krylovSub K v₀ k := by
-  refine Submodule.span_mono ?_
-  rintro v ⟨w, hw, rfl⟩
-  exact ⟨w, hw.trans hjk, rfl⟩
+    krylovSub K v₀ j ≤ krylovSub K v₀ k :=
+  FiniteKrylov.krylovSub_mono K v₀ hjk
 
 theorem stepLinearMap_mem_krylovSub_succ {S Act : Type*} [Fintype S]
     (K : Act → S → S → ℝ) (v₀ : S → ℝ) (k : ℕ) (a : Act) :
-    Submodule.map (stepLinearMap (K a)) (krylovSub K v₀ k) ≤ krylovSub K v₀ (k + 1) := by
-  rw [Submodule.map_le_iff_le_comap, krylovSub, Submodule.span_le]
-  rintro v ⟨w, hw, rfl⟩
-  refine Submodule.subset_span ⟨a :: w, by simp [hw], ?_⟩
-  rfl
+    Submodule.map (stepLinearMap (K a)) (krylovSub K v₀ k) ≤ krylovSub K v₀ (k + 1) :=
+  FiniteKrylov.stepLinearMap_mem_krylovSub_succ K v₀ k a
 
 theorem krylovSub_step_eq_of_eq {S Act : Type*} [Fintype S]
     (K : Act → S → S → ℝ) (v₀ : S → ℝ) {k : ℕ}
     (hk : krylovSub K v₀ k = krylovSub K v₀ (k + 1)) :
-    krylovSub K v₀ (k + 1) = krylovSub K v₀ (k + 2) := by
-  refine le_antisymm (krylovSub_mono K v₀ (Nat.le_succ (k + 1))) ?_
-  rw [krylovSub, Submodule.span_le]
-  rintro v ⟨w, hw, rfl⟩
-  cases w with
-  | nil =>
-      exact krylovSub_mono K v₀ (Nat.zero_le (k + 1))
-        (Submodule.subset_span ⟨[], by simp, rfl⟩)
-  | cons a w' =>
-      have hw' : w'.length ≤ k + 1 := by
-        simpa [List.length_cons, Nat.add_assoc] using hw
-      have hmem' : wordVec K v₀ w' ∈ krylovSub K v₀ (k + 1) :=
-        Submodule.subset_span ⟨w', hw', rfl⟩
-      rw [← hk] at hmem'
-      exact stepLinearMap_mem_krylovSub_succ K v₀ k a ⟨wordVec K v₀ w', hmem', rfl⟩
+    krylovSub K v₀ (k + 1) = krylovSub K v₀ (k + 2) :=
+  FiniteKrylov.krylovSub_step_eq_of_eq K v₀ hk
 
 theorem krylovSub_stabilizes_from {S Act : Type*} [Fintype S]
     (K : Act → S → S → ℝ) (v₀ : S → ℝ) {k : ℕ}
     (hk : krylovSub K v₀ k = krylovSub K v₀ (k + 1)) :
-    ∀ m : ℕ, k ≤ m → krylovSub K v₀ m = krylovSub K v₀ k := by
-  intro m hm
-  obtain ⟨d, rfl⟩ := Nat.exists_eq_add_of_le hm
-  induction d with
-  | zero => simp
-  | succ d ih =>
-      have hsucc : krylovSub K v₀ (k + d) = krylovSub K v₀ (k + d + 1) := by
-        clear hm ih
-        induction d with
-        | zero => simpa using hk
-        | succ d ihd => exact krylovSub_step_eq_of_eq K v₀ ihd
-      rw [← Nat.add_assoc, ← hsucc]
-      exact ih (Nat.le_add_right k d)
+    ∀ m : ℕ, k ≤ m → krylovSub K v₀ m = krylovSub K v₀ k :=
+  FiniteKrylov.krylovSub_stabilizes_from K v₀ hk
 
 theorem krylovSub_stabilizes_before_card {S Act : Type*} [Fintype S] [Nonempty S]
     (K : Act → S → S → ℝ) (v₀ : S → ℝ) :
-    ∃ k ≤ Fintype.card S - 1, krylovSub K v₀ k = krylovSub K v₀ (k + 1) := by
-  by_cases hv0 : v₀ = 0
-  · subst hv0
-    refine ⟨0, Nat.zero_le _, ?_⟩
-    have hword : ∀ u : List Act, wordVec K (0 : S → ℝ) u = 0 := by
-      intro u
-      induction u with
-      | nil => rfl
-      | cons a u' ih =>
-          ext s
-          simp [wordVec, stepOp, ih]
-    have hzero : ∀ (m : ℕ), krylovSub K (0 : S → ℝ) m = ⊥ := by
-      intro m
-      rw [krylovSub, eq_bot_iff, Submodule.span_le]
-      rintro v ⟨w, _, rfl⟩
-      simp [hword w]
-    rw [hzero 0, hzero 1]
-  · by_contra hno
-    push Not at hno
-    have hstrict : ∀ k ≤ Fintype.card S - 1, krylovSub K v₀ k < krylovSub K v₀ (k + 1) :=
-      fun k hk => lt_of_le_of_ne (krylovSub_mono K v₀ (Nat.le_succ k)) (hno k hk)
-    have hrank_bound : ∀ k ≤ Fintype.card S,
-        k + 1 ≤ Module.finrank ℝ (krylovSub K v₀ k) := by
-      intro k hk
-      induction k with
-      | zero =>
-          have hmem0 : v₀ ∈ krylovSub K v₀ 0 :=
-            Submodule.subset_span ⟨[], by simp, rfl⟩
-          have hne_bot : krylovSub K v₀ 0 ≠ ⊥ := by
-            intro hbot
-            rw [hbot, Submodule.mem_bot] at hmem0
-            exact hv0 hmem0
-          have hlt0 : 0 < Module.finrank ℝ (krylovSub K v₀ 0) := by
-            simpa using Submodule.finrank_lt_finrank_of_lt (bot_lt_iff_ne_bot.mpr hne_bot)
-          omega
-      | succ k ih =>
-          have hk_pred : k ≤ Fintype.card S - 1 := Nat.le_sub_one_of_lt hk
-          have hprev := ih (Nat.le_of_lt hk)
-          have hlt := Submodule.finrank_lt_finrank_of_lt (hstrict k hk_pred)
-          omega
-    have htop : Fintype.card S + 1 ≤ Module.finrank ℝ (krylovSub K v₀ (Fintype.card S)) :=
-      hrank_bound (Fintype.card S) le_rfl
-    have hle_space : Module.finrank ℝ (krylovSub K v₀ (Fintype.card S)) ≤ Fintype.card S := by
-      calc Module.finrank ℝ (krylovSub K v₀ (Fintype.card S))
-          ≤ Module.finrank ℝ (S → ℝ) := Submodule.finrank_le _
-        _ = Fintype.card S := by simp
-    omega
+    ∃ k ≤ Fintype.card S - 1, krylovSub K v₀ k = krylovSub K v₀ (k + 1) :=
+  FiniteKrylov.krylovSub_stabilizes_before_card K v₀
 
 theorem wordVec_mem_krylovSub_pred {S Act : Type*} [Fintype S] [Nonempty S]
     (K : Act → S → S → ℝ) (v₀ : S → ℝ) (w : List Act) :
-    wordVec K v₀ w ∈ krylovSub K v₀ (Fintype.card S - 1) := by
-  obtain ⟨k, hk_le, hk_eq⟩ := krylovSub_stabilizes_before_card K v₀
-  have hmem_len : wordVec K v₀ w ∈ krylovSub K v₀ w.length :=
-    Submodule.subset_span ⟨w, le_rfl, rfl⟩
-  by_cases hle : w.length ≤ k
-  · exact krylovSub_mono K v₀ hk_le (krylovSub_mono K v₀ hle hmem_len)
-  · have hge : k ≤ w.length := Nat.le_of_not_ge hle
-    have hstab_w := krylovSub_stabilizes_from K v₀ hk_eq w.length hge
-    have hstab_pred := krylovSub_stabilizes_from K v₀ hk_eq (Fintype.card S - 1) hk_le
-    rw [hstab_w] at hmem_len
-    rw [hstab_pred]
-    exact hmem_len
+    wordVec K v₀ w ∈ krylovSub K v₀ (Fintype.card S - 1) :=
+  FiniteKrylov.wordVec_mem_krylovSub_pred K v₀ w
 
 /-- Finite index of all action words of length `< Fintype.card S` (i.e. `≤ Fintype.card S - 1`). -/
 abbrev ShortWord (S Act : Type*) [Fintype S] :=
@@ -569,7 +478,7 @@ theorem finite_krylov_zero_minimax_radius {S Act : Type*} [Fintype S] [Nonempty 
   let h : S → ℝ := survVec K w₀
   have hk_le_span : krylovSub K (fun _ : S => (1 : ℝ)) (Fintype.card S - 1) ≤
       Submodule.span ℝ (Set.range F_short) := by
-    rw [krylovSub, Submodule.span_le]
+    rw [krylovSub, FiniteKrylov.krylovSub, Submodule.span_le]
     rintro v ⟨w, hw, rfl⟩
     have hw_lt : w.length < Fintype.card S := by
       have hpos : 0 < Fintype.card S := Fintype.card_pos
@@ -581,7 +490,7 @@ theorem finite_krylov_zero_minimax_radius {S Act : Type*} [Fintype S] [Nonempty 
       · simp [q, len]
       · intro i hi1 hi2
         simp [q]
-    have hmem : wordVec K (fun _ => 1) w = F_short q := by
+    have hmem : FiniteKrylov.wordVec K (fun _ => 1) w = F_short q := by
       simp [F_short, shortWordQuery, hword]
     rw [hmem]
     exact Submodule.subset_span ⟨q, rfl⟩

@@ -200,21 +200,29 @@ def main() -> int:
         env = os.environ.copy()
         env["LEAN_PATH"] = os.pathsep.join([str(tmp_path)] + math_paths)
 
+        conseq_bytes = BASE_CONSEQ.read_bytes()
+        bridges_bytes = BASE_BRIDGES.read_bytes()
+        trackb_bytes = TRACK_B.read_bytes()
+        raw_bytes = SOURCE_FILE.read_bytes()
+
         for name in inherited:
             rel = core.source_file(name)
             target = tmp_path / rel
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(index[name][0].read_bytes())
+            dep_bytes = trackb_bytes if name == TRACK_B_MODULE else index[name][0].read_bytes()
+            target.write_bytes(dep_bytes)
             compile_lean(lean_bin, ["-o", str(tmp_path / rel[:-5]) + ".olean", rel],
                          tmp_path, env, name)
 
-        for name, file_path in (("ConsequenceDuality", BASE_CONSEQ),
-                                ("DualityBridges", BASE_BRIDGES),
-                                (MODULE_NAME, SOURCE_FILE)):
-            res = compile_lean(lean_bin, ["-o", str(tmp_path / f"{name}.olean"), file_path.name],
-                               HERE, env, file_path.name)
+        for name, file_bytes in (("ConsequenceDuality", conseq_bytes),
+                                 ("DualityBridges", bridges_bytes),
+                                 (MODULE_NAME, raw_bytes)):
+            dep_lean = tmp_path / f"{name}.lean"
+            dep_lean.write_bytes(file_bytes)
+            res = compile_lean(lean_bin, ["-o", str(tmp_path / f"{name}.olean"), dep_lean.name],
+                               tmp_path, env, dep_lean.name)
             if name == MODULE_NAME and (res.stdout.strip() or res.stderr.strip()):
-                raise RuntimeError(f"Lean compilation of {file_path.name} emitted output:\n"
+                raise RuntimeError(f"Lean compilation of {dep_lean.name} emitted output:\n"
                                    f"STDOUT:\n{res.stdout}\nSTDERR:\n{res.stderr}")
 
         audit_lines = [f"import {MODULE_NAME}", ""]
@@ -230,17 +238,22 @@ def main() -> int:
             raise RuntimeError(f"Non-standard axioms detected: {disallowed}")
 
     all_axioms = sorted({ax for axs in axioms_by_decl.values() for ax in axs})
-
-    def sha(path: pathlib.Path) -> str:
-        return hashlib.sha256(path.read_bytes()).hexdigest()
+    if (
+        BASE_CONSEQ.read_bytes() != conseq_bytes
+        or BASE_BRIDGES.read_bytes() != bridges_bytes
+        or TRACK_B.read_bytes() != trackb_bytes
+        or SOURCE_FILE.read_bytes() != raw_bytes
+    ):
+        raise RuntimeError("Source bytes changed on disk during check; snapshot integrity failed")
 
     receipt = {
         "module": MODULE_NAME,
         "source_file": str(SOURCE_FILE.relative_to(HERE)),
-        "source_sha256": sha(SOURCE_FILE),
+        "source_sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "imported_unmodified_sha256": {
-            "DualityBridges": sha(BASE_BRIDGES),
-            TRACK_B_MODULE: sha(TRACK_B),
+            "ConsequenceDuality": hashlib.sha256(conseq_bytes).hexdigest(),
+            "DualityBridges": hashlib.sha256(bridges_bytes).hexdigest(),
+            TRACK_B_MODULE: hashlib.sha256(trackb_bytes).hexdigest(),
         },
         "track_b_inherited_modules": len(inherited) - 1,
         "verified_at_utc": datetime.now(timezone.utc).isoformat(),

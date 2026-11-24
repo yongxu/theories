@@ -28,6 +28,8 @@ import check_becoming as core  # noqa: E402
 
 MODULE_NAME = "ConsequenceDuality"
 SOURCE_FILE = HERE / "ConsequenceDuality.lean"
+FPK_SOURCE = (HERE.parent / "finite-prob-krylov" / "FiniteProbKrylov.lean").resolve()
+LEAN_ROOT = HERE.parent.resolve()
 TOOLCHAIN_FILE = HERE / "lean-toolchain"
 RECEIPT_FILE = HERE / "consequence-duality-verification.json"
 
@@ -114,6 +116,8 @@ def parse_axiom_output(stdout: str, decl_names: list[str]) -> dict[str, list[str
 def main() -> int:
     if not SOURCE_FILE.is_file():
         raise FileNotFoundError(f"Missing source file: {SOURCE_FILE}")
+    if not FPK_SOURCE.is_file():
+        raise FileNotFoundError(f"Missing shared dependency source file: {FPK_SOURCE}")
     if not TOOLCHAIN_FILE.is_file():
         raise FileNotFoundError(f"Missing toolchain file: {TOOLCHAIN_FILE}")
     if not LEAN_BIN.is_file():
@@ -154,6 +158,8 @@ def main() -> int:
 
     raw_bytes = SOURCE_FILE.read_bytes()
     source_sha256 = hashlib.sha256(raw_bytes).hexdigest()
+    fpk_bytes = FPK_SOURCE.read_bytes()
+    fpk_sha256 = hashlib.sha256(fpk_bytes).hexdigest()
     source_text = raw_bytes.decode("utf-8")
     code_only = core.audit_support.code_only(source_text)
 
@@ -195,24 +201,27 @@ def main() -> int:
         env = os.environ.copy()
         env["LEAN_PATH"] = os.pathsep.join([str(tmp_dir)] + lean_lib_paths)
 
-        olean_path = tmp_dir / f"{MODULE_NAME}.olean"
-        compile_res = subprocess.run(
-            [str(LEAN_BIN), "-o", str(olean_path), SOURCE_FILE.name],
-            cwd=HERE,
-            env=env,
-            text=True,
-            capture_output=True,
-        )
-        if compile_res.returncode != 0:
-            raise RuntimeError(
-                f"Lean compilation failed (exit {compile_res.returncode}):\n"
-                f"STDOUT:\n{compile_res.stdout}\nSTDERR:\n{compile_res.stderr}"
+        for dep_name, dep_bytes in (("FiniteProbKrylov", fpk_bytes), (MODULE_NAME, raw_bytes)):
+            dep_lean = tmp_dir / f"{dep_name}.lean"
+            dep_lean.write_bytes(dep_bytes)
+            dep_olean = tmp_dir / f"{dep_name}.olean"
+            compile_res = subprocess.run(
+                [str(LEAN_BIN), "-o", str(dep_olean), dep_lean.name],
+                cwd=tmp_dir,
+                env=env,
+                text=True,
+                capture_output=True,
             )
-        if compile_res.stdout.strip() or compile_res.stderr.strip():
-            raise RuntimeError(
-                f"Lean compilation emitted unexpected output/warnings:\n"
-                f"STDOUT:\n{compile_res.stdout}\nSTDERR:\n{compile_res.stderr}"
-            )
+            if compile_res.returncode != 0:
+                raise RuntimeError(
+                    f"Lean compilation of {dep_name}.lean failed (exit {compile_res.returncode}):\n"
+                    f"STDOUT:\n{compile_res.stdout}\nSTDERR:\n{compile_res.stderr}"
+                )
+            if compile_res.stdout.strip() or compile_res.stderr.strip():
+                raise RuntimeError(
+                    f"Lean compilation of {dep_name}.lean emitted unexpected output/warnings:\n"
+                    f"STDOUT:\n{compile_res.stdout}\nSTDERR:\n{compile_res.stderr}"
+                )
 
         axiom_lines = [f"import {MODULE_NAME}", ""] + [
             f"#print axioms {name}" for name in decl_names
@@ -221,7 +230,6 @@ def main() -> int:
         axiom_file.write_text("\n".join(axiom_lines) + "\n", encoding="utf-8")
         axiom_res = subprocess.run(
             [str(LEAN_BIN), str(axiom_file)],
-            cwd=tmp_dir,
             env=env,
             text=True,
             capture_output=True,
@@ -248,7 +256,6 @@ def main() -> int:
         sig_file.write_text("\n".join(sig_lines) + "\n", encoding="utf-8")
         sig_res = subprocess.run(
             [str(LEAN_BIN), str(sig_file)],
-            cwd=tmp_dir,
             env=env,
             text=True,
             capture_output=True,
@@ -259,11 +266,20 @@ def main() -> int:
                 f"STDOUT:\n{sig_res.stdout}\nSTDERR:\n{sig_res.stderr}"
             )
 
+    if FPK_SOURCE.read_bytes() != fpk_bytes or SOURCE_FILE.read_bytes() != raw_bytes:
+        raise RuntimeError("Source bytes changed on disk during check; snapshot integrity failed")
     all_axioms_used = sorted({ax for axs in axioms_by_decl.values() for ax in axs})
     receipt = {
         "module": MODULE_NAME,
         "source_file": str(SOURCE_FILE.relative_to(HERE)),
+        "source_paths": {
+            "FiniteProbKrylov": str(FPK_SOURCE.relative_to(LEAN_ROOT)),
+            MODULE_NAME: str(SOURCE_FILE.relative_to(LEAN_ROOT)),
+        },
         "source_sha256": source_sha256,
+        "dependency_sha256": {
+            "FiniteProbKrylov": fpk_sha256,
+        },
         "verified_at_utc": datetime.now(timezone.utc).isoformat(),
         "ai_written": True,
         "toolchain": toolchain,
@@ -282,7 +298,7 @@ def main() -> int:
         },
         "declaration_count": len(decl_names),
         "theorem_count": sum(1 for d in decls if d["kind"] == "theorem"),
-        "definition_count": sum(1 for d in decls if d["kind"] == "def"),
+        "definition_count": sum(1 for d in decls if d["kind"] in ("def", "abbrev")),
         "structure_count": sum(1 for d in decls if d["kind"] == "structure"),
         "required_declarations_verified": REQUIRED_DECLARATIONS,
         "declarations": [

@@ -65,7 +65,7 @@ theorem sum_stepOp_eq_pushKernel {S : Type*} [Fintype S] (P : MarkovKernel S) (h
     (μ ν : FinDist S) :
     ∑ s : S, stepOp (kernelMatrix P) h s * (μ.w s - ν.w s) =
       ∑ s' : S, h s' * ((pushKernel P μ).w s' - (pushKernel P ν).w s') := by
-  simp only [stepOp, kernelMatrix, pushKernel]
+  simp only [stepOp, FiniteKrylov.stepOp, kernelMatrix, pushKernel]
   calc ∑ s : S, (∑ s' : S, (P.row s).w s' * h s') * (μ.w s - ν.w s)
       = ∑ s : S, ∑ s' : S, h s' * ((P.row s).w s' * (μ.w s - ν.w s)) := by
         refine Finset.sum_congr rfl fun s _ => ?_
@@ -81,7 +81,7 @@ theorem sum_stepOp_eq_pushKernel {S : Type*} [Fintype S] (P : MarkovKernel S) (h
 theorem stepOp_const {S : Type*} [Fintype S] (P : MarkovKernel S) (b : ℝ) :
     stepOp (kernelMatrix P) (fun _ => b) = fun _ => b := by
   ext s
-  simp only [stepOp, kernelMatrix, ← Finset.sum_mul, (P.row s).sum_eq_one, one_mul]
+  simp only [stepOp, FiniteKrylov.stepOp, kernelMatrix, ← Finset.sum_mul, (P.row s).sum_eq_one, one_mul]
 
 theorem iterStepOp_const {S : Type*} [Fintype S] (P : MarkovKernel S) (b : ℝ) :
     ∀ t : ℕ, iterStepOp P t (fun _ => b) = fun _ => b
@@ -92,19 +92,19 @@ theorem iterStepOp_const {S : Type*} [Fintype S] (P : MarkovKernel S) (b : ℝ) 
 theorem stepOp_sub {S : Type*} [Fintype S] (M : S → S → ℝ) (f g : S → ℝ) :
     stepOp M (fun s => f s - g s) = fun s => stepOp M f s - stepOp M g s := by
   ext s
-  simp only [stepOp, mul_sub, Finset.sum_sub_distrib]
+  simp only [stepOp, FiniteKrylov.stepOp, mul_sub, Finset.sum_sub_distrib]
 
 theorem stepOp_smul_right {S : Type*} [Fintype S] (M : S → S → ℝ) (f : S → ℝ) (r : ℝ) :
     stepOp M (fun s => f s * r) = fun s => stepOp M f s * r := by
   ext s
-  simp only [stepOp, Finset.sum_mul]
+  simp only [stepOp, FiniteKrylov.stepOp, Finset.sum_mul]
   refine Finset.sum_congr rfl fun s' _ => by ring
 
 theorem stepOp_finset_sum {S J : Type*} [Fintype S] (M : S → S → ℝ) (sJ : Finset J)
     (g : J → S → ℝ) :
     stepOp M (fun s => ∑ j ∈ sJ, g j s) = fun s => ∑ j ∈ sJ, stepOp M (g j) s := by
   ext s
-  simp only [stepOp, Finset.mul_sum]
+  simp only [stepOp, FiniteKrylov.stepOp, Finset.mul_sum]
   rw [Finset.sum_comm]
 
 theorem iterStepOp_sub {S : Type*} [Fintype S] (P : MarkovKernel S) (f g : S → ℝ) :
@@ -184,7 +184,7 @@ theorem osc_stepOp_le_dobrushin {S : Type*} [Fintype S] [Nonempty S] (P : Markov
         (P.row s₂).sum_eq_one, sub_self, zero_mul]
     have hdiff : stepOp (kernelMatrix P) g s₁ - stepOp (kernelMatrix P) g s₂ =
         ∑ s' : S, ((P.row s₁).w s' - (P.row s₂).w s') * (g s' - mid g) := by
-      simp only [stepOp, kernelMatrix, ← Finset.sum_sub_distrib]
+      simp only [stepOp, FiniteKrylov.stepOp, kernelMatrix, ← Finset.sum_sub_distrib]
       calc ∑ s' : S, ((P.row s₁).w s' * g s' - (P.row s₂).w s' * g s')
           = ∑ s' : S, (((P.row s₁).w s' - (P.row s₂).w s') * (g s' - mid g) +
               ((P.row s₁).w s' - (P.row s₂).w s') * mid g) := by
@@ -205,7 +205,7 @@ theorem osc_stepOp_le_dobrushin {S : Type*} [Fintype S] [Nonempty S] (P : Markov
       _ = (∑ s' : S, |(P.row s₁).w s' - (P.row s₂).w s'|) * (osc g / 2) :=
           (Finset.sum_mul _ _ _).symm
       _ = tvDist (P.row s₁) (P.row s₂) * osc g := by
-          unfold tvDist
+          unfold tvDist FiniteProb.tvDist
           ring
       _ ≤ α * osc g := mul_le_mul_of_nonneg_right (hα s₁ s₂) (osc_nonneg g)
   have hle_inf : ∀ s₁ : S, stepOp (kernelMatrix P) g s₁ ≤

@@ -1,0 +1,315 @@
+@ObservationalFidelity.FinDist.ext : ∀ {U : Type u_1} [inst : Fintype U] {p q : ObservationalFidelity.FinDist U},
+  (∀ (u : U), p.w u = q.w u) → p = q
+@ObservationalFidelity.pushforward_comp : ∀ {U : Type u_1} {Y : Type u_2} {Z : Type u_3} [inst : Fintype U]
+  [inst_1 : Fintype Y] [inst_2 : Fintype Z] (g : Y → Z) (f : U → Y) (p : ObservationalFidelity.FinDist U),
+  ObservationalFidelity.pushforward (g ∘ f) p =
+    ObservationalFidelity.pushforward g (ObservationalFidelity.pushforward f p)
+@ObservationalFidelity.tvDist_nonneg : ∀ {Y : Type u_1} [inst : Fintype Y] (μ ν : ObservationalFidelity.FinDist Y),
+  0 ≤ ObservationalFidelity.tvDist μ ν
+@ObservationalFidelity.tvDist_self : ∀ {Y : Type u_1} [inst : Fintype Y] (μ : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist μ μ = 0
+@ObservationalFidelity.tvDist_symm : ∀ {Y : Type u_1} [inst : Fintype Y] (μ ν : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist μ ν = ObservationalFidelity.tvDist ν μ
+@ObservationalFidelity.tvDist_triangle : ∀ {Y : Type u_1} [inst : Fintype Y] (μ ρ ν : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist μ ν ≤ ObservationalFidelity.tvDist μ ρ + ObservationalFidelity.tvDist ρ ν
+@ObservationalFidelity.tvDist_pushforward_le : ∀ {Y : Type u_1} {Z : Type u_2} [inst : Fintype Y] [inst_1 : Fintype Z]
+  (g : Y → Z) (μ ν : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist (ObservationalFidelity.pushforward g μ) (ObservationalFidelity.pushforward g ν) ≤
+    ObservationalFidelity.tvDist μ ν
+@ObservationalFidelity.massOutside_nonneg : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U] [inst_1 : Fintype O]
+  (f : U → O) (lam0 : ObservationalFidelity.FinDist O), 0 ≤ ObservationalFidelity.massOutside f lam0
+@ObservationalFidelity.optimal_query_tv_floor : ∀ {U : Type u_1} {V : Type u_2} {O : Type u_3} [inst : Fintype U]
+  [inst_1 : Fintype V] [inst_2 : Fintype O] (χ : U → V) (q : V → O) (μ : ObservationalFidelity.FinDist V),
+  (∀ (ν : ObservationalFidelity.FinDist U),
+      ObservationalFidelity.massOutside (q ∘ χ) (ObservationalFidelity.pushforward q μ) ≤
+        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward (q ∘ χ) ν)
+          (ObservationalFidelity.pushforward q μ)) ∧
+    (Nonempty U →
+      ∃ ν,
+        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward (q ∘ χ) ν)
+            (ObservationalFidelity.pushforward q μ) =
+          ObservationalFidelity.massOutside (q ∘ χ) (ObservationalFidelity.pushforward q μ))
+@ObservationalFidelity.empty_source_infeasible : ∀ {U : Type u_1} [inst : Fintype U],
+  IsEmpty U → IsEmpty (ObservationalFidelity.FinDist U)
+@ObservationalFidelity.coarsening_tv_mono : ∀ {U : Type u_1} {V : Type u_2} {O : Type u_3} {O' : Type u_4}
+  [inst : Fintype U] [inst_1 : Fintype V] [inst_2 : Fintype O] [inst_3 : Fintype O'] (χ : U → V) (q : V → O)
+  (g : O → O') (μ : ObservationalFidelity.FinDist V),
+  ObservationalFidelity.massOutside (g ∘ q ∘ χ) (ObservationalFidelity.pushforward (g ∘ q) μ) ≤
+    ObservationalFidelity.massOutside (q ∘ χ) (ObservationalFidelity.pushforward q μ)
+@ObservationalFidelity.macro_refinement_tv_mono : ∀ {Uc : Type u_1} {Uf : Type u_2} {V : Type u_3} {O : Type u_4}
+  [inst : Fintype Uc] [inst_1 : Fintype Uf] [inst_2 : Fintype V] [inst_3 : Fintype O] (r : Uc → Uf) (χ_fine : Uf → V)
+  (q : V → O) (μ : ObservationalFidelity.FinDist V),
+  ObservationalFidelity.massOutside (q ∘ χ_fine) (ObservationalFidelity.pushforward q μ) ≤
+    ObservationalFidelity.massOutside (q ∘ χ_fine ∘ r) (ObservationalFidelity.pushforward q μ)
+ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split : have qProj := fun x => ();
+have pIn := ObservationalFidelity.diracDist (true, true);
+have pAnti := ObservationalFidelity.diracDist (true, false);
+ObservationalFidelity.tvDist (ObservationalFidelity.pushforward qProj pIn)
+      (ObservationalFidelity.pushforward qProj pAnti) =
+    0 ∧
+  Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase =
+      Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro
+        Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase ∧
+    Becoming.OplaxHistory.FiberViabilitySplit Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro
+        (Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+          Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS) ∧
+      ∀ (Kq : ℕ → Prop),
+        ¬((∀ (s : Becoming.OplaxHistory.C2CoupledAlignmentWitness.CoupledState),
+              Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+                  Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS s →
+                Kq (Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro s)) ∧
+            ∀ (s : Becoming.OplaxHistory.C2CoupledAlignmentWitness.CoupledState),
+              Kq (Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro s) →
+                Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+                  Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS s)
+@ObservationalFidelity.diagSupport_fst_eq_snd : ∀ {ν : ObservationalFidelity.FinDist (Bool × Bool)},
+  ObservationalFidelity.diagSupport ν →
+    ObservationalFidelity.pushforward Prod.fst ν = ObservationalFidelity.pushforward Prod.snd ν
+ObservationalFidelity.per_query_not_implies_joint_marginal : (∃ ν₁,
+    ObservationalFidelity.diagSupport ν₁ ∧
+      ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.fst ν₁)
+          ObservationalFidelity.fourFifthsBool =
+        0) ∧
+  (∃ ν₂,
+      ObservationalFidelity.diagSupport ν₂ ∧
+        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.snd ν₂)
+            ObservationalFidelity.oneFifthBool =
+          0) ∧
+    ∀ (ν : ObservationalFidelity.FinDist (Bool × Bool)),
+      ObservationalFidelity.diagSupport ν →
+        3 / 5 ≤
+          ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.fst ν)
+              ObservationalFidelity.fourFifthsBool +
+            ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.snd ν)
+              ObservationalFidelity.oneFifthBool
+ObservationalFidelity.joint_marginal_not_implies_joint_dist : (∃ ν,
+    ObservationalFidelity.diagSupport ν ∧
+      ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.fst ν)
+            (ObservationalFidelity.pushforward Prod.fst ObservationalFidelity.uniformPairBool) =
+          0 ∧
+        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward Prod.snd ν)
+              (ObservationalFidelity.pushforward Prod.snd ObservationalFidelity.uniformPairBool) =
+            0 ∧
+          ObservationalFidelity.tvDist ν ObservationalFidelity.uniformPairBool = 1 / 2) ∧
+  ∀ (ν : ObservationalFidelity.FinDist (Bool × Bool)),
+    ObservationalFidelity.diagSupport ν → 1 / 2 ≤ ObservationalFidelity.tvDist ν ObservationalFidelity.uniformPairBool
+@ObservationalFidelity.pushKernel_tv_step : ∀ {X : Type u_1} {Y : Type u_2} [inst : Fintype X] [inst_1 : Fintype Y]
+  (K L : ObservationalFidelity.FinKernel X Y) {ε : ℝ},
+  (∀ (x : X), ObservationalFidelity.tvDist (K x) (L x) ≤ ε) →
+    ∀ (p q : ObservationalFidelity.FinDist X),
+      ObservationalFidelity.tvDist (ObservationalFidelity.pushKernel K p) (ObservationalFidelity.pushKernel L q) ≤
+        ObservationalFidelity.tvDist p q + ε
+@ObservationalFidelity.sequential_kernel_tv_bound : ∀ {X : Type u_1} [inst : Fintype X]
+  (K L : ObservationalFidelity.FinKernel X X) {ε : ℝ},
+  (∀ (x : X), ObservationalFidelity.tvDist (K x) (L x) ≤ ε) →
+    ∀ (n : ℕ) (p₀ q₀ : ObservationalFidelity.FinDist X),
+      ObservationalFidelity.tvDist (ObservationalFidelity.iterKernel K n p₀) (ObservationalFidelity.iterKernel L n q₀) ≤
+        ObservationalFidelity.tvDist p₀ q₀ + ↑n * ε
+@ObservationalFidelity.tvDist_prodDist_le : ∀ {Y₁ : Type u_1} {Y₂ : Type u_2} [inst : Fintype Y₁] [inst_1 : Fintype Y₂]
+  (μ₁ ν₁ : ObservationalFidelity.FinDist Y₁) (μ₂ ν₂ : ObservationalFidelity.FinDist Y₂),
+  ObservationalFidelity.tvDist (ObservationalFidelity.prodDist μ₁ μ₂) (ObservationalFidelity.prodDist ν₁ ν₂) ≤
+    ObservationalFidelity.tvDist μ₁ ν₁ + ObservationalFidelity.tvDist μ₂ ν₂
+@ObservationalFidelity.independent_tensor_tv_bound : ∀ {X₁ : Type u_1} {X₂ : Type u_2} {Y₁ : Type u_3} {Y₂ : Type u_4}
+  [inst : Fintype Y₁] [inst_1 : Fintype Y₂] (K₁ L₁ : ObservationalFidelity.FinKernel X₁ Y₁)
+  (K₂ L₂ : ObservationalFidelity.FinKernel X₂ Y₂) {ε₁ ε₂ : ℝ},
+  (∀ (x₁ : X₁), ObservationalFidelity.tvDist (K₁ x₁) (L₁ x₁) ≤ ε₁) →
+    (∀ (x₂ : X₂), ObservationalFidelity.tvDist (K₂ x₂) (L₂ x₂) ≤ ε₂) →
+      ∀ (x : X₁ × X₂),
+        ObservationalFidelity.tvDist (ObservationalFidelity.tensorKernel K₁ K₂ x)
+            (ObservationalFidelity.tensorKernel L₁ L₂ x) ≤
+          ε₁ + ε₂
+ObservationalFidelity.three_regime_error_contrast : (∀ {X : Type} [inst : Fintype X]
+    (K L : ObservationalFidelity.FinKernel X X) {ε : ℝ},
+    (∀ (x : X), ObservationalFidelity.tvDist (K x) (L x) ≤ ε) →
+      ∀ (n : ℕ) (p₀ : ObservationalFidelity.FinDist X),
+        ObservationalFidelity.tvDist (ObservationalFidelity.iterKernel K n p₀)
+            (ObservationalFidelity.iterKernel L n p₀) ≤
+          ↑n * ε) ∧
+  (∀ {α a s ε r : ℝ},
+      0 ≤ α →
+        α < 1 →
+          0 ≤ ε →
+            ∀ (m : ℕ),
+              Becoming.AlignmentReals.metricSlack α ε m r ≤ α ^ m * r + ε / (1 - α) ∧
+                Becoming.AlignmentReals.metricSlack α ε m r ≤ max r (ε / (1 - α)) ∧
+                  Becoming.Reals.iterVar a s m r = Becoming.AlignmentReals.metricSlack (a ^ 2) s m r) ∧
+    (have qProj := fun x => ();
+      ObservationalFidelity.tvDist
+            (ObservationalFidelity.pushforward qProj (ObservationalFidelity.diracDist (true, true)))
+            (ObservationalFidelity.pushforward qProj (ObservationalFidelity.diracDist (true, false))) =
+          0 ∧
+        Becoming.OplaxHistory.FiberViabilitySplit Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro
+          (Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+            Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS)) ∧
+      (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 3).1 () = 0 ∧
+        ¬Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.concurrentUnguardedProcess
+              (fun st => 3 ≤ st.1 ()) (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 0) ∧
+          Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.csProc
+            Becoming.PolyComposition.ConcurrentSerialWitness.csGuard
+            Becoming.PolyComposition.ConcurrentSerialWitness.st₀
+@ObservationalFidelity.optimal_floor_le_rowDefect : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O)
+  (u : U), ObservationalFidelity.massOutside f (L (f u)) ≤ ObservationalFidelity.rowDefect f K L u
+@ObservationalFidelity.sum_pushforward_mul : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U] [inst_1 : Fintype O]
+  (f : U → O) (p : ObservationalFidelity.FinDist U) (g : O → ℝ),
+  ∑ o, (ObservationalFidelity.pushforward f p).w o * g o = ∑ u, p.w u * g (f u)
+@ObservationalFidelity.tvDist_pushKernel_dobrushin : ∀ {O : Type u_1} {O' : Type u_2} [inst : Fintype O]
+  [inst_1 : Fintype O'] (L : ObservationalFidelity.FinKernel O O') {α : ℝ},
+  (∀ (o o' : O), ObservationalFidelity.tvDist (L o) (L o') ≤ α) →
+    ∀ (μ ν : ObservationalFidelity.FinDist O),
+      ObservationalFidelity.tvDist (ObservationalFidelity.pushKernel L μ) (ObservationalFidelity.pushKernel L ν) ≤
+        α * ObservationalFidelity.tvDist μ ν
+@ObservationalFidelity.tvDist_pushKernel_dobrushin_step : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O)
+  {α : ℝ},
+  0 ≤ α →
+    (∀ (o o' : O), ObservationalFidelity.tvDist (L o) (L o') ≤ α) →
+      ∀ (p : ObservationalFidelity.FinDist U) (lam : ObservationalFidelity.FinDist O),
+        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f (ObservationalFidelity.pushKernel K p))
+            (ObservationalFidelity.pushKernel L lam) ≤
+          ∑ u, p.w u * ObservationalFidelity.rowDefect f K L u +
+            α * ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p) lam
+@ObservationalFidelity.iterKernel_succ_comm : ∀ {X : Type u_1} [inst : Fintype X]
+  (K : ObservationalFidelity.FinKernel X X) (n : ℕ) (p : ObservationalFidelity.FinDist X),
+  ObservationalFidelity.iterKernel K n (ObservationalFidelity.pushKernel K p) =
+    ObservationalFidelity.iterKernel K (n + 1) p
+@ObservationalFidelity.iterKernel_trace : ∀ {X : Type u_1} [inst : Fintype X] (K : ObservationalFidelity.FinKernel X X)
+  (n : ℕ) (p0 : ObservationalFidelity.FinDist X),
+  Generative.Trace (Becoming.Assurance.ofMap fun p x => ObservationalFidelity.pushKernel K p) p0 (List.replicate n ())
+    (ObservationalFidelity.iterKernel K n p0)
+@ObservationalFidelity.trace_ofMap_eq_iterKernel : ∀ {X : Type u_1} [inst : Fintype X]
+  (K : ObservationalFidelity.FinKernel X X) (w : List Unit) (p0 p : ObservationalFidelity.FinDist X),
+  Generative.Trace (Becoming.Assurance.ofMap fun q x => ObservationalFidelity.pushKernel K q) p0 w p →
+    p = ObservationalFidelity.iterKernel K w.length p0
+@ObservationalFidelity.tvDist_pushKernel_iter_bound : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O)
+  {α ε : ℝ},
+  0 ≤ α →
+    α < 1 →
+      0 ≤ ε →
+        (∀ (o o' : O), ObservationalFidelity.tvDist (L o) (L o') ≤ α) →
+          (∀ (u : U), ObservationalFidelity.rowDefect f K L u ≤ ε) →
+            ∀ (n : ℕ) (p0 : ObservationalFidelity.FinDist U) (lam0 : ObservationalFidelity.FinDist O),
+              ObservationalFidelity.tvDist
+                    (ObservationalFidelity.pushforward f (ObservationalFidelity.iterKernel K n p0))
+                    (ObservationalFidelity.iterKernel L n lam0) ≤
+                  α ^ n * ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p0) lam0 +
+                    ε * (1 - α ^ n) / (1 - α) ∧
+                ObservationalFidelity.tvDist
+                    (ObservationalFidelity.pushforward f (ObservationalFidelity.iterKernel K n p0))
+                    (ObservationalFidelity.iterKernel L n lam0) ≤
+                  α ^ n * ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p0) lam0 + ε / (1 - α)
+@ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O)
+  {α ε : ℝ},
+  0 ≤ α →
+    α < 1 →
+      0 ≤ ε →
+        (∀ (o o' : O), ObservationalFidelity.tvDist (L o) (L o') ≤ α) →
+          (∀ (u : U), ObservationalFidelity.rowDefect f K L u ≤ ε) →
+            ∀ {guardQ invQ : ObservationalFidelity.FinDist O → Prop} {guardS : ObservationalFidelity.FinDist U → Prop},
+              Becoming.Viability.Certificate
+                  (Becoming.Assurance.ofMap fun lam x => ObservationalFidelity.pushKernel L lam) guardQ invQ →
+                ∀ (d0 : ℝ),
+                  0 ≤ d0 →
+                    (∀ (lam : ObservationalFidelity.FinDist O) (p : ObservationalFidelity.FinDist U),
+                        guardQ lam →
+                          ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p) lam ≤
+                              max d0 (ε / (1 - α)) →
+                            guardS p) →
+                      ∀ {p0 : ObservationalFidelity.FinDist U} (lam0 : ObservationalFidelity.FinDist O),
+                        ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p0) lam0 ≤ d0 →
+                          invQ lam0 →
+                            Becoming.Viability.Kernel
+                              (Becoming.Assurance.ofMap fun p x => ObservationalFidelity.pushKernel K p) guardS p0
+@ObservationalFidelity.viability_risk_transfer_bound : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O)
+  (h : U → ℝ) (b : O → ℝ) {γ : ℝ},
+  (∀ (u : U), |h u - b (f u)| ≤ γ) →
+    (∀ (o : O), 0 ≤ b o ∧ b o ≤ 1) →
+      ∀ (n : ℕ) (p0 : ObservationalFidelity.FinDist U) (lam0 : ObservationalFidelity.FinDist O),
+        |∑ u, (ObservationalFidelity.iterKernel K n p0).w u * h u -
+              ∑ o, (ObservationalFidelity.iterKernel L n lam0).w o * b o| ≤
+          γ +
+            ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f (ObservationalFidelity.iterKernel K n p0))
+              (ObservationalFidelity.iterKernel L n lam0)
+@ObservationalFidelity.fiber_split_readout_floor : ∀ {U : Type u_1} {O : Type u_2} (f : U → O) (h : U → ℝ) (b : O → ℝ)
+  {γ : ℝ} (u1 u2 : U), f u1 = f u2 → h u1 = 0 → h u2 = 1 → (∀ (u : U), |h u - b (f u)| ≤ γ) → 1 / 2 ≤ γ
+ObservationalFidelity.sharp_oplax_dobrushin_attainment : ∀ (ε α : ℝ) (hε0 : 0 < ε) (hα0 : 0 ≤ α),
+  α < 1 →
+    ∀ (hεα : ε + α ≤ 1),
+      have f := fun x => false;
+      have K := fun x => ObservationalFidelity.diracDist ();
+      have L := ObservationalFidelity.sharpBoolKernel ε α hε0 hα0 hεα;
+      (∀ (o o' : Bool), ObservationalFidelity.tvDist (L o) (L o') ≤ α) ∧
+        ObservationalFidelity.tvDist (L false) (L true) = α ∧
+          ObservationalFidelity.rowDefect f K L () = ε ∧
+            ObservationalFidelity.massOutside f (L (f ())) = ε ∧
+              ∀ (n : ℕ),
+                ObservationalFidelity.tvDist
+                    (ObservationalFidelity.pushforward f
+                      (ObservationalFidelity.iterKernel K n (ObservationalFidelity.diracDist ())))
+                    (ObservationalFidelity.iterKernel L n (ObservationalFidelity.diracDist false)) =
+                  ε * (1 - α ^ n) / (1 - α)
+ObservationalFidelity.feedback_destroys_openloop_contraction : have K₀ := fun x =>
+  ObservationalFidelity.diracDist false;
+have K₁ := fun x => ObservationalFidelity.diracDist true;
+have Kcl := fun s => (if s = true then K₁ else K₀) s;
+(∀ (x y : Bool), ObservationalFidelity.tvDist (K₀ x) (K₀ y) = 0) ∧
+  (∀ (x y : Bool), ObservationalFidelity.tvDist (K₁ x) (K₁ y) = 0) ∧
+    (∀ (s : Bool), Kcl s = ObservationalFidelity.diracDist s) ∧
+      ObservationalFidelity.tvDist (Kcl false) (Kcl true) = 1 ∧
+        ∀ (n : ℕ) (p : ObservationalFidelity.FinDist Bool), ObservationalFidelity.iterKernel Kcl n p = p
+ObservationalFidelity.three_regime_kernel_contrast : (∀ {X : Type} [inst : Fintype X]
+    (K L : ObservationalFidelity.FinKernel X X) {ε : ℝ},
+    (∀ (x : X), ObservationalFidelity.tvDist (K x) (L x) ≤ ε) →
+      ∀ (n : ℕ) (p0 : ObservationalFidelity.FinDist X),
+        ObservationalFidelity.tvDist (ObservationalFidelity.iterKernel K n p0)
+            (ObservationalFidelity.iterKernel L n p0) ≤
+          ↑n * ε) ∧
+  (∀ {U O : Type} [inst : Fintype U] [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U)
+      (L : ObservationalFidelity.FinKernel O O) {α ε : ℝ},
+      0 ≤ α →
+        α < 1 →
+          0 ≤ ε →
+            (∀ (o o' : O), ObservationalFidelity.tvDist (L o) (L o') ≤ α) →
+              (∀ (u : U), ObservationalFidelity.rowDefect f K L u ≤ ε) →
+                ∀ (n : ℕ) (p0 : ObservationalFidelity.FinDist U) (lam0 : ObservationalFidelity.FinDist O),
+                  ObservationalFidelity.tvDist
+                      (ObservationalFidelity.pushforward f (ObservationalFidelity.iterKernel K n p0))
+                      (ObservationalFidelity.iterKernel L n lam0) ≤
+                    α ^ n * ObservationalFidelity.tvDist (ObservationalFidelity.pushforward f p0) lam0 +
+                      ε * (1 - α ^ n) / (1 - α)) ∧
+    ObservationalFidelity.tvDist
+          ((fun s =>
+              (if s = true then fun x => ObservationalFidelity.diracDist true
+                else fun x => ObservationalFidelity.diracDist false)
+                s)
+            false)
+          ((fun s =>
+              (if s = true then fun x => ObservationalFidelity.diracDist true
+                else fun x => ObservationalFidelity.diracDist false)
+                s)
+            true) =
+        1 ∧
+      Becoming.OplaxHistory.FiberViabilitySplit Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro
+        (Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+          Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS)
+@ObservationalFidelity.rowDefect_eq_zero_iff_pushforward : ∀ {U : Type u_1} {O : Type u_2} [inst : Fintype U]
+  [inst_1 : Fintype O] (f : U → O) (K : ObservationalFidelity.FinKernel U U) (L : ObservationalFidelity.FinKernel O O),
+  (∀ (u : U), ObservationalFidelity.rowDefect f K L u = 0) ↔
+    ∀ (u : U), ObservationalFidelity.pushforward f (K u) = L (f u)
+@ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward : ∀ {Mode : Type u_1} {U : Type u_2} {O : Type u_3}
+  [inst : Fintype U] [inst_1 : Fintype O] (f : U → O) (K : Mode → ObservationalFidelity.FinKernel U U)
+  (L : Mode → ObservationalFidelity.FinKernel O O),
+  (∀ (a : Mode) (u : U), ObservationalFidelity.rowDefect f (K a) (L a) u = 0) ↔
+    ∀ (a : Mode) (u : U), ObservationalFidelity.pushforward f (K a u) = L a (f u)
+@ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect : ∀ {Mode : Type u_1} {U : Type u_2} {O : Type u_3}
+  [inst : Fintype U] [inst_1 : Fintype O] (f : U → O) (K : Mode → ObservationalFidelity.FinKernel U U),
+  (FiniteKrylov.FiberLumpable f fun a u v => (K a u).w v) ↔
+    ∃ L, ∀ (a : Mode) (u : U), ObservationalFidelity.rowDefect f (K a) (L a) u = 0
+ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness : have f := id;
+have K := fun x b => ObservationalFidelity.diracDist b;
+have L := fun b => ObservationalFidelity.diracDist !b;
+(FiniteKrylov.FiberLumpable f fun a u v => (K a u).w v) ∧
+  ObservationalFidelity.rowDefect f (K ()) L true = 1 ∧ ObservationalFidelity.rowDefect f (K ()) L true ≠ 0

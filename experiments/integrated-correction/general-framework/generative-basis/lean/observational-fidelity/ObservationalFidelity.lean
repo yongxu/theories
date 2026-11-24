@@ -1,5 +1,6 @@
 import Mathlib.Algebra.BigOperators.Field
 import Mathlib.Tactic
+import FiniteProbKrylov
 import AlignmentReals
 import BecomingReals
 import Becoming.OplaxHistory
@@ -45,114 +46,57 @@ open Classical
 
 /-! ## Part 1: Finite Probability Laws, Pushforward, TV Distance, & Query Floor (`O1` / `G.1`) -/
 
-/-- Probability distribution on a finite carrier `U` with weights summing to `1`. -/
-structure FinDist (U : Type*) [Fintype U] where
-  w : U → ℝ
-  nonneg : ∀ u, 0 ≤ w u
-  sum_eq_one : ∑ u, w u = 1
+/-- Probability distribution on a finite carrier `U` with weights summing to `1` (re-exported from `FiniteProb`). -/
+abbrev FinDist (U : Type*) [Fintype U] : Type _ := FiniteProb.FinDist U
 
-theorem FinDist.ext {U : Type*} [Fintype U] {p q : FinDist U} (h : ∀ u, p.w u = q.w u) : p = q := by
-  cases p
-  cases q
-  congr 1
-  exact funext h
+theorem FinDist.ext {U : Type*} [Fintype U] {p q : FinDist U} (h : ∀ u, p.w u = q.w u) : p = q :=
+  FiniteProb.FinDist.ext h
 
 /-- Point-mass (Dirac) distribution at `u₀ : U`. -/
-noncomputable def diracDist {U : Type*} [Fintype U] [DecidableEq U] (u₀ : U) : FinDist U where
-  w u := if u = u₀ then 1 else 0
-  nonneg u := by split_ifs <;> norm_num
-  sum_eq_one := by simp
+noncomputable abbrev diracDist {U : Type*} [Fintype U] [DecidableEq U] (u₀ : U) : FinDist U :=
+  FiniteProb.diracDist u₀
 
 /-- Pushforward distribution `f_* p` along any total map `f : U → Y`. -/
-noncomputable def pushforward {U Y : Type*} [Fintype U] [Fintype Y]
-    (f : U → Y) (p : FinDist U) : FinDist Y where
-  w y := ∑ u, if f u = y then p.w u else 0
-  nonneg y := Finset.sum_nonneg fun u _ => by
-    split_ifs
-    · exact p.nonneg u
-    · exact le_rfl
-  sum_eq_one := by
-    rw [Finset.sum_comm]
-    calc ∑ u : U, ∑ y : Y, (if f u = y then p.w u else 0)
-        = ∑ u : U, p.w u := Finset.sum_congr rfl fun u _ => by simp
-      _ = 1 := p.sum_eq_one
+noncomputable abbrev pushforward {U Y : Type*} [Fintype U] [Fintype Y]
+    (f : U → Y) (p : FinDist U) : FinDist Y :=
+  FiniteProb.pushforward f p
 
 theorem pushforward_comp {U Y Z : Type*} [Fintype U] [Fintype Y] [Fintype Z]
     (g : Y → Z) (f : U → Y) (p : FinDist U) :
-    pushforward (g ∘ f) p = pushforward g (pushforward f p) := by
-  refine FinDist.ext fun z => ?_
-  dsimp only [pushforward, Function.comp]
-  calc ∑ u : U, (if g (f u) = z then p.w u else 0)
-      = ∑ u : U, ∑ y : Y, (if f u = y then (if g y = z then p.w u else 0) else 0) :=
-        Finset.sum_congr rfl fun u _ => by
-          have h1 : (∑ y : Y, if f u = y then (if g y = z then p.w u else 0) else 0) =
-              if g (f u) = z then p.w u else 0 := by simp
-          exact h1.symm
-    _ = ∑ y : Y, ∑ u : U, (if f u = y then (if g y = z then p.w u else 0) else 0) :=
-        Finset.sum_comm
-    _ = ∑ y : Y, if g y = z then (∑ u : U, if f u = y then p.w u else 0) else 0 :=
-        Finset.sum_congr rfl fun y _ => by
-          split_ifs with hg
-          · rfl
-          · simp
+    pushforward (g ∘ f) p = pushforward g (pushforward f p) :=
+  FiniteProb.pushforward_comp g f p
 
 /-- Normalized total variation distance `(1/2) * ∑ y, |μ y - ν y|` on finite `Y`. -/
-noncomputable def tvDist {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : ℝ :=
-  (1 / 2 : ℝ) * ∑ y, |μ.w y - ν.w y|
+noncomputable abbrev tvDist {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : ℝ :=
+  FiniteProb.tvDist μ ν
 
-theorem tvDist_nonneg {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : 0 ≤ tvDist μ ν := by
-  unfold tvDist
-  exact mul_nonneg (by norm_num) (Finset.sum_nonneg fun y _ => abs_nonneg _)
+theorem tvDist_nonneg {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : 0 ≤ tvDist μ ν :=
+  FiniteProb.tvDist_nonneg μ ν
 
-theorem tvDist_self {Y : Type*} [Fintype Y] (μ : FinDist Y) : tvDist μ μ = 0 := by
-  unfold tvDist
-  simp
+theorem tvDist_self {Y : Type*} [Fintype Y] (μ : FinDist Y) : tvDist μ μ = 0 :=
+  FiniteProb.tvDist_self μ
 
-theorem tvDist_symm {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : tvDist μ ν = tvDist ν μ := by
-  unfold tvDist
-  congr 1
-  exact Finset.sum_congr rfl fun y _ => abs_sub_comm (μ.w y) (ν.w y)
+theorem tvDist_symm {Y : Type*} [Fintype Y] (μ ν : FinDist Y) : tvDist μ ν = tvDist ν μ :=
+  FiniteProb.tvDist_symm μ ν
 
 theorem tvDist_triangle {Y : Type*} [Fintype Y] (μ ρ ν : FinDist Y) :
-    tvDist μ ν ≤ tvDist μ ρ + tvDist ρ ν := by
-  unfold tvDist
-  rw [← mul_add, ← Finset.sum_add_distrib]
-  refine mul_le_mul_of_nonneg_left (Finset.sum_le_sum fun y _ => ?_) (by norm_num)
-  exact abs_sub_le (μ.w y) (ρ.w y) (ν.w y)
+    tvDist μ ν ≤ tvDist μ ρ + tvDist ρ ν :=
+  FiniteProb.tvDist_triangle μ ρ ν
 
 /-- **Data-Processing Inequality:** post-composing by any total map `g : Y → Z` cannot increase TV distance. -/
 theorem tvDist_pushforward_le {Y Z : Type*} [Fintype Y] [Fintype Z]
     (g : Y → Z) (μ ν : FinDist Y) :
-    tvDist (pushforward g μ) (pushforward g ν) ≤ tvDist μ ν := by
-  unfold tvDist pushforward
-  refine mul_le_mul_of_nonneg_left ?_ (by norm_num)
-  calc ∑ z : Z, |(∑ y : Y, if g y = z then μ.w y else 0) - (∑ y : Y, if g y = z then ν.w y else 0)|
-      = ∑ z : Z, |∑ y : Y, (if g y = z then μ.w y - ν.w y else 0)| := by
-        refine Finset.sum_congr rfl fun z _ => ?_
-        rw [← Finset.sum_sub_distrib]
-        congr 1
-        refine Finset.sum_congr rfl fun y _ => ?_
-        split_ifs <;> ring
-    _ ≤ ∑ z : Z, ∑ y : Y, |if g y = z then μ.w y - ν.w y else 0| :=
-        Finset.sum_le_sum fun z _ => Finset.abs_sum_le_sum_abs _ _
-    _ = ∑ y : Y, ∑ z : Z, (if g y = z then |μ.w y - ν.w y| else 0) := by
-        rw [Finset.sum_comm]
-        refine Finset.sum_congr rfl fun y _ => Finset.sum_congr rfl fun z _ => ?_
-        split_ifs <;> simp
-    _ = ∑ y : Y, |μ.w y - ν.w y| :=
-        Finset.sum_congr rfl fun y _ => by simp
+    tvDist (pushforward g μ) (pushforward g ν) ≤ tvDist μ ν :=
+  FiniteProb.tvDist_pushforward_le g μ ν
 
 /-- Query mass of `lam0` lying outside the image `im(f)` of a total map `f : U → O`. -/
-noncomputable def massOutside {U O : Type*} [Fintype U] [Fintype O]
+noncomputable abbrev massOutside {U O : Type*} [Fintype U] [Fintype O]
     (f : U → O) (lam0 : FinDist O) : ℝ :=
-  ∑ o : O, if (∃ u : U, f u = o) then 0 else lam0.w o
+  FiniteProb.massOutside f lam0
 
 theorem massOutside_nonneg {U O : Type*} [Fintype U] [Fintype O]
     (f : U → O) (lam0 : FinDist O) : 0 ≤ massOutside f lam0 :=
-  Finset.sum_nonneg fun o _ => by
-    split_ifs
-    · exact le_rfl
-    · exact lam0.nonneg o
+  FiniteProb.massOutside_nonneg f lam0
 
 /-- **Exact Query-Image TV Blindness Floor (`O1` / `v7 G.1`):**
 1. For ALL local distributions `ν : FinDist U`, `massOutside (q ∘ χ) (pushforward q μ) ≤ tvDist (pushforward (q ∘ χ) ν) (pushforward q μ)`.
@@ -163,192 +107,14 @@ theorem optimal_query_tv_floor {U V O : Type*} [Fintype U] [Fintype V] [Fintype 
     (∀ ν : FinDist U,
       massOutside (q ∘ χ) (pushforward q μ) ≤ tvDist (pushforward (q ∘ χ) ν) (pushforward q μ)) ∧
     (Nonempty U → ∃ ν : FinDist U,
-      tvDist (pushforward (q ∘ χ) ν) (pushforward q μ) = massOutside (q ∘ χ) (pushforward q μ)) := by
-  let f : U → O := q ∘ χ
-  let lam0 : FinDist O := pushforward q μ
-  constructor
-  · intro ν
-    let p : FinDist O := pushforward f ν
-    have hp_zero : ∀ o : O, ¬ (∃ u : U, f u = o) → p.w o = 0 := by
-      intro o ho
-      dsimp only [p, pushforward]
-      refine Finset.sum_eq_zero fun u _ => ?_
-      rw [if_neg (fun eq => ho ⟨u, eq⟩)]
-    have hsum_in : (∑ o : O, if (∃ u : U, f u = o) then p.w o else 0) = 1 := by
-      have hsplit : (∑ o : O, p.w o) =
-          (∑ o : O, if (∃ u : U, f u = o) then p.w o else 0) +
-          (∑ o : O, if (∃ u : U, f u = o) then 0 else p.w o) := by
-        rw [← Finset.sum_add_distrib]
-        refine Finset.sum_congr rfl fun o _ => by split_ifs <;> ring
-      have hout : (∑ o : O, if (∃ u : U, f u = o) then 0 else p.w o) = 0 :=
-        Finset.sum_eq_zero fun o _ => by
-          split_ifs with h
-          · rfl
-          · exact hp_zero o h
-      linarith [p.sum_eq_one]
-    have hlam_split : (∑ o : O, if (∃ u : U, f u = o) then lam0.w o else 0) + massOutside f lam0 = 1 := by
-      unfold massOutside
-      rw [← Finset.sum_add_distrib]
-      calc ∑ o : O, ((if ∃ u, f u = o then lam0.w o else 0) + (if ∃ u, f u = o then 0 else lam0.w o))
-          = ∑ o : O, lam0.w o := Finset.sum_congr rfl fun o _ => by split_ifs <;> ring
-        _ = 1 := lam0.sum_eq_one
-    have hdiff_in :
-        massOutside f lam0 ≤ ∑ o : O, if (∃ u : U, f u = o) then |p.w o - lam0.w o| else 0 := by
-      have h1 : massOutside f lam0 =
-          ∑ o : O, if (∃ u : U, f u = o) then (p.w o - lam0.w o) else 0 := by
-        have hsplit : (∑ o : O, if (∃ u : U, f u = o) then (p.w o - lam0.w o) else 0) =
-            (∑ o : O, if (∃ u : U, f u = o) then p.w o else 0) -
-            (∑ o : O, if (∃ u : U, f u = o) then lam0.w o else 0) := by
-          rw [← Finset.sum_sub_distrib]
-          refine Finset.sum_congr rfl fun o _ => by split_ifs <;> ring
-        linarith
-      rw [h1]
-      refine Finset.sum_le_sum fun o _ => ?_
-      split_ifs
-      · exact le_abs_self _
-      · exact le_rfl
-    have hdiff_out :
-        massOutside f lam0 = ∑ o : O, if (∃ u : U, f u = o) then 0 else |p.w o - lam0.w o| := by
-      unfold massOutside
-      refine Finset.sum_congr rfl fun o _ => ?_
-      split_ifs with h
-      · rfl
-      · rw [hp_zero o h, zero_sub, abs_neg, abs_of_nonneg (lam0.nonneg o)]
-    unfold tvDist
-    have htot : (∑ o : O, |p.w o - lam0.w o|) =
-        (∑ o : O, if (∃ u : U, f u = o) then |p.w o - lam0.w o| else 0) +
-        (∑ o : O, if (∃ u : U, f u = o) then 0 else |p.w o - lam0.w o|) := by
-      rw [← Finset.sum_add_distrib]
-      refine Finset.sum_congr rfl fun o _ => by split_ifs <;> ring
-    change massOutside f lam0 ≤ (1 / 2 : ℝ) * ∑ o : O, |p.w o - lam0.w o|
-    linarith
-  · intro ⟨u₀⟩
-    let b : ℝ := massOutside f lam0
-    let pickU : O → U := fun o => if h : ∃ u : U, f u = o then Classical.choose h else u₀
-    have hpickU : ∀ o (h : ∃ u : U, f u = o), f (pickU o) = o := by
-      intro o h
-      dsimp only [pickU]
-      rw [dif_pos h]
-      exact Classical.choose_spec h
-    let wν : U → ℝ := fun u =>
-      (if u = u₀ then b else 0) + ∑ o : O, if (∃ u', f u' = o) ∧ pickU o = u then lam0.w o else 0
-    have hw_nonneg : ∀ u, 0 ≤ wν u := fun u => by
-      refine add_nonneg (by split_ifs <;> [exact massOutside_nonneg f lam0; exact le_rfl]) ?_
-      refine Finset.sum_nonneg fun o _ => by
-        split_ifs
-        · exact lam0.nonneg o
-        · exact le_rfl
-    have hw_sum : ∑ u : U, wν u = 1 := by
-      dsimp only [wν]
-      rw [Finset.sum_add_distrib, Finset.sum_comm]
-      have h1 : (∑ u : U, if u = u₀ then b else 0) = b := by simp
-      have h2 : (∑ o : O, ∑ u : U, if (∃ u', f u' = o) ∧ pickU o = u then lam0.w o else 0) =
-          ∑ o : O, if (∃ u', f u' = o) then lam0.w o else 0 := by
-        refine Finset.sum_congr rfl fun o _ => ?_
-        split_ifs with ho
-        · calc ∑ u : U, (if (∃ u', f u' = o) ∧ pickU o = u then lam0.w o else 0)
-              = ∑ u : U, if pickU o = u then lam0.w o else 0 :=
-                Finset.sum_congr rfl fun u _ => by simp [ho]
-            _ = lam0.w o := by simp
-        · exact Finset.sum_eq_zero fun u _ => by simp [ho]
-      rw [h1, h2]
-      have hfull : b + (∑ o : O, if (∃ u', f u' = o) then lam0.w o else 0) = ∑ o : O, lam0.w o := by
-        dsimp only [b, massOutside]
-        rw [← Finset.sum_add_distrib]
-        exact Finset.sum_congr rfl fun o _ => by split_ifs <;> ring
-      linarith [lam0.sum_eq_one]
-    let ν : FinDist U := ⟨wν, hw_nonneg, hw_sum⟩
-    refine ⟨ν, ?_⟩
-    have hpf : ∀ o : O, (pushforward f ν).w o =
-        (if o = f u₀ then b else 0) + (if (∃ u', f u' = o) then lam0.w o else 0) := by
-      intro o
-      dsimp only [pushforward, ν, wν]
-      rw [Finset.sum_congr rfl (fun u _ => by
-        have hsplit : (if f u = o then ((if u = u₀ then b else 0) +
-            ∑ o' : O, if (∃ u', f u' = o') ∧ pickU o' = u then lam0.w o' else 0) else 0) =
-            (if f u = o ∧ u = u₀ then b else 0) +
-            ∑ o' : O, if f u = o ∧ (∃ u', f u' = o') ∧ pickU o' = u then lam0.w o' else 0 := by
-          by_cases hfu : f u = o
-          · rw [if_pos hfu]
-            congr 1
-            · by_cases hu0 : u = u₀
-              · rw [if_pos hu0, if_pos ⟨hfu, hu0⟩]
-              · rw [if_neg hu0, if_neg (fun h => hu0 h.2)]
-            · refine Finset.sum_congr rfl fun o' _ => ?_
-              by_cases hc : (∃ u', f u' = o') ∧ pickU o' = u
-              · rw [if_pos hc, if_pos ⟨hfu, hc⟩]
-              · rw [if_neg hc, if_neg (fun h => hc h.2)]
-          · rw [if_neg hfu, if_neg (fun h => hfu h.1), zero_add]
-            exact (Finset.sum_eq_zero fun o' _ => if_neg (fun h => hfu h.1)).symm
-        exact hsplit)]
-      rw [Finset.sum_add_distrib]
-      have ha : (∑ u : U, if f u = o ∧ u = u₀ then b else 0) = if o = f u₀ then b else 0 := by
-        have hb : (∑ u : U, if f u = o ∧ u = u₀ then b else 0) =
-            ∑ u : U, if u = u₀ then (if o = f u₀ then b else 0) else 0 := by
-          refine Finset.sum_congr rfl fun u _ => ?_
-          split_ifs <;> simp_all
-        rw [hb]
-        simp
-      have hc : (∑ u : U, ∑ o' : O, if f u = o ∧ (∃ u', f u' = o') ∧ pickU o' = u then lam0.w o' else 0) =
-          if (∃ u', f u' = o) then lam0.w o else 0 := by
-        rw [Finset.sum_comm]
-        have hd : ∀ o' : O, (∑ u : U, if f u = o ∧ (∃ u', f u' = o') ∧ pickU o' = u then lam0.w o' else 0) =
-            if o' = o ∧ (∃ u', f u' = o') then lam0.w o' else 0 := by
-          intro o'
-          by_cases hex : ∃ u', f u' = o'
-          · have hfu := hpickU o' hex
-            have heq : (∑ u : U, if f u = o ∧ (∃ u', f u' = o') ∧ pickU o' = u then lam0.w o' else 0) =
-                ∑ u : U, if pickU o' = u then (if o' = o then lam0.w o' else 0) else 0 := by
-              refine Finset.sum_congr rfl fun u _ => ?_
-              split_ifs with h1 h2 h3 <;> simp_all
-            rw [heq]
-            simp [hex]
-          · simp [hex]
-        rw [Finset.sum_congr rfl fun o' _ => hd o']
-        split_ifs with ho
-        · have hcongr : ∀ o' : O,
-              (if o' = o ∧ (∃ u', f u' = o') then lam0.w o' else 0) =
-              (if o' = o then lam0.w o' else 0) := fun o' => by
-            by_cases hoeq : o' = o
-            · subst hoeq; simp [ho]
-            · simp [hoeq]
-          rw [Finset.sum_congr rfl fun o' _ => hcongr o']
-          simp
-        · exact Finset.sum_eq_zero fun o' _ => by
-            split_ifs with h1
-            · exact absurd (h1.1 ▸ h1.2) ho
-            · rfl
-      rw [ha, hc]
-    unfold tvDist
-    have hterms : ∀ o : O, |(pushforward f ν).w o - lam0.w o| =
-        (if o = f u₀ then b else 0) + (if (∃ u', f u' = o) then 0 else lam0.w o) := by
-      intro o
-      rw [hpf o]
-      by_cases hbase : o = f u₀
-      · have hex : ∃ u', f u' = o := ⟨u₀, hbase.symm⟩
-        rw [if_pos hbase, if_pos hex, if_pos hex]
-        have eq1 : b + lam0.w o - lam0.w o = b := by ring
-        rw [eq1, add_zero, abs_of_nonneg (massOutside_nonneg f lam0)]
-      · rw [if_neg hbase, zero_add]
-        by_cases hex : ∃ u', f u' = o
-        · rw [if_pos hex, if_pos hex, sub_self, abs_zero, zero_add]
-        · rw [if_neg hex, if_neg hex, zero_sub, abs_neg, abs_of_nonneg (lam0.nonneg o), zero_add]
-    calc (1 / 2 : ℝ) * ∑ o : O, |(pushforward f ν).w o - lam0.w o|
-        = (1 / 2 : ℝ) * ∑ o : O, ((if o = f u₀ then b else 0) + (if (∃ u', f u' = o) then 0 else lam0.w o)) :=
-          congrArg (fun x => (1 / 2 : ℝ) * x) (Finset.sum_congr rfl fun o _ => hterms o)
-      _ = (1 / 2 : ℝ) * (b + b) := by
-          rw [Finset.sum_add_distrib]
-          simp [b, massOutside]
-      _ = b := by ring
+      tvDist (pushforward (q ∘ χ) ν) (pushforward q μ) = massOutside (q ∘ χ) (pushforward q μ)) :=
+  FiniteProb.optimal_query_tv_floor χ q μ
 
 /-- **Explicit Empty-Source Trap (`v9 formal/61 §3`):**
 `O1` requires `[Nonempty U]`; when `U` is empty, `FinDist U` is empty (no local probability law
 exists to achieve or bound TV error). -/
 theorem empty_source_infeasible {U : Type*} [Fintype U] (h : IsEmpty U) : IsEmpty (FinDist U) :=
-  ⟨fun p => by
-    have hs := p.sum_eq_one
-    rw [Finset.sum_eq_zero (fun u _ => False.elim (h.false u))] at hs
-    norm_num at hs⟩
+  FiniteProb.empty_source_infeasible h
 
 /-! ## Part 2: Coarsening, Macro-Refinement Monotonicity, & Zero-TV vs `FiberViabilitySplit` -/
 
@@ -360,7 +126,7 @@ theorem coarsening_tv_mono {U V O O' : Type*}
     massOutside (g ∘ q ∘ χ) (pushforward (g ∘ q) μ) ≤
       massOutside (q ∘ χ) (pushforward q μ) := by
   rw [pushforward_comp]
-  unfold massOutside pushforward
+  unfold massOutside pushforward FiniteProb.massOutside FiniteProb.pushforward
   calc ∑ o' : O', (if (∃ u : U, (g ∘ q ∘ χ) u = o') then 0 else
         ∑ o : O, if g o = o' then (pushforward q μ).w o else 0)
       = ∑ o' : O', ∑ o : O, (if ¬ (∃ u : U, (g ∘ q ∘ χ) u = o') ∧ g o = o'
@@ -406,7 +172,7 @@ theorem macro_refinement_tv_mono {Uc Uf V O : Type*}
     (r : Uc → Uf) (χ_fine : Uf → V) (q : V → O) (μ : FinDist V) :
     massOutside (q ∘ χ_fine) (pushforward q μ) ≤
       massOutside (q ∘ (χ_fine ∘ r)) (pushforward q μ) := by
-  unfold massOutside
+  unfold massOutside FiniteProb.massOutside
   refine Finset.sum_le_sum fun o _ => ?_
   by_cases hc : ∃ uc : Uc, (q ∘ (χ_fine ∘ r)) uc = o
   · obtain ⟨uc, huc⟩ := hc
@@ -449,7 +215,7 @@ theorem zero_tv_does_not_prevent_fiber_viability_split :
     have heq : pushforward (fun _ : Bool × Bool => ()) (diracDist (true, true)) =
         pushforward (fun _ : Bool × Bool => ()) (diracDist (true, false)) := by
       refine FinDist.ext fun () => ?_
-      simp [pushforward, diracDist]
+      simp [FiniteProb.pushforward, FiniteProb.diracDist]
     rw [heq, tvDist_self]
   exact ⟨htv, rfl, Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split,
     Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness⟩
@@ -464,7 +230,7 @@ def diagSupport (ν : FinDist (Bool × Bool)) : Prop :=
 theorem diagSupport_fst_eq_snd {ν : FinDist (Bool × Bool)} (h : diagSupport ν) :
     pushforward Prod.fst ν = pushforward Prod.snd ν := by
   refine FinDist.ext fun b => ?_
-  dsimp only [pushforward]
+  dsimp only [pushforward, FiniteProb.pushforward]
   cases b
   · simp [Fintype.sum_prod_type, h.1, h.2]
   · simp [Fintype.sum_prod_type, h.1, h.2]
@@ -509,11 +275,11 @@ theorem per_query_not_implies_joint_marginal :
           ⟨diagLift oneFifthBool, ⟨rfl, rfl⟩, ?_⟩, ?_⟩
   · have hpf : pushforward Prod.fst (diagLift fourFifthsBool) = fourFifthsBool := by
       refine FinDist.ext fun b => ?_
-      cases b <;> simp [pushforward, diagLift, Fintype.sum_prod_type]
+      cases b <;> simp [FiniteProb.pushforward, diagLift, Fintype.sum_prod_type]
     rw [hpf, tvDist_self]
   · have hpf : pushforward Prod.snd (diagLift oneFifthBool) = oneFifthBool := by
       refine FinDist.ext fun b => ?_
-      cases b <;> simp [pushforward, diagLift, Fintype.sum_prod_type]
+      cases b <;> simp [FiniteProb.pushforward, diagLift, Fintype.sum_prod_type]
     rw [hpf, tvDist_self]
   · intro ν hdiag
     have heq := diagSupport_fst_eq_snd hdiag
@@ -523,7 +289,7 @@ theorem per_query_not_implies_joint_marginal :
     have h2 : tvDist (pushforward Prod.fst ν) oneFifthBool =
         tvDist (pushforward Prod.snd ν) oneFifthBool := by rw [heq]
     have hdist : tvDist fourFifthsBool oneFifthBool = (3 / 5 : ℝ) := by
-      unfold tvDist fourFifthsBool oneFifthBool
+      unfold tvDist FiniteProb.tvDist fourFifthsBool oneFifthBool
       simp
       norm_num
     linarith [htri, h1, h2, hdist]
@@ -553,24 +319,24 @@ theorem joint_marginal_not_implies_joint_dist :
     (∀ ν : FinDist (Bool × Bool), diagSupport ν → (1 / 2 : ℝ) ≤ tvDist ν uniformPairBool) := by
   have hfst : pushforward Prod.fst uniformPairBool = fairBool := by
     refine FinDist.ext fun b => ?_
-    cases b <;> simp [pushforward, uniformPairBool, fairBool, Fintype.sum_prod_type] <;> norm_num
+    cases b <;> simp [FiniteProb.pushforward, uniformPairBool, fairBool, Fintype.sum_prod_type] <;> norm_num
   have hsnd : pushforward Prod.snd uniformPairBool = fairBool := by
     refine FinDist.ext fun b => ?_
-    cases b <;> simp [pushforward, uniformPairBool, fairBool, Fintype.sum_prod_type] <;> norm_num
+    cases b <;> simp [FiniteProb.pushforward, uniformPairBool, fairBool, Fintype.sum_prod_type] <;> norm_num
   refine ⟨⟨diagLift fairBool, ⟨rfl, rfl⟩, ?_, ?_, ?_⟩, ?_⟩
   · have hpf : pushforward Prod.fst (diagLift fairBool) = fairBool := by
       refine FinDist.ext fun b => ?_
-      cases b <;> simp [pushforward, diagLift, fairBool, Fintype.sum_prod_type]
+      cases b <;> simp [FiniteProb.pushforward, diagLift, fairBool, Fintype.sum_prod_type]
     rw [hpf, hfst, tvDist_self]
   · have hpf : pushforward Prod.snd (diagLift fairBool) = fairBool := by
       refine FinDist.ext fun b => ?_
-      cases b <;> simp [pushforward, diagLift, fairBool, Fintype.sum_prod_type]
+      cases b <;> simp [FiniteProb.pushforward, diagLift, fairBool, Fintype.sum_prod_type]
     rw [hpf, hsnd, tvDist_self]
-  · unfold tvDist diagLift fairBool uniformPairBool
+  · unfold tvDist FiniteProb.tvDist diagLift fairBool uniformPairBool
     simp [Fintype.sum_prod_type]
     norm_num
   · intro ν hdiag
-    unfold tvDist uniformPairBool
+    unfold tvDist FiniteProb.tvDist uniformPairBool
     have hsum : ν.w (false, false) + ν.w (true, true) = 1 := by
       have hs := ν.sum_eq_one
       simp [Fintype.sum_prod_type, hdiag.1, hdiag.2] at hs
@@ -632,7 +398,7 @@ theorem pushKernel_tv_step {X Y : Type*} [Fintype X] [Fintype Y]
     (K L : FinKernel X Y) {ε : ℝ} (hε : ∀ x, tvDist (K x) (L x) ≤ ε)
     (p q : FinDist X) :
     tvDist (pushKernel K p) (pushKernel L q) ≤ tvDist p q + ε := by
-  unfold tvDist pushKernel
+  unfold tvDist FiniteProb.tvDist pushKernel
   have hstep : ∀ y : Y,
       |∑ x : X, p.w x * (K x).w y - ∑ x : X, q.w x * (L x).w y| ≤
       (∑ x : X, |p.w x - q.w x| * (K x).w y) + ∑ x : X, q.w x * |(K x).w y - (L x).w y| := by
@@ -703,7 +469,7 @@ theorem tvDist_prodDist_le {Y₁ Y₂ : Type*} [Fintype Y₁] [Fintype Y₂]
     tvDist (prodDist μ₁ μ₂) (prodDist ν₁ ν₂) ≤ tvDist μ₁ ν₁ + tvDist μ₂ ν₂ := by
   refine (tvDist_triangle (prodDist μ₁ μ₂) (prodDist ν₁ μ₂) (prodDist ν₁ ν₂)).trans ?_
   have h1 : tvDist (prodDist μ₁ μ₂) (prodDist ν₁ μ₂) = tvDist μ₁ ν₁ := by
-    unfold tvDist prodDist
+    unfold tvDist FiniteProb.tvDist prodDist
     congr 1
     rw [Fintype.sum_prod_type]
     calc ∑ y₁ : Y₁, ∑ y₂ : Y₂, |μ₁.w y₁ * μ₂.w y₂ - ν₁.w y₁ * μ₂.w y₂|
@@ -715,7 +481,7 @@ theorem tvDist_prodDist_le {Y₁ Y₂ : Type*} [Fintype Y₁] [Fintype Y₂]
           rw [abs_mul, abs_of_nonneg (μ₂.nonneg y₂)]
       _ = ∑ y₁ : Y₁, |μ₁.w y₁ - ν₁.w y₁| := by simp [μ₂.sum_eq_one]
   have h2 : tvDist (prodDist ν₁ μ₂) (prodDist ν₁ ν₂) = tvDist μ₂ ν₂ := by
-    unfold tvDist prodDist
+    unfold tvDist FiniteProb.tvDist prodDist
     congr 1
     rw [Fintype.sum_prod_type, Finset.sum_comm]
     calc ∑ y₂ : Y₂, ∑ y₁ : Y₁, |ν₁.w y₁ * μ₂.w y₂ - ν₁.w y₁ * ν₂.w y₂|
@@ -802,7 +568,7 @@ theorem optimal_floor_le_rowDefect {U O : Type*} [Fintype U] [Fintype O]
     (f : U → O) (K : FinKernel U U) (L : FinKernel O O) (u : U) :
     massOutside f (L (f u)) ≤ rowDefect f K L u := by
   have hid : pushforward (id : O → O) (L (f u)) = L (f u) := FinDist.ext fun o => by
-    dsimp only [pushforward, id]
+    dsimp only [pushforward, FiniteProb.pushforward, id]
     exact (Finset.sum_eq_single o (fun _ _ hx => if_neg hx)
       (fun h => absurd (Finset.mem_univ o) h)).trans (if_pos rfl)
   have h := (optimal_query_tv_floor f id (L (f u))).1 (K u)
@@ -811,7 +577,7 @@ theorem optimal_floor_le_rowDefect {U O : Type*} [Fintype U] [Fintype O]
 theorem sum_pushforward_mul {U O : Type*} [Fintype U] [Fintype O]
     (f : U → O) (p : FinDist U) (g : O → ℝ) :
     ∑ o : O, (pushforward f p).w o * g o = ∑ u : U, p.w u * g (f u) := by
-  dsimp only [pushforward]; simp_rw [Finset.sum_mul, ite_mul, zero_mul]
+  dsimp only [pushforward, FiniteProb.pushforward]; simp_rw [Finset.sum_mul, ite_mul, zero_mul]
   rw [Finset.sum_comm]; exact Finset.sum_congr rfl fun u _ => by simp
 
 /-- **Dobrushin Kernel Contraction (`tvDist_pushKernel_dobrushin`):**
@@ -820,9 +586,7 @@ theorem tvDist_pushKernel_dobrushin {O O' : Type*} [Fintype O] [Fintype O']
     (L : FinKernel O O') {α : ℝ} (hα : ∀ o o', tvDist (L o) (L o') ≤ α) (μ ν : FinDist O) :
     tvDist (pushKernel L μ) (pushKernel L ν) ≤ α * tvDist μ ν := by
   by_cases hT0 : tvDist μ ν = 0
-  · have hsum0 : ∑ o : O, |μ.w o - ν.w o| = 0 := by unfold tvDist at hT0; linarith
-    have heq : μ = ν := FinDist.ext fun o => sub_eq_zero.mp (abs_eq_zero.mp
-      ((Finset.sum_eq_zero_iff_of_nonneg fun _ _ => abs_nonneg _).mp hsum0 o (Finset.mem_univ o)))
+  · have heq : μ = ν := (FiniteProb.tvDist_eq_zero_iff μ ν).mp hT0
     rw [hT0, mul_zero, heq, tvDist_self]
   · have hT : 0 < tvDist μ ν := lt_of_le_of_ne (tvDist_nonneg μ ν) (Ne.symm hT0)
     let pos : O → ℝ := fun o => max (μ.w o - ν.w o) 0; let neg : O → ℝ := fun o => max (ν.w o - μ.w o) 0
@@ -836,7 +600,7 @@ theorem tvDist_pushKernel_dobrushin {O O' : Type*} [Fintype O] [Fintype O']
     have hs_sub : ∑ o, pos o - ∑ o, neg o = 0 := by
       rw [← Finset.sum_sub_distrib, Finset.sum_congr rfl fun o _ => (hdec o).1, Finset.sum_sub_distrib, μ.sum_eq_one, ν.sum_eq_one, sub_self]
     have hs_add : ∑ o, pos o + ∑ o, neg o = 2 * tvDist μ ν := by
-      rw [← Finset.sum_add_distrib, Finset.sum_congr rfl fun o _ => (hdec o).2]; unfold tvDist; ring
+      rw [← Finset.sum_add_distrib, Finset.sum_congr rfl fun o _ => (hdec o).2]; unfold tvDist FiniteProb.tvDist; ring
     have hsp : ∑ o, pos o = tvDist μ ν := by linarith
     have hsn : ∑ o, neg o = tvDist μ ν := by linarith
     have hstep_y : ∀ y : O', tvDist μ ν * ((pushKernel L μ).w y - (pushKernel L ν).w y) =
@@ -854,7 +618,7 @@ theorem tvDist_pushKernel_dobrushin {O O' : Type*} [Fintype O] [Fintype O']
     have hbound : tvDist μ ν * tvDist (pushKernel L μ) (pushKernel L ν) ≤ tvDist μ ν * (α * tvDist μ ν) :=
       calc tvDist μ ν * tvDist (pushKernel L μ) (pushKernel L ν)
           = (1 / 2 : ℝ) * ∑ y : O', |tvDist μ ν * ((pushKernel L μ).w y - (pushKernel L ν).w y)| := by
-            conv_lhs => rhs; unfold tvDist
+            conv_lhs => rhs; unfold tvDist FiniteProb.tvDist
             rw [← mul_assoc, mul_comm (tvDist μ ν) (1 / 2 : ℝ), mul_assoc, Finset.mul_sum]
             congr 1; exact Finset.sum_congr rfl fun y _ => by rw [abs_mul, abs_of_pos hT]
         _ ≤ (1 / 2 : ℝ) * ∑ y : O', ∑ o : O, ∑ o' : O, pos o * neg o' * |(L o).w y - (L o').w y| := by
@@ -863,7 +627,7 @@ theorem tvDist_pushKernel_dobrushin {O O' : Type*} [Fintype O] [Fintype O']
               (Finset.abs_sum_le_sum_abs _ _).trans (Finset.sum_le_sum fun o' _ => by rw [abs_mul, abs_of_nonneg (mul_nonneg (hp0 o) (hn0 o'))]))
         _ = ∑ o : O, ∑ o' : O, pos o * neg o' * tvDist (L o) (L o') := by
             rw [Finset.sum_comm, Finset.mul_sum]; refine Finset.sum_congr rfl fun o _ => ?_
-            rw [Finset.sum_comm, Finset.mul_sum]; refine Finset.sum_congr rfl fun o' _ => ?_; unfold tvDist; rw [← Finset.mul_sum]; ring
+            rw [Finset.sum_comm, Finset.mul_sum]; refine Finset.sum_congr rfl fun o' _ => ?_; unfold tvDist FiniteProb.tvDist; rw [← Finset.mul_sum]; ring
         _ ≤ ∑ o : O, ∑ o' : O, pos o * neg o' * α :=
             Finset.sum_le_sum fun o _ => Finset.sum_le_sum fun o' _ => mul_le_mul_of_nonneg_left (hα o o') (mul_nonneg (hp0 o) (hn0 o'))
         _ = tvDist μ ν * (α * tvDist μ ν) := by
@@ -880,7 +644,7 @@ theorem tvDist_pushKernel_dobrushin_step {U O : Type*} [Fintype U] [Fintype O]
     tvDist (pushforward f (pushKernel K p)) (pushKernel L lam) ≤
       (∑ u : U, p.w u * rowDefect f K L u) + α * tvDist (pushforward f p) lam := by
   have h1 : ∀ o', (pushforward f (pushKernel K p)).w o' = ∑ u : U, p.w u * (pushforward f (K u)).w o' := fun o' => by
-    dsimp only [pushforward, pushKernel]
+    dsimp only [pushforward, FiniteProb.pushforward, pushKernel]
     calc ∑ v : U, (if f v = o' then ∑ u : U, p.w u * (K u).w v else 0)
         = ∑ v : U, ∑ u : U, p.w u * (if f v = o' then (K u).w v else 0) := Finset.sum_congr rfl fun v _ => by split_ifs <;> simp
       _ = ∑ u : U, p.w u * ∑ v : U, (if f v = o' then (K u).w v else 0) := by
@@ -888,7 +652,7 @@ theorem tvDist_pushKernel_dobrushin_step {U O : Type*} [Fintype U] [Fintype O]
   have h2 : ∀ o', (pushKernel L (pushforward f p)).w o' = ∑ u : U, p.w u * (L (f u)).w o' :=
     fun o' => sum_pushforward_mul f p (fun o => (L o).w o')
   refine (tvDist_triangle _ (pushKernel L (pushforward f p)) _).trans (add_le_add ?_ (tvDist_pushKernel_dobrushin L hL _ _))
-  unfold tvDist rowDefect
+  unfold tvDist FiniteProb.tvDist rowDefect
   calc (1 / 2 : ℝ) * ∑ o' : O, |(pushforward f (pushKernel K p)).w o' - (pushKernel L (pushforward f p)).w o'|
       = (1 / 2 : ℝ) * ∑ o' : O, |∑ u : U, p.w u * ((pushforward f (K u)).w o' - (L (f u)).w o')| := by
         congr 1; refine Finset.sum_congr rfl fun o' _ => ?_
@@ -998,7 +762,7 @@ theorem viability_risk_transfer_bound {U O : Type*} [Fintype U] [Fintype O]
       _ = ∑ o, |(pushforward f p).w o - lam.w o| * |b o - 1 / 2| := Finset.sum_congr rfl fun o _ => abs_mul _ _
       _ ≤ ∑ o, |(pushforward f p).w o - lam.w o| * (1 / 2 : ℝ) := Finset.sum_le_sum fun o _ =>
           mul_le_mul_of_nonneg_left (abs_le.mpr ⟨by linarith [(hb o).1], by linarith [(hb o).2]⟩) (abs_nonneg _)
-      _ = tvDist (pushforward f p) lam := by unfold tvDist; rw [← Finset.sum_mul]; ring
+      _ = tvDist (pushforward f p) lam := by unfold tvDist FiniteProb.tvDist; rw [← Finset.sum_mul]; ring
   have hsum_eq : ∑ u, p.w u * h u = (∑ u, p.w u * (h u - b (f u))) + ∑ u, p.w u * b (f u) := by
     rw [← Finset.sum_add_distrib]; exact Finset.sum_congr rfl fun u _ => by ring
   rw [hsum_eq, ← sum_pushforward_mul f p b, add_sub_assoc]; exact (abs_add_le _ _).trans (add_le_add h1 h2)
@@ -1028,34 +792,34 @@ theorem sharp_oplax_dobrushin_attainment (ε α : ℝ) (hε0 : 0 < ε) (hα0 : 0
       ε * (1 - α ^ n) / (1 - α) := by
   intro f K L
   have hft : tvDist (L false) (L true) = α := by
-    unfold tvDist L sharpBoolKernel; simp [abs_of_nonneg hα0, abs_of_nonpos (neg_nonpos.mpr hα0)]; ring
+    unfold tvDist FiniteProb.tvDist L sharpBoolKernel; simp [abs_of_nonneg hα0, abs_of_nonpos (neg_nonpos.mpr hα0)]; ring
   have hL : ∀ o o', tvDist (L o) (L o') ≤ α := fun o o' => by cases o <;> cases o' <;> simp [tvDist_self, hα0, hft.le, tvDist_symm]
-  have hpf0 : pushforward f (K ()) = diracDist false := FinDist.ext fun b => by cases b <;> simp [pushforward, f, K, diracDist]
-  have hd0 : (diracDist false).w true = 0 := by simp [diracDist]
-  have hd1 : (diracDist false).w false = 1 := by simp [diracDist]
+  have hpf0 : pushforward f (K ()) = diracDist false := FinDist.ext fun b => by cases b <;> simp [FiniteProb.pushforward, f, K, FiniteProb.diracDist]
+  have hd0 : (diracDist false).w true = 0 := by simp [FiniteProb.diracDist]
+  have hd1 : (diracDist false).w false = 1 := by simp [FiniteProb.diracDist]
   have hrow : rowDefect f K L () = ε := by
     rw [rowDefect, hpf0]; change tvDist (diracDist false) (sharpBoolKernel ε α hε0 hα0 hεα false) = ε
     have hs0 : (sharpBoolKernel ε α hε0 hα0 hεα false).w true = ε := by simp [sharpBoolKernel]
     have hs1 : (sharpBoolKernel ε α hε0 hα0 hεα false).w false = 1 - ε := by simp [sharpBoolKernel]
-    dsimp only [tvDist]; rw [Fintype.sum_bool, hd0, hd1, hs0, hs1, zero_sub, abs_neg, abs_of_pos hε0,
+    dsimp only [tvDist, FiniteProb.tvDist]; rw [Fintype.sum_bool, hd0, hd1, hs0, hs1, zero_sub, abs_neg, abs_of_pos hε0,
       show (1 : ℝ) - (1 - ε) = ε by ring, abs_of_pos hε0]; ring
-  have hmass : massOutside f (L (f ())) = ε := by unfold massOutside f L sharpBoolKernel; simp
+  have hmass : massOutside f (L (f ())) = ε := by unfold massOutside FiniteProb.massOutside f L sharpBoolKernel; simp
   have hrec : ∀ n : ℕ, (iterKernel L n (diracDist false)).w true = ε * (1 - α ^ n) / (1 - α) := fun n => by
     induction n with
-    | zero => simp [iterKernel, diracDist]
+    | zero => simp [iterKernel, FiniteProb.diracDist]
     | succ n ih =>
       have htot := (iterKernel L n (diracDist false)).sum_eq_one
       have hfalse : (iterKernel L n (diracDist false)).w false = 1 - (iterKernel L n (diracDist false)).w true := by simp at htot; linarith
       simp only [iterKernel, pushKernel, Fintype.sum_bool, hfalse, ih]; dsimp only [L, sharpBoolKernel]
       simp only [ite_true]; field_simp [sub_ne_zero.mpr hα1.ne']; ring
   have hk_const : ∀ n : ℕ, iterKernel K n (diracDist ()) = diracDist () := fun n => by
-    induction n with | zero => rfl | succ n ih => rw [iterKernel, ih]; exact FinDist.ext fun () => by simp [pushKernel, K, diracDist]
+    induction n with | zero => rfl | succ n ih => rw [iterKernel, ih]; exact FinDist.ext fun () => by simp [pushKernel, K, FiniteProb.diracDist]
   refine ⟨hL, hft, hrow, hmass, fun n => ?_⟩
   have hpf : pushforward f (iterKernel K n (diracDist ())) = diracDist false := by
-    rw [hk_const n]; exact FinDist.ext fun b => by cases b <;> simp [pushforward, f, diracDist]
+    rw [hk_const n]; exact FinDist.ext fun b => by cases b <;> simp [FiniteProb.pushforward, f, FiniteProb.diracDist]
   rw [hpf]; have hsum := (iterKernel L n (diracDist false)).sum_eq_one; have hn := (iterKernel L n (diracDist false)).nonneg true
   have hfl : (iterKernel L n (diracDist false)).w false = 1 - (iterKernel L n (diracDist false)).w true := by simp at hsum; linarith
-  dsimp only [tvDist]; rw [Fintype.sum_bool, hd0, hd1, hfl, zero_sub, abs_neg, abs_of_nonneg hn,
+  dsimp only [tvDist, FiniteProb.tvDist]; rw [Fintype.sum_bool, hd0, hd1, hfl, zero_sub, abs_neg, abs_of_nonneg hn,
     show (1 : ℝ) - (1 - (iterKernel L n (diracDist false)).w true) = (iterKernel L n (diracDist false)).w true by ring,
     abs_of_nonneg hn, hrec n]; ring
 
@@ -1067,10 +831,10 @@ theorem feedback_destroys_openloop_contraction :
     (∀ x y, tvDist (K₀ x) (K₀ y) = 0) ∧ (∀ x y, tvDist (K₁ x) (K₁ y) = 0) ∧
     (∀ s, Kcl s = diracDist s) ∧ tvDist (Kcl false) (Kcl true) = 1 ∧ (∀ (n : ℕ) (p : FinDist Bool), iterKernel Kcl n p = p) := by
   intro K₀ K₁ Kcl; have hcl : ∀ s, Kcl s = diracDist s := fun s => by cases s <;> rfl
-  have hstep : ∀ p : FinDist Bool, pushKernel Kcl p = p := fun p => FinDist.ext fun b => by cases b <;> simp [pushKernel, hcl, diracDist]
+  have hstep : ∀ p : FinDist Bool, pushKernel Kcl p = p := fun p => FinDist.ext fun b => by cases b <;> simp [pushKernel, hcl, FiniteProb.diracDist]
   refine ⟨fun _ _ => tvDist_self _, fun _ _ => tvDist_self _, hcl, ?_, fun n p => by
     induction n with | zero => rfl | succ n ih => simp [iterKernel, ih, hstep]⟩
-  unfold tvDist; simp [hcl, diracDist]; norm_num
+  unfold tvDist FiniteProb.tvDist; simp [hcl, FiniteProb.diracDist]; norm_num
 
 /-- **Derived Three-Regime Kernel Error Contrast (`three_regime_kernel_contrast`):**
 Joins open-loop linear drift, kernel-derived `MetricLaxSim` contraction tubes, and feedback/coupled breakdowns. -/
@@ -1088,5 +852,66 @@ theorem three_regime_kernel_contrast :
   ⟨fun K L ε hε n p0 => by simpa [tvDist_self] using sequential_kernel_tv_bound K L hε n p0 p0,
    fun f K L α ε hα0 hα1 hε0 hL hrow n p0 lam0 => (tvDist_pushKernel_iter_bound f K L hα0 hα1 hε0 hL hrow n p0 lam0).1,
    ⟨feedback_destroys_openloop_contraction.2.2.2.1, Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split⟩⟩
+
+/-- Zero one-step `rowDefect` on prescribed `(K, L)` holds iff every pushed micro row matches `L (f u)`. -/
+theorem rowDefect_eq_zero_iff_pushforward {U O : Type*} [Fintype U] [Fintype O]
+    (f : U → O) (K : FinKernel U U) (L : FinKernel O O) :
+    (∀ u, rowDefect f K L u = 0) ↔ ∀ u, pushforward f (K u) = L (f u) :=
+  forall_congr' fun u => FiniteProb.tvDist_eq_zero_iff (pushforward f (K u)) (L (f u))
+
+/-- Mode-indexed equivalence between zero `rowDefect` across all modes/states and pushforward commutation. -/
+theorem modeRowDefect_eq_zero_iff_pushforward {Mode U O : Type*} [Fintype U] [Fintype O]
+    (f : U → O) (K : Mode → FinKernel U U) (L : Mode → FinKernel O O) :
+    (∀ a u, rowDefect f (K a) (L a) u = 0) ↔ ∀ a u, pushforward f (K a u) = L a (f u) :=
+  forall_congr' fun a => rowDefect_eq_zero_iff_pushforward f (K a) (L a)
+
+/-- Exact zero `rowDefect` across all modes and microstates characterizes `FiniteKrylov.FiberLumpable`
+for Markov kernels `K : Mode → FinKernel U U` up to existence of a compatible macro kernel `L`. -/
+theorem fiberLumpable_iff_exists_zero_rowDefect {Mode U O : Type*} [Fintype U] [Fintype O]
+    (f : U → O) (K : Mode → FinKernel U U) :
+    FiniteKrylov.FiberLumpable f (fun a u v => (K a u).w v) ↔
+      ∃ L : Mode → FinKernel O O, ∀ a u, rowDefect f (K a) (L a) u = 0 := by
+  constructor
+  · intro hLump
+    let L : Mode → FinKernel O O := fun a o =>
+      if ho : ∃ u : U, f u = o then pushforward f (K a (Classical.choose ho)) else diracDist o
+    refine ⟨L, fun a u => (FiniteProb.tvDist_eq_zero_iff _ _).mpr ?_⟩
+    have ho : ∃ u' : U, f u' = f u := ⟨u, rfl⟩
+    dsimp only [L]
+    rw [dif_pos ho]
+    refine FinDist.ext fun o => ?_
+    dsimp only [pushforward, FiniteProb.pushforward]
+    exact hLump a u (Classical.choose ho) (Classical.choose_spec ho).symm o
+  · rintro ⟨L, hzero⟩ a s t hst o
+    have hs := (FiniteProb.tvDist_eq_zero_iff (pushforward f (K a s)) (L a (f s))).mp (hzero a s)
+    have ht := (FiniteProb.tvDist_eq_zero_iff (pushforward f (K a t)) (L a (f t))).mp (hzero a t)
+    have hp : pushforward f (K a s) = pushforward f (K a t) := by
+      rw [hs, ht, hst]
+    exact congrArg (fun p => p.w o) hp
+
+/-- Fixed-`L` negative control: singleton fibers on `Bool` are automatically `FiberLumpable`, yet
+a mismatched macro kernel `L` (`id` vs `Bool.not`) produces `rowDefect = 1 ≠ 0`. -/
+theorem fixed_macro_nonzero_rowDefect_witness :
+    let f : Bool → Bool := id
+    let K : Unit → FinKernel Bool Bool := fun _ b => diracDist b
+    let L : FinKernel Bool Bool := fun b => diracDist (!b)
+    FiniteKrylov.FiberLumpable f (fun a u v => (K a u).w v) ∧
+      rowDefect f (K ()) L true = 1 ∧ rowDefect f (K ()) L true ≠ 0 := by
+  intro f K L
+  have hLump : FiniteKrylov.FiberLumpable f (fun a u v => (K a u).w v) := by
+    intro () s t hst o
+    have hst' : s = t := hst
+    subst hst'
+    rfl
+  have hdef : rowDefect f (K ()) L true = 1 := by
+    unfold rowDefect tvDist FiniteProb.tvDist
+    have hpf : pushforward f (K () true) = diracDist true := FinDist.ext fun b => by
+      cases b <;> simp [FiniteProb.pushforward, f, K, FiniteProb.diracDist]
+    dsimp only [K, f] at hpf ⊢
+    rw [hpf]
+    dsimp only [L]
+    simp [FiniteProb.diracDist]
+    norm_num
+  exact ⟨hLump, hdef, by rw [hdef]; norm_num⟩
 
 end ObservationalFidelity

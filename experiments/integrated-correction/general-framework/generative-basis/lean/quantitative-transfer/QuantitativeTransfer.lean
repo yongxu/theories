@@ -343,7 +343,7 @@ theorem testMass_add_not {Y : Type*} [Fintype Y] (P : ObservationalFidelity.FinD
 
 theorem tvDist_le_one {Y : Type*} [Fintype Y] (P Q : ObservationalFidelity.FinDist Y) :
     ObservationalFidelity.tvDist P Q ≤ 1 := by
-  unfold ObservationalFidelity.tvDist
+  unfold ObservationalFidelity.tvDist FiniteProb.tvDist
   have h : ∑ y, |P.w y - Q.w y| ≤ ∑ y, (P.w y + Q.w y) := Finset.sum_le_sum fun y _ =>
     abs_le.mpr ⟨by linarith [P.nonneg y, Q.nonneg y], by linarith [P.nonneg y, Q.nonneg y]⟩
   rw [Finset.sum_add_distrib, P.sum_eq_one, Q.sum_eq_one] at h
@@ -366,7 +366,7 @@ theorem two_point_test_floor {Y : Type*} [Fintype Y] (P₁ P₂ : ObservationalF
       linarith [le_abs_self (P₁.w y - P₂.w y), abs_sub_comm (P₁.w y) (P₂.w y),
         le_abs_self (P₂.w y - P₁.w y)]
   have hsum : testMass P₂ g - testMass P₁ g ≤ ObservationalFidelity.tvDist P₁ P₂ := by
-    unfold testMass ObservationalFidelity.tvDist
+    unfold testMass ObservationalFidelity.tvDist FiniteProb.tvDist
     rw [← Finset.sum_sub_distrib]
     calc ∑ y, ((if g y then P₂.w y else 0) - (if g y then P₁.w y else 0))
         ≤ ∑ y, ((1 / 2 : ℝ) * |P₁.w y - P₂.w y| + (1 / 2 : ℝ) * (P₂.w y - P₁.w y)) :=
@@ -379,7 +379,7 @@ theorem tvDist_mixDist_same {Y : Type*} [Fintype Y] {α : ℝ} (hα0 : 0 ≤ α)
     (P₁ P₂ N : ObservationalFidelity.FinDist Y) :
     ObservationalFidelity.tvDist (mixDist α hα0 hα1 P₁ N) (mixDist α hα0 hα1 P₂ N) =
       (1 - α) * ObservationalFidelity.tvDist P₁ P₂ := by
-  unfold ObservationalFidelity.tvDist mixDist
+  unfold ObservationalFidelity.tvDist FiniteProb.tvDist mixDist
   simp only
   rw [Finset.mul_sum, Finset.mul_sum, Finset.mul_sum]
   refine Finset.sum_congr rfl fun y _ => ?_
@@ -413,7 +413,7 @@ theorem mixture_floor_attained {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1)
       testMass (mixDist α hα0 hα1 (ObservationalFidelity.diracDist true) N) (fun y => !id y) = α := by
   have hN := N.sum_eq_one
   rw [Fintype.sum_bool] at hN
-  simp [testMass, mixDist, ObservationalFidelity.diracDist]
+  simp [testMass, mixDist, ObservationalFidelity.diracDist, FiniteProb.diracDist]
   linear_combination α * hN
 
 /-! ## Part 3: Lag Horizon — Continuous Drawdown Wall and Leakage Switching Lag -/

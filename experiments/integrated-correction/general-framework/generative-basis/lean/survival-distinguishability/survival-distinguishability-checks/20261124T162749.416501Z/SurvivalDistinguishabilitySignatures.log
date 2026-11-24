@@ -1,0 +1,83 @@
+@SurvivalDistinguishability.survVec_cons : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S] (K : Mode → S → S → ℝ)
+  (a : Mode) (w : List Mode),
+  SurvivalDistinguishability.survVec K (a :: w) =
+    (SurvivalDistinguishability.stepOp (K a)) (SurvivalDistinguishability.survVec K w)
+@SurvivalDistinguishability.survVec_eq_finiteKrylov : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  (K : Mode → S → S → ℝ) (w : List Mode), SurvivalDistinguishability.survVec K w = FiniteKrylov.survVec K w
+@SurvivalDistinguishability.krylovSub_eq_finiteKrylov : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  (K : Mode → S → S → ℝ) (k : ℕ), SurvivalDistinguishability.krylovSub K k = FiniteKrylov.krylovSub K (fun x => 1) k
+@SurvivalDistinguishability.krylovSub_mono : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  (K : Mode → S → S → ℝ) {k m : ℕ},
+  k ≤ m → SurvivalDistinguishability.krylovSub K k ≤ SurvivalDistinguishability.krylovSub K m
+@SurvivalDistinguishability.one_le_finrank_krylov_zero : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  [Nonempty S] (K : Mode → S → S → ℝ), 1 ≤ Module.finrank ℝ ↥(SurvivalDistinguishability.krylovSub K 0)
+SurvivalDistinguishability.nat_chain_stabilizes : ∀ (d : ℕ → ℕ) {n : ℕ},
+  1 ≤ n → 1 ≤ d 0 → (∀ (k : ℕ), d k ≤ d (k + 1)) → (∀ (k : ℕ), d k ≤ n) → ∃ k ≤ n - 1, d (k + 1) = d k
+@SurvivalDistinguishability.krylovSub_map_step_le : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  (K : Mode → S → S → ℝ) (a : Mode) (k : ℕ),
+  Submodule.map (SurvivalDistinguishability.stepOp (K a)) (SurvivalDistinguishability.krylovSub K k) ≤
+    SurvivalDistinguishability.krylovSub K (k + 1)
+@SurvivalDistinguishability.survVec_mem_krylov_stabilized : ∀ {S : Type u_1} {Mode : Type u_2} [inst : Fintype S]
+  (K : Mode → S → S → ℝ) {k : ℕ},
+  SurvivalDistinguishability.krylovSub K (k + 1) = SurvivalDistinguishability.krylovSub K k →
+    ∀ (w : List Mode), SurvivalDistinguishability.survVec K w ∈ SurvivalDistinguishability.krylovSub K k
+@SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred : ∀ {S : Type u_1} {Mode : Type u_2}
+  [inst : Fintype S] [Nonempty S] (K : Mode → S → S → ℝ) (x y : S),
+  (∀ (w : List Mode), SurvivalDistinguishability.survVec K w x = SurvivalDistinguishability.survVec K w y) ↔
+    ∀ (w : List Mode),
+      w.length ≤ Fintype.card S - 1 →
+        SurvivalDistinguishability.survVec K w x = SurvivalDistinguishability.survVec K w y
+@SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred : ∀ {S : Type u_1} {O : Type u_2}
+  {Mode : Type u_3} [inst : Fintype S] [inst_1 : Fintype O] (f : S → O) (K : Mode → S → S → ℝ),
+  FiniteKrylov.FiberLumpable f K →
+    ∀ (x y : S),
+      (∀ (w : List Mode), SurvivalDistinguishability.survVec K w x = SurvivalDistinguishability.survVec K w y) ↔
+        ∀ (w : List Mode),
+          w.length ≤ Fintype.card O - 1 →
+            SurvivalDistinguishability.survVec K w x = SurvivalDistinguishability.survVec K w y
+SurvivalDistinguishability.survVec_countdownK : ∀ (n : ℕ) (w : List Unit) (s : Fin (n + 1)),
+  SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w s = if ↑s + w.length ≤ n then 1 else 0
+SurvivalDistinguishability.countdown_attains_card_pred : ∀ (n : ℕ) (hn : 1 ≤ n),
+  have x₀ := ⟨0, ⋯⟩;
+  have x₁ := ⟨1, ⋯⟩;
+  (∀ (w : List Unit),
+      w.length < Fintype.card (Fin (n + 1)) - 1 →
+        SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₀ =
+          SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₁) ∧
+    ∃ w,
+      w.length = Fintype.card (Fin (n + 1)) - 1 ∧
+        SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₀ = 1 ∧
+          SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₁ = 0 ∧
+            SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₀ ≠
+              SurvivalDistinguishability.survVec (SurvivalDistinguishability.countdownK n) w x₁
+SurvivalDistinguishability.survVec_switchK_false : ∀ (k : ℕ) (s : Fin 3),
+  SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k false) s = 1
+SurvivalDistinguishability.survVec_switchK_true : ∀ (k : ℕ),
+  SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k true) 0 = 1 ∧
+    SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k true) 1 = 1
+SurvivalDistinguishability.three_state_mode_switch_counterexample : (∀ (k : ℕ),
+    SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k false) 0 = 1 ∧
+      SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k false) 1 = 1) ∧
+  (∀ (k : ℕ),
+      SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k true) 0 = 1 ∧
+        SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK (List.replicate k true) 1 = 1) ∧
+    SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK [false, true] 0 = 1 ∧
+      SurvivalDistinguishability.survVec SurvivalDistinguishability.switchK [false, true] 1 = 0
+SurvivalDistinguishability.c2_coupled_survival_separation : have finInPhase := ((true, true), true);
+have finAntiPhase := ((true, false), true);
+SurvivalDistinguishability.c2Embed finInPhase = Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase ∧
+  SurvivalDistinguishability.c2Embed finAntiPhase = Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase ∧
+    Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro (SurvivalDistinguishability.c2Embed finInPhase) =
+        Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro (SurvivalDistinguishability.c2Embed finAntiPhase) ∧
+      [()].length ≤ Fintype.card SurvivalDistinguishability.C2FinState - 1 ∧
+        SurvivalDistinguishability.survVec SurvivalDistinguishability.c2Op [()] finInPhase = 1 ∧
+          SurvivalDistinguishability.survVec SurvivalDistinguishability.c2Op [()] finAntiPhase = 0 ∧
+            (¬∀ (w : List Unit),
+                  SurvivalDistinguishability.survVec SurvivalDistinguishability.c2Op w finInPhase =
+                    SurvivalDistinguishability.survVec SurvivalDistinguishability.c2Op w finAntiPhase) ∧
+              Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+                  Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS
+                  (SurvivalDistinguishability.c2Embed finInPhase) ∧
+                ¬Becoming.Viability.Kernel Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc
+                    Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS
+                    (SurvivalDistinguishability.c2Embed finAntiPhase)

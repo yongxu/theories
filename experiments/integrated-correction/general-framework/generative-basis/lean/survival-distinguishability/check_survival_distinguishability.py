@@ -45,7 +45,9 @@ SCOPE = (
     "(4) 3-state 2-mode negative control three_state_mode_switch_counterexample separating [false, true] "
     "where all constant [false]*k and [true]*k sequences agree; and "
     "(5) finite sub-stochastic operator c2Op over Becoming.OplaxHistory.C2CoupledAlignmentWitness "
-    "separating same-observation states finInPhase and finAntiPhase at length 1 <= card - 1."
+    "separating same-observation states finInPhase and finAntiPhase at length 1 <= card - 1, and "
+    "(6) shared FiniteKrylov foundation delegation plus FiberLumpable observable-horizon "
+    "reduction survival_indistinguishable_iff_le_obs_pred."
 )
 
 

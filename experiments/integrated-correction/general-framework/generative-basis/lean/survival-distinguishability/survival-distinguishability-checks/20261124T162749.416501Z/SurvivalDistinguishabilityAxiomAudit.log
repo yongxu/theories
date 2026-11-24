@@ -1,0 +1,30 @@
+'SurvivalDistinguishability.stepOp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_eq_finiteKrylov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.krylovSub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.krylovSub_eq_finiteKrylov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.krylovSub_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.one_le_finrank_krylov_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.nat_chain_stabilizes' depends on axioms: [propext, Quot.sound]
+'SurvivalDistinguishability.krylovSub_map_step_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_mem_krylov_stabilized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SurvivalDistinguishability.countdownK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_countdownK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.countdown_attains_card_pred' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.switchK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_switchK_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.survVec_switchK_true' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.three_state_mode_switch_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SurvivalDistinguishability.C2FinState' does not depend on any axioms
+'SurvivalDistinguishability.c2Embed' does not depend on any axioms
+'SurvivalDistinguishability.c2Op' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SurvivalDistinguishability.c2_coupled_survival_separation' depends on axioms: [propext, Classical.choice, Quot.sound]

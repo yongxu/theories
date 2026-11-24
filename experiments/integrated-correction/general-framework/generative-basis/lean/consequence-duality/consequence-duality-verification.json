@@ -1,8 +1,15 @@
 {
   "module": "ConsequenceDuality",
   "source_file": "ConsequenceDuality.lean",
-  "source_sha256": "4a8acf2067c986f3d03e7755aaac7d8173f503b6e617937c6ef32f9586803d8d",
-  "verified_at_utc": "2026-11-24T16:40:29.266184+00:00",
+  "source_paths": {
+    "FiniteProbKrylov": "finite-prob-krylov/FiniteProbKrylov.lean",
+    "ConsequenceDuality": "consequence-duality/ConsequenceDuality.lean"
+  },
+  "source_sha256": "dad6f4d1c81ccc740265f43f0432e48aad88e63c50d9a1219bfedec5f36c5e0d",
+  "dependency_sha256": {
+    "FiniteProbKrylov": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f"
+  },
+  "verified_at_utc": "2026-11-24T17:09:04.633649+00:00",
   "ai_written": true,
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
@@ -28,8 +35,8 @@
   },
   "declaration_count": 50,
   "theorem_count": 30,
-  "definition_count": 19,
-  "structure_count": 1,
+  "definition_count": 20,
+  "structure_count": 0,
   "required_declarations_verified": [
     "ConsequenceDuality.FinDist",
     "ConsequenceDuality.FinDist.ext",
@@ -74,7 +81,7 @@
   ],
   "declarations": [
     {
-      "kind": "structure",
+      "kind": "abbrev",
       "name": "ConsequenceDuality.FinDist",
       "axioms": [
         "propext",
@@ -92,7 +99,7 @@
       ]
     },
     {
-      "kind": "def",
+      "kind": "abbrev",
       "name": "ConsequenceDuality.diracDist",
       "axioms": [
         "propext",
@@ -101,7 +108,7 @@
       ]
     },
     {
-      "kind": "def",
+      "kind": "abbrev",
       "name": "ConsequenceDuality.pushforward",
       "axioms": [
         "propext",
@@ -119,7 +126,7 @@
       ]
     },
     {
-      "kind": "def",
+      "kind": "abbrev",
       "name": "ConsequenceDuality.tvDist",
       "axioms": [
         "propext",
@@ -173,7 +180,7 @@
       ]
     },
     {
-      "kind": "def",
+      "kind": "abbrev",
       "name": "ConsequenceDuality.massOutside",
       "axioms": [
         "propext",

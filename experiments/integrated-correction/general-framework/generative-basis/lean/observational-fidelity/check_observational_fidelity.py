@@ -55,7 +55,9 @@ SCOPE = (
     "kernel_contraction_tube_via_metricLaxSim, three_regime_kernel_contrast), [0,1]-bounded "
     "viability_risk_transfer_bound and fiber_split_readout_floor, sharp attainment "
     "(sharp_oplax_dobrushin_attainment on Bool), and closed-loop feedback control "
-    "(feedback_destroys_openloop_contraction)."
+    "(feedback_destroys_openloop_contraction), unified atop FiniteProbKrylov with B1-B2 exact "
+    "lumpability characterization (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, "
+    "fiberLumpable_iff_exists_zero_rowDefect, and fixed_macro_nonzero_rowDefect_witness)."
 )
 
 

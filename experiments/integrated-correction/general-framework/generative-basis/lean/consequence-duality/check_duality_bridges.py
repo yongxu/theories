@@ -17,6 +17,8 @@ from datetime import datetime, timezone
 
 HERE = pathlib.Path(__file__).resolve().parent
 BASE_SOURCE = HERE / "ConsequenceDuality.lean"
+FPK_SOURCE = (HERE.parent / "finite-prob-krylov" / "FiniteProbKrylov.lean").resolve()
+LEAN_ROOT = HERE.parent.resolve()
 SOURCE_FILE = HERE / "DualityBridges.lean"
 TOOLCHAIN_FILE = HERE / "lean-toolchain"
 RECEIPT_FILE = HERE / "duality-bridges-verification.json"
@@ -195,8 +197,13 @@ def parse_axioms_output(stdout: str, decl_names: list[str]) -> dict[str, list[st
 
 
 def main() -> int:
-    src = SOURCE_FILE.read_text(encoding="utf-8")
-    source_sha256 = hashlib.sha256(SOURCE_FILE.read_bytes()).hexdigest()
+    raw_bytes = SOURCE_FILE.read_bytes()
+    fpk_bytes = FPK_SOURCE.read_bytes()
+    base_bytes = BASE_SOURCE.read_bytes()
+    src = raw_bytes.decode("utf-8")
+    source_sha256 = hashlib.sha256(raw_bytes).hexdigest()
+    fpk_sha256 = hashlib.sha256(fpk_bytes).hexdigest()
+    base_sha256 = hashlib.sha256(base_bytes).hexdigest()
     toolchain = TOOLCHAIN_FILE.read_text(encoding="utf-8").strip()
     lean_bin = find_lean_binary()
     lean_ver = subprocess.check_output([str(lean_bin), "--version"], text=True).strip()
@@ -226,21 +233,27 @@ def main() -> int:
         env = os.environ.copy()
         env["LEAN_PATH"] = os.pathsep.join([str(tmp_path)] + math_paths)
 
-        for name, file_path in (("ConsequenceDuality", BASE_SOURCE), ("DualityBridges", SOURCE_FILE)):
+        for name, file_bytes in (
+            ("FiniteProbKrylov", fpk_bytes),
+            ("ConsequenceDuality", base_bytes),
+            ("DualityBridges", raw_bytes),
+        ):
+            dep_lean = tmp_path / f"{name}.lean"
+            dep_lean.write_bytes(file_bytes)
             res = subprocess.run(
-                [str(lean_bin), "-o", str(tmp_path / f"{name}.olean"), file_path.name],
-                cwd=HERE,
+                [str(lean_bin), "-o", str(tmp_path / f"{name}.olean"), dep_lean.name],
+                cwd=tmp_path,
                 env=env,
                 text=True,
                 capture_output=True,
             )
             if res.returncode != 0:
                 raise RuntimeError(
-                    f"Lean compilation of {file_path.name} failed (exit {res.returncode}):\n"
+                    f"Lean compilation of {name}.lean failed (exit {res.returncode}):\n"
                     f"STDOUT:\n{res.stdout}\nSTDERR:\n{res.stderr}"
                 )
 
-        audit_lines = ["import ConsequenceDuality", "import DualityBridges", ""]
+        audit_lines = ["import FiniteProbKrylov", "import ConsequenceDuality", "import DualityBridges", ""]
         for d in decl_names:
             audit_lines.append(f"#print axioms {d}")
         for req in REQUIRED_DECLARATIONS:
@@ -270,11 +283,26 @@ def main() -> int:
         if disallowed:
             raise RuntimeError(f"Non-standard axioms detected: {disallowed}")
 
+    if (
+        FPK_SOURCE.read_bytes() != fpk_bytes
+        or BASE_SOURCE.read_bytes() != base_bytes
+        or SOURCE_FILE.read_bytes() != raw_bytes
+    ):
+        raise RuntimeError("Source bytes changed on disk during check; snapshot integrity failed")
     all_axioms_used = sorted({ax for axs in axioms_by_decl.values() for ax in axs})
     receipt = {
         "module": MODULE_NAME,
         "source_file": str(SOURCE_FILE.relative_to(HERE)),
+        "source_paths": {
+            "FiniteProbKrylov": str(FPK_SOURCE.relative_to(LEAN_ROOT)),
+            "ConsequenceDuality": str(BASE_SOURCE.relative_to(LEAN_ROOT)),
+            MODULE_NAME: str(SOURCE_FILE.relative_to(LEAN_ROOT)),
+        },
         "source_sha256": source_sha256,
+        "dependency_sha256": {
+            "FiniteProbKrylov": fpk_sha256,
+            "ConsequenceDuality": base_sha256,
+        },
         "verified_at_utc": datetime.now(timezone.utc).isoformat(),
         "ai_written": True,
         "toolchain": toolchain,

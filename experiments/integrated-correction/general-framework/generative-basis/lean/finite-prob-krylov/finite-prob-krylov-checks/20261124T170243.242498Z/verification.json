@@ -1,0 +1,373 @@
+{
+  "status": "passed",
+  "utc": "20261124T170243.242498Z",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "retained_run": "finite-prob-krylov-checks/20261124T170243.242498Z",
+  "bridge_module": "FiniteProbKrylov",
+  "compile_order": [
+    "FiniteProbKrylov"
+  ],
+  "source_paths": {
+    "FiniteProbKrylov": "finite-prob-krylov/FiniteProbKrylov.lean"
+  },
+  "source_sha256": {
+    "FiniteProbKrylov": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f"
+  },
+  "checker_sha256": {
+    "check_finite_prob_krylov.py": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4",
+    "check_becoming.py": "cd19bc36878e0ab5aacca8339fd8439f196ac571a43963a5caba44146b092733"
+  },
+  "source_commit": {
+    "main": "c2151efa8d9a99ac58d98af9c4a4b8610de7a392",
+    "copied": [
+      "FiniteProbKrylov.lean",
+      "check_finite_prob_krylov.py"
+    ]
+  },
+  "scope": "On FiniteProbKrylov over Mathlib ℝ: (1) shared finite probability carrier FinDist, diracDist, pushforward, total-variation metric tvDist (with tvDist_eq_zero_iff, triangle, and data-processing tvDist_pushforward_le), query-image massOutside, optimal_query_tv_floor, and empty_source_infeasible; (2) shared arbitrary-seed Krylov stabilization stepOp, stepLinearMap, wordVec, survVec, krylovSub_stabilizes_before_rank for arbitrary K-invariant finite-dimensional subspaces W, and Fintype.card S - 1 specialization; and (3) exact FiberLumpable observable-horizon compression survival_indistinguishable_iff_le_obs_pred plus lumpable_obs_horizon_one_witness (non-trivial for substochastic weights; normalized rows always satisfy survVec = 1).",
+  "lean_steps": {
+    "cache": "/Users/ren/.cache/becoming-lean",
+    "fresh": false,
+    "ran": [
+      "version.log"
+    ],
+    "reused": {
+      "FiniteProbKrylov.log": {
+        "utc": "20261124T161130.988319Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/wave1-finite-prob-krylov/experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T161130.988319Z"
+      },
+      "FiniteProbKrylovAxiomAudit.log": {
+        "utc": "20261124T161130.988319Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/wave1-finite-prob-krylov/experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T161130.988319Z"
+      },
+      "FiniteProbKrylovSignatures.log": {
+        "utc": "20261124T161130.988319Z",
+        "retained": "/Users/ren/theories/.claude/worktrees/wave1-finite-prob-krylov/experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T161130.988319Z"
+      }
+    },
+    "keys": {
+      "FiniteProbKrylov.log": "15a4b08f3556c34ce5fa78e145878ff9d4620182dd2b6e0963b447ae961f2106",
+      "FiniteProbKrylovAxiomAudit.log": "a4a3535e5c8c7dbc0f76e16ad15f919b55a53b0f6d0614bd695f77ddecae4bd9",
+      "FiniteProbKrylovSignatures.log": "4719f45bebaf05ffba3d8eb44c92d48ce90ddc12e874285672f02ac91a234c86"
+    }
+  },
+  "inherited_receipts": {},
+  "lean_binary_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "source_unchanged_during_check": true,
+  "modules": [
+    {
+      "module": "FiniteProbKrylov",
+      "layer": "periphery",
+      "theorems": 21,
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "FiniteProb.FinDist"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.FinDist.ext"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteProb.diracDist"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteProb.pushforward"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.pushforward_comp"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteProb.tvDist"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_self"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_symm"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_eq_zero_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_triangle"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.tvDist_pushforward_le"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteProb.massOutside"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.massOutside_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.optimal_query_tv_floor"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteProb.empty_source_infeasible"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.stepOp"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.stepLinearMap"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.wordVec"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.survVec"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.krylovSub"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.krylovSub_mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.stepLinearMap_mem_krylovSub_succ"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.krylovSub_step_eq_of_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.krylovSub_stabilizes_from"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.krylovSub_stabilizes_before_rank"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.krylovSub_stabilizes_before_card"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.wordVec_mem_krylovSub_pred"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.FiberLumpable"
+        },
+        {
+          "kind": "def",
+          "name": "FiniteKrylov.pullbackLinear"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.mem_range_pullbackLinear_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred"
+        },
+        {
+          "kind": "theorem",
+          "name": "FiniteKrylov.lumpable_obs_horizon_one_witness"
+        }
+      ],
+      "axiom_dependencies": {
+        "FiniteProb.FinDist": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.FinDist.ext": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.diracDist": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.pushforward": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.pushforward_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_self": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_symm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_eq_zero_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_triangle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.tvDist_pushforward_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.massOutside": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.massOutside_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.optimal_query_tv_floor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteProb.empty_source_infeasible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.stepOp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.stepLinearMap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.wordVec": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.survVec": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub_mono": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.stepLinearMap_mem_krylovSub_succ": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub_step_eq_of_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub_stabilizes_from": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub_stabilizes_before_rank": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.krylovSub_stabilizes_before_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.wordVec_mem_krylovSub_pred": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.FiberLumpable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.pullbackLinear": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.mem_range_pullbackLinear_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "FiniteKrylov.lumpable_obs_horizon_one_witness": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "kernel_checked": true
+    }
+  ],
+  "artifact_sha256": {
+    "FiniteProbKrylov.lean": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f",
+    "check_finite_prob_krylov.py": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4",
+    "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
+  }
+}

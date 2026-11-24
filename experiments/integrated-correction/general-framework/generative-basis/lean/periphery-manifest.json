@@ -123,6 +123,16 @@
       "record": "renewal-bridge-to-keepable-step"
     },
     {
+      "module": "FiniteProbKrylov",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "finite-prob-krylov/FiniteProbKrylov.lean",
+      "receipt": "finite-prob-krylov/finite-prob-krylov-verification.json",
+      "checker": "finite-prob-krylov/check_finite_prob_krylov.py",
+      "record": "finite-probability-and-krylov-foundation"
+    },
+    {
       "module": "ObservationalFidelity",
       "region": "knowing",
       "toolchain": "leanprover/lean4:v4.30.0-rc2",

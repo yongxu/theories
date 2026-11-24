@@ -1,8 +1,13 @@
 {
   "module": "DualityLifting",
   "source_file": "DualityLifting.lean",
-  "source_sha256": "cac323a74f9c9421c317e674880ad312da0638f4472735aa586b91888df16f32",
-  "verified_at_utc": "2026-11-24T16:41:09.684980+00:00",
+  "source_sha256": "9d6a64ce8d7d0bdf0c0ddb37d6561e1ebb8faa43d03d16747df226b848d5ec02",
+  "dependency_sha256": {
+    "FiniteProbKrylov": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f",
+    "ConsequenceDuality": "dad6f4d1c81ccc740265f43f0432e48aad88e63c50d9a1219bfedec5f36c5e0d",
+    "DualityBridges": "d80978edfbac42510a3ca29a4aee6ba8c1d4691211198419aa36eca8d9dc324f"
+  },
+  "verified_at_utc": "2026-11-24T17:10:46.344367+00:00",
   "ai_written": true,
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",

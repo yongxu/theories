@@ -2,6 +2,7 @@ import Mathlib.Algebra.BigOperators.Field
 import Mathlib.LinearAlgebra.Dimension.Constructions
 import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 import Mathlib.Tactic
+import FiniteProbKrylov
 import Becoming.OplaxHistory
 
 /-!
@@ -17,12 +18,10 @@ namespace SurvivalDistinguishability
 open scoped BigOperators
 open Classical
 
-/-- Linear one-step transition operator induced by a matrix `M : S → S → ℝ`. -/
-noncomputable def stepOp {S : Type*} [Fintype S] (M : S → S → ℝ) :
-    (S → ℝ) →ₗ[ℝ] (S → ℝ) where
-  toFun v s := ∑ s', M s s' * v s'
-  map_add' u v := by ext s; simp [mul_add, Finset.sum_add_distrib]
-  map_smul' c v := by ext s; simp [Finset.mul_sum, mul_left_comm]
+/-- Linear one-step transition operator induced by a matrix `M : S → S → ℝ` (re-exported from `FiniteKrylov`). -/
+noncomputable abbrev stepOp {S : Type*} [Fintype S] (M : S → S → ℝ) :
+    (S → ℝ) →ₗ[ℝ] (S → ℝ) :=
+  FiniteKrylov.stepLinearMap M
 
 /-- Mode-indexed survival vector over `S` starting from `ones := fun _ => (1 : ℝ)`
 and stepping by `∑ s', K a s s' * survVec K w s'`. -/
@@ -35,10 +34,28 @@ theorem survVec_cons {S Mode : Type*} [Fintype S] (K : Mode → S → S → ℝ)
     (a : Mode) (w : List Mode) :
     survVec K (a :: w) = stepOp (K a) (survVec K w) := rfl
 
+theorem survVec_eq_finiteKrylov {S Mode : Type*} [Fintype S] (K : Mode → S → S → ℝ) :
+    ∀ w : List Mode, survVec K w = FiniteKrylov.survVec K w
+  | [] => rfl
+  | a :: w => by
+    funext s
+    show (∑ s', K a s s' * survVec K w s') =
+      ∑ s', K a s s' * FiniteKrylov.survVec K w s'
+    rw [survVec_eq_finiteKrylov K w]
+
 /-- Krylov subspace spanned by survival vectors for words of length `≤ k`. -/
 noncomputable def krylovSub {S Mode : Type*} [Fintype S]
     (K : Mode → S → S → ℝ) (k : ℕ) : Submodule ℝ (S → ℝ) :=
   Submodule.span ℝ { v | ∃ w : List Mode, w.length ≤ k ∧ v = survVec K w }
+
+theorem krylovSub_eq_finiteKrylov {S Mode : Type*} [Fintype S]
+    (K : Mode → S → S → ℝ) (k : ℕ) :
+    krylovSub K k = FiniteKrylov.krylovSub K (fun _ => 1) k := by
+  have hset : { v | ∃ w : List Mode, w.length ≤ k ∧ v = survVec K w } =
+      { v | ∃ w : List Mode, w.length ≤ k ∧ v = FiniteKrylov.wordVec K (fun _ => 1) w } := by
+    ext v
+    simp [survVec_eq_finiteKrylov, FiniteKrylov.survVec]
+  rw [krylovSub, FiniteKrylov.krylovSub, hset]
 
 theorem krylovSub_mono {S Mode : Type*} [Fintype S] (K : Mode → S → S → ℝ)
     {k m : ℕ} (hkm : k ≤ m) : krylovSub K k ≤ krylovSub K m :=
@@ -97,19 +114,27 @@ theorem survival_indistinguishable_iff_le_card_pred {S Mode : Type*}
     (∀ w : List Mode, survVec K w x = survVec K w y) ↔
       (∀ w : List Mode, w.length ≤ Fintype.card S - 1 → survVec K w x = survVec K w y) := by
   refine ⟨fun h w _ => h w, fun hshort w => ?_⟩
-  obtain ⟨k, hk_le, hk_dim⟩ := nat_chain_stabilizes
-    (fun k => Module.finrank ℝ (krylovSub K k)) Fintype.card_pos
-    (one_le_finrank_krylov_zero K)
-    (fun k => Submodule.finrank_mono (krylovSub_mono K (Nat.le_succ k)))
-    (fun k => (krylovSub K k).finrank_le.trans_eq (Module.finrank_fintype_fun_eq_card ℝ))
-  have hstab : krylovSub K (k + 1) = krylovSub K k :=
-    (Submodule.eq_of_le_of_finrank_eq (krylovSub_mono K (Nat.le_succ k)) hk_dim.symm).symm
-  have hmem : survVec K w ∈ krylovSub K (Fintype.card S - 1) :=
-    krylovSub_mono K hk_le (survVec_mem_krylov_stabilized K hstab w)
+  have hmem0 : FiniteKrylov.wordVec K (fun _ => 1) w ∈
+      FiniteKrylov.krylovSub K (fun _ => 1) (Fintype.card S - 1) :=
+    FiniteKrylov.wordVec_mem_krylovSub_pred K (fun _ => 1) w
+  have hmem : survVec K w ∈ krylovSub K (Fintype.card S - 1) := by
+    rw [survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov]
+    exact hmem0
   refine Submodule.span_induction (p := fun v _ => v x = v y) ?_ rfl ?_ ?_ hmem
   · rintro _ ⟨u, hu, rfl⟩; exact hshort u hu
   · intro u v _ _ hu hv; simp [hu, hv]
   · intro c u _ hu; simp [hu]
+
+/-- Observable-horizon compression on `SurvivalDistinguishability.survVec`: under
+`FiniteKrylov.FiberLumpable f K`, indistinguishability reduces to word length `≤ Fintype.card O - 1`
+(substochastic weights carry survival probabilities; normalized kernels always satisfy `survVec = 1`). -/
+theorem survival_indistinguishable_iff_le_obs_pred {S O Mode : Type*}
+    [Fintype S] [Fintype O] (f : S → O) (K : Mode → S → S → ℝ)
+    (hK : FiniteKrylov.FiberLumpable f K) (x y : S) :
+    (∀ w : List Mode, survVec K w x = survVec K w y) ↔
+      (∀ w : List Mode, w.length ≤ Fintype.card O - 1 → survVec K w x = survVec K w y) := by
+  have h := FiniteKrylov.survival_indistinguishable_iff_le_obs_pred f K hK x y
+  simpa only [← survVec_eq_finiteKrylov] using h
 
 /-- One-mode countdown operator on `Fin (n + 1)`: `i < n` steps to `i + 1`, while `n` exits. -/
 noncomputable def countdownK (n : ℕ) : Unit → Fin (n + 1) → Fin (n + 1) → ℝ :=
@@ -121,7 +146,7 @@ theorem survVec_countdownK (n : ℕ) :
   | [], s => by simp [survVec, Nat.lt_succ_iff.mp s.isLt]
   | _ :: w, s => by
     rw [survVec_cons]
-    dsimp only [stepOp, LinearMap.coe_mk, AddHom.coe_mk, countdownK]
+    dsimp only [stepOp, FiniteKrylov.stepLinearMap, FiniteKrylov.stepOp, LinearMap.coe_mk, AddHom.coe_mk, countdownK]
     by_cases hs : s.val < n
     · let next : Fin (n + 1) := ⟨s.val + 1, Nat.succ_lt_succ hs⟩
       have hsum : (∑ s' : Fin (n + 1),
@@ -179,7 +204,7 @@ theorem survVec_switchK_false (k : ℕ) (s : Fin 3) :
   | zero => simp [survVec]
   | succ k ih =>
     rw [List.replicate_succ, survVec_cons]
-    dsimp only [stepOp, LinearMap.coe_mk, AddHom.coe_mk]
+    dsimp only [stepOp, FiniteKrylov.stepLinearMap, FiniteKrylov.stepOp, LinearMap.coe_mk, AddHom.coe_mk]
     fin_cases s <;> simp [switchK, ih]
 
 theorem survVec_switchK_true (k : ℕ) :
@@ -189,7 +214,7 @@ theorem survVec_switchK_true (k : ℕ) :
   | zero => simp [survVec]
   | succ k ih =>
     rw [List.replicate_succ, survVec_cons]
-    dsimp only [stepOp, LinearMap.coe_mk, AddHom.coe_mk]
+    dsimp only [stepOp, FiniteKrylov.stepLinearMap, FiniteKrylov.stepOp, LinearMap.coe_mk, AddHom.coe_mk]
     refine ⟨?_, ?_⟩ <;> simp [switchK, ih.1, ih.2]
 
 /-- **Negative Control (`three_state_mode_switch_counterexample`):**
@@ -240,7 +265,7 @@ theorem c2_coupled_survival_separation :
   intro finInPhase finAntiPhase
   have h1 : survVec c2Op [()] finInPhase = 1 := by
     rw [survVec_cons]
-    dsimp only [stepOp, LinearMap.coe_mk, AddHom.coe_mk, survVec]
+    dsimp only [stepOp, FiniteKrylov.stepLinearMap, FiniteKrylov.stepOp, LinearMap.coe_mk, AddHom.coe_mk, survVec]
     rw [Finset.sum_eq_single finInPhase]
     · simp [c2Op, c2Embed, finInPhase, Becoming.OplaxHistory.C2CoupledAlignmentWitness.stepFn]
     · intro b _ hne
@@ -256,7 +281,7 @@ theorem c2_coupled_survival_separation :
     · intro hmem; exact False.elim (hmem (Finset.mem_univ finInPhase))
   have h0 : survVec c2Op [()] finAntiPhase = 0 := by
     rw [survVec_cons]
-    dsimp only [stepOp, LinearMap.coe_mk, AddHom.coe_mk, survVec]
+    dsimp only [stepOp, FiniteKrylov.stepLinearMap, FiniteKrylov.stepOp, LinearMap.coe_mk, AddHom.coe_mk, survVec]
     refine Finset.sum_eq_zero fun b _ => ?_
     have hfalse : ¬ (finAntiPhase.2 = true ∧ b.2 = true ∧
         c2Embed b = Becoming.OplaxHistory.C2CoupledAlignmentWitness.stepFn
