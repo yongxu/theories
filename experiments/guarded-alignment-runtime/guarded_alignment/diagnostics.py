@@ -865,6 +865,10 @@ def evaluate_pipeline_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
         return _eval_fidelity_spec(spec)
     if kind == "coupled_alignment":
         return _eval_coupled_alignment_spec(spec)
+    if kind == "alignment_proposal":
+        from .proposal_audit import evaluate_alignment_proposal
+
+        return evaluate_alignment_proposal(spec)
     if kind == "suite":
         sub_reports = [evaluate_pipeline_spec(sub) for sub in spec.get("pipelines", ())]
         checks = tuple(

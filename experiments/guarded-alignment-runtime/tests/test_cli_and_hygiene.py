@@ -43,6 +43,12 @@ class TestCLIAndHygiene(unittest.TestCase):
             "guarded_bc_upgrade": Verdict.GUARDED,
             "strict_2d_3d_kernel": Verdict.OBSTRUCTED,
             "multi_query_separation": Verdict.OBSTRUCTED,
+            "proposal_rlhf_one_pass": Verdict.OBSTRUCTED,
+            "proposal_rlaif_self_refit": Verdict.OBSTRUCTED,
+            "proposal_constitutional_ai_closed": Verdict.OBSTRUCTED,
+            "proposal_scalable_oversight_lagged": Verdict.OBSTRUCTED,
+            "proposal_multi_agent_governance_unserialized": Verdict.OBSTRUCTED,
+            "proposal_guarded_open_alignment": Verdict.GUARDED,
         }
         specs = builtin_example_specs()
         self.assertEqual(set(specs.keys()), set(expected.keys()))

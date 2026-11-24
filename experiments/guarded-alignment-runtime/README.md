@@ -11,7 +11,8 @@ An executable reference runtime mirroring the verified Lean 4 core in `Becoming.
 | `guarded_alignment/double_kernel.py` | `Becoming.DoubleKernel` Parts 1–3 | `DoubleSig`, `TypedPath` (`nil` carries its object), 4-boundary `Frame`, 5-constructor `SqTerm`, unique boundary typing (`T1`), 10-rule `EqCert` (`T2`), additive `natTallyDoubleCat` separator (`Cor 4.0`), relative 3D `Double3Sig` / `Cell3Term` / `Eq3Cert` (`Lem 6`, `T9`), monotone-weight 3D irreversibility. |
 | `guarded_alignment/oplax_history.py` | `Becoming.OplaxHistory`, `Becoming.DoubleKernel` Part 4 | Finite `RelSpan`, `SpanHom`, `comp_span`, `coprod_span`, `SpanFunctor`, canonical `chi`, `FImageIsPullback`, universal fiberwise Beck–Chevalley check (`chi_bijective_iff_bc_all`) with empty-family vacuity warning, emergent (`0->1`, `2->4`) and `C2` (`2->1`, `2^n->1`) witnesses, and `GuardedExpr` / `GuardedProof` rejecting unguarded `ChiInv` without an explicit verified `BijCert`. |
 | `guarded_alignment/observational_fidelity.py` | `ObservationalFidelity` | Exact `fractions.Fraction` `FinDist`, pushforward, data-processing TV distance, `mass_outside` query TV blindness floor (`O1`/`G.1`) + attaining witness + empty-carrier infeasibility, coarsening (`G.2`) and macro-refinement monotonicity, exact rational Simplex multi-query separation (`G.3a`/`G.3b`), `Zero-TV` vs. `FiberViabilitySplit` warnings, and finite Markov kernel / contractive tube bounds (`G.4a`/`G.4b`). |
-| `guarded_alignment/diagnostics.py`, `examples.py`, `cli.py` | End-to-end DSL & CLI | Declarative JSON/dataclass specs (`strict_kernel`, `oplax_guard`, `observational_fidelity`, `coupled_alignment`, `suite`) emitting `PROVED` / `GUARDED` / `OBSTRUCTED` reports naming exact missing guards, witnesses, and Rule 2 boundaries. |
+| `guarded_alignment/diagnostics.py`, `examples.py`, `cli.py` | End-to-end DSL & CLI | Declarative JSON/dataclass specs (`strict_kernel`, `oplax_guard`, `observational_fidelity`, `coupled_alignment`, `alignment_proposal`, `suite`) emitting `PROVED` / `GUARDED` / `OBSTRUCTED` reports naming exact missing guards, witnesses, and Rule 2 boundaries. |
+| `guarded_alignment/proposal_audit.py` | `Selection`, `ClosedCapture`, `OplaxHistory`, `PacedStock`, `AdaptiveLoops`, `EndogenousOrder`, `ObservationalFidelity` | Five-test structural grammar for alignment proposals (`coupling_closure`, `self_refit_lock`, `fiber_split`, `pace_margin_deadline`, `concurrent_reserve`), with 6 worked proposal examples (RLHF, RLAIF, Constitutional AI, lagged scalable oversight, unserialized multi-agent governance, guarded open alignment). |
 
 ## Quickstart
 
@@ -27,6 +28,8 @@ python3 -m guarded_alignment list
 # Run a single alignment example (text or JSON)
 python3 -m guarded_alignment run rlhf_shared_substrate_c2
 python3 -m guarded_alignment run guarded_bc_upgrade --json
+python3 -m guarded_alignment run proposal_rlhf_one_pass
+python3 -m guarded_alignment run proposal_guarded_open_alignment --json
 
 # Run all built-in examples
 python3 -m guarded_alignment run all
