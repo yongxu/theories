@@ -1,0 +1,1033 @@
+@Becoming.EndogenousTurning.falls_or_bound_ge : ∀ {g d x : Nat → Nat} {Y H_min b : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    Becoming.RegimeMargin.AtMost g Y →
+      Becoming.RegimeMargin.FromNothing g →
+        Y ≤ H_min →
+          (∀ (t : Nat), H_min ≤ d t) →
+            0 < b → ∀ (n : Nat), (∃ k, k ≤ n ∧ x k < b) ∨ x n + (H_min - Y) * n ≤ x 0 ∧ b ≤ x n
+@Becoming.EndogenousTurning.falls_within_ge : ∀ {g d x : Nat → Nat} {Y H_min b : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    Becoming.RegimeMargin.AtMost g Y →
+      Becoming.RegimeMargin.FromNothing g →
+        Y ≤ H_min → (∀ (t : Nat), H_min ≤ d t) → 0 < b → ∀ (n : Nat), x 0 < b + (H_min - Y) * n → ∃ k, k ≤ n ∧ x k < b
+Becoming.EndogenousTurning.actualTake_le : ∀ (d x : Nat → Nat) (t : Nat),
+  Becoming.EndogenousTurning.actualTake d x t ≤ x t
+@Becoming.EndogenousTurning.clamped_balances_trap : ∀ {g d x : Nat → Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    ∀ (t : Nat),
+      (Becoming.StockFlowBridge.unitFlow (Becoming.EndogenousTurning.actualTake d x) fun k =>
+            g (x k - Becoming.EndogenousTurning.actualTake d x k)).BalancesOn
+        (Becoming.StockFlowBridge.unitWeb x) [()] t
+@Becoming.EndogenousTurning.pre_overdraw_flow_conservation : ∀ {g d x : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    (∀ (t : Nat), t < T → d t ≤ x t) →
+      x T + Becoming.total (Becoming.steps 0 T) d = x 0 + Becoming.total (Becoming.steps 0 T) fun t => g (x t - d t)
+@Becoming.EndogenousTurning.step_lt_of_short_ge : ∀ {g d x : Nat → Nat} {H_safe y_safe t : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    Becoming.RegimeMargin.Short g H_safe y_safe →
+      Becoming.RegimeMargin.FromNothing g →
+        H_safe ≤ d t →
+          x t < H_safe + y_safe →
+            g (x t - Becoming.EndogenousTurning.actualTake d x t) ≤ Becoming.EndogenousTurning.actualTake d x t ∧
+              (0 < x t → x (t + 1) < x t) ∧ (x t = 0 → x (t + 1) = 0)
+@Becoming.EndogenousTurning.short_stays_below_ge : ∀ {g d x : Nat → Nat} {H_safe y_safe T : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    Becoming.RegimeMargin.Short g H_safe y_safe →
+      Becoming.RegimeMargin.FromNothing g →
+        (∀ (t : Nat), T ≤ t → H_safe ≤ d t) →
+          x T < H_safe + y_safe →
+            (∀ (k : Nat), (Becoming.StockFlowBridge.unitWeb x).level (T + k) () < H_safe + y_safe) ∧
+              ∃ M, x M = 0 ∧ ∀ (j : Nat), x (M + j) = 0
+@Becoming.EndogenousTurning.gated_step_stays_below : ∀ {g d x : Nat → Nat} {m T : Nat},
+  (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (d t) (x t)) →
+    0 < m → Becoming.RegimeMargin.Gated g m → x T < m → ∀ (j : Nat), x (T + j) < m
+@Becoming.EndogenousTurning.safe_regime_step_viable : ∀ {g : Nat → Nat} {H_safe y_safe hi d x : Nat},
+  Becoming.RegimeMargin.Meets g H_safe y_safe hi →
+    Becoming.RegimeMargin.Keeps g 0 hi →
+      H_safe + y_safe + H_safe ≤ hi →
+        H_safe + y_safe ≤ x →
+          x ≤ hi →
+            d ≤ H_safe → H_safe + y_safe ≤ Becoming.RegimeMargin.step g d x ∧ Becoming.RegimeMargin.step g d x ≤ hi
+@Becoming.EndogenousTurning.flow_step_eq_regime : ∀ {g : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing g → ∀ (x d : Nat), x + g (x - d) - d = Becoming.RegimeMargin.step g d x
+@Becoming.EndogenousTurning.flow_proxy_optimum_collapse : ∀ {F C : Type} [DecidableEq F] [DecidableEq C]
+  (L : Becoming.Flow F C) (W : Becoming.Web F C) (part : F → Bool) (cap : F → C → Nat) (ds rest : List C)
+  (better : (C → Nat) → (C → Nat) → Prop),
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e c : C},
+          e ∈ ds →
+            c ∈ rest →
+              Becoming.Optimum.Rising ds better →
+                Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                  ∀ (g : Nat → Nat) {Y H_min H_safe y_safe m : Nat},
+                    (∀ (t : Nat),
+                        L.restGiven part t c = g (W.level t c - (L.restTaken part t c + L.capacity part cap t c))) →
+                      Becoming.RegimeMargin.AtMost g Y →
+                        Y < H_min →
+                          Becoming.RegimeMargin.Short g H_safe y_safe →
+                            H_safe ≤ H_min →
+                              Becoming.RegimeMargin.FromNothing g →
+                                0 < H_safe + y_safe →
+                                  (∀ (t : Nat), H_min ≤ L.restTaken part t c + L.capacity part cap t c) →
+                                    ∀ {f : F},
+                                      0 < m →
+                                        (∀ (t : Nat), W.requires t f c) →
+                                          (∀ (t : Nat), W.need t f c = m) →
+                                            m ≤ W.level 0 c →
+                                              ∀ (n : Nat),
+                                                W.level 0 c < H_safe + y_safe + (H_min - Y) * n →
+                                                  (∀ (t : Nat),
+                                                      W.level (t + 1) c =
+                                                        Becoming.RegimeMargin.step g
+                                                          (L.restTaken part t c + L.capacity part cap t c)
+                                                          (W.level t c)) ∧
+                                                    W.Lost c ∧
+                                                      ∃ T,
+                                                        T ≤ n ∧
+                                                          W.level T c < H_safe + y_safe ∧
+                                                            (∀ (k : Nat),
+                                                                (Becoming.StockFlowBridge.unitWeb fun t =>
+                                                                        W.level t c).level
+                                                                    (T + k) () <
+                                                                  H_safe + y_safe) ∧
+                                                              ∃ M, W.level M c = 0 ∧ ∀ (j : Nat), W.level (M + j) c = 0
+@Becoming.EndogenousTurning.flow_step_breaks_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t →
+          ∃ c, c ∈ rest ∧ W.Broken t (dep c) c
+@Becoming.EndogenousTurning.roomBelow_of_marginal_yield : ∀ {P C : Type} (ds : List C) (out : P → C → Nat)
+  (draw : P → Nat) (eligible : P → Prop) {H_min : Nat},
+  (∀ (p₁ p₂ : P), draw p₁ < draw p₂ → Becoming.Optimum.Exceeds ds (out p₂) (out p₁)) →
+    (∃ p_hi, eligible p_hi ∧ H_min ≤ draw p_hi) →
+      ∀ (p : P), eligible p → draw p < H_min → ∃ p', eligible p' ∧ Becoming.Optimum.Exceeds ds (out p') (out p)
+@Becoming.EndogenousTurning.optimum_forces_overdraw : ∀ {P C : Type} (ds : List C) (out : P → C → Nat) (draw : P → Nat)
+  (eligible : P → Prop) (better : (C → Nat) → (C → Nat) → Prop) {H_min : Nat},
+  Becoming.Optimum.Rising ds better →
+    (∀ (p : P), eligible p → draw p < H_min → ∃ p', eligible p' ∧ Becoming.Optimum.Exceeds ds (out p') (out p)) →
+      ∀ {p_star : P},
+        Becoming.Requirement.Frontier eligible (fun a b => better (out a) (out b)) p_star → H_min ≤ draw p_star
+@Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse : ∀ {P C : Type} (ds : List C) (out : P → C → Nat)
+  (draw : P → Nat) (eligible : P → Prop) (better : (C → Nat) → (C → Nat) → Prop) (g : Nat → Nat)
+  {Y H_min H_safe y_safe : Nat},
+  Becoming.Optimum.Rising ds better →
+    (∀ (p : P), eligible p → draw p < H_min → ∃ p', eligible p' ∧ Becoming.Optimum.Exceeds ds (out p') (out p)) →
+      Becoming.RegimeMargin.AtMost g Y →
+        Y < H_min →
+          Becoming.RegimeMargin.Short g H_safe y_safe →
+            H_safe ≤ H_min →
+              Becoming.RegimeMargin.FromNothing g →
+                0 < H_safe + y_safe →
+                  ∀ (pol : Nat → P),
+                    (∀ (t : Nat), Becoming.Requirement.Frontier eligible (fun a b => better (out a) (out b)) (pol t)) →
+                      ∀ {x : Nat → Nat},
+                        (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (draw (pol t)) (x t)) →
+                          ∀ (n : Nat),
+                            x 0 < H_safe + y_safe + (H_min - Y) * n →
+                              (∀ (t : Nat), H_min ≤ draw (pol t)) ∧
+                                ∃ T,
+                                  T ≤ n ∧
+                                    x T < H_safe + y_safe ∧
+                                      (∀ (k : Nat),
+                                          (Becoming.StockFlowBridge.unitWeb x).level (T + k) () < H_safe + y_safe) ∧
+                                        ∃ M, x M = 0 ∧ ∀ (j : Nat), x (M + j) = 0
+@Becoming.EndogenousTurning.constrained_selector_viable : ∀ {P : Type} (draw : P → Nat) (eligible : P → Prop)
+  (g : Nat → Nat) {H_safe y_safe hi : Nat},
+  Becoming.RegimeMargin.Meets g H_safe y_safe hi →
+    Becoming.RegimeMargin.Keeps g 0 hi →
+      H_safe + y_safe + H_safe ≤ hi →
+        ∀ (pol : Nat → P),
+          (∀ (t : Nat), eligible (pol t) ∧ draw (pol t) ≤ H_safe) →
+            ∀ {x : Nat → Nat},
+              (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (draw (pol t)) (x t)) →
+                H_safe + y_safe ≤ x 0 → x 0 ≤ hi → ∀ (t : Nat), H_safe + y_safe ≤ x t ∧ x t ≤ hi
+Becoming.EndogenousTurning.PartAWitness.wGivingCap_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.EndogenousTurning.PartAWitness.wGivingCap
+Becoming.EndogenousTurning.PartAWitness.wGivingCap_atMost : Becoming.RegimeMargin.AtMost
+  Becoming.EndogenousTurning.PartAWitness.wGivingCap 4
+Becoming.EndogenousTurning.PartAWitness.wGivingCap_short : Becoming.RegimeMargin.Short
+  Becoming.EndogenousTurning.PartAWitness.wGivingCap 4 5
+Becoming.EndogenousTurning.PartAWitness.wGivingCap_meets : Becoming.RegimeMargin.Meets
+  Becoming.EndogenousTurning.PartAWitness.wGivingCap 4 5 50
+Becoming.EndogenousTurning.PartAWitness.wGivingCap_keeps : Becoming.RegimeMargin.Keeps
+  Becoming.EndogenousTurning.PartAWitness.wGivingCap 0 50
+Becoming.EndogenousTurning.PartAWitness.extract_frontier : Becoming.Requirement.Frontier (fun x => True)
+  (fun a b =>
+    Becoming.total [true] (Becoming.EndogenousTurning.PartAWitness.out b) <
+      Becoming.total [true] (Becoming.EndogenousTurning.PartAWitness.out a))
+  Becoming.EndogenousTurning.PartAWitness.Policy.extract
+Becoming.EndogenousTurning.PartAWitness.marginal_yield : ∀ (p₁ p₂ : Becoming.EndogenousTurning.PartAWitness.Policy),
+  Becoming.EndogenousTurning.PartAWitness.draw p₁ < Becoming.EndogenousTurning.PartAWitness.draw p₂ →
+    Becoming.Optimum.Exceeds [true] (Becoming.EndogenousTurning.PartAWitness.out p₂)
+      (Becoming.EndogenousTurning.PartAWitness.out p₁)
+Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses : Becoming.EndogenousTurning.PartAWitness.unconstOrbit
+      0 =
+    18 ∧
+  Becoming.EndogenousTurning.PartAWitness.unconstOrbit 1 = 16 ∧
+    Becoming.EndogenousTurning.PartAWitness.unconstOrbit 2 = 14 ∧
+      Becoming.EndogenousTurning.PartAWitness.unconstOrbit 3 = 12 ∧
+        Becoming.EndogenousTurning.PartAWitness.unconstOrbit 4 = 10 ∧
+          Becoming.EndogenousTurning.PartAWitness.unconstOrbit 5 = 4 ∧
+            Becoming.EndogenousTurning.PartAWitness.unconstOrbit 6 = 0 ∧
+              ∃ T,
+                T ≤ 5 ∧
+                  Becoming.EndogenousTurning.PartAWitness.unconstOrbit T < 9 ∧
+                    (∀ (k : Nat),
+                        (Becoming.StockFlowBridge.unitWeb Becoming.EndogenousTurning.PartAWitness.unconstOrbit).level
+                            (T + k) () <
+                          9) ∧
+                      ∃ M,
+                        Becoming.EndogenousTurning.PartAWitness.unconstOrbit M = 0 ∧
+                          ∀ (j : Nat), Becoming.EndogenousTurning.PartAWitness.unconstOrbit (M + j) = 0
+Becoming.EndogenousTurning.PartAWitness.constrained_survives : (∀ (t : Nat),
+    Becoming.EndogenousTurning.PartAWitness.constOrbit t = 18) ∧
+  ∀ (t : Nat),
+    9 ≤ Becoming.EndogenousTurning.PartAWitness.constOrbit t ∧ Becoming.EndogenousTurning.PartAWitness.constOrbit t ≤ 50
+@Becoming.EndogenousTurning.ServiceTaskModel.demand_safe_le_B_task : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P), M.demand M.safe ≤ M.B_task
+@Becoming.EndogenousTurning.ServiceTaskModel.B_task_pos_of_upkeep_lt : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P), M.demand M.safe < M.B_task
+@Becoming.EndogenousTurning.ServiceTaskModel.B_task_le_demand_ext : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P), M.B_task ≤ M.demand M.ext
+@Becoming.EndogenousTurning.ServiceTaskModel.realizedScore_lt_iff : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (p₁ p₂ : P) (x₁ x₂ base : Nat),
+  M.upkeep p₁ ≤ base →
+    M.upkeep p₂ ≤ base →
+      (M.realizedScore p₁ x₁ base < M.realizedScore p₂ x₂ base ↔
+        M.gain * Becoming.CoreHelpers.natMin (M.demand p₁) x₁ + M.upkeep p₂ <
+          M.gain * Becoming.CoreHelpers.natMin (M.demand p₂) x₂ + M.upkeep p₁)
+@Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (x base : Nat),
+  (M.TaskPrefers x M.safe M.ext ↔ x < M.B_task) ∧
+    (M.upkeep M.ext ≤ base → (M.realizedScore M.ext x base < M.nominalSafe base ↔ x < M.B_task))
+@Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) {x : Nat}, M.B_task ≤ x → ¬M.TaskPrefers x M.safe M.ext
+@Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) {x : Nat}, M.B_task < x → M.TaskPrefers x M.ext M.safe
+@Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_from_B_task_of_mod_ne : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) {x : Nat},
+  (M.upkeep M.ext - M.upkeep M.safe) % M.gain ≠ 0 → M.B_task ≤ x → M.TaskPrefers x M.ext M.safe
+@Becoming.EndogenousTurning.EndogenousSystem.timely_turning_certificate : ∀ {S Obs : Type}
+  (sys : Becoming.EndogenousTurning.EndogenousSystem S Obs) (K : S → Prop) (eta : S → Nat) (taskDegrades : Obs → Prop)
+  {B_task H_safe y_safe drawCeiling lag hi : Nat},
+  (∀ (s : S) (o : Obs), K s → K (sys.next s o)) →
+    (∀ (s : S), K s → eta s ≤ lag) →
+      (∀ (s : S), K s → sys.draw s ≤ drawCeiling) →
+        (∀ (s : S), K s → eta s = 0 → sys.draw s ≤ H_safe) →
+          (∀ (s : S) (x : Nat), K s → x < B_task → taskDegrades (sys.obs s x)) →
+            (∀ (s : S) (o : Obs), K s → taskDegrades o → 0 < eta s → eta (sys.next s o) < eta s) →
+              (∀ (s : S) (o : Obs), K s → taskDegrades o → eta s = 0 → eta (sys.next s o) = 0) →
+                Becoming.RegimeMargin.Meets sys.g H_safe y_safe hi →
+                  Becoming.RegimeMargin.Keeps sys.g 0 hi →
+                    H_safe + y_safe + H_safe ≤ hi →
+                      H_safe + y_safe + drawCeiling * (lag + 1) ≤ B_task →
+                        Becoming.Viability.Certificate (Becoming.Law.process sys.step)
+                          (fun st => H_safe + y_safe ≤ st.fst ∧ st.fst ≤ hi ∧ K st.snd)
+                          (Becoming.EndogenousTurning.turningInv K eta H_safe y_safe drawCeiling hi)
+@Becoming.EndogenousTurning.EndogenousSystem.timely_turning_kernel : ∀ {S Obs : Type}
+  (sys : Becoming.EndogenousTurning.EndogenousSystem S Obs) (K : S → Prop) (eta : S → Nat) (taskDegrades : Obs → Prop)
+  {B_task H_safe y_safe drawCeiling lag hi : Nat} (init : S) (x₀ : Nat),
+  K init →
+    (∀ (s : S) (o : Obs), K s → K (sys.next s o)) →
+      (∀ (s : S), K s → eta s ≤ lag) →
+        (∀ (s : S), K s → sys.draw s ≤ drawCeiling) →
+          (∀ (s : S), K s → eta s = 0 → sys.draw s ≤ H_safe) →
+            (∀ (s : S) (x : Nat), K s → x < B_task → taskDegrades (sys.obs s x)) →
+              (∀ (s : S) (o : Obs), K s → taskDegrades o → 0 < eta s → eta (sys.next s o) < eta s) →
+                (∀ (s : S) (o : Obs), K s → taskDegrades o → eta s = 0 → eta (sys.next s o) = 0) →
+                  Becoming.RegimeMargin.Meets sys.g H_safe y_safe hi →
+                    Becoming.RegimeMargin.Keeps sys.g 0 hi →
+                      H_safe + y_safe + H_safe ≤ hi →
+                        H_safe + y_safe + drawCeiling * (lag + 1) ≤ B_task →
+                          H_safe + y_safe + eta init * drawCeiling ≤ x₀ →
+                            x₀ ≤ hi →
+                              Becoming.Viability.Kernel (Becoming.Law.process sys.step)
+                                  (fun st => H_safe + y_safe ≤ st.fst ∧ st.fst ≤ hi ∧ K st.snd) (x₀, init) ∧
+                                ∀ (t : Nat),
+                                  H_safe + y_safe ≤ (Becoming.Law.orbit sys.step (x₀, init) t).fst ∧
+                                    (Becoming.Law.orbit sys.step (x₀, init) t).fst ≤ hi
+@Becoming.EndogenousTurning.EndogenousSystem.timely_turning_guarantee : ∀ {S Obs : Type}
+  (sys : Becoming.EndogenousTurning.EndogenousSystem S Obs) (K : S → Prop) (eta : S → Nat) (taskDegrades : Obs → Prop)
+  {B_task H_safe y_safe drawCeiling lag hi : Nat} (init : S) (x₀ : Nat),
+  K init →
+    (∀ (s : S) (o : Obs), K s → K (sys.next s o)) →
+      (∀ (s : S), K s → eta s ≤ lag) →
+        (∀ (s : S), K s → sys.draw s ≤ drawCeiling) →
+          (∀ (s : S), K s → eta s = 0 → sys.draw s ≤ H_safe) →
+            (∀ (s : S) (x : Nat), K s → x < B_task → taskDegrades (sys.obs s x)) →
+              (∀ (s : S) (o : Obs), K s → taskDegrades o → 0 < eta s → eta (sys.next s o) < eta s) →
+                (∀ (s : S) (o : Obs), K s → taskDegrades o → eta s = 0 → eta (sys.next s o) = 0) →
+                  Becoming.RegimeMargin.Meets sys.g H_safe y_safe hi →
+                    Becoming.RegimeMargin.Keeps sys.g 0 hi →
+                      H_safe + y_safe + H_safe ≤ hi →
+                        H_safe + y_safe + drawCeiling * (lag + 1) ≤ B_task →
+                          H_safe + y_safe + eta init * drawCeiling ≤ x₀ →
+                            x₀ ≤ hi →
+                              ∀ (T₀ : Nat),
+                                (∀ (k : Nat),
+                                    k < lag → (Becoming.Law.orbit sys.step (x₀, init) (T₀ + k)).fst < B_task) →
+                                  eta (Becoming.Law.orbit sys.step (x₀, init) (T₀ + lag)).snd = 0 ∧
+                                    sys.draw (Becoming.Law.orbit sys.step (x₀, init) (T₀ + lag)).snd ≤ H_safe ∧
+                                      H_safe + y_safe ≤ (Becoming.Law.orbit sys.step (x₀, init) (T₀ + lag)).fst
+@Becoming.EndogenousTurning.endogenous_turning_kernel : ∀ {S Obs : Type}
+  (sys : Becoming.EndogenousTurning.EndogenousSystem S Obs) (K : S → Prop) (eta : S → Nat) (taskDegrades : Obs → Prop)
+  {B_task H_safe y_safe drawCeiling lag hi : Nat} (init : S) (x₀ : Nat),
+  K init →
+    (∀ (s : S) (o : Obs), K s → K (sys.next s o)) →
+      (∀ (s : S), K s → eta s ≤ lag) →
+        (∀ (s : S), K s → sys.draw s ≤ drawCeiling) →
+          (∀ (s : S), K s → eta s = 0 → sys.draw s ≤ H_safe) →
+            (∀ (s : S) (x : Nat), K s → x < B_task → taskDegrades (sys.obs s x)) →
+              (∀ (s : S) (o : Obs), K s → taskDegrades o → 0 < eta s → eta (sys.next s o) < eta s) →
+                (∀ (s : S) (o : Obs), K s → taskDegrades o → eta s = 0 → eta (sys.next s o) = 0) →
+                  Becoming.RegimeMargin.Meets sys.g H_safe y_safe hi →
+                    Becoming.RegimeMargin.Keeps sys.g 0 hi →
+                      H_safe + y_safe + H_safe ≤ hi →
+                        H_safe + y_safe + drawCeiling * (lag + 1) ≤ B_task →
+                          H_safe + y_safe + eta init * drawCeiling ≤ x₀ →
+                            x₀ ≤ hi →
+                              Becoming.Viability.Kernel (Becoming.Law.process sys.step)
+                                  (fun st => H_safe + y_safe ≤ st.fst ∧ st.fst ≤ hi ∧ K st.snd) (x₀, init) ∧
+                                ∀ (t : Nat),
+                                  H_safe + y_safe ≤ (Becoming.Law.orbit sys.step (x₀, init) t).fst ∧
+                                    (Becoming.Law.orbit sys.step (x₀, init) t).fst ≤ hi
+@Becoming.EndogenousTurning.ofServiceTask_viable : ∀ {P : Type} (M : Becoming.EndogenousTurning.ServiceTaskModel P)
+  (g : Nat → Nat) {base H_safe y_safe lag hi : Nat} (x₀ : Nat) (init : Bool × Nat),
+  M.upkeep M.ext ≤ base →
+    Becoming.EndogenousTurning.serviceK lag init →
+      M.draw M.safe ≤ H_safe →
+        Becoming.RegimeMargin.Meets g H_safe y_safe hi →
+          Becoming.RegimeMargin.Keeps g 0 hi →
+            H_safe + y_safe + H_safe ≤ hi →
+              H_safe + y_safe + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) * (lag + 1) ≤ M.B_task →
+                H_safe + y_safe + init.snd * Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) ≤ x₀ →
+                  x₀ ≤ hi →
+                    Becoming.Viability.Kernel
+                        (Becoming.Law.process (Becoming.EndogenousTurning.EndogenousSystem.ofServiceTask M g base).step)
+                        (fun st =>
+                          H_safe + y_safe ≤ st.fst ∧ st.fst ≤ hi ∧ Becoming.EndogenousTurning.serviceK lag st.snd)
+                        (x₀, init) ∧
+                      ∀ (t : Nat),
+                        H_safe + y_safe ≤
+                            (Becoming.Law.orbit
+                                (Becoming.EndogenousTurning.EndogenousSystem.ofServiceTask M g base).step (x₀, init)
+                                t).fst ∧
+                          (Becoming.Law.orbit (Becoming.EndogenousTurning.EndogenousSystem.ofServiceTask M g base).step
+                                (x₀, init) t).fst ≤
+                            hi
+@Becoming.EndogenousTurning.pooled_service_turning_viable : ∀ {α Env : Type} {S Obs Dist : α → Type} {P : Type}
+  (agents : List α) (L : (i : α) → Becoming.AdaptiveLoops.OpenLoop (S i) (Obs i) (Dist i) Unit) (init : (i : α) → S i)
+  (certs : (i : α) → Becoming.AdaptiveLoops.LoopCertificate (L i) (init i)) (obs : (i : α) → (Unit → Nat) → Obs i)
+  (channel : (α → Bool) → (α → Nat) → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+  (envCap : Unit → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → envDraw env () ≤ envCap ()) →
+    ∀ (x_crit H_safe x₀ : Unit → Nat) (partner : α),
+      partner ∈ agents →
+        ∀ (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+          M.upkeep M.ext ≤ base →
+            (∀ (x : Unit → Nat),
+                M.realizedScore M.ext (x ()) base < M.nominalSafe base → (certs partner).warnObs (obs partner x)) →
+              (∀ (emit : α → Bool) (load : α → Nat) (env : Env),
+                  jointAdm env →
+                    (∃ i, i ∈ agents ∧ emit i = true ∧ load i ≤ (certs i).maxSilence) →
+                      (∀ (i : α), i ∈ agents → load i ≤ (certs i).maxSilence) → channel emit load env = true) →
+                Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+                  x_crit () ≤
+                      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit () →
+                    Becoming.AdaptiveLoops.sumDraws agents (fun i => (certs i).postBudget) () + envCap () ≤ H_safe () →
+                      x_crit () +
+                            (Becoming.AdaptiveLoops.globalMaxLag agents certs + 1) *
+                              Becoming.AdaptiveLoops.preTotal agents certs envCap () ≤
+                          M.B_task →
+                        x_crit () +
+                              Becoming.AdaptiveLoops.maxEta agents certs init *
+                                Becoming.AdaptiveLoops.preTotal agents certs envCap () ≤
+                            x₀ () →
+                          Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit (x₀, init) ∧
+                            Becoming.Viability.Certificate
+                                (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw jointAdm)
+                                (Becoming.AdaptiveLoops.jointGuard agents L certs x_crit)
+                                (Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit) ∧
+                              ∀
+                                (r :
+                                  Becoming.Run
+                                    (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw
+                                      jointAdm)),
+                                r.state 0 = (x₀, init) → ∀ (t : Nat), x_crit () ≤ (r.state t).fst ()
+@Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre)
+      (init :
+        (i : Becoming.EndogenousTurning.PooledClearing.PooledAgent) →
+          Becoming.EndogenousTurning.PooledClearing.PooledState i)
+      (initProxy : init Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent ≤ lagProxy)
+      (initPartner :
+        Becoming.EndogenousTurning.serviceK lagPartner
+          (init Becoming.EndogenousTurning.PooledClearing.PooledAgent.taskPartner))
+      (G : Unit → (Unit → Nat) → Nat) (x_crit H_safe x₀ : Unit → Nat),
+      Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+        x_crit () ≤ Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit () →
+          hProxySafe + (M.draw M.safe + 0) ≤ H_safe () →
+            x_crit () +
+                  (Becoming.AdaptiveLoops.globalMaxLag Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                        (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy
+                          lagPartner safe_le init initProxy initPartner) +
+                      1) *
+                    Becoming.AdaptiveLoops.preTotal Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                      (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy
+                        lagPartner safe_le init initProxy initPartner)
+                      (fun x => 0) () ≤
+                M.B_task →
+              x_crit () +
+                    Becoming.AdaptiveLoops.maxEta Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                        (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy
+                          lagPartner safe_le init initProxy initPartner)
+                        init *
+                      Becoming.AdaptiveLoops.preTotal Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                        (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy
+                          lagPartner safe_le init initProxy initPartner)
+                        (fun x => 0) () ≤
+                  x₀ () →
+                ∀
+                  (r :
+                    Becoming.Run
+                      (Becoming.AdaptiveLoops.jointProcess Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                        (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop M base hProxyPre hProxySafe)
+                        (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy
+                          lagPartner safe_le init initProxy initPartner)
+                        (Becoming.EndogenousTurning.PooledClearing.pooledObs M base)
+                        Becoming.EndogenousTurning.PooledClearing.pooledChannel G (fun x x_1 => 0) fun x => True)),
+                  r.state 0 = (x₀, init) → ∀ (t : Nat), x_crit () ≤ (r.state t).fst ()
+@Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base hProxyPre hProxySafe lagProxy lagPartner : Nat)
+  (safe_le : hProxySafe ≤ hProxyPre)
+  (init :
+    (i : Becoming.EndogenousTurning.PooledClearing.PooledAgent) →
+      Becoming.EndogenousTurning.PooledClearing.PooledState i)
+  (initProxy : init Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent ≤ lagProxy)
+  (initPartner :
+    Becoming.EndogenousTurning.serviceK lagPartner
+      (init Becoming.EndogenousTurning.PooledClearing.PooledAgent.taskPartner))
+  (g : Nat → Nat)
+  (r1 r2 :
+    Becoming.Run
+      (Becoming.AdaptiveLoops.jointProcess Becoming.EndogenousTurning.PooledClearing.pooledAgents
+        (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop M base hProxyPre hProxySafe)
+        (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy lagPartner safe_le
+          init initProxy initPartner)
+        (Becoming.EndogenousTurning.PooledClearing.pooledObs M base) (fun x x_1 x_2 => false) (fun x e => g (e ()))
+        (fun x x_1 => 0) fun x => True))
+  {x₀ x_big : Unit → Nat},
+  r1.state 0 = (x₀, init) →
+    r2.state 0 = (x_big, init) →
+      0 < init Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent →
+        ∀ {Y H_safe y_safe : Nat},
+          Becoming.RegimeMargin.AtMost g Y →
+            Y < hProxyPre →
+              Becoming.RegimeMargin.Short g H_safe y_safe →
+                H_safe ≤ hProxyPre →
+                  Becoming.RegimeMargin.FromNothing g →
+                    0 < H_safe + y_safe →
+                      ∀ (n : Nat),
+                        x₀ () < H_safe + y_safe + (hProxyPre - Y) * n →
+                          (∀ (t : Nat),
+                              (r1.state t).snd Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent =
+                                  init Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent ∧
+                                (r2.state t).snd Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent =
+                                    init Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent ∧
+                                  (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop M base hProxyPre hProxySafe
+                                          Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent).draw
+                                      ((r1.state t).snd
+                                        Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent)
+                                      () =
+                                    hProxyPre) ∧
+                            ∃ T,
+                              T ≤ n ∧
+                                (r1.state T).fst () < H_safe + y_safe ∧
+                                  (∀ (k : Nat),
+                                      (Becoming.StockFlowBridge.unitWeb fun t => (r1.state t).fst ()).level (T + k) () <
+                                        H_safe + y_safe) ∧
+                                    ∃ M₀, (r1.state M₀).fst () = 0 ∧ ∀ (j : Nat), (r1.state (M₀ + j)).fst () = 0
+Becoming.EndogenousTurning.PooledClearing.clearing_pooled_contrast : Becoming.Clearing.web.SelectsThroughAll
+    Becoming.thresholdOnly Becoming.Clearing.clearerAndDweller 2 Becoming.Clearing.BothAdmitted ∧
+  ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.clearer 2
+        Becoming.Clearing.BothAdmitted ∧
+    ¬Becoming.Clearing.web.SelectsThrough Becoming.thresholdOnly Becoming.Clearing.Formation.dweller 2
+        Becoming.Clearing.BothAdmitted
+@Becoming.EndogenousTurning.epistemic_silence_late_bottleneck : ∀ {S Obs P : Type} (next : S → Obs → S)
+  (obs : S → Nat → Obs) (respond : S → Obs → P) (draw : P → Nat) (g : Nat → Nat) {B_task Y H_pre H_safe y_safe : Nat}
+  (K : S → Prop) (degrades : Obs → Prop) (init : S),
+  K init →
+    (∀ (s : S) (o : Obs), K s → K (next s o)) →
+      B_task ≤ H_safe + y_safe →
+        (∀ (s : S) (x : Nat), K s → B_task ≤ x → ¬degrades (obs s x)) →
+          (∀ (s : S) (o : Obs), K s → ¬degrades o → H_pre ≤ draw (respond s o)) →
+            Becoming.RegimeMargin.AtMost g Y →
+              Y < H_pre →
+                Becoming.RegimeMargin.Short g H_safe y_safe →
+                  Becoming.RegimeMargin.FromNothing g →
+                    0 < H_safe + y_safe →
+                      ∀ (x : Nat → Nat) (s : Nat → S),
+                        s 0 = init →
+                          (∀ (t : Nat), s (t + 1) = next (s t) (obs (s t) (x t))) →
+                            (∀ (t : Nat),
+                                x (t + 1) =
+                                  Becoming.RegimeMargin.step g (draw (respond (s t) (obs (s t) (x t)))) (x t)) →
+                              ∀ (n : Nat),
+                                x 0 < H_safe + y_safe + (H_pre - Y) * n →
+                                  (∀ (t : Nat),
+                                      H_safe + y_safe ≤ x t → H_pre ≤ draw (respond (s t) (obs (s t) (x t)))) ∧
+                                    ∃ T,
+                                      T ≤ n ∧
+                                        x T < H_safe + y_safe ∧
+                                          ((∀ (t : Nat), T ≤ t → H_safe ≤ draw (respond (s t) (obs (s t) (x t)))) →
+                                              (∀ (k : Nat),
+                                                  (Becoming.StockFlowBridge.unitWeb x).level (T + k) () <
+                                                    H_safe + y_safe) ∧
+                                                ∃ M, x M = 0 ∧ ∀ (j : Nat), x (M + j) = 0) ∧
+                                            (Becoming.RegimeMargin.Gated g (H_safe + y_safe) →
+                                              ∀ (k : Nat), x (T + k) < H_safe + y_safe)
+@Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced : ∀ {S P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (next : S → Nat → S) (respond : S → Nat → P) (draw : P → Nat) (g : Nat → Nat) {Y H_pre H_safe y_safe : Nat}
+      (K : S → Prop) (init : S),
+      K init →
+        (∀ (s : S) (sc : Nat), K s → K (next s sc)) →
+          M.demand M.ext ≤ H_safe + y_safe →
+            (∀ (s : S) (sc : Nat), K s → ¬sc < M.nominalSafe base → H_pre ≤ draw (respond s sc)) →
+              Becoming.RegimeMargin.AtMost g Y →
+                Y < H_pre →
+                  Becoming.RegimeMargin.Short g H_safe y_safe →
+                    Becoming.RegimeMargin.FromNothing g →
+                      0 < H_safe + y_safe →
+                        ∀ (x : Nat → Nat) (s : Nat → S),
+                          s 0 = init →
+                            (∀ (t : Nat), s (t + 1) = next (s t) (M.realizedScore M.ext (x t) base)) →
+                              (∀ (t : Nat),
+                                  x (t + 1) =
+                                    Becoming.RegimeMargin.step g
+                                      (draw (respond (s t) (M.realizedScore M.ext (x t) base))) (x t)) →
+                                ∀ (n : Nat),
+                                  x 0 < H_safe + y_safe + (H_pre - Y) * n →
+                                    (∀ (t : Nat),
+                                        H_safe + y_safe ≤ x t →
+                                          H_pre ≤ draw (respond (s t) (M.realizedScore M.ext (x t) base))) ∧
+                                      ∃ T,
+                                        T ≤ n ∧
+                                          x T < H_safe + y_safe ∧
+                                            ((∀ (t : Nat),
+                                                  T ≤ t →
+                                                    H_safe ≤ draw (respond (s t) (M.realizedScore M.ext (x t) base))) →
+                                                (∀ (k : Nat),
+                                                    (Becoming.StockFlowBridge.unitWeb x).level (T + k) () <
+                                                      H_safe + y_safe) ∧
+                                                  ∃ M₀, x M₀ = 0 ∧ ∀ (j : Nat), x (M₀ + j) = 0) ∧
+                                              (Becoming.RegimeMargin.Gated g (H_safe + y_safe) →
+                                                ∀ (k : Nat), x (T + k) < H_safe + y_safe)
+@Becoming.EndogenousTurning.epistemic_silence_masked_unread : ∀ {A R : Type} {f : A × Nat → R → A × Nat}
+  {h : A × Nat → R → R} (reads : Nat → Bool),
+  Becoming.ClosedCapture.Unread f h →
+    ∀ {gSub : Nat → Nat} (jointDraw : A → R → Nat),
+      (∀ (a : A) (x : Nat) (r : R), (f (a, x) r).snd = Becoming.RegimeMargin.step gSub (jointDraw a r) x) →
+        ∀ (a₀ : A) (r₀ : R) (x₀ x_big Y H_pre H_safe y_safe n : Nat),
+          (∀ (t : Nat),
+              H_pre ≤
+                jointDraw (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) t).fst.fst
+                  (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) t).snd) →
+            Becoming.RegimeMargin.AtMost gSub Y →
+              Y < H_pre →
+                Becoming.RegimeMargin.Short gSub H_safe y_safe →
+                  H_safe ≤ H_pre →
+                    Becoming.RegimeMargin.FromNothing gSub →
+                      0 < H_safe + y_safe →
+                        x₀ < H_safe + y_safe + (H_pre - Y) * n →
+                          (∀ (t : Nat),
+                              (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) t).fst.fst =
+                                  (Becoming.Pace.paced f h reads ((a₀, x_big), r₀) t).fst.fst ∧
+                                (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) t).snd =
+                                  (Becoming.Pace.paced f h reads ((a₀, x_big), r₀) t).snd) ∧
+                            ∃ T,
+                              T ≤ n ∧
+                                (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) T).fst.snd < H_safe + y_safe ∧
+                                  (∀ (k : Nat),
+                                      (Becoming.StockFlowBridge.unitWeb fun t =>
+                                              (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) t).fst.snd).level
+                                          (T + k) () <
+                                        H_safe + y_safe) ∧
+                                    ∃ M,
+                                      (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) M).fst.snd = 0 ∧
+                                        ∀ (j : Nat), (Becoming.Pace.paced f h reads ((a₀, x₀), r₀) (M + j)).fst.snd = 0
+@Becoming.EndogenousTurning.epistemic_silence_cascade : ∀ {O A P : Type} (T : Becoming.Turns Nat O A)
+  {k N Y H_pre H_safe y_safe : Nat},
+  T.ReadsOnlyActsFrom k →
+    (∀ (j : Nat), j < k → ∀ (x y : Nat), H_safe + y_safe ≤ x → H_safe + y_safe ≤ y → T.coupling j x = T.coupling j y) →
+      ∀ (sel : List A → P) (draw : P → Nat) (g : Nat → Nat) (x_big : Nat),
+        H_safe + y_safe ≤ x_big →
+          H_pre ≤ draw (sel (T.acts x_big N)) →
+            Becoming.RegimeMargin.AtMost g Y →
+              Y < H_pre →
+                Becoming.RegimeMargin.Short g H_safe y_safe →
+                  Becoming.RegimeMargin.FromNothing g →
+                    0 < H_safe + y_safe →
+                      ∀ (x : Nat → Nat),
+                        (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step g (draw (sel (T.acts (x t) N))) (x t)) →
+                          ∀ (n : Nat),
+                            x 0 < H_safe + y_safe + (H_pre - Y) * n →
+                              (∀ (lv : Nat),
+                                  H_safe + y_safe ≤ lv →
+                                    T.acts lv N = T.acts x_big N ∧ H_pre ≤ draw (sel (T.acts lv N))) ∧
+                                ∃ T₀,
+                                  T₀ ≤ n ∧
+                                    x T₀ < H_safe + y_safe ∧
+                                      ((∀ (t : Nat), T₀ ≤ t → H_safe ≤ draw (sel (T.acts (x t) N))) →
+                                          (∀ (m : Nat),
+                                              (Becoming.StockFlowBridge.unitWeb x).level (T₀ + m) () <
+                                                H_safe + y_safe) ∧
+                                            ∃ M, x M = 0 ∧ ∀ (j : Nat), x (M + j) = 0) ∧
+                                        (Becoming.RegimeMargin.Gated g (H_safe + y_safe) →
+                                          ∀ (m : Nat), x (T₀ + m) < H_safe + y_safe)
+@Becoming.EndogenousTurning.cascade_twin_free : ∀ {K V : Type} (π : Nat → K) (R : Nat → Prop) (x_low : Nat)
+  [(i : Nat) → Decidable (π i = π x_low)],
+  (∀ (d : Nat), R d → π d ≠ π x_low) →
+    ∀ {select : (Nat → V) → Prop},
+      Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn R) select →
+        ∀ {actLaw : Nat → V},
+          Becoming.Learning.Lumped π actLaw →
+            select actLaw →
+              ∀ (v_ext : V),
+                ∃ h,
+                  Becoming.Learning.Lumped π h ∧
+                    select h ∧ Becoming.Learning.Training.AgreeOn R h actLaw ∧ h x_low = v_ext
+Becoming.EndogenousTurning.TurningWitness.timelyModel_B_task : Becoming.EndogenousTurning.TurningWitness.timelyModel.B_task =
+  22
+Becoming.EndogenousTurning.TurningWitness.lateModel_B_task : Becoming.EndogenousTurning.TurningWitness.lateModel.B_task =
+  8
+Becoming.EndogenousTurning.TurningWitness.timely_survives : Becoming.EndogenousTurning.TurningWitness.timelyModel.B_task =
+    22 ∧
+  (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 0).fst = 27 ∧
+    (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 1).fst = 25 ∧
+      (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 2).fst = 23 ∧
+        (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 3).fst = 21 ∧
+          (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 4).fst = 19 ∧
+            (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 5).fst = 19 ∧
+              (Becoming.EndogenousTurning.TurningWitness.timelyOrbit 4).snd = (false, 0) ∧
+                Becoming.Viability.Kernel
+                    (Becoming.Law.process Becoming.EndogenousTurning.TurningWitness.timelySys.step)
+                    (fun st => 9 ≤ st.fst ∧ st.fst ≤ 50 ∧ Becoming.EndogenousTurning.serviceK 1 st.snd) (27, true, 1) ∧
+                  ∀ (t : Nat),
+                    9 ≤ (Becoming.EndogenousTurning.TurningWitness.timelyOrbit t).fst ∧
+                      (Becoming.EndogenousTurning.TurningWitness.timelyOrbit t).fst ≤ 50
+Becoming.EndogenousTurning.TurningWitness.late_step_eq : ∀ (t : Nat),
+  Becoming.EndogenousTurning.TurningWitness.lateOrbit (t + 1) =
+    Becoming.RegimeMargin.step Becoming.EndogenousTurning.TurningWitness.wGivingCap
+      (Becoming.EndogenousTurning.TurningWitness.turnDraw
+        (Becoming.EndogenousTurning.TurningWitness.lateRespond ()
+          (Becoming.EndogenousTurning.TurningWitness.lateModel.realizedScore
+            Becoming.EndogenousTurning.TurningWitness.TurnPolicy.ext
+            (Becoming.EndogenousTurning.TurningWitness.lateOrbit t) 20)))
+      (Becoming.EndogenousTurning.TurningWitness.lateOrbit t)
+Becoming.EndogenousTurning.TurningWitness.late_collapses : Becoming.EndogenousTurning.TurningWitness.lateModel.B_task =
+    8 ∧
+  Becoming.EndogenousTurning.TurningWitness.lateOrbit 0 = 27 ∧
+    Becoming.EndogenousTurning.TurningWitness.lateOrbit 1 = 25 ∧
+      Becoming.EndogenousTurning.TurningWitness.lateOrbit 2 = 23 ∧
+        Becoming.EndogenousTurning.TurningWitness.lateOrbit 3 = 21 ∧
+          Becoming.EndogenousTurning.TurningWitness.lateOrbit 4 = 19 ∧
+            Becoming.EndogenousTurning.TurningWitness.lateOrbit 5 = 17 ∧
+              Becoming.EndogenousTurning.TurningWitness.lateOrbit 6 = 15 ∧
+                Becoming.EndogenousTurning.TurningWitness.lateOrbit 7 = 13 ∧
+                  Becoming.EndogenousTurning.TurningWitness.lateOrbit 8 = 11 ∧
+                    Becoming.EndogenousTurning.TurningWitness.lateOrbit 9 = 9 ∧
+                      Becoming.EndogenousTurning.TurningWitness.lateOrbit 10 = 3 ∧
+                        Becoming.EndogenousTurning.TurningWitness.lateOrbit 11 = 0 ∧
+                          (∃ T,
+                              T ≤ 10 ∧
+                                Becoming.EndogenousTurning.TurningWitness.lateOrbit T < 9 ∧
+                                  (∀ (k : Nat),
+                                      (Becoming.StockFlowBridge.unitWeb
+                                              Becoming.EndogenousTurning.TurningWitness.lateOrbit).level
+                                          (T + k) () <
+                                        9) ∧
+                                    ∃ M,
+                                      Becoming.EndogenousTurning.TurningWitness.lateOrbit M = 0 ∧
+                                        ∀ (j : Nat), Becoming.EndogenousTurning.TurningWitness.lateOrbit (M + j) = 0) ∧
+                            ∀ (S : Type) (next : S → Nat → S)
+                              (respond : S → Nat → Becoming.EndogenousTurning.TurningWitness.TurnPolicy) (K : S → Prop)
+                              (init : S) (x : Nat → Nat) (s : Nat → S),
+                              K init →
+                                (∀ (st : S) (sc : Nat), K st → K (next st sc)) →
+                                  (∀ (st : S) (sc : Nat),
+                                      K st →
+                                        ¬sc < Becoming.EndogenousTurning.TurningWitness.lateModel.nominalSafe 20 →
+                                          6 ≤ Becoming.EndogenousTurning.TurningWitness.turnDraw (respond st sc)) →
+                                    s 0 = init →
+                                      (∀ (t : Nat),
+                                          s (t + 1) =
+                                            next (s t)
+                                              (Becoming.EndogenousTurning.TurningWitness.lateModel.realizedScore
+                                                Becoming.EndogenousTurning.TurningWitness.TurnPolicy.ext (x t) 20)) →
+                                        (∀ (t : Nat),
+                                            x (t + 1) =
+                                              Becoming.RegimeMargin.step
+                                                Becoming.EndogenousTurning.TurningWitness.wGivingCap
+                                                (Becoming.EndogenousTurning.TurningWitness.turnDraw
+                                                  (respond (s t)
+                                                    (Becoming.EndogenousTurning.TurningWitness.lateModel.realizedScore
+                                                      Becoming.EndogenousTurning.TurningWitness.TurnPolicy.ext (x t)
+                                                      20)))
+                                                (x t)) →
+                                          x 0 = 27 →
+                                            ∃ T,
+                                              T ≤ 10 ∧
+                                                x T < 9 ∧
+                                                  ((∀ (t : Nat),
+                                                      T ≤ t →
+                                                        4 ≤
+                                                          Becoming.EndogenousTurning.TurningWitness.turnDraw
+                                                            (respond (s t)
+                                                              (Becoming.EndogenousTurning.TurningWitness.lateModel.realizedScore
+                                                                Becoming.EndogenousTurning.TurningWitness.TurnPolicy.ext
+                                                                (x t) 20))) →
+                                                    (∀ (k : Nat),
+                                                        (Becoming.StockFlowBridge.unitWeb x).level (T + k) () < 9) ∧
+                                                      ∃ M, x M = 0 ∧ ∀ (j : Nat), x (M + j) = 0)
+Becoming.EndogenousTurning.TurningWitness.cascade_step_eq : ∀ (t : Nat),
+  Becoming.EndogenousTurning.TurningWitness.cascadeOrbit (t + 1) =
+    Becoming.RegimeMargin.step Becoming.EndogenousTurning.TurningWitness.wGivingCap
+      (Becoming.EndogenousTurning.TurningWitness.turnDraw
+        (Becoming.EndogenousTurning.TurningWitness.cascadeSel
+          (Becoming.EndogenousTurning.TurningWitness.cascadeTurns.acts
+            (Becoming.EndogenousTurning.TurningWitness.cascadeOrbit t) 3)))
+      (Becoming.EndogenousTurning.TurningWitness.cascadeOrbit t)
+Becoming.EndogenousTurning.TurningWitness.cascade_collapses : Becoming.EndogenousTurning.TurningWitness.timelyModel.B_task =
+    22 ∧
+  (∀ (x : Nat), 9 ≤ x → Becoming.EndogenousTurning.TurningWitness.cascadeTurns.acts x 3 = [40, 40, 40]) ∧
+    Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 0 = 27 ∧
+      Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 1 = 25 ∧
+        Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 2 = 23 ∧
+          Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 3 = 21 ∧
+            Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 4 = 19 ∧
+              Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 5 = 17 ∧
+                Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 6 = 15 ∧
+                  Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 7 = 13 ∧
+                    Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 8 = 11 ∧
+                      Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 9 = 9 ∧
+                        Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 10 = 3 ∧
+                          Becoming.EndogenousTurning.TurningWitness.cascadeOrbit 11 = 0 ∧
+                            ∃ T₀,
+                              T₀ ≤ 10 ∧
+                                Becoming.EndogenousTurning.TurningWitness.cascadeOrbit T₀ < 9 ∧
+                                  (∀ (m : Nat),
+                                      (Becoming.StockFlowBridge.unitWeb
+                                              Becoming.EndogenousTurning.TurningWitness.cascadeOrbit).level
+                                          (T₀ + m) () <
+                                        9) ∧
+                                    ∃ M,
+                                      Becoming.EndogenousTurning.TurningWitness.cascadeOrbit M = 0 ∧
+                                        ∀ (j : Nat), Becoming.EndogenousTurning.TurningWitness.cascadeOrbit (M + j) = 0
+@Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable : ∀ {P Env : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy) (initPartner : Bool × Nat)
+      (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner) (channel : Bool → Nat → Env → Bool)
+      (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat) (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat),
+          (∀ (load : Nat) (env : Env), jointAdm env → load ≤ 0 → channel true load env = true) →
+            (∀ (k : Unit), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+              (∀ (k : Unit),
+                  x_crit k ≤
+                    Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+                hProxySafe + M.draw M.safe + envCap () ≤ H_safe () →
+                  x_crit () +
+                        (Becoming.AdaptiveLoops.natMax lagProxy lagPartner + 1) *
+                          (hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) + envCap ()) ≤
+                      M.B_task →
+                    x_crit () +
+                          Becoming.AdaptiveLoops.natMax initProxy initPartner.snd *
+                            (hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe) + envCap ()) ≤
+                        x₀ () →
+                      Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess
+                          ((Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent hProxyPre
+                                hProxySafe).compose
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent M base))
+                          (Becoming.OpenComposition.composeContract
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract hProxyPre hProxySafe
+                              lagProxy safe_le initProxy hInitProxy)
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract M base lagPartner
+                              initPartner hInitPartner))
+                          (fun x => ((), M.realizedScore M.ext (x ()) base)) channel G envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard
+                          ((Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent hProxyPre
+                                hProxySafe).compose
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent M base))
+                          (Becoming.OpenComposition.composeContract
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract hProxyPre hProxySafe
+                              lagProxy safe_le initProxy hInitProxy)
+                            (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract M base lagPartner
+                              initPartner hInitPartner))
+                          x_crit)
+                        (x₀, initProxy, initPartner)
+@Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable : ∀
+  {P₁ S₁' Obs₁' Dist₁' Int₁' Env : Type} (M₁ : Becoming.EndogenousTurning.ServiceTaskModel P₁) (base₁ : Nat),
+  M₁.upkeep M₁.ext ≤ base₁ →
+    ∀ (lag₁ : Nat) (init₁ : Bool × Nat) (hInit₁ : Becoming.EndogenousTurning.serviceK lag₁ init₁)
+      (A' : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Unit) {init₁' : S₁'}
+      (cA' : Becoming.OpenComposition.InterfaceContract A' init₁') (obs₁' : (Unit → Nat) → Obs₁')
+      (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit H_safe x₀ : Unit → Nat),
+          cA'.preCapExt () ≤ Becoming.AdaptiveLoops.natMax (M₁.draw M₁.ext) (M₁.draw M₁.safe) →
+            cA'.postBudgetExt () ≤ M₁.draw M₁.safe →
+              cA'.maxSilence ≤ 0 →
+                cA'.maxLag ≤ lag₁ →
+                  (∀ (x : Unit → Nat), x () < M₁.B_task → cA'.warnObs (obs₁' x)) →
+                    (∀ (load : Nat) (env : Env), jointAdm env → load ≤ 0 → channel true load env = true) →
+                      (∀ (k : Unit),
+                          Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+                        (∀ (k : Unit),
+                            x_crit k ≤
+                              Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                                x_crit k) →
+                          M₁.draw M₁.safe + envCap () ≤ H_safe () →
+                            x_crit () +
+                                  (lag₁ + 1) *
+                                    (Becoming.AdaptiveLoops.natMax (M₁.draw M₁.ext) (M₁.draw M₁.safe) + envCap ()) ≤
+                                M₁.B_task →
+                              x_crit () +
+                                    init₁.snd *
+                                      (Becoming.AdaptiveLoops.natMax (M₁.draw M₁.ext) (M₁.draw M₁.safe) + envCap ()) ≤
+                                  x₀ () →
+                                Becoming.Viability.Kernel
+                                  (Becoming.OpenComposition.ReconfigProcess
+                                    (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent M₁ base₁) A'
+                                    (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract M₁ base₁ lag₁
+                                      init₁ hInit₁)
+                                    cA' (fun x => M₁.realizedScore M₁.ext (x ()) base₁) obs₁' channel G envDraw
+                                    jointAdm)
+                                  (fun st =>
+                                    match st with
+                                    | Sum.inl st₁ =>
+                                      Becoming.OpenComposition.closedGuard
+                                        (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent M₁ base₁)
+                                        (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract M₁ base₁
+                                          lag₁ init₁ hInit₁)
+                                        x_crit st₁
+                                    | Sum.inr st₂ => Becoming.OpenComposition.closedGuard A' cA' x_crit st₂)
+                                  (Sum.inl (x₀, init₁))
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_rises : ∀ (x : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole fun e =>
+    Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap (e ())
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_atMost : Becoming.RegimeMargin.AtMost
+  Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap 4
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_short : Becoming.RegimeMargin.Short
+  Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap 4 5
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel_B_task : Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel.B_task =
+  23
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState_inr : ∀ (k : Nat),
+  ∃ st₂, Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState (k + 3) = Sum.inr st₂
+Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable : Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.upgradedModel.B_task =
+    23 ∧
+  Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 0 = 27 ∧
+    Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 1 = 25 ∧
+      Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 2 = 23 ∧
+        Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 3 = 23 ∧
+          Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 4 = 22 ∧
+            Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel 5 = 21 ∧
+              (∃ st₁,
+                  Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState 2 = Sum.inl st₁ ∧
+                    st₁.fst () = 23 ∧ st₁.snd = (true, 1)) ∧
+                (∃ st₂,
+                    Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState 3 = Sum.inr st₂ ∧
+                      st₂.fst () = 23 ∧ st₂.snd = (0, true, 1)) ∧
+                  (∃ st₂,
+                      Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigState 5 = Sum.inr st₂ ∧
+                        st₂.fst () = 21 ∧ st₂.snd = (0, false, 0)) ∧
+                    Becoming.Viability.Kernel
+                        Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigProc
+                        (fun st =>
+                          match st with
+                          | Sum.inl st₁ =>
+                            Becoming.OpenComposition.closedGuard
+                              Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftPartner
+                              Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftContract (fun x => 9)
+                              st₁
+                          | Sum.inr st₂ =>
+                            Becoming.OpenComposition.closedGuard
+                              Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightSystem
+                              Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.rightContract
+                              (fun x => 9) st₂)
+                        (Sum.inl
+                          (fun x => 27, Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.leftInit)) ∧
+                      ∀ (t : Nat), 9 ≤ Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfigLevel t
+@Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness : ∀ {P : Type}
+  (M : Becoming.EndogenousTurning.ServiceTaskModel P) (base : Nat),
+  M.upkeep M.ext ≤ base →
+    ∀ (hProxyPre hProxySafe lagProxy lagPartner : Nat) (safe_le : hProxySafe ≤ hProxyPre) (initProxy : Nat)
+      (hInitProxy : initProxy ≤ lagProxy),
+      0 < initProxy →
+        ∀ (initPartner : Bool × Nat) (hInitPartner : Becoming.EndogenousTurning.serviceK lagPartner initPartner)
+          (g : Nat → Nat)
+          (r1 r2 :
+            Becoming.Run
+              (Becoming.AdaptiveLoops.jointProcess Becoming.EndogenousTurning.PooledClearing.pooledAgents
+                (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop M base hProxyPre hProxySafe)
+                (Becoming.EndogenousTurning.PooledClearing.pooledCerts M base hProxyPre hProxySafe lagProxy lagPartner
+                  safe_le
+                  (fun i =>
+                    match i with
+                    | Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent => initProxy
+                    | Becoming.EndogenousTurning.PooledClearing.PooledAgent.taskPartner => initPartner)
+                  hInitProxy hInitPartner)
+                (Becoming.EndogenousTurning.PooledClearing.pooledObs M base) (fun x x_1 x_2 => false)
+                (fun x e => g (e ())) (fun x x_1 => 0) fun x => True))
+          {x₀ x_big : Unit → Nat},
+          r1.state 0 =
+              (x₀, fun i =>
+                match i with
+                | Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent => initProxy
+                | Becoming.EndogenousTurning.PooledClearing.PooledAgent.taskPartner => initPartner) →
+            r2.state 0 =
+                (x_big, fun i =>
+                  match i with
+                  | Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent => initProxy
+                  | Becoming.EndogenousTurning.PooledClearing.PooledAgent.taskPartner => initPartner) →
+              ∀ {Y H_safe y_safe : Nat},
+                Becoming.RegimeMargin.AtMost g Y →
+                  Y < hProxyPre →
+                    Becoming.RegimeMargin.Short g H_safe y_safe →
+                      H_safe ≤ hProxyPre →
+                        Becoming.RegimeMargin.FromNothing g →
+                          0 < H_safe + y_safe →
+                            (Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole fun e =>
+                                g (e ())) →
+                              H_safe + y_safe ≤
+                                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole
+                                    (fun x e => g (e ())) (fun x => H_safe) (fun x => H_safe + y_safe) () →
+                                hProxySafe + M.draw M.safe ≤ H_safe →
+                                  H_safe + y_safe +
+                                        (Becoming.AdaptiveLoops.natMax lagProxy lagPartner + 1) *
+                                          (hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe)) ≤
+                                      M.B_task →
+                                    H_safe + y_safe +
+                                          Becoming.AdaptiveLoops.natMax initProxy initPartner.snd *
+                                            (hProxyPre + Becoming.AdaptiveLoops.natMax (M.draw M.ext) (M.draw M.safe)) ≤
+                                        x₀ () →
+                                      ∀ (n : Nat),
+                                        x₀ () < H_safe + y_safe + (hProxyPre - Y) * n →
+                                          ∀ (xSolo : Nat → Nat),
+                                            xSolo 0 = x₀ () →
+                                              (∀ (t : Nat),
+                                                  xSolo (t + 1) = Becoming.RegimeMargin.step g hProxyPre (xSolo t)) →
+                                                (∃ T,
+                                                    T ≤ n ∧
+                                                      xSolo T < H_safe + y_safe ∧
+                                                        (∀ (k : Nat),
+                                                            (Becoming.StockFlowBridge.unitWeb xSolo).level (T + k) () <
+                                                              H_safe + y_safe) ∧
+                                                          ∃ M₀, xSolo M₀ = 0 ∧ ∀ (j : Nat), xSolo (M₀ + j) = 0) ∧
+                                                  ((∀ (t : Nat),
+                                                        (r1.state t).snd
+                                                              Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent =
+                                                            initProxy ∧
+                                                          (r2.state t).snd
+                                                                Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent =
+                                                              initProxy ∧
+                                                            (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop M
+                                                                    base hProxyPre hProxySafe
+                                                                    Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent).draw
+                                                                ((r1.state t).snd
+                                                                  Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent)
+                                                                () =
+                                                              hProxyPre) ∧
+                                                      ∃ T,
+                                                        T ≤ n ∧
+                                                          (r1.state T).fst () < H_safe + y_safe ∧
+                                                            (∀ (k : Nat),
+                                                                (Becoming.StockFlowBridge.unitWeb fun t =>
+                                                                        (r1.state t).fst ()).level
+                                                                    (T + k) () <
+                                                                  H_safe + y_safe) ∧
+                                                              ∃ M₀,
+                                                                (r1.state M₀).fst () = 0 ∧
+                                                                  ∀ (j : Nat), (r1.state (M₀ + j)).fst () = 0) ∧
+                                                    Becoming.Viability.Kernel
+                                                      (Becoming.OpenComposition.closedProcess
+                                                        ((Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent
+                                                              hProxyPre hProxySafe).compose
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent
+                                                            M base))
+                                                        (Becoming.OpenComposition.composeContract
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract
+                                                            hProxyPre hProxySafe lagProxy safe_le initProxy hInitProxy)
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract
+                                                            M base lagPartner initPartner hInitPartner))
+                                                        (fun x => ((), M.realizedScore M.ext (x ()) base))
+                                                        (fun em load x => em && load.ble 0) (fun x e => g (e ()))
+                                                        (fun x x_1 => 0) fun x => True)
+                                                      (Becoming.OpenComposition.closedGuard
+                                                        ((Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent
+                                                              hProxyPre hProxySafe).compose
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent
+                                                            M base))
+                                                        (Becoming.OpenComposition.composeContract
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.proxyContract
+                                                            hProxyPre hProxySafe lagProxy safe_le initProxy hInitProxy)
+                                                          (Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerContract
+                                                            M base lagPartner initPartner hInitPartner))
+                                                        fun x => H_safe + y_safe)
+                                                      (x₀, initProxy, initPartner)
+Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness : have xSolo :=
+  Becoming.Law.orbit
+    (Becoming.RegimeMargin.step Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.turningCap 5) 27;
+(xSolo 0 = 27 ∧ xSolo 18 = 9 ∧ xSolo 19 = 4 ∧ xSolo 19 < 9 ∧ xSolo 20 = 0) ∧
+  (∀
+      (r1 r2 :
+        Becoming.Run
+          (Becoming.AdaptiveLoops.jointProcess Becoming.EndogenousTurning.PooledClearing.pooledAgents
+            (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop
+              Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel 20 5 1)
+            (Becoming.EndogenousTurning.PooledClearing.pooledCerts
+              Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel 20 5 1 1 1 ⋯
+              Becoming.EndogenousTurning.OpenCompositionBridge.wideningJointInit ⋯
+              Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit_in)
+            (Becoming.EndogenousTurning.PooledClearing.pooledObs
+              Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel 20)
+            (fun x x_1 x_2 => false) Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.witnessG
+            (fun x x_1 => 0) fun x => True)),
+      r1.state 0 = (fun x => 27, Becoming.EndogenousTurning.OpenCompositionBridge.wideningJointInit) →
+        r2.state 0 = (fun x => 100, Becoming.EndogenousTurning.OpenCompositionBridge.wideningJointInit) →
+          (∀ (t : Nat),
+              (r1.state t).snd Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent = 1 ∧
+                (r2.state t).snd Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent = 1 ∧
+                  (Becoming.EndogenousTurning.PooledClearing.pooledOpenLoop
+                          Becoming.EndogenousTurning.OpenCompositionBridge.wideningModel 20 5 1
+                          Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent).draw
+                      ((r1.state t).snd Becoming.EndogenousTurning.PooledClearing.PooledAgent.proxyAgent) () =
+                    5) ∧
+            ∃ T,
+              T ≤ 20 ∧
+                (r1.state T).fst () < 9 ∧
+                  (∀ (k : Nat), (Becoming.StockFlowBridge.unitWeb fun t => (r1.state t).fst ()).level (T + k) () < 9) ∧
+                    ∃ M₀, (r1.state M₀).fst () = 0 ∧ ∀ (j : Nat), (r1.state (M₀ + j)).fst () = 0) ∧
+    Becoming.Viability.Kernel
+        (Becoming.OpenComposition.closedProcess Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedComp
+          Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedContract
+          Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedObs
+          Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.syncChannel
+          Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.witnessG (fun x x_1 => 0) fun x => True)
+        (Becoming.OpenComposition.closedGuard Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedComp
+          Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedContract fun x => 9)
+        (fun x => 27, 1, Becoming.EndogenousTurning.OpenCompositionBridge.wideningPartnerInit) ∧
+      ∀ (t : Nat), 9 ≤ (Becoming.EndogenousTurning.OpenCompositionBridge.widenedClosedRun.state t).fst ()

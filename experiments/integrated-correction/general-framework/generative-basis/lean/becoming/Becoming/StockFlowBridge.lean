@@ -1,5 +1,6 @@
 import Becoming.Continuation
 import Becoming.WayUnderARule
+import Becoming.LineOnAStock
 import Becoming.Stock
 
 /-!

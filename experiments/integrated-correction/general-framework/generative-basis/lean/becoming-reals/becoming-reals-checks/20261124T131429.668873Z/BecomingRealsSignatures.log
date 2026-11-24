@@ -1,0 +1,355 @@
+Becoming.Reals.metricSlack_succ_unfold : ∀ (α ε : ℝ) (m : ℕ) (r : ℝ),
+  Becoming.AlignmentReals.metricSlack α ε (m + 1) r = α * Becoming.AlignmentReals.metricSlack α ε m r + ε
+Becoming.Reals.iterVar_eq_metricSlack : ∀ (a s : ℝ) (m : ℕ) (v₀ : ℝ),
+  Becoming.Reals.iterVar a s m v₀ = Becoming.AlignmentReals.metricSlack (a ^ 2) s m v₀
+@Becoming.Reals.iterVar_tendsto_stationaryVariance : ∀ {a s v₀ : ℝ},
+  0 ≤ a ^ 2 →
+    a ^ 2 < 1 →
+      Filter.Tendsto (fun m => Becoming.Reals.iterVar a s m v₀) Filter.atTop
+        (nhds (Becoming.SlowingDown.stationaryVariance a s))
+@Becoming.Reals.metricSlack_stationaryVariance_bridge : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} {a s : ℝ},
+  a ^ 2 < 1 →
+    ∀ {Y E : ℕ → Ω → ℝ},
+      (∀ (m : ℕ), MeasureTheory.MemLp (Y m) 2 μ) →
+        (∀ (m : ℕ), MeasureTheory.MemLp (E m) 2 μ) →
+          (∀ (m : ℕ), ProbabilityTheory.IndepFun (Y m) (E m) μ) →
+            (∀ (m : ℕ), Y (m + 1) = Becoming.SlowingDown.step a (Y m) (E m)) →
+              (∀ (m : ℕ), ProbabilityTheory.variance (E m) μ = s) →
+                (∀ (m : ℕ),
+                    ProbabilityTheory.variance (Y m) μ =
+                      Becoming.Reals.iterVar a s m (ProbabilityTheory.variance (Y 0) μ)) ∧
+                  (∀ (m : ℕ),
+                      ProbabilityTheory.variance (Y m) μ =
+                        Becoming.AlignmentReals.metricSlack (a ^ 2) s m (ProbabilityTheory.variance (Y 0) μ)) ∧
+                    (∀ (m : ℕ),
+                        ProbabilityTheory.variance (Y m) μ ≤
+                          max (ProbabilityTheory.variance (Y 0) μ) (Becoming.SlowingDown.stationaryVariance a s)) ∧
+                      Filter.Tendsto (fun m => ProbabilityTheory.variance (Y m) μ) Filter.atTop
+                        (nhds (Becoming.SlowingDown.stationaryVariance a s))
+Becoming.Reals.slowingDown_inertia_regime_collapse : ∀ (H₁ H₂ y₂ Y L : ℕ),
+  Y ≤ H₁ →
+    H₂ < H₁ →
+      ∀ {h r K q : ℝ},
+        0 < h →
+          0 < r →
+            K ≠ 0 →
+              q < r →
+                h * (r - q) < 1 →
+                  ∀ {A : NNReal → NNReal → NNReal} {H hi : NNReal},
+                    Becoming.RegimeMargin.Drawn.reals.Rises A →
+                      Becoming.RegimeMargin.Drawn.reals.Band A H hi →
+                        ∀ {q_crit : NNReal × NNReal},
+                          ↑(H₂ + y₂) ≤ q_crit.1 →
+                            q_crit.1 ≤ hi →
+                              q_crit.2 ≤ hi →
+                                Becoming.RegimeMargin.Drawn.Falls A H q_crit →
+                                  ↑H₁ + ↑L * ↑Y <
+                                      Becoming.SlowingDown.drawnMultiplier h r q /
+                                          (1 - Becoming.SlowingDown.drawnMultiplier h r q) *
+                                        (↑H₁ - ↑H₂) →
+                                    ∀ r_init ≤ q_crit.2,
+                                      ∀ (x_ref : ℝ) (R_read : ℝ → ℝ),
+                                        have a := Becoming.SlowingDown.drawnMultiplier h r q;
+                                        have α := 1 - a;
+                                        a ∈ Set.Ico 0 1 ∧
+                                          (1 - α) / α = a / (1 - a) ∧
+                                            Becoming.SlowingDown.drawnRest r K q = K * (1 - a) / (h * r) ∧
+                                              (∃ t,
+                                                  Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) L α
+                                                        (↑(H₂ + y₂ + H₁ * (L + 1))) t <
+                                                      ↑(H₂ + y₂) ∧
+                                                    Becoming.RegimeMargin.Drawn.Falls A H
+                                                      ((Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) L α
+                                                            (↑(H₂ + y₂ + H₁ * (L + 1))) t).toNNReal,
+                                                        r_init)) ∧
+                                                ∃ d, R_read a ≠ x_ref - d
+@Becoming.Reals.finiteLawOfMeasure_expect_eq_integral : ∀ {Ω : Type} [inst : Fintype Ω] [inst_1 : MeasurableSpace Ω]
+  [inst_2 : MeasurableSingletonClass Ω] (μ : MeasureTheory.Measure Ω) [inst_3 : MeasureTheory.IsProbabilityMeasure μ]
+  (f : Ω → ℝ), (Becoming.Reals.finiteLawOfMeasure μ).expect f = ∫ (ω : Ω), f ω ∂μ
+@Becoming.Reals.finiteLawOfMeasure_prob_eq_real : ∀ {Ω : Type} [inst : Fintype Ω] [inst_1 : MeasurableSpace Ω]
+  [inst_2 : MeasurableSingletonClass Ω] (μ : MeasureTheory.Measure Ω) [inst_3 : MeasureTheory.IsProbabilityMeasure μ]
+  (E : Ω → Prop) [inst_4 : DecidablePred E], (Becoming.Reals.finiteLawOfMeasure μ).prob E = μ.real {ω | E ω}
+@Becoming.Reals.fluctuation_complement_survival_ge : ∀ {Ω : Type} [inst : Fintype Ω] [inst_1 : MeasurableSpace Ω]
+  [inst_2 : MeasurableSingletonClass Ω] (μ : MeasureTheory.Measure Ω) [inst_3 : MeasureTheory.IsProbabilityMeasure μ]
+  {S : Ω → ℝ},
+  ∫ (ω : Ω), Real.exp (-S ω) ∂μ = 1 →
+    ∀ (a : ℝ), 1 - Real.exp (-a) ≤ (Becoming.Reals.finiteLawOfMeasure μ).prob fun ω => -S ω < a
+@Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival : ∀ {F C Ω : Type} [inst : Fintype Ω]
+  [inst_1 : MeasurableSpace Ω] [inst_2 : MeasurableSingletonClass Ω] (μ : MeasureTheory.Measure Ω)
+  [inst_3 : MeasureTheory.IsProbabilityMeasure μ] (L : Ω → Becoming.Flow F C) (W : Ω → Becoming.Web F C) (cs : List C)
+  (T : ℕ) {u : ℝ},
+  0 < u →
+    ∀ (D : ℕ → Ω → ℝ),
+      (∀ (ω : Ω), (L ω).Balances (W ω)) →
+        (∀ (t : ℕ), T ≤ t → ∀ (ω : Ω), u * ↑((L ω).replenishment cs t) + D t ω = u * ↑((L ω).uptake cs t)) →
+          (∀ (t : ℕ), T ≤ t → u * ∫ (ω : Ω), ↑((L ω).takers cs t) ∂μ ≤ ∫ (ω : Ω), D t ω ∂μ) →
+            ∀ {S : Ω → ℝ},
+              ∫ (ω : Ω), Real.exp (-S ω) ∂μ = 1 →
+                (∀ (t : ℕ),
+                    ∫ (ω : Ω), ↑((W ω).stock cs (t + 1)) ∂μ + ∫ (ω : Ω), ↑((L ω).uptake cs t) ∂μ =
+                      ∫ (ω : Ω), ↑((W ω).stock cs t) ∂μ + ∫ (ω : Ω), ↑((L ω).replenishment cs t) ∂μ) ∧
+                  (∀ (N : ℕ) (B δ : ℝ),
+                      0 < B →
+                        0 < δ →
+                          (∫ (ω : Ω), ↑((W ω).stock cs T) ∂μ) / δ ≤ B →
+                            1 - δ ≤
+                              (Becoming.Reals.finiteLawOfMeasure μ).prob fun ω =>
+                                ∑ i ∈ Finset.range N, ↑((L ω).takers cs (T + i)) ≤ B) ∧
+                    (∀ (a : ℝ), 1 - Real.exp (-a) ≤ (Becoming.Reals.finiteLawOfMeasure μ).prob fun ω => -S ω < a) ∧
+                      ∀ (B_gain M p : ℝ),
+                        B_gain < M →
+                          p ≤ μ.real {ω | S ω ≤ -M} →
+                            ((Becoming.Reals.finiteLawOfMeasure μ).prob fun ω => -S ω ≤ B_gain) ≤ 1 - p ∧
+                              p ≤ Real.exp (-M)
+@Becoming.Reals.gibbsWeight_eq_posterior : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S] [inst_4 : Nonempty S] (κ : ℝ) (F : (ι → S) → ℝ) (c : ι → S),
+  Becoming.Reals.gibbsWeight κ F c = Becoming.FreeEnergy.posterior Finset.univ (fun c' => Real.exp (-κ * F c')) c
+@Becoming.Reals.gibbsWeight_eq_softmax : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι] [inst_2 : Fintype S]
+  [inst_3 : DecidableEq S] [inst_4 : Nonempty S] (κ : ℝ) (F : (ι → S) → ℝ) (c : ι → S),
+  Becoming.Reals.gibbsWeight κ F c = Becoming.ExpectedFreeEnergy.softmax κ F c
+@Becoming.Reals.gibbsWeight_pos : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι] [inst_2 : Fintype S]
+  [inst_3 : DecidableEq S] [inst_4 : Nonempty S] (κ : ℝ) (F : (ι → S) → ℝ) (c : ι → S),
+  0 < Becoming.Reals.gibbsWeight κ F c
+@Becoming.Reals.gibbsWeight_sum_one : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι] [inst_2 : Fintype S]
+  [inst_3 : DecidableEq S] [inst_4 : Nonempty S] (κ : ℝ) (F : (ι → S) → ℝ), ∑ c, Becoming.Reals.gibbsWeight κ F c = 1
+@Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S] [inst_4 : Nonempty S] (κ : ℝ) (F : (ι → S) → ℝ),
+  (∀ (σ : Equiv.Perm ι) (c : ι → S), F (c ∘ ⇑σ) = F c) →
+    ∀ {σ ω κ_cls : Type} [inst_5 : DecidableEq κ_cls] (S_st : Finset σ) (O : Finset ω) {Q Q' : σ → ℝ} (π : σ → κ_cls)
+      (B : (ι → S) → κ_cls → ω → ℝ) (P : ω → ℝ),
+      (∀ (k : κ_cls), Becoming.ExpectedFreeEnergy.coarse S_st Q π k = Becoming.ExpectedFreeEnergy.coarse S_st Q' π k) →
+        ((Becoming.Reals.gibbsWeight κ F = Becoming.FreeEnergy.posterior Finset.univ fun c => Real.exp (-κ * F c)) ∧
+            Becoming.Reals.gibbsWeight κ F = Becoming.ExpectedFreeEnergy.softmax κ F) ∧
+          (Becoming.FreeEnergy.freeEnergy Finset.univ (Becoming.Reals.gibbsWeight κ F) fun c => Real.exp (-κ * F c)) =
+              Becoming.FreeEnergy.surprisal (∑ c, Real.exp (-κ * F c)) ∧
+            (∀ (q : (ι → S) → ℝ),
+                (∀ (c : ι → S), 0 ≤ q c) →
+                  ∑ c, q c = 1 →
+                    ((∀ (q' : (ι → S) → ℝ),
+                        (∀ (c : ι → S), 0 ≤ q' c) →
+                          ∑ c, q' c = 1 →
+                            (Becoming.FreeEnergy.freeEnergy Finset.univ q fun c => Real.exp (-κ * F c)) ≤
+                              Becoming.FreeEnergy.freeEnergy Finset.univ q' fun c => Real.exp (-κ * F c)) ↔
+                      ∀ (c : ι → S), q c = Becoming.Reals.gibbsWeight κ F c)) ∧
+              Becoming.CellsUnderNoise.Exchangeable (Becoming.Reals.gibbsWeight κ F) ∧
+                (∀ (i j : ι) (s : S),
+                    Becoming.CellsUnderNoise.marginal (Becoming.Reals.gibbsWeight κ F) i s =
+                      Becoming.CellsUnderNoise.marginal (Becoming.Reals.gibbsWeight κ F) j s) ∧
+                  (∀ (c : ι → S),
+                      Function.Injective c → Becoming.Reals.gibbsWeight κ F c ≤ 1 / ↑(Fintype.card ι).factorial) ∧
+                    (∀ (c : List ((ι → S) × ω)),
+                        Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q
+                            (fun e s => B e (π s)) P c =
+                          Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q'
+                            (fun e s => B e (π s)) P c) ∧
+                      (∀ (c : List ((ι → S) × ω)),
+                          Becoming.ExpectedFreeEnergy.courseWeight S_st Q (fun e s => B e (π s))
+                              (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q
+                                (fun e s => B e (π s)) P)
+                              c =
+                            Becoming.ExpectedFreeEnergy.courseWeight S_st Q' (fun e s => B e (π s))
+                              (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q'
+                                (fun e s => B e (π s)) P)
+                              c) ∧
+                        ∀ (s : σ) (c : List ((ι → S) × ω)),
+                          Becoming.ExpectedFreeEnergy.choiceWeight
+                                (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q
+                                  (fun e s => B e (π s)) P)
+                                c *
+                              Becoming.ExpectedFreeEnergy.courseLik (fun e s => B e (π s)) s c =
+                            Becoming.ExpectedFreeEnergy.choiceWeight
+                                (Becoming.ExpectedFreeEnergy.efeChoice (Becoming.ExpectedFreeEnergy.softmax κ) S_st O Q'
+                                  (fun e s => B e (π s)) P)
+                                c *
+                              Becoming.ExpectedFreeEnergy.courseLik (fun e s => B e (π s)) s c
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_def : ∀ {m : Type u_1} {n : Type u_2} {α : Type u_3} [inst : Fintype m]
+  [inst_1 : Fintype n] [inst_2 : SeminormedAddCommGroup α] (A : Matrix m n α),
+  ‖A‖ = ↑(Finset.univ.sup fun i => ∑ j, ‖A i j‖₊)
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_def : ∀ {m : Type u_1} {n : Type u_2} {α : Type u_3}
+  [inst : Fintype m] [inst_1 : Fintype n] [inst_2 : SeminormedAddCommGroup α] (A : Matrix m n α),
+  ‖A‖₊ = Finset.univ.sup fun i => ∑ j, ‖A i j‖₊
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_mul : ∀ {l : Type u_1} {m : Type u_2} {n : Type u_3} {α : Type u_4}
+  [inst : Fintype l] [inst_1 : Fintype m] [inst_2 : Fintype n] [inst_3 : NonUnitalSeminormedRing α] (A : Matrix l m α)
+  (B : Matrix m n α), ‖A * B‖₊ ≤ ‖A‖₊ * ‖B‖₊
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_mul : ∀ {l : Type u_1} {m : Type u_2} {n : Type u_3} {α : Type u_4}
+  [inst : Fintype l] [inst_1 : Fintype m] [inst_2 : Fintype n] [inst_3 : NonUnitalSeminormedRing α] (A : Matrix l m α)
+  (B : Matrix m n α), ‖A * B‖ ≤ ‖A‖ * ‖B‖
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_diagonal : ∀ {m : Type u_1} {α : Type u_2} [inst : Fintype m]
+  [inst_1 : DecidableEq m] [inst_2 : SeminormedAddCommGroup α] (v : m → α), ‖Matrix.diagonal v‖₊ = ‖v‖₊
+@Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_diagonal : ∀ {m : Type u_1} {α : Type u_2} [inst : Fintype m]
+  [inst_1 : DecidableEq m] [inst_2 : SeminormedAddCommGroup α] (v : m → α), ‖Matrix.diagonal v‖ = ‖v‖
+@Becoming.Reals.euler_eq_mulVec : ∀ {n : Type} [inst : Fintype n] [inst_1 : DecidableEq n] (B : Matrix n n ℝ) (h : ℝ)
+  (x : n → ℝ), Becoming.LinearBlankets.euler B h x = (1 - h • B).mulVec x
+@Becoming.Reals.euler_iterate_eq_pow_mulVec : ∀ {n : Type} [inst : Fintype n] [inst_1 : DecidableEq n]
+  (B : Matrix n n ℝ) (h : ℝ) (x : n → ℝ) (t : ℕ), (Becoming.LinearBlankets.euler B h)^[t] x = ((1 - h • B) ^ t).mulVec x
+Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier : ∀ (h r q : ℝ) (x : Unit → ℝ) (t : ℕ),
+  (Becoming.LinearBlankets.euler (fun x x_1 => r - q) h)^[t] x () =
+    Becoming.SlowingDown.drawnMultiplier h r q ^ t * x ()
+Becoming.Reals.emA_sq_eq : Becoming.LinearBlankets.Autonomous.emA ^ 2 =
+  !![3 / 4, 29 / 100, 13 / 100, -3 / 100;
+    -9 / 20, 31 / 100, -3 / 20, 3 / 100;
+    3 / 100, -3 / 20, 31 / 100, -9 / 20;
+    -3 / 100, 13 / 100, 29 / 100, 3 / 4]
+Becoming.Reals.emA_pow_four_eq : Becoming.LinearBlankets.Autonomous.emA ^ 4 =
+  !![273 / 625, 71 / 250, 107 / 1250, -237 / 2500;
+    -603 / 1250, -1 / 125, -357 / 2500, 141 / 1250;
+    141 / 1250, -357 / 2500, -1 / 125, -603 / 1250;
+    -237 / 2500, 107 / 1250, 71 / 250, 273 / 625]
+Becoming.Reals.emA_pow_four_norm_lt_one : ‖Becoming.LinearBlankets.Autonomous.emA ^ 4‖ < 1
+Becoming.Reals.emA_rate_lt_one : Becoming.Representation.rate Becoming.LinearBlankets.Autonomous.emA < 1
+@Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway : ∀ {n : Type} [inst : Fintype n]
+  [inst_1 : DecidableEq n] [Nonempty n] (B : Matrix n n ℝ) (h : ℝ) (x : n → ℝ) (h_1d r_1d q_1d : ℝ) (x_1d : Unit → ℝ)
+  {m_int : Type u_1} {k_bl : Type u_2} {l_ext : Type u_3} [inst_3 : Fintype m_int] [inst_4 : Fintype k_bl]
+  [inst_5 : Fintype l_ext] [inst_6 : DecidableEq m_int] [DecidableEq l_ext] (Pmm : Matrix m_int m_int ℝ)
+  (Pmk : Matrix m_int k_bl ℝ) (Pml : Matrix m_int l_ext ℝ),
+  IsUnit Pmm.det →
+    ∀ {d_fa : ℕ} (φ_safe φ_warn : Fin d_fa → ℝ) (η p_max v_rest d_agg d_rest R_fa x_warn x_crit : ℝ),
+      0 ≤ η →
+        0 ≤ p_max →
+          ∀ (δ_fa p_fa : ℕ → ℝ),
+            (∀ (k : ℕ), p_fa k ≤ p_max) →
+              ∀ (θ₀ : Fin d_fa → ℝ) (T_safe M_delay : ℕ),
+                0 < M_delay →
+                  (∀ (t : ℕ), (Becoming.LinearBlankets.euler B h)^[t] x = ((1 - h • B) ^ t).mulVec x) ∧
+                    (Filter.Tendsto (fun t => ‖(1 - h • B) ^ t‖) Filter.atTop (nhds 0) ↔
+                        Becoming.Representation.rate (1 - h • B) < 1) ∧
+                      (1 < Becoming.Representation.rate (1 - h • B) → ∀ (K : ℝ), ∃ t, K < ‖(1 - h • B) ^ t‖) ∧
+                        (∀ (t : ℕ),
+                            (Becoming.LinearBlankets.euler (fun x x_1 => r_1d - q_1d) h_1d)^[t] x_1d () =
+                              Becoming.SlowingDown.drawnMultiplier h_1d r_1d q_1d ^ t * x_1d ()) ∧
+                          ‖Becoming.LinearBlankets.Autonomous.emA ^ 4‖ < 1 ∧
+                            Becoming.Representation.rate Becoming.LinearBlankets.Autonomous.emA < 1 ∧
+                              Filter.Tendsto (fun t => ‖Becoming.LinearBlankets.Autonomous.emA ^ t‖) Filter.atTop
+                                  (nhds 0) ∧
+                                (Becoming.LinearBlankets.Autonomous.emM 3 0 = -27800 / 984581 ∧
+                                    Becoming.LinearBlankets.Autonomous.P 3 0 = 0) ∧
+                                  ((∀ (b : k_bl → ℝ) (η_ext η_ext' : l_ext → ℝ),
+                                        Becoming.LinearBlankets.mode Pmm Pmk Pml b η_ext =
+                                          Becoming.LinearBlankets.mode Pmm Pmk Pml b η_ext') ↔
+                                      Pml = 0) ∧
+                                    (∀ (B_a Q_a P_a : Matrix n n ℝ) (part_a : n → Becoming.LinearBlankets.Part)
+                                        (d_a : n → ℝ),
+                                        (∀ (i : n), 0 < d_a i) →
+                                          Q_a.transpose = -Q_a →
+                                            B_a = (Matrix.diagonal d_a - Q_a) * P_a →
+                                              Becoming.LinearBlankets.SparseCoupling part_a B_a →
+                                                (∀ (i k : n),
+                                                    part_a i = Becoming.LinearBlankets.Part.internal ∨
+                                                        part_a i = Becoming.LinearBlankets.Part.active →
+                                                      ¬(part_a k = Becoming.LinearBlankets.Part.internal ∨
+                                                            part_a k = Becoming.LinearBlankets.Part.active) →
+                                                        Q_a i k = 0) →
+                                                  ∀ {i j : n},
+                                                    part_a i = Becoming.LinearBlankets.Part.internal ∨
+                                                        part_a i = Becoming.LinearBlankets.Part.active →
+                                                      part_a j = Becoming.LinearBlankets.Part.external → P_a i j = 0) ∧
+                                      (φ_safe ⬝ᵥ φ_warn = 0 →
+                                          θ₀ ⬝ᵥ φ_warn ≤ v_rest →
+                                            Becoming.AlignmentReals.faSafeUpdate φ_safe η δ_fa θ₀ T_safe ⬝ᵥ φ_warn ≤
+                                              v_rest) ∧
+                                        (v_rest <
+                                            θ₀ ⬝ᵥ φ_warn + η * φ_safe ⬝ᵥ φ_warn * ∑ k ∈ Finset.range T_safe, δ_fa k -
+                                              ↑(M_delay - 1) * (η * p_max * φ_warn ⬝ᵥ φ_warn) →
+                                          have θ_enter := Becoming.AlignmentReals.faSafeUpdate φ_safe η δ_fa θ₀ T_safe;
+                                          (∀ m < M_delay,
+                                              v_rest <
+                                                Becoming.AlignmentReals.faWarnUpdate φ_warn η p_fa θ_enter m ⬝ᵥ
+                                                  φ_warn) ∧
+                                            (∀ m ≤ M_delay,
+                                                Becoming.AlignmentReals.warnStock d_agg d_rest R_fa φ_warn v_rest η p_fa
+                                                    θ_enter x_warn m =
+                                                  x_warn - ↑m * (d_agg - R_fa)) ∧
+                                              (x_warn - x_crit < (d_agg - R_fa) * ↑M_delay →
+                                                Becoming.AlignmentReals.warnStock d_agg d_rest R_fa φ_warn v_rest η p_fa
+                                                    θ_enter x_warn M_delay <
+                                                  x_crit))
+Becoming.Reals.twoCellSymEnergy_symm : ∀ (σ : Equiv.Perm (Fin 2)) (c : Becoming.CellsUnderNoise.Witness.Two),
+  Becoming.Reals.twoCellSymEnergy (c ∘ ⇑σ) = Becoming.Reals.twoCellSymEnergy c
+Becoming.Reals.twoCellParted_injective : Function.Injective ![false, true]
+Becoming.Reals.becoming_reals_cross_module_witness : (Becoming.SlowingDown.drawnRest 10 20 6 = 8 ∧
+    Becoming.SlowingDown.drawnMultiplier (1 / 10) 10 6 = 3 / 5 ∧
+      Becoming.SlowingDown.stationaryVariance (3 / 5) 1 = 25 / 16) ∧
+  (Becoming.Pace.StretchFixes Bool 3 5 ∧
+      (∀ (t : ℕ),
+          6 ≤ t →
+            3 ≤ (Becoming.AlignmentReals.p2Course t).1.2.2 ∧
+              (Becoming.AlignmentReals.p2Course t).1.2.2 ≤ 60 ∧
+                Becoming.LineOnAStock.Goes Becoming.AlignmentReals.p2Need (Becoming.AlignmentReals.p2Course t).1.2) ∧
+        ((Becoming.AlignmentReals.p2Course 5).1.2.2 = 12 ∧
+            (Becoming.AlignmentReals.p2Course 6).1.2.2 = 9 ∧
+              ∀ (t : ℕ), 6 ≤ t → (Becoming.AlignmentReals.p2Course t).1.2.2 = 9) ∧
+          (∀ (t : ℕ), 12 ≤ Becoming.AlignmentReals.inertiaStock 4 1 1 5 1 27 t) ∧
+            (Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 10 = 58035 / 32768 ∧
+                Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 10 < 3 ∧
+                  Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 12 < 0 ∧
+                    Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 27 21 < 0) ∧
+              ∀ (t : ℕ), 3 ≤ Becoming.AlignmentReals.inertiaStock 4 1 1 5 (1 / 8) 39 t) ∧
+    (((Becoming.AlignmentReals.delayLaw3 (1 / 2) (1 / 4) (1 / 4) ⋯ ⋯ ⋯ ⋯).expect fun i => ↑(![0, 5, 10] i) * 3) =
+          45 / 4 ∧
+        ((Becoming.AlignmentReals.delayLaw3 (1 / 2) (1 / 4) (1 / 4) ⋯ ⋯ ⋯ ⋯).prob fun i =>
+              ↑(![0, 5, 10] i) * 3 ≤ 27 - 3) =
+            3 / 4 ∧
+          ∃ k ≤ 10, (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AlignmentReals.p2Giving 4) 27).state k < 3) ∧
+      (∀ (t : ℕ), Becoming.AlignmentReals.faSafeSeq t ⬝ᵥ ![0, 1] = 0) ∧
+        ¬Becoming.Viability.Kernel
+              (Becoming.AdaptiveLoops.jointProcess [()]
+                (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+                (fun x => Becoming.AlignmentReals.faCertCoupled Becoming.AlignmentReals.faThetaEnter ⋯ ⋯)
+                Becoming.AlignmentReals.faObs Becoming.AlignmentReals.faChannel Becoming.AlignmentReals.faG
+                (fun x x_1 => 0) fun x => True)
+              (Becoming.AdaptiveLoops.jointGuard [()]
+                (fun x => Becoming.AlignmentReals.faOpenLoop ![1, 0] ![4 / 5, 3 / 5] (3 / 5) (3 / 20) (1 / 40))
+                (fun x => Becoming.AlignmentReals.faCertCoupled Becoming.AlignmentReals.faThetaEnter ⋯ ⋯) fun x => 5)
+              (fun x => 22, fun x => Becoming.AlignmentReals.faThetaEnter) ∧
+          (Becoming.RegimeMargin.Drawn.reals.Rises Becoming.RegimeMargin.Drawn.Relaxation.giving ∧
+              Becoming.RegimeMargin.Drawn.reals.Band Becoming.RegimeMargin.Drawn.Relaxation.giving 1 1 ∧
+                (∃ L,
+                    Filter.Tendsto
+                      (fun n =>
+                        (Becoming.Law.run
+                              (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+                              (0, 0)).state
+                          n)
+                      Filter.atTop (nhds L)) ∧
+                  ∀ (T : ℕ),
+                    ¬Becoming.LastChange.StillFrom
+                        (Becoming.Law.run
+                          (Becoming.RegimeMargin.Drawn.reals.step Becoming.RegimeMargin.Drawn.Relaxation.giving 1)
+                          (0, 0))
+                        T) ∧
+            (Becoming.LinearBlankets.Autonomous.emM 3 0 = -27800 / 984581 ∧
+                Becoming.LinearBlankets.Autonomous.P 3 0 = 0 ∧
+                  Becoming.Representation.rate Becoming.LinearBlankets.Autonomous.emA < 1) ∧
+              ((∀ (t : ℕ),
+                    Becoming.EntropyProduction.ExpectedDissipatesOn Becoming.EntropyProduction.Fluctuation.coin
+                      Becoming.EntropyProduction.Fluctuation.flow [()] t) ∧
+                  ¬(Becoming.EntropyProduction.Fluctuation.flow true).GainlessOn [()] 0 ∧
+                    ¬(Becoming.EntropyProduction.Fluctuation.flow true).Dissipative) ∧
+                (Becoming.Representation.rate Becoming.Representation.shear = 1 ∧
+                    ∀ (K : ℝ), ∃ n, K < ‖Becoming.Representation.shear ^ n‖) ∧
+                  (Becoming.Reals.gibbsWeight 1 Becoming.Reals.twoCellSymEnergy ![false, true] ≤ 1 / 2 ∧
+                      Becoming.Reals.gibbsWeight 1 Becoming.Reals.twoCellSymEnergy =
+                          Becoming.ExpectedFreeEnergy.softmax 1 Becoming.Reals.twoCellSymEnergy ∧
+                        ((∀ (q' : Becoming.CellsUnderNoise.Witness.Two → ℝ),
+                            (∀ (c : Becoming.CellsUnderNoise.Witness.Two), 0 ≤ q' c) →
+                              ∑ c, q' c = 1 →
+                                (∀ (c : Becoming.CellsUnderNoise.Witness.Two),
+                                    Real.exp (-1 * Becoming.Reals.twoCellSymEnergy c) = 0 → q' c = 0) →
+                                  (Becoming.FreeEnergy.freeEnergy Finset.univ
+                                      (Becoming.Reals.gibbsWeight 1 Becoming.Reals.twoCellSymEnergy) fun c =>
+                                      Real.exp (-1 * Becoming.Reals.twoCellSymEnergy c)) ≤
+                                    Becoming.FreeEnergy.freeEnergy Finset.univ q' fun c =>
+                                      Real.exp (-1 * Becoming.Reals.twoCellSymEnergy c)) ↔
+                          ∀ (c : Fin 2 → Bool),
+                            Becoming.Reals.gibbsWeight 1 Becoming.Reals.twoCellSymEnergy c =
+                              Becoming.FreeEnergy.posterior Finset.univ
+                                (fun c => Real.exp (-1 * Becoming.Reals.twoCellSymEnergy c)) c)) ∧
+                    Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+                        (fun h => ↑(Becoming.LumpedSeeking.Agree.prior h))
+                        Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing [(true, true, true)]
+                        Becoming.LumpedSeeking.Agree.Bias.heads ≠
+                      Becoming.ExpectedFreeEnergy.coursePosterior Becoming.LumpedSeeking.Agree.hypotheses.toFinset
+                        (fun h => ↑(Becoming.ExpectedFreeEnergy.Witness.swappedPrior h))
+                        Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing [(true, true, true)]
+                        Becoming.LumpedSeeking.Agree.Bias.heads

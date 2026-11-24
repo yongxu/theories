@@ -1,0 +1,1262 @@
+@Becoming.EndogenousOrder.cond_const_le : ∀ {b : Bool} {k : Nat}, (bif b then k else 0) ≤ k
+Becoming.EndogenousOrder.total_downFrom_const : ∀ (H c : Nat),
+  (Becoming.total (Becoming.downFrom H) fun x => c) = (H + 1) * c
+Becoming.EndogenousOrder.total_downFrom_add : ∀ (T : Nat) (f : Nat → Nat) (d : Nat),
+  Becoming.total (Becoming.downFrom T) f ≤ Becoming.total (Becoming.downFrom (T + d)) f
+@Becoming.EndogenousOrder.total_downFrom_mono : ∀ {T H : Nat},
+  T ≤ H → ∀ (f : Nat → Nat), Becoming.total (Becoming.downFrom T) f ≤ Becoming.total (Becoming.downFrom H) f
+@Becoming.EndogenousOrder.total_downFrom_le_of_after : ∀ {T : Nat} {adm : Nat → Bool} {v : Nat},
+  (∀ (t : Nat), T < t → adm t = false) →
+    ∀ (H : Nat), (Becoming.total (Becoming.downFrom H) fun t => bif adm t then v else 0) ≤ (T + 1) * v
+@Becoming.EndogenousOrder.total_downFrom_eq_of_cutoff : ∀ {T H : Nat},
+  T ≤ H →
+    ∀ {adm : Nat → Bool} {v : Nat},
+      (∀ (t : Nat), t ≤ T → adm t = true) →
+        (∀ (t : Nat), T < t → adm t = false) →
+          (Becoming.total (Becoming.downFrom H) fun t => bif adm t then v else 0) = (T + 1) * v
+@Becoming.EndogenousOrder.hitCount_add : ∀ {X : Type} (feedback : Nat → X → Bool) (s : Nat) (x : X) (d : Nat),
+  Becoming.EndogenousOrder.hitCount feedback s x ≤ Becoming.EndogenousOrder.hitCount feedback (s + d) x
+@Becoming.EndogenousOrder.hitCount_mono : ∀ {X : Type} (feedback : Nat → X → Bool) {s t : Nat},
+  s ≤ t → ∀ (x : X), Becoming.EndogenousOrder.hitCount feedback s x ≤ Becoming.EndogenousOrder.hitCount feedback t x
+@Becoming.EndogenousOrder.OrderUpdater.posAt_eq_init_add_mul : ∀ {X : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) (t : Nat) (x : X),
+  U.posAt feedback t x = U.initPos x + U.stepGain * Becoming.EndogenousOrder.hitCount feedback t x
+@Becoming.EndogenousOrder.OrderUpdater.posAt_mono : ∀ {X : Type} (U : Becoming.EndogenousOrder.OrderUpdater X)
+  (feedback : Nat → X → Bool) {s t : Nat}, s ≤ t → ∀ (x : X), U.posAt feedback s x ≤ U.posAt feedback t x
+@Becoming.EndogenousOrder.one_le_hitCount_of_lt : ∀ {X : Type} (feedback : Nat → X → Bool) {s T : Nat} {x : X},
+  s < T → feedback s x = true → 1 ≤ Becoming.EndogenousOrder.hitCount feedback T x
+@Becoming.EndogenousOrder.hitCount_zero_of_never : ∀ {X : Type} (feedback : Nat → X → Bool) {x : X} {T : Nat},
+  (∀ (s : Nat), s < T → feedback s x = false) → Becoming.EndogenousOrder.hitCount feedback T x = 0
+@Becoming.EndogenousOrder.OrderUpdater.posAt_eq_init_of_never : ∀ {X : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) {x : X} {T : Nat},
+  (∀ (s : Nat), s < T → feedback s x = false) → U.posAt feedback T x = U.initPos x
+@Becoming.EndogenousOrder.OrderUpdater.ranksAt_zero_base_iff : ∀ {X : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) (t : Nat),
+  (∀ (x : X), U.base x = 0) →
+    ∀ (b a : X → Bool), U.ranksAt feedback t b a ↔ Becoming.Weighting.ranks U.items (U.posAt feedback t) b a
+@Becoming.EndogenousOrder.ranksNet_irrefl : ∀ {X : Type} (items : List X) (pos neg : X → Nat) (a : X → Bool),
+  ¬Becoming.Weighting.ranksNet items pos neg a a
+@Becoming.EndogenousOrder.ranksNet_trans : ∀ {X : Type} (items : List X) (pos neg : X → Nat) {a b c : X → Bool},
+  Becoming.Weighting.ranksNet items pos neg a b →
+    Becoming.Weighting.ranksNet items pos neg b c → Becoming.Weighting.ranksNet items pos neg a c
+@Becoming.EndogenousOrder.ranksNet_increasingInOwn_of_bounds : ∀ {X : Type} {items : List X} {own : X → Bool}
+  {pos base : X → Nat},
+  (∀ (x : X), x ∈ items → own x = true → base x < pos x) →
+    (∀ (y : X), y ∈ items → own y = false → base y ≤ pos y) →
+      Becoming.Weighting.IncreasingInOwn items own (Becoming.Weighting.ranksNet items pos base)
+@Becoming.EndogenousOrder.ranksNet_increasingInOwnOn_of_bounds : ∀ {X : Type} {met : (X → Bool) → (X → Bool) → Prop}
+  {items : List X} {own : X → Bool} {pos base : X → Nat},
+  (∀ (a b : X → Bool), met a b → ∀ (x : X), x ∈ items → own x = true → a x = true → b x = false → base x < pos x) →
+    (∀ (a b : X → Bool), met a b → ∀ (y : X), y ∈ items → own y = false → a y = true → b y = false → base y ≤ pos y) →
+      Becoming.Weighting.IncreasingInOwnOn met items own (Becoming.Weighting.ranksNet items pos base)
+@Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn : ∀ {X : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) {B K T : Nat},
+  (∀ (x : X), x ∈ U.items → U.own x = true → U.base x ≤ B) →
+    (∀ (y : X), y ∈ U.items → U.own y = false → U.base y ≤ U.initPos y) →
+      (∀ (x : X), x ∈ U.items → U.own x = true → K ≤ Becoming.EndogenousOrder.hitCount feedback T x) →
+        B < K * U.stepGain →
+          ∀ (t : Nat), T ≤ t → Becoming.Weighting.IncreasingInOwn U.items U.own (U.ranksAt feedback t)
+@Becoming.EndogenousOrder.adaptive_ranks_converges : ∀ {X : Type} (U : Becoming.EndogenousOrder.OrderUpdater X)
+  (feedback : Nat → X → Bool) {T : Nat},
+  (∀ (x : X), U.base x = 0) →
+    U.stepGain = 1 →
+      (∀ (x : X), x ∈ U.items → U.own x = true → ∃ s, s < T ∧ feedback s x = true) →
+        ∀ (t : Nat),
+          T ≤ t →
+            Becoming.Weighting.IncreasingInOwn U.items U.own (Becoming.Weighting.ranks U.items (U.posAt feedback t))
+@Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding : ∀ {X Pos : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (s : Nat) (f : X),
+                  f ∈ L.present s →
+                    ∀ (d : X), d ∈ ds → 0 < L.give s f d → ∃ e, e ∈ ds ∧ W.requires s f e ∧ m ≤ W.need s f e) →
+                ∀ {T_end n : Nat},
+                  (∀ (k : Nat), k < n → L.replenishment ds (T_end + k) < L.uptake ds (T_end + k)) →
+                    W.stock ds T_end < n + m →
+                      (∀ (k : Nat) (q : X),
+                          q ∈ G.family (T_end + n + k) →
+                            ∃ e, e ∈ ds ∧ W.requires (T_end + n + k) q e ∧ m ≤ W.need (T_end + n + k) q e) →
+                        ∀ (U : Becoming.EndogenousOrder.OrderUpdater (Nat × X)) (feedback : Nat → Nat × X → Bool)
+                          {B K T : Nat},
+                          (∀ (x : Nat × X), x ∈ U.items → U.own x = true → U.base x ≤ B) →
+                            (∀ (y : Nat × X), y ∈ U.items → U.own y = false → U.base y ≤ U.initPos y) →
+                              (∀ (x : Nat × X),
+                                  x ∈ U.items → U.own x = true → K ≤ Becoming.EndogenousOrder.hitCount feedback T x) →
+                                B < K * U.stepGain →
+                                  ∀ {a b : Nat × X → Bool},
+                                    (∀ (x : Nat × X), x ∈ U.items → b x = true → x.snd ∈ G.family x.fst) →
+                                      (∀ (x : Nat × X), x ∈ U.items → x.fst ≤ T_end + n → a x = b x) →
+                                        ∀ (own : Pos → Nat × X → Bool) (p : Pos),
+                                          U.own = own p →
+                                            Becoming.Weighting.AddsOwn U.items (own p) a b →
+                                              ∀ (t : Nat), T ≤ t → U.ranksAt feedback t b a
+@Becoming.EndogenousOrder.online_ranksAt_cycleFree : ∀ {X O : Type} (U : Becoming.EndogenousOrder.OrderUpdater X)
+  (feedback : Nat → X → Bool) (T : Nat) (ch : Becoming.ChoiceOccasions (X → Bool) O),
+  (ch.Accords fun x y => U.ranksAt feedback T y x) →
+    Becoming.Weighting.IncreasingInOwnOn ch.Met U.items U.own (U.ranksAt feedback T) →
+      Becoming.«无环» (ch.withPairs (ch.OwnWidensMet U.items U.own)).Shown
+@Becoming.EndogenousOrder.online_off_support_reversal : ∀ {X O : Type} (U : Becoming.EndogenousOrder.OrderUpdater X)
+  (feedback : Nat → X → Bool) {B K T : Nat} (probe : X → Bool) (ch : Becoming.ChoiceOccasions (X → Bool) O),
+  (∀ (a b : X → Bool), ch.Met a b → ∀ (z : X), z ∈ U.items → probe z = false → a z = b z) →
+    (∀ (x : X), x ∈ U.items → U.own x = true → probe x = true → U.base x ≤ B) →
+      (∀ (y : X), y ∈ U.items → U.own y = false → probe y = true → U.base y ≤ U.initPos y) →
+        (∀ (x : X),
+            x ∈ U.items → U.own x = true → probe x = true → K ≤ Becoming.EndogenousOrder.hitCount feedback T x) →
+          B < K * U.stepGain →
+            (ch.Accords fun x y => U.ranksAt feedback T y x) →
+              ∀ {a b : X → Bool},
+                ch.Unmet a →
+                  Becoming.Weighting.WidensOn U.items a b →
+                    Becoming.Weighting.AddsOwn U.items U.own a b →
+                      ∃ P,
+                        (∀ (x : X → Bool), ¬P x x) ∧
+                          (∀ (x y z : X → Bool), P x y → P y z → P x z) ∧
+                            ch.Accords P ∧
+                              (Becoming.Weighting.IncreasingInOwnOn ch.Met U.items U.own fun y x => P x y) ∧
+                                P b a ∧ ¬Becoming.Weighting.IncreasingInOwn U.items U.own fun y x => P x y
+@Becoming.EndogenousOrder.online_weight_learner_reverses_off_support : ∀ {X : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) {B K T : Nat} (probe : X → Bool),
+  (∀ (x : X), x ∈ U.items → U.own x = true → probe x = true → U.base x ≤ B) →
+    (∀ (y : X), y ∈ U.items → U.own y = false → probe y = true → U.base y ≤ U.initPos y) →
+      (∀ (x : X), x ∈ U.items → U.own x = true → probe x = true → K ≤ Becoming.EndogenousOrder.hitCount feedback T x) →
+        B < K * U.stepGain →
+          ∀ {u : X},
+            (∀ (s : Nat), s < T → feedback s u = false) →
+              U.initPos u < U.base u →
+                ∀ {a b : X → Bool},
+                  Becoming.Weighting.WidensBy U.items u a b →
+                    Becoming.Weighting.IncreasingInOwnOn
+                        (fun c d => ∀ (z : X), z ∈ U.items → probe z = false → c z = d z) U.items U.own
+                        (U.ranksAt feedback T) ∧
+                      U.ranksAt feedback T a b ∧
+                        ¬U.ranksAt feedback T b a ∧
+                          (U.own u = true → ¬Becoming.Weighting.IncreasingInOwn U.items U.own (U.ranksAt feedback T))
+@Becoming.EndogenousOrder.uncoupled_zero_weight_forever : ∀ {X : Type} (U : Becoming.EndogenousOrder.OrderUpdater X)
+  (feedback : Nat → X → Bool) {v : X},
+  (∀ (t : Nat), feedback t v = false) → U.initPos v = 0 → ∀ (t : Nat), U.posAt feedback t v = 0
+@Becoming.EndogenousOrder.uncoupled_blindness_firewall : ∀ {X Pos F : Type}
+  (U : Becoming.EndogenousOrder.OrderUpdater X) (feedback : Nat → X → Bool) {v : X},
+  (∀ (t : Nat), feedback t v = false) →
+    U.initPos v = 0 →
+      ∀ {a b : X → Bool},
+        Becoming.Weighting.WidensBy U.items v a b →
+          ∀ (p : Pos) (f : F),
+            (∀ (t : Nat), U.posAt feedback t v = 0) ∧
+              (U.base v = 0 → ∀ (t : Nat), ¬U.ranksAt feedback t b a ∧ ¬U.ranksAt feedback t a b) ∧
+                (0 < U.base v → ∀ (t : Nat), U.ranksAt feedback t a b ∧ ¬U.ranksAt feedback t b a) ∧
+                  (Becoming.Clearing.valuation.Held ∧ ¬Becoming.Clearing.valuation.Significant) ∧
+                    ¬∀ (d : Becoming.EndogenousOrder.OrderUpdater X) (sig : Pos → Nat → F → Prop),
+                        (∀ (t : Nat), d.posAt feedback t v = 0) → Becoming.Unrestricted sig
+@Becoming.EndogenousOrder.mem_horizonPairs_iff : ∀ {F : Type} {H : Nat} {forms : List F} {i : Nat × F},
+  i ∈ Becoming.EndogenousOrder.horizonPairs H forms ↔ i.fst ≤ H ∧ i.snd ∈ forms
+@Becoming.EndogenousOrder.boundedAdmittedBool_true_iff : ∀ {F C : Type} {W : Becoming.Web F C} (H : Nat)
+  {dec : (Nat → C → Nat) → Nat × F → Bool},
+  W.DecidesAdmission dec →
+    ∀ (l : Nat → C → Nat) (i : Nat × F),
+      Becoming.EndogenousOrder.boundedAdmittedBool H dec l i = true ↔ i.fst ≤ H ∧ W.Admits (l i.fst) i.fst i.snd
+@Becoming.EndogenousOrder.horizon_admitted_widens_iff : ∀ {F C : Type} {W : Becoming.Web F C} (H : Nat)
+  (forms : List F),
+  (∀ (f : F), f ∈ forms) →
+    ∀ {dec : (Nat → C → Nat) → Nat × F → Bool},
+      W.DecidesAdmission dec →
+        ∀ (l₁ l₂ : Nat → C → Nat),
+          ((∀ (t : Nat) (f : F), t ≤ H → W.Admits (l₂ t) t f → W.Admits (l₁ t) t f) ∧
+              ∃ t f, t ≤ H ∧ W.Admits (l₁ t) t f ∧ ¬W.Admits (l₂ t) t f) ↔
+            ∀ (w : Nat × F → Nat),
+              Becoming.Weighting.Positive (Becoming.EndogenousOrder.horizonPairs H forms) w →
+                Becoming.Weighting.weighed (Becoming.EndogenousOrder.horizonPairs H forms) w
+                    (Becoming.EndogenousOrder.boundedAdmittedBool H dec l₂) <
+                  Becoming.Weighting.weighed (Becoming.EndogenousOrder.horizonPairs H forms) w
+                    (Becoming.EndogenousOrder.boundedAdmittedBool H dec l₁)
+@Becoming.EndogenousOrder.adaptive_order_ranks_horizon : ∀ {F C : Type} {W : Becoming.Web F C} (H : Nat)
+  (forms : List F),
+  (∀ (f : F), f ∈ forms) →
+    ∀ {dec : (Nat → C → Nat) → Nat × F → Bool},
+      W.DecidesAdmission dec →
+        ∀ (U : Becoming.EndogenousOrder.OrderUpdater (Nat × F)),
+          U.items = Becoming.EndogenousOrder.horizonPairs H forms →
+            ∀ (feedback : Nat → Nat × F → Bool) {B K T : Nat},
+              (∀ (x : Nat × F), x ∈ U.items → U.own x = true → U.base x ≤ B) →
+                (∀ (y : Nat × F), y ∈ U.items → U.own y = false → U.base y ≤ U.initPos y) →
+                  (∀ (x : Nat × F), x ∈ U.items → U.own x = true → K ≤ Becoming.EndogenousOrder.hitCount feedback T x) →
+                    B < K * U.stepGain →
+                      ∀ {l₁ l₂ : Nat → C → Nat},
+                        (∀ (t : Nat) (f : F), t ≤ H → W.Admits (l₂ t) t f → W.Admits (l₁ t) t f) →
+                          ∀ {t₀ : Nat} {f₀ : F},
+                            t₀ ≤ H →
+                              U.own (t₀, f₀) = true →
+                                W.Admits (l₁ t₀) t₀ f₀ →
+                                  ¬W.Admits (l₂ t₀) t₀ f₀ →
+                                    ∀ (t : Nat),
+                                      T ≤ t →
+                                        U.ranksAt feedback t (Becoming.EndogenousOrder.boundedAdmittedBool H dec l₂)
+                                          (Becoming.EndogenousOrder.boundedAdmittedBool H dec l₁)
+@Becoming.EndogenousOrder.boundedMacroBool_true_iff : ∀ {F C K : Type} {W : Becoming.Web F C} (H : Nat) (cap : F → K)
+  {macroDec : (C → Nat) → Nat → K → Bool},
+  (∀ (l : C → Nat) (t : Nat) (k : K), macroDec l t k = true ↔ W.MacroAdmits cap l t k) →
+    ∀ (l : Nat → C → Nat) (i : Nat × K),
+      Becoming.EndogenousOrder.boundedMacroBool H macroDec l i = true ↔
+        i.fst ≤ H ∧ W.MacroAdmits cap (l i.fst) i.fst i.snd
+@Becoming.EndogenousOrder.macroAdmits_restores_comparability : ∀ {F C K : Type} {W : Becoming.Web F C} (H : Nat)
+  (cap : F → K) (caps : List K),
+  (∀ (k : K), k ∈ caps) →
+    ∀ {macroDec : (C → Nat) → Nat → K → Bool},
+      (∀ (l : C → Nat) (t : Nat) (k : K), macroDec l t k = true ↔ W.MacroAdmits cap l t k) →
+        ∀ (l₁ l₂ : Nat → C → Nat),
+          (∀ (t : Nat),
+              (Becoming.Weighting.WidensOn caps (fun k => macroDec (l₁ t) t k) fun k => macroDec (l₂ t) t k) ↔
+                ∀ (w : K → Nat),
+                  Becoming.Weighting.Positive caps w →
+                    (Becoming.Weighting.weighed caps w fun k => macroDec (l₂ t) t k) <
+                      Becoming.Weighting.weighed caps w fun k => macroDec (l₁ t) t k) ∧
+            ((W.MacroIncludes cap l₁ l₂ ∧ ∃ t k, t ≤ H ∧ W.MacroAdmits cap (l₁ t) t k ∧ ¬W.MacroAdmits cap (l₂ t) t k) →
+              ∀ (w : Nat × K → Nat),
+                Becoming.Weighting.Positive (Becoming.EndogenousOrder.horizonPairs H caps) w →
+                  Becoming.Weighting.weighed (Becoming.EndogenousOrder.horizonPairs H caps) w
+                      (Becoming.EndogenousOrder.boundedMacroBool H macroDec l₂) <
+                    Becoming.Weighting.weighed (Becoming.EndogenousOrder.horizonPairs H caps) w
+                      (Becoming.EndogenousOrder.boundedMacroBool H macroDec l₁))
+Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll_converges : ∀ (t : Nat),
+  3 ≤ t →
+    Becoming.Weighting.IncreasingInOwn Becoming.EndogenousOrder.OnlineWeightWitness.owItems
+      Becoming.EndogenousOrder.OnlineWeightWitness.owOwn
+      (Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+        Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t)
+Becoming.EndogenousOrder.OnlineWeightWitness.cOff_unmet : Becoming.EndogenousOrder.OnlineWeightWitness.owTrace.Unmet
+  Becoming.EndogenousOrder.OnlineWeightWitness.cOff
+Becoming.EndogenousOrder.OnlineWeightWitness.cOff_widensBy : Becoming.Weighting.WidensBy
+  Becoming.EndogenousOrder.OnlineWeightWitness.owItems Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.offProbe
+  Becoming.EndogenousOrder.OnlineWeightWitness.cOff Becoming.EndogenousOrder.OnlineWeightWitness.cNone
+Becoming.EndogenousOrder.OnlineWeightWitness.cVictim_widensBy : Becoming.Weighting.WidensBy
+  Becoming.EndogenousOrder.OnlineWeightWitness.owItems Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.victim
+  Becoming.EndogenousOrder.OnlineWeightWitness.cVictim Becoming.EndogenousOrder.OnlineWeightWitness.cNone
+@Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall : ∀ {Pos F : Type} (p : Pos) (f : F),
+  (∀ (t : Nat),
+      3 ≤ t →
+        Becoming.Weighting.IncreasingInOwn Becoming.EndogenousOrder.OnlineWeightWitness.owItems
+          Becoming.EndogenousOrder.OnlineWeightWitness.owOwn
+          (Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+            Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t)) ∧
+    (∀ (t : Nat),
+        Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.posAt
+            Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t
+            Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.victim =
+          0) ∧
+      (∀ (t : Nat),
+          ¬Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t
+                Becoming.EndogenousOrder.OnlineWeightWitness.cVictim
+                Becoming.EndogenousOrder.OnlineWeightWitness.cNone ∧
+            ¬Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t
+                Becoming.EndogenousOrder.OnlineWeightWitness.cNone
+                Becoming.EndogenousOrder.OnlineWeightWitness.cVictim) ∧
+        (Becoming.Weighting.IncreasingInOwnOn
+              (fun a b =>
+                ∀ (z : Becoming.EndogenousOrder.OnlineWeightWitness.OWItem),
+                  z ∈ Becoming.EndogenousOrder.OnlineWeightWitness.owItems →
+                    Becoming.EndogenousOrder.OnlineWeightWitness.owProbe z = false → a z = b z)
+              Becoming.EndogenousOrder.OnlineWeightWitness.owItems Becoming.EndogenousOrder.OnlineWeightWitness.owOwn
+              (Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                Becoming.EndogenousOrder.OnlineWeightWitness.feedbackPartial 2) ∧
+            (∀ (t : Nat),
+                Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                    Becoming.EndogenousOrder.OnlineWeightWitness.feedbackPartial t
+                    Becoming.EndogenousOrder.OnlineWeightWitness.cOff
+                    Becoming.EndogenousOrder.OnlineWeightWitness.cNone ∧
+                  ¬Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                      Becoming.EndogenousOrder.OnlineWeightWitness.feedbackPartial t
+                      Becoming.EndogenousOrder.OnlineWeightWitness.cNone
+                      Becoming.EndogenousOrder.OnlineWeightWitness.cOff) ∧
+              ¬Becoming.Weighting.IncreasingInOwn Becoming.EndogenousOrder.OnlineWeightWitness.owItems
+                  Becoming.EndogenousOrder.OnlineWeightWitness.owOwn
+                  (Becoming.EndogenousOrder.OnlineWeightWitness.owUpdater.ranksAt
+                    Becoming.EndogenousOrder.OnlineWeightWitness.feedbackPartial 2)) ∧
+          (∃ P,
+              (∀ (x : Becoming.EndogenousOrder.OnlineWeightWitness.OWItem → Bool), ¬P x x) ∧
+                (∀ (x y z : Becoming.EndogenousOrder.OnlineWeightWitness.OWItem → Bool), P x y → P y z → P x z) ∧
+                  Becoming.EndogenousOrder.OnlineWeightWitness.owTrace.Accords P ∧
+                    (Becoming.Weighting.IncreasingInOwnOn Becoming.EndogenousOrder.OnlineWeightWitness.owTrace.Met
+                        Becoming.EndogenousOrder.OnlineWeightWitness.owItems
+                        Becoming.EndogenousOrder.OnlineWeightWitness.owOwn fun y x => P x y) ∧
+                      P Becoming.EndogenousOrder.OnlineWeightWitness.cNone
+                          Becoming.EndogenousOrder.OnlineWeightWitness.cOff ∧
+                        ¬Becoming.Weighting.IncreasingInOwn Becoming.EndogenousOrder.OnlineWeightWitness.owItems
+                            Becoming.EndogenousOrder.OnlineWeightWitness.owOwn fun y x => P x y) ∧
+            ¬∀ (d : Becoming.EndogenousOrder.OrderUpdater Becoming.EndogenousOrder.OnlineWeightWitness.OWItem)
+                (sig : Pos → Nat → F → Prop),
+                (∀ (t : Nat),
+                    d.posAt Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll t
+                        Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.victim =
+                      0) →
+                  Becoming.Unrestricted sig
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.family_eq : ∀ (t : Nat),
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.generations.family t =
+    [Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.activeNode t]
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.balances : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.flow.Balances
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.acting : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.flow.Acting
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.dependent : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.Dependent
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.flow Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.generations
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.persists : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.generations.Persists
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.stock_two : ∀ (t : Nat),
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.stock
+      Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owNodes t =
+    2
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.decides : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.DecidesAdmission
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.admitDec
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.decidesMacro : ∀
+  (l : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWNode → Nat) (t : Nat)
+  (k : Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWMacro),
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.macroDec l t k = true ↔
+    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.MacroAdmits
+      Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.cap l t k
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.admits_active : ∀ (t : Nat),
+  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.Admits
+    (Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level t) t
+    (Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.activeNode t)
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.not_admits_active_next : ∀ (t : Nat),
+  ¬Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.Admits
+      (Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level (t + 1)) (t + 1)
+      (Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.activeNode t)
+Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds : ∀ (H : Nat),
+  (∀ (t : Nat),
+      Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.stock
+          Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owNodes t =
+        2) ∧
+    (∀ (items : List (Nat × Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWNode)),
+        ¬Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.ListsAdmitted items
+            Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level) ∧
+      Becoming.TransformsViably Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web
+          (fun t =>
+            1 ≤
+              Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level t
+                Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWNode.cPool)
+          Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.cap 0 ∧
+        (∀ (w : Nat × Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWNode → Nat),
+            Becoming.Weighting.Positive
+                (Becoming.EndogenousOrder.horizonPairs H Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owNodes)
+                w →
+              Becoming.Weighting.weighed
+                  (Becoming.EndogenousOrder.horizonPairs H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owNodes)
+                  w
+                  (Becoming.EndogenousOrder.boundedAdmittedBool H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.admitDec fun x x_1 => 0) <
+                Becoming.Weighting.weighed
+                  (Becoming.EndogenousOrder.horizonPairs H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owNodes)
+                  w
+                  (Becoming.EndogenousOrder.boundedAdmittedBool H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.admitDec
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level)) ∧
+          ∀ (w : Nat × Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.OWMacro → Nat),
+            Becoming.Weighting.Positive
+                (Becoming.EndogenousOrder.horizonPairs H
+                  Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owMacros)
+                w →
+              Becoming.Weighting.weighed
+                  (Becoming.EndogenousOrder.horizonPairs H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owMacros)
+                  w
+                  (Becoming.EndogenousOrder.boundedMacroBool H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.macroDec fun x x_1 => 0) <
+                Becoming.Weighting.weighed
+                  (Becoming.EndogenousOrder.horizonPairs H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.owMacros)
+                  w
+                  (Becoming.EndogenousOrder.boundedMacroBool H
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.macroDec
+                    Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.web.level)
+Becoming.EndogenousOrder.scopeAdmit_sound : ∀ (preDraw coopDraw maxLagN : Nat) (coop_le_pre : coopDraw ≤ preDraw),
+  Becoming.PolyComposition.AnchoredModeAdmit (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+    (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback
+Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel : ∀
+  (preDraw coopDraw maxLagN initLag envCap x_crit warnLevel x₀ : Nat) (coop_le_pre : coopDraw ≤ preDraw)
+  (init_in : 0 < initLag ∧ initLag ≤ maxLagN)
+  (propose :
+    (p : (m : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m) →
+      Becoming.EndogenousOrder.ScopeObs p.fst × Bool →
+        Becoming.EndogenousOrder.ScopeDist p.fst →
+          (m' : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m')
+  (G : Nat → Nat),
+  (∀ (a b : Nat), a ≤ b → G a ≤ G b) →
+    x_crit ≤
+        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => G (e ()))
+          (fun x => coopDraw + envCap) (fun x => x_crit) () →
+      x_crit + (maxLagN + 1) * (preDraw + envCap) ≤ warnLevel →
+        x_crit + initLag * (preDraw + envCap) ≤ x₀ →
+          Becoming.Viability.Kernel
+            (Becoming.PolyComposition.polyClosedProcess
+              (Becoming.PolyComposition.anchoredSelfModComponent
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+              Becoming.EndogenousOrder.scopeRoute
+              (Becoming.PolyComposition.anchoredSelfModContract
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+              (Becoming.EndogenousOrder.scopeObs warnLevel) Becoming.EndogenousOrder.scopeChannel (fun x e => G (e ()))
+              (fun x x_1 => envCap) fun x => True)
+            (Becoming.PolyComposition.polyClosedGuard
+              (Becoming.PolyComposition.anchoredSelfModComponent
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+              (Becoming.PolyComposition.anchoredSelfModContract
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+              fun x => x_crit)
+            (fun x => x₀, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, initLag⟩)
+Becoming.EndogenousOrder.wide_modeRefines_narrow : ∀ (preDraw coopDraw maxLagN warnLevel : Nat)
+  (coop_le_pre : coopDraw ≤ preDraw) (m : Becoming.EndogenousOrder.ScopeMode),
+  Becoming.PolyComposition.ModeRefines (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+    Becoming.EndogenousOrder.scopeRoute (Becoming.EndogenousOrder.scopeObs warnLevel) (fun x => warnLevel)
+    Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored m
+Becoming.EndogenousOrder.timely_modeRefines_viability_kernel : ∀
+  (preDraw coopDraw maxLagN initLag envCap x_crit warnLevel x₀ : Nat) (coop_le_pre : coopDraw ≤ preDraw)
+  (init_in : 0 < initLag ∧ initLag ≤ maxLagN)
+  (propose :
+    (p : (m : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m) →
+      Becoming.EndogenousOrder.ScopeObs p.fst × Bool →
+        Becoming.EndogenousOrder.ScopeDist p.fst →
+          (m' : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m')
+  (G : Nat → Nat),
+  (∀ (a b : Nat), a ≤ b → G a ≤ G b) →
+    x_crit ≤
+        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => G (e ()))
+          (fun x => coopDraw + envCap) (fun x => x_crit) () →
+      x_crit + (maxLagN + 1) * (preDraw + envCap) ≤ warnLevel →
+        x_crit + initLag * (preDraw + envCap) ≤ x₀ →
+          Becoming.Viability.Kernel
+            (Becoming.PolyComposition.polyClosedProcess
+              (Becoming.PolyComposition.anchoredSelfModComponent
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+              Becoming.EndogenousOrder.scopeRoute
+              (Becoming.PolyComposition.anchoredSelfModContract
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+              (Becoming.EndogenousOrder.scopeObs warnLevel) Becoming.EndogenousOrder.scopeChannel (fun x e => G (e ()))
+              (fun x x_1 => envCap) fun x => True)
+            (Becoming.PolyComposition.polyClosedGuard
+              (Becoming.PolyComposition.anchoredSelfModComponent
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+              (Becoming.PolyComposition.anchoredSelfModContract
+                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+              fun x => x_crit)
+            (fun x => x₀, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, initLag⟩)
+@Becoming.EndogenousOrder.falls_iff_kept : ∀ {α : Type} (gs : List (List α)) (w a : α → Nat) {B s q K m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + K * a p = B + s * a p + q * Becoming.total g a) →
+      (Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a <
+          Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a ↔
+        s * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a +
+            m * q * Becoming.SelectionLevels.concordAmong gs a a <
+          K * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a)
+@Becoming.EndogenousOrder.assorted_wide_scope_emerges : ∀ {α F_n C_n K_n F_w C_w K_w X Y : Type} (gs : List (List α))
+  (w a : α → Nat) {B s q K m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + K * a p = B + s * a p + q * Becoming.total g a) →
+      K * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a <
+          s * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a +
+            m * q * Becoming.SelectionLevels.concordAmong gs a a →
+        ∀ {L : Becoming.Flow X X} {W : Becoming.Web X X},
+          L.Acting W →
+            ∀ {G : Becoming.SelectionTerm.Generations X},
+              Becoming.SelectionTerm.Flow.Descended L W G →
+                ∀ {lgs : List (List X)},
+                  Becoming.SelectionLevels.whole lgs = G.family 0 →
+                    (∀ (t : Nat),
+                        Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                      ∀ {v : List X → Nat},
+                        (∀ (g : List X), g ∈ lgs → ∀ (p : X), p ∈ g → G.amount 0 p = v g) →
+                          ∀ {t : Nat},
+                            (∀ (g h : List X),
+                                g ∈ lgs →
+                                  h ∈ lgs →
+                                    v h < v g → ∀ (p : X), p ∈ Becoming.SelectionLevels.lineage G h t → ¬W.active t p) →
+                              ∀ {g h : List X},
+                                g ∈ lgs →
+                                  h ∈ lgs →
+                                    v h < v g →
+                                      ∀ {p q' : X},
+                                        p ∈ Becoming.SelectionLevels.lineage G g t →
+                                          q' ∈ Becoming.SelectionLevels.lineage G h t →
+                                            0 < G.offspringNumber t p →
+                                              ∀
+                                                (sys :
+                                                  Becoming.ScopeDynamics.MutualFateSystem F_n C_n K_n F_w C_w K_w Y),
+                                                Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a <
+                                                    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w
+                                                      a ∧
+                                                  G.Raises t ∧
+                                                    (∀ (k : Nat) (y : Y),
+                                                        ¬y ∈
+                                                            sys.narrowLin.G.family
+                                                              (sys.narrowLin.T + sys.narrowLin.n + k + 1)) ∧
+                                                      ∀ (s' : Nat),
+                                                        sys.wide.S_safe ≤ sys.wide.sub.level s' ∧
+                                                          sys.wide.sub.level s' ≤ sys.wide.hi
+@Becoming.EndogenousOrder.unassorted_myopic_trap : ∀ {α F_n C_n K_n X : Type} (gs : List (List α)) (w a : α → Nat)
+  {B s q K m : Nat},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    (∀ (g : List α), g ∈ gs → ∀ (p : α), p ∈ g → w p + K * a p = B + s * a p + q * Becoming.total g a) →
+      s * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a +
+            m * q * Becoming.SelectionLevels.concordAmong gs a a <
+          K * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) a a →
+        ∀ (nc : Becoming.ScopeDynamics.NarrowCoalition F_n C_n K_n)
+          (nl : Becoming.ScopeDynamics.NarrowLineage X nc.sub),
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w a <
+              Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w a ∧
+            (∃ T_end,
+                (∀ (t : Nat), T_end ≤ t → nc.sub.level t = 0) ∧
+                  ∀ (t : Nat), T_end ≤ t → ∀ (k : K_n), ¬nc.W.MacroAdmits nc.cap (nc.W.level t) t k) ∧
+              ∀ (k : Nat) (y : X), ¬y ∈ nl.G.family (nl.T + nl.n + k + 1)
+Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence : ∀
+  (preDraw coopDraw maxLagN initLag envCap x_crit warnLevel x₀ : Nat) (coop_le_pre : coopDraw ≤ preDraw)
+  (init_in : 0 < initLag ∧ initLag ≤ maxLagN)
+  (propose :
+    (p : (m : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m) →
+      Becoming.EndogenousOrder.ScopeObs p.fst × Bool →
+        Becoming.EndogenousOrder.ScopeDist p.fst →
+          (m' : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m')
+  (G_sub : Nat → Nat),
+  (∀ (a b : Nat), a ≤ b → G_sub a ≤ G_sub b) →
+    x_crit ≤
+        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => G_sub (e ()))
+          (fun x => coopDraw + envCap) (fun x => x_crit) () →
+      x_crit + (maxLagN + 1) * (preDraw + envCap) ≤ warnLevel →
+        x_crit + initLag * (preDraw + envCap) ≤ x₀ →
+          ∀
+            (run :
+              Becoming.Run
+                (Becoming.PolyComposition.polyClosedProcess
+                  (Becoming.PolyComposition.anchoredSelfModComponent
+                    (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                    (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+                  Becoming.EndogenousOrder.scopeRoute
+                  (Becoming.PolyComposition.anchoredSelfModContract
+                    (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                    (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+                  (Becoming.EndogenousOrder.scopeObs warnLevel) Becoming.EndogenousOrder.scopeChannel
+                  (fun x e => G_sub (e ())) (fun x x_1 => envCap) fun x => True)),
+            run.state 0 = (fun x => x₀, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, initLag⟩) →
+              ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+                L.Acting W →
+                  ∀ {G : Becoming.SelectionTerm.Generations X},
+                    Becoming.SelectionTerm.Flow.Descended L W G →
+                      ∀ {lgs : List (List X)},
+                        Becoming.SelectionLevels.whole lgs = G.family 0 →
+                          (∀ (t : Nat),
+                              Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                            ∀ {v : List X → Nat},
+                              (∀ (g : List X), g ∈ lgs → ∀ (p : X), p ∈ g → G.amount 0 p = v g) →
+                                ∀ {t : Nat},
+                                  (∀ (g h : List X),
+                                      g ∈ lgs →
+                                        h ∈ lgs →
+                                          v h < v g →
+                                            ∀ (p : X), p ∈ Becoming.SelectionLevels.lineage G h t → ¬W.active t p) →
+                                    ∀ {g h : List X},
+                                      g ∈ lgs →
+                                        h ∈ lgs →
+                                          v h < v g →
+                                            ∀ {p q' : X},
+                                              p ∈ Becoming.SelectionLevels.lineage G g t →
+                                                q' ∈ Becoming.SelectionLevels.lineage G h t →
+                                                  ∀ (c_sub : X),
+                                                    (∀ (s : Nat), (run.state s).fst () ≤ W.level s c_sub) →
+                                                      (x_crit ≤ W.level t c_sub → 0 < G.offspringNumber t p) →
+                                                        Becoming.Viability.Kernel
+                                                            (Becoming.PolyComposition.polyClosedProcess
+                                                              (Becoming.PolyComposition.anchoredSelfModComponent
+                                                                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw
+                                                                  maxLagN coop_le_pre)
+                                                                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN)
+                                                                Becoming.EndogenousOrder.scopeFallback propose)
+                                                              Becoming.EndogenousOrder.scopeRoute
+                                                              (Becoming.PolyComposition.anchoredSelfModContract
+                                                                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw
+                                                                  maxLagN coop_le_pre)
+                                                                ⋯ (Becoming.EndogenousOrder.scopeAdmitDec maxLagN)
+                                                                Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+                                                              (Becoming.EndogenousOrder.scopeObs warnLevel)
+                                                              Becoming.EndogenousOrder.scopeChannel
+                                                              (fun x e => G_sub (e ())) (fun x x_1 => envCap) fun x =>
+                                                              True)
+                                                            (Becoming.PolyComposition.polyClosedGuard
+                                                              (Becoming.PolyComposition.anchoredSelfModComponent
+                                                                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw
+                                                                  maxLagN coop_le_pre)
+                                                                (Becoming.EndogenousOrder.scopeAdmitDec maxLagN)
+                                                                Becoming.EndogenousOrder.scopeFallback propose)
+                                                              (Becoming.PolyComposition.anchoredSelfModContract
+                                                                (Becoming.EndogenousOrder.scopeBase preDraw coopDraw
+                                                                  maxLagN coop_le_pre)
+                                                                ⋯ (Becoming.EndogenousOrder.scopeAdmitDec maxLagN)
+                                                                Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+                                                              fun x => x_crit)
+                                                            (fun x => x₀,
+                                                              ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored,
+                                                                initLag⟩) ∧
+                                                          (∀ (s : Nat), x_crit ≤ W.level s c_sub) ∧ G.Raises t
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.equal_assorted : ∀
+  (g : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted → g.length = 2
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.equal_mixed : ∀
+  (g : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed → g.length = 2
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.returns_assorted : ∀
+  (g : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted →
+    ∀ (p : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+      p ∈ g →
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted p +
+            3 * Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope p =
+          1 + 1 * Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope p +
+            2 * Becoming.total g Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.returns_mixed : ∀
+  (g : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed →
+    ∀ (p : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.SplitMember),
+      p ∈ g →
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed p +
+            3 * Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope p =
+          1 + 1 * Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope p +
+            2 * Becoming.total g Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds : Becoming.SelectionTerm.concord
+      (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope =
+    8 ∧
+  Becoming.SelectionTerm.discord
+        (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope =
+      0 ∧
+    Becoming.SelectionTerm.concord
+          (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope =
+        0 ∧
+      Becoming.SelectionTerm.discord
+            (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+            Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+            Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope =
+          8 ∧
+        Becoming.SelectionTerm.discord
+              (Becoming.SelectionLevels.whole
+                Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope <
+            Becoming.SelectionTerm.concord
+              (Becoming.SelectionLevels.whole
+                Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope ∧
+          Becoming.SelectionTerm.concord
+              (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope <
+            Becoming.SelectionTerm.discord
+              (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+              Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linFamily_succ : ∀ (t : Nat),
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen.family (t + 1) = [t + 2]
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linActing : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linFlow.Acting
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linWeb
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linDescended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linFlow
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linWeb
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linExact : ∀ (t : Nat),
+  Becoming.SelectionTerm.Exact (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen.family t)
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linKids t)
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linAmt t)
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linAmt (t + 1))
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linFounded : ∀ (g : List Nat),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linLgs →
+    ∀ (p : Nat),
+      p ∈ g →
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen.amount 0 p =
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linVal g
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linInactive : ∀ (g h : List Nat),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linLgs →
+    h ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linLgs →
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linVal h <
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linVal g →
+        ∀ (p : Nat),
+          p ∈
+              Becoming.SelectionLevels.lineage Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen
+                h 0 →
+            ¬Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linWeb.active 0 p
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds : (Becoming.SelectionTerm.discord
+        (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope <
+      Becoming.SelectionTerm.concord
+        (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsAssorted)
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wAssorted
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope ∧
+    Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.linGen.Raises 0 ∧
+      (∀ (k : Nat) (y : Becoming.ScopeDynamics.MutualFateWitness.LineageNode),
+          ¬y ∈
+              Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.family
+                (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                      Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n +
+                    k +
+                  1)) ∧
+        ∀ (s' : Nat),
+          Becoming.ScopeDynamics.MutualFateWitness.system.wide.S_safe ≤
+              Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level s' ∧
+            Becoming.ScopeDynamics.MutualFateWitness.system.wide.sub.level s' ≤
+              Becoming.ScopeDynamics.MutualFateWitness.system.wide.hi) ∧
+  Becoming.SelectionTerm.concord
+        (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope <
+      Becoming.SelectionTerm.discord
+        (Becoming.SelectionLevels.whole Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.gsMixed)
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.wMixed
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.keepScope ∧
+    (∃ T_end,
+        (∀ (t : Nat), T_end ≤ t → Becoming.ScopeDynamics.MutualFateWitness.system.narrow.sub.level t = 0) ∧
+          ∀ (t : Nat),
+            T_end ≤ t →
+              ∀ (k : Becoming.ScopeDynamics.PoolCap),
+                ¬Becoming.ScopeDynamics.MutualFateWitness.system.narrow.W.MacroAdmits
+                    Becoming.ScopeDynamics.MutualFateWitness.system.narrow.cap
+                    (Becoming.ScopeDynamics.MutualFateWitness.system.narrow.W.level t) t k) ∧
+      ∀ (k : Nat) (y : Becoming.ScopeDynamics.MutualFateWitness.LineageNode),
+        ¬y ∈
+            Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.G.family
+              (Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.T +
+                    Becoming.ScopeDynamics.MutualFateWitness.system.narrowLin.n +
+                  k +
+                1)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_kernel : Becoming.Viability.Kernel
+  (Becoming.PolyComposition.polyClosedProcess
+    (Becoming.PolyComposition.anchoredSelfModComponent (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯)
+      (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+    Becoming.EndogenousOrder.scopeRoute
+    (Becoming.PolyComposition.anchoredSelfModContract (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯) ⋯
+      (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback ⋯
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+    (Becoming.EndogenousOrder.scopeObs 16) Becoming.EndogenousOrder.scopeChannel
+    (fun x e => Becoming.ScopeDynamics.gEx (e ())) (fun x x_1 => 1) fun x => True)
+  (Becoming.PolyComposition.polyClosedGuard
+    (Becoming.PolyComposition.anchoredSelfModComponent (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯)
+      (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+    (Becoming.PolyComposition.anchoredSelfModContract (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯) ⋯
+      (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback ⋯
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+    fun x => 8)
+  (fun x => 13, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, 1⟩)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb_dependent : ∀ (lvl : Nat → Nat) (x_crit : Nat),
+  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb lvl x_crit).Dependent
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedFlow_acting : ∀ (lvl : Nat → Nat) (x_crit : Nat),
+  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedFlow lvl x_crit).Acting
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb lvl x_crit)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_descended : ∀ (lvl : Nat → Nat) (x_crit : Nat),
+  Becoming.SelectionTerm.Flow.Descended (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedFlow lvl x_crit)
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb lvl x_crit)
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_exact : ∀ (lvl : Nat → Nat) (x_crit t : Nat),
+  Becoming.SelectionTerm.Exact
+    ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).family t)
+    ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).kids t)
+    ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).amount t)
+    ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).amount (t + 1))
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_founded : ∀ (lvl : Nat → Nat) (x_crit : Nat)
+  (g : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledLgs →
+    ∀ (p : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+      p ∈ g →
+        (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).amount 0 p =
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledVal g
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_inactive : ∀ (lvl : Nat → Nat) (x_crit : Nat)
+  (g h : List Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+  g ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledLgs →
+    h ∈ Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledLgs →
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledVal h <
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.coupledVal g →
+        ∀ (p : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+          p ∈
+              Becoming.SelectionLevels.lineage
+                (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit) h 0 →
+            ¬(Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb lvl x_crit).active 0 p
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_family_succ_eq : ∀ (lvl : Nat → Nat) (x_crit t : Nat)
+  (p : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+  p ∈ (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).family (t + 1) →
+    p = Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode.wide (t + 1)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_family_empty_mono : ∀ (lvl : Nat → Nat)
+  (x_crit : Nat) {t : Nat},
+  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).family t = [] →
+    ∀ (k : Nat), (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl x_crit).family (t + k) = []
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_modeSwitch_raises_lineage : Becoming.Viability.Kernel
+    (Becoming.PolyComposition.polyClosedProcess
+      (Becoming.PolyComposition.anchoredSelfModComponent (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯)
+        (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+      Becoming.EndogenousOrder.scopeRoute
+      (Becoming.PolyComposition.anchoredSelfModContract (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯) ⋯
+        (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback ⋯
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+      (Becoming.EndogenousOrder.scopeObs 16) Becoming.EndogenousOrder.scopeChannel
+      (fun x e => Becoming.ScopeDynamics.gEx (e ())) (fun x x_1 => 1) fun x => True)
+    (Becoming.PolyComposition.polyClosedGuard
+      (Becoming.PolyComposition.anchoredSelfModComponent (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯)
+        (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+      (Becoming.PolyComposition.anchoredSelfModContract (Becoming.EndogenousOrder.scopeBase 3 1 1 ⋯) ⋯
+        (Becoming.EndogenousOrder.scopeAdmitDec 1) Becoming.EndogenousOrder.scopeFallback ⋯
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.proposeAlwaysNarrow)
+      fun x => 8)
+    (fun x => 13, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, 1⟩) ∧
+  (∀ (s : Nat),
+      8 ≤
+        (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedWeb
+              (fun t => (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state t).fst ()) 8).level
+          s Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode.sub) ∧
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen
+          (fun t => (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state t).fst ()) 8).Raises
+      0
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_gatedGen_persists : ∀ (t : Nat),
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode.wide t ∈
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen
+          (fun s => (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state s).fst ()) 8).family
+      t
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_state_succ : ∀ (k : Nat),
+  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state (k + 1)).fst () = 11 ∧
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state (k + 1)).snd =
+      ⟨Becoming.EndogenousOrder.ScopeMode.wideReciprocal, 0⟩
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_step7_plus : ∀ (k : Nat),
+  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit (7 + k)).fst () = 0 ∧
+    (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit (7 + k)).snd =
+      ⟨Becoming.EndogenousOrder.ScopeMode.wideReciprocal, 0⟩
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_step5_plus : ∀ (k : Nat),
+  Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel (5 + k) = 0
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen_family4_empty_of_lt8 : ∀ (lvl : Nat → Nat),
+  lvl 3 < 8 → (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen lvl 8).family 4 = []
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_gatedGen_extinguishes : ∀ (k : Nat)
+  (y : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+  ¬y ∈
+      (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen
+            (fun s => (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit s).fst ()) 8).family
+        (4 + k)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_gatedGen_extinguishes : ∀ (k : Nat)
+  (y : Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.CoupledNode),
+  ¬y ∈
+      (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.gatedGen
+            Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 8).family
+        (4 + k)
+Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.witness_holds : ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state
+            0).fst
+        () =
+      13 ∧
+    (∀ (t : Nat),
+        1 ≤ t →
+          (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state t).fst () = 11 ∧
+            8 ≤ (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state t).fst ()) ∧
+      ∀ (t : Nat), 8 ≤ (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timelyRun.state t).fst ()) ∧
+  ((Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 0).fst () = 13 ∧
+      (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 1).fst () = 11 ∧
+        (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 2).fst () = 9 ∧
+          (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 3).fst () = 6 ∧
+            (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 3).fst () < 8 ∧
+              (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 4).fst () = 5 ∧
+                (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 5).fst () = 4 ∧
+                  (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit 6).fst () = 2 ∧
+                    ∀ (t : Nat),
+                      7 ≤ t → (Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayedOrbit t).fst () = 0) ∧
+    Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 0 = 13 ∧
+      Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 1 = 11 ∧
+        Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 2 = 9 ∧
+          Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 3 = 6 ∧
+            Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel 4 = 2 ∧
+              ∀ (t : Nat), 5 ≤ t → Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitchedNarrowLevel t = 0
+@Becoming.EndogenousOrder.sym_pureNash_iff_mutualBest : ∀ {Act : Type} (yield : Act → Act → Nat) (menu : Act → Bool)
+  (x y : Act),
+  Becoming.EndogenousOrder.PureNash yield (fun a b => yield b a) menu menu x y ↔
+    Becoming.Weighting.MutualBest yield menu x y
+@Becoming.EndogenousOrder.CourseRealization.rank₁_ge_prefix : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  T ≤ CR.horizon →
+    (∀ (t : Nat), t ≤ T → (CR.web x y).active t CR.form₁ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₁) →
+      (T + 1) * CR.stepYield₁ x ≤ CR.rank₁ x y
+@Becoming.EndogenousOrder.CourseRealization.rank₂_ge_prefix : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  T ≤ CR.horizon →
+    (∀ (t : Nat), t ≤ T → (CR.web x y).active t CR.form₂ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₂) →
+      (T + 1) * CR.stepYield₂ y ≤ CR.rank₂ x y
+@Becoming.EndogenousOrder.CourseRealization.rank₁_le_cutoff : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  (∀ (t : Nat), T < t → ¬((CR.web x y).active t CR.form₁ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₁)) →
+    CR.rank₁ x y ≤ (T + 1) * CR.stepYield₁ x
+@Becoming.EndogenousOrder.CourseRealization.rank₂_le_cutoff : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  (∀ (t : Nat), T < t → ¬((CR.web x y).active t CR.form₂ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₂)) →
+    CR.rank₂ x y ≤ (T + 1) * CR.stepYield₂ y
+@Becoming.EndogenousOrder.CourseRealization.rank₁_eq_full : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act},
+  (∀ (t : Nat),
+      t ≤ CR.horizon → (CR.web x y).active t CR.form₁ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₁) →
+    CR.rank₁ x y = (CR.horizon + 1) * CR.stepYield₁ x
+@Becoming.EndogenousOrder.CourseRealization.rank₂_eq_full : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act},
+  (∀ (t : Nat),
+      t ≤ CR.horizon → (CR.web x y).active t CR.form₂ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₂) →
+    CR.rank₂ x y = (CR.horizon + 1) * CR.stepYield₂ y
+@Becoming.EndogenousOrder.CourseRealization.rank₁_eq_cutoff : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  T ≤ CR.horizon →
+    (∀ (t : Nat), t ≤ T → (CR.web x y).active t CR.form₁ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₁) →
+      (∀ (t : Nat), T < t → ¬((CR.web x y).active t CR.form₁ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₁)) →
+        CR.rank₁ x y = (T + 1) * CR.stepYield₁ x
+@Becoming.EndogenousOrder.CourseRealization.rank₂_eq_cutoff : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) {x y : Act} {T : Nat},
+  T ≤ CR.horizon →
+    (∀ (t : Nat), t ≤ T → (CR.web x y).active t CR.form₂ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₂) →
+      (∀ (t : Nat), T < t → ¬((CR.web x y).active t CR.form₂ ∧ (CR.web x y).Admits ((CR.web x y).level t) t CR.form₂)) →
+        CR.rank₂ x y = (T + 1) * CR.stepYield₂ y
+@Becoming.EndogenousOrder.course_menu_widening_nash_obstruction : ∀ {Act F C : Type}
+  (CR : Becoming.EndogenousOrder.CourseRealization Act F C) (acts : List Act) (narrow wide : Act → Bool) (r₀ d₀ : Act),
+  r₀ ∈ acts →
+    d₀ ∈ acts →
+      d₀ ≠ r₀ →
+        (∀ (x : Act), narrow x = true ↔ x = r₀) →
+          (∀ (x : Act), wide x = true ↔ x = r₀ ∨ x = d₀) →
+            (∀ (t : Nat),
+                t ≤ CR.horizon →
+                  (CR.web r₀ r₀).active t CR.form₁ ∧ (CR.web r₀ r₀).Admits ((CR.web r₀ r₀).level t) t CR.form₁) →
+              (∀ (t : Nat),
+                  t ≤ CR.horizon →
+                    (CR.web r₀ r₀).active t CR.form₂ ∧ (CR.web r₀ r₀).Admits ((CR.web r₀ r₀).level t) t CR.form₂) →
+                ∀ {T_u1 T_u2 T_c T_rd T_dr : Nat},
+                  T_u1 ≤ CR.horizon →
+                    T_u2 ≤ CR.horizon →
+                      T_c ≤ CR.horizon →
+                        (∀ (t : Nat),
+                            t ≤ T_u1 →
+                              (CR.web d₀ r₀).active t CR.form₁ ∧
+                                (CR.web d₀ r₀).Admits ((CR.web d₀ r₀).level t) t CR.form₁) →
+                          (∀ (t : Nat),
+                              t ≤ T_u2 →
+                                (CR.web r₀ d₀).active t CR.form₂ ∧
+                                  (CR.web r₀ d₀).Admits ((CR.web r₀ d₀).level t) t CR.form₂) →
+                            (CR.horizon + 1) * CR.stepYield₁ r₀ < (T_u1 + 1) * CR.stepYield₁ d₀ →
+                              (CR.horizon + 1) * CR.stepYield₂ r₀ < (T_u2 + 1) * CR.stepYield₂ d₀ →
+                                (∀ (t : Nat),
+                                    t ≤ T_c →
+                                      (CR.web d₀ d₀).active t CR.form₁ ∧
+                                        (CR.web d₀ d₀).Admits ((CR.web d₀ d₀).level t) t CR.form₁) →
+                                  (∀ (t : Nat),
+                                      T_c < t →
+                                        ¬((CR.web d₀ d₀).active t CR.form₁ ∧
+                                            (CR.web d₀ d₀).Admits ((CR.web d₀ d₀).level t) t CR.form₁)) →
+                                    (∀ (t : Nat),
+                                        t ≤ T_c →
+                                          (CR.web d₀ d₀).active t CR.form₂ ∧
+                                            (CR.web d₀ d₀).Admits ((CR.web d₀ d₀).level t) t CR.form₂) →
+                                      (∀ (t : Nat),
+                                          T_c < t →
+                                            ¬((CR.web d₀ d₀).active t CR.form₂ ∧
+                                                (CR.web d₀ d₀).Admits ((CR.web d₀ d₀).level t) t CR.form₂)) →
+                                        (∀ (t : Nat),
+                                            T_rd < t →
+                                              ¬((CR.web r₀ d₀).active t CR.form₁ ∧
+                                                  (CR.web r₀ d₀).Admits ((CR.web r₀ d₀).level t) t CR.form₁)) →
+                                          (∀ (t : Nat),
+                                              T_dr < t →
+                                                ¬((CR.web d₀ r₀).active t CR.form₂ ∧
+                                                    (CR.web d₀ r₀).Admits ((CR.web d₀ r₀).level t) t CR.form₂)) →
+                                            (T_rd + 1) * CR.stepYield₁ r₀ < (T_c + 1) * CR.stepYield₁ d₀ →
+                                              (T_dr + 1) * CR.stepYield₂ r₀ < (T_c + 1) * CR.stepYield₂ d₀ →
+                                                (T_c + 1) * CR.stepYield₁ d₀ < (CR.horizon + 1) * CR.stepYield₁ r₀ →
+                                                  (T_c + 1) * CR.stepYield₂ d₀ < (CR.horizon + 1) * CR.stepYield₂ r₀ →
+                                                    Becoming.Weighting.WidensOn acts wide narrow ∧
+                                                      (∀ (x y : Act),
+                                                          Becoming.EndogenousOrder.PureNash CR.rank₁ CR.rank₂ narrow
+                                                              narrow x y ↔
+                                                            x = r₀ ∧ y = r₀) ∧
+                                                        (∀ (x y : Act),
+                                                            Becoming.EndogenousOrder.PureNash CR.rank₁ CR.rank₂ wide
+                                                                wide x y ↔
+                                                              x = d₀ ∧ y = d₀) ∧
+                                                          CR.rank₁ d₀ d₀ < CR.rank₁ r₀ r₀ ∧
+                                                            CR.rank₂ d₀ d₀ < CR.rank₂ r₀ r₀
+@Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash : ∀ {Act F C : Type}
+  (gated : Becoming.EndogenousOrder.CourseRealization Act F C) (wide : Act → Bool) (r₀ d₀ : Act),
+  (∀ (x : Act), wide x = true ↔ x = r₀ ∨ x = d₀) →
+    (∀ (t : Nat),
+        t ≤ gated.horizon →
+          (gated.web r₀ r₀).active t gated.form₁ ∧ (gated.web r₀ r₀).Admits ((gated.web r₀ r₀).level t) t gated.form₁) →
+      (∀ (t : Nat),
+          t ≤ gated.horizon →
+            (gated.web r₀ r₀).active t gated.form₂ ∧
+              (gated.web r₀ r₀).Admits ((gated.web r₀ r₀).level t) t gated.form₂) →
+        (∀ (t : Nat),
+            t ≤ gated.horizon →
+              (gated.web r₀ d₀).active t gated.form₁ ∧
+                (gated.web r₀ d₀).Admits ((gated.web r₀ d₀).level t) t gated.form₁) →
+          (∀ (t : Nat),
+              t ≤ gated.horizon →
+                (gated.web d₀ r₀).active t gated.form₂ ∧
+                  (gated.web d₀ r₀).Admits ((gated.web d₀ r₀).level t) t gated.form₂) →
+            ∀ {T_gate : Nat},
+              (∀ (t : Nat),
+                  T_gate < t →
+                    ¬((gated.web d₀ r₀).active t gated.form₁ ∧
+                        (gated.web d₀ r₀).Admits ((gated.web d₀ r₀).level t) t gated.form₁)) →
+                (∀ (t : Nat),
+                    T_gate < t →
+                      ¬((gated.web r₀ d₀).active t gated.form₂ ∧
+                          (gated.web r₀ d₀).Admits ((gated.web r₀ d₀).level t) t gated.form₂)) →
+                  (∀ (t : Nat),
+                      T_gate < t →
+                        ¬((gated.web d₀ d₀).active t gated.form₁ ∧
+                            (gated.web d₀ d₀).Admits ((gated.web d₀ d₀).level t) t gated.form₁)) →
+                    (∀ (t : Nat),
+                        T_gate < t →
+                          ¬((gated.web d₀ d₀).active t gated.form₂ ∧
+                              (gated.web d₀ d₀).Admits ((gated.web d₀ d₀).level t) t gated.form₂)) →
+                      (T_gate + 1) * gated.stepYield₁ d₀ < (gated.horizon + 1) * gated.stepYield₁ r₀ →
+                        (T_gate + 1) * gated.stepYield₂ d₀ < (gated.horizon + 1) * gated.stepYield₂ r₀ →
+                          ∀ (x y : Act),
+                            Becoming.EndogenousOrder.PureNash gated.rank₁ gated.rank₂ wide wide x y ↔ x = r₀ ∧ y = r₀
+Becoming.EndogenousOrder.CourseNashObstructionWitness.waitsAll_restrain_p1 : ∀
+  (y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  (Becoming.Law.run
+        (Becoming.Withholding.waitsAll
+          (Becoming.EndogenousOrder.CourseNashObstructionWitness.gateWaits
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain y))
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.gateInit).state
+    t Becoming.EndogenousOrder.CourseNashObstructionWitness.GateNode.p1
+Becoming.EndogenousOrder.CourseNashObstructionWitness.waitsAll_restrain_p2 : ∀
+  (x : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  (Becoming.Law.run
+        (Becoming.Withholding.waitsAll
+          (Becoming.EndogenousOrder.CourseNashObstructionWitness.gateWaits x
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain))
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.gateInit).state
+    t Becoming.EndogenousOrder.CourseNashObstructionWitness.GateNode.p2
+Becoming.EndogenousOrder.CourseNashObstructionWitness.gateOpen_true_iff_p1 : ∀
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.gateOpenFn true x t = true ↔
+    (Becoming.Law.run
+          (Becoming.Withholding.waitsAll (Becoming.EndogenousOrder.CourseNashObstructionWitness.gateWaits x y))
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.gateInit).state
+      t Becoming.EndogenousOrder.CourseNashObstructionWitness.GateNode.p1
+Becoming.EndogenousOrder.CourseNashObstructionWitness.gateOpen_true_iff_p2 : ∀
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.gateOpenFn true y t = true ↔
+    (Becoming.Law.run
+          (Becoming.Withholding.waitsAll (Becoming.EndogenousOrder.CourseNashObstructionWitness.gateWaits x y))
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.gateInit).state
+      t Becoming.EndogenousOrder.CourseNashObstructionWitness.GateNode.p2
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_rr : ∀ (gated : Bool) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep gated
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain t =
+    9
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_oo : ∀ (gated : Bool) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep gated
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw (t + 1) =
+    3
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_ungated_or : ∀ (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep false
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain (t + 2) =
+    3
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_ungated_ro : ∀ (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep false
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw (t + 2) =
+    3
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_gated_or_ge6 : ∀ (t : Nat),
+  6 ≤
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep true
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain (t + 1)
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep_gated_ro_ge6 : ∀ (t : Nat),
+  6 ≤
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep true
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw (t + 1)
+Becoming.EndogenousOrder.CourseNashObstructionWitness.poolTake_le_poolStep : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.poolTake1 gated x y t +
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.poolTake2 gated x y t ≤
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.poolStep gated x y t
+Becoming.EndogenousOrder.CourseNashObstructionWitness.nash_balances : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+  (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashFlow gated x y).Balances
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y)
+Becoming.EndogenousOrder.CourseNashObstructionWitness.nash_acting : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+  (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashFlow gated x y).Acting
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y)
+Becoming.EndogenousOrder.CourseNashObstructionWitness.nash_dependent : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+  (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).Dependent
+Becoming.EndogenousOrder.CourseNashObstructionWitness.adm1Bool_iff : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.adm1Bool gated x y t = true ↔
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).active t
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm.f1 ∧
+      (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).Admits
+        ((Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).level t) t
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm.f1
+Becoming.EndogenousOrder.CourseNashObstructionWitness.adm2Bool_iff : ∀ (gated : Bool)
+  (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct) (t : Nat),
+  Becoming.EndogenousOrder.CourseNashObstructionWitness.adm2Bool gated x y t = true ↔
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).active t
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm.f2 ∧
+      (Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).Admits
+        ((Becoming.EndogenousOrder.CourseNashObstructionWitness.nashWeb gated x y).level t) t
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm.f2
+Becoming.EndogenousOrder.CourseNashObstructionWitness.ocG_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.ocG k)
+Becoming.EndogenousOrder.CourseNashObstructionWitness.oc_compose_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess Becoming.EndogenousOrder.CourseNashObstructionWitness.ocComp
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.ocContract
+    (fun x => (Becoming.ScopeDynamics.reciprocalObs 14 () x, ()))
+    Becoming.ScopeDynamics.OpenCompositionBridge.openReciprocalChannel
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.ocG (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard Becoming.EndogenousOrder.CourseNashObstructionWitness.ocComp
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.ocContract fun x => 4)
+  (fun x => 9, 1, ())
+Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_ctrl_succ : ∀ (k : Nat),
+  (Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun.state (k + 1)).snd = (0, ())
+Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_matches_gated_or : ∀ (t : Nat),
+  (Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun.state t).fst () =
+    (Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.web
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain).level
+      t Becoming.EndogenousOrder.CourseNashObstructionWitness.NashCond.cPool
+Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds : Becoming.Weighting.WidensOn
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.nashActs
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.wideMenu
+    Becoming.EndogenousOrder.CourseNashObstructionWitness.narrowMenu ∧
+  (∀ (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+      Becoming.EndogenousOrder.PureNash Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₂
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.narrowMenu
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.narrowMenu x y ↔
+        x = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain ∧
+          y = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain) ∧
+    (∀ (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+        Becoming.EndogenousOrder.PureNash Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₂
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.wideMenu
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.wideMenu x y ↔
+          x = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw ∧
+            y = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw) ∧
+      Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw =
+          5 ∧
+        Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain =
+            6 ∧
+          Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+                Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+                Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw <
+              Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₁
+                Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+                Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain ∧
+            Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₂
+                  Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+                  Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw <
+                Becoming.EndogenousOrder.CourseNashObstructionWitness.ungatedRealization.rank₂
+                  Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain
+                  Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain ∧
+              (∀ (t : Nat),
+                  1 ≤ t →
+                    ¬(Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.web
+                            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+                            Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain).Admits
+                        ((Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.web
+                              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+                              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain).level
+                          t)
+                        t Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm.f1) ∧
+                (∀ (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+                    Becoming.EndogenousOrder.PureNash
+                        Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.rank₁
+                        Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.rank₂
+                        Becoming.EndogenousOrder.CourseNashObstructionWitness.wideMenu
+                        Becoming.EndogenousOrder.CourseNashObstructionWitness.wideMenu x y ↔
+                      x = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain ∧
+                        y = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain) ∧
+                  ∀ (t : Nat),
+                    (Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun.state t).fst () =
+                        (Becoming.EndogenousOrder.CourseNashObstructionWitness.gatedRealization.web
+                              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.overdraw
+                              Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain).level
+                          t Becoming.EndogenousOrder.CourseNashObstructionWitness.NashCond.cPool ∧
+                      4 ≤ (Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun.state t).fst ()
+@Becoming.EndogenousOrder.endogenousOrder_admits_rival : ∀ {X Mode : Type} {S Obs Dist Int Ext : Mode → Type}
+  {Site Env Act F C Pos F' : Type}
+  (Law : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F C → Prop)
+  {sys : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F C},
+  Law sys →
+    ∀ {region : Pos → F' → Prop},
+      (∃ p f, ¬region p f) →
+        Law sys ∧ Becoming.Rival (Becoming.bounded region) ∧ ¬Becoming.Unrestricted (Becoming.bounded region)
+@Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted : ∀ {X Mode : Type}
+  {S Obs Dist Int Ext : Mode → Type} {Site Env Act F C Pos F' : Type}
+  (Law : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F C → Prop) (p : Pos)
+  (f : F') {sys : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F C},
+  Law sys →
+    ¬∀ (sys' : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F C)
+        (sig : Pos → Nat → F' → Prop), Law sys' → Becoming.Unrestricted sig
+Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds : (∀ (t : Nat),
+    3 ≤ t →
+      Becoming.Weighting.IncreasingInOwn Becoming.EndogenousOrder.EndogenousFirewallWitness.system.updater.items
+        Becoming.EndogenousOrder.EndogenousFirewallWitness.system.updater.own
+        (Becoming.EndogenousOrder.EndogenousFirewallWitness.system.updater.ranksAt
+          Becoming.EndogenousOrder.EndogenousFirewallWitness.system.feedback t)) ∧
+  (∀ (t : Nat),
+      Becoming.EndogenousOrder.EndogenousFirewallWitness.system.updater.posAt
+          Becoming.EndogenousOrder.EndogenousFirewallWitness.system.feedback t
+          Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.victim =
+        0) ∧
+    (∀ (x y : Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct),
+        Becoming.EndogenousOrder.PureNash Becoming.EndogenousOrder.EndogenousFirewallWitness.system.realization.rank₁
+            Becoming.EndogenousOrder.EndogenousFirewallWitness.system.realization.rank₂
+            Becoming.EndogenousOrder.EndogenousFirewallWitness.system.wideMenu
+            Becoming.EndogenousOrder.EndogenousFirewallWitness.system.wideMenu x y ↔
+          x = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain ∧
+            y = Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct.restrain) ∧
+      Becoming.Rival (Becoming.bounded Becoming.EndogenousOrder.EndogenousFirewallWitness.firewallRegion) ∧
+        ¬Becoming.Unrestricted (Becoming.bounded Becoming.EndogenousOrder.EndogenousFirewallWitness.firewallRegion) ∧
+          (Becoming.Clearing.valuation.Held ∧ ¬Becoming.Clearing.valuation.Significant) ∧
+            ¬∀
+                (sys' :
+                  Becoming.EndogenousOrder.EndogenousOrderSystem Becoming.EndogenousOrder.OnlineWeightWitness.OWItem
+                    Becoming.EndogenousOrder.ScopeMode Becoming.EndogenousOrder.ScopeS Becoming.EndogenousOrder.ScopeObs
+                    Becoming.EndogenousOrder.ScopeDist Becoming.EndogenousOrder.ScopeInt
+                    Becoming.EndogenousOrder.ScopeExt Unit Unit
+                    Becoming.EndogenousOrder.CourseNashObstructionWitness.NashAct
+                    Becoming.EndogenousOrder.CourseNashObstructionWitness.NashForm
+                    Becoming.EndogenousOrder.CourseNashObstructionWitness.NashCond)
+                (sig : Becoming.Clearing.Formation → Nat → Becoming.EndogenousOrder.OnlineWeightWitness.OWItem → Prop),
+                (∀ (t : Nat),
+                    sys'.updater.posAt sys'.feedback t Becoming.EndogenousOrder.OnlineWeightWitness.OWItem.victim = 0) →
+                  Becoming.Unrestricted sig

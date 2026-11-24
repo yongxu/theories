@@ -1,0 +1,1604 @@
+@Becoming.Flow.deficit_lowers_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t d : Nat}, L.BalancesOn W ds t → L.replenishment ds t + d ≤ L.uptake ds t → W.stock ds (t + 1) + d ≤ W.stock ds t
+@Becoming.Flow.deficit_bounded_prefix : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {T d : Nat} (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+    (∀ (k : Nat), k < n → L.replenishment ds (T + k) + d ≤ L.uptake ds (T + k)) →
+      W.stock ds (T + n) + n * d ≤ W.stock ds T
+@Becoming.Flow.deficit_bounded_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {T n d : Nat},
+  (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+    (∀ (k : Nat), k < n → L.replenishment ds (T + k) + d ≤ L.uptake ds (T + k)) →
+      W.stock ds (T + n) + n * d ≤ W.stock ds T ∧
+        ∀ (j₁ j₂ : Nat), j₁ ≤ j₂ → j₂ ≤ n → W.stock ds (T + j₂) + (j₂ - j₁) * d ≤ W.stock ds (T + j₁)
+@Becoming.Flow.below_of_deficit_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {m T n d : Nat},
+  (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+    (∀ (k : Nat), k < n → L.replenishment ds (T + k) + d ≤ L.uptake ds (T + k)) →
+      W.stock ds T < n * d + m → W.stock ds (T + n) < m
+@Becoming.Flow.below_of_excess_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {m T n : Nat},
+  (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+    (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+      W.stock ds T < n + m → W.stock ds (T + n) < m
+@Becoming.Flow.family_deficit_ends_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {m T n k d : Nat} {g : F} {e : C},
+  (∀ (j : Nat), j < n + k → L.BalancesOn W ds (T + j)) →
+    (∀ (j : Nat) (f : F),
+        j < n + k →
+          f ∈ L.present (T + j) →
+            ∀ (d' : C),
+              d' ∈ ds → 0 < L.give (T + j) f d' → ∃ e', e' ∈ ds ∧ W.requires (T + j) f e' ∧ m ≤ W.need (T + j) f e') →
+      (∀ (j : Nat), j < n + k → ∀ (d' : C), d' ∈ ds → L.GiversSupported W (T + j) d') →
+        (∀ (j : Nat), j < n → L.replenishment ds (T + j) + d ≤ L.uptake ds (T + j)) →
+          W.stock ds T < n * d + m →
+            (W.active (T + n + k) g → W.Supported (T + n + k) g) →
+              e ∈ ds → W.requires (T + n + k) g e → m ≤ W.need (T + n + k) g e → ¬W.active (T + n + k) g
+@Becoming.Flow.held_excess_ends_within : ∀ {F C : Type} [DecidableEq F] {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {c : C} {m T n k d : Nat} {g : F},
+  0 < d →
+    ∀ {holders : F → Bool} {fam : F → List C} {lose : Nat → F → Nat},
+      (∀ (j : Nat), j < n + k → L.BalancesOn W [c] (T + j)) →
+        (∀ (j : Nat), j < n → ∀ (h : F), h ∈ L.present (T + j) → holders h = true → L.BalancesOn W (fam h) (T + j)) →
+          (∀ (j : Nat) (f : F),
+              j < n + k →
+                f ∈ L.present (T + j) → 0 < L.give (T + j) f c → W.requires (T + j) f c ∧ m ≤ W.need (T + j) f c) →
+            (∀ (j : Nat), j < n + k → L.GiversSupported W (T + j) c) →
+              (∀ (j : Nat), j < n → Becoming.Distinct (L.present (T + j))) →
+                (∀ (j : Nat),
+                    j < n →
+                      ∀ (h : F),
+                        h ∈ L.present (T + j) →
+                          holders h = true →
+                            ∀ (q : F),
+                              q ∈ L.present (T + j) →
+                                ¬q = h → ∀ (x : C), x ∈ fam h → L.take (T + j) q x = 0 ∧ L.give (T + j) q x = 0) →
+                  (∀ (j : Nat),
+                      j < n →
+                        ∀ (h : F),
+                          h ∈ L.present (T + j) →
+                            holders h = true → W.stock (fam h) (T + j + 1) = W.stock (fam h) (T + j)) →
+                    (∀ (j : Nat),
+                        j < n →
+                          ∀ (h : F),
+                            h ∈ L.present (T + j) →
+                              holders h = true →
+                                lose (T + j) h + Becoming.total (fam h) (L.give (T + j) h) + L.give (T + j) h c ≤
+                                  Becoming.total (fam h) (L.take (T + j) h) + L.take (T + j) h c) →
+                      (∀ (j : Nat),
+                          j < n →
+                            L.restGiven holders (T + j) c + d ≤
+                              Becoming.total (L.present (T + j)) fun h => bif holders h then lose (T + j) h else 0) →
+                        W.level T c < n * d + m →
+                          (W.active (T + n + k) g → W.Supported (T + n + k) g) →
+                            W.requires (T + n + k) g c →
+                              m ≤ W.need (T + n + k) g c →
+                                ∀ {obs : F → C → Prop},
+                                  (∀ (h : F) (x : C), holders h = true → W.CoupledInto obs h x → x ∈ fam h) →
+                                    (∀ (h : F), holders h = true → ¬c ∈ fam h) →
+                                      ¬W.active (T + n + k) g ∧
+                                        W.level (T + n) c < m ∧
+                                          (∀ (j₁ j₂ : Nat),
+                                              j₁ ≤ j₂ →
+                                                j₂ ≤ n → W.level (T + j₂) c + (j₂ - j₁) * d ≤ W.level (T + j₁) c) ∧
+                                            (∀ (j₁ j₂ : Nat),
+                                                j₁ < j₂ → j₂ ≤ n → W.level (T + j₂) c < W.level (T + j₁) c) ∧
+                                              ∀ (h : F), holders h = true → ¬W.CoupledInto obs h c
+@Becoming.UnifiedDrawdown.mem_eraseOne_of_ne : ∀ {F : Type} [inst : DecidableEq F] {a x : F},
+  a ≠ x → ∀ {l : List F}, a ∈ l → a ∈ Becoming.UnifiedDrawdown.eraseOne x l
+@Becoming.UnifiedDrawdown.total_eraseOne : ∀ {F : Type} [inst : DecidableEq F] (q : F → Nat) {x : F} {l : List F},
+  x ∈ l → Becoming.total (Becoming.UnifiedDrawdown.eraseOne x l) q + q x = Becoming.total l q
+@Becoming.UnifiedDrawdown.total_map_le : ∀ {α F : Type} [DecidableEq F] {agents : List α},
+  Becoming.Distinct agents →
+    ∀ {P : List F} {toF : α → F},
+      (∀ (i j : α), i ∈ agents → j ∈ agents → toF i = toF j → i = j) →
+        (∀ (i : α), i ∈ agents → toF i ∈ P) →
+          ∀ (q : F → Nat), (Becoming.total agents fun i => q (toF i)) ≤ Becoming.total P q
+@Becoming.UnifiedDrawdown.total_only_eq : ∀ {α : Type} [DecidableEq α] {q : α → Nat} {a : α} {l : List α},
+  Becoming.Distinct l → a ∈ l → (∀ (b : α), b ∈ l → ¬b = a → q b = 0) → Becoming.total l q = q a
+@Becoming.UnifiedDrawdown.lookupBy_eq_of_mem : ∀ {α F : Type} [inst : DecidableEq F] {toF : α → F} (val : α → Nat)
+  {agents : List α},
+  (∀ (i j : α), i ∈ agents → j ∈ agents → toF i = toF j → i = j) →
+    ∀ {i : α}, i ∈ agents → Becoming.UnifiedDrawdown.lookupBy toF val agents (toF i) = val i
+@Becoming.UnifiedDrawdown.sumDraws_eq_total : ∀ {α : Type} (agents : List α) (f : α → Nat),
+  Becoming.AdaptiveLoops.sumDraws agents (fun i x => f i) () = Becoming.total agents f
+@Becoming.UnifiedDrawdown.holdersOf_true_iff : ∀ {α F : Type} [inst : DecidableEq F] {agents : List α} {toF : α → F}
+  {f : F}, Becoming.UnifiedDrawdown.holdersOf agents toF f = true ↔ ∃ i, i ∈ agents ∧ toF i = f
+@Becoming.UnifiedDrawdown.holdersOf_mem : ∀ {α F : Type} [inst : DecidableEq F] {agents : List α} {toF : α → F} {i : α},
+  i ∈ agents → Becoming.UnifiedDrawdown.holdersOf agents toF (toF i) = true
+@Becoming.UnifiedDrawdown.dec_all_or_exists : ∀ {P : Nat → Prop},
+  (∀ (t : Nat), P t ∨ ¬P t) → ∀ (n : Nat), (∀ (t : Nat), t < n → P t) ∨ ∃ t, t < n ∧ ¬P t
+@Becoming.UnifiedDrawdown.parametric_local_accounts_depletion : ∀ {α F C : Type} [inst : DecidableEq F]
+  {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop} {agents : List α},
+  Becoming.Distinct agents →
+    ∀ (toF : α → F),
+      (∀ (i j : α), i ∈ agents → j ∈ agents → toF i = toF j → i = j) →
+        ∀ (fam : α → List C) (cSub : C) (lose : α → Nat)
+          (model : α → Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser Nat) {n k m d : Nat} {g : F},
+          0 < d →
+            (∀ (t : Nat), t < n → ∀ (i : α), i ∈ agents → toF i ∈ L.present t) →
+              (∀ (t : Nat), t < n → Becoming.Distinct (L.present t)) →
+                (∀ (j : Nat), j < n + k → L.BalancesOn W [cSub] j) →
+                  (∀ (t : Nat), t < n → ∀ (i : α), i ∈ agents → L.BalancesOn W (fam i) t) →
+                    (∀ (j : Nat) (f : F),
+                        j < n + k → f ∈ L.present j → 0 < L.give j f cSub → W.requires j f cSub ∧ m ≤ W.need j f cSub) →
+                      (∀ (j : Nat), j < n + k → L.GiversSupported W j cSub) →
+                        (∀ (t : Nat),
+                            t < n →
+                              ∀ (i : α),
+                                i ∈ agents →
+                                  ∀ (q : F),
+                                    q ∈ L.present t →
+                                      ¬q = toF i → ∀ (x : C), x ∈ fam i → L.take t q x = 0 ∧ L.give t q x = 0) →
+                          (∀ (t : Nat), t < n → ∀ (i : α), i ∈ agents → W.stock (fam i) (t + 1) = W.stock (fam i) t) →
+                            (∀ (t : Nat), t < n → ∀ (i : α), i ∈ agents → L.give t (toF i) cSub = 0) →
+                              (∀ (t : Nat),
+                                  t < n →
+                                    ∀ (i : α),
+                                      i ∈ agents →
+                                        lose i + Becoming.total (fam i) (L.give t (toF i)) + L.give t (toF i) cSub =
+                                          Becoming.total (fam i) (L.take t (toF i)) + L.take t (toF i) cSub) →
+                                (∀ (i : α) (s a : Nat), (model i).predict s a = s + a - lose i) →
+                                  (∀ (t : Nat),
+                                      t < n →
+                                        ∀ (i : α),
+                                          i ∈ agents → L.take t (toF i) cSub = (model i).chosen (W.stock (fam i) t)) →
+                                    (∀ (t : Nat),
+                                        t < n → ∀ (i : α), i ∈ agents → (model i).preferred = W.stock (fam i) t) →
+                                      (∀ (i : α), i ∈ agents → lose i = (model i).first ∨ lose i ∈ (model i).others) →
+                                        (∀ (t : Nat),
+                                            t < n → ∀ (i : α), i ∈ agents → L.take t (toF i) cSub ≤ L.given t cSub) →
+                                          (∀ (t : Nat),
+                                              t < n →
+                                                ∀ (q : F),
+                                                  q ∈ L.present t →
+                                                    (∀ (i : α), i ∈ agents → q ≠ toF i) →
+                                                      L.take t q cSub ≤ L.given t cSub) →
+                                            (∀ (t : Nat),
+                                                t < n →
+                                                  L.restGiven (Becoming.UnifiedDrawdown.holdersOf agents toF) t cSub +
+                                                      d ≤
+                                                    Becoming.AdaptiveLoops.sumDraws agents (fun i x => lose i) ()) →
+                                              W.level 0 cSub < n * d + m →
+                                                (W.active (n + k) g → W.Supported (n + k) g) →
+                                                  W.requires (n + k) g cSub →
+                                                    m ≤ W.need (n + k) g cSub →
+                                                      (∀ (i : α) (x : C),
+                                                          i ∈ agents → W.CoupledInto obs (toF i) x → x ∈ fam i) →
+                                                        (∀ (i : α), i ∈ agents → ¬cSub ∈ fam i) →
+                                                          (∀ (t : Nat),
+                                                              t < n →
+                                                                ∀ (i : α),
+                                                                  i ∈ agents →
+                                                                    W.stock (fam i) (t + 1) =
+                                                                        W.stock (fam i) t + L.take t (toF i) cSub -
+                                                                          lose i ∧
+                                                                      L.take t (toF i) cSub = lose i ∧
+                                                                        Becoming.UnifiedDrawdown.localError (model i)
+                                                                              (fun u => W.stock (fam i) u)
+                                                                              (fun u => L.take u (toF i) cSub) t =
+                                                                            0 ∧
+                                                                          (model i).risk (W.stock (fam i) t)
+                                                                              (L.take t (toF i) cSub) =
+                                                                            0) ∧
+                                                            (∀ (t : Nat),
+                                                                t < n → L.WithinOwn t cSub ∧ ¬L.WithinJoint t cSub) ∧
+                                                              (∀ (i : α),
+                                                                  i ∈ agents → ¬W.CoupledInto obs (toF i) cSub) ∧
+                                                                (∀ (l_safe : Nat → C → Nat),
+                                                                    (∀ (s : Nat),
+                                                                        s ≤ n →
+                                                                          ∀ (i : α),
+                                                                            i ∈ agents →
+                                                                              ∀ (x : C),
+                                                                                x ∈ fam i → l_safe s x = W.level s x) →
+                                                                      W.AlikeThroughAll obs
+                                                                          (fun f =>
+                                                                            Becoming.UnifiedDrawdown.holdersOf agents
+                                                                                toF f =
+                                                                              true)
+                                                                          W.level l_safe n ∧
+                                                                        ∀ (select : (Nat → C → Nat) → Prop),
+                                                                          W.SelectsThroughAll obs
+                                                                              (fun f =>
+                                                                                Becoming.UnifiedDrawdown.holdersOf
+                                                                                    agents toF f =
+                                                                                  true)
+                                                                              n select →
+                                                                            (select W.level ↔ select l_safe)) ∧
+                                                                  W.level n cSub < m ∧
+                                                                    (∀ (t₁ t₂ : Nat),
+                                                                        t₁ ≤ t₂ →
+                                                                          t₂ ≤ n →
+                                                                            W.level t₂ cSub + (t₂ - t₁) * d ≤
+                                                                              W.level t₁ cSub) ∧
+                                                                      (∀ (t₁ t₂ : Nat),
+                                                                          t₁ < t₂ →
+                                                                            t₂ ≤ n →
+                                                                              W.level t₂ cSub < W.level t₁ cSub) ∧
+                                                                        ¬W.active (n + k) g
+Becoming.UnifiedDrawdown.heldPair_as_parametric_instance : (∀ (t : Nat),
+    t < 2 →
+      Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+        ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool ∧
+          Becoming.UnifiedDrawdown.localError Becoming.FreeEnergyGuarantees.SharedModels.holder
+                (fun u =>
+                  Becoming.Optimum.HeldPair.web.stock (Becoming.Optimum.HeldPair.store Becoming.Witnesses.Member.first)
+                    u)
+                (fun u =>
+                  Becoming.Optimum.HeldPair.flow.take u Becoming.Witnesses.Member.first
+                    Becoming.Optimum.HeldPair.Spot.pool)
+                t =
+              0 ∧
+            Becoming.UnifiedDrawdown.localError Becoming.FreeEnergyGuarantees.SharedModels.holder
+                  (fun u =>
+                    Becoming.Optimum.HeldPair.web.stock
+                      (Becoming.Optimum.HeldPair.store Becoming.Witnesses.Member.second) u)
+                  (fun u =>
+                    Becoming.Optimum.HeldPair.flow.take u Becoming.Witnesses.Member.second
+                      Becoming.Optimum.HeldPair.Spot.pool)
+                  t =
+                0 ∧
+              Becoming.FreeEnergyGuarantees.SharedModels.holder.risk
+                    (Becoming.Optimum.HeldPair.web.stock
+                      (Becoming.Optimum.HeldPair.store Becoming.Witnesses.Member.first) t)
+                    (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.first
+                      Becoming.Optimum.HeldPair.Spot.pool) =
+                  0 ∧
+                Becoming.FreeEnergyGuarantees.SharedModels.holder.risk
+                    (Becoming.Optimum.HeldPair.web.stock
+                      (Becoming.Optimum.HeldPair.store Becoming.Witnesses.Member.second) t)
+                    (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.second
+                      Becoming.Optimum.HeldPair.Spot.pool) =
+                  0) ∧
+  (∀ (k : Nat) (g : Becoming.Optimum.HeldPair.Member),
+      Becoming.Optimum.HeldPair.web.requires (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+        1 ≤ Becoming.Optimum.HeldPair.web.need (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+          ¬Becoming.Optimum.HeldPair.web.active (0 + 2 + k) g) ∧
+    ∀ (h : Becoming.Optimum.HeldPair.Member),
+      Becoming.Optimum.HeldPair.holders h = true →
+        ¬Becoming.Optimum.HeldPair.web.CoupledInto Becoming.Optimum.HeldPair.observes h
+            Becoming.Optimum.HeldPair.Spot.pool
+@Becoming.UnifiedDrawdown.firstApart_of_monitor : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {l_drain l_safe : Nat → C → Nat} {mon : F} {T_warn : Nat},
+  group mon →
+    ¬(W.Admits (l_drain T_warn) T_warn mon ↔ W.Admits (l_safe T_warn) T_warn mon) →
+      (∀ (g : F), group g → ∀ (t : Nat), t < T_warn → (W.Admits (l_drain t) t g ↔ W.Admits (l_safe t) t g)) →
+        W.FirstApart group l_drain l_safe T_warn
+@Becoming.UnifiedDrawdown.pooled_detects_before_collapse : ∀ {F C : Type} {W : Becoming.Web F C}
+  {obs pooledObs : F → C → Prop} {isAgent pooledGroup : F → Prop} {feasible keeps : (Nat → C → Nat) → Prop}
+  {l_drain l_safe : Nat → C → Nat} {N_ret T_warn : Nat} {mon : F},
+  Becoming.NoReturnAt feasible keeps l_drain N_ret →
+    W.AlikeThroughAll obs isAgent l_drain l_safe N_ret →
+      T_warn < N_ret →
+        pooledGroup mon →
+          ¬W.AlikeThroughUpTo pooledObs mon l_drain l_safe T_warn →
+            W.FirstApart pooledGroup l_drain l_safe T_warn →
+              (¬W.ReadableInTime isAgent feasible keeps l_drain l_safe ∧
+                  (∀ (sel : Nat → (Nat → C → Nat) → Prop),
+                      (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly isAgent s (sel s)) →
+                        ¬Becoming.Web.ReadsInTime sel feasible keeps l_drain l_safe) ∧
+                    ∀ (select : (Nat → C → Nat) → Prop),
+                      W.SelectsThroughAll obs isAgent N_ret select → (select l_drain ↔ select l_safe)) ∧
+                (∃ select,
+                    W.SelectsThrough pooledObs mon T_warn select ∧
+                      W.SelectsThroughAll pooledObs pooledGroup T_warn select ∧ select l_drain ∧ ¬select l_safe) ∧
+                  W.ReadableInTime pooledGroup feasible keeps l_drain l_safe ∧
+                    Becoming.Recoverable feasible keeps l_drain T_warn
+@Becoming.UnifiedDrawdown.pooled_restraint_restores_viability : ∀ {α Env : Type} {S Obs Dist : α → Type}
+  (agents : List α) (L : (i : α) → Becoming.AdaptiveLoops.OpenLoop (S i) (Obs i) (Dist i) Unit) (init : (i : α) → S i)
+  (certs : (i : α) → Becoming.AdaptiveLoops.LoopCertificate (L i) (init i)) (obs : (i : α) → (Unit → Nat) → Obs i)
+  (channel : (α → Bool) → (α → Nat) → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+  (envCap : Unit → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (j : Unit), envDraw env j ≤ envCap j) →
+    ∀ (x_crit warnLevel H_safe x₀ : Unit → Nat) (monitored : α → Unit → Prop),
+      (∀ (i : α),
+          i ∈ agents → ∀ (x : Unit → Nat) (j : Unit), monitored i j → x j < warnLevel j → (certs i).warnObs (obs i x)) →
+        (∃ i, i ∈ agents ∧ monitored i ()) →
+          (∀ (emit : α → Bool) (load : α → Nat) (env : Env),
+              jointAdm env →
+                (∃ i, i ∈ agents ∧ emit i = true ∧ load i ≤ (certs i).maxSilence) →
+                  (∀ (i : α), i ∈ agents → load i ≤ (certs i).maxSilence) → channel emit load env = true) →
+            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+              x_crit () ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit () →
+                Becoming.AdaptiveLoops.sumDraws agents (fun i => (certs i).postBudget) () + envCap () ≤ H_safe () →
+                  x_crit () +
+                        (Becoming.AdaptiveLoops.globalMaxLag agents certs + 1) *
+                          Becoming.AdaptiveLoops.preTotal agents certs envCap () ≤
+                      warnLevel () →
+                    x_crit () +
+                          Becoming.AdaptiveLoops.maxEta agents certs init *
+                            Becoming.AdaptiveLoops.preTotal agents certs envCap () ≤
+                        x₀ () →
+                      Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit (x₀, init) ∧
+                        Becoming.Viability.Certificate
+                            (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw jointAdm)
+                            (Becoming.AdaptiveLoops.jointGuard agents L certs x_crit)
+                            (Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit) ∧
+                          ∀
+                            (r :
+                              Becoming.Run
+                                (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw jointAdm)),
+                            r.state 0 = (x₀, init) → ∀ (t : Nat), x_crit () ≤ (r.state t).fst ()
+@Becoming.UnifiedDrawdown.restraint_adapter_restores_viability : ∀ {α Env : Type} (agents : List α)
+  (specs : α → Becoming.UnifiedDrawdown.RestraintAgentSpec) (channel : (α → Bool) → (α → Nat) → Env → Bool)
+  (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat) (envCap : Unit → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (j : Unit), envDraw env j ≤ envCap j) →
+    ∀ (x_crit warnLevel H_safe x₀ : Nat) (monitored : α → Prop),
+      (∃ i, i ∈ agents ∧ monitored i) →
+        (∀ (emit : α → Bool) (load : α → Nat) (env : Env),
+            jointAdm env →
+              (∃ i, i ∈ agents ∧ emit i = true ∧ load i ≤ (specs i).maxSilence) →
+                (∀ (i : α), i ∈ agents → load i ≤ (specs i).maxSilence) → channel emit load env = true) →
+          Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+            x_crit ≤
+                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G (fun x => H_safe)
+                  (fun x => x_crit) () →
+              Becoming.AdaptiveLoops.sumDraws agents (fun i x => (specs i).postCap) () + envCap () ≤ H_safe →
+                x_crit +
+                      ((Becoming.AdaptiveLoops.foldNatMax agents fun i => (specs i).lag) + 1) *
+                        (Becoming.AdaptiveLoops.sumDraws agents (fun i x => (specs i).preCap) () + envCap ()) ≤
+                    warnLevel →
+                  x_crit +
+                        (Becoming.AdaptiveLoops.foldNatMax agents fun i => (specs i).lag) *
+                          (Becoming.AdaptiveLoops.sumDraws agents (fun i x => (specs i).preCap) () + envCap ()) ≤
+                      x₀ →
+                    ∀
+                      (r :
+                        Becoming.Run
+                          (Becoming.AdaptiveLoops.jointProcess agents
+                            (fun i => Becoming.UnifiedDrawdown.restraintLoop (specs i) warnLevel)
+                            (fun i => Becoming.UnifiedDrawdown.restraintCert (specs i) warnLevel) (fun x x_1 => x_1 ())
+                            channel G envDraw jointAdm)),
+                      r.state 0 = (fun x => x₀, fun i => (specs i).lag) → ∀ (t : Nat), x_crit ≤ (r.state t).fst ()
+@Becoming.UnifiedDrawdown.activeUnitWeb_dependent : ∀ {levelFn : Nat → Nat} {activeFn : Nat → Prop} {m : Nat},
+  (∀ (t : Nat), activeFn t → m ≤ levelFn t) → (Becoming.UnifiedDrawdown.activeUnitWeb levelFn activeFn m).Dependent
+@Becoming.UnifiedDrawdown.lineActiveWeb_dependent : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m : Nat},
+  (∀ (t : Nat) (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s t).fst → m ≤ need u) →
+    (Becoming.UnifiedDrawdown.lineActiveWeb need kids giving use s m).Dependent
+@Becoming.UnifiedDrawdown.wayActiveWeb_dependent : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {m : Nat},
+  (∀ (t : Nat) (u : U), u ∈ (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst → m ≤ need u) →
+    (Becoming.UnifiedDrawdown.wayActiveWeb need kids next giving use s m).Dependent
+@Becoming.UnifiedDrawdown.gated_one_of_fromNothing : ∀ {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving → Becoming.RegimeMargin.Gated giving 1
+@Becoming.UnifiedDrawdown.unit_giversSupported_of_gated : ∀ {levelFn takeFn giving : Nat → Nat} {activeFn : Nat → Prop}
+  {m : Nat},
+  Becoming.RegimeMargin.Gated giving m →
+    ∀ (t : Nat),
+      (Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).GiversSupported
+        (Becoming.UnifiedDrawdown.activeUnitWeb levelFn activeFn m) t ()
+@Becoming.UnifiedDrawdown.line_below_of_excess_of_within : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+            (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+    (∀ (k : Nat),
+        k < N →
+          giving
+              ((Becoming.LineOnAStock.course need kids giving use s (T + k)).snd -
+                Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) <
+            Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) →
+      (Becoming.LineOnAStock.course need kids giving use s T).snd < N + m →
+        (Becoming.LineOnAStock.course need kids giving use s (T + N)).snd < m
+@Becoming.UnifiedDrawdown.line_below_of_excess_of_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t → t ≤ T + N → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)) →
+        (∀ (k : Nat),
+            k < N →
+              giving
+                  ((Becoming.LineOnAStock.course need kids giving use s (T + k)).snd -
+                    Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) <
+                Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) →
+          (Becoming.LineOnAStock.course need kids giving use s T).snd < N + m →
+            (Becoming.LineOnAStock.course need kids giving use s (T + N)).snd < m
+@Becoming.UnifiedDrawdown.way_below_of_excess_of_within : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {m T N : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        t < T + N →
+          Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+            (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+    (∀ (k : Nat),
+        k < N →
+          giving
+              ((Becoming.WayUnderARule.course need kids next giving use s (T + k)).snd -
+                Becoming.LineOnAStock.taken use
+                  (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) <
+            Becoming.LineOnAStock.taken use
+              (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) →
+      (Becoming.WayUnderARule.course need kids next giving use s T).snd < N + m →
+        (Becoming.WayUnderARule.course need kids next giving use s (T + N)).snd < m
+@Becoming.UnifiedDrawdown.way_below_of_excess_of_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {m T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t ≤ T + N →
+              Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)) →
+        (∀ (k : Nat),
+            k < N →
+              giving
+                  ((Becoming.WayUnderARule.course need kids next giving use s (T + k)).snd -
+                    Becoming.LineOnAStock.taken use
+                      (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) <
+                Becoming.LineOnAStock.taken use
+                  (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) →
+          (Becoming.WayUnderARule.course need kids next giving use s T).snd < N + m →
+            (Becoming.WayUnderARule.course need kids next giving use s (T + N)).snd < m
+@Becoming.UnifiedDrawdown.line_family_excess_ends : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {m T n k : Nat},
+  Becoming.RegimeMargin.Gated giving m →
+    (∀ (t : Nat),
+        T ≤ t →
+          t < T + (n + k) →
+            Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+              (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+      (∀ (j : Nat),
+          j < n →
+            giving
+                ((Becoming.LineOnAStock.course need kids giving use s (T + j)).snd -
+                  Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + j)).fst) <
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + j)).fst) →
+        (Becoming.LineOnAStock.course need kids giving use s T).snd < n + m →
+          (∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s (T + n + k)).fst → m ≤ need u) →
+            ¬Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s (T + n + k))
+@Becoming.UnifiedDrawdown.line_family_excess_ends_one : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T n k : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t < T + (n + k) →
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+                (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+        (∀ (j : Nat),
+            j < n →
+              giving
+                  ((Becoming.LineOnAStock.course need kids giving use s (T + j)).snd -
+                    Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + j)).fst) <
+                Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + j)).fst) →
+          (Becoming.LineOnAStock.course need kids giving use s T).snd < n + 1 →
+            ¬Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s (T + n + k))
+@Becoming.UnifiedDrawdown.line_excess_terminates_goes : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {T n : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need kids s.fst →
+      (∀ (k : Nat),
+          k < n →
+            Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s (T + k)) →
+              giving
+                  ((Becoming.LineOnAStock.course need kids giving use s (T + k)).snd -
+                    Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) <
+                Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s (T + k)).fst) →
+        (Becoming.LineOnAStock.course need kids giving use s T).snd < n + 1 →
+          ∃ t,
+            T ≤ t ∧ t ≤ T + n ∧ ¬Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t)
+@Becoming.UnifiedDrawdown.way_family_excess_ends : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {m T n k : Nat},
+  Becoming.RegimeMargin.Gated giving m →
+    (∀ (t : Nat),
+        T ≤ t →
+          t < T + (n + k) →
+            Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+              (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+      (∀ (j : Nat),
+          j < n →
+            giving
+                ((Becoming.WayUnderARule.course need kids next giving use s (T + j)).snd -
+                  Becoming.LineOnAStock.taken use
+                    (Becoming.WayUnderARule.course need kids next giving use s (T + j)).fst.fst) <
+              Becoming.LineOnAStock.taken use
+                (Becoming.WayUnderARule.course need kids next giving use s (T + j)).fst.fst) →
+        (Becoming.WayUnderARule.course need kids next giving use s T).snd < n + m →
+          (∀ (u : U),
+              u ∈ (Becoming.WayUnderARule.course need kids next giving use s (T + n + k)).fst.fst → m ≤ need u) →
+            ¬Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s (T + n + k))
+@Becoming.UnifiedDrawdown.way_family_excess_ends_one : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T n k : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (t : Nat),
+          T ≤ t →
+            t < T + (n + k) →
+              Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst ≤
+                (Becoming.WayUnderARule.course need kids next giving use s t).snd) →
+        (∀ (j : Nat),
+            j < n →
+              giving
+                  ((Becoming.WayUnderARule.course need kids next giving use s (T + j)).snd -
+                    Becoming.LineOnAStock.taken use
+                      (Becoming.WayUnderARule.course need kids next giving use s (T + j)).fst.fst) <
+                Becoming.LineOnAStock.taken use
+                  (Becoming.WayUnderARule.course need kids next giving use s (T + j)).fst.fst) →
+          (Becoming.WayUnderARule.course need kids next giving use s T).snd < n + 1 →
+            ¬Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s (T + n + k))
+@Becoming.UnifiedDrawdown.way_excess_terminates_goes : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {T n : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.WayUnderARule.Needing need kids s.fst.fst →
+      (∀ (k : Nat),
+          k < n →
+            Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s (T + k)) →
+              giving
+                  ((Becoming.WayUnderARule.course need kids next giving use s (T + k)).snd -
+                    Becoming.LineOnAStock.taken use
+                      (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) <
+                Becoming.LineOnAStock.taken use
+                  (Becoming.WayUnderARule.course need kids next giving use s (T + k)).fst.fst) →
+        (Becoming.WayUnderARule.course need kids next giving use s T).snd < n + 1 →
+          ∃ t,
+            T ≤ t ∧
+              t ≤ T + n ∧
+                ¬Becoming.WayUnderARule.Goes need (Becoming.WayUnderARule.course need kids next giving use s t)
+@Becoming.UnifiedDrawdown.exists_firstOverdraw : ∀ {takeFn levelFn : Nat → Nat},
+  (∃ t, levelFn t < takeFn t) → ∃ tStar, Becoming.UnifiedDrawdown.FirstOverdraw takeFn levelFn tStar
+@Becoming.UnifiedDrawdown.unit_balancesOn_iff_le : ∀ {levelFn takeFn giving : Nat → Nat} {t : Nat},
+  levelFn (t + 1) = Becoming.RegimeMargin.step giving (takeFn t) (levelFn t) →
+    ((Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).BalancesOn
+        (Becoming.StockFlowBridge.unitWeb levelFn) [()] t ↔
+      takeFn t ≤ levelFn t)
+@Becoming.UnifiedDrawdown.unit_overdraw_separation : ∀ {levelFn takeFn giving : Nat → Nat} {tStar : Nat},
+  (∀ (t : Nat), levelFn (t + 1) = Becoming.RegimeMargin.step giving (takeFn t) (levelFn t)) →
+    Becoming.UnifiedDrawdown.FirstOverdraw takeFn levelFn tStar →
+      (∀ (t : Nat),
+          t < tStar →
+            (Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).BalancesOn
+              (Becoming.StockFlowBridge.unitWeb levelFn) [()] t) ∧
+        levelFn (tStar + 1) = giving 0 ∧
+          (levelFn (tStar + 1) + takeFn tStar =
+                levelFn tStar + giving (levelFn tStar - takeFn tStar) + (takeFn tStar - levelFn tStar) ∧
+              0 < takeFn tStar - levelFn tStar) ∧
+            levelFn tStar +
+                  (Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).given tStar () <
+                levelFn (tStar + 1) +
+                  (Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).taken tStar () ∧
+              ¬(Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).BalancesOn
+                    (Becoming.StockFlowBridge.unitWeb levelFn) [()] tStar ∧
+                ¬(Becoming.StockFlowBridge.unitFlow takeFn fun k => giving (levelFn k - takeFn k)).Balances
+                    (Becoming.StockFlowBridge.unitWeb levelFn)
+@Becoming.UnifiedDrawdown.line_overdraw_separation : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {tStar : Nat},
+  Becoming.UnifiedDrawdown.FirstOverdraw
+      (fun t => Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+      (fun t => (Becoming.LineOnAStock.course need kids giving use s t).snd) tStar →
+    (∀ (t : Nat),
+        t < tStar →
+          (Becoming.StockFlowBridge.lineFlow need kids giving use s).BalancesOn
+            (Becoming.StockFlowBridge.lineWeb need kids giving use s) [()] t) ∧
+      (Becoming.LineOnAStock.course need kids giving use s (tStar + 1)).snd = giving 0 ∧
+        (Becoming.LineOnAStock.course need kids giving use s tStar).snd +
+              (Becoming.StockFlowBridge.lineFlow need kids giving use s).given tStar () <
+            (Becoming.LineOnAStock.course need kids giving use s (tStar + 1)).snd +
+              (Becoming.StockFlowBridge.lineFlow need kids giving use s).taken tStar () ∧
+          ¬(Becoming.StockFlowBridge.lineFlow need kids giving use s).BalancesOn
+                (Becoming.StockFlowBridge.lineWeb need kids giving use s) [()] tStar ∧
+            ¬(Becoming.StockFlowBridge.lineFlow need kids giving use s).Balances
+                (Becoming.StockFlowBridge.lineWeb need kids giving use s)
+@Becoming.UnifiedDrawdown.way_overdraw_separation : ∀ {U R : Type} {need : U → Nat} {kids : R → U → List U}
+  {next : List U → R → R} {giving : Nat → Nat} {use : U → Nat} {s : (List U × R) × Nat} {tStar : Nat},
+  Becoming.UnifiedDrawdown.FirstOverdraw
+      (fun t => Becoming.LineOnAStock.taken use (Becoming.WayUnderARule.course need kids next giving use s t).fst.fst)
+      (fun t => (Becoming.WayUnderARule.course need kids next giving use s t).snd) tStar →
+    (∀ (t : Nat),
+        t < tStar →
+          (Becoming.StockFlowBridge.wayFlow need kids next giving use s).BalancesOn
+            (Becoming.StockFlowBridge.wayWeb need kids next giving use s) [()] t) ∧
+      (Becoming.WayUnderARule.course need kids next giving use s (tStar + 1)).snd = giving 0 ∧
+        (Becoming.WayUnderARule.course need kids next giving use s tStar).snd +
+              (Becoming.StockFlowBridge.wayFlow need kids next giving use s).given tStar () <
+            (Becoming.WayUnderARule.course need kids next giving use s (tStar + 1)).snd +
+              (Becoming.StockFlowBridge.wayFlow need kids next giving use s).taken tStar () ∧
+          ¬(Becoming.StockFlowBridge.wayFlow need kids next giving use s).BalancesOn
+                (Becoming.StockFlowBridge.wayWeb need kids next giving use s) [()] tStar ∧
+            ¬(Becoming.StockFlowBridge.wayFlow need kids next giving use s).Balances
+                (Becoming.StockFlowBridge.wayWeb need kids next giving use s)
+Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+Becoming.UnifiedDrawdown.OverdrawSeparationWitness.needs : Becoming.LineOnAStock.Needing
+  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState.fst
+Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one : Becoming.UnifiedDrawdown.FirstOverdraw
+  (fun t =>
+    Becoming.LineOnAStock.taken Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+      (Becoming.LineOnAStock.course Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState t).fst)
+  (fun t =>
+    (Becoming.LineOnAStock.course Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState t).snd)
+  1
+Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle : (Becoming.StockFlowBridge.lineFlow
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+        Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).BalancesOn
+    (Becoming.StockFlowBridge.lineWeb Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+      Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+      Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+      Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState)
+    [()] 0 ∧
+  ¬(Becoming.StockFlowBridge.lineFlow Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).BalancesOn
+        (Becoming.StockFlowBridge.lineWeb Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+          Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState)
+        [()] 1 ∧
+    ¬(Becoming.StockFlowBridge.lineFlow Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).Balances
+          (Becoming.StockFlowBridge.lineWeb Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+            Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState) ∧
+      (Becoming.LineOnAStock.course Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState 2).snd =
+          0 ∧
+        ¬Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+            (Becoming.LineOnAStock.course Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+              Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState 2)
+@Becoming.UnifiedDrawdown.sampled_break_concealment : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g f_dep : F} {c : C} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ {j J m : Nat} {l_break l_safe : Nat → C → Nat},
+      (∀ (t : Nat), W.need t f_dep c = m) →
+        (∀ (t : Nat), m ≤ l_safe t c) →
+          σ j + 2 ≤ σ (j + 1) →
+            W.requires (σ j) f_dep c ∧ m ≤ l_break (σ j) c ∧ l_break (σ j + 1) c < m →
+              m ≤ l_break (σ (j + 1)) c →
+                (∀ (s : Nat), s ≤ J → W.AlikeThrough obs g l_break l_safe (σ s)) →
+                  (σ j < σ j + 1 ∧ σ j + 1 < σ (j + 1)) ∧
+                    (W.withLevel l_break).Broken (σ j) f_dep c ∧
+                      (∀ (t : Nat), ¬(W.withLevel l_safe).Broken t f_dep c) ∧
+                        ¬((W.withLevel l_break).sample σ).Broken j f_dep c ∧
+                          ∀ (select : (Nat → C → Nat) → Prop),
+                            (W.sample σ).SelectsThrough obs g J select →
+                              (select (Becoming.atTimes σ l_break) ↔ select (Becoming.atTimes σ l_safe))
+Becoming.UnifiedDrawdown.logistic_sampled_break_concealment : ∀ (n v : Nat),
+  1 < v →
+    ∀ {x : Nat → Nat},
+      Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+          (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1)) x →
+        ∀ (σ : Nat → Nat),
+          Becoming.Strict σ →
+            σ 0 = 0 →
+              σ 1 = n + 2 →
+                have l_break := Becoming.Optimum.Holding.onSource x;
+                have l_safe := Becoming.Optimum.Holding.onSource fun x => 2;
+                (σ 0 < 1 ∧ 1 < σ 1) ∧
+                  (Becoming.Diversion.web l_break).Broken 0 Becoming.Diversion.Formation.dweller
+                      Becoming.Diversion.Place.source ∧
+                    (∀ (t : Nat),
+                        t < n + 1 →
+                          (Becoming.Diversion.web l_break).level (t + 1) Becoming.Diversion.Place.source < 2) ∧
+                      (∀ (t : Nat),
+                          ¬(Becoming.Diversion.web l_safe).Broken t Becoming.Diversion.Formation.dweller
+                              Becoming.Diversion.Place.source) ∧
+                        ¬((Becoming.Diversion.web l_break).sample σ).Broken 0 Becoming.Diversion.Formation.dweller
+                              Becoming.Diversion.Place.source ∧
+                          ∀ (obs : Becoming.Diversion.Formation → Becoming.Diversion.Place → Prop)
+                            (g : Becoming.Diversion.Formation) (select : (Nat → Becoming.Diversion.Place → Nat) → Prop),
+                            ((Becoming.Diversion.web l_break).sample σ).SelectsThrough obs g 1 select →
+                              (select (Becoming.atTimes σ l_break) ↔ select (Becoming.atTimes σ l_safe))
+Becoming.UnifiedDrawdown.cyclePair_spec : ∀ (m : Nat),
+  0 < m →
+    ∀ (t : Nat),
+      m * (Becoming.UnifiedDrawdown.cyclePair m t).fst + (Becoming.UnifiedDrawdown.cyclePair m t).snd = t ∧
+        (Becoming.UnifiedDrawdown.cyclePair m t).snd < m
+@Becoming.UnifiedDrawdown.cycle_euclid_unique : ∀ {m q₁ r₁ q₂ r₂ : Nat},
+  r₁ < m → r₂ < m → m * q₁ + r₁ = m * q₂ + r₂ → q₁ = q₂ ∧ r₁ = r₂
+Becoming.UnifiedDrawdown.cycleRem_mul_add : ∀ (m q r : Nat), r < m → Becoming.UnifiedDrawdown.cycleRem m (m * q + r) = r
+Becoming.UnifiedDrawdown.cycleRem_mul : ∀ (m q : Nat), 0 < m → Becoming.UnifiedDrawdown.cycleRem m (m * q) = 0
+@Becoming.UnifiedDrawdown.cycleRem_of_lt : ∀ {m r : Nat}, r < m → Becoming.UnifiedDrawdown.cycleRem m r = r
+Becoming.UnifiedDrawdown.cycleRem_self : ∀ (m : Nat), 0 < m → Becoming.UnifiedDrawdown.cycleRem m m = 0
+Becoming.UnifiedDrawdown.cyclicCourse_openCourse : ∀ (n v : Nat),
+  1 < v →
+    ∀ {x : Nat → Nat},
+      Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+          (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1)) x →
+        Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2 (Becoming.UnifiedDrawdown.cyclicCourse x n)
+Becoming.UnifiedDrawdown.cyclicCourse_frontier : ∀ (n v : Nat),
+  1 < v →
+    ∀ {x : Nat → Nat},
+      Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+          (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1)) x →
+        Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+          (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1))
+          (Becoming.UnifiedDrawdown.cyclicCourse x n)
+Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment : ∀ (n v : Nat),
+  1 < v →
+    ∀ {x : Nat → Nat},
+      Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+          (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1)) x →
+        have σ := fun j => (n + 2) * j;
+        have l_per := Becoming.Optimum.Holding.onSource (Becoming.UnifiedDrawdown.cyclicCourse x n);
+        have l_safe := Becoming.Optimum.Holding.onSource fun x => 2;
+        Becoming.Strict σ ∧
+          Becoming.Requirement.Frontier (Becoming.Optimum.OpenCourse Becoming.Optimum.Holding.logistic 2 2)
+              (Becoming.Optimum.byDrawnLeftAt Becoming.Optimum.Holding.logistic v (n + 1))
+              (Becoming.UnifiedDrawdown.cyclicCourse x n) ∧
+            (∀ (j : Nat),
+                (Becoming.Diversion.web l_per).Broken (σ j) Becoming.Diversion.Formation.dweller
+                    Becoming.Diversion.Place.source ∧
+                  (∀ (k : Nat),
+                      k < n + 1 →
+                        (Becoming.Diversion.web l_per).level (σ j + k + 1) Becoming.Diversion.Place.source < 2) ∧
+                    ¬((Becoming.Diversion.web l_per).sample σ).Broken j Becoming.Diversion.Formation.dweller
+                        Becoming.Diversion.Place.source) ∧
+              ∀ (K : Nat) (obs : Becoming.Diversion.Formation → Becoming.Diversion.Place → Prop)
+                (g : Becoming.Diversion.Formation) (select : (Nat → Becoming.Diversion.Place → Nat) → Prop),
+                ((Becoming.Diversion.web l_per).sample σ).SelectsThrough obs g K select →
+                  (select (Becoming.atTimes σ l_per) ↔ select (Becoming.atTimes σ l_safe))
+@Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {g f_dep : F} {c cFrag : C} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ {K dmg F₀ m_frag m : Nat} {l_break l_safe : Nat → C → Nat},
+      ¬W.CoupledInto obs g cFrag →
+        (∀ (t : Nat), W.need t f_dep c = m) →
+          (∀ (j : Nat),
+              j < K → σ j + 2 ≤ σ (j + 1) ∧ W.requires (σ j) f_dep c ∧ m ≤ l_break (σ j) c ∧ l_break (σ j + 1) c < m) →
+            (∀ (s : Nat), s ≤ K → ∀ (d : C), W.CoupledInto obs g d → l_break (σ s) d = l_safe (σ s) d) →
+              (∀ (j : Nat), j < K → l_break (σ (j + 1)) cFrag + dmg ≤ l_break (σ j) cFrag) →
+                l_break (σ 0) cFrag ≤ F₀ →
+                  F₀ < K * dmg + m_frag →
+                    (∀ (j : Nat), j < K → (W.withLevel l_break).Broken (σ j) f_dep c ∧ σ j + 1 < σ (j + 1)) ∧
+                      (∀ (select : (Nat → C → Nat) → Prop),
+                          (W.sample σ).SelectsThrough obs g K select →
+                            (select (Becoming.atTimes σ l_break) ↔ select (Becoming.atTimes σ l_safe))) ∧
+                        (∀ (j₁ j₂ : Nat),
+                            j₁ ≤ j₂ → j₂ ≤ K → l_break (σ j₂) cFrag + (j₂ - j₁) * dmg ≤ l_break (σ j₁) cFrag) ∧
+                          l_break (σ K) cFrag + K * dmg ≤ F₀ ∧ l_break (σ K) cFrag < m_frag
+Becoming.UnifiedDrawdown.sigmaOdd_strict : Becoming.Strict Becoming.UnifiedDrawdown.sigmaOdd
+Becoming.UnifiedDrawdown.flick_eq_true_odd : ∀ (j : Nat), Becoming.Strobe.flick (2 * j + 1) = true
+Becoming.UnifiedDrawdown.flick_eq_false_even : ∀ (j : Nat), Becoming.Strobe.flick (2 * j) = false
+Becoming.UnifiedDrawdown.mod2_cases : ∀ (t : Nat),
+  (∃ j, t = Becoming.Strobe.twice j) ∨ ∃ j, t = Becoming.Strobe.twice j + 1
+Becoming.UnifiedDrawdown.strobe_readsAt : Becoming.UnifiedDrawdown.ReadsAt Becoming.Strobe.twice fun t =>
+  !Becoming.Strobe.flick t
+Becoming.UnifiedDrawdown.strobe_readAtSpanEnd : Becoming.PacedStock.ReadAtSpanEnd Becoming.UnifiedDrawdown.sigmaOdd
+  fun t => !Becoming.Strobe.flick t
+@Becoming.UnifiedDrawdown.cadence_erases_timely_recovery : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads_fine reads_coarse : Nat → Bool} {sig : Becoming.PacedStock.StockState A U → Bool} {r_bad r_safe : R} {a₀ : A}
+  {w₀ : List U} {x₀ T_end : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.LineOnAStock.Needing need (kids r_bad) w₀ →
+      (∀ (s : Becoming.PacedStock.StockState A U), sig s = true → h s r_bad = r_safe) →
+        (∀ (s : Becoming.PacedStock.StockState A U), h s r_safe = r_safe) →
+          (∀ (s : Becoming.PacedStock.StockState A U) (r : R), sig s = false → h s r = r) →
+            ∀ (Inv : Becoming.PacedStock.StockState A U → Prop),
+              (∀ (s : Becoming.PacedStock.StockState A U), Inv s → Becoming.LineOnAStock.Goes need s.snd) →
+                (∀ (s : Becoming.PacedStock.StockState A U),
+                    Inv s → Inv (Becoming.PacedStock.fineStep fA need kids giving use s r_safe)) →
+                  (∃ t_sig,
+                      reads_fine t_sig = true ∧
+                        sig
+                              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_fine
+                                  ((a₀, w₀, x₀), r_bad) t_sig).fst =
+                            true ∧
+                          (∀ (t : Nat),
+                              t < t_sig →
+                                reads_fine t = true →
+                                  sig
+                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_fine
+                                          ((a₀, w₀, x₀), r_bad) t).fst =
+                                    false) ∧
+                            (∀ (t : Nat),
+                                t ≤ t_sig →
+                                  Becoming.LineOnAStock.Goes need
+                                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_fine
+                                          ((a₀, w₀, x₀), r_bad) t).fst.snd) ∧
+                              Inv
+                                (Becoming.PacedStock.fineStep fA need kids giving use
+                                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_fine
+                                      ((a₀, w₀, x₀), r_bad) t_sig).fst
+                                  r_bad)) →
+                    (∀ (t : Nat),
+                        t < T_end →
+                          reads_coarse t = true →
+                            sig
+                                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_coarse
+                                    ((a₀, w₀, x₀), r_bad) t).fst =
+                              false) →
+                      (∀ (k : Nat),
+                          k < T_end →
+                            Becoming.LineOnAStock.Goes need
+                                (Becoming.LineOnAStock.course need (kids r_bad) giving use (w₀, x₀) k) →
+                              giving
+                                  ((Becoming.LineOnAStock.course need (kids r_bad) giving use (w₀, x₀) k).snd -
+                                    Becoming.LineOnAStock.taken use
+                                      (Becoming.LineOnAStock.course need (kids r_bad) giving use (w₀, x₀) k).fst) <
+                                Becoming.LineOnAStock.taken use
+                                  (Becoming.LineOnAStock.course need (kids r_bad) giving use (w₀, x₀) k).fst) →
+                        x₀ < T_end + 1 →
+                          have c₀ := ((a₀, w₀, x₀), r_bad);
+                          (∀ (t : Nat),
+                              Becoming.LineOnAStock.Goes need
+                                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_fine c₀ t).fst.snd) ∧
+                            ∃ T,
+                              T ≤ T_end ∧
+                                ¬Becoming.LineOnAStock.Goes need
+                                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads_coarse c₀
+                                          T).fst.snd
+@Becoming.UnifiedDrawdown.strobe_schedule_erases_window : ∀ {X C : Type} [DecidableEq X] [DecidableEq C] {name : C → X}
+  {c : C} {other : X},
+  other ≠ name c →
+    ∀ {ℓ d m : Nat},
+      (1 + ℓ) * d ≤ m →
+        m < (2 + ℓ) * d →
+          have s_fine := fun x => name c;
+          have s_coarse := fun t => if Becoming.Strobe.flick t = true then other else name c;
+          Becoming.ReadingSchedule.Keeps s_fine name c ℓ d m ∧
+            ¬Becoming.ReadingSchedule.Keeps s_coarse name c ℓ d m ∧
+              ∀ (t : Nat), s_coarse t = name c ↔ ∃ s, t = Becoming.Strobe.twice s
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_giving_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs : Becoming.LineOnAStock.Needing
+  Becoming.UnifiedDrawdown.CadenceErasureWitness.need (Becoming.UnifiedDrawdown.CadenceErasureWitness.kids false)
+  [Becoming.UnifiedDrawdown.CadenceErasureWitness.UnitKind.agg]
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes : ∀
+  (s : Becoming.PacedStock.StockState Bool Becoming.UnifiedDrawdown.CadenceErasureWitness.UnitKind),
+  Becoming.UnifiedDrawdown.CadenceErasureWitness.safeInv s →
+    Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need s.snd
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step : ∀
+  (s : Becoming.PacedStock.StockState Bool Becoming.UnifiedDrawdown.CadenceErasureWitness.UnitKind),
+  Becoming.UnifiedDrawdown.CadenceErasureWitness.safeInv s →
+    Becoming.UnifiedDrawdown.CadenceErasureWitness.safeInv
+      (Becoming.PacedStock.fineStep Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+        Becoming.UnifiedDrawdown.CadenceErasureWitness.need Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+        Becoming.UnifiedDrawdown.CadenceErasureWitness.giving Becoming.UnifiedDrawdown.CadenceErasureWitness.use s true)
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_coarse_b_parity : ∀ (t : Nat),
+  (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+            Becoming.UnifiedDrawdown.CadenceErasureWitness.need Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+            Becoming.UnifiedDrawdown.CadenceErasureWitness.giving Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+            Becoming.UnifiedDrawdown.CadenceErasureWitness.h Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+            Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig t).fst.fst =
+      Becoming.Strobe.flick t ∧
+    (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+          Becoming.UnifiedDrawdown.CadenceErasureWitness.need Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+          Becoming.UnifiedDrawdown.CadenceErasureWitness.giving Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+          Becoming.UnifiedDrawdown.CadenceErasureWitness.h Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+          Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig t).snd =
+      false
+Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle : Becoming.UnifiedDrawdown.ReadsAt Becoming.Strobe.twice
+    Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse ∧
+  Becoming.PacedStock.ReadAtSpanEnd Becoming.UnifiedDrawdown.sigmaOdd
+      Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse ∧
+    (∀ (t : Nat),
+        Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+          (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                Becoming.UnifiedDrawdown.CadenceErasureWitness.need Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                Becoming.UnifiedDrawdown.CadenceErasureWitness.giving Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+                Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                Becoming.UnifiedDrawdown.CadenceErasureWitness.readsFine
+                Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig t).fst.snd) ∧
+      (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.use Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig 6).fst.snd.snd =
+          0 ∧
+        ¬Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+            (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.use Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+                  Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig 6).fst.snd
+@Becoming.UnifiedDrawdown.pacedCourse_span0_matches : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {σ : Nat → Nat} {L : Nat},
+  σ 0 = 0 →
+    σ 1 = L →
+      Becoming.Strict σ →
+        Becoming.PacedStock.ReadAtSpanEnd σ reads →
+          ∀ {a₀ : A} {w₀ : List U} {x₀ : Nat} {r_bad : R} (t : Nat),
+            t ≤ L →
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads ((a₀, w₀, x₀), r_bad) t).fst.snd =
+                Becoming.LineOnAStock.course need (kids r_bad) giving use (w₀, x₀) t
+@Becoming.UnifiedDrawdown.lagDraw_one_of_lower : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {H_bad L : Nat} {r_bad : R} {a₀ : A} {w₀ : List U}
+  {x₀ : Nat} (σ : Nat → Nat),
+  σ 0 = 0 →
+    σ 1 = L →
+      Becoming.Strict σ →
+        ∀ (reads : Nat → Bool),
+          Becoming.PacedStock.ReadAtSpanEnd σ reads →
+            Becoming.PacedStock.LowerDrawWhileMet H_bad need kids giving use r_bad w₀ x₀ (L + 1) →
+              ∀ (h : Becoming.PacedStock.StockState A U → R → R),
+                Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet H_bad fA need kids giving use h reads
+                  ((a₀, w₀, x₀), r_bad) 0 (L + 1)
+@Becoming.UnifiedDrawdown.pacedCourse_step_level : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} (c₀ : Becoming.PacedStock.StockState A U × R) (t : Nat),
+  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (t + 1)).fst.snd.snd =
+    Becoming.RegimeMargin.step giving
+      (Becoming.LineOnAStock.taken use
+        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd.fst)
+      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd.snd
+@Becoming.UnifiedDrawdown.pacedCourse_envelope_upper : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {c₀ : Becoming.PacedStock.StockState A U × R} {Y H_bad T N : Nat},
+  Becoming.RegimeMargin.AtMost giving Y →
+    Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet H_bad fA need kids giving use h reads c₀ T N →
+      (∀ (t : Nat),
+          T ≤ t →
+            t < T + N →
+              ∀ (u : U),
+                u ∈ (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd.fst →
+                  need u ≤ (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd.snd) →
+        ∀ (k : Nat),
+          k ≤ N →
+            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + k)).fst.snd.snd ≤
+              Becoming.Law.orbit (Becoming.RegimeMargin.step (fun x => Y) H_bad)
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ T).fst.snd.snd k
+@Becoming.UnifiedDrawdown.pacedCourse_stays_below_aux : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {c₀ : Becoming.PacedStock.StockState A U × R} {H_min y₂ T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H_min y₂ →
+      (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+        (∀ (t : Nat),
+            T ≤ t →
+              t < T + N →
+                Becoming.LineOnAStock.Goes need
+                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd) →
+          ∀ (d k : Nat),
+            k + d ≤ N →
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + k)).fst.snd.snd < H_min + y₂ →
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + (k + d))).fst.snd.snd <
+                  H_min + y₂
+@Becoming.UnifiedDrawdown.pacedCourse_stays_below_while_goes : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {c₀ : Becoming.PacedStock.StockState A U × R} {H_min y₂ T N : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H_min y₂ →
+      (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+        (∀ (t : Nat),
+            T ≤ t →
+              t < T + N →
+                Becoming.LineOnAStock.Goes need
+                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd) →
+          ∀ (k : Nat),
+            k ≤ N →
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + k)).fst.snd.snd < H_min + y₂ →
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + N)).fst.snd.snd < H_min + y₂
+@Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {H_min y₂ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H_min y₂ →
+      (∀ (u : U), 0 < need u) →
+        (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+          ∀ (c : Becoming.PacedStock.StockState A U × R) (t : Nat),
+            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).fst.snd.snd < H_min + y₂ →
+              (∃ n,
+                  ¬Becoming.LineOnAStock.Goes need
+                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c n).fst.snd) ∨
+                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (t + 1)).fst.snd.snd <
+                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).fst.snd.snd ∧
+                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c (t + 1)).fst.snd.snd < H_min + y₂
+@Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {H_min y₂ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Short giving H_min y₂ →
+      (∀ (u : U), 0 < need u) →
+        (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+          ∀ (c : Becoming.PacedStock.StockState A U × R) (f t : Nat),
+            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).fst.snd.snd ≤ f →
+              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c t).fst.snd.snd < H_min + y₂ →
+                ∃ n,
+                  ¬Becoming.LineOnAStock.Goes need
+                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c n).fst.snd
+@Becoming.UnifiedDrawdown.sampled_deadline_impossibility_at : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {h : Becoming.PacedStock.StockState A U → R → R}
+  {reads : Nat → Bool} {c₀ : Becoming.PacedStock.StockState A U × R} {Y H_bad H_min y₂ T M : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.AtMost giving Y →
+      Y < H_bad →
+        H_bad ≤ H_min + y₂ →
+          Becoming.RegimeMargin.Short giving H_min y₂ →
+            (∀ (u : U), 0 < need u ∧ need u ≤ H_min + y₂) →
+              (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+                Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet H_bad fA need kids giving use h reads c₀ T M →
+                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ T).fst.snd.snd <
+                      H_min + y₂ + (H_bad - Y) * M →
+                    ((∀ (t : Nat),
+                          T ≤ t →
+                            t < T + M →
+                              Becoming.LineOnAStock.Goes need
+                                (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd) →
+                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ (T + M)).fst.snd.snd <
+                          H_min + y₂) ∧
+                      ∃ t,
+                        ¬Becoming.LineOnAStock.Goes need
+                            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd
+@Becoming.UnifiedDrawdown.sampled_deadline_impossibility_lag1 : ∀ {A U R : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {Y H_bad H_min y₂ L : Nat} {r_bad : R} {a₀ : A}
+  {w₀ : List U} {x₀ : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.AtMost giving Y →
+      Y < H_bad →
+        H_bad ≤ H_min + y₂ →
+          Becoming.RegimeMargin.Short giving H_min y₂ →
+            (∀ (u : U), 0 < need u ∧ need u ≤ H_min + y₂) →
+              Becoming.PacedStock.LowerDrawWhileMet H_bad need kids giving use r_bad w₀ x₀ (L + 1) →
+                (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+                  x₀ < H_min + y₂ + (H_bad - Y) * (L + 1) →
+                    ∀ (σ : Nat → Nat) (reads : Nat → Bool) (h : Becoming.PacedStock.StockState A U → R → R),
+                      σ 0 = 0 →
+                        σ 1 = L →
+                          Becoming.Strict σ →
+                            Becoming.PacedStock.ReadAtSpanEnd σ reads →
+                              have c₀ := ((a₀, w₀, x₀), r_bad);
+                              ((∀ (t : Nat),
+                                    t < L + 1 →
+                                      Becoming.LineOnAStock.Goes need
+                                        (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                              t).fst.snd) →
+                                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                            (L + 1)).fst.snd.snd <
+                                    H_min + y₂) ∧
+                                ∃ t,
+                                  ¬Becoming.LineOnAStock.Goes need
+                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀ t).fst.snd
+@Becoming.UnifiedDrawdown.sampled_deadline_impossibility : ∀ {A U R F C : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    σ 0 = 0 →
+      ∀ {δ Y H_bad H_min y₂ : Nat} {r_bad : R} {a₀ : A} {w₀ : List U} {x₀ : Nat},
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.AtMost giving Y →
+            Y < H_bad →
+              H_bad ≤ H_min + y₂ →
+                Becoming.RegimeMargin.Short giving H_min y₂ →
+                  (∀ (u : U), 0 < need u ∧ need u ≤ H_min + y₂) →
+                    (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+                      x₀ < H_min + y₂ + (H_bad - Y) * (σ 1 - σ 0 + δ) →
+                        ∀ {W : Becoming.Web F C} {group : F → Prop} {feasible keeps : (Nat → C → Nat) → Prop}
+                          {l_bad l_safe : Nat → C → Nat} {N_ret : Nat},
+                          Becoming.NoReturnAt feasible keeps l_bad N_ret →
+                            have L := σ 1 - σ 0;
+                            have c₀ := ((a₀, w₀, x₀), r_bad);
+                            (∀ (reads : Nat → Bool) (h : Becoming.PacedStock.StockState A U → R → R),
+                                Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet H_bad fA need kids giving use h reads c₀
+                                    0 (L + δ) →
+                                  ((∀ (t : Nat),
+                                        t < L + δ →
+                                          Becoming.LineOnAStock.Goes need
+                                            (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                  t).fst.snd) →
+                                      (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                (L + δ)).fst.snd.snd <
+                                        H_min + y₂) ∧
+                                    ∃ t,
+                                      ¬Becoming.LineOnAStock.Goes need
+                                          (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                t).fst.snd) ∧
+                              (∀ (j : Nat) (reads : Nat → Bool) (h : Becoming.PacedStock.StockState A U → R → R),
+                                  have L_j := σ (j + 1) - σ j;
+                                  Becoming.UnifiedDrawdown.PacedLowerDrawWhileMet H_bad fA need kids giving use h reads
+                                      c₀ (σ j) (L_j + δ) →
+                                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                (σ j)).fst.snd.snd <
+                                        H_min + y₂ + (H_bad - Y) * (L_j + δ) →
+                                      ((∀ (t : Nat),
+                                            σ j ≤ t →
+                                              t < σ j + (L_j + δ) →
+                                                Becoming.LineOnAStock.Goes need
+                                                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                        t).fst.snd) →
+                                          (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                    (σ j + (L_j + δ))).fst.snd.snd <
+                                            H_min + y₂) ∧
+                                        ∃ t,
+                                          ¬Becoming.LineOnAStock.Goes need
+                                              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                    t).fst.snd) ∧
+                                (N_ret ≤ L + δ → ¬Becoming.Recoverable feasible keeps l_bad (L + δ)) ∧
+                                  (N_ret ≤ σ 1 →
+                                    ¬Becoming.Recoverable feasible keeps l_bad (σ 1) ∧
+                                      ((∀ (g : F),
+                                          group g →
+                                            ∀ (t : Nat), t ≤ σ 1 → (W.Admits (l_bad t) t g ↔ W.Admits (l_safe t) t g)) →
+                                        ¬W.ReadableInTime group feasible keeps l_bad l_safe ∧
+                                          ∀ (sel : Nat → (Nat → C → Nat) → Prop),
+                                            (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+                                              ¬Becoming.Web.ReadsInTime sel feasible keeps l_bad l_safe))
+@Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge : ∀ {A U R O F C : Type} {fA : A → R → A} {need : U → Nat}
+  {kids : R → U → List U} {giving : Nat → Nat} {use : U → Nat} {N Y H_bad H_min y₂ : Nat} {x_o y_o : O},
+  2 ≤ N →
+    x_o ≠ y_o →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.AtMost giving Y →
+          Y < H_bad →
+            H_bad ≤ H_min + y₂ →
+              Becoming.RegimeMargin.Short giving H_min y₂ →
+                (∀ (u : U), 0 < need u ∧ need u ≤ H_min + y₂) →
+                  ∀ {r_bad : R} {w₀ : List U} {x₀ : Nat},
+                    Becoming.PacedStock.LowerDrawWhileMet H_bad need kids giving use r_bad w₀ x₀ (2 * N - 1) →
+                      (∀ (w : List U), w ≠ [] → H_min ≤ Becoming.LineOnAStock.taken use w) →
+                        x₀ < H_min + y₂ + (H_bad - Y) * (2 * N - 1) →
+                          (∀ (L : Nat), L < 2 * N - 1 → ¬Becoming.Pace.StretchFixes O N L) ∧
+                            (∀ (L : Nat) (σ : Nat → Nat) (reads : Nat → Bool)
+                                (h : Becoming.PacedStock.StockState A U → R → R) (a₀ : A),
+                                2 * N - 1 ≤ L →
+                                  σ 0 = 0 →
+                                    σ 1 = L →
+                                      Becoming.Strict σ →
+                                        Becoming.PacedStock.ReadAtSpanEnd σ reads →
+                                          have c₀ := ((a₀, w₀, x₀), r_bad);
+                                          ((∀ (t : Nat),
+                                                t < L →
+                                                  Becoming.LineOnAStock.Goes need
+                                                    (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                          t).fst.snd) →
+                                              (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                        L).fst.snd.snd <
+                                                H_min + y₂) ∧
+                                            ∃ t,
+                                              ¬Becoming.LineOnAStock.Goes need
+                                                  (Becoming.PacedStock.pacedCourse fA need kids giving use h reads c₀
+                                                        t).fst.snd) ∧
+                              ∀ (L δ N_ret : Nat) {feasible keeps : (Nat → C → Nat) → Prop} {l_bad : Nat → C → Nat}
+                                {W : Becoming.Web F C} {group : F → Prop} {l_safe : Nat → C → Nat},
+                                Becoming.NoReturnAt feasible keeps l_bad N_ret →
+                                  N_ret ≤ L + δ →
+                                    ¬Becoming.Recoverable feasible keeps l_bad (L + δ) ∧
+                                      (N_ret ≤ L →
+                                        (∀ (g : F),
+                                            group g →
+                                              ∀ (t : Nat), t ≤ L → (W.Admits (l_bad t) t g ↔ W.Admits (l_safe t) t g)) →
+                                          ¬W.ReadableInTime group feasible keeps l_bad l_safe)
+@Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics : ∀ {D Pos F : Type} (law : D → Prop),
+  Becoming.ReadsOnlyDynamics fun d x => law d
+@Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails : ∀ {D Pos F : Type} (law : D → Prop),
+  (∀ (d : D) (sig : Pos → Nat → F → Prop), law d → Becoming.Unrestricted sig) → ∀ (p : Pos) (f : F) (d : D), ¬law d
+@Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails : ∀ {Pos : Type} (p : Pos),
+  (¬∀ (_u : Unit) (sig : Pos → Nat → Becoming.Optimum.HeldPair.Member → Prop),
+        (∀ (t : Nat),
+            t < 2 →
+              Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+                ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool) →
+          Becoming.Unrestricted sig) ∧
+    (¬∀ (_u : Unit) (sig : Pos → Nat → Unit → Prop),
+          ¬(Becoming.StockFlowBridge.lineFlow Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+                    Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+                    Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+                    Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+                    Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState).Balances
+                (Becoming.StockFlowBridge.lineWeb Becoming.UnifiedDrawdown.OverdrawSeparationWitness.need
+                  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.kids
+                  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving
+                  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.use
+                  Becoming.UnifiedDrawdown.OverdrawSeparationWitness.startState) →
+            Becoming.Unrestricted sig) ∧
+      ¬∀ (_u : Unit) (sig : Pos → Nat → Unit → Prop),
+          ¬Becoming.LineOnAStock.Goes Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                (Becoming.PacedStock.pacedCourse Becoming.UnifiedDrawdown.CadenceErasureWitness.fA
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.need
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.kids
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.giving
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.use
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.h
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.readsCoarse
+                      Becoming.UnifiedDrawdown.CadenceErasureWitness.startConfig 6).fst.snd →
+            Becoming.Unrestricted sig
+Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary : Becoming.UnifiedDrawdown.SpineHooks.PreOverdrawBridge
+Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary : Becoming.UnifiedDrawdown.SpineHooks.TemporalAliasingSuite
+Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum : ∀
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnLevel : Nat),
+  (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).preCapExt () =
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head tail
+Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum : ∀
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnLevel : Nat),
+  (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).postBudgetExt () =
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.postCap) head tail
+Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum : ∀
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnLevel : Nat),
+  (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).maxSilence =
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.maxSilence) head tail
+Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max : ∀
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnLevel : Nat),
+  (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).maxLag =
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head tail
+Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max : ∀
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec) (head : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (warnLevel : Nat),
+  (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).eta
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head tail) =
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head tail
+@Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt : ∀
+  {head : Becoming.UnifiedDrawdown.RestraintAgentSpec} (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  {warnLevel : Nat} {x : Unit → Nat},
+  x () < warnLevel →
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel).warnObs
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs tail x)
+@Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable : ∀ {Env : Type}
+  (head : Becoming.UnifiedDrawdown.RestraintAgentSpec) (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat) (envCap : Unit → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Nat),
+      (∀ (load : Nat) (env : Env),
+          jointAdm env →
+            load ≤ Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.maxSilence) head tail →
+              channel true load env = true) →
+        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+          x_crit ≤
+              Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G (fun x => H_safe)
+                (fun x => x_crit) () →
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.postCap) head tail + envCap () ≤ H_safe →
+              x_crit +
+                    (Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head tail + 1) *
+                      (Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head tail +
+                        envCap ()) ≤
+                  warnLevel →
+                x_crit +
+                      Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head tail *
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head tail +
+                          envCap ()) ≤
+                    x₀ →
+                  Becoming.Viability.Kernel
+                      (Becoming.OpenComposition.closedProcess
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent head tail warnLevel)
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel)
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs tail) channel G envDraw jointAdm)
+                      (Becoming.OpenComposition.closedGuard
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent head tail warnLevel)
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel) fun x =>
+                        x_crit)
+                      (fun x => x₀, Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head tail) ∧
+                    ∀
+                      (r :
+                        Becoming.Run
+                          (Becoming.OpenComposition.closedProcess
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent head tail warnLevel)
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head tail warnLevel)
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs tail) channel G envDraw jointAdm)),
+                      r.state 0 = (fun x => x₀, Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head tail) →
+                        ∀ (t : Nat), x_crit ≤ (r.state t).fst ()
+@Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines : ∀
+  {spec spec' : Becoming.UnifiedDrawdown.RestraintAgentSpec} {warnLevel : Nat},
+  Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens spec spec' →
+    Becoming.OpenComposition.ContractRefines
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract spec warnLevel)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract spec' warnLevel) (fun x => x ()) (fun x => x ())
+      fun x => warnLevel
+@Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable : ∀ {Env : Type}
+  (head head' head2 : Becoming.UnifiedDrawdown.RestraintAgentSpec)
+  (tail : List Becoming.UnifiedDrawdown.RestraintAgentSpec),
+  Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens head head' →
+    ∀ (channel : Bool → Nat → Env → Bool) (G : Unit → (Unit → Nat) → Nat) (envDraw : Env → Unit → Nat)
+      (envCap : Unit → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (k : Unit), envDraw env k ≤ envCap k) →
+        ∀ (x_crit warnLevel H_safe x₀ : Nat),
+          (∀ (load : Nat) (env : Env),
+              jointAdm env →
+                load ≤
+                    Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.maxSilence) head
+                      (head2 :: tail) →
+                  channel true load env = true) →
+            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G ()) →
+              x_crit ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G (fun x => H_safe)
+                    (fun x => x_crit) () →
+                Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.postCap) head (head2 :: tail) +
+                      envCap () ≤
+                    H_safe →
+                  x_crit +
+                        (Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head (head2 :: tail) +
+                            1) *
+                          (Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head
+                              (head2 :: tail) +
+                            envCap ()) ≤
+                      warnLevel →
+                    x_crit +
+                          Becoming.UnifiedDrawdown.OpenCompositionBridge.specMax (fun s => s.lag) head (head2 :: tail) *
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.specSum (fun s => s.preCap) head
+                                (head2 :: tail) +
+                              envCap ()) ≤
+                        x₀ →
+                      Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess
+                          ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent head' warnLevel).compose
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent head2 tail warnLevel))
+                          (Becoming.OpenComposition.composeContract
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract head' warnLevel)
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head2 tail warnLevel))
+                          (fun x => (x (), Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs tail x)) channel G
+                          envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard
+                          ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent head' warnLevel).compose
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent head2 tail warnLevel))
+                          (Becoming.OpenComposition.composeContract
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract head' warnLevel)
+                            (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract head2 tail warnLevel))
+                          fun x => x_crit)
+                        (fun x => x₀, head'.lag, Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit head2 tail)
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises : Becoming.RegimeMargin.Coupled.Indexed.Rises
+  Becoming.RegimeMargin.Drawn.whole (Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG ())
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA : Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens
+  Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+  Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.twoAgentFleet_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+    (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+    True)
+  (Becoming.OpenComposition.closedGuard
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+    fun x => 4)
+  (fun x => 7,
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+      19)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+      19)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+    (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+    True)
+  (Becoming.OpenComposition.closedGuard
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+      19)
+    (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+      19)
+    fun x => 4)
+  (fun x => 14,
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+    (fun x =>
+      (x (),
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] x))
+    (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+    True)
+  (Becoming.OpenComposition.closedGuard
+    ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+    (Becoming.OpenComposition.composeContract
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+    fun x => 4)
+  (fun x => 14, Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'.lag,
+    Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+      [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+      (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+      True)
+    (Becoming.OpenComposition.closedGuard
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      fun x => 4)
+    (fun x => 7,
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]) ∧
+  Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+          19)
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+          19)
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+        (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0)
+        fun x => True)
+      (Becoming.OpenComposition.closedGuard
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+          19)
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]
+          19)
+        fun x => 4)
+      (fun x => 14,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB,
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]) ∧
+    Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess
+        ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+              Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+            [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+        (Becoming.OpenComposition.composeContract
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+            [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+        (fun x =>
+          (x (),
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+              [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] x))
+        (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0)
+        fun x => True)
+      (Becoming.OpenComposition.closedGuard
+        ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+              Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+            [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+        (Becoming.OpenComposition.composeContract
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+          (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+            [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+        fun x => 4)
+      (fun x => 14, Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'.lag,
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])
+      (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+      True)
+    (Becoming.OpenComposition.closedGuard
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 10)
+      fun x => 4)
+    (fun x => 7,
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC]) ∧
+  Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+      (fun x =>
+        (x (),
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetObs
+            [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] x))
+      (fun em x x_1 => em) Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG (fun x x_1 => 0) fun x =>
+      True)
+    (Becoming.OpenComposition.closedGuard
+      ((Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent
+            Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19).compose
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA' 19)
+        (Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract
+          Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+          [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC] 19))
+      fun x => 4)
+    (fun x => 14, Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentA'.lag,
+      Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetInit
+        Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentB
+        [Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.agentC])

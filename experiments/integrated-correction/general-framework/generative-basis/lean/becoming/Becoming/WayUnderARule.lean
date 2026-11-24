@@ -1,24 +1,31 @@
-import Becoming.LineOnAStock
+import Becoming.TurningInTime
+import Becoming.SelectionTerm
+import Becoming.ReadingsPersist
 import Becoming.RuleCapture
 
 /-!
 # A way of units under a rule set again, on a stock
 
-AI-written, 23 November 2026. Unit, way, rule, share, level, need and test are working names.
+AI-written, 23 November 2026; Stage 2 join below `Becoming.LineOnAStock`, 24 November 2026. Unit,
+way, rule, share, level, need and test are working names.
 
 ## The model
 
 A type `U` of units, each with a need and a use (`need use : U → Nat`), and a type `R` of rules.
-Under a rule `g` a unit `u` leaves the units `kids g u`. A configuration is `((w, g), x)`: a way (a
-list of units), the rule in force, a level. After a step at level `x` the way is
-`LineOnAStock.after need (kids g) w x` (each unit leaves its kids under `g` where `x` meets its
-need) and the rule is `next w g`, set from the way present before the step (`after`); the level is
-`LineOnAStock.left giving use w x` (`left`). The step is `TurningInTime.pair` of the two (`step`),
-`course` its orbit, and the net has a next while some unit's need is met (`Goes`, `net`,
-`Law.stepWhile`). A rule can favour (`favours : R → Prop`); the "or" (`tested_or_ends`) asks
-nothing of `next`.
+Under a rule `g` a unit `u` leaves the units `kids g u`. At one step without a rule, each unit of a
+way leaves its kids where `x` meets its need and nothing where it does not (`stepAfter`), what a way
+takes is the total of its units' uses (`taken`), and the level becomes
+`RegimeMargin.step giving (taken use w) x` (`stepLeft`), with some need met (`stepGoes`), every unit's
+kids in order (`allKids`), `n`-th generations (`generation`, `stepNeeding`), a bound on needs along a
+subset (`Below`), a configuration that holds (`Holds`), and the regime at a way (`Regime`). Under a
+rule, a configuration is `((w, g), x)`: a way (a list of units), the rule in force, a level. After a
+step at level `x` the way is `stepAfter need (kids g) w x` and the rule is `next w g`, set from the
+way present before the step (`after`); the level is `stepLeft giving use w x` (`left`). The step is
+`TurningInTime.pair` of the two (`step`), `course` its orbit, and the net has a next while some
+unit's need is met (`Goes`, `net`, `Law.stepWhile`). A rule can favour (`favours : R → Prop`); the
+"or" (`tested_or_ends`) asks nothing of `next`.
 
-The test at a configuration (`Tested`): it holds (`LineOnAStock.Holds`: the way is not empty, every
+The test at a configuration (`Tested`): its way and level hold (`Holds`: the way is not empty, every
 need is met, and the level is at or above what the way takes and `y` of it), the rule in force does
 not favour, and the rule set next does not favour.
 
@@ -38,8 +45,8 @@ not favour, and the rule set next does not favour.
   it, or to a step with no need met, some need met at every step before it. That under a rule that
   does not favour every unit has kids (`some`) is not asked. The "or" is inclusive:
   `BothOutcomes.both` is a course that meets every premise, has the test at its start and no need
-  met at its step 4. Laws of one step are `LineOnAStock`'s at `kids := kids g`, but `level_held`,
-  which is `RegimeMargin.holds`.
+  met at its step 4. Laws of one step instantiate the single-step helpers at `kids := kids g`, and
+  `level_held` is `RegimeMargin.holds`.
 * **The least step with the test** (`first_tested`, `first_tested_or_ends`): with `favours`
   decided, a course with a step with the test has one before which no step has it
   (`first_of_decided`); so the first outcome can be read as a first step with the test.
@@ -73,11 +80,13 @@ not favour, and the rule set next does not favour.
   no premise), and no step with some need met at every step before it has the test
   (`NeedTwentySix.ends_untested`, by `unending_iff_tested`, right to left, which is `tested_lasts`;
   the qualifier is redundant by an argument not in the module). In the first, what goes on is twelve
-  `O` (`course_values`) and the one `F` the rule counted is gone. Not proved in this module (found
-  by program on 20 November 2026): with the rule held favouring the same start comes to a step with
-  no need met, and with the rule that does not favour held from the first move something goes on
-  too. In both courses `lowers` and `raises` hold as equalities (all the kids of a way have its
-  share under either rule), so the share changes only at a step where a need is unmet.
+  `O` (`course_values`) and the one `F` the rule counted is gone: on Ren's 24 November 2026
+  decision (`2B`), `NeedTwentySeven` counts strictly as ecological exhaustion (`Tested`) after the
+  counted unit dies off, reserving *turning in time* for pre-exhaustion course change. Not proved in
+  this module (found by program on 20 November 2026): with the rule held favouring the same start
+  comes to a step with no need met, and with the rule that does not favour held from the first move
+  something goes on too. In both courses `lowers` and `raises` hold as equalities (all the kids of a
+  way have its share under either rule), so the share changes only at a step where a need is unmet.
 * **A course with both outcomes** (`BothOutcomes`): one unit needing one and taking one; rules `a`,
   `b`, `c`, of which only `c` favours; under `a` and `b` the unit leaves itself, under `c` two;
   after `a` comes `b`, after `b` and after `c` comes `c`; the same giving, `y T = T`, `hi = 32`,
@@ -87,13 +96,11 @@ not favour, and the rule set next does not favour.
   premises this course does not meet: no reading of this `next` from a share of the way has
   `lowers`, `monotone` and `upper` (`BothOutcomes.not_read_from_a_share`, by `tested_lasts`; which
   of the three fails is not stated).
-* **At one rule** (`course_one_rule`): with `R := PUnit` the course is `LineOnAStock.course` with
-  the rule carried. Two private theorems state `LineOnAStock.unending_iff_holds` and
-  `LineOnAStock.way_ends` binder for binder and prove them from `unending_iff_tested` (at a rule
-  that does not favour) and from `tested_or_ends` (at a rule that favours), without the old
-  theorems; each is followed by a private theorem that the two are equal by `rfl`, which
-  typechecks only where the two statements are definitionally the same (that they match binder for
-  binder is by reading). They stand until a later stage makes the old theorems calls.
+* **At one rule** (`course_one_rule`, `way_one_rule`, `goes_one_rule`, `tested_one_rule`): with
+  `R := PUnit` the course is `Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use))`
+  with the rule carried, and the test at a rule that does not favour is `Holds`. `Becoming.LineOnAStock`
+  imports this module and proves `unending_iff_holds` and `way_ends` directly from
+  `unending_iff_tested` and `tested_or_ends`.
 
 What is not stated: a bound on either step; that a need goes unmet from a locked start; that any
 actual selection meets these premises. The going on found is a configuration that holds: no unit
@@ -107,18 +114,236 @@ namespace WayUnderARule
 
 variable {U R : Type}
 
+/-! ## 0. Shared single-step primitives on ways and levels -/
+
+/-- The way after a single-rule step at level `x`: each unit in turn leaves its kids where `x`
+meets its need, and nothing where it does not. -/
+def stepAfter (need : U → Nat) (kids : U → List U) : List U → Nat → List U
+  | [], _ => []
+  | u :: w, x => cond (decide (need u ≤ x)) (kids u) [] ++ stepAfter need kids w x
+
+attribute [simp] stepAfter
+
+/-- What a way takes: the total of its units' uses (`Becoming.total`, the total of `Prelude`). -/
+abbrev taken (use : U → Nat) (w : List U) : Nat := total w use
+
+/-- The level after a single-rule step: `RegimeMargin.step` under what every unit present takes. -/
+def stepLeft (giving : Nat → Nat) (use : U → Nat) (w : List U) (x : Nat) : Nat :=
+  RegimeMargin.step giving (taken use w) x
+
+/-- Some unit of a way has its need met at the level. -/
+abbrev stepGoes (need : U → Nat) (s : List U × Nat) : Prop := ∃ u, u ∈ s.1 ∧ need u ≤ s.2
+
+/-- The kids of every unit of a way, in order: the way after a step at which every need is met. -/
+def allKids (kids : U → List U) : List U → List U
+  | [] => []
+  | u :: w => kids u ++ allKids kids w
+
+attribute [simp] allKids
+
+/-- The `n`-th generation of a way with no level in it: the kids of the kids … of its units. -/
+def generation (kids : U → List U) : Nat → List U → List U
+  | 0, w => w
+  | n + 1, w => allKids kids (generation kids n w)
+
+/-- Every unit of every single-rule generation of `w` needs something. -/
+abbrev stepNeeding (need : U → Nat) (kids : U → List U) (w : List U) : Prop :=
+  ∀ n u, u ∈ generation kids n w → 0 < need u
+
+/-- A configuration of a way and level from which what its way takes holds: the way is not empty,
+every unit's need is met at the level, and the level is at or above what the way takes and `y` of
+it. -/
+abbrev Holds (need use : U → Nat) (y : Nat → Nat) (s : List U × Nat) : Prop :=
+  s.1 ≠ [] ∧ (∀ u, u ∈ s.1 → need u ≤ s.2) ∧ taken use s.1 + y (taken use s.1) ≤ s.2
+
+/-- The regime at a way `w`: giving short of what `w` takes below `y` of it, meeting it from there
+up to `hi`, and the step under it keeping the level within `hi`. -/
+abbrev Regime (giving : Nat → Nat) (use : U → Nat) (y : Nat → Nat) (hi : Nat) (w : List U) : Prop :=
+  RegimeMargin.Short giving (taken use w) (y (taken use w)) ∧
+    RegimeMargin.Meets giving (taken use w) (y (taken use w)) hi ∧
+    RegimeMargin.Keeps giving (taken use w) hi
+
+/-- Every unit with `S` in `w` needs at most `m`. -/
+abbrev Below (need : U → Nat) (S : U → Prop) (m : Nat) (w : List U) : Prop :=
+  ∀ u, u ∈ w → S u → need u ≤ m
+
+theorem mem_cond {a : U} {l : List U} : ∀ {b : Bool}, a ∈ cond b l [] → b = true ∧ a ∈ l
+  | true, m => ⟨rfl, m⟩
+  | false, m => nomatch m
+
+theorem mem_cond_of {a : U} {l : List U} : ∀ {b : Bool}, b = true → a ∈ l → a ∈ cond b l []
+  | true, _, m => m
+
+/-- At a level, either every unit of a way has its need met, or some unit's need is above it. -/
+theorem met_or_unmet (need : U → Nat) (z : Nat) :
+    ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u :=
+  fun w => gather_listed (D := fun u => need u ≤ z) w
+    (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+
+/-- Whether some unit of a way has its need met at `x`, computed along the way. -/
+def anyMet (need : U → Nat) (x : Nat) : List U → Bool
+  | [] => false
+  | u :: w => decide (need u ≤ x) || anyMet need x w
+
+theorem anyMet_iff (need : U → Nat) (x : Nat) :
+    ∀ w : List U, anyMet need x w = true ↔ ∃ u, u ∈ w ∧ need u ≤ x
+  | [] => ⟨fun h => absurd h Bool.false_ne_true, fun ⟨_, m, _⟩ => nomatch m⟩
+  | v :: w => by
+    show (decide (need v ≤ x) || anyMet need x w) = true ↔ _
+    cases hv : decide (need v ≤ x) with
+    | true => exact ⟨fun _ => ⟨v, .head w, of_decide_eq_true hv⟩, fun _ => rfl⟩
+    | false =>
+      exact (anyMet_iff need x w).trans
+        ⟨fun ⟨u, m, le⟩ => ⟨u, .tail v m, le⟩,
+         fun ⟨u, m, le⟩ => by
+          cases m with
+          | head => exact absurd (hv.symm.trans (decide_eq_true le)) Bool.false_ne_true
+          | tail _ m' => exact ⟨u, m', le⟩⟩
+
+/-- Whether some unit's need is met at `(w, x)` is decided, by `anyMet`. -/
+instance stepGoesDecidable (need : U → Nat) (s : List U × Nat) : Decidable (stepGoes need s) :=
+  decidable_of_iff (anyMet need s.2 s.1 = true) (anyMet_iff need s.2 s.1)
+
+/-- A list that is not empty has a member. -/
+theorem mem_of_ne_nil : ∀ {l : List U}, l ≠ [] → ∃ v, v ∈ l
+  | [], ne => absurd rfl ne
+  | v :: l, _ => ⟨v, .head l⟩
+
+/-- Strong induction on a number: `Identification.below_upto`. -/
+theorem strong_below {P : Nat → Prop} (step : ∀ m, (∀ m', m' < m → P m') → P m) :
+    ∀ M m, m < M → P m :=
+  Identification.below_upto step
+
+/-- A step under a draw at least the level leaves nothing, with nothing given from nothing. -/
+theorem step_zero {giving : Nat → Nat} {H x : Nat} (nothing : RegimeMargin.FromNothing giving)
+    (le : x ≤ H) : RegimeMargin.step giving H x = 0 := by
+  show x - H + giving (x - H) = 0
+  rw [sub_eq_zero_of_le le]
+  exact (Nat.zero_add _).trans nothing
+
+/-- Below `H + y`, a step lowers the level or leaves nothing: `TurningInTime.held_above`
+contraposed. -/
+theorem step_lowers {giving : Nat → Nat} {H y D z : Nat} (short : RegimeMargin.Short giving H y)
+    (nothing : RegimeMargin.FromNothing giving) (more : H ≤ D) (below : z < H + y) :
+    RegimeMargin.step giving D z = 0 ∨ RegimeMargin.step giving D z < z :=
+  (Nat.lt_or_ge (RegimeMargin.step giving D z) z).elim .inr fun ge => match z, below, ge with
+    | 0, _, _ => .inl (step_zero nothing (Nat.zero_le D))
+    | _ + 1, below, ge => absurd (TurningInTime.held_above nothing short more (Nat.succ_pos _) ge)
+        (Nat.not_le_of_gt below)
+
+section BaseStep
+
+variable {need : U → Nat} {kids : U → List U}
+
+/-- The way after a step is `List.flatMap` of what each unit leaves. -/
+theorem after_flatMap (x : Nat) :
+    ∀ w : List U, stepAfter need kids w x = w.flatMap fun u => cond (decide (need u ≤ x)) (kids u) []
+  | [] => rfl
+  | u :: w => congrArg (cond (decide (need u ≤ x)) (kids u) [] ++ ·) (after_flatMap x w)
+
+/-- A unit is in the way after a step at `x` exactly where it is a kid of a unit of the way whose
+need `x` meets. -/
+theorem mem_after_iff {x : Nat} {v : U} {w : List U} :
+    v ∈ stepAfter need kids w x ↔ ∃ u, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u :=
+  (Eq.subst (motive := fun l => v ∈ l ↔ ∃ u, u ∈ w ∧ v ∈ cond (decide (need u ≤ x)) (kids u) [])
+      (after_flatMap x w).symm ListTests.mem_flatMap_iff).trans
+    ⟨fun ⟨u, mu, mc⟩ => match mem_cond mc with
+      | ⟨e, mk⟩ => ⟨u, mu, of_decide_eq_true e, mk⟩,
+     fun ⟨u, mu, le, mk⟩ => ⟨u, mu, mem_cond_of (decide_eq_true le) mk⟩⟩
+
+/-- Where every unit's need is met at `x`, the way after a step is all the kids. -/
+theorem after_of_met {x : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → need u ≤ x) → stepAfter need kids w x = allKids kids w
+  | [], _ => rfl
+  | u :: w, met =>
+    (congrArg (fun b => cond b (kids u) [] ++ stepAfter need kids w x)
+        (decide_eq_true (met u (.head w)))).trans
+      (congrArg (kids u ++ ·) (after_of_met fun v m => met v (.tail u m)))
+
+/-- All the kids of a way are `List.flatMap kids` of it. -/
+theorem allKids_flatMap : ∀ w : List U, allKids kids w = w.flatMap kids
+  | [] => rfl
+  | u :: w => congrArg (kids u ++ ·) (allKids_flatMap w)
+
+/-- A unit is among all the kids of a way exactly where it is a kid of a unit of the way. -/
+theorem mem_allKids_iff {v : U} {w : List U} : v ∈ allKids kids w ↔ ∃ u, u ∈ w ∧ v ∈ kids u :=
+  Eq.subst (motive := fun l => v ∈ l ↔ ∃ u, u ∈ w ∧ v ∈ kids u) (allKids_flatMap w).symm
+    ListTests.mem_flatMap_iff
+
+/-- A unit of the way at step `k` of a single-rule course is a unit of the `k`-th generation of the
+start's way. -/
+theorem mem_generation {giving : Nat → Nat} {use : U → Nat} (s : List U × Nat) :
+    ∀ k u,
+      u ∈ (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) s k).1 →
+        u ∈ generation kids k s.1
+  | 0, _, m => m
+  | k + 1, _, m =>
+    match (mem_after_iff (need := need) (kids := kids)
+        (w := (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) s k).1)
+        (x := (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) s k).2)).mp m with
+    | ⟨p, mp, _, mk⟩ => mem_allKids_iff.mpr ⟨p, mem_generation s k p mp, mk⟩
+
+end BaseStep
+
+section BaseLine
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop}
+
+/-- A unit with `S` in the way after a step is a kid of a unit with `S` whose need was met, where
+`S` is closed backward under `kids`. -/
+theorem line_from_line (closed : ∀ u v, v ∈ kids u → S v → S u) {w : List U} {x : Nat} {v : U}
+    (mv : v ∈ stepAfter need kids w x) (sv : S v) : ∃ u, u ∈ w ∧ need u ≤ x ∧ S u ∧ v ∈ kids u :=
+  match (mem_after_iff (need := need) (kids := kids)).mp mv with
+  | ⟨u, mu, le, mk⟩ => ⟨u, mu, le, closed u v mk sv, mk⟩
+
+/-- With `closed` and `down`, every unit of `S` in the way after a step at `x` needs at most `x`. -/
+theorem below_after (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) (w : List U) (x : Nat) :
+    Below need S x (stepAfter need kids w x) :=
+  fun _ mv sv => match line_from_line closed mv sv with
+  | ⟨u, _, le, su, mk⟩ => Nat.le_trans (down u _ su mk) le
+
+/-- With `closed` and `down`, a way whose units in `S` need at most `m` leaves one that does. -/
+theorem below_keeps (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) {m : Nat} {w : List U}
+    (below : Below need S m w) (x : Nat) : Below need S m (stepAfter need kids w x) :=
+  fun _ mv sv => match line_from_line closed mv sv with
+  | ⟨u, mu, _, su, mk⟩ => Nat.le_trans (down u _ su mk) (below u mu su)
+
+/-- Where every unit's kids together take more than it (`grows`), all the kids of a way take at
+least what the way takes and its length. -/
+theorem allKids_rises (grows : ∀ u, use u < taken use (kids u)) :
+    ∀ w : List U, taken use w + w.length ≤ taken use (allKids kids w)
+  | [] => Nat.le_refl 0
+  | u :: w =>
+    Nat.le_trans
+      (Nat.le_of_eq
+        (((congrArg (use u + taken use w + ·) (Nat.add_comm w.length 1)).trans
+          (Nat.add_add_add_comm (use u) 1 (taken use w) w.length).symm)))
+      (Nat.le_trans
+        (Nat.add_le_add (Nat.succ_le_of_lt (grows u)) (allKids_rises grows w))
+        (Nat.le_of_eq (total_append use (allKids kids w) (kids u)).symm))
+
+/-- Where each unit's kids together take what it takes (`even`), all the kids of a way take what
+the way takes. -/
+theorem taken_allKids (even : ∀ u, taken use (kids u) = use u) (w : List U) :
+    taken use (allKids kids w) = taken use w :=
+  (congrArg (taken use) (allKids_flatMap w)).trans
+    ((SelectionTerm.Generations.total_flatMap kids use w).trans (total_congr even w))
+
+end BaseLine
+
 /-! ## 1. The model -/
 
-/-- The way and the rule after a step at level `x`: the way is `LineOnAStock.after` under the kids
-of the rule in force, and the rule is `next` of the way present before the step and the rule in
-force. -/
+/-- The way and the rule after a step at level `x`: the way is `stepAfter` under the kids of the
+rule in force, and the rule is `next` of the way present before the step and the rule in force. -/
 def after (need : U → Nat) (kids : R → U → List U) (next : List U → R → R) (p : List U × R)
     (x : Nat) : List U × R :=
-  (LineOnAStock.after need (kids p.2) p.1 x, next p.1 p.2)
+  (stepAfter need (kids p.2) p.1 x, next p.1 p.2)
 
-/-- The level after a step: `LineOnAStock.left` at the way; the rule is not read. -/
+/-- The level after a step: `stepLeft` at the way; the rule is not read. -/
 def left (giving : Nat → Nat) (use : U → Nat) (p : List U × R) (x : Nat) : Nat :=
-  LineOnAStock.left giving use p.1 x
+  stepLeft giving use p.1 x
 
 /-- The pair's step: the way and rule after a step and the level after it
 (`TurningInTime.pair`). -/
@@ -131,28 +356,27 @@ abbrev course (need : U → Nat) (kids : R → U → List U) (next : List U → 
     (giving : Nat → Nat) (use : U → Nat) (s : (List U × R) × Nat) : Nat → (List U × R) × Nat :=
   Law.orbit (step need kids next giving use) s
 
-/-- Some unit of the way has its need met at the level: `LineOnAStock.Goes` at the way and the
-level. -/
+/-- Some unit of the way has its need met at the level: `stepGoes` at the way and the level. -/
 def Goes (need : U → Nat) (s : (List U × R) × Nat) : Prop :=
-  LineOnAStock.Goes need (s.1.1, s.2)
+  stepGoes need (s.1.1, s.2)
 
-/-- Whether some unit's need is met is decided: `LineOnAStock.goesDecidable`. -/
+/-- Whether some unit's need is met is decided: `stepGoesDecidable`. -/
 instance goesDecidable (need : U → Nat) (s : (List U × R) × Nat) : Decidable (Goes need s) :=
-  LineOnAStock.goesDecidable need (s.1.1, s.2)
+  stepGoesDecidable need (s.1.1, s.2)
 
 /-- The net: the pair's step while some unit's need is met, and nothing where none is. -/
 def net (need : U → Nat) (kids : R → U → List U) (next : List U → R → R) (giving : Nat → Nat)
     (use : U → Nat) : «际» ((List U × R) × Nat) :=
   Law.stepWhile (Goes need) (step need kids next giving use)
 
-/-- The test at a configuration: its way and level hold (`LineOnAStock.Holds`: the way is not empty,
-every unit's need is met, and the level is at or above what the way takes and `y` of it), the rule
-in force does not favour, and the rule set next does not favour. -/
+/-- The test at a configuration: its way and level hold (`Holds`: the way is not empty, every
+unit's need is met, and the level is at or above what the way takes and `y` of it), the rule in
+force does not favour, and the rule set next does not favour. -/
 def Tested (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
     (s : (List U × R) × Nat) : Prop :=
-  LineOnAStock.Holds need use y (s.1.1, s.2) ∧ ¬ favours s.1.2 ∧ ¬ favours (next s.1.1 s.1.2)
+  Holds need use y (s.1.1, s.2) ∧ ¬ favours s.1.2 ∧ ¬ favours (next s.1.1 s.1.2)
 
-/-! ## 2. One step, from `LineOnAStock` at the rule in force -/
+/-! ## 2. One step at the rule in force -/
 
 section Step
 
@@ -161,68 +385,62 @@ variable {need use : U → Nat} {kids : R → U → List U} {next : List U → R
 
 /-- Where under a rule that favours each unit's kids together take more than it (`grows`), the rule
 in force favours, the way has a unit and every need is met: the way after the step takes at least
-one more. `LineOnAStock.allKids_rises` at the kids of the rule in force, the next way being all the
-kids (`LineOnAStock.after_of_met`). -/
-theorem taken_rises (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
+one more. `allKids_rises` at the kids of the rule in force, the next way being all the kids
+(`after_of_met`). -/
+theorem taken_rises (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
     {t : (List U × R) × Nat} (fav : favours t.1.2) {v : U} (mv : v ∈ t.1.1)
     (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
-    LineOnAStock.taken use t.1.1 + 1 ≤
-      LineOnAStock.taken use (step need kids next giving use t).1.1 :=
-  Eq.subst (motive := fun l => LineOnAStock.taken use t.1.1 + 1 ≤ LineOnAStock.taken use l)
-    (LineOnAStock.after_of_met (kids := kids t.1.2) met).symm
+    taken use t.1.1 + 1 ≤ taken use (step need kids next giving use t).1.1 :=
+  Eq.subst (motive := fun l => taken use t.1.1 + 1 ≤ taken use l)
+    (after_of_met (kids := kids t.1.2) met).symm
     (Nat.le_trans (Nat.add_le_add_left (length_pos_of_mem mv) _)
-      (LineOnAStock.allKids_rises (grows t.1.2 fav) t.1.1))
+      (allKids_rises (grows t.1.2 fav) t.1.1))
 
 /-- Where under a rule that does not favour each unit's kids together take what it takes (`even`),
 the rule in force does not favour and every need is met: the way after the step takes what the way
-takes. `LineOnAStock.taken_allKids` at the kids of the rule in force, with
-`LineOnAStock.after_of_met`. -/
-theorem taken_kept (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+takes. `taken_allKids` at the kids of the rule in force, with `after_of_met`. -/
+theorem taken_kept (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     {t : (List U × R) × Nat} (notfav : ¬ favours t.1.2) (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
-    LineOnAStock.taken use (step need kids next giving use t).1.1 =
-      LineOnAStock.taken use t.1.1 :=
-  (congrArg (LineOnAStock.taken use) (LineOnAStock.after_of_met (kids := kids t.1.2) met)).trans
-    (LineOnAStock.taken_allKids (even t.1.2 notfav) t.1.1)
+    taken use (step need kids next giving use t).1.1 = taken use t.1.1 :=
+  (congrArg (taken use) (after_of_met (kids := kids t.1.2) met)).trans
+    (taken_allKids (even t.1.2 notfav) t.1.1)
 
 /-- With kids needing no more than their parent under every rule (`down`), a way whose units need at
-most `m` leaves one whose units need at most `m`. `LineOnAStock.below_keeps` at the kids of the rule
-in force. -/
+most `m` leaves one whose units need at most `m`. `below_keeps` at the kids of the rule in force. -/
 theorem below_kept (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) {m : Nat}
-    {t : (List U × R) × Nat} (below : LineOnAStock.Below need (fun _ => True) m t.1.1) :
-    LineOnAStock.Below need (fun _ => True) m (step need kids next giving use t).1.1 :=
-  LineOnAStock.below_keeps (S := fun _ => True) (kids := kids t.1.2) (fun _ _ _ _ => trivial)
+    {t : (List U × R) × Nat} (below : Below need (fun _ => True) m t.1.1) :
+    Below need (fun _ => True) m (step need kids next giving use t).1.1 :=
+  below_keeps (S := fun _ => True) (kids := kids t.1.2) (fun _ _ _ _ => trivial)
     (fun u v _ mk => down t.1.2 u v mk) below t.2
 
 /-- With `down`, every unit of the way after a step needs at most the level the step was taken at.
-`LineOnAStock.below_after` at the kids of the rule in force. -/
+`below_after` at the kids of the rule in force. -/
 theorem below_level (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) (t : (List U × R) × Nat) :
-    LineOnAStock.Below need (fun _ => True) t.2 (step need kids next giving use t).1.1 :=
-  LineOnAStock.below_after (S := fun _ => True) (kids := kids t.1.2) (fun _ _ _ _ => trivial)
+    Below need (fun _ => True) t.2 (step need kids next giving use t).1.1 :=
+  below_after (S := fun _ => True) (kids := kids t.1.2) (fun _ _ _ _ => trivial)
     (fun u v _ mk => down t.1.2 u v mk) t.1.1 t.2
 
 /-- Where under a rule that does not favour every unit has kids (`some`), the rule in force does not
-favour and some unit's need is met: the way after the step has a unit. By
-`LineOnAStock.mem_after_iff`. -/
+favour and some unit's need is met: the way after the step has a unit. By `mem_after_iff`. -/
 theorem mem_after (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ []) {t : (List U × R) × Nat}
     (notfav : ¬ favours t.1.2) (goes : Goes need t) :
     ∃ v, v ∈ (step need kids next giving use t).1.1 :=
   match goes with
-  | ⟨u, mu, le⟩ => match LineOnAStock.mem_of_ne_nil (some t.1.2 notfav u) with
+  | ⟨u, mu, le⟩ => match mem_of_ne_nil (some t.1.2 notfav u) with
     | ⟨c, mc⟩ =>
-      ⟨c, (LineOnAStock.mem_after_iff (need := need) (kids := kids t.1.2)).mpr ⟨u, mu, le, mc⟩⟩
+      ⟨c, (mem_after_iff (need := need) (kids := kids t.1.2)).mpr ⟨u, mu, le, mc⟩⟩
 
 /-- At a level above nothing and below what the way takes and `y` of it, with giving short of what
 the way takes below `y` of it (`short`) and nothing given from nothing (`nothing`), the step leaves
-less than the level. `LineOnAStock.step_lowers` under what the way takes; where it leaves nothing,
-that is less than a level above nothing. -/
+less than the level. `step_lowers` under what the way takes; where it leaves nothing, that is less
+than a level above nothing. -/
 theorem level_lowers (nothing : RegimeMargin.FromNothing giving) {y : Nat → Nat}
     {t : (List U × R) × Nat}
-    (short : RegimeMargin.Short giving (LineOnAStock.taken use t.1.1)
-      (y (LineOnAStock.taken use t.1.1)))
+    (short : RegimeMargin.Short giving (taken use t.1.1) (y (taken use t.1.1)))
     (pos : 0 < t.2)
-    (under : t.2 < LineOnAStock.taken use t.1.1 + y (LineOnAStock.taken use t.1.1)) :
+    (under : t.2 < taken use t.1.1 + y (taken use t.1.1)) :
     (step need kids next giving use t).2 < t.2 :=
-  (LineOnAStock.step_lowers short nothing (Nat.le_refl _) under).elim
+  (step_lowers short nothing (Nat.le_refl _) under).elim
     (fun zero => Nat.lt_of_le_of_lt (Nat.le_of_eq zero) pos) id
 
 /-- At a level at most `hi` and at or above what the way takes and `y` of it, with giving at least
@@ -230,10 +448,9 @@ what the way takes, `T`, at every level `z` left with `y T ≤ z` and `z + T ≤
 step under what the way takes keeping levels within `hi` (`keeps`), the step leaves no less than
 the level. `RegimeMargin.holds` at its first step. -/
 theorem level_held {y : Nat → Nat} {hi : Nat} {t : (List U × R) × Nat}
-    (meets : RegimeMargin.Meets giving (LineOnAStock.taken use t.1.1)
-      (y (LineOnAStock.taken use t.1.1)) hi)
-    (keeps : RegimeMargin.Keeps giving (LineOnAStock.taken use t.1.1) hi)
-    (enough : LineOnAStock.taken use t.1.1 + y (LineOnAStock.taken use t.1.1) ≤ t.2)
+    (meets : RegimeMargin.Meets giving (taken use t.1.1) (y (taken use t.1.1)) hi)
+    (keeps : RegimeMargin.Keeps giving (taken use t.1.1) hi)
+    (enough : taken use t.1.1 + y (taken use t.1.1) ≤ t.2)
     (high : t.2 ≤ hi) : t.2 ≤ (step need kids next giving use t).2 :=
   (RegimeMargin.holds meets keeps enough high 1).1
 
@@ -249,12 +466,11 @@ variable {need use : U → Nat} {kids : R → U → List U} {next : List U → R
 /-- **The level stays within the cap.** From a start at most `hi` (`high`), where the step under
 what the way takes keeps every level up to `hi` within `hi` at every way the course reaches with
 some need met there and at every step before (`keepsAlong`): every level the course reaches with
-some need met at every step before it is at most `hi`. As `LineOnAStock.within_along`, the rule
-carried. -/
+some need met at every step before it is at most `hi`. The rule is carried alongside the level. -/
 theorem within_along
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (high : s.2 ≤ hi) :
     ∀ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) →
       (course need kids next giving use s k).2 ≤ hi
@@ -279,8 +495,8 @@ unit of the way needs at most `m`, `hi + 1` is at most what the way takes and `r
 is at most `f`, one of the two outcomes holds along `c`. -/
 def OrFrom (need use : U → Nat) (y : Nat → Nat) (favours : R → Prop) (next : List U → R → R)
     (hi : Nat) (c : Nat → (List U × R) × Nat) (m room f : Nat) : Prop :=
-  ∀ k, (∀ j, j < k → Goes need (c j)) → LineOnAStock.Below need (fun _ => True) m (c k).1.1 →
-    hi + 1 ≤ LineOnAStock.taken use (c k).1.1 + room → (c k).2 ≤ f →
+  ∀ k, (∀ j, j < k → Goes need (c j)) → Below need (fun _ => True) m (c k).1.1 →
+    hi + 1 ≤ taken use (c k).1.1 + room → (c k).2 ≤ f →
     Outcomes need use y favours next c
 
 /-- Some need met at every step before `k` and at `k` is some need met at every step before
@@ -299,7 +515,7 @@ step before it, at which every unit of the way needs at most `m`, one of the two
 along the course, or some need is met at `k`, every need is met there, and what the way takes is at
 most the level. Where no need is met, that is the second outcome at `k`. Where the level is below
 `m`, every unit of the next way needs at most the level (`below_level`): `ihM`. Else every need is
-met; where the way takes more than the level the step leaves nothing (`LineOnAStock.step_zero`),
+met; where the way takes more than the level the step leaves nothing (`step_zero`),
 which meets no need: the second outcome at `k + 1`. -/
 theorem outcome_or_met (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
@@ -307,13 +523,13 @@ theorem outcome_or_met (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (ihM : ∀ m', m' < m → ∀ room f,
       OrFrom need use y favours next hi (course need kids next giving use s) m' room f)
     {k : Nat} (before : ∀ j, j < k → Goes need (course need kids next giving use s j))
-    (below : LineOnAStock.Below need (fun _ => True) m
+    (below : Below need (fun _ => True) m
       (course need kids next giving use s k).1.1) :
     Outcomes need use y favours next (course need kids next giving use s) ∨
       (Goes need (course need kids next giving use s k) ∧
         (∀ u, u ∈ (course need kids next giving use s k).1.1 →
           need u ≤ (course need kids next giving use s k).2) ∧
-        LineOnAStock.taken use (course need kids next giving use s k).1.1 ≤
+        taken use (course need kids next giving use s k).1.1 ≤
           (course need kids next giving use s k).2) :=
   (Decidable.em (Goes need (course need kids next giving use s k))).elim
     (fun goes =>
@@ -325,10 +541,10 @@ theorem outcome_or_met (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
           (Nat.le_add_left _ _) (Nat.le_refl _)))
         (fun ge =>
           (Nat.lt_or_ge (course need kids next giving use s k).2
-              (LineOnAStock.taken use (course need kids next giving use s k).1.1)).elim
+              (taken use (course need kids next giving use s k).1.1)).elim
             (fun lt => Or.inl (Or.inr ⟨k + 1, before', fun ⟨u, mu, le⟩ =>
               Nat.not_le_of_gt (needs (k + 1) u mu) (Nat.le_trans le
-                (Nat.le_of_eq (LineOnAStock.step_zero nothing (Nat.le_of_lt lt))))⟩))
+                (Nat.le_of_eq (step_zero nothing (Nat.le_of_lt lt))))⟩))
             (fun within => Or.inr
               ⟨goes, fun u mu => Nat.le_trans (below u mu trivial) ge, within⟩)))
     (fun stop => Or.inl (Or.inr ⟨k, before, stop⟩))
@@ -347,22 +563,22 @@ and takes the same, the level has not fallen (`level_held`, the level at `k` bei
 `within_along`) and meets every need there (`below_level`), so the way at `k + 2` takes at least one
 more: `ihC` at `k + 2`. The bound `m` is kept by `below_kept`. -/
 theorem or_from_level [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
     (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       ¬ favours (course need kids next giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi)
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) hi)
     {m room : Nat}
     (ihM : ∀ m', m' < m → ∀ room f,
       OrFrom need use y favours next hi (course need kids next giving use s) m' room f)
@@ -376,7 +592,7 @@ theorem or_from_level [DecidablePred favours]
           goes_upto before goes
         have before' : ∀ j, j < k + 1 → Goes need (course need kids next giving use s j) :=
           fun j lt => upto j (Nat.le_of_lt_succ lt)
-        have below' : LineOnAStock.Below need (fun _ => True) m
+        have below' : Below need (fun _ => True) m
             (course need kids next giving use s (k + 1)).1.1 := below_kept down below
         (Decidable.em (favours (course need kids next giving use s k).1.2)).elim
           (fun fav => ihC (course need kids next giving use s (k + 1)).2 (k + 1) before' below'
@@ -384,12 +600,12 @@ theorem or_from_level [DecidablePred favours]
               (Nat.add_le_add_right (taken_rises grows fav mu₀ met) room)))
             (Nat.le_refl _))
           (fun notfav =>
-            have kept : LineOnAStock.taken use (course need kids next giving use s (k + 1)).1.1 =
-                LineOnAStock.taken use (course need kids next giving use s k).1.1 :=
+            have kept : taken use (course need kids next giving use s (k + 1)).1.1 =
+                taken use (course need kids next giving use s k).1.1 :=
               taken_kept even notfav met
             (Nat.lt_or_ge (course need kids next giving use s k).2
-                (LineOnAStock.taken use (course need kids next giving use s k).1.1 +
-                  y (LineOnAStock.taken use (course need kids next giving use s k).1.1))).elim
+                (taken use (course need kids next giving use s k).1.1 +
+                  y (taken use (course need kids next giving use s k).1.1))).elim
               (fun under =>
                 have lower : (course need kids next giving use s (k + 1)).2 <
                     (course need kids next giving use s k).2 :=
@@ -442,22 +658,22 @@ at most what the way takes; after the head (`outcome_or_met`) what the way takes
 level, which is at most `hi` (`within_along`): one of the outcomes holds. With room `room + 1`:
 `or_from_level`. -/
 theorem or_from_room [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
     (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       ¬ favours (course need kids next giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi)
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) hi)
     {m : Nat}
     (ihM : ∀ m', m' < m → ∀ room f,
       OrFrom need use y favours next hi (course need kids next giving use s) m' room f) :
@@ -470,28 +686,28 @@ theorem or_from_room [DecidablePred favours]
     or_from_level grows even down needs nothing high keepsAlong regimeAlong ihM
       (or_from_room grows even down needs nothing high keepsAlong regimeAlong ihM room)
 
-/-- **The claim at every bound on the needs, by strong induction** (`LineOnAStock.strong_below`,
+/-- **The claim at every bound on the needs, by strong induction** (`strong_below`,
 `or_from_room`). Premises: those of `tested_or_ends`. -/
 theorem or_all [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
     (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       ¬ favours (course need kids next giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi)
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) hi)
     (m : Nat) :
     ∀ room f, OrFrom need use y favours next hi (course need kids next giving use s) m room f :=
-  LineOnAStock.strong_below
+  strong_below
     (P := fun m => ∀ room f,
       OrFrom need use y favours next hi (course need kids next giving use s) m room f)
     (fun _ ih =>
@@ -526,22 +742,22 @@ the second outcome. Where the rule set next is read from a share of the way and 
 test. No bound on either step is stated. By `or_all` at the total of the needs of the start's way,
 the room `hi + 1` and the start level. -/
 theorem tested_or_ends [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
     (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       ¬ favours (course need kids next giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi) :
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) hi) :
     (∃ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) ∧
         Tested need use y favours next (course need kids next giving use s k)) ∨
       (∃ n, (∀ j, j < n → Goes need (course need kids next giving use s j)) ∧
@@ -552,16 +768,16 @@ theorem tested_or_ends [DecidablePred favours]
 
 /-! ## 5. The least step with the test -/
 
-/-- At a way and a level, the configuration holds (`LineOnAStock.Holds`) or it does not: the way is
-empty or not, every need is met or some is not (`LineOnAStock.met_or_unmet`), and the level is at
+/-- At a way and a level, the configuration holds (`Holds`) or it does not: the way is
+empty or not, every need is met or some is not (`met_or_unmet`), and the level is at
 or above what the way takes and `y` of it, or below. -/
 theorem holds_or_not (need use : U → Nat) (y : Nat → Nat) : ∀ (w : List U) (x : Nat),
-    LineOnAStock.Holds need use y (w, x) ∨ ¬ LineOnAStock.Holds need use y (w, x)
+    Holds need use y (w, x) ∨ ¬ Holds need use y (w, x)
   | [], _ => .inr fun holds => holds.1 rfl
-  | u :: w, x => (LineOnAStock.met_or_unmet need x (u :: w)).elim
+  | u :: w, x => (met_or_unmet need x (u :: w)).elim
       (fun met =>
         (Nat.lt_or_ge x
-            (LineOnAStock.taken use (u :: w) + y (LineOnAStock.taken use (u :: w)))).elim
+            (taken use (u :: w) + y (taken use (u :: w)))).elim
           (fun lt => .inr fun holds => Nat.not_le_of_gt lt holds.2.2)
           (fun ge => .inl ⟨List.cons_ne_nil u w, met, ge⟩))
       (fun ⟨v, mv, lt⟩ => .inr fun holds => Nat.not_le_of_gt lt (holds.2.1 v mv))
@@ -605,22 +821,22 @@ test, some need met at every step before it and the test at no step before it; o
 need met, some need met at every step before it. `tested_or_ends`, with `first_tested` on its first
 outcome. The "or" is inclusive, as there. -/
 theorem first_tested_or_ends [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u, u ∈ (course need kids next giving use s k).1.1 → 0 < need u)
     (nothing : RegimeMargin.FromNothing giving) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use (course need kids next giving use s k).1.1) hi)
+        (taken use (course need kids next giving use s k).1.1) hi)
     (regimeAlong : ∀ k, (∀ j, j ≤ k → Goes need (course need kids next giving use s j)) →
       ¬ favours (course need kids next giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) ∧
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use (course need kids next giving use s k).1.1)
-          (y (LineOnAStock.taken use (course need kids next giving use s k).1.1)) hi) :
+          (taken use (course need kids next giving use s k).1.1)
+          (y (taken use (course need kids next giving use s k).1.1)) hi) :
     (∃ k, (∀ j, j < k → Goes need (course need kids next giving use s j)) ∧
         Tested need use y favours next (course need kids next giving use s k) ∧
         ∀ j, j < k →
@@ -650,18 +866,18 @@ def byShare (share : List U → A) (P : Ideals.Preorder A) : Ideals.Preorder (Li
 /-- **A step at which every need is met is a turn.** With the rule set next read from the share of
 the way (`next := fun w g => h (share w) g`): where every unit's need is met, the way and rule
 after the step are `Pace.turn` at a reading step, of the selection "all the kids under the rule in
-force" and that reading. By `LineOnAStock.after_of_met`. -/
+force" and that reading. By `after_of_met`. -/
 theorem step_turn {t : (List U × R) × Nat} (met : ∀ u, u ∈ t.1.1 → need u ≤ t.2) :
     (step need kids (fun w g => h (share w) g) giving use t).1 =
-      Pace.turn (fun w g => LineOnAStock.allKids (kids g) w) (fun w g => h (share w) g) true t.1 :=
+      Pace.turn (fun w g => allKids (kids g) w) (fun w g => h (share w) g) true t.1 :=
   congrArg (fun l => (l, h (share t.1.1) t.1.2))
-    (LineOnAStock.after_of_met (kids := kids t.1.2) met)
+    (after_of_met (kids := kids t.1.2) met)
 
 /-- A configuration held from a level `x₀` and a take `T₀` within `hi`: its way has a unit, every
 unit of it needs at most `x₀`, it takes `T₀`, and its level is at least `x₀` and at most `hi`. -/
 def HeldAt (need use : U → Nat) (hi x₀ T₀ : Nat) (t : (List U × R) × Nat) : Prop :=
-  (∃ v, v ∈ t.1.1) ∧ LineOnAStock.Below need (fun _ => True) x₀ t.1.1 ∧
-    LineOnAStock.taken use t.1.1 = T₀ ∧ x₀ ≤ t.2 ∧ t.2 ≤ hi
+  (∃ v, v ∈ t.1.1) ∧ Below need (fun _ => True) x₀ t.1.1 ∧
+    taken use t.1.1 = T₀ ∧ x₀ ≤ t.2 ∧ t.2 ≤ hi
 
 /-- **One step keeps a held configuration, under a rule that does not favour.** With `even`, `some`
 and `down`, giving at least `T₀` at every level `z` left with `y T₀ ≤ z` and `z + T₀ ≤ hi`
@@ -670,7 +886,7 @@ and `down`, giving at least `T₀` at every level `z` left with `y T₀ ≤ z` a
 `T₀`, so is the configuration after the step. Any `next`. By `mem_after`, `below_kept`,
 `taken_kept` and `level_held`. -/
 theorem held_step {next : List U → R → R} {x₀ T₀ : Nat}
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (meets : RegimeMargin.Meets giving T₀ (y T₀) hi) (keeps : RegimeMargin.Keeps giving T₀ hi)
@@ -681,7 +897,7 @@ theorem held_step {next : List U → R → R} {x₀ T₀ : Nat}
   | ⟨⟨v, mv⟩, below, take, low, high⟩ =>
     have met : ∀ u, u ∈ t.1.1 → need u ≤ t.2 := fun u mu =>
       Nat.le_trans (below u mu trivial) low
-    have keeps' : RegimeMargin.Keeps giving (LineOnAStock.taken use t.1.1) hi :=
+    have keeps' : RegimeMargin.Keeps giving (taken use t.1.1) hi :=
       Eq.subst (motive := fun T => RegimeMargin.Keeps giving T hi) take.symm keeps
     ⟨mem_after (next := next) (giving := giving) some notfav ⟨v, mv, met v mv⟩,
       below_kept down below, (taken_kept even notfav met).trans take,
@@ -711,28 +927,28 @@ reversed (`RuleCapture.reverse`), the step being a turn (`step_turn`); its three
 `lowers`, `monotone` reversed (`RuleCapture.ReadsShare.reverse`) along `share`, and `upper` read
 backward. -/
 theorem lasts_from
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
-    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {t : (List U × R) × Nat}
-    (meets : RegimeMargin.Meets giving (LineOnAStock.taken use t.1.1)
-      (y (LineOnAStock.taken use t.1.1)) hi)
-    (keeps : RegimeMargin.Keeps giving (LineOnAStock.taken use t.1.1) hi) (high : t.2 ≤ hi)
+    (meets : RegimeMargin.Meets giving (taken use t.1.1)
+      (y (taken use t.1.1)) hi)
+    (keeps : RegimeMargin.Keeps giving (taken use t.1.1) hi) (high : t.2 ≤ hi)
     (tested : Tested need use y favours (fun w g => h (share w) g) t) :
-    ∀ i, HeldAt need use hi t.2 (LineOnAStock.taken use t.1.1)
+    ∀ i, HeldAt need use hi t.2 (taken use t.1.1)
           (Law.orbit (step need kids (fun w g => h (share w) g) giving use) t (i + 1)) ∧
         RuleCapture.Locked (RuleCapture.reverse M) (fun g => ¬ favours g)
           (fun w g => h (share w) g)
           (Law.orbit (step need kids (fun w g => h (share w) g) giving use) t (i + 1)).1
   | 0 =>
     ⟨held_step even some down meets keeps tested.1.2.2 tested.2.1
-        ⟨LineOnAStock.mem_of_ne_nil tested.1.1, fun u mu _ => tested.1.2.1 u mu, rfl,
+        ⟨mem_of_ne_nil tested.1.1, fun u mu _ => tested.1.2.1 u mu, rfl,
           Nat.le_refl _, high⟩,
       tested.2.2,
       monotone _ _ _ _ (Eq.subst (motive := fun l => P.le (share l) (share t.1.1))
-        (LineOnAStock.after_of_met (kids := kids t.1.2) tested.1.2.1).symm
+        (after_of_met (kids := kids t.1.2) tested.1.2.1).symm
         (lowers t.1.1 t.1.2 tested.2.1))⟩
   | i + 1 =>
     match lasts_from even some down lowers monotone upper meets keeps high tested i with
@@ -743,7 +959,7 @@ theorem lasts_from
             (fun w g => h (share w) g))
           (step_turn fun u mu => Nat.le_trans (held.2.1 u mu trivial) held.2.2.2.1).symm
           (RuleCapture.turn_locked (P := RuleCapture.reverse (byShare share P))
-            (f := fun w g => LineOnAStock.allKids (kids g) w) lowers
+            (f := fun w g => allKids (kids g) w) lowers
             (fun w w' g g' le =>
               RuleCapture.ReadsShare.reverse monotone (share w) (share w') g g' le)
             (fun le notfav fav => notfav (upper le fav)) true _ locked).1⟩
@@ -775,28 +991,28 @@ a way whose units take nothing could leave no unit under a rule that does not fa
 `lasts_from` at the step with the test (the level there at most `hi` by `within_along`): every later
 way has a unit whose need the level meets. -/
 theorem tested_lasts
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u) (high : s.2 ≤ hi)
     (keepsAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use
+        (taken use
           (course need kids (fun w g => h (share w) g) giving use s k).1.1) hi)
     (regimeAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       ¬ favours (course need kids (fun w g => h (share w) g) giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) hi)
-    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') :
     (∃ k,
@@ -807,7 +1023,7 @@ theorem tested_lasts
       «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s :=
   fun ⟨k, before, tested⟩ => Law.stepWhile_unending_iff.mpr fun n =>
     have goes : Goes need (course need kids (fun w g => h (share w) g) giving use s k) :=
-      match LineOnAStock.mem_of_ne_nil tested.1.1 with
+      match mem_of_ne_nil tested.1.1 with
       | ⟨v, mv⟩ => ⟨v, mv, tested.1.2.1 v mv⟩
     have upto := goes_upto before goes
     (Nat.lt_or_ge n k).elim (before n) fun ge =>
@@ -839,8 +1055,8 @@ exactly where the course from `s` has a step with the test (`Tested`), some need
 before it. Left to right by `tested_or_ends` (a net that never ends has no step with no need met);
 right to left is `tested_lasts`. -/
 theorem unending_iff_tested [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u,
@@ -849,22 +1065,22 @@ theorem unending_iff_tested [DecidablePred favours]
     (keepsAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use
+        (taken use
           (course need kids (fun w g => h (share w) g) giving use s k).1.1) hi)
     (regimeAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       ¬ favours (course need kids (fun w g => h (share w) g) giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) hi)
-    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') :
     «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s ↔
@@ -885,8 +1101,8 @@ of `unending_iff_tested`: the net from `s` does not go on without end exactly wh
 that never ends has some need met at every step. With `unending_iff_tested`: under these premises
 exactly one of the two outcomes of `tested_or_ends` comes. -/
 theorem ends_iff_unmet [DecidablePred favours]
-    (grows : ∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u))
-    (even : ∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u)
+    (grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u))
+    (even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u)
     (some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ [])
     (down : ∀ g u v, v ∈ kids g u → need v ≤ need u)
     (needs : ∀ k u,
@@ -895,22 +1111,22 @@ theorem ends_iff_unmet [DecidablePred favours]
     (keepsAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       RegimeMargin.Keeps giving
-        (LineOnAStock.taken use
+        (taken use
           (course need kids (fun w g => h (share w) g) giving use s k).1.1) hi)
     (regimeAlong : ∀ k,
       (∀ j, j ≤ k → Goes need (course need kids (fun w g => h (share w) g) giving use s j)) →
       ¬ favours (course need kids (fun w g => h (share w) g) giving use s k).1.2 →
       RegimeMargin.Short giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) ∧
         RegimeMargin.Meets giving
-          (LineOnAStock.taken use
+          (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)
-          (y (LineOnAStock.taken use
+          (y (taken use
             (course need kids (fun w g => h (share w) g) giving use s k).1.1)) hi)
-    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') :
     ¬ «不穷» (net need kids (fun w g => h (share w) g) giving use) «一» s ↔
@@ -938,7 +1154,7 @@ stock. Each step is a turn (`step_turn`) and keeps the lock by **`RuleCapture.tu
 the selection "all the kids under the rule in force" and the order of ways by their shares
 (`byShare`). -/
 theorem locked_while_met
-    (raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w)))
+    (raises : ∀ w g, favours g → P.le (share w) (share (allKids (kids g) w)))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
     (locked : RuleCapture.Locked M favours (fun w g => h (share w) g) s.1) :
@@ -953,7 +1169,7 @@ theorem locked_while_met
     Eq.subst (motive := RuleCapture.Locked M favours (fun w g => h (share w) g))
       (step_turn (met n (Nat.lt_succ_self n))).symm
       (RuleCapture.turn_locked (P := byShare share P)
-        (f := fun w g => LineOnAStock.allKids (kids g) w) raises
+        (f := fun w g => allKids (kids g) w) raises
         (fun w w' g g' le => monotone (share w) (share w') g g' le) upper true _
         (locked_while_met raises monotone upper locked n fun j lt =>
           met j (Nat.lt_succ_of_lt lt))).1
@@ -964,7 +1180,7 @@ premise on the stock: where every unit's need is met at every step before `n`, t
 favours at every step up to `n + 1`. Up to `n` by `locked_while_met`; at `n + 1` the rule is the
 one read at `n`, which is not below the favouring rule in force there (`upper`). -/
 theorem favours_while_met
-    (raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w)))
+    (raises : ∀ w g, favours g → P.le (share w) (share (allKids (kids g) w)))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
     (locked : RuleCapture.Locked M favours (fun w g => h (share w) g) s.1) :
@@ -989,10 +1205,10 @@ theorem favours_while_met
 unmet.** With `raises`, `monotone`, `upper` and the start locked, and no premise on the stock:
 where the rule in force at step `k` does not favour, some step `j` with `j + 2 ≤ k` has a unit
 whose need is above the level there. The step found is the first with a need unmet, by a bounded
-search (`first_of_decided`, with `LineOnAStock.met_or_unmet`), though the statement does not say
+search (`first_of_decided`, with `met_or_unmet`), though the statement does not say
 that it is the first; `favours_while_met` puts it at least two steps before `k`. -/
 theorem unmet_before_unfavoured
-    (raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w)))
+    (raises : ∀ w g, favours g → P.le (share w) (share (allKids (kids g) w)))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
     (locked : RuleCapture.Locked M favours (fun w g => h (share w) g) s.1) {k : Nat}
@@ -1007,7 +1223,7 @@ theorem unmet_before_unfavoured
       (Q := fun t =>
         ∃ u, u ∈ (course need kids (fun w g => h (share w) g) giving use s t).1.1 ∧
           (course need kids (fun w g => h (share w) g) giving use s t).2 < need u)
-      (fun t => LineOnAStock.met_or_unmet need
+      (fun t => met_or_unmet need
         (course need kids (fun w g => h (share w) g) giving use s t).2
         (course need kids (fun w g => h (share w) g) giving use s t).1.1) k with
   | .inl all =>
@@ -1025,7 +1241,7 @@ theorem unmet_before_unfavoured
 (`Tested`) holds at step `k`, some step `j` with `j + 2 ≤ k` has a unit whose need is above the
 level there. `unmet_before_unfavoured`, the test saying that the rule in force does not favour. -/
 theorem unmet_before_tested
-    (raises : ∀ w g, favours g → P.le (share w) (share (LineOnAStock.allKids (kids g) w)))
+    (raises : ∀ w g, favours g → P.le (share w) (share (allKids (kids g) w)))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
     (locked : RuleCapture.Locked M favours (fun w g => h (share w) g) s.1) {k : Nat}
@@ -1112,13 +1328,13 @@ theorem meets (T : Nat) : RegimeMargin.Meets giving T T 32 := fun _ le top =>
   le_min le (Naturals.le_sub_of_add_le top)
 
 /-- Under the rule `false`, all the kids of a way are the way. -/
-theorem allKids_false : ∀ w : List Kind, LineOnAStock.allKids (kids false) w = w
+theorem allKids_false : ∀ w : List Kind, allKids (kids false) w = w
   | [] => rfl
   | u :: w => congrArg (u :: ·) (allKids_false w)
 
 /-- Under the rule `true`, all the kids of a way have the way's share. -/
 theorem share_allKids_true :
-    ∀ w : List Kind, share (LineOnAStock.allKids (kids true) w) = share w
+    ∀ w : List Kind, share (allKids (kids true) w) = share w
   | [] => rfl
   | F :: w => congrArg (· + 1) (share_allKids_true w)
   | O :: w => share_allKids_true w
@@ -1148,26 +1364,26 @@ the order of the lists but for `some`, with `y T = T`, `hi = 32`, shares ordered
   `lowers`, `monotone`, `upper`;
 * list 3: `raises`, and the start locked. -/
 def Premises (n : Nat) : Prop :=
-  (∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u)) ∧
-  (∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u) ∧
+  (∀ g, favours g → ∀ u, use u < taken use (kids g u)) ∧
+  (∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u) ∧
   (∀ g, ¬ favours g → ∀ u, kids g u ≠ []) ∧
   (∀ g u v, v ∈ kids g u → need n v ≤ need n u) ∧
   (∀ k u, u ∈ (run n k).1.1 → 0 < need n u) ∧
   RegimeMargin.FromNothing giving ∧
   start.2 ≤ 32 ∧
   (∀ k, (∀ j, j ≤ k → Goes (need n) (run n j)) →
-    RegimeMargin.Keeps giving (LineOnAStock.taken use (run n k).1.1) 32) ∧
+    RegimeMargin.Keeps giving (taken use (run n k).1.1) 32) ∧
   (∀ k, (∀ j, j ≤ k → Goes (need n) (run n j)) → ¬ favours (run n k).1.2 →
-    RegimeMargin.Short giving (LineOnAStock.taken use (run n k).1.1)
-        (id (LineOnAStock.taken use (run n k).1.1)) ∧
-      RegimeMargin.Meets giving (LineOnAStock.taken use (run n k).1.1)
-        (id (LineOnAStock.taken use (run n k).1.1)) 32) ∧
+    RegimeMargin.Short giving (taken use (run n k).1.1)
+        (id (taken use (run n k).1.1)) ∧
+      RegimeMargin.Meets giving (taken use (run n k).1.1)
+        (id (taken use (run n k).1.1)) 32) ∧
   (∀ w g, ¬ favours g →
-    TurningInTime.Three.shareOrder.le (share (LineOnAStock.allKids (kids g) w)) (share w)) ∧
+    TurningInTime.Three.shareOrder.le (share (allKids (kids g) w)) (share w)) ∧
   RuleCapture.ReadsShare TurningInTime.Three.shareOrder TurningInTime.Three.ruleOrder read ∧
   (∀ {g g'}, TurningInTime.Three.ruleOrder.le g g' → favours g → favours g') ∧
   (∀ w g, favours g →
-    TurningInTime.Three.shareOrder.le (share w) (share (LineOnAStock.allKids (kids g) w))) ∧
+    TurningInTime.Three.shareOrder.le (share w) (share (allKids (kids g) w))) ∧
   RuleCapture.Locked TurningInTime.Three.ruleOrder favours (fun w g => read (share w) g) start.1
 
 /-- **Where `F` needs something, every premise of the three lists holds** (`Premises`). Under
@@ -1357,144 +1573,66 @@ theorem favours_through_four : ∀ j, j ≤ 4 → favours (run 26 j).1.2 :=
 
 end NeedTwentySix
 
-/-! ## 10. At one rule: two laws of the line on a stock as cases -/
+/-! ## 10. At one rule: the single-rule course as a case -/
 
 section OneRule
 
 variable {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
 
-/-- **At one rule the course is the course of the line on a stock, the rule carried.** With
-`R := PUnit` and the same kids under it, for any `next`: at every step the way and the level are
-those of `LineOnAStock.course` from the same way and level. -/
+/-- **At one rule the course is the single-rule orbit, the rule carried.** With `R := PUnit` and
+the same kids under it, for any `next`: at every step the way and the level are those of
+`Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use))` from the same way and
+level. -/
 theorem course_one_rule (next : List U → PUnit → PUnit) (w : List U) (x : Nat) :
     ∀ k, course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k =
-      (((LineOnAStock.course need kids giving use (w, x) k).1, PUnit.unit),
-        (LineOnAStock.course need kids giving use (w, x) k).2)
+      (((Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k).1,
+          PUnit.unit),
+        (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k).2)
   | 0 => rfl
   | k + 1 => congrArg (step need (fun _ => kids) next giving use) (course_one_rule next w x k)
 
-/-- At one rule the way at every step is the way of `LineOnAStock.course` (`course_one_rule`). -/
+/-- At one rule the way at every step is the way of the single-rule orbit (`course_one_rule`). -/
 theorem way_one_rule (next : List U → PUnit → PUnit) (w : List U) (x k : Nat) :
     (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k).1.1 =
-      (LineOnAStock.course need kids giving use (w, x) k).1 :=
+      (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k).1 :=
   congrArg (fun t => t.1.1) (course_one_rule next w x k)
 
-/-- At one rule some need is met at a step exactly where it is at that step of
-`LineOnAStock.course` (`course_one_rule`). -/
+/-- At one rule some need is met at a step exactly where it is at that step of the single-rule
+orbit (`course_one_rule`). -/
 theorem goes_one_rule (next : List U → PUnit → PUnit) (w : List U) (x k : Nat) :
     Goes need (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k) ↔
-      LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) k) :=
+      stepGoes need
+        (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k) :=
   Eq.subst
     (motive := fun t =>
-      Goes need t ↔ LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) k))
+      Goes need t ↔
+        stepGoes need
+          (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k))
     (course_one_rule next w x k).symm Iff.rfl
 
 /-- At one rule that does not favour, the test at a step is that the configuration at that step of
-`LineOnAStock.course` holds (`course_one_rule`). -/
+the single-rule orbit holds (`course_one_rule`). -/
 theorem tested_one_rule {y : Nat → Nat} (next : List U → PUnit → PUnit) (w : List U)
     (x k : Nat) :
     Tested need use y (fun _ => False) next
         (course need (fun _ => kids) next giving use ((w, PUnit.unit), x) k) ↔
-      LineOnAStock.Holds need use y (LineOnAStock.course need kids giving use (w, x) k) :=
+      Holds need use y
+        (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k) :=
   Eq.subst
     (motive := fun t =>
       Tested need use y (fun _ => False) next t ↔
-        LineOnAStock.Holds need use y (LineOnAStock.course need kids giving use (w, x) k))
+        Holds need use y
+          (Law.orbit (TurningInTime.pair (stepAfter need kids) (stepLeft giving use)) (w, x) k))
     (course_one_rule next w x k).symm
     ⟨fun tested => tested.1, fun holds => ⟨holds, id, id⟩⟩
 
 end OneRule
 
 /-- The order on the one-element type. -/
-private def oneOrder : Ideals.Preorder PUnit where
+def oneOrder : Ideals.Preorder PUnit where
   le _ _ := True
   refl _ := trivial
   trans _ _ := trivial
-
-/-- **`LineOnAStock.unending_iff_holds` as a case.** Its statement, binder for binder, proved from
-`unending_iff_tested` at one rule that does not favour (`R := PUnit`, `favours := fun _ => False`,
-the share and the orders on the one-element type, where `lowers`, `monotone` and `upper` hold
-trivially), with `course_one_rule`; the old theorem is not used. Private: it stands, with the
-check `unending_iff_holds_same` after it, until a later stage makes the old theorem a call of
-`unending_iff_tested`. -/
-private theorem unending_iff_holds_case {U : Type} {need : U → Nat} {kids : U → List U}
-    {use : U → Nat} {giving : Nat → Nat} {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
-    (even : ∀ u, LineOnAStock.taken use (kids u) = use u) (some : ∀ u, kids u ≠ [])
-    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : LineOnAStock.Needing need kids w)
-    (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)
-    (along : ∀ k,
-      (∀ j, j ≤ k →
-        LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) j)) →
-      LineOnAStock.Regime giving use y hi (LineOnAStock.course need kids giving use (w, x) k).1) :
-    «不穷» (LineOnAStock.net need kids giving use) «一» (w, x) ↔
-      ∃ k, (∀ j, j < k →
-          LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) j)) ∧
-        LineOnAStock.Holds need use y (LineOnAStock.course need kids giving use (w, x) k) :=
-  have regime : ∀ k,
-      (∀ j, j ≤ k → Goes need
-        (course need (fun _ => kids) (fun _ g => g) giving use ((w, PUnit.unit), x) j)) →
-      LineOnAStock.Regime giving use y hi
-        (course need (fun _ => kids) (fun _ g => g) giving use ((w, PUnit.unit), x) k).1.1 :=
-    fun k upto => Eq.subst (motive := LineOnAStock.Regime giving use y hi)
-      (way_one_rule (fun _ g => g) w x k).symm
-      (along k fun j le => (goes_one_rule (fun _ g => g) w x j).mp (upto j le))
-  (Law.stepWhile_unending_iff.trans
-    ⟨fun all n => (goes_one_rule (fun _ g => g) w x n).mpr (all n),
-      fun all n => (goes_one_rule (fun _ g => g) w x n).mp (all n)⟩).trans
-    ((Law.stepWhile_unending_iff.symm.trans
-      (unending_iff_tested (R := PUnit) (P := oneOrder) (M := oneOrder)
-        (share := fun _ => PUnit.unit) (h := fun _ g => g) (favours := fun _ => False)
-        (y := y) (hi := hi) (s := ((w, PUnit.unit), x))
-        (fun _ no => no.elim) (fun _ _ => even) (fun _ _ => some) (fun _ => down)
-        (fun k u mu => needs k u (LineOnAStock.mem_generation (w, x) k u
-          (Eq.subst (motive := fun l => u ∈ l) (way_one_rule (fun _ g => g) w x k) mu)))
-        nothing high (fun k upto => (regime k upto).2.2)
-        (fun k upto _ => ⟨(regime k upto).1, (regime k upto).2.1⟩)
-        (fun _ _ _ => trivial) (fun _ _ _ _ _ => trivial) (fun _ no => no))).trans
-      ⟨fun ⟨k, before, tested⟩ =>
-          ⟨k, fun j lt => (goes_one_rule (fun _ g => g) w x j).mp (before j lt),
-            (tested_one_rule (fun _ g => g) w x k).mp tested⟩,
-        fun ⟨k, before, holds⟩ =>
-          ⟨k, fun j lt => (goes_one_rule (fun _ g => g) w x j).mpr (before j lt),
-            (tested_one_rule (fun _ g => g) w x k).mpr holds⟩⟩)
-
-/-- The statement of `unending_iff_holds_case` is the statement of
-`LineOnAStock.unending_iff_holds`: the two are equal by `rfl`, which typechecks only where the two
-statements are definitionally the same; that they match binder for binder is by reading. -/
-private theorem unending_iff_holds_same :
-    @unending_iff_holds_case = @LineOnAStock.unending_iff_holds := rfl
-
-/-- **`LineOnAStock.way_ends` as a case.** Its statement, binder for binder, proved from
-`tested_or_ends` at one rule that favours (`R := PUnit`, `favours := fun _ => True`): the first
-outcome asks a rule that does not favour, so the second stands, a step with no need met; `even`
-and `regimeAlong` hold of no rule, and the step under every take keeps levels within `hi` since the
-step under none does (`TurningInTime.kept_within`). With `course_one_rule`; it does not use the old
-theorem. Private: it stands, with the check `way_ends_same` after it, until a later
-stage makes the old theorem a call of `tested_or_ends`. -/
-private theorem way_ends_case {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
-    {giving : Nat → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
-    (keeps : RegimeMargin.Keeps giving 0 hi)
-    (grows : ∀ u, use u < LineOnAStock.taken use (kids u)) (needs : ∀ u, 0 < need u)
-    (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) :
-    (∃ n, ¬ LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) n)) ∧
-      ¬ «不穷» (LineOnAStock.net need kids giving use) «一» (w, x) :=
-  (tested_or_ends (R := PUnit) (next := fun _ g => g) (favours := fun _ => True)
-      (y := fun _ => 0) (hi := hi) (s := ((w, PUnit.unit), x))
-      (fun _ _ => grows) (fun _ no => absurd trivial no)
-      (fun _ => down) (fun _ u _ => needs u) nothing high
-      (fun _ _ _ le => TurningInTime.kept_within keeps _ le)
-      (fun _ _ no => absurd trivial no)).elim
-    (fun ⟨_, _, tested⟩ => absurd trivial tested.2.1)
-    (fun ⟨n, _, stop⟩ =>
-      have stop' :
-          ¬ LineOnAStock.Goes need (LineOnAStock.course need kids giving use (w, x) n) :=
-        fun goes => stop ((goes_one_rule (fun _ g => g) w x n).mpr goes)
-      ⟨⟨n, stop'⟩, fun never => stop' (Law.stepWhile_unending_iff.mp never n)⟩)
-
-/-- The statement of `way_ends_case` is the statement of `LineOnAStock.way_ends`: the two are equal
-by `rfl`, which typechecks only where the two statements are definitionally the same; that they
-match binder for binder is by reading. -/
-private theorem way_ends_same : @way_ends_case = @LineOnAStock.way_ends := rfl
 
 /-! ## 11. A course with both outcomes -/
 
@@ -1547,19 +1685,19 @@ abbrev run : Nat → (List Unit × Rule) × Nat :=
 `y T = T` and `hi = 32`: `grows`, `even`, `down`, `needs` (along the course), `nothing`, `high`,
 `keepsAlong`, `regimeAlong`. That `favours` is decided is the instance `favoursDecidable`. -/
 def Premises : Prop :=
-  (∀ g, favours g → ∀ u, use u < LineOnAStock.taken use (kids g u)) ∧
-  (∀ g, ¬ favours g → ∀ u, LineOnAStock.taken use (kids g u) = use u) ∧
+  (∀ g, favours g → ∀ u, use u < taken use (kids g u)) ∧
+  (∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u) ∧
   (∀ g u v, v ∈ kids g u → need v ≤ need u) ∧
   (∀ k u, u ∈ (run k).1.1 → 0 < need u) ∧
   RegimeMargin.FromNothing TwoKinds.giving ∧
   start.2 ≤ 32 ∧
   (∀ k, (∀ j, j ≤ k → Goes need (run j)) →
-    RegimeMargin.Keeps TwoKinds.giving (LineOnAStock.taken use (run k).1.1) 32) ∧
+    RegimeMargin.Keeps TwoKinds.giving (taken use (run k).1.1) 32) ∧
   (∀ k, (∀ j, j ≤ k → Goes need (run j)) → ¬ favours (run k).1.2 →
-    RegimeMargin.Short TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
-        (id (LineOnAStock.taken use (run k).1.1)) ∧
-      RegimeMargin.Meets TwoKinds.giving (LineOnAStock.taken use (run k).1.1)
-        (id (LineOnAStock.taken use (run k).1.1)) 32)
+    RegimeMargin.Short TwoKinds.giving (taken use (run k).1.1)
+        (id (taken use (run k).1.1)) ∧
+      RegimeMargin.Meets TwoKinds.giving (taken use (run k).1.1)
+        (id (taken use (run k).1.1)) 32)
 
 /-- **The premises hold** (`Premises`). Under `c` the unit's two kids together take two, more than
 one; under `a` and `b` it leaves itself; every unit needs one; nothing is given from nothing and
@@ -1633,7 +1771,7 @@ every rule), so with the three it would make the net never end from the test at 
 Which of the three fails is not stated. -/
 theorem not_read_from_a_share {A : Type} {P : Ideals.Preorder A} {M : Ideals.Preorder Rule}
     {share : List Unit → A} {h : A → Rule → Rule} (reads : (fun w g => h (share w) g) = next)
-    (lowers : ∀ w g, ¬ favours g → P.le (share (LineOnAStock.allKids (kids g) w)) (share w))
+    (lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w))
     (monotone : RuleCapture.ReadsShare P M h)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') : False :=
   match premises with

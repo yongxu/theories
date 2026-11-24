@@ -1,11 +1,9 @@
-import Becoming.TurningInTime
-import Becoming.SelectionTerm
-import Becoming.ReadingsPersist
+import Becoming.WayUnderARule
 
 /-!
 # A line on a stock: units that leave offspring on a renewed level
 
-AI-written, 16 November 2026.
+AI-written, 16 November 2026; Stage 2 join on `Becoming.WayUnderARule`, 24 November 2026.
 
 ## The model
 
@@ -73,8 +71,9 @@ Each docstring names all its premises.
   not through `need_unmet` (`TurningInTime.locked_ends_rising`, `count_rises`).
 * **A line that grows ends** (`line_ends`): with the stock so bounded and a closed line each of whose
   units has kids of the line that together take more than it, needs something, and has kids that need
-  no more than it, the line is gone from some step on; for the line of every unit, the net ends
-  (`way_ends`). No bound on the step.
+  no more than it, the line is gone from some step on (`ends_all`); for the whole way, the net ends
+  (`way_ends`, as a direct call of `WayUnderARule.tested_or_ends` at one favouring rule). No bound on
+  the step.
 * **Fall** (`fall`): a closed line of one need `m`, each of whose units has kids of the line that
   together take no less than it, taking at the start more than every giving (given), with
   `giving 0 < m`, is gone from some step on.
@@ -86,9 +85,10 @@ Each docstring names all its premises.
   descendant of the way needs something (`needs`), nothing is given from nothing (`nothing`), the start
   is at most `hi` (`high`), and `Regime` holds at every way the course reaches with some need met there
   and at every step before (`along`): the net never ends exactly where, some need met at every step
-  before, the course comes to a configuration that holds (`Holds`). `WayOfUnits.unending_iff_holds` is
-  its case `kids u = [u]`. In `TwoForOne` only `P`'s offspring are not itself (`Q` leaves itself), the
-  course is fixed from step 1, and the instance uses the "if" side at `k = 0`.
+  before, the course comes to a configuration that holds (`Holds`), proved directly from
+  `WayUnderARule.unending_iff_tested` at one rule that does not favour. `WayOfUnits.unending_iff_holds`
+  is its case `kids u = [u]`. In `TwoForOne` only `P`'s offspring are not itself (`Q` leaves itself),
+  the course is fixed from step 1, and the instance uses the "if" side at `k = 0`.
 
 ## A unit's kids together taking more than it, the same, or less
 
@@ -135,20 +135,20 @@ variable {U : Type}
 /-! ## 1. The model -/
 
 /-- The way after a step at level `x`: each unit in turn leaves its kids where `x` meets its need,
-and nothing where it does not. -/
-def after (need : U → Nat) (kids : U → List U) : List U → Nat → List U
-  | [], _ => []
-  | u :: w, x => cond (decide (need u ≤ x)) (kids u) [] ++ after need kids w x
+and nothing where it does not (`WayUnderARule.stepAfter`). -/
+abbrev after (need : U → Nat) (kids : U → List U) : List U → Nat → List U :=
+  WayUnderARule.stepAfter need kids
 
-/-- What a way takes: the total of its units' uses (`Becoming.total`, the total of `Prelude`). -/
-def taken (use : U → Nat) (w : List U) : Nat := total w use
+/-- What a way takes: the total of its units' uses (`WayUnderARule.taken`). -/
+abbrev taken (use : U → Nat) (w : List U) : Nat := WayUnderARule.taken use w
 
-/-- The level after a step: `RegimeMargin.step` under what every unit present at the step takes. -/
-def left (giving : Nat → Nat) (use : U → Nat) (w : List U) (x : Nat) : Nat :=
-  RegimeMargin.step giving (taken use w) x
+/-- The level after a step: `RegimeMargin.step` under what every unit present at the step takes
+(`WayUnderARule.stepLeft`). -/
+abbrev left (giving : Nat → Nat) (use : U → Nat) (w : List U) (x : Nat) : Nat :=
+  WayUnderARule.stepLeft giving use w x
 
-/-- Some unit of the way has its need met at the level. -/
-def Goes (need : U → Nat) (s : List U × Nat) : Prop := ∃ u, u ∈ s.1 ∧ need u ≤ s.2
+/-- Some unit of the way has its need met at the level (`WayUnderARule.stepGoes`). -/
+abbrev Goes (need : U → Nat) (s : List U × Nat) : Prop := WayUnderARule.stepGoes need s
 
 /-- The pair's step: the way after a step and the level after it (`TurningInTime.pair`). -/
 abbrev step (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use : U → Nat) :
@@ -165,15 +165,11 @@ abbrev course (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (u
     (s : List U × Nat) : Nat → List U × Nat :=
   Law.orbit (step need kids giving use) s
 
-/-- The kids of every unit of a way, in order: the way after a step at which every need is met. -/
-def allKids (kids : U → List U) : List U → List U
-  | [] => []
-  | u :: w => kids u ++ allKids kids w
+/-- The kids of every unit of a way, in order (`WayUnderARule.allKids`). -/
+abbrev allKids (kids : U → List U) : List U → List U := WayUnderARule.allKids kids
 
-/-- The `n`-th generation of a way with no level in it: the kids of the kids … of its units. -/
-def generation (kids : U → List U) : Nat → List U → List U
-  | 0, w => w
-  | n + 1, w => allKids kids (generation kids n w)
+/-- The `n`-th generation of a way with no level in it (`WayUnderARule.generation`). -/
+abbrev generation (kids : U → List U) : Nat → List U → List U := WayUnderARule.generation kids
 
 /-- What `S` takes of a way: the total of `use` over the units of the way with `S`. -/
 def lineTake (S : U → Prop) [DecidablePred S] (use : U → Nat) (w : List U) : Nat :=
@@ -183,31 +179,25 @@ def lineTake (S : U → Prop) [DecidablePred S] (use : U → Nat) (w : List U) :
 def lineCount (S : U → Prop) [DecidablePred S] (w : List U) : Nat :=
   total w fun u => if S u then 1 else 0
 
-/-- A configuration from which what its way takes holds: the way is not empty, every unit's need is
-met at the level, and the level is at or above what the way takes and `y` of it. `WayOfUnits.Holds`
-for any units. -/
-def Holds (need use : U → Nat) (y : Nat → Nat) (s : List U × Nat) : Prop :=
-  s.1 ≠ [] ∧ (∀ u, u ∈ s.1 → need u ≤ s.2) ∧ taken use s.1 + y (taken use s.1) ≤ s.2
+/-- A configuration from which what its way takes holds (`WayUnderARule.Holds`). -/
+abbrev Holds (need use : U → Nat) (y : Nat → Nat) (s : List U × Nat) : Prop :=
+  WayUnderARule.Holds need use y s
 
-/-- The regime at a way `w`: giving short of what `w` takes below `y` of it, meeting it from there up
-to `hi`, and the step under it keeping the level within `hi`. `WayOfUnits.Regime` for any units. -/
-def Regime (giving : Nat → Nat) (use : U → Nat) (y : Nat → Nat) (hi : Nat) (w : List U) : Prop :=
-  RegimeMargin.Short giving (taken use w) (y (taken use w)) ∧
-    RegimeMargin.Meets giving (taken use w) (y (taken use w)) hi ∧
-    RegimeMargin.Keeps giving (taken use w) hi
+/-- The regime at a way `w` (`WayUnderARule.Regime`). -/
+abbrev Regime (giving : Nat → Nat) (use : U → Nat) (y : Nat → Nat) (hi : Nat) (w : List U) : Prop :=
+  WayUnderARule.Regime giving use y hi w
 
-/-- Every unit of every generation of `w` needs something. -/
-def Needing (need : U → Nat) (kids : U → List U) (w : List U) : Prop :=
-  ∀ n u, u ∈ generation kids n w → 0 < need u
+/-- Every unit of every generation of `w` needs something (`WayUnderARule.stepNeeding`). -/
+abbrev Needing (need : U → Nat) (kids : U → List U) (w : List U) : Prop :=
+  WayUnderARule.stepNeeding need kids w
 
 /-! ## 2. On lists -/
 
-theorem mem_cond {a : U} {l : List U} : ∀ {b : Bool}, a ∈ cond b l [] → b = true ∧ a ∈ l
-  | true, m => ⟨rfl, m⟩
-  | false, m => nomatch m
+theorem mem_cond {a : U} {l : List U} : ∀ {b : Bool}, a ∈ cond b l [] → b = true ∧ a ∈ l :=
+  WayUnderARule.mem_cond
 
-theorem mem_cond_of {a : U} {l : List U} : ∀ {b : Bool}, b = true → a ∈ l → a ∈ cond b l []
-  | true, _, m => m
+theorem mem_cond_of {a : U} {l : List U} : ∀ {b : Bool}, b = true → a ∈ l → a ∈ cond b l [] :=
+  WayUnderARule.mem_cond_of
 
 /-- Where `x` and `x'` meet the need `n` alike, the two tests of it are the same. -/
 theorem decide_le_congr {n x x' : Nat} (same : n ≤ x ↔ n ≤ x') :
@@ -248,43 +238,27 @@ theorem line_or_none {S : U → Prop} [DecidablePred S] :
 /-- At a level, either every unit of a way has its need met, or some unit's need is above it. -/
 theorem met_or_unmet (need : U → Nat) (z : Nat) :
     ∀ w : List U, (∀ u, u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u :=
-  fun w => gather_listed (D := fun u => need u ≤ z) w
-    (fun u mem k => (Nat.lt_or_ge z (need u)).elim (fun lt => .inr ⟨u, mem, lt⟩) k) Or.inl
+  WayUnderARule.met_or_unmet need z
 
 /-- Whether some unit of a way has its need met at `x`, computed along the way. -/
-def anyMet (need : U → Nat) (x : Nat) : List U → Bool
-  | [] => false
-  | u :: w => decide (need u ≤ x) || anyMet need x w
+abbrev anyMet (need : U → Nat) (x : Nat) : List U → Bool := WayUnderARule.anyMet need x
 
 theorem anyMet_iff (need : U → Nat) (x : Nat) :
-    ∀ w : List U, anyMet need x w = true ↔ ∃ u, u ∈ w ∧ need u ≤ x
-  | [] => ⟨fun h => absurd h Bool.false_ne_true, fun ⟨_, m, _⟩ => nomatch m⟩
-  | v :: w => by
-    show (decide (need v ≤ x) || anyMet need x w) = true ↔ _
-    cases hv : decide (need v ≤ x) with
-    | true => exact ⟨fun _ => ⟨v, .head w, of_decide_eq_true hv⟩, fun _ => rfl⟩
-    | false =>
-      exact (anyMet_iff need x w).trans
-        ⟨fun ⟨u, m, le⟩ => ⟨u, .tail v m, le⟩,
-         fun ⟨u, m, le⟩ => by
-          cases m with
-          | head => exact absurd (hv.symm.trans (decide_eq_true le)) Bool.false_ne_true
-          | tail _ m' => exact ⟨u, m', le⟩⟩
+    ∀ w : List U, anyMet need x w = true ↔ ∃ u, u ∈ w ∧ need u ≤ x :=
+  WayUnderARule.anyMet_iff need x
 
-/-- Whether some unit's need is met is decided, by `anyMet`. `WayOfUnits.goesDecidable` is its
-case. -/
+/-- Whether some unit's need is met is decided (`WayUnderARule.stepGoesDecidable`). -/
 instance goesDecidable (need : U → Nat) (s : List U × Nat) : Decidable (Goes need s) :=
-  decidable_of_iff (anyMet need s.2 s.1 = true) (anyMet_iff need s.2 s.1)
+  WayUnderARule.stepGoesDecidable need s
 
 /-- A list that is not empty has a member. -/
-theorem mem_of_ne_nil : ∀ {l : List U}, l ≠ [] → ∃ v, v ∈ l
-  | [], ne => absurd rfl ne
-  | v :: l, _ => ⟨v, .head l⟩
+theorem mem_of_ne_nil : ∀ {l : List U}, l ≠ [] → ∃ v, v ∈ l :=
+  WayUnderARule.mem_of_ne_nil
 
 /-- Strong induction on a number: `Identification.below_upto`. -/
 theorem strong_below {P : Nat → Prop} (step : ∀ m, (∀ m', m' < m → P m') → P m) :
     ∀ M m, m < M → P m :=
-  Identification.below_upto step
+  WayUnderARule.strong_below step
 
 /-! ## 3. The one relation with two ends -/
 
@@ -294,20 +268,14 @@ variable {need : U → Nat} {kids : U → List U}
 
 /-- The way after a step is `List.flatMap` of what each unit leaves. -/
 theorem after_flatMap (x : Nat) :
-    ∀ w : List U, after need kids w x = w.flatMap fun u => cond (decide (need u ≤ x)) (kids u) []
-  | [] => rfl
-  | u :: w => congrArg (cond (decide (need u ≤ x)) (kids u) [] ++ ·) (after_flatMap x w)
+    ∀ w : List U, after need kids w x = w.flatMap fun u => cond (decide (need u ≤ x)) (kids u) [] :=
+  WayUnderARule.after_flatMap x
 
 /-- **Who is in the next way.** A unit is in the way after a step at `x` exactly where it is a kid of
-a unit of the way whose need `x` meets. For any `need`, `kids`, way and level; by `after_flatMap` and
-`ListTests.mem_flatMap_iff`. -/
+a unit of the way whose need `x` meets. -/
 theorem mem_after_iff {x : Nat} {v : U} {w : List U} :
     v ∈ after need kids w x ↔ ∃ u, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u :=
-  (Eq.subst (motive := fun l => v ∈ l ↔ ∃ u, u ∈ w ∧ v ∈ cond (decide (need u ≤ x)) (kids u) [])
-      (after_flatMap x w).symm ListTests.mem_flatMap_iff).trans
-    ⟨fun ⟨u, mu, mc⟩ => match mem_cond mc with
-      | ⟨e, mk⟩ => ⟨u, mu, of_decide_eq_true e, mk⟩,
-     fun ⟨u, mu, le, mk⟩ => ⟨u, mu, mem_cond_of (decide_eq_true le) mk⟩⟩
+  WayUnderARule.mem_after_iff
 
 /-- **The way reads the level only through which needs it meets.** Where `x` and `x'` meet the same
 needs in `w`, the way after a step at `x` is the way after a step at `x'`. For any `need` and
@@ -339,22 +307,16 @@ theorem left_of_taken {giving : Nat → Nat} {use : U → Nat} {w₁ w₂ : List
 
 /-- Where every unit's need is met at `x`, the way after a step is all the kids. -/
 theorem after_of_met {x : Nat} :
-    ∀ {w : List U}, (∀ u, u ∈ w → need u ≤ x) → after need kids w x = allKids kids w
-  | [], _ => rfl
-  | u :: w, met =>
-    (congrArg (fun b => cond b (kids u) [] ++ after need kids w x)
-        (decide_eq_true (met u (.head w)))).trans
-      (congrArg (kids u ++ ·) (after_of_met fun v m => met v (.tail u m)))
+    ∀ {w : List U}, (∀ u, u ∈ w → need u ≤ x) → after need kids w x = allKids kids w :=
+  WayUnderARule.after_of_met
 
 /-- All the kids of a way are `List.flatMap kids` of it. -/
-theorem allKids_flatMap : ∀ w : List U, allKids kids w = w.flatMap kids
-  | [] => rfl
-  | u :: w => congrArg (kids u ++ ·) (allKids_flatMap w)
+theorem allKids_flatMap : ∀ w : List U, allKids kids w = w.flatMap kids :=
+  WayUnderARule.allKids_flatMap
 
 /-- A unit is among all the kids of a way exactly where it is a kid of a unit of the way. -/
 theorem mem_allKids_iff {v : U} {w : List U} : v ∈ allKids kids w ↔ ∃ u, u ∈ w ∧ v ∈ kids u :=
-  Eq.subst (motive := fun l => v ∈ l ↔ ∃ u, u ∈ w ∧ v ∈ kids u) (allKids_flatMap w).symm
-    ListTests.mem_flatMap_iff
+  WayUnderARule.mem_allKids_iff
 
 /-- The `n`-th generation is `allKids` taken `n` times. -/
 theorem generation_orbit (w : List U) : ∀ n, generation kids n w = Law.orbit (allKids kids) w n
@@ -389,12 +351,8 @@ theorem generation_ancestor (down : ∀ u v, v ∈ kids u → need v ≤ need u)
 /-- A unit of the way at step `k` of any course is a unit of the `k`-th generation of the start's
 way. -/
 theorem mem_generation {giving : Nat → Nat} {use : U → Nat} (s : List U × Nat) :
-    ∀ k u, u ∈ (course need kids giving use s k).1 → u ∈ generation kids k s.1
-  | 0, _, m => m
-  | k + 1, _, m =>
-    match (mem_after_iff (need := need) (kids := kids) (w := (course need kids giving use s k).1)
-        (x := (course need kids giving use s k).2)).mp m with
-    | ⟨p, mp, _, mk⟩ => mem_allKids_iff.mpr ⟨p, mem_generation s k p mp, mk⟩
+    ∀ k u, u ∈ (course need kids giving use s k).1 → u ∈ generation kids k s.1 :=
+  WayUnderARule.mem_generation s
 
 end Step
 
@@ -638,8 +596,7 @@ theorem draw_holds [DecidablePred S] (keeps : ∀ u, S u → use u ≤ lineTake 
 `S` is a line, that is, no unit outside it leaves a unit of it (`closed`). -/
 theorem line_from_line (closed : ∀ u v, v ∈ kids u → S v → S u) {w : List U} {x : Nat} {v : U}
     (mv : v ∈ after need kids w x) (sv : S v) : ∃ u, u ∈ w ∧ need u ≤ x ∧ S u ∧ v ∈ kids u :=
-  match (mem_after_iff (need := need) (kids := kids)).mp mv with
-  | ⟨u, mu, le, mk⟩ => ⟨u, mu, le, closed u v mk sv, mk⟩
+  WayUnderARule.line_from_line closed mv sv
 
 /-- Where no unit of the line has its need met at `x`, no unit of the line is in the way after the
 step. Premise: `closed`. -/
@@ -684,10 +641,8 @@ end Line
 
 /-- A step under a draw at least the level leaves nothing, with nothing given from nothing. -/
 theorem step_zero {giving : Nat → Nat} {H x : Nat} (nothing : RegimeMargin.FromNothing giving)
-    (le : x ≤ H) : RegimeMargin.step giving H x = 0 := by
-  show x - H + giving (x - H) = 0
-  rw [sub_eq_zero_of_le le]
-  exact (Nat.zero_add _).trans nothing
+    (le : x ≤ H) : RegimeMargin.step giving H x = 0 :=
+  WayUnderARule.step_zero nothing le
 
 /-- A step under a draw `H` of which every giving falls short (`short : ∀ z, giving z < T`,
 `T ≤ H`) leaves less than the level, or what is given at nothing. No `FromNothing` is asked. -/
@@ -705,14 +660,11 @@ theorem step_overdrawn {giving : Nat → Nat} {T H x : Nat} (short : ∀ z, givi
 /-- **Below `H + y`, a step lowers the level or leaves nothing.** With giving short of `H` below `y`
 (`short`), nothing given from nothing (`nothing`), a draw `D` at least `H` (`more`) and a level `z`
 below `H + y` (`below`): the step under `D` leaves nothing, or less than `z`. `TurningInTime.held_above`
-contraposed; `WayOfUnits.step_falls` is this. -/
+contraposed (`WayUnderARule.step_lowers`); `WayOfUnits.step_falls` is this. -/
 theorem step_lowers {giving : Nat → Nat} {H y D z : Nat} (short : RegimeMargin.Short giving H y)
     (nothing : RegimeMargin.FromNothing giving) (more : H ≤ D) (below : z < H + y) :
     RegimeMargin.step giving D z = 0 ∨ RegimeMargin.step giving D z < z :=
-  (Nat.lt_or_ge (RegimeMargin.step giving D z) z).elim .inr fun ge => match z, below, ge with
-    | 0, _, _ => .inl (step_zero nothing (Nat.zero_le D))
-    | _ + 1, below, ge => absurd (TurningInTime.held_above nothing short more (Nat.succ_pos _) ge)
-        (Nat.not_le_of_gt below)
+  WayUnderARule.step_lowers short nothing more below
 
 /-! ## 7. Fall -/
 
@@ -776,9 +728,9 @@ section Grows
 variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
   {S : U → Prop} {hi : Nat}
 
-/-- Every unit with `S` in `w` needs at most `m`. -/
-def Below (need : U → Nat) (S : U → Prop) (m : Nat) (w : List U) : Prop :=
-  ∀ u, u ∈ w → S u → need u ≤ m
+/-- Every unit with `S` in `w` needs at most `m` (`WayUnderARule.Below`). -/
+abbrev Below (need : U → Nat) (S : U → Prop) (m : Nat) (w : List U) : Prop :=
+  WayUnderARule.Below need S m w
 
 /-- No unit with `S` has its need met at the configuration. -/
 def NoneMet (need : U → Nat) (S : U → Prop) (s : List U × Nat) : Prop :=
@@ -789,15 +741,13 @@ def NoneMet (need : U → Nat) (S : U → Prop) (s : List U × Nat) : Prop :=
 theorem below_after (closed : ∀ u v, v ∈ kids u → S v → S u)
     (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) (w : List U) (x : Nat) :
     Below need S x (after need kids w x) :=
-  fun _ mv sv => match line_from_line closed mv sv with
-  | ⟨u, _, le, su, mk⟩ => Nat.le_trans (down u _ su mk) le
+  WayUnderARule.below_after closed down w x
 
 /-- With `closed` and `down`, a way whose line needs at most `m` leaves one that does. -/
 theorem below_keeps (closed : ∀ u v, v ∈ kids u → S v → S u)
     (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) {m : Nat} {w : List U}
     (below : Below need S m w) (x : Nat) : Below need S m (after need kids w x) :=
-  fun _ mv sv => match line_from_line closed mv sv with
-  | ⟨u, mu, _, su, mk⟩ => Nat.le_trans (down u _ su mk) (below u mu su)
+  WayUnderARule.below_keeps closed down below x
 
 /-- The claim at `m`: from every configuration at most `hi` whose line needs at most `m`, some step
 has no unit of the line met. -/
@@ -913,22 +863,26 @@ theorem lineTake_true (w : List U) : lineTake (fun _ => True) use w = taken use 
 /-- **A way whose units grow ends.** With nothing given from nothing, the step under no draw keeping
 every level up to `hi` within `hi`, the start at most `hi`, every unit's kids together taking more
 than it (`grows`), every need positive (`needs`) and kids needing no more than their parent
-(`down`): at some step no unit's need is met, and the net from `(w, x)` ends. `line_ends`' route at
-the line of every unit. -/
+(`down`): at some step no unit's need is met, and the net from `(w, x)` ends. Direct call of
+`WayUnderARule.tested_or_ends` at one rule that favours (`R := PUnit`, `favours := fun _ => True`),
+where the first outcome is shut out and `TurningInTime.kept_within` supplies `keepsAlong`. -/
 theorem way_ends {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
     (keeps : RegimeMargin.Keeps giving 0 hi)
     (grows : ∀ u, use u < taken use (kids u)) (needs : ∀ u, 0 < need u)
     (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) :
     (∃ n, ¬ Goes need (course need kids giving use (w, x) n)) ∧
       ¬ «不穷» (net need kids giving use) «一» (w, x) :=
-  match ends_all (S := fun _ => True) nothing keeps (fun _ _ _ _ => trivial)
-      (fun u _ => Nat.lt_of_lt_of_le (grows u) (Nat.le_of_eq (lineTake_true _).symm))
-      (fun u _ => needs u) (fun u v _ mk => down u v mk) (total w need) (w, x) high
-      (fun _ mu _ => le_total_of_mem mu) with
-  | ⟨k, nm⟩ =>
-    have stop : ¬ Goes need (course need kids giving use (w, x) k) := fun ⟨u, mu, le⟩ =>
-      Nat.not_le_of_gt (nm u mu trivial) le
-    ⟨⟨k, stop⟩, fun never => stop (Law.stepWhile_unending_iff.mp never k)⟩
+  (WayUnderARule.tested_or_ends (R := PUnit) (next := fun _ g => g) (favours := fun _ => True)
+      (y := fun _ => 0) (hi := hi) (s := ((w, PUnit.unit), x))
+      (fun _ _ => grows) (fun _ no => absurd trivial no)
+      (fun _ => down) (fun _ u _ => needs u) nothing high
+      (fun _ _ _ le => TurningInTime.kept_within keeps _ le)
+      (fun _ _ no => absurd trivial no)).elim
+    (fun ⟨_, _, tested⟩ => absurd trivial tested.2.1)
+    (fun ⟨n, _, stop⟩ =>
+      have stop' : ¬ Goes need (course need kids giving use (w, x) n) :=
+        fun goes => stop ((WayUnderARule.goes_one_rule (fun _ g => g) w x n).mpr goes)
+      ⟨⟨n, stop'⟩, fun never => stop' (Law.stepWhile_unending_iff.mp never n)⟩)
 
 /-- Where every unit's kids together take more than it (`grows`), every unit has kids. -/
 theorem kids_of_grows (grows : ∀ u, use u < taken use (kids u)) : ∀ u, kids u ≠ [] :=
@@ -960,15 +914,10 @@ theorem way_while_met {w : List U} {x n : Nat}
     ((TurningInTime.asItWas_way _ _ (w, x) n).trans (generation_orbit w n).symm)
 
 /-- Where every unit's kids together take more than it (`grows`), all the kids of a way take at
-least what the way takes and its length: `rise` at the line of every unit, with every need met (at
-need nothing), where the way after the step is all the kids (`after_of_met`). -/
+least what the way takes and its length (`WayUnderARule.allKids_rises`). -/
 theorem allKids_rises (grows : ∀ u, use u < taken use (kids u)) (w : List U) :
     taken use w + w.length ≤ taken use (allKids kids w) :=
-  Eq.subst (motive := fun l => taken use w + w.length ≤ taken use l)
-    (after_of_met (need := fun _ => 0) (x := 0) fun _ _ => Nat.le_refl 0)
-    (Eq.subst (motive := fun c => taken use w + c ≤ taken use (after (fun _ => 0) kids w 0))
-      (total_ones w) (rise (need := fun _ => 0) (kids := kids) (use := use) (S := fun _ => True) (x := 0)
-        (w := w) (fun u _ => grows u) fun _ _ _ => Nat.le_refl 0))
+  WayUnderARule.allKids_rises grows w
 
 /-- With `grows`, along the generations of a way that is not empty what the way takes rises at every
 step: `allKids_rises`, each generation having a member (`generation_mem`). -/
@@ -1114,11 +1063,10 @@ section Even
 variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
 
 /-- Where each unit's kids together take what it takes (`even`), all the kids of a way take what the
-way takes: `SelectionTerm.Generations.total_flatMap` with `allKids_flatMap`. -/
+way takes (`WayUnderARule.taken_allKids`). -/
 theorem taken_allKids (even : ∀ u, taken use (kids u) = use u) (w : List U) :
     taken use (allKids kids w) = taken use w :=
-  (congrArg (taken use) (allKids_flatMap w)).trans
-    ((SelectionTerm.Generations.total_flatMap kids use w).trans (total_congr even w))
+  WayUnderARule.taken_allKids even w
 
 /-- With `even`, every generation of a way takes what the way takes. -/
 theorem taken_generation (even : ∀ u, taken use (kids u) = use u) (w : List U) :
@@ -1156,66 +1104,6 @@ theorem within_along {y : Nat → Nat} {hi : Nat} {s : List U × Nat}
     (along k fun j le => before j (Nat.lt_succ_of_le le)).2.2 (course need kids giving use s k).2
       (within_along along high k fun j lt => before j (Nat.lt_succ_of_lt lt))
 
-/-- The step of `reaches_holds` at a bound `m` on the needs of the way, given the claim below `m`
-(`ih`), by induction on a bound `f` on the level. Below `m`, one step leaves a way whose needs are at
-most the level (`below_after`): `ih`. At or above `m` every need is met: the configuration holds, or the
-level is below what the way takes and `y` of it, and the step under that draw lowers the level or
-leaves nothing (`step_lowers`); nothing meets no need of a descendant (`needs`), and a lower level is
-the induction on `f`, the next way's needs still at most `m` (`below_keeps`). -/
-theorem reaches_from {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
-    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w)
-    (nothing : RegimeMargin.FromNothing giving)
-    (along : ∀ k, (∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j)) →
-      Regime giving use y hi (course need kids giving use (w, x) k).1)
-    (all : ∀ k, Goes need (course need kids giving use (w, x) k)) {m : Nat}
-    (ih : ∀ m', m' < m → ∀ f k, (course need kids giving use (w, x) k).2 ≤ f →
-      Below need (fun _ => True) m' (course need kids giving use (w, x) k).1 →
-      ∃ k', Holds need use y (course need kids giving use (w, x) k')) :
-    ∀ f k, (course need kids giving use (w, x) k).2 ≤ f →
-      Below need (fun _ => True) m (course need kids giving use (w, x) k).1 →
-      ∃ k', Holds need use y (course need kids giving use (w, x) k')
-  | f, k, bound, below =>
-    (Nat.lt_or_ge (course need kids giving use (w, x) k).2 m).elim
-      (fun lt => ih _ lt _ (k + 1) (Nat.le_refl _)
-        (below_after (S := fun _ => True) (fun _ _ _ _ => trivial) (fun u v _ mk => down u v mk) _ _))
-      (fun ge =>
-        (Nat.lt_or_ge (course need kids giving use (w, x) k).2
-            (taken use (course need kids giving use (w, x) k).1 +
-              y (taken use (course need kids giving use (w, x) k).1))).elim
-          (fun under => (step_lowers (along k fun j _ => all j).1 nothing (Nat.le_refl _) under).elim
-            (fun zero => match all (k + 1) with
-              | ⟨u, mu, le⟩ => absurd (Nat.le_trans le (Nat.le_of_eq zero))
-                  (Nat.not_le_of_gt (needs (k + 1) u (mem_generation (w, x) (k + 1) u mu))))
-            (fun lower => match f, bound with
-              | 0, bound => absurd (Nat.lt_of_lt_of_le lower bound) (Nat.not_lt_zero _)
-              | f + 1, bound => reaches_from down needs nothing along all ih f (k + 1)
-                  (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lower bound))
-                  (below_keeps (S := fun _ => True) (fun _ _ _ _ => trivial)
-                    (fun u v _ mk => down u v mk) below _)))
-          (fun enough => match all k with
-            | ⟨v, mv, _⟩ => ⟨k, And.intro (fun e => nomatch (Eq.subst (motive := fun l => v ∈ l) e mv))
-                (And.intro (fun u mu => Nat.le_trans (below u mu trivial) ge) enough)⟩))
-
-/-- **A course on which some need is met at every step comes to a configuration that holds.** With
-kids needing no more than their parent (`down`), every unit of every generation of `w` needing
-something (`needs`), nothing given from nothing (`nothing`), `Regime` at every way the course reaches
-with some need met there and at every step before (`along`; only its `Short` is used), and some need
-met at every step (`all`). No premise on what the kids take. By strong induction on a bound on the
-way's needs (`strong_below`, `reaches_from`), from the total of the needs of `w`. -/
-theorem reaches_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
-    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w)
-    (nothing : RegimeMargin.FromNothing giving)
-    (along : ∀ k, (∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j)) →
-      Regime giving use y hi (course need kids giving use (w, x) k).1)
-    (all : ∀ k, Goes need (course need kids giving use (w, x) k)) :
-    ∃ k, Holds need use y (course need kids giving use (w, x) k) :=
-  strong_below (P := fun m => ∀ f k, (course need kids giving use (w, x) k).2 ≤ f →
-      Below need (fun _ => True) m (course need kids giving use (w, x) k).1 →
-      ∃ k', Holds need use y (course need kids giving use (w, x) k'))
-    (fun _ ih => reaches_from down needs nothing along all ih)
-    (total w need + 1) (total w need) (Nat.lt_succ_self _) x 0 (Nat.le_refl x)
-    (fun _ mu _ => le_total_of_mem mu)
-
 /-- **The middle case: when the net never ends (exact).** With each unit's kids together taking what
 it takes (`even`), every unit having kids (`some`), kids needing no more than their parent (`down`),
 every unit of every generation of `w` needing something (`needs`), nothing given from nothing
@@ -1223,12 +1111,10 @@ every unit of every generation of `w` needing something (`needs`), nothing given
 need met there and at every step before, the start's included (`along`): the net from `(w, x)` never
 ends exactly where, some need met at every step before, the course comes to a configuration that
 holds (`Holds`).
-Left to right by `reaches_holds` (with `step_lowers`, from `TurningInTime.held_above`; `even`, `some`
-and `high` are not used there); right to left, from a holding configuration the way is the
-generations, taking the same (`course_generation`), their needs at most the level (`generation_below`),
-not empty (`generation_mem`), and the level under that one draw never falls below where it was
-(`RegimeMargin.holds`, within `hi` by `within_along`). `WayOfUnits.unending_iff_holds` is the case
-`kids u = [u]`. -/
+Direct call of `WayUnderARule.unending_iff_tested` at one rule that does not favour (`R := PUnit`,
+`favours := fun _ => False`, `WayUnderARule.oneOrder`), transported across
+`WayUnderARule.way_one_rule`, `WayUnderARule.goes_one_rule` and `WayUnderARule.tested_one_rule`.
+`WayOfUnits.unending_iff_holds` is the case `kids u = [u]`. -/
 theorem unending_iff_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
     (even : ∀ u, taken use (kids u) = use u) (some : ∀ u, kids u ≠ [])
     (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w)
@@ -1238,31 +1124,33 @@ theorem unending_iff_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
     «不穷» (net need kids giving use) «一» (w, x) ↔
       ∃ k, (∀ j, j < k → Goes need (course need kids giving use (w, x) j)) ∧
         Holds need use y (course need kids giving use (w, x) k) :=
-  Law.stepWhile_unending_iff.trans
-    ⟨fun all => match reaches_holds down needs nothing along all with
-       | ⟨k, holds⟩ => ⟨k, fun j _ => all j, holds⟩,
-     fun ⟨k, before, holds⟩ n => match holds with
-      | ⟨ne, met, low⟩ => (Nat.lt_or_ge n k).elim (before n) fun ge =>
-        match le_dest ge, mem_of_ne_nil ne with
-        | ⟨i, e⟩, ⟨v, mv⟩ =>
-          have upto : ∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j) := fun j le =>
-            (Nat.lt_or_eq_of_le le).elim (before j) fun e' =>
-              Eq.subst (motive := fun i => Goes need (course need kids giving use (w, x) i)) e'.symm
-                ⟨v, mv, met v mv⟩
-          have held := RegimeMargin.holds (along k upto).2.1 (along k upto).2.2 low
-            (within_along along high k before)
-          have at_i : course need kids giving use (w, x) (k + i) =
-              (generation kids i (course need kids giving use (w, x) k).1,
-                Law.orbit (RegimeMargin.step giving (taken use (course need kids giving use (w, x) k).1))
-                  (course need kids giving use (w, x) k).2 i) :=
-            (Law.orbit_add _ (w, x) k i).trans
-              (course_generation (S := (course need kids giving use (w, x) k).1)
-                (z := (course need kids giving use (w, x) k).2) even i
-                fun j _ u mu => Nat.le_trans (generation_below down met j u mu) (held j).1)
-          match generation_mem some mv i with
-          | ⟨u, mu⟩ => Eq.subst (motive := fun j => Goes need (course need kids giving use (w, x) j))
-              e.symm (Eq.subst (motive := Goes need) at_i.symm
-                ⟨u, mu, Nat.le_trans (generation_below down met i u mu) (held i).1⟩)⟩
+  have regime : ∀ k,
+      (∀ j, j ≤ k → WayUnderARule.Goes need
+        (WayUnderARule.course need (fun _ => kids) (fun _ g => g) giving use ((w, PUnit.unit), x) j)) →
+      Regime giving use y hi
+        (WayUnderARule.course need (fun _ => kids) (fun _ g => g) giving use ((w, PUnit.unit), x) k).1.1 :=
+    fun k upto => Eq.subst (motive := Regime giving use y hi)
+      (WayUnderARule.way_one_rule (fun _ g => g) w x k).symm
+      (along k fun j le => (WayUnderARule.goes_one_rule (fun _ g => g) w x j).mp (upto j le))
+  (Law.stepWhile_unending_iff.trans
+    ⟨fun all n => (WayUnderARule.goes_one_rule (fun _ g => g) w x n).mpr (all n),
+      fun all n => (WayUnderARule.goes_one_rule (fun _ g => g) w x n).mp (all n)⟩).trans
+    ((Law.stepWhile_unending_iff.symm.trans
+      (WayUnderARule.unending_iff_tested (R := PUnit) (P := WayUnderARule.oneOrder)
+        (M := WayUnderARule.oneOrder) (share := fun _ => PUnit.unit) (h := fun _ g => g)
+        (favours := fun _ => False) (y := y) (hi := hi) (s := ((w, PUnit.unit), x))
+        (fun _ no => no.elim) (fun _ _ => even) (fun _ _ => some) (fun _ => down)
+        (fun k u mu => needs k u (mem_generation (w, x) k u
+          (Eq.subst (motive := fun l => u ∈ l) (WayUnderARule.way_one_rule (fun _ g => g) w x k) mu)))
+        nothing high (fun k upto => (regime k upto).2.2)
+        (fun k upto _ => ⟨(regime k upto).1, (regime k upto).2.1⟩)
+        (fun _ _ _ => trivial) (fun _ _ _ _ _ => trivial) (fun _ no => no))).trans
+      ⟨fun ⟨k, before, tested⟩ =>
+          ⟨k, fun j lt => (WayUnderARule.goes_one_rule (fun _ g => g) w x j).mp (before j lt),
+            (WayUnderARule.tested_one_rule (fun _ g => g) w x k).mp tested⟩,
+        fun ⟨k, before, holds⟩ =>
+          ⟨k, fun j lt => (WayUnderARule.goes_one_rule (fun _ g => g) w x j).mpr (before j lt),
+            (WayUnderARule.tested_one_rule (fun _ g => g) w x k).mpr holds⟩⟩)
 
 /-! ## 11. On a course that goes on, what the way takes is less than the level -/
 

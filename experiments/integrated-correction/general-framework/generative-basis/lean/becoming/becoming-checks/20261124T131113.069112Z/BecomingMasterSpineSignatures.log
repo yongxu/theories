@@ -1,0 +1,442 @@
+@Becoming.MasterSpine.polyUniformToOpen_closedStep_eq : ∀ {Mode S Obs Dist Int Ext Env : Type}
+  (C :
+    Becoming.PolyComposition.PolyComponent Mode (fun x => S) (fun x => Obs) (fun x => Dist) (fun x => Int) fun x => Ext)
+  (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (st : (Ext → Nat) × (_ : Mode) × S) (act : Env × Dist),
+  Becoming.PolyComposition.polyClosedStep C (fun x k => [k]) (fun x => obs) channel G envDraw st act =
+    Becoming.OpenComposition.closedStep (Becoming.MasterSpine.polyUniformToOpenComponent C) obs channel G envDraw st act
+@Becoming.MasterSpine.wholeGSum_rises : ∀ {Site ExtHide : Type} {G_ext : Site → (Site → Nat) → Nat}
+  {G_hide : ExtHide → (ExtHide → Nat) → Nat},
+  (∀ (k : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_ext k)) →
+    (∀ (k : ExtHide), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_hide k)) →
+      ∀ (k : Site ⊕ ExtHide),
+        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+          (Becoming.MasterSpine.wholeGSum G_ext G_hide k)
+@Becoming.MasterSpine.inquiry_step_phase : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  {W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env}
+  {spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site} {θ : Θ}
+  {channel : Bool → Nat → Env → Bool}
+  {st st' :
+    (Site → Nat) ×
+      (m : Becoming.ActiveInquiryLoop.InquiryMode Θ Unit) × Becoming.ActiveInquiryLoop.inquiryS Probe Outcome S_op Θ m}
+  {act :
+    Env × (m : Becoming.ActiveInquiryLoop.InquiryMode Θ Unit) × Becoming.ActiveInquiryLoop.inquiryDist Dist_op Θ m},
+  (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+          (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+          (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm).step
+      st act st' →
+    (∀ (n : Nat),
+        Becoming.MasterSpine.IsProbeAt n st.snd →
+          n < spec.horizon →
+            (n + 1 < spec.horizon → Becoming.MasterSpine.IsProbeAt (n + 1) st'.snd) ∧
+              (¬n + 1 < spec.horizon →
+                Becoming.MasterSpine.IsOpState st'.snd ∧ Becoming.MasterSpine.IsOpWithInit spec st'.snd)) ∧
+      (Becoming.MasterSpine.IsOpState st.snd → Becoming.MasterSpine.IsOpState st'.snd)
+@Becoming.MasterSpine.inquiry_phase_inv : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (channel : Bool → Nat → Env → Bool) (x₀ : Site → Nat)
+  (r_inq :
+    Becoming.Run
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+        (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+        (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm)),
+  r_inq.state 0 = (x₀, Becoming.ActiveInquiryLoop.inquiryInit spec) →
+    ∀ (n : Nat),
+      (n < spec.horizon → Becoming.MasterSpine.IsProbeAt n (r_inq.state n).snd) ∧
+        (spec.horizon ≤ n → Becoming.MasterSpine.IsOpState (r_inq.state n).snd) ∧
+          (n = spec.horizon → Becoming.MasterSpine.IsOpWithInit spec (r_inq.state n).snd)
+@Becoming.MasterSpine.exploreMarginInv_init : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (x_crit x₀ : Site → Nat),
+  (∀ (xs : Nat → Site → Nat),
+      (∀ (t : Nat), t < spec.horizon → ∀ (site : Site), x_crit site ≤ xs t site) →
+        spec.infer (Becoming.ActiveInquiryLoop.probeTranscript W spec.plan θ xs spec.horizon) = θ) →
+    (∀ (site : Site),
+        x_crit site + spec.horizon * (spec.probeDraw site + W.envCap site) +
+            ((spec.opContract θ).maxLag + 1) * ((spec.opContract θ).preCapExt site + W.envCap site) ≤
+          x₀ site) →
+      Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit (x₀, Becoming.ActiveInquiryLoop.inquiryInit spec)
+@Becoming.MasterSpine.exploreMarginInv_along_run : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  {W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env}
+  {spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site} {θ : Θ}
+  {channel : Bool → Nat → Env → Bool} {x_crit x₀ : Site → Nat},
+  Becoming.Viability.Certificate
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+        (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+        (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm)
+      (Becoming.PolyComposition.polyClosedGuard (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+        (Becoming.ActiveInquiryLoop.inquiryContract spec) x_crit)
+      (Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit) →
+    ∀
+      (r_inq :
+        Becoming.Run
+          (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+            (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+            (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm)),
+      r_inq.state 0 = (x₀, Becoming.ActiveInquiryLoop.inquiryInit spec) →
+        Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit (x₀, Becoming.ActiveInquiryLoop.inquiryInit spec) →
+          ∀ (t : Nat), Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit (r_inq.state t)
+@Becoming.MasterSpine.postProbe_isOpTheta : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (channel : Bool → Nat → Env → Bool) (x_crit : Site → Nat)
+  (r_inq :
+    Becoming.Run
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+        (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+        (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm)),
+  (∀ (k : Nat), Becoming.MasterSpine.IsOpState (r_inq.state (spec.horizon + k)).snd) →
+    (∀ (t : Nat), Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit (r_inq.state t)) →
+      ∀ (k : Nat), Becoming.MasterSpine.IsOpTheta θ (r_inq.state (spec.horizon + k)).snd
+@Becoming.MasterSpine.postProbe_step_lemma : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (channel : Bool → Nat → Env → Bool) (fallbackS : S_op) (fallbackD : Dist_op)
+  (st st' :
+    (Site → Nat) ×
+      (m : Becoming.ActiveInquiryLoop.InquiryMode Θ Unit) × Becoming.ActiveInquiryLoop.inquiryS Probe Outcome S_op Θ m)
+  (act :
+    Env × (m : Becoming.ActiveInquiryLoop.InquiryMode Θ Unit) × Becoming.ActiveInquiryLoop.inquiryDist Dist_op Θ m),
+  (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+          (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+          (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm).step
+      st act st' →
+    Becoming.MasterSpine.IsOpTheta θ st.snd →
+      (Becoming.OpenComposition.closedProcess (spec.opComp θ) (spec.opContract θ) (W.opObs θ) channel (W.G θ)
+            (W.envDraw θ) W.jointAdm).step
+        (st.fst, Becoming.MasterSpine.extractOpState fallbackS st.snd)
+        (act.fst, Becoming.MasterSpine.extractOpDist fallbackD act.snd)
+        (st'.fst, Becoming.MasterSpine.extractOpState fallbackS st'.snd)
+@Becoming.MasterSpine.postProbeRun_opInvariants : ∀ {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (channel : Bool → Nat → Env → Bool) (fallbackS : S_op) (fallbackD : Dist_op) (x_crit : Site → Nat)
+  (r_inq :
+    Becoming.Run
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+        (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+        (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm)),
+  (∀ (n : Nat),
+      (n < spec.horizon → Becoming.MasterSpine.IsProbeAt n (r_inq.state n).snd) ∧
+        (spec.horizon ≤ n → Becoming.MasterSpine.IsOpState (r_inq.state n).snd) ∧
+          (n = spec.horizon → Becoming.MasterSpine.IsOpWithInit spec (r_inq.state n).snd)) →
+    (∀ (t : Nat), Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit (r_inq.state t)) →
+      ∀ (hOpAll : ∀ (k : Nat), Becoming.MasterSpine.IsOpTheta θ (r_inq.state (spec.horizon + k)).snd),
+        have rOp := Becoming.MasterSpine.postProbeRun W spec θ channel fallbackS fallbackD r_inq hOpAll;
+        (rOp.state 0).snd = spec.opInit θ ∧
+          (∀ (k : Nat), (spec.opContract θ).K (rOp.state k).snd) ∧
+            (∀ (k : Nat),
+                Becoming.OpenComposition.closedGuard (spec.opComp θ) (spec.opContract θ) x_crit (rOp.state k)) ∧
+              ∀ (site : Site),
+                x_crit site +
+                    (spec.opContract θ).eta (spec.opInit θ) * ((spec.opContract θ).preCapExt site + W.envCap site) ≤
+                  (rOp.state 0).fst site
+@Becoming.MasterSpine.WholeArchitecture.phaseInv : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  (n : Nat),
+  (n < A.horizon → Becoming.MasterSpine.IsProbeAt n (A.r_full.state n).snd) ∧
+    (A.horizon ≤ n → Becoming.MasterSpine.IsOpState (A.r_full.state n).snd) ∧
+      (n = A.horizon → Becoming.MasterSpine.IsOpWithInit A.spec (A.r_full.state n).snd)
+@Becoming.MasterSpine.WholeArchitecture.invAll : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  (t : Nat), Becoming.ActiveInquiryLoop.ExploreMarginInv A.W A.spec A.θ_true A.x_crit (A.r_full.state t)
+@Becoming.MasterSpine.WholeArchitecture.postIsOpTheta : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  (k : Nat), Becoming.MasterSpine.IsOpTheta A.θ_true (A.r_full.state (A.horizon + k)).snd
+@Becoming.MasterSpine.WholeArchitecture.rOp_kernel : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr),
+  Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess A.compOp A.cOp (A.W.opObs A.θ_true) A.channel (A.W.G A.θ_true)
+      (A.W.envDraw A.θ_true) A.W.jointAdm)
+    (Becoming.OpenComposition.closedGuard A.compOp A.cOp A.x_crit) (A.rOp.state 0)
+@Becoming.MasterSpine.whole_architecture_viable_and_coupled : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr),
+  Becoming.MasterSpine.WholeArchitectureViableProp A
+@Becoming.MasterSpine.whole_architecture_upgrade_mode_viable : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  {S_r' Obs_r' Dist_r' Int_r' : Type} (B' : Becoming.OpenComposition.OpenComponent S_r' Obs_r' Dist_r' Int_r' Site)
+  {initR' : S_r'} (cB' : Becoming.OpenComposition.InterfaceContract B' initR') (obsR' : (Site → Nat) → Obs_r'),
+  Becoming.OpenComposition.ContractRefines A.cRight cB' A.obsR obsR' A.warnLevel →
+    Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess (A.leftComp.compose B')
+        (Becoming.OpenComposition.composeContract A.cLeft cB') (fun x => (A.obsL x, obsR' x)) A.channel (A.W.G A.θ_true)
+        (A.W.envDraw A.θ_true) A.W.jointAdm)
+      (Becoming.OpenComposition.closedGuard (A.leftComp.compose B')
+        (Becoming.OpenComposition.composeContract A.cLeft cB') A.x_crit)
+      (A.x₀, A.initLeft, initR')
+@Becoming.MasterSpine.whole_architecture_scopeMode_bridge : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL ExtHide QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr
+    C_cr : Type}
+  (preDraw coopDraw maxLagN initLag envCap_s : Nat) (coop_le_pre : coopDraw ≤ preDraw)
+  (init_in_s : 0 < initLag ∧ initLag ≤ maxLagN)
+  (propose :
+    (p : (m : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m) →
+      Becoming.EndogenousOrder.ScopeObs p.fst × Bool →
+        Becoming.EndogenousOrder.ScopeDist p.fst →
+          (m' : Becoming.EndogenousOrder.ScopeMode) × Becoming.EndogenousOrder.ScopeS m')
+  (G_sub : Nat → Nat),
+  (∀ (a b : Nat), a ≤ b → G_sub a ≤ G_sub b) →
+    ∀ (x_crit_s warn_s x₀_s : Nat),
+      x_crit_s ≤
+          Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (fun x e => G_sub (e ()))
+            (fun x => coopDraw + envCap_s) (fun x => x_crit_s) () →
+        x_crit_s + (maxLagN + 1) * (preDraw + envCap_s) ≤ warn_s →
+          x_crit_s + initLag * (preDraw + envCap_s) ≤ x₀_s →
+            ∀
+              (r_scope :
+                Becoming.Run
+                  (Becoming.PolyComposition.polyClosedProcess
+                    (Becoming.PolyComposition.anchoredSelfModComponent
+                      (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                      (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback propose)
+                    Becoming.EndogenousOrder.scopeRoute
+                    (Becoming.PolyComposition.anchoredSelfModContract
+                      (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                      (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯ propose)
+                    (Becoming.EndogenousOrder.scopeObs warn_s) Becoming.EndogenousOrder.scopeChannel
+                    (fun x e => G_sub (e ())) (fun x x_1 => envCap_s) fun x => True)),
+              r_scope.state 0 = (fun x => x₀_s, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, initLag⟩) →
+                ∀
+                  (A :
+                    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Unit
+                      ExtHide Becoming.EndogenousOrder.ScopeMode Nat Bool Unit Empty QX BX QA BA QB BB QCausal X_evo
+                      X_bad Pos_ord Act F_cr C_cr),
+                  (∀ (t : Nat), A.W_evo.level t A.c_sub = (r_scope.state t).fst ()) →
+                    (x_crit_s ≤ A.W_evo.level A.t_evo A.c_sub → 0 < A.G_evo.offspringNumber A.t_evo A.p_evo) →
+                      Becoming.Viability.Kernel
+                          (Becoming.PolyComposition.polyClosedProcess
+                            (Becoming.PolyComposition.anchoredSelfModComponent
+                              (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                              (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback
+                              propose)
+                            Becoming.EndogenousOrder.scopeRoute
+                            (Becoming.PolyComposition.anchoredSelfModContract
+                              (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                              (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯
+                              propose)
+                            (Becoming.EndogenousOrder.scopeObs warn_s) Becoming.EndogenousOrder.scopeChannel
+                            (fun x e => G_sub (e ())) (fun x x_1 => envCap_s) fun x => True)
+                          (Becoming.PolyComposition.polyClosedGuard
+                            (Becoming.PolyComposition.anchoredSelfModComponent
+                              (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre)
+                              (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback
+                              propose)
+                            (Becoming.PolyComposition.anchoredSelfModContract
+                              (Becoming.EndogenousOrder.scopeBase preDraw coopDraw maxLagN coop_le_pre) ⋯
+                              (Becoming.EndogenousOrder.scopeAdmitDec maxLagN) Becoming.EndogenousOrder.scopeFallback ⋯
+                              propose)
+                            fun x => x_crit_s)
+                          (fun x => x₀_s, ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, initLag⟩) ∧
+                        (∀ (s : Nat), x_crit_s ≤ A.W_evo.level s A.c_sub) ∧
+                          A.G_evo.Raises A.t_evo ∧
+                            Becoming.Viability.Kernel
+                              (Becoming.OpenComposition.closedProcess A.compOp A.cOp (A.W.opObs A.θ_true) A.channel
+                                (A.W.G A.θ_true) (A.W.envDraw A.θ_true) A.W.jointAdm)
+                              (Becoming.OpenComposition.closedGuard A.compOp A.cOp A.x_crit) (A.rOp.state 0)
+@Becoming.MasterSpine.masterSpine_grammar_lifts : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr),
+  Becoming.MasterSpine.MasterSpineGrammarLiftsProp A
+@Becoming.MasterSpine.full_obstruction_and_sharpness_panorama : ∀ {Pos F : Type} (p : Pos) (f : F),
+  Becoming.MasterSpine.FullObstructionPanoramaProp p f
+@Becoming.MasterSpine.masterSpine_readsOnlyDynamics : ∀ {Pos F D : Type} (MasterLaw : D → Prop),
+  Becoming.ReadsOnlyDynamics fun d x => MasterLaw d
+@Becoming.MasterSpine.masterSpine_admits_rival : ∀ {Pos F D : Type} (MasterLaw : D → Prop) {d : D},
+  MasterLaw d →
+    ∀ (_sig : Pos → Nat → F → Prop) {region : Pos → F → Prop},
+      (∃ p f, ¬region p f) →
+        MasterLaw d ∧ Becoming.Rival (Becoming.bounded region) ∧ ¬Becoming.Unrestricted (Becoming.bounded region)
+@Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted : ∀ {Pos F D : Type} (MasterLaw : D → Prop) (p : Pos)
+  (f : F) {d : D}, MasterLaw d → ¬∀ (d' : D) (sig : Pos → Nat → F → Prop), MasterLaw d' → Becoming.Unrestricted sig
+@Becoming.MasterSpine.k6_ethics_chain_and_firewall : ∀ {Pos F : Type} (p : Pos) (f : F) {D : Type}
+  (MasterLaw : D → Prop) {d : D}, MasterLaw d → Becoming.MasterSpine.K6EthicsFirewallProp p f MasterLaw
+@Becoming.MasterSpine.whole_becoming_master_theorem : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  {Pos F D : Type} (p : Pos) (f : F) (MasterLaw : D → Prop) {d : D},
+  MasterLaw d →
+    Becoming.MasterSpine.WholeArchitectureViableProp A ∧
+      Becoming.MasterSpine.MasterSpineGrammarLiftsProp A ∧
+        Becoming.MasterSpine.FullObstructionPanoramaProp p f ∧
+          Becoming.MasterSpine.K6EthicsFirewallProp p f MasterLaw ∧
+            Becoming.MasterSpine.MasterAlignmentDichotomyProp p f
+Becoming.MasterSpine.WholeBecomingWitness.wG_rises : ∀ (θ : Bool) (site : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.MasterSpine.WholeBecomingWitness.wG θ site)
+Becoming.MasterSpine.WholeBecomingWitness.wG_hide_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.MasterSpine.WholeBecomingWitness.wG_hide k)
+Becoming.MasterSpine.WholeBecomingWitness.wDefaultTol : ∀ (m : Becoming.ActiveInquiryLoop.InquiryMode Bool Unit)
+  (ob : Becoming.ActiveInquiryLoop.inquiryObs Bool (Bool × Bool) Bool m × Bool),
+  (Becoming.ActiveInquiryLoop.inquiryContract Becoming.MasterSpine.WholeBecomingWitness.wSpec).tol m ob
+    (Becoming.MasterSpine.WholeBecomingWitness.wDefaultDist m)
+Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1 : Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull 1 =
+  (fun x => 21,
+    ⟨Becoming.ActiveInquiryLoop.InquiryMode.operate true (),
+      (((((), 1), (), 1), fun x => 11), ⟨Becoming.EndogenousOrder.ScopeMode.narrowUnmonitored, 1⟩)⟩)
+Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2 : ∀ (k : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull (k + 2) =
+    (fun x => 19,
+      ⟨Becoming.ActiveInquiryLoop.InquiryMode.operate true (),
+        (((((), 0), (), 0), fun x => 10), ⟨Becoming.EndogenousOrder.ScopeMode.wideReciprocal, 0⟩)⟩)
+Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq : ∀ (k : Nat),
+  (Becoming.MasterSpine.WholeBecomingWitness.w_r_full.state (1 + k)).fst () = if k = 0 then 21 else 19
+Becoming.MasterSpine.WholeBecomingWitness.wDrawExt_pos : ∀ (k : Nat),
+  0 <
+    Becoming.MasterSpine.WholeBecomingWitness.wCompOp.drawExt
+      (Becoming.MasterSpine.extractOpState Becoming.MasterSpine.WholeBecomingWitness.wInitOp
+        (Becoming.MasterSpine.WholeBecomingWitness.w_r_full.state (1 + k)).snd)
+      ()
+@Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero : ∀ {a b : Nat}, Becoming.distNat a b = 0 → a = b
+Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_le : ∀ (a b : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat a b ≤ 25
+@Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_eq_of_le : ∀ {a b : Nat},
+  Becoming.distNat a b ≤ 25 → Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat a b = Becoming.distNat a b
+@Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_zero_iff : ∀ {a b : Nat},
+  Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat a b = 0 ↔ a = b
+Becoming.MasterSpine.WholeBecomingWitness.wCausal_goAlike : Becoming.CausalGoAlike
+  (Becoming.CausalSystem.ofOpenComponent Becoming.MasterSpine.WholeBecomingWitness.wCompOp
+    Becoming.MasterSpine.WholeBecomingWitness.wCOp.tol)
+  Becoming.MasterSpine.WholeBecomingWitness.wPiCausal id
+Becoming.MasterSpine.WholeBecomingWitness.wCausal_nonconst : ∃ s₁ s₂,
+  Becoming.MasterSpine.WholeBecomingWitness.wPiCausal s₁ ≠ Becoming.MasterSpine.WholeBecomingWitness.wPiCausal s₂
+Becoming.MasterSpine.WholeBecomingWitness.wEvo_acting : Becoming.MasterSpine.WholeBecomingWitness.wLEvo.Acting
+  Becoming.MasterSpine.WholeBecomingWitness.wWEvo
+Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq : ∀ (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wGEvo.family t =
+      [Becoming.MasterSpine.WholeBecomingWitness.EvoPlace.wideLin t] ∨
+    t = 0 ∧
+      Becoming.MasterSpine.WholeBecomingWitness.wGEvo.family t =
+        [Becoming.MasterSpine.WholeBecomingWitness.EvoPlace.wideLin 0,
+          Becoming.MasterSpine.WholeBecomingWitness.EvoPlace.narrowLin]
+Becoming.MasterSpine.WholeBecomingWitness.wEvo_descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.MasterSpine.WholeBecomingWitness.wLEvo Becoming.MasterSpine.WholeBecomingWitness.wWEvo
+  Becoming.MasterSpine.WholeBecomingWitness.wGEvo
+Becoming.MasterSpine.WholeBecomingWitness.wEvo_exact : ∀ (t : Nat),
+  Becoming.SelectionTerm.Exact (Becoming.MasterSpine.WholeBecomingWitness.wGEvo.family t)
+    (Becoming.MasterSpine.WholeBecomingWitness.wGEvo.kids t) (Becoming.MasterSpine.WholeBecomingWitness.wGEvo.amount t)
+    (Becoming.MasterSpine.WholeBecomingWitness.wGEvo.amount (t + 1))
+Becoming.MasterSpine.WholeBecomingWitness.wBad_balances : Becoming.MasterSpine.WholeBecomingWitness.wLBad.Balances
+  Becoming.MasterSpine.WholeBecomingWitness.wWBad
+Becoming.MasterSpine.WholeBecomingWitness.wBad_acting : Becoming.MasterSpine.WholeBecomingWitness.wLBad.Acting
+  Becoming.MasterSpine.WholeBecomingWitness.wWBad
+Becoming.MasterSpine.WholeBecomingWitness.wBad_dependent : Becoming.MasterSpine.WholeBecomingWitness.wWBad.Dependent
+Becoming.MasterSpine.WholeBecomingWitness.wGBad_family : ∀ (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wGBad.family t =
+    match t with
+    | 0 => [Becoming.MasterSpine.WholeBecomingWitness.BadPlace.badAgent 0]
+    | 1 => [Becoming.MasterSpine.WholeBecomingWitness.BadPlace.badAgent 1]
+    | 2 => [Becoming.MasterSpine.WholeBecomingWitness.BadPlace.badAgent 2]
+    | x => []
+Becoming.MasterSpine.WholeBecomingWitness.wGBad_descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.MasterSpine.WholeBecomingWitness.wLBad Becoming.MasterSpine.WholeBecomingWitness.wWBad
+  Becoming.MasterSpine.WholeBecomingWitness.wGBad
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr : ∀ (gated : Bool) (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wPoolStep gated Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain t =
+    if t = 0 then 21 else 19
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_oo : ∀ (gated : Bool) (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wPoolStep gated Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw (t + 1) =
+    13
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_or : ∀ (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wPoolStep false Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain (t + 2) =
+    13
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_ro : ∀ (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wPoolStep false Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw (t + 2) =
+    13
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_or_ge16 : ∀ (t : Nat),
+  16 ≤
+    Becoming.MasterSpine.WholeBecomingWitness.wPoolStep true Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain (t + 1)
+Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_ro_ge16 : ∀ (t : Nat),
+  16 ≤
+    Becoming.MasterSpine.WholeBecomingWitness.wPoolStep true Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain
+      Becoming.MasterSpine.WholeBecomingWitness.WNashAct.overdraw (t + 1)
+Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep : ∀ (gated : Bool)
+  (x y : Becoming.MasterSpine.WholeBecomingWitness.WNashAct) (t : Nat),
+  Becoming.MasterSpine.WholeBecomingWitness.wPoolTake1 gated x y t +
+        Becoming.MasterSpine.WholeBecomingWitness.wPoolTake2 gated x y t +
+      Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeBase gated x y t ≤
+    Becoming.MasterSpine.WholeBecomingWitness.wPoolStep gated x y t
+Becoming.MasterSpine.WholeBecomingWitness.wCR_balances : ∀ (gated : Bool)
+  (x y : Becoming.MasterSpine.WholeBecomingWitness.WNashAct),
+  (Becoming.MasterSpine.WholeBecomingWitness.wCRFlow gated x y).Balances
+    (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y)
+Becoming.MasterSpine.WholeBecomingWitness.wCR_acting : ∀ (gated : Bool)
+  (x y : Becoming.MasterSpine.WholeBecomingWitness.WNashAct),
+  (Becoming.MasterSpine.WholeBecomingWitness.wCRFlow gated x y).Acting
+    (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y)
+Becoming.MasterSpine.WholeBecomingWitness.wCR_dependent : ∀ (gated : Bool)
+  (x y : Becoming.MasterSpine.WholeBecomingWitness.WNashAct),
+  (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).Dependent
+Becoming.MasterSpine.WholeBecomingWitness.wAdmBool_iff : ∀ (gated : Bool)
+  (x y : Becoming.MasterSpine.WholeBecomingWitness.WNashAct) (t : Nat),
+  (Becoming.MasterSpine.WholeBecomingWitness.wAdmBool gated x
+          (Becoming.MasterSpine.WholeBecomingWitness.wPoolStep gated x y t) t =
+        true ↔
+      (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).active t
+          Becoming.MasterSpine.WholeBecomingWitness.WNashForm.f1 ∧
+        (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).Admits
+          ((Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).level t) t
+          Becoming.MasterSpine.WholeBecomingWitness.WNashForm.f1) ∧
+    (Becoming.MasterSpine.WholeBecomingWitness.wAdmBool gated y
+          (Becoming.MasterSpine.WholeBecomingWitness.wPoolStep gated x y t) t =
+        true ↔
+      (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).active t
+          Becoming.MasterSpine.WholeBecomingWitness.WNashForm.f2 ∧
+        (Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).Admits
+          ((Becoming.MasterSpine.WholeBecomingWitness.wCRWeb gated x y).level t) t
+          Becoming.MasterSpine.WholeBecomingWitness.WNashForm.f2)
+Becoming.MasterSpine.WholeBecomingWitness.wCR_tracks_rOp : ∀ (t : Nat),
+  ((Becoming.MasterSpine.WholeBecomingWitness.wCR true).web Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain
+          Becoming.MasterSpine.WholeBecomingWitness.WNashAct.restrain).level
+      t Becoming.MasterSpine.WholeBecomingWitness.WNashCond.cPool =
+    (Becoming.MasterSpine.WholeBecomingWitness.w_r_full.state (1 + t)).fst ()
+@Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem : ∀ {Pos F : Type} (p : Pos) (f : F)
+  {X Mode : Type} {S Obs Dist Int Ext : Mode → Type} {Site Env Act F_c C_c : Type}
+  (EndoLaw : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F_c C_c → Prop)
+  {sys : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F_c C_c},
+  EndoLaw sys →
+    (Becoming.MasterSpine.WholeArchitectureViableProp Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture ∧
+        Becoming.MasterSpine.MasterSpineGrammarLiftsProp Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture ∧
+          Becoming.MasterSpine.FullObstructionPanoramaProp p f ∧
+            (Becoming.MasterSpine.K6EthicsFirewallProp p f fun x => True) ∧
+              Becoming.MasterSpine.MasterAlignmentDichotomyProp p f) ∧
+      (¬∀ (d' : Unit) (sig : Pos → Nat → F → Prop), (fun x => True) d' → Becoming.Unrestricted sig) ∧
+        ¬∀ (sys' : Becoming.EndogenousOrder.EndogenousOrderSystem X Mode S Obs Dist Int Ext Site Env Act F_c C_c)
+            (sig : Pos → Nat → F → Prop), EndoLaw sys' → Becoming.Unrestricted sig

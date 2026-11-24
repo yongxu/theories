@@ -2309,7 +2309,7 @@ theorem witness_bundle :
                     (LineOnAStock.course need (kids false) giving use ([.agg], 7) j).1
                     (LineOnAStock.course need (kids false) giving use ([.agg], 7) j).2 := rfl
             rw [hNext, hw]
-            dsimp only [LineOnAStock.after]
+            dsimp only [LineOnAStock.after, WayUnderARule.stepAfter]
             cases decide (need .agg ≤ (LineOnAStock.course need (kids false) giving use ([.agg], 7) j).2)
             · exact Or.inr rfl
             · exact Or.inl rfl
