@@ -171,7 +171,7 @@
         "Becoming.Turns.law_alike_of_cascade",
         "Becoming.Turns.separates_at"
       ],
-      "sha256": "e6add4291cb2af7cefb3882ed48619aeaa6a473446fd5ff5b2505c49fe5df538"
+      "sha256": "6895594db6e8492064f71549db8457b97b29d7f3dac7379a409d56e555cee04d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
@@ -212,12 +212,18 @@
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
       "sha256": "de43b80a8d97034c1e6e9f7814a9f094f0000669e32453e48db5c187f6f27883"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Cascade",
       "success_pointer": "/status",
       "success_value": "passed"

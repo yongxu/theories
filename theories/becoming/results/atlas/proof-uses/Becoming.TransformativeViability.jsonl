@@ -36,9 +36,9 @@
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_A_of_false", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.not_admits_B_of_true", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.FiniteGainless.total_eq_at_of_distinct", "uses": ["Becoming.total_eq_zero"]}
-{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_admits_at", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_self"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_admits_at", "uses": ["Becoming.beq_self"]}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_new", "uses": []}
-{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_next", "uses": ["_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_succ_false"]}
+{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_next", "uses": ["Becoming.ListTests.beq_false_of_ne", "Becoming.Naturals.succ_ne_self"]}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_old", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_plus", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.churn_not_admits_sub", "uses": []}
@@ -51,7 +51,5 @@
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_churn", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_new", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.legacy_not_admits_plus", "uses": []}
-{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_self", "uses": []}
-{"name": "_private.Becoming.TransformativeViability.0.Becoming.ThreeRegime.natEq_succ_false", "uses": []}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_of_le", "uses": ["Becoming.le_dest", "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_steps"]}
 {"name": "_private.Becoming.TransformativeViability.0.Becoming.linked_capSame_steps", "uses": []}

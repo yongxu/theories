@@ -1,304 +1,332 @@
 {
- "schema_version": 2,
- "id": "paced-stock-and-cadence-margin-sandwich",
- "title": {
-  "en": "Fine-step stock under coarse rule cadences, intra-span block slack, and the pace–margin sandwich"
- },
- "kind": "theorem",
- "status": "recorded-checked",
- "family": "F01",
- "reviewed_at_utc": "2026-11-23T12:58:00+00:00",
- "statement": {
-  "en": "Fine-step stock evolution under coarse Pace rule cadences satisfies intra-span block slack bounds, yields feasibility when initial buffer covers the Pace identification lag (2N - 1) plus safe-headroom, and proves unrecoverable collapse when initial margin falls short."
- },
- "laws": [
-  {
-   "en": "Fine-step evolution under coarse rule cadence: under strict sampling σ and ReadAtSpanEnd σ reads, pacedCourse holds its active rule fixed across every Becoming.span σ j while advancing the unit-level state along LineOnAStock.step (paced_held_on_span) and updates the rule only across span boundaries (paced_block_transition).",
-   "declarations": [
+  "schema_version": 2,
+  "id": "paced-stock-and-cadence-margin-sandwich",
+  "title": {
+    "en": "Fine-step stock under coarse rule cadences, intra-span block slack, and the pace–margin sandwich"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-23T12:58:00+00:00",
+  "statement": {
+    "en": "Fine-step stock evolution under coarse Pace rule cadences satisfies intra-span block slack bounds, yields feasibility when initial buffer covers the Pace identification lag (2N - 1) plus safe-headroom, and proves unrecoverable collapse when initial margin falls short."
+  },
+  "laws": [
+    {
+      "en": "Fine-step evolution under coarse rule cadence: under strict sampling σ and ReadAtSpanEnd σ reads, pacedCourse holds its active rule fixed across every Becoming.span σ j while advancing the unit-level state along LineOnAStock.step (paced_held_on_span) and updates the rule only across span boundaries (paced_block_transition).",
+      "declarations": [
+        "Becoming.PacedStock.StockState",
+        "Becoming.PacedStock.fineStep",
+        "Becoming.PacedStock.ReadAtSpanEnd",
+        "Becoming.PacedStock.pacedCourse",
+        "Becoming.PacedStock.fineStep_orbit_fst",
+        "Becoming.PacedStock.fineStep_orbit_snd",
+        "Becoming.PacedStock.paced_held_on_span_state",
+        "Becoming.PacedStock.paced_held_on_span",
+        "Becoming.PacedStock.paced_block_transition"
+      ]
+    },
+    {
+      "en": "Intra-span block slack and viability transport: under CoveredByBlocks, Viability.Kernel and Viability.Certificate transport across Frame.blocks expand with SpanGuard (blocks_kernel_iff_fine_kernel, blocks_certificate_to_fine_kernel); Keepable transfers one-way constructively via deterministic map, singleton expansion, or explicit Prop/DC choice without axioms; reach-scoped bounded stepDrop certifies fine Kernel from thr + stepDrop * (L - 1) block guard (slack_certifies_fine_kernel, iff only under realizesDrop). SlackShortWitness shows block Kernel and block Keepable holding at ([true], 5) where both fine fail, and fine Kernel restored at ([true], 6).",
+      "declarations": [
+        "Becoming.PacedStock.CoveredByBlocks",
+        "Becoming.PacedStock.SpanGuard",
+        "Becoming.PacedStock.blocks_reach_to_fine",
+        "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
+        "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_dc",
+        "Becoming.PacedStock.slack_certifies_fine_kernel",
+        "Becoming.PacedStock.slack_certifies_fine_kernel_global",
+        "Becoming.PacedStock.slack_iff_of_drop_realized",
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel",
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable",
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel",
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable",
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
+        "Becoming.PacedStock.SlackShortWitness.witness_summary"
+      ]
+    },
+    {
+      "en": "Pace–Margin Sandwich: two-sided line_envelope bounds LineOnAStock levels below against unmonotone RegimeMargin.step (fun _ => 0) H and above under FromNothing + AtMost + LowerDrawWhileMet. When L ≥ 2N - 1 (Pace.StretchFixes) and initial buffer covers H₂ + y₂ + H₁ * (L + 1) ≤ x₀ (with safe-phase headroom H₂ + H₂ + y₂ ≤ hi, or exact taken = H₂), pace_margin_feasibility_window guarantees permanent Goes within [H₂ + y₂, hi]. Conversely, when x₀ < (H₂ + y₂) + (H₁ - Y) * (2N - 1), unrecoverable_cadence_impossibility and coupled_two_rule_impossibility prove either L < 2N - 1 conflates observations across span σ 0 or L ≥ 2N - 1 drains before any switch to g_safe at σ 1 = L can save it, witnessed concretely in SandwichWitness (N = 3, x₀ = 20 crash vs N = 2, L = 3, x₀ = 52 survival).",
+      "declarations": [
+        "Becoming.PacedStock.UpperDraw",
+        "Becoming.PacedStock.LowerDrawWhileMet",
+        "Becoming.PacedStock.line_envelope_lower",
+        "Becoming.PacedStock.line_envelope_upper",
+        "Becoming.PacedStock.line_envelope",
+        "Becoming.PacedStock.pace_margin_feasibility_window",
+        "Becoming.PacedStock.pace_margin_feasibility_window_exact",
+        "Becoming.PacedStock.unrecoverable_cadence_impossibility",
+        "Becoming.PacedStock.coupled_two_rule_impossibility",
+        "Becoming.PacedStock.SandwichWitness.UnitKind",
+        "Becoming.PacedStock.SandwichWitness.imp_trace_levels",
+        "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
+        "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts",
+        "Becoming.PacedStock.SandwichWitness.feas_trace_values",
+        "Becoming.PacedStock.SandwichWitness.feas_witness"
+      ]
+    },
+    {
+      "en": "LaxSim bridge to MultiScaleViability: blockStockProcess and SpanAlignedBlocks join PacedStock intra-span block slack directly onto MultiScaleViability.LaxSim via blocksLaxSim and slack_certifies_fine_kernel_via_laxSim (witnessed constructively by SlackShortWitness.atSix_fine_kernel_via_laxSim).",
+      "declarations": [
+        "Becoming.PacedStock.blockStockProcess",
+        "Becoming.PacedStock.blockStockProcess_kernel_iff",
+        "Becoming.PacedStock.SpanAlignedBlocks",
+        "Becoming.PacedStock.spanAligned_of_uniform",
+        "Becoming.PacedStock.blocksLaxSim",
+        "Becoming.PacedStock.slack_certifies_fine_kernel_via_laxSim",
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_via_laxSim"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. For intra-span transport: Becoming.Strict σ, ReadAtSpanEnd σ reads, CoveredByBlocks, reach-scoped stepDrop ≤ block slack * (L - 1), and explicit choice hypothesis (if transporting non-deterministic Keepable)."
+    },
+    {
+      "en": "For Pace–Margin feasibility/impossibility: Pace.StretchFixes / 2N - 1 ≤ L, RegimeMargin Short/Meets/Keeps hypotheses, FromNothing/AtMost bounds, and explicit buffer bounds relative to H₂ + y₂ and H₁."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That real training, governance, or feedback cadences operate with exact span-end rule reads, deterministic lasso dynamics, or fixed H₁/H₂ bounds.",
+      "kind": "correspondence"
+    },
+    {
+      "en": "A global bidirectional equivalence for Frame.blocks Keepable without choice/determinism, or for fixed slack without realizesDrop.",
+      "kind": "non-implication",
+      "witness": "Becoming.PacedStock.SlackShortWitness.witness_summary"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261123T234229.023849Z): all 84 declarations (49 theorems) in Becoming.PacedStock compile from Lean's prelude alone with empty axiom reports (core_axioms: []); Wave U2 LaxSimBridge joined onto MultiScaleViability and audited (00113d4b: PASS). No person has read it."
+  },
+  "next_delta": {
+    "en": "Join paced macro steps across lax state quotients (`Becoming.MultiScaleViability`, Milestone 1C) and stress-test the pace–margin buffer under stochastic optimization noise (Phase 2)."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): coarse oversight faces a two-sided sandwich — reading faster than the Pace identification horizon (2N - 1) fails to separate candidate dynamics, whereas waiting through it under an extractive policy crashes before the lagged policy switch takes effect unless the initial stock covers both drawdown and pipeline lag."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
+  "aliases": [
     "Becoming.PacedStock.StockState",
     "Becoming.PacedStock.fineStep",
     "Becoming.PacedStock.ReadAtSpanEnd",
     "Becoming.PacedStock.pacedCourse",
-    "Becoming.PacedStock.fineStep_orbit_fst",
-    "Becoming.PacedStock.fineStep_orbit_snd",
-    "Becoming.PacedStock.paced_held_on_span_state",
-    "Becoming.PacedStock.paced_held_on_span",
-    "Becoming.PacedStock.paced_block_transition"
-   ]
-  },
-  {
-   "en": "Intra-span block slack and viability transport: under CoveredByBlocks, Viability.Kernel and Viability.Certificate transport across Frame.blocks expand with SpanGuard (blocks_kernel_iff_fine_kernel, blocks_certificate_to_fine_kernel); Keepable transfers one-way constructively via deterministic map, singleton expansion, or explicit Prop/DC choice without axioms; reach-scoped bounded stepDrop certifies fine Kernel from thr + stepDrop * (L - 1) block guard (slack_certifies_fine_kernel, iff only under realizesDrop). SlackShortWitness shows block Kernel and block Keepable holding at ([true], 5) where both fine fail, and fine Kernel restored at ([true], 6).",
-   "declarations": [
-    "Becoming.PacedStock.CoveredByBlocks",
-    "Becoming.PacedStock.SpanGuard",
-    "Becoming.PacedStock.blocks_reach_to_fine",
-    "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
-    "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_dc",
-    "Becoming.PacedStock.slack_certifies_fine_kernel",
-    "Becoming.PacedStock.slack_certifies_fine_kernel_global",
-    "Becoming.PacedStock.slack_iff_of_drop_realized",
-    "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel",
-    "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable",
-    "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel",
-    "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable",
-    "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
-    "Becoming.PacedStock.SlackShortWitness.witness_summary"
-   ]
-  },
-  {
-   "en": "Pace–Margin Sandwich: two-sided line_envelope bounds LineOnAStock levels below against unmonotone RegimeMargin.step (fun _ => 0) H and above under FromNothing + AtMost + LowerDrawWhileMet. When L ≥ 2N - 1 (Pace.StretchFixes) and initial buffer covers H₂ + y₂ + H₁ * (L + 1) ≤ x₀ (with safe-phase headroom H₂ + H₂ + y₂ ≤ hi, or exact taken = H₂), pace_margin_feasibility_window guarantees permanent Goes within [H₂ + y₂, hi]. Conversely, when x₀ < (H₂ + y₂) + (H₁ - Y) * (2N - 1), unrecoverable_cadence_impossibility and coupled_two_rule_impossibility prove either L < 2N - 1 conflates observations across span σ 0 or L ≥ 2N - 1 drains before any switch to g_safe at σ 1 = L can save it, witnessed concretely in SandwichWitness (N = 3, x₀ = 20 crash vs N = 2, L = 3, x₀ = 52 survival).",
-   "declarations": [
-    "Becoming.PacedStock.UpperDraw",
-    "Becoming.PacedStock.LowerDrawWhileMet",
-    "Becoming.PacedStock.line_envelope_lower",
-    "Becoming.PacedStock.line_envelope_upper",
-    "Becoming.PacedStock.line_envelope",
-    "Becoming.PacedStock.pace_margin_feasibility_window",
-    "Becoming.PacedStock.pace_margin_feasibility_window_exact",
-    "Becoming.PacedStock.unrecoverable_cadence_impossibility",
-    "Becoming.PacedStock.coupled_two_rule_impossibility",
-    "Becoming.PacedStock.SandwichWitness.UnitKind",
-    "Becoming.PacedStock.SandwichWitness.imp_trace_levels",
-    "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
-    "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts",
-    "Becoming.PacedStock.SandwichWitness.feas_trace_values",
-    "Becoming.PacedStock.SandwichWitness.feas_witness"
-   ]
-  }
- ],
- "hypotheses": [
-  {
-   "en": "No axiom. For intra-span transport: Becoming.Strict σ, ReadAtSpanEnd σ reads, CoveredByBlocks, reach-scoped stepDrop ≤ block slack * (L - 1), and explicit choice hypothesis (if transporting non-deterministic Keepable)."
-  },
-  {
-   "en": "For Pace–Margin feasibility/impossibility: Pace.StretchFixes / 2N - 1 ≤ L, RegimeMargin Short/Meets/Keeps hypotheses, FromNothing/AtMost bounds, and explicit buffer bounds relative to H₂ + y₂ and H₁."
-  }
- ],
- "does_not_show": [
-  {
-   "en": "That real training, governance, or feedback cadences operate with exact span-end rule reads, deterministic lasso dynamics, or fixed H₁/H₂ bounds.",
-   "kind": "correspondence"
-  },
-  {
-   "en": "A global bidirectional equivalence for Frame.blocks Keepable without choice/determinism, or for fixed slack without realizesDrop.",
-   "kind": "non-implication",
-   "witness": "Becoming.PacedStock.SlackShortWitness.witness_summary"
-  }
- ],
- "counterexamples": [],
- "standard_boundaries": [
-  "no-ethical-premise",
-  "no-evaluation",
-  "discrete-steps",
-  "formal-not-empirical",
-  "names-provisional",
-  "omission-not-refutation"
- ],
- "validation_scope": {
-  "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261123T125647.945308Z): all 77 audited declarations (45 theorems) in Becoming.PacedStock compile from Lean's prelude alone with empty axiom reports (core_axioms: []); environment audit clean. AI-written from a frozen brief attacked on paper (c186e26d) and audited line-by-line by an independent verifier (67dc4026: PASS). No person has read it."
- },
- "next_delta": {
-  "en": "Join paced macro steps across lax state quotients (`Becoming.MultiScaleViability`, Milestone 1C) and stress-test the pace–margin buffer under stochastic optimization noise (Phase 2)."
- },
- "correspondence": {
-  "en": "Reading (AI-written): coarse oversight faces a two-sided sandwich — reading faster than the Pace identification horizon (2N - 1) fails to separate candidate dynamics, whereas waiting through it under an extractive policy crashes before the lagged policy switch takes effect unless the initial stock covers both drawdown and pipeline lag."
- },
- "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
- "aliases": [
-  "Becoming.PacedStock.StockState",
-  "Becoming.PacedStock.fineStep",
-  "Becoming.PacedStock.ReadAtSpanEnd",
-  "Becoming.PacedStock.pacedCourse",
-  "Becoming.PacedStock.paced_held_on_span",
-  "Becoming.PacedStock.paced_block_transition",
-  "Becoming.PacedStock.CoveredByBlocks",
-  "Becoming.PacedStock.SpanGuard",
-  "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
-  "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
-  "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
-  "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
-  "Becoming.PacedStock.slack_certifies_fine_kernel",
-  "Becoming.PacedStock.slack_iff_of_drop_realized",
-  "Becoming.PacedStock.SlackShortWitness.witness_summary",
-  "Becoming.PacedStock.line_envelope",
-  "Becoming.PacedStock.pace_margin_feasibility_window",
-  "Becoming.PacedStock.pace_margin_feasibility_window_exact",
-  "Becoming.PacedStock.unrecoverable_cadence_impossibility",
-  "Becoming.PacedStock.coupled_two_rule_impossibility",
-  "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
-  "Becoming.PacedStock.SandwichWitness.feas_witness"
- ],
- "dependencies": [
-  {
-   "id": "how-fast-a-rule-may-change",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Pace (paced, paced_stretch, lassoStep, dissolving, StretchFixes, pace_law) for coarse rule cadences and 2N - 1 lower bounds."
-   }
-  },
-  {
-   "id": "laws-at-coarser-steps",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Sampling (Strict, span, mem_span, last_of_span) for intra-span timing."
-   }
-  },
-  {
-   "id": "finite-granularity-question-recovery",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Granularity (Frame.blocks, blocks_trace_iff) for coarse block guards."
-   }
-  },
-  {
-   "id": "conditions-kept-together",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Viability/JointKeeping (Kernel, Certificate, Keepable, certificate_disturbed_iff)."
-   }
-  },
-  {
-   "id": "margin-of-a-regime",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses RegimeMargin (step, short_of_below, meets_of_below, keeps_of_below, holds, falls_within) for envelope and horizon bounds."
-   }
-  },
-  {
-   "id": "turning-in-time",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses TurningInTime helpers framing timed transition pairs."
-   }
-  },
-  {
-   "id": "a-line-on-a-stock",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses LineOnAStock (step, Goes, net, step_lowers, generation) as the fine-step plant inside fineStep."
-   }
-  },
-  {
-   "id": "a-way-of-units-under-a-rule-set-again",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Relates rule-updating WayUnderARule steps to explicit paced rule cadences."
-   }
-  }
- ],
- "related": [],
- "references": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
-   "role": "proof",
-   "declarations": [
-    "Becoming.PacedStock.StockState",
-    "Becoming.PacedStock.fineStep",
-    "Becoming.PacedStock.ReadAtSpanEnd",
-    "Becoming.PacedStock.pacedCourse",
-    "Becoming.PacedStock.fineStep_orbit_fst",
-    "Becoming.PacedStock.fineStep_orbit_snd",
-    "Becoming.PacedStock.paced_held_on_span_state",
     "Becoming.PacedStock.paced_held_on_span",
     "Becoming.PacedStock.paced_block_transition",
     "Becoming.PacedStock.CoveredByBlocks",
     "Becoming.PacedStock.SpanGuard",
-    "Becoming.PacedStock.blocks_reach_to_fine",
     "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
     "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
     "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton",
     "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
-    "Becoming.PacedStock.blocks_keepable_to_fine_of_dc",
     "Becoming.PacedStock.slack_certifies_fine_kernel",
-    "Becoming.PacedStock.slack_certifies_fine_kernel_global",
     "Becoming.PacedStock.slack_iff_of_drop_realized",
-    "Becoming.PacedStock.SlackShortWitness.need",
-    "Becoming.PacedStock.SlackShortWitness.use",
-    "Becoming.PacedStock.SlackShortWitness.kids",
-    "Becoming.PacedStock.SlackShortWitness.giving",
-    "Becoming.PacedStock.SlackShortWitness.fineStep",
-    "Becoming.PacedStock.SlackShortWitness.frame",
-    "Becoming.PacedStock.SlackShortWitness.expand",
-    "Becoming.PacedStock.SlackShortWitness.thr",
-    "Becoming.PacedStock.SlackShortWitness.step_five_true",
-    "Becoming.PacedStock.SlackShortWitness.step_four_false",
-    "Becoming.PacedStock.SlackShortWitness.step_six_true",
-    "Becoming.PacedStock.SlackShortWitness.step_five_false",
-    "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel",
-    "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable",
-    "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel",
-    "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable",
-    "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
     "Becoming.PacedStock.SlackShortWitness.witness_summary",
-    "Becoming.PacedStock.UpperDraw",
-    "Becoming.PacedStock.LowerDrawWhileMet",
-    "Becoming.PacedStock.line_envelope_lower",
-    "Becoming.PacedStock.line_envelope_upper",
     "Becoming.PacedStock.line_envelope",
     "Becoming.PacedStock.pace_margin_feasibility_window",
     "Becoming.PacedStock.pace_margin_feasibility_window_exact",
     "Becoming.PacedStock.unrecoverable_cadence_impossibility",
     "Becoming.PacedStock.coupled_two_rule_impossibility",
-    "Becoming.PacedStock.SandwichWitness.UnitKind",
-    "Becoming.PacedStock.SandwichWitness.need",
-    "Becoming.PacedStock.SandwichWitness.use",
-    "Becoming.PacedStock.SandwichWitness.kids",
-    "Becoming.PacedStock.SandwichWitness.giving",
-    "Becoming.PacedStock.SandwichWitness.obs",
-    "Becoming.PacedStock.SandwichWitness.giving_fromNothing",
-    "Becoming.PacedStock.SandwichWitness.giving_atMost8",
-    "Becoming.PacedStock.SandwichWitness.giving_short6",
-    "Becoming.PacedStock.SandwichWitness.giving_meets6",
-    "Becoming.PacedStock.SandwichWitness.giving_keeps0",
-    "Becoming.PacedStock.SandwichWitness.giving_keeps6",
-    "Becoming.PacedStock.SandwichWitness.cycleStep",
-    "Becoming.PacedStock.SandwichWitness.cycleMod",
-    "Becoming.PacedStock.SandwichWitness.periodSigma",
-    "Becoming.PacedStock.SandwichWitness.periodReads",
-    "Becoming.PacedStock.SandwichWitness.periodSigma_strict",
-    "Becoming.PacedStock.SandwichWitness.periodReads_cadence",
-    "Becoming.PacedStock.SandwichWitness.impBadStart",
-    "Becoming.PacedStock.SandwichWitness.impSafeStart",
-    "Becoming.PacedStock.SandwichWitness.switchTo",
-    "Becoming.PacedStock.SandwichWitness.imp_trace_levels",
     "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
-    "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts",
-    "Becoming.PacedStock.SandwichWitness.feasH",
-    "Becoming.PacedStock.SandwichWitness.feasStart",
-    "Becoming.PacedStock.SandwichWitness.feasRun",
-    "Becoming.PacedStock.SandwichWitness.feas_trace_values",
     "Becoming.PacedStock.SandwichWitness.feas_witness"
-   ],
-   "sha256": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05"
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z/verification.json",
-   "role": "receipt",
-   "sha256": "34f112a16bdce40ce00e3583e98a48ec9d2344b8ff9903dbd508a2523ca8bdbf"
-  },
-  {
-   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1a-paced-stock-2026-11-23/NOTE.md",
-   "role": "review",
-   "sha256": "c4db8a5fa710a23f5bcbb819e5555abcbc70daa8f8334f25f8e9f2267b2a6819"
-  }
- ],
- "proof_bindings": [
-  {
-   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
-   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z/verification.json",
-   "sha256_pointer": "/source_sha256/Becoming.PacedStock",
-   "success_pointer": "/status",
-   "success_value": "passed"
-  }
- ],
- "history": [
-  {
-   "en": "23 November 2026: added for Milestone 1A (Becoming.PacedStock) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
-  }
- ]
+  ],
+  "dependencies": [
+    {
+      "id": "how-fast-a-rule-may-change",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Pace (paced, paced_stretch, lassoStep, dissolving, StretchFixes, pace_law) for coarse rule cadences and 2N - 1 lower bounds."
+      }
+    },
+    {
+      "id": "laws-at-coarser-steps",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Sampling (Strict, span, mem_span, last_of_span) for intra-span timing."
+      }
+    },
+    {
+      "id": "finite-granularity-question-recovery",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Granularity (Frame.blocks, blocks_trace_iff) for coarse block guards."
+      }
+    },
+    {
+      "id": "conditions-kept-together",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Viability/JointKeeping (Kernel, Certificate, Keepable, certificate_disturbed_iff)."
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses RegimeMargin (step, short_of_below, meets_of_below, keeps_of_below, holds, falls_within) for envelope and horizon bounds."
+      }
+    },
+    {
+      "id": "turning-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses TurningInTime helpers framing timed transition pairs."
+      }
+    },
+    {
+      "id": "a-line-on-a-stock",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses LineOnAStock (step, Goes, net, step_lowers, generation) as the fine-step plant inside fineStep."
+      }
+    },
+    {
+      "id": "lax-multi-scale-viability",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses MultiScaleViability (LaxSim, lax_kernel_of_certificate) via LaxSimBridge joining intra-span block slack onto lax simulations."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PacedStock.StockState",
+        "Becoming.PacedStock.fineStep",
+        "Becoming.PacedStock.ReadAtSpanEnd",
+        "Becoming.PacedStock.pacedCourse",
+        "Becoming.PacedStock.fineStep_orbit_fst",
+        "Becoming.PacedStock.fineStep_orbit_snd",
+        "Becoming.PacedStock.paced_held_on_span_state",
+        "Becoming.PacedStock.paced_held_on_span",
+        "Becoming.PacedStock.paced_block_transition",
+        "Becoming.PacedStock.CoveredByBlocks",
+        "Becoming.PacedStock.SpanGuard",
+        "Becoming.PacedStock.blocks_reach_to_fine",
+        "Becoming.PacedStock.blocks_kernel_iff_fine_kernel",
+        "Becoming.PacedStock.blocks_certificate_to_fine_kernel",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_map",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_singleton",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_choice",
+        "Becoming.PacedStock.blocks_keepable_to_fine_of_dc",
+        "Becoming.PacedStock.slack_certifies_fine_kernel",
+        "Becoming.PacedStock.slack_certifies_fine_kernel_global",
+        "Becoming.PacedStock.slack_iff_of_drop_realized",
+        "Becoming.PacedStock.SlackShortWitness.need",
+        "Becoming.PacedStock.SlackShortWitness.use",
+        "Becoming.PacedStock.SlackShortWitness.kids",
+        "Becoming.PacedStock.SlackShortWitness.giving",
+        "Becoming.PacedStock.SlackShortWitness.fineStep",
+        "Becoming.PacedStock.SlackShortWitness.frame",
+        "Becoming.PacedStock.SlackShortWitness.expand",
+        "Becoming.PacedStock.SlackShortWitness.thr",
+        "Becoming.PacedStock.SlackShortWitness.step_five_true",
+        "Becoming.PacedStock.SlackShortWitness.step_four_false",
+        "Becoming.PacedStock.SlackShortWitness.step_six_true",
+        "Becoming.PacedStock.SlackShortWitness.step_five_false",
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_kernel",
+        "Becoming.PacedStock.SlackShortWitness.atFive_block_keepable",
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_kernel",
+        "Becoming.PacedStock.SlackShortWitness.atFive_not_fine_keepable",
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_by_slack",
+        "Becoming.PacedStock.SlackShortWitness.witness_summary",
+        "Becoming.PacedStock.UpperDraw",
+        "Becoming.PacedStock.LowerDrawWhileMet",
+        "Becoming.PacedStock.line_envelope_lower",
+        "Becoming.PacedStock.line_envelope_upper",
+        "Becoming.PacedStock.line_envelope",
+        "Becoming.PacedStock.pace_margin_feasibility_window",
+        "Becoming.PacedStock.pace_margin_feasibility_window_exact",
+        "Becoming.PacedStock.unrecoverable_cadence_impossibility",
+        "Becoming.PacedStock.coupled_two_rule_impossibility",
+        "Becoming.PacedStock.SandwichWitness.UnitKind",
+        "Becoming.PacedStock.SandwichWitness.need",
+        "Becoming.PacedStock.SandwichWitness.use",
+        "Becoming.PacedStock.SandwichWitness.kids",
+        "Becoming.PacedStock.SandwichWitness.giving",
+        "Becoming.PacedStock.SandwichWitness.obs",
+        "Becoming.PacedStock.SandwichWitness.giving_fromNothing",
+        "Becoming.PacedStock.SandwichWitness.giving_atMost8",
+        "Becoming.PacedStock.SandwichWitness.giving_short6",
+        "Becoming.PacedStock.SandwichWitness.giving_meets6",
+        "Becoming.PacedStock.SandwichWitness.giving_keeps0",
+        "Becoming.PacedStock.SandwichWitness.giving_keeps6",
+        "Becoming.PacedStock.SandwichWitness.cycleStep",
+        "Becoming.PacedStock.SandwichWitness.cycleMod",
+        "Becoming.PacedStock.SandwichWitness.periodSigma",
+        "Becoming.PacedStock.SandwichWitness.periodReads",
+        "Becoming.PacedStock.SandwichWitness.periodSigma_strict",
+        "Becoming.PacedStock.SandwichWitness.periodReads_cadence",
+        "Becoming.PacedStock.SandwichWitness.impBadStart",
+        "Becoming.PacedStock.SandwichWitness.impSafeStart",
+        "Becoming.PacedStock.SandwichWitness.switchTo",
+        "Becoming.PacedStock.SandwichWitness.imp_trace_levels",
+        "Becoming.PacedStock.SandwichWitness.imp_coupled_witness",
+        "Becoming.PacedStock.SandwichWitness.imp_safe_counterpart_lasts",
+        "Becoming.PacedStock.SandwichWitness.feasH",
+        "Becoming.PacedStock.SandwichWitness.feasStart",
+        "Becoming.PacedStock.SandwichWitness.feasRun",
+        "Becoming.PacedStock.SandwichWitness.feas_trace_values",
+        "Becoming.PacedStock.SandwichWitness.feas_witness",
+        "Becoming.PacedStock.blockStockProcess",
+        "Becoming.PacedStock.blockStockProcess_kernel_iff",
+        "Becoming.PacedStock.SpanAlignedBlocks",
+        "Becoming.PacedStock.spanAligned_of_uniform",
+        "Becoming.PacedStock.blocksLaxSim",
+        "Becoming.PacedStock.slack_certifies_fine_kernel_via_laxSim",
+        "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_via_laxSim"
+      ],
+      "sha256": "1d13506157c62801714c58dbef20f01692f65f8b53175cf3c3ad73c2677edc0d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T125647.945308Z/verification.json",
+      "role": "receipt",
+      "sha256": "34f112a16bdce40ce00e3583e98a48ec9d2344b8ff9903dbd508a2523ca8bdbf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1a-paced-stock-2026-11-23/NOTE.md",
+      "role": "review",
+      "sha256": "c4db8a5fa710a23f5bcbb819e5555abcbc70daa8f8334f25f8e9f2267b2a6819"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PacedStock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 November 2026: added for Milestone 1A (Becoming.PacedStock) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
+    },
+    {
+      "en": "24 November 2026 (Wave U2): dropped unused Becoming.WayUnderARule import, deduplicated helpers onto CoreHelpers, and joined PacedStock intra-span block slack onto MultiScaleViability.LaxSim via LaxSimBridge. AI-written."
+    }
+  ]
 }

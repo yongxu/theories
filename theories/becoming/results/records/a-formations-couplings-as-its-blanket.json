@@ -255,6 +255,20 @@
         "Becoming.BlanketCouplings.Alternating.agentConsistent",
         "Becoming.BlanketCouplings.Alternating.admitted"
       ]
+    },
+    {
+      "en": "Open-composition blanket bridges (Option 2 B4-B5): closedParts, closedBlanketLaw, closedComponent_blanketed_course, and hide_internalizes_blanket prove every closed or hidden OpenComposition system realizes a blanketed coupling law whose liftedClosedProcess is BlanketDetermined and admits a BlanketConsistentFamily (closedProcess_blanketDetermined); closedComponent_lumped_blindness and hiddenCoupling_blanket_vs_widened contrast identical BlanketAlike histories across blindDrawer ⊕ blindDrawer (crashing at x₀ = 4 while surviving at x₀ = 100) against widenedAgent ⊕ widenedAgent breaking BlanketAlike by step 1.",
+      "zh": "开放组合毯桥（方案 2 B4-B5）：closedParts、closedBlanketLaw、closedComponent_blanketed_course 与 hide_internalizes_blanket 证明每个封闭或隐藏边界的 OpenComposition 系统皆实现一个毯化耦合之律，其提升进程 liftedClosedProcess 为逐部分确定（BlanketDetermined）且有一致族（closedProcess_blanketDetermined）；closedComponent_lumped_blindness 与 hiddenCoupling_blanket_vs_widened 对照 blindDrawer ⊕ blindDrawer 保持 BlanketAlike（x₀ = 4 崩溃而 x₀ = 100 存续），而 widenedAgent ⊕ widenedAgent 于第 1 步打破 BlanketAlike。",
+      "declarations": [
+        "Becoming.BlanketCouplings.closedParts",
+        "Becoming.BlanketCouplings.closedBlanketLaw",
+        "Becoming.BlanketCouplings.closedComponent_blanketed_course",
+        "Becoming.BlanketCouplings.hide_internalizes_blanket",
+        "Becoming.BlanketCouplings.liftedClosedProcess",
+        "Becoming.BlanketCouplings.closedProcess_blanketDetermined",
+        "Becoming.BlanketCouplings.closedComponent_lumped_blindness",
+        "Becoming.BlanketCouplings.hiddenCoupling_blanket_vs_widened"
+      ]
     }
   ],
   "hypotheses": [
@@ -353,8 +367,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty (core receipt 20261101T044825.244995Z): BlanketCouplings (70 theorems in 140 declarations) imports Blanket, Histories and IdentificationRuns, a leaf; no decide. Near-definitional; the delta is the classification and, for a formation's level, the condition on the World's exchange, pairwise. Reviewed by other AI agents, every finding taken: UE27's design, Lean and landing texts (fifteen, fifteen and twenty-two findings) and UE28's (fifteen, thirteen and eighteen); study sections 488 and 491; no person's review recorded.",
-    "zh": "纯核，公理报告皆空（核心回执 20261101T044825.244995Z）：BlanketCouplings（70 条定理，140 项声明）引 Blanket、Histories 与 IdentificationRuns，为叶。近乎定义；增量为分类，及形成之层级于世界之交换上之逐对条件。他 AI 代理审之，凡所见皆取：UE27 之设计、Lean 与落地文本（十五、十五、二十二条），UE28 者（十五、十三、十八条）；研究第 488 与 491 节；尚无人审之记录。"
+    "en": "Pure core, every axiom report empty (receipt 20261123T234229.023849Z): Becoming.BlanketCouplings (74 theorems in 147 declarations) imports Blanket, Histories, IdentificationRuns, and OpenComposition (via Option 2 B4-B5 bridges), with Wave U2 diff audit (00113d4b: PASS); no person's review recorded.",
+    "zh": "纯核，公理报告皆空（回执 20261123T234229.023849Z）：Becoming.BlanketCouplings（74 条定理，147 项声明）引 Blanket、Histories、IdentificationRuns 与 OpenComposition（经方案 2 B4-B5 桥），经 Wave U2 差异审计（00113d4b: PASS）；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A formation's records other than its level as the internal part of a blanketed law; its level as that part across a family of runs, where the world's half is a condition, or along one run without functions given; a blanketed law for a family consistent part by part, with a choice at the readings no course shows; review by a person.",
@@ -406,6 +420,14 @@
       "detail": {
         "en": "Flow.BalancedHistory and Web.CoupledInto: the balanced history the level's condition reads, and the coupling the witnesses deny.",
         "zh": "Flow.BalancedHistory 与 Web.CoupledInto：层级之条件所读之平衡之史，及见证所否之耦合。"
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Option 2 B4-B5 bridges reuse OpenComposition (OpenComponent, hide, closedStep, Blind/Widened witnesses) to internalize blankets and exhibit lumped-blindness vs widening.",
+        "zh": "方案 2 B4-B5 桥复用 OpenComposition（OpenComponent、hide、closedStep、盲/拓宽见证），以使毯内在化并展示粗粒盲区与拓宽之对比。"
       }
     }
   ],
@@ -575,9 +597,17 @@
         "Becoming.BlanketCouplings.whole",
         "Becoming.BlanketCouplings.whole_iff",
         "Becoming.BlanketCouplings.worldParts",
-        "Becoming.BlanketCouplings.worldReads"
+        "Becoming.BlanketCouplings.worldReads",
+        "Becoming.BlanketCouplings.closedParts",
+        "Becoming.BlanketCouplings.closedBlanketLaw",
+        "Becoming.BlanketCouplings.closedComponent_blanketed_course",
+        "Becoming.BlanketCouplings.hide_internalizes_blanket",
+        "Becoming.BlanketCouplings.liftedClosedProcess",
+        "Becoming.BlanketCouplings.closedProcess_blanketDetermined",
+        "Becoming.BlanketCouplings.closedComponent_lumped_blindness",
+        "Becoming.BlanketCouplings.hiddenCoupling_blanket_vs_widened"
       ],
-      "sha256": "d906ec9522df7d41e44d4b2025a1b3d8003a586eb9f5ae420eca48d3b8bb6c9e"
+      "sha256": "09ca7cff2d6d38a69e48077b9478b7377e753ccac58d9ec15bcd13782d06de20"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
@@ -658,12 +688,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BlanketCouplings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -688,6 +724,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "24 November 2026 (Wave U2): added Option 2 B4-B5 bridges onto Becoming.OpenComposition (closedParts, closedBlanketLaw, closedComponent_blanketed_course, hide_internalizes_blanket, liftedClosedProcess, closedProcess_blanketDetermined, closedComponent_lumped_blindness, hiddenCoupling_blanket_vs_widened). AI-written.",
+      "zh": "2026年11月24日（Wave U2）：新增连往 Becoming.OpenComposition 之方案 2 B4-B5 桥（closedParts、closedBlanketLaw、closedComponent_blanketed_course、hide_internalizes_blanket、liftedClosedProcess、closedProcess_blanketDetermined、closedComponent_lumped_blindness、hiddenCoupling_blanket_vs_widened）。AI 撰写。"
     }
   ]
 }

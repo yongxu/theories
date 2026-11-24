@@ -5,9 +5,11 @@
 {"name": "Becoming.Reconfiguration.closed_rejected", "uses": []}
 {"name": "Becoming.Reconfiguration.combined_draw_steps", "uses": ["Becoming.Reconfiguration.combined_draw_suffices", "Becoming.Reconfiguration.enabled_iff"]}
 {"name": "Becoming.Reconfiguration.combined_draw_suffices", "uses": []}
+{"name": "Becoming.Reconfiguration.correlated_faults_break_envelope_channel", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.OpenComposition.WideningWitness.gShared_rises", "Becoming.Reconfiguration.faultEnvelope_channel_viable", "Becoming.add_sub_of_le", "Becoming.le_of_add_le_add_right", "Becoming.sub_eq_zero_of_le", "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.merged3_copied_certificate_false", "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.widened_orbit_trace"]}
 {"name": "Becoming.Reconfiguration.enabled_iff", "uses": []}
 {"name": "Becoming.Reconfiguration.envelopes_compute", "uses": []}
 {"name": "Becoming.Reconfiguration.fails_mono", "uses": ["Becoming.ListTests.and_true_iff", "Becoming.ListTests.contains_true_iff", "Becoming.ListTests.or_true_iff"]}
+{"name": "Becoming.Reconfiguration.faultEnvelope_channel_viable", "uses": ["Becoming.OpenComposition.close_contract_kernel", "Becoming.Reconfiguration.induced_certificate_available", "Becoming.Reconfiguration.induced_certificate_sound"]}
 {"name": "Becoming.Reconfiguration.induced_certificate_available", "uses": ["Becoming.FaultEnvelopes.certificate_available", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives", "Becoming.Reconfiguration.ready_separates"]}
 {"name": "Becoming.Reconfiguration.induced_certificate_sound", "uses": ["Becoming.FaultEnvelopes.certificate_sound", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives"]}
 {"name": "Becoming.Reconfiguration.induced_completes", "uses": ["Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives", "Becoming.Reconfiguration.ready_separates", "Becoming.Transactions.certified_completes", "Becoming.Transactions.guard_keeps_success"]}
@@ -23,6 +25,7 @@
 {"name": "Becoming.Reconfiguration.readiness_cases", "uses": []}
 {"name": "Becoming.Reconfiguration.ready_iff_nonempty_separated", "uses": ["Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_left", "Becoming.ListTests.and_true_iff", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.not_isEmpty_true_iff", "Becoming.ListTests.not_true_iff", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.outside_bound_survives", "Becoming.Reconfiguration.ready_separates"]}
 {"name": "Becoming.Reconfiguration.ready_separates", "uses": ["Becoming.ListTests.all_true_iff", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.any_true_iff", "Becoming.ListTests.mem_map_iff", "Becoming.ListTests.not_true_iff", "Becoming.Reconfiguration.not_induced"]}
+{"name": "Becoming.Reconfiguration.reconfig_step_induces_live_swap", "uses": ["Becoming.OpenComposition.rewrite_step_viable", "Becoming.Reconfiguration.induced_certificate_available", "Becoming.Reconfiguration.step_renews", "Becoming.Reconfiguration.step_separated", "Becoming.Reconfiguration.step_stales_old_epoch"]}
 {"name": "Becoming.Reconfiguration.reconfigure_covers_shorter", "uses": ["Becoming.Reconfiguration.reconfigure_renews", "Becoming.Reconfiguration.responseLoad_mono"]}
 {"name": "Becoming.Reconfiguration.reconfigure_keeps_scope", "uses": ["Becoming.Reconfiguration.reconfigure_renews"]}
 {"name": "Becoming.Reconfiguration.reconfigure_renews", "uses": ["Becoming.Naturals.le_of_add_le_right", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Reconfiguration.admits_true_iff", "Becoming.Reconfiguration.reconfigure_some"]}
@@ -47,6 +50,11 @@
 {"name": "Becoming.Reconfiguration.step_separated", "uses": ["Becoming.Reconfiguration.ready_iff_nonempty_separated", "Becoming.Reconfiguration.step_renews"]}
 {"name": "Becoming.Reconfiguration.step_stales_old_epoch", "uses": ["Becoming.Reconfiguration.reconfigure_stales_epoch"]}
 {"name": "Becoming.Reconfiguration.step_then_completes", "uses": ["Becoming.Reconfiguration.reconfigure_then_completes"]}
+{"name": "Becoming.Reconfiguration.stronger_envelope_contract_refines", "uses": ["Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance"]}
+{"name": "Becoming.Reconfiguration.stronger_envelope_replace_left_viable", "uses": ["Becoming.OpenComposition.replace_left_viable", "Becoming.Reconfiguration.stronger_envelope_contract_refines"]}
 {"name": "Becoming.Reconfiguration.survives_of_included", "uses": ["Becoming.ListTests.false_iff_not", "Becoming.Reconfiguration.fails_mono"]}
 {"name": "Becoming.Reconfiguration.unready_no_step", "uses": ["Becoming.Reconfiguration.unready_rejected"]}
 {"name": "Becoming.Reconfiguration.unready_rejected", "uses": ["Becoming.Reconfiguration.and_false"]}
+{"name": "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.mem_append_or", "uses": []}
+{"name": "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.merged3_copied_certificate_false", "uses": ["Becoming.FaultEnvelopes.certificate_witness", "Becoming.Reconfiguration.induced_mem_envelope", "Becoming.Reconfiguration.mem_induced_iff", "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.mem_append_or"]}
+{"name": "_private.Becoming.Reconfiguration.0.Becoming.Reconfiguration.widened_orbit_trace", "uses": ["Becoming.Law.orbit_shift"]}

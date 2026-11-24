@@ -548,12 +548,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
       "role": "proof",
-      "sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a"
+      "sha256": "1c171f1fb4ad08e0391e82cc42ec5befef44ed21c7aee92dedee4cf9ad545d46"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe"
+      "sha256": "63e0f1a37d457ba81c0f553b75616239598c2e6fe58399fb06b365ce5a7724b2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",

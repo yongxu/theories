@@ -1,212 +1,218 @@
 {
- "schema_version": 2,
- "id": "transformative-viability-order",
- "title": {
-  "en": "Viability-preserving transformative continuation order separating evolution from widening and churn"
- },
- "kind": "theorem",
- "status": "recorded-checked",
- "family": "F01",
- "reviewed_at_utc": "2026-11-23T13:18:00+00:00",
- "statement": {
-  "en": "TransformativeViable and TransformsViably preserve substrate viability and macro capability option-space across micro-turnover while retiring legacy forms, strictly separating constructive evolution from zero-loss Widens and destructive churn on finite balanced gainless worlds."
- },
- "laws": [
-  {
-   "en": "Transformative viability order: MacroAdmits reads capability existence via W.Admits (l t) t f; widens_implies_transformativeViable shows Web.Widens ⊆ TransformativeViable under ReserveGuarded W Viable and Viable l'; TransformsViably requires permanent ViableT, non-shrinking MacroAdmits, and step-by-step micro-turnover (ruling out trivial stasis), connected to Web.Linked via TransformsViablyAlong and transformsViably_iff_along_capSame.",
-   "declarations": [
+  "schema_version": 2,
+  "id": "transformative-viability-order",
+  "title": {
+    "en": "Viability-preserving transformative continuation order separating evolution from widening and churn"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-23T13:18:00+00:00",
+  "statement": {
+    "en": "TransformativeViable and TransformsViably preserve substrate viability and macro capability option-space across micro-turnover while retiring legacy forms, strictly separating constructive evolution from zero-loss Widens and destructive churn on finite balanced gainless worlds."
+  },
+  "laws": [
+    {
+      "en": "Transformative viability order: MacroAdmits reads capability existence via W.Admits (l t) t f; widens_implies_transformativeViable shows Web.Widens ⊆ TransformativeViable under ReserveGuarded W Viable and Viable l'; TransformsViably requires permanent ViableT, non-shrinking MacroAdmits, and step-by-step micro-turnover (ruling out trivial stasis), connected to Web.Linked via TransformsViablyAlong and transformsViably_iff_along_capSame.",
+      "declarations": [
+        "Becoming.Web.MacroAdmits",
+        "Becoming.Web.MacroIncludes",
+        "Becoming.Web.MacroExceeds",
+        "Becoming.ReserveSafe",
+        "Becoming.ReserveGuarded",
+        "Becoming.TransformativeViable",
+        "Becoming.StrictTransformativeViable",
+        "Becoming.widens_implies_transformativeViable",
+        "Becoming.TransformsViably",
+        "Becoming.TransformsViablyAlong",
+        "Becoming.TransformsViablyAlong.to_transformsViably",
+        "Becoming.transformsViably_iff_along_capSame",
+        "Becoming.not_along_itself_of_transformsViably"
+      ]
+    },
+    {
+      "en": "Three-regime separation: on ThreeRegime.web with non-constant Cap, l_evolve retires legacy fOld while enabling fNew and fPlus (Mixed l_evolve l_legacy, ¬ Widens, yet StrictTransformativeViable), whereas l_churn exhibits «全生成» next «一» (Steps.same QChurn) 1 yet fails both Viable and MacroIncludes.",
+      "declarations": [
+        "Becoming.ThreeRegime.Cond",
+        "Becoming.ThreeRegime.Form",
+        "Becoming.ThreeRegime.Cap",
+        "Becoming.ThreeRegime.web",
+        "Becoming.ThreeRegime.evolve_mixed_legacy",
+        "Becoming.ThreeRegime.evolve_not_widens_legacy",
+        "Becoming.ThreeRegime.evolve_strict_transformativeViable",
+        "Becoming.ThreeRegime.churn_mixed_legacy",
+        "Becoming.ThreeRegime.churn_generation",
+        "Becoming.ThreeRegime.churn_not_transformativeViable",
+        "Becoming.ThreeRegime.churn_also_fails_macroIncludes",
+        "Becoming.ThreeRegime.three_regime_separation"
+      ]
+    },
+    {
+      "en": "Finite balanced gainless escape: FiniteGainless constructs a three-condition closed, balanced, Conserving (hence Flow.Gainless) web with RequiresWithin all where Flow.whole_not_keepsWidening forbids KeepsWidening Web.itself web.level 0 while TransformsViably (fun t => 1 ≤ web.level t .cSub) cap 0 holds perpetually alongside explicit micro_turnover.",
+      "declarations": [
+        "Becoming.FiniteGainless.web",
+        "Becoming.FiniteGainless.flow",
+        "Becoming.FiniteGainless.conserving",
+        "Becoming.FiniteGainless.gainless",
+        "Becoming.FiniteGainless.closed",
+        "Becoming.FiniteGainless.balances",
+        "Becoming.FiniteGainless.requiresWithin",
+        "Becoming.FiniteGainless.not_keepsWidening",
+        "Becoming.FiniteGainless.micro_turnover",
+        "Becoming.FiniteGainless.transformsViably",
+        "Becoming.FiniteGainless.finite_gainless_transformsViably"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Uses Web.Admits (l t) t f; widens_implies_transformativeViable assumes ReserveGuarded W Viable and Viable l'; TransformsViably requires non-trivial cap : F → K, ViableT, non-shrinking MacroAdmits, and step-by-step micro-turnover."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Any canonical choice of capability projection cap : F → K or substrate Viable predicate for empirical socio-technical systems.",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Extension to non-finite or open external-renewal growth regimes beyond finite ClosedAt webs.",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T131636.294555Z): all 63 audited declarations (29 theorems) in Becoming.TransformativeViability compile from prelude with core_axioms: []; verified independently (5c95ea6d: PASS). No person has read it."
+  },
+  "next_delta": {
+    "en": "Index TransformativeViability macro capability bounds into canonical alignment situations (Phase 2)."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): preserving viability while transforming requires protecting shared substrates and macro option-space rather than freezing every legacy configuration (zero-loss Widens) or mistaking destructive turnover (Steps.moving churn) for renewal."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
+  "aliases": [
     "Becoming.Web.MacroAdmits",
     "Becoming.Web.MacroIncludes",
-    "Becoming.Web.MacroExceeds",
-    "Becoming.ReserveSafe",
-    "Becoming.ReserveGuarded",
     "Becoming.TransformativeViable",
     "Becoming.StrictTransformativeViable",
     "Becoming.widens_implies_transformativeViable",
     "Becoming.TransformsViably",
     "Becoming.TransformsViablyAlong",
-    "Becoming.TransformsViablyAlong.to_transformsViably",
-    "Becoming.transformsViably_iff_along_capSame",
-    "Becoming.not_along_itself_of_transformsViably"
-   ]
-  },
-  {
-   "en": "Three-regime separation: on ThreeRegime.web with non-constant Cap, l_evolve retires legacy fOld while enabling fNew and fPlus (Mixed l_evolve l_legacy, ¬ Widens, yet StrictTransformativeViable), whereas l_churn exhibits «全生成» next «一» (Steps.same QChurn) 1 yet fails both Viable and MacroIncludes.",
-   "declarations": [
-    "Becoming.ThreeRegime.Cond",
-    "Becoming.ThreeRegime.Form",
-    "Becoming.ThreeRegime.Cap",
-    "Becoming.ThreeRegime.web",
-    "Becoming.ThreeRegime.evolve_mixed_legacy",
-    "Becoming.ThreeRegime.evolve_not_widens_legacy",
-    "Becoming.ThreeRegime.evolve_strict_transformativeViable",
-    "Becoming.ThreeRegime.churn_mixed_legacy",
-    "Becoming.ThreeRegime.churn_generation",
-    "Becoming.ThreeRegime.churn_not_transformativeViable",
-    "Becoming.ThreeRegime.churn_also_fails_macroIncludes",
-    "Becoming.ThreeRegime.three_regime_separation"
-   ]
-  },
-  {
-   "en": "Finite balanced gainless escape: FiniteGainless constructs a three-condition closed, balanced, Conserving (hence Flow.Gainless) web with RequiresWithin all where Flow.whole_not_keepsWidening forbids KeepsWidening Web.itself web.level 0 while TransformsViably (fun t => 1 ≤ web.level t .cSub) cap 0 holds perpetually alongside explicit micro_turnover.",
-   "declarations": [
-    "Becoming.FiniteGainless.web",
-    "Becoming.FiniteGainless.flow",
-    "Becoming.FiniteGainless.conserving",
-    "Becoming.FiniteGainless.gainless",
-    "Becoming.FiniteGainless.closed",
-    "Becoming.FiniteGainless.balances",
-    "Becoming.FiniteGainless.requiresWithin",
-    "Becoming.FiniteGainless.not_keepsWidening",
-    "Becoming.FiniteGainless.micro_turnover",
-    "Becoming.FiniteGainless.transformsViably",
-    "Becoming.FiniteGainless.finite_gainless_transformsViably"
-   ]
-  }
- ],
- "hypotheses": [
-  {
-   "en": "No axiom. Uses Web.Admits (l t) t f; widens_implies_transformativeViable assumes ReserveGuarded W Viable and Viable l'; TransformsViably requires non-trivial cap : F → K, ViableT, non-shrinking MacroAdmits, and step-by-step micro-turnover."
-  }
- ],
- "does_not_show": [
-  {
-   "en": "Any canonical choice of capability projection cap : F → K or substrate Viable predicate for empirical socio-technical systems.",
-   "kind": "correspondence"
-  },
-  {
-   "en": "Extension to non-finite or open external-renewal growth regimes beyond finite ClosedAt webs.",
-   "kind": "scope"
-  }
- ],
- "counterexamples": [],
- "standard_boundaries": [
-  "no-ethical-premise",
-  "no-evaluation",
-  "discrete-steps",
-  "formal-not-empirical",
-  "names-provisional",
-  "omission-not-refutation"
- ],
- "validation_scope": {
-  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T131636.294555Z): all 63 audited declarations (29 theorems) in Becoming.TransformativeViability compile from prelude with core_axioms: []; verified independently (5c95ea6d: PASS). No person has read it."
- },
- "next_delta": {
-  "en": "Index TransformativeViability macro capability bounds into canonical alignment situations (Phase 2)."
- },
- "correspondence": {
-  "en": "Reading (AI-written): preserving viability while transforming requires protecting shared substrates and macro option-space rather than freezing every legacy configuration (zero-loss Widens) or mistaking destructive turnover (Steps.moving churn) for renewal."
- },
- "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
- "aliases": [
-  "Becoming.Web.MacroAdmits",
-  "Becoming.Web.MacroIncludes",
-  "Becoming.TransformativeViable",
-  "Becoming.StrictTransformativeViable",
-  "Becoming.widens_implies_transformativeViable",
-  "Becoming.TransformsViably",
-  "Becoming.TransformsViablyAlong",
-  "Becoming.ThreeRegime.three_regime_separation",
-  "Becoming.FiniteGainless.finite_gainless_transformsViably"
- ],
- "dependencies": [
-  {
-   "id": "keeping-widening-is-generation-losing-nothing",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Contrasts zero-loss KeepsWidening and Steps.moving generation against TransformativeViable churn."
-   }
-  },
-  {
-   "id": "what-keeping-widening-needs",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Invokes Flow.whole_not_keepsWidening in FiniteGainless to prove escape via capability turnover."
-   }
-  },
-  {
-   "id": "loss-beyond-a-region",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Web.Widens, Web.Includes, Web.Mixed, and Web.Exceeds."
-   }
-  },
-  {
-   "id": "classes-along-a-continuation",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses Web.Linked in TransformsViablyAlong."
-   }
-  }
- ],
- "related": [],
- "references": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
-   "role": "proof",
-   "declarations": [
-    "Becoming.Web.MacroAdmits",
-    "Becoming.Web.MacroIncludes",
-    "Becoming.Web.MacroExceeds",
-    "Becoming.ReserveSafe",
-    "Becoming.ReserveGuarded",
-    "Becoming.TransformativeViable",
-    "Becoming.StrictTransformativeViable",
-    "Becoming.widens_implies_transformativeViable",
-    "Becoming.TransformsViably",
-    "Becoming.TransformsViablyAlong",
-    "Becoming.TransformsViablyAlong.to_transformsViably",
-    "Becoming.transformsViably_iff_along_capSame",
-    "Becoming.not_along_itself_of_transformsViably",
-    "Becoming.ThreeRegime.Cond",
-    "Becoming.ThreeRegime.Form",
-    "Becoming.ThreeRegime.Cap",
-    "Becoming.ThreeRegime.web",
-    "Becoming.ThreeRegime.evolve_mixed_legacy",
-    "Becoming.ThreeRegime.evolve_not_widens_legacy",
-    "Becoming.ThreeRegime.evolve_strict_transformativeViable",
-    "Becoming.ThreeRegime.churn_mixed_legacy",
-    "Becoming.ThreeRegime.churn_generation",
-    "Becoming.ThreeRegime.churn_not_transformativeViable",
-    "Becoming.ThreeRegime.churn_also_fails_macroIncludes",
     "Becoming.ThreeRegime.three_regime_separation",
-    "Becoming.FiniteGainless.web",
-    "Becoming.FiniteGainless.flow",
-    "Becoming.FiniteGainless.conserving",
-    "Becoming.FiniteGainless.gainless",
-    "Becoming.FiniteGainless.closed",
-    "Becoming.FiniteGainless.balances",
-    "Becoming.FiniteGainless.requiresWithin",
-    "Becoming.FiniteGainless.not_keepsWidening",
-    "Becoming.FiniteGainless.micro_turnover",
-    "Becoming.FiniteGainless.transformsViably",
     "Becoming.FiniteGainless.finite_gainless_transformsViably"
-   ],
-   "sha256": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123"
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
-   "role": "receipt",
-   "sha256": "d766de1c0b88043c6b09bb3f73b6f3beb68817f6762eab638bb06d35be5b39b2"
-  },
-  {
-   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1c-multiscale-transformative-2026-11-23/NOTE.md",
-   "role": "review",
-   "sha256": "039af447c4af42505009854ff6414ddddc208ea7be68bee9929190e628d72f0a"
-  }
- ],
- "proof_bindings": [
-  {
-   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
-   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
-   "sha256_pointer": "/source_sha256/Becoming.TransformativeViability",
-   "success_pointer": "/status",
-   "success_value": "passed"
-  }
- ],
- "history": [
-  {
-   "en": "23 November 2026: added for Milestone 1C (Becoming.TransformativeViability) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
-  }
- ]
+  ],
+  "dependencies": [
+    {
+      "id": "keeping-widening-is-generation-losing-nothing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Contrasts zero-loss KeepsWidening and Steps.moving generation against TransformativeViable churn."
+      }
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Invokes Flow.whole_not_keepsWidening in FiniteGainless to prove escape via capability turnover."
+      }
+    },
+    {
+      "id": "loss-beyond-a-region",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Web.Widens, Web.Includes, Web.Mixed, and Web.Exceeds."
+      }
+    },
+    {
+      "id": "classes-along-a-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Web.Linked in TransformsViablyAlong."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.MacroAdmits",
+        "Becoming.Web.MacroIncludes",
+        "Becoming.Web.MacroExceeds",
+        "Becoming.ReserveSafe",
+        "Becoming.ReserveGuarded",
+        "Becoming.TransformativeViable",
+        "Becoming.StrictTransformativeViable",
+        "Becoming.widens_implies_transformativeViable",
+        "Becoming.TransformsViably",
+        "Becoming.TransformsViablyAlong",
+        "Becoming.TransformsViablyAlong.to_transformsViably",
+        "Becoming.transformsViably_iff_along_capSame",
+        "Becoming.not_along_itself_of_transformsViably",
+        "Becoming.ThreeRegime.Cond",
+        "Becoming.ThreeRegime.Form",
+        "Becoming.ThreeRegime.Cap",
+        "Becoming.ThreeRegime.web",
+        "Becoming.ThreeRegime.evolve_mixed_legacy",
+        "Becoming.ThreeRegime.evolve_not_widens_legacy",
+        "Becoming.ThreeRegime.evolve_strict_transformativeViable",
+        "Becoming.ThreeRegime.churn_mixed_legacy",
+        "Becoming.ThreeRegime.churn_generation",
+        "Becoming.ThreeRegime.churn_not_transformativeViable",
+        "Becoming.ThreeRegime.churn_also_fails_macroIncludes",
+        "Becoming.ThreeRegime.three_regime_separation",
+        "Becoming.FiniteGainless.web",
+        "Becoming.FiniteGainless.flow",
+        "Becoming.FiniteGainless.conserving",
+        "Becoming.FiniteGainless.gainless",
+        "Becoming.FiniteGainless.closed",
+        "Becoming.FiniteGainless.balances",
+        "Becoming.FiniteGainless.requiresWithin",
+        "Becoming.FiniteGainless.not_keepsWidening",
+        "Becoming.FiniteGainless.micro_turnover",
+        "Becoming.FiniteGainless.transformsViably",
+        "Becoming.FiniteGainless.finite_gainless_transformsViably"
+      ],
+      "sha256": "b5b922a579ffe2b873f7f810cca226b4169abf7dcb58a910d4f504677a686a7e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
+      "role": "receipt",
+      "sha256": "d766de1c0b88043c6b09bb3f73b6f3beb68817f6762eab638bb06d35be5b39b2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1c-multiscale-transformative-2026-11-23/NOTE.md",
+      "role": "review",
+      "sha256": "039af447c4af42505009854ff6414ddddc208ea7be68bee9929190e628d72f0a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TransformativeViability.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.TransformativeViability",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "23 November 2026: added for Milestone 1C (Becoming.TransformativeViability) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written."
+    }
+  ]
 }

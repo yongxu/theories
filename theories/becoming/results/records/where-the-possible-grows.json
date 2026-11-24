@@ -654,7 +654,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
       "role": "proof",
-      "sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a"
+      "sha256": "1c171f1fb4ad08e0391e82cc42ec5befef44ed21c7aee92dedee4cf9ad545d46"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean",
@@ -669,7 +669,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean",
       "role": "proof",
-      "sha256": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21"
+      "sha256": "74ab8f4345978927d704fe13dfc249994d0afb8845ac154d59c0d8a800a94f6d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -694,7 +694,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0"
+      "sha256": "ad75f543221246585f178439d86fa8f0459bb5107edd4a3878a7179ff4cff0d4"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",

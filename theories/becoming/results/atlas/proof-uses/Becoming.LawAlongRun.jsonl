@@ -28,7 +28,7 @@
 {"name": "Becoming.Run.ConsistentUnder.earlier", "uses": []}
 {"name": "Becoming.Run.consistentUnder_congr", "uses": []}
 {"name": "Becoming.Run.consistentUnder_eq_iff", "uses": []}
-{"name": "Becoming.Run.consistentUnder_of_goAlikeUnder", "uses": ["Becoming.Run.step"]}
+{"name": "Becoming.Run.consistentUnder_of_goAlikeUnder", "uses": ["Becoming.Run.step", "Becoming.goAlikeUnder_iff_alike", "Becoming.«同行之逐点»"]}
 {"name": "Becoming.Run.consistent_conditions_iff", "uses": ["Becoming.Dependence.conditions_alikeAt_iff", "Becoming.Run.consistentUnder_congr"]}
 {"name": "Becoming.Run.consistent_id_iff", "uses": []}
 {"name": "Becoming.Run.consistent_of_goAlike", "uses": ["Becoming.Run.consistentUnder_of_goAlikeUnder"]}
@@ -36,10 +36,10 @@
 {"name": "Becoming.Run.law_through_coupling_iff", "uses": ["Becoming.Run.law_through_dependence_iff"]}
 {"name": "Becoming.Run.law_through_dependence_iff", "uses": ["Becoming.Dependence.alikeAt_equivalence", "Becoming.Run.law_under_iff"]}
 {"name": "Becoming.Run.law_through_iff", "uses": ["Becoming.Run.law_under_iff", "Becoming.image_determined_iff"]}
-{"name": "Becoming.Run.law_under_iff", "uses": ["Becoming.Run.recordUnder_goAlike", "Becoming.Run.recordUnder_steps"]}
+{"name": "Becoming.Run.law_under_iff", "uses": ["Becoming.Run.recordUnder_goAlike", "Becoming.Run.recordUnder_steps", "Becoming.goAlikeUnder_iff_alike", "Becoming.«同行之逐点»"]}
 {"name": "Becoming.Run.no_law_later", "uses": ["Becoming.Run.ConsistentThrough.earlier", "Becoming.Run.law_through_iff"]}
 {"name": "Becoming.Run.no_law_under_later", "uses": ["Becoming.Run.ConsistentUnder.earlier", "Becoming.Run.law_under_iff"]}
-{"name": "Becoming.Run.recordUnder_goAlike", "uses": []}
+{"name": "Becoming.Run.recordUnder_goAlike", "uses": ["Becoming.goAlikeUnder_iff_alike", "Becoming.«同行之单调»", "Becoming.«同行之逐点»", "Becoming.«类则同行之展»"]}
 {"name": "Becoming.Run.recordUnder_steps", "uses": []}
 {"name": "Becoming.Run.record_determined_iff", "uses": []}
 {"name": "Becoming.Run.record_least", "uses": []}

@@ -7,7 +7,7 @@
 {"name": "Becoming.Exit.locked_in", "uses": ["Becoming.Exit.keeps", "Becoming.Run.stays"]}
 {"name": "Becoming.Exit.not_invariant", "uses": ["Becoming.Exit.leaves", "Becoming.invariant_iff_every_move"]}
 {"name": "Becoming.Invariant.locks_out", "uses": ["Becoming.Invariant.reach"]}
-{"name": "Becoming.Law.Absorbing.orbit", "uses": []}
+{"name": "Becoming.Law.Absorbing.orbit", "uses": ["Becoming.Law.orbit_add", "Becoming.kept_onward"]}
 {"name": "Becoming.Law.Drawn.not_keeps", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Law.returns_iff_keeps"]}
 {"name": "Becoming.Law.Drawn.not_lossless", "uses": ["Becoming.Law.Drawn.not_returns", "Becoming.Law.Lossless.returns"]}
 {"name": "Becoming.Law.Drawn.not_returns", "uses": ["Becoming.Law.drawn_iff_drawnIn", "Becoming.Law.next_fixed", "Becoming.Law.returns_iff_reaches", "Becoming.«定后则返者不入»"]}
@@ -32,7 +32,7 @@
 {"name": "Becoming.Law.drawn_iff_not_returns", "uses": ["Becoming.Law.drawn_iff_drawnIn", "Becoming.Law.next_fixed", "Becoming.Law.next_total", "Becoming.Law.returns_iff_reaches", "Becoming.«定后有后则入当且仅当不返»"]}
 {"name": "Becoming.Law.drawn_of_lost", "uses": ["Becoming.Law.lost_drawn", "Becoming.Law.reachable_absorbing"]}
 {"name": "Becoming.Law.enters_returning", "uses": ["Becoming.Law.enters_returning_within"]}
-{"name": "Becoming.Law.enters_returning_within", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.returns_iff", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Law.enters_returning_within", "uses": ["Becoming.Law.returns_iff_reaches", "Becoming.«线有限则入返»"]}
 {"name": "Becoming.Law.lossless_iff_none_drawn", "uses": ["Becoming.Law.Lossless.not_drawn", "Becoming.Law.none_drawn_lossless"]}
 {"name": "Becoming.Law.lost_drawn", "uses": ["Becoming.Law.reachable_orbit"]}
 {"name": "Becoming.Law.merge_draws", "uses": ["Becoming.Law.Merges.not_both_return", "Becoming.Law.drawn_iff_not_returns"]}
@@ -43,7 +43,7 @@
 {"name": "Becoming.Law.pred_orbit_zero", "uses": []}
 {"name": "Becoming.Law.reachable_absorbing", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.reachable_iff"]}
 {"name": "Becoming.Law.reachable_orbit", "uses": ["Becoming.Law.reachable_iff"]}
-{"name": "Becoming.Law.returning_absorbing", "uses": ["Becoming.Law.orbit_shift", "Becoming.Law.returns_iff"]}
+{"name": "Becoming.Law.returning_absorbing", "uses": ["Becoming.Law.next_fixed", "Becoming.Law.returns_iff_reaches", "Becoming.«及之传递»", "Becoming.«定后环则所及皆返»"]}
 {"name": "Becoming.Law.returns_iff_ahead", "uses": ["Becoming.Law.Returns.undo", "Becoming.Law.orbit_shift", "Becoming.Law.returns_iff"]}
 {"name": "Becoming.Law.returns_iff_always_reachable", "uses": ["Becoming.Branching.Returns.reachable", "Becoming.Law.returns_of_reachable"]}
 {"name": "Becoming.Law.returns_iff_reachable_count", "uses": ["Becoming.Branching.reachable_iff_all", "Becoming.Law.returns_iff_always_reachable"]}

@@ -1,241 +1,247 @@
 {
- "schema_version": 2,
- "id": "unified-drawdown-overdraw-and-aliasing",
- "title": {
-  "en": "Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing"
- },
- "kind": "theorem",
- "status": "recorded-checked",
- "family": "F01",
- "reviewed_at_utc": "2026-11-23T18:12:27+00:00",
- "statement": {
-  "en": "Zero-local-error private-store agents jointly deplete shared substrates while inductive OpenComposition restraint fleets restore viability; pre-overdraw Flow transfer strictly separates from Nat-truncated overdraw, and strobe/periodic aliasing breaks coarse-sampled guarantees."
- },
- "laws": [
-  {
-   "en": "Parametric local-accuracy joint depletion and pooled restraint: parametric_local_accounts_depletion derives (never assumes) storeEq, localError = 0, risk = 0, WithinOwn ∧ ¬ WithinJoint, and finite collapse over arbitrary private-store agent lists (instantiating HeldPair in heldPair_as_parametric_instance), while pooled_detects_before_collapse and pooled_restraint_restores_viability certify recovery.",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
-    "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance",
-    "Becoming.UnifiedDrawdown.pooled_detects_before_collapse",
-    "Becoming.UnifiedDrawdown.RestraintAgentSpec",
-    "Becoming.UnifiedDrawdown.restraintLoop",
-    "Becoming.UnifiedDrawdown.restraintCert",
-    "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
-    "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability"
-   ]
+  "schema_version": 2,
+  "id": "unified-drawdown-overdraw-and-aliasing",
+  "title": {
+    "en": "Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing"
   },
-  {
-   "en": "Native L0 inductive finite-family OpenComposition bridge: fleetComponent and fleetContract fold arbitrary non-empty RestraintAgentSpec lists through OpenComponent.compose and composeContract with exact sum/max algebraic bounds, close via fleet_restraint_open_viable, and support single-member ContractRefines replacement via fleet_upgrade_head_viable and FleetWitness.",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max",
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-23T18:12:27+00:00",
+  "statement": {
+    "en": "Zero-local-error private-store agents jointly deplete shared substrates while inductive OpenComposition restraint fleets restore viability; pre-overdraw Flow transfer strictly separates from Nat-truncated overdraw, and strobe/periodic aliasing breaks coarse-sampled guarantees."
+  },
+  "laws": [
+    {
+      "en": "Parametric local-accuracy joint depletion and pooled restraint: parametric_local_accounts_depletion derives (never assumes) storeEq, localError = 0, risk = 0, WithinOwn ∧ ¬ WithinJoint, and finite collapse over arbitrary private-store agent lists (instantiating HeldPair in heldPair_as_parametric_instance), while pooled_detects_before_collapse and pooled_restraint_restores_viability certify recovery.",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
+        "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance",
+        "Becoming.UnifiedDrawdown.pooled_detects_before_collapse",
+        "Becoming.UnifiedDrawdown.RestraintAgentSpec",
+        "Becoming.UnifiedDrawdown.restraintLoop",
+        "Becoming.UnifiedDrawdown.restraintCert",
+        "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
+        "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability"
+      ]
+    },
+    {
+      "en": "Native L0 inductive finite-family OpenComposition bridge: fleetComponent and fleetContract fold arbitrary non-empty RestraintAgentSpec lists through OpenComponent.compose and composeContract with exact sum/max algebraic bounds, close via fleet_restraint_open_viable, and support single-member ContractRefines replacement via fleet_upgrade_head_viable and FleetWitness.",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary"
+      ]
+    },
+    {
+      "en": "Localized pre-overdraw transfer and Nat-truncation break separation: line_below_of_excess_of_within/goes and way_below_of_excess_of_within/goes transfer excess termination before overdraw, while unit_balancesOn_iff_le and OverdrawSeparationWitness prove global Flow.Balances fails at the first overdraw step t* = 1.",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_within",
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes",
+        "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
+        "Becoming.UnifiedDrawdown.way_excess_terminates_goes",
+        "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one",
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary"
+      ]
+    },
+    {
+      "en": "Temporal aliasing and cadence obstructions: logistic_periodic_sampled_break_concealment hides periodic drops; sampled_recovery_hides_fragility drains uncoupled reserves; cadence_erases_timely_recovery and CadenceErasureWitness break Span-1 turning on sigmaOdd; unrecoverable_cadence_bridge joins coupling depth.",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility",
+        "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.sampled_deadline_impossibility",
+        "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
+        "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary"
+      ]
+    },
+    {
+      "en": "Metaethical boundary: unifiedDrawdown_readsOnlyDynamics, unifiedDrawdown_not_entails, and witnessed_dynamics_not_entails show all drawdown, restraint, and aliasing laws entail no Unrestricted ethical predicate.",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics",
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
+        "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Parametric depletion requires distinct private-store agents and positive net deficit; OpenComposition fleet viability requires additive post-cap and envCap headroom below H_safe and lag-buffered warnLevel; aliasing theorems assume sampled schedules ReadsAt / sigmaOdd or coupling-depth lower bounds 2 * N - 1 ≤ L."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Uniform aliasing failure under schedules reading every fine recovery step.",
+      "kind": "scope"
+    },
+    {
+      "en": "Normative ranking or moral obligation from local depletion or finite-time collapse (ReadsOnlyDynamics.not_entails).",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
+      "detail": {
+        "en": "OverdrawSeparationWitness.witness_bundle: step 0 satisfies BalancesOn [()] 0 (4 → 2), while step 1 breaks BalancesOn [()] 1 at Nat truncation (2 < 3) and stops Goes by t = 2."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
+      "detail": {
+        "en": "CadenceErasureWitness.witness_bundle: fine-sampled readsFine turns at t = 1..3 and holds at 4 forever, whereas strobe-aliased readsCoarse (sigmaOdd) misses odd signals and crashes 7 → ... → 0 at t = 6."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 163 audited declarations (107 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS."
+  },
+  "next_delta": {
+    "en": "Bind UnifiedDrawdown SpineHooks directly into L5 AlignmentSpine and its hypothesis-dropping sharpness suite."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): unifies tragedy-of-the-commons with zero prediction error, finite-family open interface control, pre-overdraw vs. overdraw phase boundaries, and coarse-sampling blind spots."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
+  "aliases": [
+    "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
     "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary"
-   ]
-  },
-  {
-   "en": "Localized pre-overdraw transfer and Nat-truncation break separation: line_below_of_excess_of_within/goes and way_below_of_excess_of_within/goes transfer excess termination before overdraw, while unit_balancesOn_iff_le and OverdrawSeparationWitness prove global Flow.Balances fails at the first overdraw step t* = 1.",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
-    "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
-    "Becoming.UnifiedDrawdown.way_below_of_excess_of_within",
-    "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes",
-    "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
-    "Becoming.UnifiedDrawdown.way_excess_terminates_goes",
-    "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
-    "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one",
     "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary"
-   ]
-  },
-  {
-   "en": "Temporal aliasing and cadence obstructions: logistic_periodic_sampled_break_concealment hides periodic drops; sampled_recovery_hides_fragility drains uncoupled reserves; cadence_erases_timely_recovery and CadenceErasureWitness break Span-1 turning on sigmaOdd; unrecoverable_cadence_bridge joins coupling depth.",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility",
-    "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
     "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.sampled_deadline_impossibility",
     "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
-    "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary"
-   ]
-  },
-  {
-   "en": "Metaethical boundary: unifiedDrawdown_readsOnlyDynamics, unifiedDrawdown_not_entails, and witnessed_dynamics_not_entails show all drawdown, restraint, and aliasing laws entail no Unrestricted ethical predicate.",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics",
-    "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
     "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
-   ]
-  }
- ],
- "hypotheses": [
-  {
-   "en": "No axiom. Parametric depletion requires distinct private-store agents and positive net deficit; OpenComposition fleet viability requires additive post-cap and envCap headroom below H_safe and lag-buffered warnLevel; aliasing theorems assume sampled schedules ReadsAt / sigmaOdd or coupling-depth lower bounds 2 * N - 1 ≤ L."
-  }
- ],
- "does_not_show": [
-  {
-   "en": "Uniform aliasing failure under schedules reading every fine recovery step.",
-   "kind": "scope"
-  },
-  {
-   "en": "Normative ranking or moral obligation from local depletion or finite-time collapse (ReadsOnlyDynamics.not_entails).",
-   "kind": "non-implication"
-  }
- ],
- "counterexamples": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-   "detail": {
-    "en": "OverdrawSeparationWitness.witness_bundle: step 0 satisfies BalancesOn [()] 0 (4 → 2), while step 1 breaks BalancesOn [()] 1 at Nat truncation (2 < 3) and stops Goes by t = 2."
-   }
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-   "detail": {
-    "en": "CadenceErasureWitness.witness_bundle: fine-sampled readsFine turns at t = 1..3 and holds at 4 forever, whereas strobe-aliased readsCoarse (sigmaOdd) misses odd signals and crashes 7 → ... → 0 at t = 6."
-   }
-  }
- ],
- "standard_boundaries": [
-  "no-ethical-premise",
-  "no-evaluation",
-  "discrete-steps",
-  "formal-not-empirical",
-  "names-provisional",
-  "omission-not-refutation"
- ],
- "validation_scope": {
-  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 163 audited declarations (107 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS."
- },
- "next_delta": {
-  "en": "Bind UnifiedDrawdown SpineHooks directly into L5 AlignmentSpine and its hypothesis-dropping sharpness suite."
- },
- "correspondence": {
-  "en": "Reading (AI-written): unifies tragedy-of-the-commons with zero prediction error, finite-family open interface control, pre-overdraw vs. overdraw phase boundaries, and coarse-sampling blind spots."
- },
- "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
- "aliases": [
-  "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
-  "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
-  "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
-  "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
-  "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
-  "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
-  "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
- ],
- "dependencies": [
-  {
-   "id": "open-interface-composition-and-replacement",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses OpenComponent, InterfaceContract, composeContract, close_contract_kernel, ContractRefines, and replace_left_viable for parametric fleet folding and single-member upgrade."
-   }
-  },
-  {
-   "id": "paced-stock-and-cadence-margin-sandwich",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses PacedStock unrecoverable_cadence_impossibility and ReadOffInTime NoReturnAt recovery limits."
-   }
-  },
-  {
-   "id": "unclamped-stock-flow-bridge",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses StockFlowBridge lineWeb/wayWeb embeddings for finite-horizon pre-overdraw transfer."
-   }
-  },
-  {
-   "id": "free-energy-bound-in-counts",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses FreeEnergyGuarantees RiskAndNeeds.Chooser for non-circular zero-local-error depletion proofs."
-   }
-  }
- ],
- "related": [],
- "references": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-   "role": "proof",
-   "declarations": [
-    "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
-    "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance",
-    "Becoming.UnifiedDrawdown.pooled_detects_before_collapse",
-    "Becoming.UnifiedDrawdown.RestraintAgentSpec",
-    "Becoming.UnifiedDrawdown.restraintLoop",
-    "Becoming.UnifiedDrawdown.restraintCert",
-    "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
-    "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
-    "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary",
-    "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
-    "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
-    "Becoming.UnifiedDrawdown.way_below_of_excess_of_within",
-    "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes",
-    "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
-    "Becoming.UnifiedDrawdown.way_excess_terminates_goes",
-    "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
-    "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one",
-    "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary",
-    "Becoming.UnifiedDrawdown.sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
-    "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility",
-    "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
-    "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
-    "Becoming.UnifiedDrawdown.sampled_deadline_impossibility",
-    "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
-    "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary",
-    "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics",
-    "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
-    "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
-   ],
-   "sha256": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0"
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
-   "role": "receipt",
-   "sha256": "d0187f5566c777ebe9f4b10530ef7db345c6fa54641435af5e1b7a960041ff9a"
-  },
-  {
-   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
-   "role": "review",
-   "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
-  }
- ],
- "proof_bindings": [
-  {
-   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
-   "sha256_pointer": "/source_sha256/Becoming.UnifiedDrawdown",
-   "success_pointer": "/status",
-   "success_value": "passed"
-  }
- ],
- "history": [
-  {
-   "en": "24 November 2026: added (Becoming.UnifiedDrawdown, L2) covering parametric zero-local-error depletion, inductive OpenComposition fleet restraint/upgrades, pre-overdraw separation, temporal aliasing witnesses, and ReadsOnlyDynamics.not_entails. AI-written."
-  }
- ]
+  ],
+  "dependencies": [
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses OpenComponent, InterfaceContract, composeContract, close_contract_kernel, ContractRefines, and replace_left_viable for parametric fleet folding and single-member upgrade."
+      }
+    },
+    {
+      "id": "paced-stock-and-cadence-margin-sandwich",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses PacedStock unrecoverable_cadence_impossibility and ReadOffInTime NoReturnAt recovery limits."
+      }
+    },
+    {
+      "id": "unclamped-stock-flow-bridge",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses StockFlowBridge lineWeb/wayWeb embeddings for finite-horizon pre-overdraw transfer."
+      }
+    },
+    {
+      "id": "free-energy-bound-in-counts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses FreeEnergyGuarantees RiskAndNeeds.Chooser for non-circular zero-local-error depletion proofs."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.UnifiedDrawdown.parametric_local_accounts_depletion",
+        "Becoming.UnifiedDrawdown.heldPair_as_parametric_instance",
+        "Becoming.UnifiedDrawdown.pooled_detects_before_collapse",
+        "Becoming.UnifiedDrawdown.RestraintAgentSpec",
+        "Becoming.UnifiedDrawdown.restraintLoop",
+        "Becoming.UnifiedDrawdown.restraintCert",
+        "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
+        "Becoming.UnifiedDrawdown.restraint_adapter_restores_viability",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintComponent",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetComponent",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleetContract",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+        "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.SpineHooks.openFleetSummary",
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
+        "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_within",
+        "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes",
+        "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
+        "Becoming.UnifiedDrawdown.way_excess_terminates_goes",
+        "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le",
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one",
+        "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.SpineHooks.preOverdrawSummary",
+        "Becoming.UnifiedDrawdown.sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment",
+        "Becoming.UnifiedDrawdown.sampled_recovery_hides_fragility",
+        "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
+        "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
+        "Becoming.UnifiedDrawdown.sampled_deadline_impossibility",
+        "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge",
+        "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary",
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics",
+        "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
+        "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
+      ],
+      "sha256": "4d57d23d65edf367a5e427f6a61b07905ae09e5bae79c06696de7582e750219c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
+      "role": "receipt",
+      "sha256": "d0187f5566c777ebe9f4b10530ef7db345c6fa54641435af5e1b7a960041ff9a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.UnifiedDrawdown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: added (Becoming.UnifiedDrawdown, L2) covering parametric zero-local-error depletion, inductive OpenComposition fleet restraint/upgrades, pre-overdraw separation, temporal aliasing witnesses, and ReadsOnlyDynamics.not_entails. AI-written."
+    }
+  ]
 }

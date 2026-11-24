@@ -43,8 +43,13 @@
 {"name": "Becoming.BlanketCouplings.clocked_consistent", "uses": ["Becoming.BlanketCouplings.BlanketConsistentFamily.mono", "Becoming.BlanketCouplings.blanketed_courses_consistent", "Becoming.BlanketCouplings.clocked_course"]}
 {"name": "Becoming.BlanketCouplings.clocked_course", "uses": []}
 {"name": "Becoming.BlanketCouplings.clocked_witness", "uses": ["Becoming.BlanketCouplings.clocked_consistent"]}
+{"name": "Becoming.BlanketCouplings.closedComponent_blanketed_course", "uses": ["Becoming.Blanket.Blanketed.world_through_active"]}
+{"name": "Becoming.BlanketCouplings.closedComponent_lumped_blindness", "uses": ["Becoming.Blanket.Blanketed.through_reading", "Becoming.BlanketCouplings.closedComponent_blanketed_course"]}
+{"name": "Becoming.BlanketCouplings.closedProcess_blanketDetermined", "uses": ["Becoming.BlanketCouplings.admitted_iff"]}
 {"name": "Becoming.BlanketCouplings.const_consistent", "uses": ["Becoming.BlanketCouplings.pair_eq", "Becoming.BlanketCouplings.unit_eq"]}
 {"name": "Becoming.BlanketCouplings.future_course", "uses": ["Becoming.BlanketCouplings.suffix_zero"]}
+{"name": "Becoming.BlanketCouplings.hiddenCoupling_blanket_vs_widened", "uses": ["Becoming.BlanketCouplings.closedComponent_lumped_blindness"]}
+{"name": "Becoming.BlanketCouplings.hide_internalizes_blanket", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.BlanketCouplings.closedComponent_blanketed_course"]}
 {"name": "Becoming.BlanketCouplings.injective_consistent", "uses": ["Becoming.BlanketCouplings.parts_eq"]}
 {"name": "Becoming.BlanketCouplings.injective_converse_fails", "uses": ["Becoming.BlanketCouplings.ReadsExternal.not_consistent", "Becoming.BlanketCouplings.ReadsExternal.whole_consistent", "Becoming.BlanketCouplings.whole_iff"]}
 {"name": "Becoming.BlanketCouplings.internal_selectsThrough", "uses": ["Becoming.BlanketCouplings.internal_through_couplings", "Becoming.BlanketCouplings.open_levels", "Becoming.Web.alikeThrough_iff"]}

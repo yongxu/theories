@@ -47,5 +47,5 @@
 {"name": "Becoming.World.withRest_embodied_balanced", "uses": ["Becoming.World.withRest_embodied_iff"]}
 {"name": "Becoming.World.withRest_embodied_iff", "uses": ["Becoming.World.withRest_closed_iff", "Becoming.World.withRest_exchanging_iff"]}
 {"name": "Becoming.listed_of_em", "uses": ["Becoming.mem_cons_cases"]}
-{"name": "Becoming.not_not_listed", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.not_not_listed", "uses": ["Becoming.listed_of_em", "Becoming.not_not_all"]}
 {"name": "Becoming.of_not_not", "uses": []}

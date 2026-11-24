@@ -21,6 +21,9 @@
 {"name": "Becoming.bounded_in_time_rival", "uses": ["Becoming.rival_of_outside"]}
 {"name": "Becoming.bounded_is_rival", "uses": ["Becoming.rival_iff_lacks"]}
 {"name": "Becoming.bounded_rival", "uses": ["Becoming.rival_of_outside"]}
+{"name": "Becoming.dynamicsLaw_admits_rival", "uses": ["Becoming.ReadsOnlyDynamics.admits_rival", "Becoming.readsOnlyDynamics_of"]}
+{"name": "Becoming.dynamicsLaw_cannot_entail_unrestricted", "uses": ["Becoming.dynamicsLaw_not_entails"]}
+{"name": "Becoming.dynamicsLaw_not_entails", "uses": ["Becoming.ReadsOnlyDynamics.not_entails", "Becoming.readsOnlyDynamics_of"]}
 {"name": "Becoming.excludes_rivals_iff", "uses": ["Becoming.not_rival_iff"]}
 {"name": "Becoming.not_rival_iff", "uses": ["Becoming.rival_iff_lacks"]}
 {"name": "Becoming.not_rival_unrestricted_iff_stable", "uses": ["Becoming.not_rival_iff"]}

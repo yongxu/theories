@@ -22,7 +22,7 @@
 {"name": "Becoming.SelectionShift.Generations.next_of_selection", "uses": ["Becoming.SelectionShift.Generations.next_of_reproducing", "Becoming.SelectionShift.Generations.reproducing_of_selection"]}
 {"name": "Becoming.SelectionShift.Generations.nonempty_before", "uses": ["Becoming.Reproduction.Generations.empty_from"]}
 {"name": "Becoming.SelectionShift.Generations.reproducing_of_selection", "uses": ["Becoming.SelectionShift.Generations.varies_of_selection", "Becoming.SelectionShift.pos_weight_of_varies"]}
-{"name": "Becoming.SelectionShift.Generations.shift_step", "uses": ["Becoming.SelectionShift.concord_shifted", "Becoming.SelectionShift.discord_shifted", "Becoming.SelectionShift.total_shifted", "Becoming.SelectionTerm.Generations.born_eq"]}
+{"name": "Becoming.SelectionShift.Generations.shift_step", "uses": ["Becoming.PositionTerms.keeps_of_shifted", "Becoming.PositionTerms.kept_step", "Becoming.SelectionShift.total_shifted", "Becoming.SelectionTerm.Generations.born_eq"]}
 {"name": "Becoming.SelectionShift.Generations.varies_of_selection", "uses": ["Becoming.SelectionShift.weight_varies_of_concord", "Becoming.SelectionShift.weight_varies_of_discord"]}
 {"name": "Becoming.SelectionShift.Horizon.ending_empty", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Horizon.keep_family", "Becoming.SelectionShift.Horizon.keep_kids_after", "Becoming.SelectionShift.Horizon.not_le_after", "Becoming.SelectionShift.flatMap_empty"]}
 {"name": "Becoming.SelectionShift.Horizon.eventually_zero_two_fates", "uses": ["Becoming.Reproduction.Generations.empty_from", "Becoming.SelectionShift.Generations.last_term_zero", "Becoming.SelectionShift.Horizon.zero_after_two_fates_shifted", "Becoming.eq_zero_of_not_pos"]}
@@ -63,10 +63,10 @@
 {"name": "Becoming.SelectionShift.ZeroTerm.oneEach_family", "uses": []}
 {"name": "Becoming.SelectionShift.concord_shift", "uses": ["Becoming.SelectionShift.concord_shifted"]}
 {"name": "Becoming.SelectionShift.concord_shift_amount", "uses": ["Becoming.excess_add_right", "Becoming.total_congr"]}
-{"name": "Becoming.SelectionShift.concord_shifted", "uses": ["Becoming.SelectionShift.mul_excess_congr", "Becoming.excess_add_right", "Becoming.total_congr_on"]}
+{"name": "Becoming.SelectionShift.concord_shifted", "uses": ["Becoming.PositionTerms.concord_amount_on", "Becoming.PositionTerms.keeps_iff_terms", "Becoming.PositionTerms.keeps_of_shifted"]}
 {"name": "Becoming.SelectionShift.discord_shift", "uses": ["Becoming.SelectionShift.discord_shifted"]}
 {"name": "Becoming.SelectionShift.discord_shift_amount", "uses": ["Becoming.excess_add_right", "Becoming.total_congr"]}
-{"name": "Becoming.SelectionShift.discord_shifted", "uses": ["Becoming.SelectionShift.mul_excess_congr", "Becoming.excess_add_right", "Becoming.total_congr_on"]}
+{"name": "Becoming.SelectionShift.discord_shifted", "uses": ["Becoming.PositionTerms.discord_amount_on", "Becoming.PositionTerms.keeps_iff_terms", "Becoming.PositionTerms.keeps_of_shifted"]}
 {"name": "Becoming.SelectionShift.flatMap_empty", "uses": []}
 {"name": "Becoming.SelectionShift.flatMap_singleton", "uses": []}
 {"name": "Becoming.SelectionShift.mem_flatMap_of", "uses": ["Becoming.mem_append_of_left", "Becoming.mem_append_of_right"]}

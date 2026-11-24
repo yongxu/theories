@@ -11,7 +11,7 @@
 {"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_goes", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_inv_step", "uses": ["Becoming.Naturals.add_sub_cancel", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.le_dest"]}
 {"name": "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_needs", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "uses": ["Becoming.UnifiedDrawdown.ltBool_false", "Becoming.UnifiedDrawdown.ltBool_true"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "uses": ["Becoming.CoreHelpers.natBlt_false_iff", "Becoming.CoreHelpers.natBlt_true_iff"]}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_upgrade_viable", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"]}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.threeAgentFleet_viable", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.fleetG_rises", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"]}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.FleetWitness.tightenA", "uses": []}
@@ -21,14 +21,14 @@
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.maxSilence_le", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.postCap_le", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.preCap_le", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable", "uses": ["Becoming.OpenComposition.close_contract_kernel", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt", "Becoming.Viability.Kernel.run"]}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable", "uses": ["Becoming.OpenComposition.replace_left_viable", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines"]}
-{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt", "uses": []}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_eta_eq_max", "uses": ["Becoming.OpenComposition.composeList_eta_eq_max"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxLag_eq_max", "uses": ["Becoming.OpenComposition.composeList_maxLag_eq_max"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_maxSilence_eq_sum", "uses": ["Becoming.OpenComposition.composeList_maxSilence_eq_sum"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_postCapExt_eq_sum", "uses": ["Becoming.OpenComposition.composeList_postBudgetExt_eq_sum"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_preCapExt_eq_sum", "uses": ["Becoming.OpenComposition.composeList_preCapExt_eq_sum"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable", "uses": ["Becoming.OpenComposition.composeList_viable", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable", "uses": ["Becoming.OpenComposition.composeList_replace_head_viable", "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines"]}
+{"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_warnObs_of_lt", "uses": ["Becoming.OpenComposition.composeList_warnObs_of_head"]}
 {"name": "Becoming.UnifiedDrawdown.OpenCompositionBridge.restraintContract_refines", "uses": ["Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.lag_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.maxSilence_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.postCap_le", "Becoming.UnifiedDrawdown.OpenCompositionBridge.SpecTightens.preCap_le"]}
 {"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.firstOverdraw_at_one", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.OverdrawSeparationWitness.giving_fromNothing", "uses": []}
@@ -53,14 +53,14 @@
 {"name": "Becoming.UnifiedDrawdown.SpineHooks.temporalAliasingSummary", "uses": ["Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle"]}
 {"name": "Becoming.UnifiedDrawdown.activeUnitWeb_dependent", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery", "uses": ["Becoming.Pace.paced_succ", "Becoming.Pace.stays_turned", "Becoming.UnifiedDrawdown.line_excess_terminates_goes", "Becoming.le_dest"]}
-{"name": "Becoming.UnifiedDrawdown.cyclePair_spec", "uses": ["Becoming.UnifiedDrawdown.ltBool_false", "Becoming.UnifiedDrawdown.ltBool_true"]}
+{"name": "Becoming.UnifiedDrawdown.cyclePair_spec", "uses": ["Becoming.CoreHelpers.natBlt_false_iff", "Becoming.CoreHelpers.natBlt_true_iff"]}
 {"name": "Becoming.UnifiedDrawdown.cycleRem_mul", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul_add"]}
 {"name": "Becoming.UnifiedDrawdown.cycleRem_mul_add", "uses": ["Becoming.UnifiedDrawdown.cyclePair_spec", "Becoming.UnifiedDrawdown.cycle_euclid_unique"]}
 {"name": "Becoming.UnifiedDrawdown.cycleRem_of_lt", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul_add"]}
 {"name": "Becoming.UnifiedDrawdown.cycleRem_self", "uses": ["Becoming.UnifiedDrawdown.cycleRem_mul"]}
 {"name": "Becoming.UnifiedDrawdown.cycle_euclid_unique", "uses": ["Becoming.add_right_cancel", "Becoming.le_dest"]}
 {"name": "Becoming.UnifiedDrawdown.cyclicCourse_frontier", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cycleRem_of_lt", "Becoming.UnifiedDrawdown.cycleRem_self", "Becoming.UnifiedDrawdown.cyclicCourse_openCourse"]}
-{"name": "Becoming.UnifiedDrawdown.cyclicCourse_openCourse", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cyclePair_spec", "Becoming.UnifiedDrawdown.ltBool_false"]}
+{"name": "Becoming.UnifiedDrawdown.cyclicCourse_openCourse", "uses": ["Becoming.CoreHelpers.natBlt_false_iff", "Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cyclePair_spec"]}
 {"name": "Becoming.UnifiedDrawdown.dec_all_or_exists", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.exists_firstOverdraw", "uses": ["Becoming.first_of_decided"]}
 {"name": "Becoming.UnifiedDrawdown.firstApart_of_monitor", "uses": []}
@@ -81,8 +81,6 @@
 {"name": "Becoming.UnifiedDrawdown.logistic_periodic_sampled_break_concealment", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.UnifiedDrawdown.cycleRem_mul", "Becoming.UnifiedDrawdown.cycleRem_mul_add", "Becoming.UnifiedDrawdown.cyclicCourse_frontier", "Becoming.Web.sample_selects_alike_iff"]}
 {"name": "Becoming.UnifiedDrawdown.logistic_sampled_break_concealment", "uses": ["Becoming.Optimum.Holding.logistic_valued", "Becoming.Web.sample_selects_alike_iff"]}
 {"name": "Becoming.UnifiedDrawdown.lookupBy_eq_of_mem", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.ltBool_false", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.ltBool_true", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.mem_eraseOne_of_ne", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.mod2_cases", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.pacedCourse_ends_below_point_pub", "uses": ["Becoming.UnifiedDrawdown.pacedCourse_ends_step_pub"]}
@@ -109,7 +107,7 @@
 {"name": "Becoming.UnifiedDrawdown.total_eraseOne", "uses": []}
 {"name": "Becoming.UnifiedDrawdown.total_map_le", "uses": ["Becoming.UnifiedDrawdown.mem_eraseOne_of_ne", "Becoming.UnifiedDrawdown.total_eraseOne"]}
 {"name": "Becoming.UnifiedDrawdown.total_only_eq", "uses": ["Becoming.Optimum.total_le_of_only", "Becoming.le_total_of_mem"]}
-{"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails", "uses": ["Becoming.ReadsOnlyDynamics.not_entails", "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics"]}
+{"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails", "uses": ["Becoming.dynamicsLaw_not_entails"]}
 {"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics", "uses": ["Becoming.readsOnlyDynamics_of"]}
 {"name": "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.add_right_cancel"]}
 {"name": "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated", "uses": []}

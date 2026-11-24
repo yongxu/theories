@@ -1,219 +1,225 @@
 {
- "schema_version": 2,
- "id": "endogenous-turning-and-clearing-margin",
- "title": {
-  "en": "Endogenous turning, pooled clearing margins, and the epistemic silence boundary"
- },
- "kind": "theorem",
- "status": "recorded-checked",
- "family": "F01",
- "reviewed_at_utc": "2026-11-23T18:12:27+00:00",
- "statement": {
-  "en": "Frontier selection over marginal-yield options derives substrate overdraw; non-oracle ServiceTaskModel thresholds turn endogenously within open Clearing and OpenComposition interfaces while epistemic silence breaks turning."
- },
- "laws": [
-  {
-   "en": "Derived selection overdraw: optimum_forces_overdraw and proxy_optimum_overdraw_collapse derive finite-time collapse from Optimum.Rising and Requirement.Frontier when higher draw yields higher visible score, while flow_proxy_optimum_collapse bridges through Web.lost_over and PartAWitness contrasts unconstrained collapse against constrained_survives on non-monotone wGivingCap.",
-   "declarations": [
-    "Becoming.EndogenousTurning.pre_overdraw_flow_conservation",
-    "Becoming.EndogenousTurning.safe_regime_step_viable",
-    "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
-    "Becoming.EndogenousTurning.optimum_forces_overdraw",
+  "schema_version": 2,
+  "id": "endogenous-turning-and-clearing-margin",
+  "title": {
+    "en": "Endogenous turning, pooled clearing margins, and the epistemic silence boundary"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-23T18:12:27+00:00",
+  "statement": {
+    "en": "Frontier selection over marginal-yield options derives substrate overdraw; non-oracle ServiceTaskModel thresholds turn endogenously within open Clearing and OpenComposition interfaces while epistemic silence breaks turning."
+  },
+  "laws": [
+    {
+      "en": "Derived selection overdraw: optimum_forces_overdraw and proxy_optimum_overdraw_collapse derive finite-time collapse from Optimum.Rising and Requirement.Frontier when higher draw yields higher visible score, while flow_proxy_optimum_collapse bridges through Web.lost_over and PartAWitness contrasts unconstrained collapse against constrained_survives on non-monotone wGivingCap.",
+      "declarations": [
+        "Becoming.EndogenousTurning.pre_overdraw_flow_conservation",
+        "Becoming.EndogenousTurning.safe_regime_step_viable",
+        "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
+        "Becoming.EndogenousTurning.optimum_forces_overdraw",
+        "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
+        "Becoming.EndogenousTurning.constrained_selector_viable",
+        "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
+        "Becoming.EndogenousTurning.PartAWitness.constrained_survives"
+      ]
+    },
+    {
+      "en": "Non-oracle task bottleneck and pooled clearing: ServiceTaskModel derives B_task from saturating throughput and operating upkeep (score_crosses_iff, ext_preferred_above, safe_not_preferred_from_B_task); endogenous_turning_kernel and pooled_service_turning_viable prove Viability.Kernel when (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task, contrasted with unpooled_clearer_blind.",
+      "declarations": [
+        "Becoming.EndogenousTurning.ServiceTaskModel",
+        "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
+        "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
+        "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above",
+        "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task",
+        "Becoming.EndogenousTurning.endogenous_turning_kernel",
+        "Becoming.EndogenousTurning.ofServiceTask_viable",
+        "Becoming.EndogenousTurning.pooled_service_turning_viable",
+        "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning",
+        "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind"
+      ]
+    },
+    {
+      "en": "Epistemic silence boundaries and shared witness: epistemic_silence_late_bottleneck (B_task ≤ H_safe + y_safe), service_saturated_below_noReturn_silenced, epistemic_silence_masked_unread (ClosedCapture.Unread), and epistemic_silence_cascade prove collapse when turning signals fail or arrive too late; TurningWitness realizes timely survival vs. late and cascade collapses on one shared substrate.",
+      "declarations": [
+        "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
+        "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced",
+        "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
+        "Becoming.EndogenousTurning.epistemic_silence_cascade",
+        "Becoming.EndogenousTurning.TurningWitness.timely_survives",
+        "Becoming.EndogenousTurning.TurningWitness.late_collapses",
+        "Becoming.EndogenousTurning.TurningWitness.cascade_collapses"
+      ]
+    },
+    {
+      "en": "Native L0 OpenComposition bridge: pooled_clearing_open_compose_viable lifts proxyLoop and taskLoop into proxyComponent ⊕ taskPartnerComponent via compose_close_interchange; clearing_partner_reconfig_viable and ReconfigWitness certify heterogeneous live partner swaps via ReconfigProcess; clearing_widening_heals_blindness and widening_heals_witness separate unpooled collapse from widened viability.",
+      "declarations": [
+        "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Requires 0 < H_safe + y_safe, RegimeMargin.Meets/FromNothing/AtMost/Keeps on saturating substrates, ServiceTaskModel throughput/upkeep parameters, (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task for timely turning, and both obs_detects₁ and obs_detects₂ for live ReconfigProcess swaps."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That real empirical rewards or tasks satisfy ServiceTaskModel margin inequalities (Rule 2 empirical recognition).",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Any ethical 'ought' or Unrestricted significance from turning survival or cascade collapse (ReadsOnlyDynamics.not_entails).",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+      "detail": {
+        "en": "PartAWitness.unconstrained_collapses vs. constrained_survives: unconstrained frontier maximization crashes from 18 to 0 by step 6, while capped draw survives at 18 forever."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+      "detail": {
+        "en": "TurningWitness.{timely_survives, late_collapses, cascade_collapses}: on shared wGivingCap from x₀ = 27, B_task = 22 holds ≥ 19 forever, whereas B_task = 8 and masked 3-stage cascade collapse 27 → ... → 0 by step 11."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+      "detail": {
+        "en": "OpenCompositionBridge.widening_heals_witness: unpooled proxyLoop crashes 27 → 0 while widened proxyComponent ⊕ taskPartnerComponent holds ≥ 9 forever."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 162 audited declarations (85 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS."
+  },
+  "next_delta": {
+    "en": "Compose L1 endogenous turning into the L5 AlignmentSpine master theorem and hypothesis-dropping sharpness suite."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): models Goodhart-like proxy overdraw and structural turning deadlines where feedback latency must fit inside resource headroom above the no-return threshold."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+  "aliases": [
     "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
-    "Becoming.EndogenousTurning.constrained_selector_viable",
-    "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
-    "Becoming.EndogenousTurning.PartAWitness.constrained_survives"
-   ]
-  },
-  {
-   "en": "Non-oracle task bottleneck and pooled clearing: ServiceTaskModel derives B_task from saturating throughput and operating upkeep (score_crosses_iff, ext_preferred_above, safe_not_preferred_from_B_task); endogenous_turning_kernel and pooled_service_turning_viable prove Viability.Kernel when (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task, contrasted with unpooled_clearer_blind.",
-   "declarations": [
-    "Becoming.EndogenousTurning.ServiceTaskModel",
     "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
-    "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
-    "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above",
-    "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task",
     "Becoming.EndogenousTurning.endogenous_turning_kernel",
-    "Becoming.EndogenousTurning.ofServiceTask_viable",
     "Becoming.EndogenousTurning.pooled_service_turning_viable",
-    "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning",
-    "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind"
-   ]
-  },
-  {
-   "en": "Epistemic silence boundaries and shared witness: epistemic_silence_late_bottleneck (B_task ≤ H_safe + y_safe), service_saturated_below_noReturn_silenced, epistemic_silence_masked_unread (ClosedCapture.Unread), and epistemic_silence_cascade prove collapse when turning signals fail or arrive too late; TurningWitness realizes timely survival vs. late and cascade collapses on one shared substrate.",
-   "declarations": [
     "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
-    "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced",
-    "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
-    "Becoming.EndogenousTurning.epistemic_silence_cascade",
-    "Becoming.EndogenousTurning.TurningWitness.timely_survives",
-    "Becoming.EndogenousTurning.TurningWitness.late_collapses",
-    "Becoming.EndogenousTurning.TurningWitness.cascade_collapses"
-   ]
-  },
-  {
-   "en": "Native L0 OpenComposition bridge: pooled_clearing_open_compose_viable lifts proxyLoop and taskLoop into proxyComponent ⊕ taskPartnerComponent via compose_close_interchange; clearing_partner_reconfig_viable and ReconfigWitness certify heterogeneous live partner swaps via ReconfigProcess; clearing_widening_heals_blindness and widening_heals_witness separate unpooled collapse from widened viability.",
-   "declarations": [
-    "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent",
     "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
-   ]
-  }
- ],
- "hypotheses": [
-  {
-   "en": "No axiom. Requires 0 < H_safe + y_safe, RegimeMargin.Meets/FromNothing/AtMost/Keeps on saturating substrates, ServiceTaskModel throughput/upkeep parameters, (H_safe + y_safe) + drawCeiling * (lag + 1) ≤ B_task for timely turning, and both obs_detects₁ and obs_detects₂ for live ReconfigProcess swaps."
-  }
- ],
- "does_not_show": [
-  {
-   "en": "That real empirical rewards or tasks satisfy ServiceTaskModel margin inequalities (Rule 2 empirical recognition).",
-   "kind": "non-implication"
-  },
-  {
-   "en": "Any ethical 'ought' or Unrestricted significance from turning survival or cascade collapse (ReadsOnlyDynamics.not_entails).",
-   "kind": "non-implication"
-  }
- ],
- "counterexamples": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
-   "detail": {
-    "en": "PartAWitness.unconstrained_collapses vs. constrained_survives: unconstrained frontier maximization crashes from 18 to 0 by step 6, while capped draw survives at 18 forever."
-   }
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
-   "detail": {
-    "en": "TurningWitness.{timely_survives, late_collapses, cascade_collapses}: on shared wGivingCap from x₀ = 27, B_task = 22 holds ≥ 19 forever, whereas B_task = 8 and masked 3-stage cascade collapse 27 → ... → 0 by step 11."
-   }
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
-   "detail": {
-    "en": "OpenCompositionBridge.widening_heals_witness: unpooled proxyLoop crashes 27 → 0 while widened proxyComponent ⊕ taskPartnerComponent holds ≥ 9 forever."
-   }
-  }
- ],
- "standard_boundaries": [
-  "no-ethical-premise",
-  "no-evaluation",
-  "discrete-steps",
-  "formal-not-empirical",
-  "names-provisional",
-  "omission-not-refutation"
- ],
- "validation_scope": {
-  "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 162 audited declarations (85 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS."
- },
- "next_delta": {
-  "en": "Compose L1 endogenous turning into the L5 AlignmentSpine master theorem and hypothesis-dropping sharpness suite."
- },
- "correspondence": {
-  "en": "Reading (AI-written): models Goodhart-like proxy overdraw and structural turning deadlines where feedback latency must fit inside resource headroom above the no-return threshold."
- },
- "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
- "aliases": [
-  "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
-  "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
-  "Becoming.EndogenousTurning.endogenous_turning_kernel",
-  "Becoming.EndogenousTurning.pooled_service_turning_viable",
-  "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
-  "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
-  "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable"
- ],
- "dependencies": [
-  {
-   "id": "open-interface-composition-and-replacement",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses OpenComponent, InterfaceContract, composeContract, compose_close_interchange, ReconfigProcess, and rewrite_step_viable for open clearing composition and live partner swap."
-   }
-  },
-  {
-   "id": "coupled-adaptive-loops-and-race",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses AdaptiveLoops.assume_guarantee_joint_viable, OpenLoop, and LoopCertificate across task and pooled clearing loops."
-   }
-  },
-  {
-   "id": "unclamped-stock-flow-bridge",
-   "relation": "formal-reuse",
-   "detail": {
-    "en": "Reuses StockFlowBridge unitWeb and unitNeverReturnsBelowWithin for finite-horizon pre-overdraw flow collapses."
-   }
-  }
- ],
- "related": [],
- "references": [
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
-   "role": "proof",
-   "declarations": [
-    "Becoming.EndogenousTurning.pre_overdraw_flow_conservation",
-    "Becoming.EndogenousTurning.safe_regime_step_viable",
-    "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
-    "Becoming.EndogenousTurning.optimum_forces_overdraw",
-    "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
-    "Becoming.EndogenousTurning.constrained_selector_viable",
-    "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
-    "Becoming.EndogenousTurning.PartAWitness.constrained_survives",
-    "Becoming.EndogenousTurning.ServiceTaskModel",
-    "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
-    "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
-    "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above",
-    "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task",
-    "Becoming.EndogenousTurning.endogenous_turning_kernel",
-    "Becoming.EndogenousTurning.ofServiceTask_viable",
-    "Becoming.EndogenousTurning.pooled_service_turning_viable",
-    "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning",
-    "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind",
-    "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
-    "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced",
-    "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
-    "Becoming.EndogenousTurning.epistemic_silence_cascade",
-    "Becoming.EndogenousTurning.TurningWitness.timely_survives",
-    "Becoming.EndogenousTurning.TurningWitness.late_collapses",
-    "Becoming.EndogenousTurning.TurningWitness.cascade_collapses",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness",
-    "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
-   ],
-   "sha256": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc"
-  },
-  {
-   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
-   "role": "receipt",
-   "sha256": "d0187f5566c777ebe9f4b10530ef7db345c6fa54641435af5e1b7a960041ff9a"
-  },
-  {
-   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
-   "role": "review",
-   "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
-  }
- ],
- "proof_bindings": [
-  {
-   "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
-   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
-   "sha256_pointer": "/source_sha256/Becoming.EndogenousTurning",
-   "success_pointer": "/status",
-   "success_value": "passed"
-  }
- ],
- "history": [
-  {
-   "en": "24 November 2026: added (Becoming.EndogenousTurning, L1) covering derived proxy-optimum overdraw, non-oracle ServiceTaskModel turning, epistemic silence boundaries, and native OpenComposition clearing/reconfig bridges. AI-written."
-  }
- ]
+    "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable"
+  ],
+  "dependencies": [
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses OpenComponent, InterfaceContract, composeContract, compose_close_interchange, ReconfigProcess, and rewrite_step_viable for open clearing composition and live partner swap."
+      }
+    },
+    {
+      "id": "coupled-adaptive-loops-and-race",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses AdaptiveLoops.assume_guarantee_joint_viable, OpenLoop, and LoopCertificate across task and pooled clearing loops."
+      }
+    },
+    {
+      "id": "unclamped-stock-flow-bridge",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses StockFlowBridge unitWeb and unitNeverReturnsBelowWithin for finite-horizon pre-overdraw flow collapses."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.EndogenousTurning.pre_overdraw_flow_conservation",
+        "Becoming.EndogenousTurning.safe_regime_step_viable",
+        "Becoming.EndogenousTurning.flow_proxy_optimum_collapse",
+        "Becoming.EndogenousTurning.optimum_forces_overdraw",
+        "Becoming.EndogenousTurning.proxy_optimum_overdraw_collapse",
+        "Becoming.EndogenousTurning.constrained_selector_viable",
+        "Becoming.EndogenousTurning.PartAWitness.unconstrained_collapses",
+        "Becoming.EndogenousTurning.PartAWitness.constrained_survives",
+        "Becoming.EndogenousTurning.ServiceTaskModel",
+        "Becoming.EndogenousTurning.ServiceTaskModel.B_task",
+        "Becoming.EndogenousTurning.ServiceTaskModel.score_crosses_iff",
+        "Becoming.EndogenousTurning.ServiceTaskModel.ext_preferred_above",
+        "Becoming.EndogenousTurning.ServiceTaskModel.safe_not_preferred_from_B_task",
+        "Becoming.EndogenousTurning.endogenous_turning_kernel",
+        "Becoming.EndogenousTurning.ofServiceTask_viable",
+        "Becoming.EndogenousTurning.pooled_service_turning_viable",
+        "Becoming.EndogenousTurning.PooledClearing.pooled_clearing_turning",
+        "Becoming.EndogenousTurning.PooledClearing.unpooled_clearer_blind",
+        "Becoming.EndogenousTurning.epistemic_silence_late_bottleneck",
+        "Becoming.EndogenousTurning.service_saturated_below_noReturn_silenced",
+        "Becoming.EndogenousTurning.epistemic_silence_masked_unread",
+        "Becoming.EndogenousTurning.epistemic_silence_cascade",
+        "Becoming.EndogenousTurning.TurningWitness.timely_survives",
+        "Becoming.EndogenousTurning.TurningWitness.late_collapses",
+        "Becoming.EndogenousTurning.TurningWitness.cascade_collapses",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.proxyComponent",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.taskPartnerComponent",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.pooled_clearing_open_compose_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_partner_reconfig_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.ReconfigWitness.reconfig_witness_viable",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.clearing_widening_heals_blindness",
+        "Becoming.EndogenousTurning.OpenCompositionBridge.widening_heals_witness"
+      ],
+      "sha256": "6e4ab24adbe980e562b4c45902bd360203618eebdb1848faeba5d0cc71166cc4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
+      "role": "receipt",
+      "sha256": "d0187f5566c777ebe9f4b10530ef7db345c6fa54641435af5e1b7a960041ff9a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "163d524d4585da6a46ffd32f2fed5b5c06abe5bee8cdf781ea1384ed8456a674"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousTurning.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EndogenousTurning",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: added (Becoming.EndogenousTurning, L1) covering derived proxy-optimum overdraw, non-oracle ServiceTaskModel turning, epistemic silence boundaries, and native OpenComposition clearing/reconfig bridges. AI-written."
+    }
+  ]
 }

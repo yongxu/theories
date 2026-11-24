@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "230d247a726ff8d7aff83b852af19161e46f82df",
-  "core_run": "20261123T212116.218407Z"
+  "commit": "77c5d56a0728a22f5d51a99138ff66dae1734f0f",
+  "core_run": "20261123T234229.023849Z"
  },
- "core_sources_sha256": "8c210e78890d05cee06a5a602dec180d9a0d0732e9dc17b6b1016635bdd522ce",
+ "core_sources_sha256": "6860b26db255124498d0249ad2a0ec3146af8bcf3a4008b873033acf5352fed1",
  "modules": {
   "Becoming": {
-   "source_sha256": "796608e76457292a6688deb820655b422efd84d1078604de0ee23ff3a9a8d059",
+   "source_sha256": "4f5c4c2014f8e313a1410eddf4e25b3f010c0f35d90ad8e2c503cc5c9ba676a0",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -30,16 +30,16 @@
    "theorems": 47
   },
   "Becoming.AdaptiveLoops": {
-   "source_sha256": "8af6af19850cbceb8cbaeca07d66ebd6640f4ca852a5dfc68ac1ea9196f02cf6",
-   "theorems": 66
+   "source_sha256": "d96aafd10192b91c0778c1b44f7c8d13b8941b02546753e634180ff5abd816b6",
+   "theorems": 60
   },
   "Becoming.Admission": {
    "source_sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115",
    "theorems": 56
   },
   "Becoming.AlignmentSpine": {
-   "source_sha256": "ffe254d789590c7ee41fbe97f2b9f191b68a26fce32e28a75dabf1a0bbcdac3e",
-   "theorems": 85
+   "source_sha256": "934bb44b4a6a5203a7659ba186d6f8b63e5002d6465afd113ad9031f3d536f9c",
+   "theorems": 68
   },
   "Becoming.Alternatives": {
    "source_sha256": "9eadb20600d8c26388141ea7ef7d0f38131828bffe49907e9241180a72b29e5c",
@@ -62,7 +62,7 @@
    "theorems": 23
   },
   "Becoming.Attraction": {
-   "source_sha256": "eadbb71b29cd6b5dc630a31b1d1c04e862e693aea3f87bbe0da7ef032a340da9",
+   "source_sha256": "3a2c1c3a431e96b6da8f5ddea9dfcccb60d56d08816d16d6ae778916af29c4fd",
    "theorems": 61
   },
   "Becoming.AttractionRuns": {
@@ -86,8 +86,8 @@
    "theorems": 32
   },
   "Becoming.BlanketCouplings": {
-   "source_sha256": "d906ec9522df7d41e44d4b2025a1b3d8003a586eb9f5ae420eca48d3b8bb6c9e",
-   "theorems": 69
+   "source_sha256": "09ca7cff2d6d38a69e48077b9478b7377e753ccac58d9ec15bcd13782d06de20",
+   "theorems": 74
   },
   "Becoming.BlanketWeights": {
    "source_sha256": "ed9e07da46d399da575cf3a96f3c525103477cd7198cbb52647c0f71668c9bbf",
@@ -122,8 +122,8 @@
    "theorems": 46
   },
   "Becoming.Cascade": {
-   "source_sha256": "e6add4291cb2af7cefb3882ed48619aeaa6a473446fd5ff5b2505c49fe5df538",
-   "theorems": 7
+   "source_sha256": "6895594db6e8492064f71549db8457b97b29d7f3dac7379a409d56e555cee04d",
+   "theorems": 10
   },
   "Becoming.CausalGrowth": {
    "source_sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827",
@@ -257,6 +257,10 @@
    "source_sha256": "5180c8262e90b5fe78eb2a0c41b7e832553172c8751b149bf2cee5bbc17e505a",
    "theorems": 65
   },
+  "Becoming.CoreHelpers": {
+   "source_sha256": "a7e33988a6cf54d004dba4e6bfa3da62b03f0ed7a4fc8047bc4ad5715aec0dfc",
+   "theorems": 45
+  },
   "Becoming.Correspondence": {
    "source_sha256": "9ccd67d5006b1b4f5fee9914b6fdad62bfee17fb61cb2c95c41ed8e5436f34de",
    "theorems": 37
@@ -382,8 +386,8 @@
    "theorems": 4
   },
   "Becoming.EndogenousTurning": {
-   "source_sha256": "f4343f78f657d1a646c4abff11b2eded3845698f53fce6127f5191f1cf0d0bfc",
-   "theorems": 89
+   "source_sha256": "6e4ab24adbe980e562b4c45902bd360203618eebdb1848faeba5d0cc71166cc4",
+   "theorems": 69
   },
   "Becoming.Enough": {
    "source_sha256": "a8ff1be68d2d282631c49c9890b547b02633ccda7545a4fd0e18f1871ca23547",
@@ -406,7 +410,7 @@
    "theorems": 35
   },
   "Becoming.ExchangePremises": {
-   "source_sha256": "226efe6b90919f7e41ab41924a8a35329c4c40e3851a4f9d3c548c0fe68ed849",
+   "source_sha256": "c991a006048ada729508efdfaf8ae02169bdc1bb6d156310373ed9c642a57011",
    "theorems": 51
   },
   "Becoming.Exclusion": {
@@ -530,8 +534,8 @@
    "theorems": 9
   },
   "Becoming.GrammarLaws": {
-   "source_sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0",
-   "theorems": 218
+   "source_sha256": "ad75f543221246585f178439d86fa8f0459bb5107edd4a3878a7179ff4cff0d4",
+   "theorems": 225
   },
   "Becoming.GrammarMap": {
    "source_sha256": "4abe8d6ca583e438b5ccd7e851083981b9ea7fb067501c171a4b11c2ae73a485",
@@ -670,7 +674,7 @@
    "theorems": 13
   },
   "Becoming.InAmounts": {
-   "source_sha256": "638d7e4833b50439b39a3955c3f4a11f0f7b08b46acb8b5f36280c8e60ff4a57",
+   "source_sha256": "5b84fdc127a7293130ea67fa88c89a065fa97f4848ad3e1f20b609f784a0f599",
    "theorems": 89
   },
   "Becoming.Inquiry": {
@@ -782,7 +786,7 @@
    "theorems": 12
   },
   "Becoming.LawAlongRun": {
-   "source_sha256": "89444651632aed744d6ac9bbe680ae1b22ea79afdabdca405930a9f189fea24a",
+   "source_sha256": "0a7728f6891055ecd269f8ac70bb0bd2fb7e994866949e920f3a4f381b73d5bb",
    "theorems": 59
   },
   "Becoming.Laws": {
@@ -830,7 +834,7 @@
    "theorems": 6
   },
   "Becoming.Likeness": {
-   "source_sha256": "7392c948638ba31372c57bd4291f9301c18a9e49aff43588baea5fdece536920",
+   "source_sha256": "bcd46cbecbd4173232cba5ba15f11f9b22acebb44f65561e459955e5f7f5129f",
    "theorems": 188
   },
   "Becoming.LimitVerification": {
@@ -914,8 +918,8 @@
    "theorems": 36
   },
   "Becoming.Mechanism": {
-   "source_sha256": "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a",
-   "theorems": 31
+   "source_sha256": "1c171f1fb4ad08e0391e82cc42ec5befef44ed21c7aee92dedee4cf9ad545d46",
+   "theorems": 33
   },
   "Becoming.Metaethics": {
    "source_sha256": "87ef64dcfa0e90bf15e966c352dfe46167be83defdc4b26a00d399906e6be776",
@@ -934,8 +938,8 @@
    "theorems": 28
   },
   "Becoming.MultiScaleViability": {
-   "source_sha256": "11d473b27f9084c96ac968e288c257efff4e38ad314a1d75eb42b5b343a642dd",
-   "theorems": 91
+   "source_sha256": "fdb49dc02a3686db6c223353f7864b9f4dc48162d176ce0583ad88960b507072",
+   "theorems": 90
   },
   "Becoming.MutualDependence": {
    "source_sha256": "30c83684166ad1400ca941995128e33927f858475036b2f84039cbee45c4c4ce",
@@ -962,12 +966,12 @@
    "theorems": 304
   },
   "Becoming.Onward": {
-   "source_sha256": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21",
+   "source_sha256": "74ab8f4345978927d704fe13dfc249994d0afb8845ac154d59c0d8a800a94f6d",
    "theorems": 28
   },
   "Becoming.OpenComposition": {
-   "source_sha256": "739a9dde3d576acae4312cf95ebd4a9c2b210368605724d084b84af4aac802cd",
-   "theorems": 52
+   "source_sha256": "331dfb065cd3a202c05c33331b163c589c8007fcb5c9d877bff3ac9663ef1a3c",
+   "theorems": 85
   },
   "Becoming.OpenedCorrection": {
    "source_sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d",
@@ -1006,8 +1010,8 @@
    "theorems": 34
   },
   "Becoming.PacedStock": {
-   "source_sha256": "d84967da1eccd1657c638d786dbc0f1bbb9073baa6eb4990439ad684f68adc05",
-   "theorems": 93
+   "source_sha256": "1d13506157c62801714c58dbef20f01692f65f8b53175cf3c3ad73c2677edc0d",
+   "theorems": 92
   },
   "Becoming.PairChance": {
    "source_sha256": "f8dfb731d41f823018b407294b8e436b52490bc9809d1f01c3194eaa53ed79a0",
@@ -1068,6 +1072,10 @@
   "Becoming.Population": {
    "source_sha256": "ff6f2ba5ddcb739270d987a8ddc145ff6075df55a987f7debddd75fe90796a2f",
    "theorems": 116
+  },
+  "Becoming.PositionTerms": {
+   "source_sha256": "43315dbb3295a4370a0baa2a8e857d3c2d04069c093aaafce55ac2c8ebe3c63b",
+   "theorems": 26
   },
   "Becoming.Postponement": {
    "source_sha256": "7d7fb8f831c6bcd93788e4b5d8c396720ee7f9d80b708bd93a83a4ec63f268d2",
@@ -1134,7 +1142,7 @@
    "theorems": 140
   },
   "Becoming.ReachedCascade": {
-   "source_sha256": "357bb521a879ee175a6927cb3fcfd60099b11fcf1194ec23c9b3e09d89390307",
+   "source_sha256": "f3122b25e2ea709d7ac94283f7156e7e387449b796aca5b0c81f81a27cea595a",
    "theorems": 8
   },
   "Becoming.ReadInTime": {
@@ -1182,11 +1190,11 @@
    "theorems": 21
   },
   "Becoming.Reconfiguration": {
-   "source_sha256": "a2f5af3ffb118556f464448302c03fe1789d7af41e9e07068a04f4dfd481389b",
-   "theorems": 52
+   "source_sha256": "9a68931724c282ee7ffdc1c0f9ccea4edc313f4ea6eea374d3737a481be84e23",
+   "theorems": 60
   },
   "Becoming.Recurrence": {
-   "source_sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe",
+   "source_sha256": "63e0f1a37d457ba81c0f553b75616239598c2e6fe58399fb06b365ce5a7724b2",
    "theorems": 74
   },
   "Becoming.ReferencePlan": {
@@ -1378,8 +1386,8 @@
    "theorems": 88
   },
   "Becoming.ScopeDynamics": {
-   "source_sha256": "6acaa6e3fdcea3fa756819811b08f73a649ec9a0389fec2d985996c6d8ab9cd5",
-   "theorems": 121
+   "source_sha256": "c6836307de32f3e2890c4eb9d620973901b4964ec50bd4d62d38307382fca881",
+   "theorems": 118
   },
   "Becoming.ScopedReach": {
    "source_sha256": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
@@ -1438,7 +1446,7 @@
    "theorems": 7
   },
   "Becoming.SelectionShift": {
-   "source_sha256": "99435c8ff5728207bd58a66303b4e18e4c8fc66a988b0080348dc171ae659d91",
+   "source_sha256": "1868da2c2fc5611c5fb4662a3280ee0f0aa3a4a7516c1c8d1495ad53eb76b4b2",
    "theorems": 80
   },
   "Becoming.SelectionTerm": {
@@ -1470,8 +1478,8 @@
    "theorems": 28
   },
   "Becoming.Significance": {
-   "source_sha256": "d5d837b959764b990e3763f3fd42357bd444467260f1215df0ae83425e69c52e",
-   "theorems": 30
+   "source_sha256": "5cb10799ff733ccee911bfdd9a1cda04decd022ffab43a6a26f0b556983b436f",
+   "theorems": 33
   },
   "Becoming.SignificanceStatements": {
    "source_sha256": "fc113c0379fc4e0f4458021514b96b1ef2383f5abe0a12b4330615288991907d",
@@ -1502,8 +1510,8 @@
    "theorems": 45
   },
   "Becoming.StockFlowBridge": {
-   "source_sha256": "92c67b1c1a84452e5c83f31f25bc4ae5d34f89a17eb86e1aebb3a751dbb6ae21",
-   "theorems": 41
+   "source_sha256": "4db0e7aaf26c7253124c38ea7c34d419b69b8618860adcd9819f7b788df16636",
+   "theorems": 55
   },
   "Becoming.StrengthFlows": {
    "source_sha256": "72ab9f0e24157297f662ba73c9a3a3968d32d203880c24f3fcf2c16ee6772d5d",
@@ -1566,8 +1574,8 @@
    "theorems": 59
   },
   "Becoming.TransformativeViability": {
-   "source_sha256": "3767618b36fb7144d901f035452680b636c7a23edf98b47d50ccdf8fd330a123",
-   "theorems": 57
+   "source_sha256": "b5b922a579ffe2b873f7f810cca226b4169abf7dcb58a910d4f504677a686a7e",
+   "theorems": 55
   },
   "Becoming.Transmission": {
    "source_sha256": "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591",
@@ -1598,8 +1606,8 @@
    "theorems": 31
   },
   "Becoming.UnifiedDrawdown": {
-   "source_sha256": "787ec07766b2425a774810b5d5f89fc908e2650e1bbb98b40589c9864dbfd0c0",
-   "theorems": 125
+   "source_sha256": "4d57d23d65edf367a5e427f6a61b07905ae09e5bae79c06696de7582e750219c",
+   "theorems": 123
   },
   "Becoming.UnitMatchings": {
    "source_sha256": "30c588c34bb20c10bb3579451fed4c32eb203cb161fcaa8b4cbb68aeb88e0ed3",
@@ -1634,7 +1642,7 @@
    "theorems": 29
   },
   "Becoming.WayOfUnits": {
-   "source_sha256": "47be42133e64c40b36d97132dba4ee23e446b09282e5d437edcc4122cf9549e9",
+   "source_sha256": "fcd1834c136ad99285202cbea11d7c56fc80ca3d35a62707b0ec20225c813e8c",
    "theorems": 68
   },
   "Becoming.WayUnderARule": {
@@ -1711,8 +1719,8 @@
   }
  },
  "counts": {
-  "modules": 425,
-  "theorems": 21662,
+  "modules": 427,
+  "theorems": 21756,
   "uses_without_row": 34
  }
 }

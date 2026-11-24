@@ -12,7 +12,7 @@
 {"name": "Becoming.Amounts.noEndlessFall_of_fallsAtLeast", "uses": ["Becoming.Amounts.rests_unrefuted"]}
 {"name": "Becoming.Amounts.not_endlessFall_of_worldsRest", "uses": ["Becoming.Pass.endless_keeps_from_rest"]}
 {"name": "Becoming.Amounts.not_not_totalOf_le", "uses": ["Becoming.Amounts.add_le_add_left", "Becoming.Amounts.add_le_add_right", "Becoming.Amounts.le_refl", "Becoming.Amounts.le_trans"]}
-{"name": "Becoming.Amounts.rests_of_finite_reading", "uses": ["Becoming.Amounts.rests_unrefuted_of_finite_reading"]}
+{"name": "Becoming.Amounts.rests_of_finite_reading", "uses": ["Becoming.Amounts.rests_unrefuted_of_finite_reading", "Becoming.«屡则或屡»"]}
 {"name": "Becoming.Amounts.rests_unrefuted_of_finite_reading", "uses": ["Becoming.Amounts.extend_falls", "Becoming.Amounts.falls_within_reading", "Becoming.Amounts.from_start"]}
 {"name": "Becoming.Amounts.rising_apart", "uses": []}
 {"name": "Becoming.Amounts.totalOf_add", "uses": ["Becoming.Amounts.add_add_add_comm", "Becoming.Amounts.zero_add"]}

@@ -62,7 +62,7 @@
 {"name": "Becoming.WayOfUnits.unending_iff_carrier", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.goes_iff_carrier"]}
 {"name": "Becoming.WayOfUnits.unending_iff_holds", "uses": ["Becoming.LineOnAStock.unending_iff_holds", "Becoming.WayOfUnits.along_unit", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.down_unit", "Becoming.WayOfUnits.holds_unit", "Becoming.WayOfUnits.needing_unit", "Becoming.WayOfUnits.unending_unit"]}
 {"name": "Becoming.WayOfUnits.unending_needs_nothing", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.goes_iff_carrier"]}
-{"name": "Becoming.WayOfUnits.unending_of_fixed", "uses": ["Becoming.Law.orbit_add", "Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.course_fixed", "Becoming.le_dest"]}
+{"name": "Becoming.WayOfUnits.unending_of_fixed", "uses": ["Becoming.LineOnAStock.unending_of_fixed", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.step_unit", "Becoming.WayOfUnits.unending_unit"]}
 {"name": "Becoming.WayOfUnits.unending_taken_below", "uses": ["Becoming.LineOnAStock.unending_taken_below", "Becoming.WayOfUnits.course_unit", "Becoming.WayOfUnits.needing_unit", "Becoming.WayOfUnits.taken_unit", "Becoming.WayOfUnits.unending_unit"]}
 {"name": "Becoming.WayOfUnits.unending_unit", "uses": ["Becoming.Law.stepWhile_unending_iff", "Becoming.WayOfUnits.course_unit"]}
 {"name": "Becoming.WayOfUnits.use_at_least", "uses": []}

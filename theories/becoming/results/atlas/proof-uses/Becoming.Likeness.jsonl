@@ -165,7 +165,7 @@
 {"name": "Becoming.forth_decided", "uses": ["Becoming.Decided.and", "Becoming.Decided.exists_of_listed", "Becoming.Decided.forall_of_listed", "Becoming.Decided.imp", "Becoming.FiniteDecided.listed", "Becoming.FiniteDecided.step"]}
 {"name": "Becoming.holds_below", "uses": []}
 {"name": "Becoming.imageUnder_bisimulation", "uses": []}
-{"name": "Becoming.imageUnder_determinedAt", "uses": ["Becoming.imageUnder_bisimulation"]}
+{"name": "Becoming.imageUnder_determinedAt", "uses": ["Becoming.goAlikeUnder_iff_alike", "Becoming.imageUnder_bisimulation", "Becoming.«像之同行»", "Becoming.«同行之逐点»", "Becoming.«类则同行之展»"]}
 {"name": "Becoming.image_determinedAt_iff", "uses": ["Becoming.Alike.refl", "Becoming.Alike.step", "Becoming.Alike.trans", "Becoming.factors_image"]}
 {"name": "Becoming.iter_iff_alikeTo", "uses": ["Becoming.Iteration.iter_iff_stages", "Becoming.alike_mono"]}
 {"name": "Becoming.length_bothOf", "uses": ["Becoming.length_rightsOf"]}

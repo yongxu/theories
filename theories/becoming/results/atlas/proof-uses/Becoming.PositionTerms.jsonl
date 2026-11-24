@@ -1,0 +1,26 @@
+{"name": "Becoming.PositionTerms.TwoProfiles.not_keeps", "uses": ["Becoming.RelativePosition.keeps_iff_common"]}
+{"name": "Becoming.PositionTerms.TwoProfiles.one_amount_not_enough", "uses": ["Becoming.PositionTerms.TwoProfiles.not_keeps", "Becoming.PositionTerms.uniform_amount_same_terms"]}
+{"name": "Becoming.PositionTerms.TwoProfiles.same_order_apart", "uses": ["Becoming.PositionTerms.TwoProfiles.not_keeps"]}
+{"name": "Becoming.PositionTerms.common_of_excess", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_right_cancel", "Becoming.excess_balance"]}
+{"name": "Becoming.PositionTerms.concord_amount_on", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.PositionTerms.covariation_oneAt", "uses": ["Becoming.PositionTerms.weighted_oneAt", "Becoming.SelectionTerm.covariation", "Becoming.mul_assoc_nat"]}
+{"name": "Becoming.PositionTerms.discord_amount_on", "uses": ["Becoming.total_congr_on"]}
+{"name": "Becoming.PositionTerms.eq_of_apart_zero", "uses": ["Becoming.PositionTerms.zero_of_square_le", "Becoming.Reproduction.le_of_excess_zero"]}
+{"name": "Becoming.PositionTerms.excess_of_common", "uses": ["Becoming.excess_add_right"]}
+{"name": "Becoming.PositionTerms.keeps_at_of_terms", "uses": ["Becoming.PositionTerms.covariation_oneAt", "Becoming.PositionTerms.listed_pos", "Becoming.PositionTerms.trade_of_balances", "Becoming.add_mul_split"]}
+{"name": "Becoming.PositionTerms.keeps_iff_own_concord", "uses": ["Becoming.PositionTerms.keeps_of_own_concord", "Becoming.PositionTerms.same_terms_of_keeps"]}
+{"name": "Becoming.PositionTerms.keeps_iff_same_terms", "uses": ["Becoming.PositionTerms.keeps_at_of_terms", "Becoming.PositionTerms.same_terms_of_keeps"]}
+{"name": "Becoming.PositionTerms.keeps_iff_terms", "uses": ["Becoming.PositionTerms.keeps_of_own_concord", "Becoming.PositionTerms.same_terms_of_keeps"]}
+{"name": "Becoming.PositionTerms.keeps_of_own_concord", "uses": ["Becoming.PositionTerms.common_of_excess", "Becoming.PositionTerms.pairs_agree", "Becoming.RelativePosition.keeps_iff_common"]}
+{"name": "Becoming.PositionTerms.keeps_of_shifted", "uses": ["Becoming.RelativePosition.keeps_add", "Becoming.RelativePosition.keeps_iff_common"]}
+{"name": "Becoming.PositionTerms.keeps_order", "uses": ["Becoming.RelativePosition.keeps_iff_common", "Becoming.SelectionTerm.lt_iff_of_balance"]}
+{"name": "Becoming.PositionTerms.kept_step", "uses": ["Becoming.PositionTerms.concord_amount_on", "Becoming.PositionTerms.discord_amount_on", "Becoming.PositionTerms.keeps_iff_terms"]}
+{"name": "Becoming.PositionTerms.listed_pos", "uses": ["Becoming.le_total_of_mem", "Becoming.mark_pos"]}
+{"name": "Becoming.PositionTerms.mul_oneAt", "uses": ["Becoming.mark_cases"]}
+{"name": "Becoming.PositionTerms.pairs_agree", "uses": ["Becoming.Naturals.add_congr", "Becoming.Naturals.add_left_cancel", "Becoming.PositionTerms.eq_of_apart_zero", "Becoming.PositionTerms.square_balance", "Becoming.SelectionTerm.pairs_add", "Becoming.le_total_of_mem", "Becoming.total_congr"]}
+{"name": "Becoming.PositionTerms.same_terms_of_keeps", "uses": ["Becoming.PositionTerms.excess_of_common", "Becoming.RelativePosition.keeps_iff_common", "Becoming.total_congr_on"]}
+{"name": "Becoming.PositionTerms.square_balance", "uses": ["Becoming.Naturals.add_congr", "Becoming.Reproduction.excess_cross", "Becoming.SelectionTerm.pair_balance"]}
+{"name": "Becoming.PositionTerms.trade_of_balances", "uses": ["Becoming.Naturals.add_congr", "Becoming.add_right_cancel"]}
+{"name": "Becoming.PositionTerms.uniform_amount_same_terms", "uses": ["Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.discord_alike"]}
+{"name": "Becoming.PositionTerms.weighted_oneAt", "uses": ["Becoming.PositionTerms.mul_oneAt", "Becoming.total_congr", "Becoming.total_mul"]}
+{"name": "Becoming.PositionTerms.zero_of_square_le", "uses": []}

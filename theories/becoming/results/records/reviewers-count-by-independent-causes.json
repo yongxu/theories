@@ -64,6 +64,21 @@
         "Becoming.Reconfiguration.omitted",
         "Becoming.Reconfiguration.omitted_cause_breaks"
       ]
+    },
+    {
+      "en": "Open-interface reconfiguration bridges (Option 2 B1-B3): envelopeChannel embeds independent-cause fault-envelope inspection into OpenComposition without peeking inside hidden internal state; correlated faults break the channel where merged rosters share a root cause; guardedByEnvelope, guardedByArrangement, and guardedEnvelopeContract lift arrangement readiness onto ReconfigProcess live swaps (reconfig_step_induces_live_swap); and stronger fault envelopes certify heterogeneous ContractRefines left-replacement without re-checking partners (stronger_envelope_contract_refines, stronger_envelope_replace_left_viable).",
+      "zh": "开放接口重构桥（方案 2 B1-B3）：envelopeChannel 将独立原因故障包络检查嵌入 OpenComposition，而不窥探隐藏内部状态；当合并名册共用根因时相关故障破坏该通道；guardedByEnvelope、guardedByArrangement 与 guardedEnvelopeContract 将安排就绪提升至 ReconfigProcess 实时替换（reconfig_step_induces_live_swap）；更强故障包络证明异构 ContractRefines 左替换而无需重检合作者（stronger_envelope_contract_refines、stronger_envelope_replace_left_viable）。",
+      "declarations": [
+        "Becoming.Reconfiguration.envelopeChannel",
+        "Becoming.Reconfiguration.faultEnvelope_channel_viable",
+        "Becoming.Reconfiguration.correlated_faults_break_envelope_channel",
+        "Becoming.Reconfiguration.guardedByEnvelope",
+        "Becoming.Reconfiguration.guardedByArrangement",
+        "Becoming.Reconfiguration.guardedEnvelopeContract",
+        "Becoming.Reconfiguration.reconfig_step_induces_live_swap",
+        "Becoming.Reconfiguration.stronger_envelope_contract_refines",
+        "Becoming.Reconfiguration.stronger_envelope_replace_left_viable"
+      ]
     }
   ],
   "hypotheses": [
@@ -98,8 +113,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.Reconfiguration, 80 declarations, every one with an empty axiom report; core purity verified. The module states the periphery module CorrectionReconfiguration (receipt correction-reconfiguration-verification.json, whose six cited witnesses also report no axiom) in the core's vocabulary. The record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.Reconfiguration 之 80 项声明公理报告皆空；核心纯净已核对。该模块以核心之用语陈述外围模块 CorrectionReconfiguration（回执 correction-reconfiguration-verification.json，所引六项见证亦不报公理）。本记录对照当前 Lean 读过；尚无人审之记录。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261123T234229.023849Z): Becoming.Reconfiguration, 89 declarations (56 theorems), every one with an empty axiom report; core purity verified. Wave U2 Option 2 B1-B3 OpenComposition bridges audited (00113d4b: PASS). Also states the periphery module CorrectionReconfiguration in the core's vocabulary. No person's review recorded.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261123T234229.023849Z）：Becoming.Reconfiguration 之 89 项声明（56 条定理）公理报告皆空；核心纯净已核对；Wave U2 方案 2 B1-B3 OpenComposition 桥已审计（00113d4b: PASS）。亦以核心之用语陈述外围模块 CorrectionReconfiguration。尚无人审之记录。"
   },
   "next_delta": {
     "en": "Causes formed rather than supplied: fault formulas read from failures that occur in a run, and readiness where the bounds on co-occurring causes change.",
@@ -127,6 +142,14 @@
       "detail": {
         "en": "induced_certificate_sound and induced_certificate_available apply FaultEnvelopes.certificate_sound and certificate_available to the envelope the bounds induce, ready_separates giving its separation.",
         "zh": "induced_certificate_sound 与 induced_certificate_available 把 FaultEnvelopes.certificate_sound 与 certificate_available 用于诸界所导出之包络，其分隔由 ready_separates 给出。"
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses OpenComposition (InterfaceContract, ReconfigProcess, ContractRefines, replace_left_viable) in Option 2 B1-B3 bridges lifting fault-envelope readiness and replacement onto open contracts.",
+        "zh": "在方案 2 B1-B3 桥中复用 OpenComposition（InterfaceContract、ReconfigProcess、ContractRefines、replace_left_viable），将故障包络就绪与替换提升至开放契约。"
       }
     }
   ],
@@ -170,9 +193,18 @@
         "Becoming.Reconfiguration.shared_cause_no_step",
         "Becoming.Reconfiguration.separated_repair_steps",
         "Becoming.Reconfiguration.omitted",
-        "Becoming.Reconfiguration.omitted_cause_breaks"
+        "Becoming.Reconfiguration.omitted_cause_breaks",
+        "Becoming.Reconfiguration.envelopeChannel",
+        "Becoming.Reconfiguration.faultEnvelope_channel_viable",
+        "Becoming.Reconfiguration.correlated_faults_break_envelope_channel",
+        "Becoming.Reconfiguration.guardedByEnvelope",
+        "Becoming.Reconfiguration.guardedByArrangement",
+        "Becoming.Reconfiguration.guardedEnvelopeContract",
+        "Becoming.Reconfiguration.reconfig_step_induces_live_swap",
+        "Becoming.Reconfiguration.stronger_envelope_contract_refines",
+        "Becoming.Reconfiguration.stronger_envelope_replace_left_viable"
       ],
-      "sha256": "a2f5af3ffb118556f464448302c03fe1789d7af41e9e07068a04f4dfd481389b"
+      "sha256": "9a68931724c282ee7ffdc1c0f9ccea4edc313f4ea6eea374d3737a481be84e23"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
@@ -206,12 +238,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CORRECTION-RECONFIGURATION-INTEGRATION.md",
       "role": "integration",
       "sha256": "e5b6cace4ab4e7e7cbb764310124a1f966a59f901f4790b2c6a9bec01901da16"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "role": "receipt",
+      "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reconfiguration",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -228,6 +266,10 @@
     {
       "en": "27 October 2026: added (DF2), with reviewer failures computed from causes the induced certificate is sound for covered causes and readiness follows causes, not names, on the core module that states CorrectionReconfiguration; from DEFECTS-FOUND (triage row 197); study section 426.",
       "zh": "2026年10月27日：新增（DF2），审查者之失效由原因算出时，导出之证书对被覆盖之原因可靠，就绪随因而不随名，陈于陈述 CorrectionReconfiguration 之核心模块；出自 DEFECTS-FOUND（分诊第 197 行）；研究第 426 节。"
+    },
+    {
+      "en": "24 November 2026 (Wave U2): added Option 2 B1-B3 bridges onto Becoming.OpenComposition (envelopeChannel, guardedEnvelopeContract, reconfig_step_induces_live_swap, stronger_envelope_contract_refines, stronger_envelope_replace_left_viable). AI-written.",
+      "zh": "2026年11月24日（Wave U2）：新增连往 Becoming.OpenComposition 之方案 2 B1-B3 桥（envelopeChannel、guardedEnvelopeContract、reconfig_step_induces_live_swap、stronger_envelope_contract_refines、stronger_envelope_replace_left_viable）。AI 撰写。"
     }
   ]
 }

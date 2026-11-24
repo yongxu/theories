@@ -7,7 +7,7 @@
 {"name": "Becoming.Branching.Lossless.unlisted", "uses": ["Becoming.Branching.Lossless.returns"]}
 {"name": "Becoming.Branching.Merges.not_lossless", "uses": []}
 {"name": "Becoming.Branching.Reachable.earlier", "uses": []}
-{"name": "Becoming.Branching.Returns.pred", "uses": ["Becoming.Branching.trace_last", "Becoming.Reach.of_step", "Becoming.Reach.trans"]}
+{"name": "Becoming.Branching.Returns.pred", "uses": ["Becoming.Branching.returns_iff_reaches", "Becoming.«返则有返前»"]}
 {"name": "Becoming.Branching.Returns.reachable", "uses": ["Becoming.Branching.Returns.reachable_from"]}
 {"name": "Becoming.Branching.Returns.reachable_from", "uses": ["Becoming.Branching.Returns.pred"]}
 {"name": "Becoming.Branching.law_reach_iff", "uses": ["Becoming.Branching.law_trace_iff", "Becoming.Branching.units_length"]}

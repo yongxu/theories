@@ -10,9 +10,9 @@
 {"name": "Becoming.Onward.lossless_unlisted", "uses": ["Becoming.Onward.lossless_returns_iff"]}
 {"name": "Becoming.Onward.moveOf_eq", "uses": []}
 {"name": "Becoming.Onward.ofWithin_within", "uses": ["Becoming.Run.step"]}
-{"name": "Becoming.Onward.reach_along", "uses": ["Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans"]}
+{"name": "Becoming.Onward.reach_along", "uses": ["Becoming.reach_iff_withinClosure", "Becoming.«线则所闭»"]}
 {"name": "Becoming.Onward.reach_of_run", "uses": ["Becoming.Run.reach"]}
-{"name": "Becoming.Onward.returning_of_continues", "uses": ["Becoming.Onward.reach_along", "Becoming.Parting.path_of_continues", "Becoming.gap_of_lt", "Becoming.revisits_within"]}
+{"name": "Becoming.Onward.returning_of_continues", "uses": ["Becoming.Branching.returns_iff_reaches", "Becoming.Parting.path_of_continues", "Becoming.reach_iff_withinClosure", "Becoming.«线有限则入返»"]}
 {"name": "Becoming.Onward.rise_needs_merge", "uses": ["Becoming.Onward.lossless_no_rise"]}
 {"name": "Becoming.Onward.run_decided", "uses": ["Becoming.Lasting.Continues.decided", "Becoming.Onward.run_iff_continues", "Becoming.Onward.run_of_continues"]}
 {"name": "Becoming.Onward.run_iff_continues", "uses": ["Becoming.Onward.continues_of_run", "Becoming.Onward.run_of_continues"]}

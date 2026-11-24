@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261123T212116.218407Z",
- "core_sources_sha256": "8c210e78890d05cee06a5a602dec180d9a0d0732e9dc17b6b1016635bdd522ce",
+ "core_receipt": "20261123T234229.023849Z",
+ "core_sources_sha256": "6860b26db255124498d0249ad2a0ec3146af8bcf3a4008b873033acf5352fed1",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4478,
+  "laws": 4483,
   "no_declarations": 9,
   "outside": 396,
-  "grammar": 1104,
+  "grammar": 1146,
   "balance, represented": 642,
-  "anchor, not reached": 136,
+  "anchor, not reached": 99,
   "no shared law": 2191,
   "vocabulary_only": 106,
-  "closure": 612,
-  "balance": 922,
+  "closure": 626,
+  "balance": 924,
   "return": 258,
   "lumping": 97,
   "order": 111
@@ -1261,6 +1261,22 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   },
+   {
+    "law": 18,
+    "declarations": [
+     "Becoming.BlanketCouplings.closedParts",
+     "Becoming.BlanketCouplings.closedBlanketLaw",
+     "Becoming.BlanketCouplings.closedComponent_blanketed_course",
+     "Becoming.BlanketCouplings.hide_internalizes_blanket",
+     "Becoming.BlanketCouplings.liftedClosedProcess",
+     "Becoming.BlanketCouplings.closedProcess_blanketDetermined",
+     "Becoming.BlanketCouplings.closedComponent_lumped_blindness",
+     "Becoming.BlanketCouplings.hiddenCoupling_blanket_vs_widened"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "a-formations-own-course": [
@@ -1702,8 +1718,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -1716,8 +1732,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -1762,8 +1778,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -1778,8 +1794,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -1821,8 +1837,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 10,
@@ -1844,8 +1860,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 11,
@@ -1872,8 +1888,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 12,
@@ -1907,8 +1923,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -1962,8 +1978,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-law-through-coupling-along-one-run": [
@@ -1979,8 +1995,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -1993,8 +2009,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -2009,8 +2025,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -2032,8 +2048,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-line-alive-after-a-window": [
@@ -6299,10 +6315,11 @@
      "Becoming.Law.Returns"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -6352,10 +6369,11 @@
      "Becoming.Law.returning_absorbing"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -6803,10 +6821,11 @@
      "Becoming.Law.enters_returning_within"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -11827,10 +11846,11 @@
      "Becoming.Viability.ChoicePoint.keptFor_each_not_joint"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -14544,8 +14564,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "counting-standing-and-dependence": [
@@ -16306,8 +16326,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -16357,8 +16377,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached",
+    "grammar": true,
+    "dependence": "grammar",
     "defines": [
      "Becoming.GoAlikeUnder"
     ]
@@ -24756,10 +24776,11 @@
      "Becoming.Hexagram.changes_run_revisits"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -29597,14 +29618,27 @@
    {
     "law": 2,
     "declarations": [
+     "Becoming.SlackDist.drop",
+     "Becoming.coarsenIndex",
      "Becoming.LaxSim.comp",
      "Becoming.LaxSim.compAdditive",
      "Becoming.LaxSim.TowerSimPack",
-     "Becoming.LaxSim.towerSim"
+     "Becoming.LaxSim.towerSim",
+     "Becoming.Tower.flow_once",
+     "Becoming.Tower.uptake_sample",
+     "Becoming.Tower.uptake_reads",
+     "Becoming.towerProcess",
+     "Becoming.towerLevelSim",
+     "Becoming.towerFlowSimPack",
+     "Becoming.towerDirectLaxSim",
+     "Becoming.tower_kernel_transfer"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -34560,8 +34594,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -36056,6 +36090,13 @@
    {
     "law": 1,
     "declarations": [
+     "Becoming.OpenComposition.indexedStep_mono",
+     "Becoming.OpenComposition.indexedStep_antitone_H",
+     "Becoming.OpenComposition.indexedStep_ge_sub",
+     "Becoming.OpenComposition.substrate_margin_step",
+     "Becoming.OpenComposition.OpenLoop",
+     "Becoming.OpenComposition.OpenLoop.process",
+     "Becoming.OpenComposition.LoopCertificate",
      "Becoming.OpenComposition.OpenComponent",
      "Becoming.OpenComposition.OpenComponent.process",
      "Becoming.OpenComposition.OpenComponent.ofOpenLoop",
@@ -36074,13 +36115,36 @@
      "Becoming.OpenComposition.composeContract",
      "Becoming.OpenComposition.ComponentEquiv",
      "Becoming.OpenComposition.composeAssocEquiv",
+     "Becoming.OpenComposition.composeCommEquiv",
+     "Becoming.OpenComposition.ContractEquiv",
+     "Becoming.OpenComposition.composeAssocContractEquiv",
+     "Becoming.OpenComposition.composeCommContractEquiv",
      "Becoming.OpenComposition.OpenComponent.hide",
      "Becoming.OpenComposition.hideContract",
-     "Becoming.OpenComposition.hideContract_keeps_hidden"
+     "Becoming.OpenComposition.hideContract_keeps_hidden",
+     "Becoming.OpenComposition.familyComponent",
+     "Becoming.OpenComposition.familyContract",
+     "Becoming.OpenComposition.zeroSilenceChannel",
+     "Becoming.OpenComposition.constDrawerComponent",
+     "Becoming.OpenComposition.constDrawerContract",
+     "Becoming.OpenComposition.countdownLoop",
+     "Becoming.OpenComposition.countdownCert",
+     "Becoming.OpenComposition.countdownComponent",
+     "Becoming.OpenComposition.countdownContract",
+     "Becoming.OpenComposition.withHiddenSite",
+     "Becoming.OpenComposition.withHiddenSiteContract",
+     "Becoming.OpenComposition.composeListInit",
+     "Becoming.OpenComposition.composeListObs",
+     "Becoming.OpenComposition.composeListComponent",
+     "Becoming.OpenComposition.composeListContract",
+     "Becoming.OpenComposition.composeList_viable",
+     "Becoming.OpenComposition.composeList_replace_head_viable"
     ],
-    "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -36107,6 +36171,9 @@
     "declarations": [
      "Becoming.OpenComposition.ContractRefines",
      "Becoming.OpenComposition.replace_left_viable",
+     "Becoming.OpenComposition.replace_right_viable",
+     "Becoming.OpenComposition.contractRefines_compose_left",
+     "Becoming.OpenComposition.contractRefines_compose_right",
      "Becoming.OpenComposition.ReconfigAct",
      "Becoming.OpenComposition.ReconfigProcess",
      "Becoming.OpenComposition.rewrite_step_viable",
@@ -37547,6 +37614,23 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.PacedStock.blockStockProcess",
+     "Becoming.PacedStock.blockStockProcess_kernel_iff",
+     "Becoming.PacedStock.SpanAlignedBlocks",
+     "Becoming.PacedStock.spanAligned_of_uniform",
+     "Becoming.PacedStock.blocksLaxSim",
+     "Becoming.PacedStock.slack_certifies_fine_kernel_via_laxSim",
+     "Becoming.PacedStock.SlackShortWitness.atSix_fine_kernel_via_laxSim"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "pending-task-context-applicability": [
@@ -38911,8 +38995,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -39218,10 +39302,10 @@
      "Becoming.yan_line_of_list"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
-    "grammar_vocabulary_only": true,
     "dependence": "grammar"
    },
    {
@@ -39305,8 +39389,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -39316,8 +39400,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -39329,8 +39413,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -39343,8 +39427,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -43759,8 +43843,9 @@
     "shared_laws": [
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached",
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
     "defines": [
      "Becoming.Amounts.FallsStop"
     ]
@@ -43880,8 +43965,8 @@
     "shared_laws": [
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -43891,8 +43976,8 @@
     "shared_laws": [
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "rest-on-coupled-webs": [
@@ -44581,10 +44666,11 @@
      "Becoming.Branching.KeepsPossibilities"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -44659,10 +44745,11 @@
      "Becoming.Branching.OneWay.merge_keeps"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 10,
@@ -44684,8 +44771,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "reviewers-count-by-independent-causes": [
@@ -44747,6 +44834,25 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Reconfiguration.envelopeChannel",
+     "Becoming.Reconfiguration.faultEnvelope_channel_viable",
+     "Becoming.Reconfiguration.correlated_faults_break_envelope_channel",
+     "Becoming.Reconfiguration.guardedByEnvelope",
+     "Becoming.Reconfiguration.guardedByArrangement",
+     "Becoming.Reconfiguration.guardedEnvelopeContract",
+     "Becoming.Reconfiguration.reconfig_step_induces_live_swap",
+     "Becoming.Reconfiguration.stronger_envelope_contract_refines",
+     "Becoming.Reconfiguration.stronger_envelope_replace_left_viable"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "revision-comes-to-drawing-everything": [
@@ -50959,8 +51065,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 8,
@@ -54200,6 +54306,20 @@
     "grammar": true,
     "grammar_vocabulary_only": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 19,
+    "declarations": [
+     "Becoming.PositionTerms.keeps_iff_same_terms",
+     "Becoming.PositionTerms.keeps_iff_own_concord",
+     "Becoming.PositionTerms.keeps_iff_terms",
+     "Becoming.PositionTerms.kept_step",
+     "Becoming.PositionTerms.TwoProfiles.same_order_apart",
+     "Becoming.PositionTerms.TwoProfiles.one_amount_not_enough"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "the-source-texts-test-systems": [
@@ -57807,6 +57927,33 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.StockFlowBridge.stockFlow_eq_unitFlow",
+     "Becoming.StockFlowBridge.stockWeb_level_eq_unitWeb",
+     "Becoming.StockFlowBridge.stockFlow_balances_iff_unitFlow_balances",
+     "Becoming.StockFlowBridge.stockProcess_step_of_le",
+     "Becoming.StockFlowBridge.not_stockProcess_step_of_overdraw",
+     "Becoming.StockFlowBridge.stockProcess_trace_of_within",
+     "Becoming.StockFlowBridge.stockCovered_of_within",
+     "Becoming.StockFlowBridge.stockPrefix_covered_of_within",
+     "Becoming.StockFlowBridge.stockRun_of_within",
+     "Becoming.StockFlowBridge.unitBalances_of_stockRun",
+     "Becoming.StockFlowBridge.lineStockRun_of_unending",
+     "Becoming.StockFlowBridge.wayStockRun_of_unending",
+     "Becoming.StockFlowBridge.line_replenishes_of_draws",
+     "Becoming.StockFlowBridge.line_draws_iff_replenishes",
+     "Becoming.StockFlowBridge.way_replenishes_of_draws",
+     "Becoming.StockFlowBridge.way_draws_iff_replenishes",
+     "Becoming.StockFlowBridge.stockRun_never_returns_below_within"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "unequal-groups-not-decided-by-the-spread-among-groups": [
@@ -65518,8 +65665,8 @@
     "shared_laws": [
      "lumping"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached",
+    "grammar": true,
+    "dependence": "grammar",
     "central": [
      {
       "declaration": "Becoming.PartForms.goAlike",
@@ -65794,10 +65941,11 @@
      "Becoming.Onward.run_decided"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -65819,10 +65967,11 @@
      "Becoming.Onward.KeepsMoving.run"
     ],
     "shared_laws": [
+     "closure",
      "return"
     ],
-    "grammar": false,
-    "dependence": "anchor, not reached"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -69001,7 +69150,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "ed71b9ec023699e6ce59644079e1865aebee5a37dd6a8b1ddb2d7168b4e3e859",
+   "modules_sha256": "89122509f1acd7d0cad05a5273aaf67e9af6e6314c25b3363ec438a6c9c9aa9e",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
