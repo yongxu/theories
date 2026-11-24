@@ -14,7 +14,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 |---|---:|---:|
 | [Becoming pure core](lean-declarations/becoming-core.md) | 420 | 21,126 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 15 | 589 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 16 | 617 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -386,6 +386,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [FiniteBranchingCorrespondence.lean](lean-declarations/abstraction.md#module-48f866de95b4) | Abstraction, applicability and constitution |
 | [FiniteExposureKernel.lean](lean-declarations/learning.md#module-be5433d0f096) | Learning, prediction and dynamics |
 | [FiniteInquiryClassification.lean](lean-declarations/inquiry.md#module-13aee3c0e811) | Attainable inquiry, contact and process laws |
+| [FiniteProbKrylov.lean](lean-declarations/becoming-periphery.md#module-df9d4f725566) | Becoming active periphery |
 | [FiniteSupportObstruction.lean](lean-declarations/other.md#module-805a098f4dbd) | Other formal studies |
 | [Flow.lean](lean-declarations/becoming-core-part-3.md#module-1ab3e6b83532) | Becoming pure core |
 | [FlowCenters.lean](lean-declarations/becoming-core-part-3.md#module-3c07105e81a2) | Becoming pure core |

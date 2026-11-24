@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "id": "finite-probability-and-krylov-foundation",
+  "title": {
+    "en": "Shared finite probability laws and Krylov rank stabilization foundation"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T17:04:00+00:00",
+  "statement": {
+    "en": "Shared Mathlib ℝ periphery foundation proving finite probability TV metric properties and optimal query floors alongside Krylov rank-bounded stabilization and FiberLumpable observable-horizon compression for real matrices."
+  },
+  "laws": [
+    {
+      "en": "Finite probability distributions FinDist support extensionality, diracDist, pushforward functoriality, total-variation metric identities (tvDist_nonneg, tvDist_self, tvDist_symm, tvDist_eq_zero_iff, tvDist_triangle, tvDist_pushforward_le), and optimal query-image TV blindness attainment under Nonempty U vs empty-source infeasibility (massOutside_nonneg, optimal_query_tv_floor, empty_source_infeasible).",
+      "declarations": [
+        "FiniteProb.FinDist",
+        "FiniteProb.FinDist.ext",
+        "FiniteProb.diracDist",
+        "FiniteProb.pushforward",
+        "FiniteProb.pushforward_comp",
+        "FiniteProb.tvDist",
+        "FiniteProb.tvDist_nonneg",
+        "FiniteProb.tvDist_self",
+        "FiniteProb.tvDist_symm",
+        "FiniteProb.tvDist_eq_zero_iff",
+        "FiniteProb.tvDist_triangle",
+        "FiniteProb.tvDist_pushforward_le",
+        "FiniteProb.massOutside",
+        "FiniteProb.massOutside_nonneg",
+        "FiniteProb.optimal_query_tv_floor",
+        "FiniteProb.empty_source_infeasible"
+      ]
+    },
+    {
+      "en": "Arbitrary real matrices K : Act -> S -> S -> ℝ on finite S induce stepLinearMap, wordVec, survVec, and nested Krylov subspaces krylovSub K v₀ k stabilizing by finrank W - 1 inside any K-invariant finite-dimensional subspace W containing v₀ (including v₀ = 0 or W = ⊥; krylovSub_stabilizes_before_rank), specializing to card S - 1 (krylovSub_stabilizes_before_card, wordVec_mem_krylovSub_pred).",
+      "declarations": [
+        "FiniteKrylov.stepOp",
+        "FiniteKrylov.stepLinearMap",
+        "FiniteKrylov.wordVec",
+        "FiniteKrylov.survVec",
+        "FiniteKrylov.krylovSub",
+        "FiniteKrylov.krylovSub_mono",
+        "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+        "FiniteKrylov.krylovSub_step_eq_of_eq",
+        "FiniteKrylov.krylovSub_stabilizes_from",
+        "FiniteKrylov.krylovSub_stabilizes_before_rank",
+        "FiniteKrylov.krylovSub_stabilizes_before_card",
+        "FiniteKrylov.wordVec_mem_krylovSub_pred"
+      ]
+    },
+    {
+      "en": "Pullback range (pullbackLinear f) matches fiber-constant maps (mem_range_pullbackLinear_iff); under exact FiberLumpable f K, this K-invariant subspace has finrank <= Fintype.card O, compressing survival indistinguishability to length <= Fintype.card O - 1 (survival_indistinguishable_iff_le_obs_pred; substochastic witness lumpable_obs_horizon_one_witness).",
+      "declarations": [
+        "FiniteKrylov.FiberLumpable",
+        "FiniteKrylov.pullbackLinear",
+        "FiniteKrylov.mem_range_pullbackLinear_iff",
+        "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+        "FiniteKrylov.lumpable_obs_horizon_one_witness"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms [Classical.choice, Quot.sound, propext] in Mathlib periphery module FiniteProbKrylov; requires [Fintype] carriers, [Nonempty U] only for optimal_query_tv_floor attainment, and [Nonempty S] for card - 1 theorems, whereas krylovSub_stabilizes_before_rank holds for any v₀ in K-invariant W including v₀ = 0 and W = ⊥."
+    },
+    {
+      "en": "survival_indistinguishable_iff_le_obs_pred assumes exact FiberLumpable f K on real matrices; when interpreted probabilistically, the observable-horizon reduction is non-trivial only for substochastic survival matrices (normalized Markov kernels yield survVec = 1 unconditionally)."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "Normalized stochastic Markov kernels trivially satisfy survVec K w s = 1 for all words w, so FiberLumpable observable-horizon reduction carries distinguishing power only for substochastic or general real survival/reward matrices."
+    },
+    {
+      "kind": "non-implication",
+      "en": "FiberLumpable is an intrinsic invariance on K; for prescribed (K, L) it does not force zero rowDefect without a compatible L (fixed_macro_nonzero_rowDefect_witness)."
+    },
+    {
+      "kind": "correspondence",
+      "en": "Does not prove that empirical transition dynamics are finite, time-homogeneous, or exactly FiberLumpable (Rule 2)."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
+      "detail": {
+        "en": "empty_source_infeasible refutes FinDist U under IsEmpty U; lumpable_obs_horizon_one_witness gives a substochastic 3-state/2-observation FiberLumpable system where length-0 agrees and length 1 = card Bool - 1 < card (Fin 3) - 1 separates."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written (Wave 1, 24 November 2026); machine-checked by -O-safe Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170243.242498Z): all 33 declaration audits (21 theorems, 12 defs/structures, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. Consumed by ObservationalFidelity, SurvivalDistinguishability, ConsequenceDuality, and DualityBridges (FinDist becomes an abbrev for FiniteProb.FinDist while explicit theorem signatures stay intact). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; extend approximate lumpability perturbation bounds if real-learner trajectories require near-FiberLumpable error propagation."
+  },
+  "correspondence": {
+    "en": "Eliminates duplicated FinDist/TV and Krylov code across four Mathlib periphery modules while proving rank-form Krylov stabilization and the FiberLumpable observable-horizon bridge joining B1 observational fidelity and B2 survival distinguishability."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
+  "aliases": [
+    "FiniteProb.optimal_query_tv_floor",
+    "FiniteKrylov.krylovSub_stabilizes_before_rank",
+    "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+    "FiniteKrylov.lumpable_obs_horizon_one_witness"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "observational-fidelity-and-multi-regime-error",
+      "detail": {
+        "en": "Re-exports FiniteProb.* laws and bridges FiniteKrylov.FiberLumpable with zero mode-indexed rowDefect."
+      }
+    },
+    {
+      "id": "finite-mode-survival-distinguishability",
+      "detail": {
+        "en": "Delegates Krylov card - 1 distinguishability and observable-horizon reduction to FiniteKrylov."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
+      "role": "proof",
+      "declarations": [
+        "FiniteProb.FinDist",
+        "FiniteProb.FinDist.ext",
+        "FiniteProb.diracDist",
+        "FiniteProb.pushforward",
+        "FiniteProb.pushforward_comp",
+        "FiniteProb.tvDist",
+        "FiniteProb.tvDist_nonneg",
+        "FiniteProb.tvDist_self",
+        "FiniteProb.tvDist_symm",
+        "FiniteProb.tvDist_eq_zero_iff",
+        "FiniteProb.tvDist_triangle",
+        "FiniteProb.tvDist_pushforward_le",
+        "FiniteProb.massOutside",
+        "FiniteProb.massOutside_nonneg",
+        "FiniteProb.optimal_query_tv_floor",
+        "FiniteProb.empty_source_infeasible",
+        "FiniteKrylov.stepOp",
+        "FiniteKrylov.stepLinearMap",
+        "FiniteKrylov.wordVec",
+        "FiniteKrylov.survVec",
+        "FiniteKrylov.krylovSub",
+        "FiniteKrylov.krylovSub_mono",
+        "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+        "FiniteKrylov.krylovSub_step_eq_of_eq",
+        "FiniteKrylov.krylovSub_stabilizes_from",
+        "FiniteKrylov.krylovSub_stabilizes_before_rank",
+        "FiniteKrylov.krylovSub_stabilizes_before_card",
+        "FiniteKrylov.wordVec_mem_krylovSub_pred",
+        "FiniteKrylov.FiberLumpable",
+        "FiniteKrylov.pullbackLinear",
+        "FiniteKrylov.mem_range_pullbackLinear_iff",
+        "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+        "FiniteKrylov.lumpable_obs_horizon_one_witness"
+      ],
+      "sha256": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/check_finite_prob_krylov.py",
+      "role": "integration",
+      "sha256": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T170243.242498Z/verification.json",
+      "role": "receipt",
+      "sha256": "d5ecadbdace8739417df85d8bafa8382b0822456289ffadabccc1032d93bf7cb",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T170243.242498Z/verification.json",
+      "sha256_pointer": "/source_sha256/FiniteProbKrylov",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave 1): added FiniteProbKrylov (Mathlib v4.30.0-rc2 periphery module, -O-verified receipt 20261124T170243.242498Z) factoring shared FiniteProb laws and FiniteKrylov rank-form stabilization + FiberLumpable observable-horizon bridge. AI-written."
+    }
+  ]
+}

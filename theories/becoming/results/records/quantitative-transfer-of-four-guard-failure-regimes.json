@@ -85,7 +85,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T154706.011836Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept)."
+    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170732.006215Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept)."
   },
   "next_delta": {
     "en": "Human read by Ren; state the walls as bounds on detector advantage (Youden J), and prove a Gaussian-additive aliasing floor once measure-theoretic laws are admitted to the periphery."
@@ -113,7 +113,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T154706.011836Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T170732.006215Z/verification.json",
       "sha256_pointer": "/source_sha256/QuantitativeTransfer",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -122,14 +122,17 @@
   "history": [
     {
       "en": "24 November 2026: added as Mathlib periphery #15 (Frontier 3), paired with neural stress-lab B5. AI-written."
+    },
+    {
+      "en": "24 November 2026 (Wave 1): refreshed FiniteProb.tvDist and FiniteProb.diracDist unfoldings onto FiniteProbKrylov (receipt 20261124T170732.006215Z). AI-written."
     }
   ],
-  "reviewed_at_utc": "2026-11-24T16:25:00+00:00",
+  "reviewed_at_utc": "2026-11-24T17:13:00+00:00",
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
       "role": "proof",
-      "sha256": "8dc6d2bcbc7b8636e8120c8e26e62a4d5994005c0e395b920a52474c709c02ac",
+      "sha256": "795e2ef83d3aa0eb8e024b6bb4e8e30905adffeeebcf6c5e6790d1600be92057",
       "declarations": [
         "QuantitativeTransfer.aliased_fiber_gap",
         "QuantitativeTransfer.aliased_lab_witness",
@@ -160,9 +163,9 @@
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T154706.011836Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T170732.006215Z/verification.json",
       "role": "receipt",
-      "sha256": "466c646dc94c0122e08a6310fbb4f022516674a0347ab01b900516abb9ccf862",
+      "sha256": "e5ed384bbe67c8bd14665423b520eafa04044a79f075f38f2e8eadf440fd5f74",
       "declarations": []
     },
     {

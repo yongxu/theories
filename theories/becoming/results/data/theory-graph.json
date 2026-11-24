@@ -2661,6 +2661,18 @@
    "page": "theories/becoming/results/records/finite-mode-survival-distinguishability.md"
   },
   {
+   "id": "record:finite-probability-and-krylov-foundation",
+   "type": "result",
+   "record": "finite-probability-and-krylov-foundation",
+   "title": "Shared finite probability laws and Krylov rank stabilization foundation",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md"
+  },
+  {
    "id": "record:finite-trace-transport",
    "type": "result",
    "record": "finite-trace-transport",
@@ -46754,6 +46766,11 @@
   },
   {
    "from": "record:finite-mode-survival-distinguishability",
+   "to": "record:finite-probability-and-krylov-foundation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:finite-mode-survival-distinguishability",
    "to": "record:observational-fidelity-and-multi-regime-error",
    "type": "related"
   },
@@ -46761,6 +46778,16 @@
    "from": "record:finite-mode-survival-distinguishability",
    "to": "record:oplax-history-comparison-and-relational-loss",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:finite-probability-and-krylov-foundation",
+   "to": "record:finite-mode-survival-distinguishability",
+   "type": "related"
+  },
+  {
+   "from": "record:finite-probability-and-krylov-foundation",
+   "to": "record:observational-fidelity-and-multi-regime-error",
+   "type": "related"
   },
   {
    "from": "record:finite-trace-transport",
@@ -52233,6 +52260,11 @@
   {
    "from": "record:observational-fidelity-and-multi-regime-error",
    "to": "record:continuous-stochastic-alignment-reals",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:observational-fidelity-and-multi-regime-error",
+   "to": "record:finite-probability-and-krylov-foundation",
    "type": "formal-reuse"
   },
   {

@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T154706.011836Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept).
+AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170732.006215Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept).
 
 Canonical source: [QuantitativeTransfer.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean)
 
@@ -64,7 +64,7 @@ Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_lo
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [QuantitativeTransfer.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean) | `QuantitativeTransfer.aliased_fiber_gap`, `QuantitativeTransfer.aliased_lab_witness`, `QuantitativeTransfer.aliased_readout_floor`, `QuantitativeTransfer.aliased_separable_iff`, `QuantitativeTransfer.anchor_detects_shared_drift`, `QuantitativeTransfer.b1_headroom_witness`, `QuantitativeTransfer.correlated_pool_blindness_vs_anchor`, `QuantitativeTransfer.correlated_pool_lab_witness`, `QuantitativeTransfer.lag_horizon_wall`, `QuantitativeTransfer.lag_wall_iff_linear`, `QuantitativeTransfer.leakage_lag_wall`, `QuantitativeTransfer.mixture_aliasing_test_floor`, `QuantitativeTransfer.mixture_floor_attained`, `QuantitativeTransfer.pool_ceiling_attained`, `QuantitativeTransfer.pool_disagreement_ceiling`, `QuantitativeTransfer.pool_shared_bias_floor`, `QuantitativeTransfer.switchLag_nonpos_tabular`, `QuantitativeTransfer.switchLag_strictMono_rho`, `QuantitativeTransfer.switching_score_persists`, `QuantitativeTransfer.trustRegionMetricLaxSim`, `QuantitativeTransfer.trust_region_lab_witness`, `QuantitativeTransfer.trust_region_tube`, `QuantitativeTransfer.trust_region_tube_attained`, `QuantitativeTransfer.trust_region_viability`, `QuantitativeTransfer.two_point_test_floor`, `QuantitativeTransfer.unprojected_step_overshoots` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T154706.011836Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T170732.006215Z/verification.json) | — |
 | integration | [b5_walls.py](../../../../experiments/neural-alignment-stress-lab/b5_walls.py) | — |
 | review | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier3-quantitative-transfer-2026-11-24/NOTE.md) | — |
 
@@ -74,7 +74,8 @@ Aliases: —
 ### History
 
 - 24 November 2026: added as Mathlib periphery #15 (Frontier 3), paired with neural stress-lab B5. AI-written.
+- 24 November 2026 (Wave 1): refreshed FiniteProb.tvDist and FiniteProb.diracDist unfoldings onto FiniteProbKrylov (receipt 20261124T170732.006215Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T16:25:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T17:13:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

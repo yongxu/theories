@@ -18,16 +18,19 @@
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Restricting Becoming.OplaxHistory.C2CoupledAlignmentWitness to live configurations (Bool x Bool) x Bool yields a finite sub-stochastic operator separating same-projection states finInPhase and finAntiPhase at length 1 <= card - 1 (c2_coupled_survival_separation). (`SurvivalDistinguishability.C2FinState`, `SurvivalDistinguishability.c2Embed`, `SurvivalDistinguishability.c2Op`, `SurvivalDistinguishability.c2_coupled_survival_separation`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+5. Abbreviating stepOp to FiniteKrylov.stepLinearMap while keeping local defs survVec and krylovSub bridged via survVec_eq_finiteKrylov and krylovSub_eq_finiteKrylov, exact FiberLumpable compresses survival indistinguishability to length <= card O - 1 (survival_indistinguishable_iff_le_obs_pred; substochastic, since Markov kernels give survVec = 1). (`SurvivalDistinguishability.survVec_eq_finiteKrylov`, `SurvivalDistinguishability.krylovSub_eq_finiteKrylov`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred`)
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) in Mathlib periphery #14; assumes finite nonempty state space [Fintype S] [Nonempty S] and arbitrary real matrices K : Mode -> S -> S -> ℝ against the all-ones vector (interpreted as survival probabilities when rows are nonnegative substochastic).
+- Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) in Mathlib periphery; assumes finite nonempty state space [Fintype S] [Nonempty S] and arbitrary real matrices K : Mode -> S -> S -> ℝ against the all-ones vector (interpreted as survival probabilities when rows are nonnegative substochastic).
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - Does not prove finite-horizon distinguishability bounds for infinite-state, continuous-state, or non-stationary transition kernels.
+- Under normalized stochastic Markov rows, survVec K w s = 1 for all words w, so FiberLumpable observable-horizon compression carries non-trivial distinguishing content only for substochastic/real survival matrices.
 - Agreement across arbitrary single-mode constant sequences does not ensure indistinguishability under mode switches. Witness: `SurvivalDistinguishability.three_state_mode_switch_counterexample`.
 - Exact finite-matrix separation on frozen greedy policies never establishes by itself that online learning agents keep stationary or time-homogeneous transition kernels.
 - **Counterexample:** countdown_attains_card_pred proves tightness of Fintype.card S - 1 for every n >= 1; three_state_mode_switch_counterexample shows all constant-mode words fail to separate states 0 and 1 while [false, true] separates them. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean)
@@ -37,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T140857.994394Z): all 21 declarations (13 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 14/14 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted).
+AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162749.416501Z): all 24 declaration audits (16 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 16/16 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted).
 
 Canonical source: [SurvivalDistinguishability.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean)
 
@@ -51,11 +54,12 @@ Human read by Ren; extend matrix distinguishability bounds from finite state spa
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Formalizes the Moore/Krylov finite-automaton survival distinguishability bound (length <= card - 1) over Mathlib ℝ, joins it onto Becoming.OplaxHistory.C2CoupledAlignmentWitness, and pairs it with an analytical frozen-Q-table matrix evaluation and deterministic local CPU replay extracted from the CoupledRace Q-learner.
+Formalizes the Moore/Krylov finite-automaton survival distinguishability bound (length <= card - 1) over Mathlib ℝ, abbreviates stepOp to FiniteKrylov.stepLinearMap, bridges local survVec/krylovSub via equality theorems to FiniteProbKrylov's FiberLumpable observable-horizon reduction, joins onto Becoming.OplaxHistory.C2CoupledAlignmentWitness, and pairs with an analytical frozen-Q-table matrix evaluation and deterministic local CPU replay extracted from the CoupledRace Q-learner.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
+- **formal-reuse**: [finite-probability-and-krylov-foundation](finite-probability-and-krylov-foundation.md). Reuses FiniteKrylov.stepLinearMap, FiniteKrylov.wordVec, FiniteKrylov.krylovSub, wordVec_mem_krylovSub_pred, FiberLumpable, and survival_indistinguishable_iff_le_obs_pred.
 - **formal-reuse**: [oplax-history-comparison-and-relational-loss](oplax-history-comparison-and-relational-loss.md). Imports C2CoupledAlignmentWitness (stepFn, guardS, c2ProjMicro, uInPhase_kernel, uAntiPhase_not_kernel) into c2Op and c2_coupled_survival_separation.
 - related, not a proved adapter: [observational-fidelity-and-multi-regime-error](observational-fidelity-and-multi-regime-error.md). Companion periphery module connecting zero observation TV on C2CoupledAlignmentWitness to FiberViabilitySplit.
 
@@ -64,21 +68,22 @@ Formalizes the Moore/Krylov finite-automaton survival distinguishability bound (
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [SurvivalDistinguishability.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean) | `SurvivalDistinguishability.stepOp`, `SurvivalDistinguishability.survVec`, `SurvivalDistinguishability.krylovSub`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred`, `SurvivalDistinguishability.countdownK`, `SurvivalDistinguishability.survVec_countdownK`, `SurvivalDistinguishability.countdown_attains_card_pred`, `SurvivalDistinguishability.switchK`, `SurvivalDistinguishability.three_state_mode_switch_counterexample`, `SurvivalDistinguishability.C2FinState`, `SurvivalDistinguishability.c2Embed`, `SurvivalDistinguishability.c2Op`, `SurvivalDistinguishability.c2_coupled_survival_separation` |
+| proof | [SurvivalDistinguishability.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean) | `SurvivalDistinguishability.stepOp`, `SurvivalDistinguishability.survVec`, `SurvivalDistinguishability.survVec_eq_finiteKrylov`, `SurvivalDistinguishability.krylovSub`, `SurvivalDistinguishability.krylovSub_eq_finiteKrylov`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred`, `SurvivalDistinguishability.countdownK`, `SurvivalDistinguishability.survVec_countdownK`, `SurvivalDistinguishability.countdown_attains_card_pred`, `SurvivalDistinguishability.switchK`, `SurvivalDistinguishability.three_state_mode_switch_counterexample`, `SurvivalDistinguishability.C2FinState`, `SurvivalDistinguishability.c2Embed`, `SurvivalDistinguishability.c2Op`, `SurvivalDistinguishability.c2_coupled_survival_separation` |
 | integration | [check_survival_distinguishability.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/check_survival_distinguishability.py) | — |
 | statement | [PREDICTIONS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/PREDICTIONS.md) | — |
 | review | [RESULTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/RESULTS.md) | — |
 | integration | [frozen_q_survival_test.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/frozen_q_survival_test.py) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T140857.994394Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T162749.416501Z/verification.json) | — |
 
-Aliases: `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred`, `SurvivalDistinguishability.countdown_attains_card_pred`, `SurvivalDistinguishability.three_state_mode_switch_counterexample`, `SurvivalDistinguishability.c2_coupled_survival_separation`
+Aliases: `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred`, `SurvivalDistinguishability.countdown_attains_card_pred`, `SurvivalDistinguishability.three_state_mode_switch_counterexample`, `SurvivalDistinguishability.c2_coupled_survival_separation`
 
 <a id="history--沿革"></a>
 ### History
 
-- 24 November 2026: added finite-mode-survival-distinguishability (Mathlib periphery #14, SurvivalDistinguishability.lean, initial receipt 20261124T120827.390573Z; refreshed on 0397c5edd to 20261124T140857.994394Z) with Krylov card - 1 theorem, countdown sharpness witness, 3-state mode-switch counterexample, C2CoupledAlignmentWitness client, and initial frozen-Q local CPU empirical test. AI-written.
+- 24 November 2026: added finite-mode-survival-distinguishability (Mathlib periphery, SurvivalDistinguishability.lean, initial receipt 20261124T120827.390573Z; refreshed on 0397c5edd to 20261124T140857.994394Z) with Krylov card - 1 theorem, countdown sharpness witness, 3-state mode-switch counterexample, C2CoupledAlignmentWitness client, and initial frozen-Q local CPU empirical test. AI-written.
 - 24 November 2026 (Astra audit fix): clarified arbitrary real-matrix statement vs nonnegative substochastic probability interpretation, corrected frozen-Q alive-state operator cutoff to 62 (63 x 63 alive states), formalized idle_hi < pending_lo separation for deterministic replay after the initial 11:12:36Z evaluation, enforced -O-safe --pred-sha + calibration/separation checks in frozen_q_survival_test.py, aligned correspondence and headings to analytical-prediction / deterministic-replay wording, and refreshed references and reviewed_at_utc. AI-written.
+- 24 November 2026 (Wave 1): abbreviated stepOp to FiniteKrylov.stepLinearMap, bridged local survVec and krylovSub to FiniteProbKrylov via equality theorems (survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov), and added FiberLumpable observable-horizon bridge survival_indistinguishable_iff_le_obs_pred (non-trivial for substochastic survival matrices; receipt 20261124T162749.416501Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T13:16:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T16:37:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

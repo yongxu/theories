@@ -1394,63 +1394,63 @@ Definitions and types:
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean`
 
-Imports: `Mathlib.Analysis.LocallyConvex.Separation`, `Mathlib.Analysis.Convex.StdSimplex`, `Mathlib.Analysis.Normed.Module.FiniteDimension`, `Mathlib.Tactic`
+Imports: `Mathlib.Analysis.LocallyConvex.Separation`, `Mathlib.Analysis.Convex.StdSimplex`, `Mathlib.Analysis.Normed.Module.FiniteDimension`, `Mathlib.Tactic`, `FiniteProbKrylov`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [ConsequenceDuality.FinDist.ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L54) | 54 |
-| [ConsequenceDuality.pushforward_comp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L81) | 81 |
-| [ConsequenceDuality.tvDist_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L104) | 104 |
-| [ConsequenceDuality.tvDist_self](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L108) | 108 |
-| [ConsequenceDuality.tvDist_symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L112) | 112 |
-| [ConsequenceDuality.tvDist_triangle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L117) | 117 |
-| [ConsequenceDuality.tvDist_pushforward_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L125) | 125 |
-| [ConsequenceDuality.massOutside_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L151) | 151 |
-| [ConsequenceDuality.optimal_query_tv_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L159) | 159 |
-| [ConsequenceDuality.empty_source_infeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L343) | 343 |
-| [ConsequenceDuality.primalGap_le_dualBound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L367) | 367 |
-| [ConsequenceDuality.continuous_finset_sup'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L433) | 433 |
-| [ConsequenceDuality.pi_norm_eq_sup'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L452) | 452 |
-| [ConsequenceDuality.dualBound_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L468) | 468 |
-| [ConsequenceDuality.finDistPair_of_zeroSum_l1Le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L593) | 593 |
-| [ConsequenceDuality.consequence_minimax_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L645) | 645 |
-| [ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L954) | 954 |
-| [ConsequenceDuality.common_history_tv_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1022) | 1022 |
-| [ConsequenceDuality.one_query_tv_floor_via_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1401) | 1401 |
-| [ConsequenceDuality.diagSupport_fst_eq_snd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1499) | 1499 |
-| [ConsequenceDuality.two_query_diagonal_three_fifths_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1530) | 1530 |
-| [ConsequenceDuality.joint_distribution_one_half_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1600) | 1600 |
-| [ConsequenceDuality.policyMargin_le_fiberBestMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1676) | 1676 |
-| [ConsequenceDuality.decision_margin_minimax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1699) | 1699 |
-| [ConsequenceDuality.decision_margin_pos_iff_common_action](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1740) | 1740 |
-| [ConsequenceDuality.two_state_exact_minimax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1765) | 1765 |
-| [ConsequenceDuality.public_port_vs_recipient_exact](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1882) | 1882 |
-| [ConsequenceDuality.b2_aliasing_08_exact_certificate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L2035) | 2035 |
-| [ConsequenceDuality.diagSurvivalProb_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L2108) | 2108 |
-| [ConsequenceDuality.noisy_short_word_amplification](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L2120) | 2120 |
+| [ConsequenceDuality.FinDist.ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L52) | 52 |
+| [ConsequenceDuality.pushforward_comp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L65) | 65 |
+| [ConsequenceDuality.tvDist_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L74) | 74 |
+| [ConsequenceDuality.tvDist_self](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L77) | 77 |
+| [ConsequenceDuality.tvDist_symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L80) | 80 |
+| [ConsequenceDuality.tvDist_triangle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L83) | 83 |
+| [ConsequenceDuality.tvDist_pushforward_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L88) | 88 |
+| [ConsequenceDuality.massOutside_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L98) | 98 |
+| [ConsequenceDuality.optimal_query_tv_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L103) | 103 |
+| [ConsequenceDuality.empty_source_infeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L112) | 112 |
+| [ConsequenceDuality.primalGap_le_dualBound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L133) | 133 |
+| [ConsequenceDuality.continuous_finset_sup'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L199) | 199 |
+| [ConsequenceDuality.pi_norm_eq_sup'](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L218) | 218 |
+| [ConsequenceDuality.dualBound_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L234) | 234 |
+| [ConsequenceDuality.finDistPair_of_zeroSum_l1Le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L359) | 359 |
+| [ConsequenceDuality.consequence_minimax_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L411) | 411 |
+| [ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L720) | 720 |
+| [ConsequenceDuality.common_history_tv_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L788) | 788 |
+| [ConsequenceDuality.one_query_tv_floor_via_duality](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1167) | 1167 |
+| [ConsequenceDuality.diagSupport_fst_eq_snd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1265) | 1265 |
+| [ConsequenceDuality.two_query_diagonal_three_fifths_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1296) | 1296 |
+| [ConsequenceDuality.joint_distribution_one_half_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1366) | 1366 |
+| [ConsequenceDuality.policyMargin_le_fiberBestMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1442) | 1442 |
+| [ConsequenceDuality.decision_margin_minimax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1465) | 1465 |
+| [ConsequenceDuality.decision_margin_pos_iff_common_action](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1506) | 1506 |
+| [ConsequenceDuality.two_state_exact_minimax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1531) | 1531 |
+| [ConsequenceDuality.public_port_vs_recipient_exact](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1648) | 1648 |
+| [ConsequenceDuality.b2_aliasing_08_exact_certificate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1801) | 1801 |
+| [ConsequenceDuality.diagSurvivalProb_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1874) | 1874 |
+| [ConsequenceDuality.noisy_short_word_amplification](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1886) | 1886 |
 
 Definitions and types:
 
-- `structure` [ConsequenceDuality.FinDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L49) (L49)
-- `def` [ConsequenceDuality.diracDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L62) (L62)
-- `def` [ConsequenceDuality.pushforward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L68) (L68)
-- `def` [ConsequenceDuality.tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L101) (L101)
-- `def` [ConsequenceDuality.massOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L147) (L147)
-- `def` [ConsequenceDuality.PrimalFeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L352) (L352)
-- `def` [ConsequenceDuality.primalGap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L357) (L357)
-- `def` [ConsequenceDuality.dualBound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L361) (L361)
-- `def` [ConsequenceDuality.multiQueryTvError](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L941) (L941)
-- `def` [ConsequenceDuality.multiQueryDualObj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L947) (L947)
-- `def` [ConsequenceDuality.diagSupport](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1496) (L1496)
-- `def` [ConsequenceDuality.fourFifthsBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1506) (L1506)
-- `def` [ConsequenceDuality.oneFifthBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1512) (L1512)
-- `def` [ConsequenceDuality.diagLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1518) (L1518)
-- `def` [ConsequenceDuality.uniformPairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1587) (L1587)
-- `def` [ConsequenceDuality.fairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1593) (L1593)
-- `def` [ConsequenceDuality.policyMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1659) (L1659)
-- `def` [ConsequenceDuality.fiberActionMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1664) (L1664)
-- `def` [ConsequenceDuality.fiberBestMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1671) (L1671)
-- `def` [ConsequenceDuality.diagSurvivalProb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L2104) (L2104)
+- `abbrev` [ConsequenceDuality.FinDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L50) (L50)
+- `abbrev` [ConsequenceDuality.diracDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L57) (L57)
+- `abbrev` [ConsequenceDuality.pushforward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L61) (L61)
+- `abbrev` [ConsequenceDuality.tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L71) (L71)
+- `abbrev` [ConsequenceDuality.massOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L94) (L94)
+- `def` [ConsequenceDuality.PrimalFeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L118) (L118)
+- `def` [ConsequenceDuality.primalGap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L123) (L123)
+- `def` [ConsequenceDuality.dualBound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L127) (L127)
+- `def` [ConsequenceDuality.multiQueryTvError](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L707) (L707)
+- `def` [ConsequenceDuality.multiQueryDualObj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L713) (L713)
+- `def` [ConsequenceDuality.diagSupport](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1262) (L1262)
+- `def` [ConsequenceDuality.fourFifthsBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1272) (L1272)
+- `def` [ConsequenceDuality.oneFifthBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1278) (L1278)
+- `def` [ConsequenceDuality.diagLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1284) (L1284)
+- `def` [ConsequenceDuality.uniformPairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1353) (L1353)
+- `def` [ConsequenceDuality.fairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1359) (L1359)
+- `def` [ConsequenceDuality.policyMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1425) (L1425)
+- `def` [ConsequenceDuality.fiberActionMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1430) (L1430)
+- `def` [ConsequenceDuality.fiberBestMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1437) (L1437)
+- `def` [ConsequenceDuality.diagSurvivalProb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean#L1870) (L1870)
 
 </details>
 
@@ -1463,41 +1463,41 @@ Definitions and types:
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean`
 
-Imports: `Mathlib.Analysis.LocallyConvex.Separation`, `Mathlib.Analysis.Convex.StdSimplex`, `Mathlib.Analysis.Normed.Module.FiniteDimension`, `Mathlib.Tactic`, `ConsequenceDuality`
+Imports: `Mathlib.Analysis.LocallyConvex.Separation`, `Mathlib.Analysis.Convex.StdSimplex`, `Mathlib.Analysis.Normed.Module.FiniteDimension`, `Mathlib.Tactic`, `FiniteProbKrylov`, `ConsequenceDuality`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [DualityBridges.approx_feasible_of_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L41) | 41 |
-| [DualityBridges.primalGap_le_dualBoundVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L83) | 83 |
-| [DualityBridges.dualBound_with_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L153) | 153 |
-| [DualityBridges.dualBound_with_uniform_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L166) | 166 |
-| [DualityBridges.dualBound_extendQueryFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L190) | 190 |
-| [DualityBridges.monotone_entry_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L207) | 207 |
-| [DualityBridges.monotone_entry_value_exists](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L225) | 225 |
-| [DualityBridges.strict_entry_improvement_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L257) | 257 |
-| [DualityBridges.dualBound_zero_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L343) | 343 |
-| [DualityBridges.zero_dualBound_iff_affine_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L370) | 370 |
-| [DualityBridges.krylovSub_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L430) | 430 |
-| [DualityBridges.stepLinearMap_mem_krylovSub_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L437) | 437 |
-| [DualityBridges.krylovSub_step_eq_of_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L445) | 445 |
-| [DualityBridges.krylovSub_stabilizes_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L464) | 464 |
-| [DualityBridges.krylovSub_stabilizes_before_card](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L481) | 481 |
-| [DualityBridges.wordVec_mem_krylovSub_pred](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L531) | 531 |
-| [DualityBridges.finite_krylov_zero_minimax_radius](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L557) | 557 |
+| [DualityBridges.approx_feasible_of_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L42) | 42 |
+| [DualityBridges.primalGap_le_dualBoundVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L84) | 84 |
+| [DualityBridges.dualBound_with_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L154) | 154 |
+| [DualityBridges.dualBound_with_uniform_model_error](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L167) | 167 |
+| [DualityBridges.dualBound_extendQueryFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L191) | 191 |
+| [DualityBridges.monotone_entry_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L208) | 208 |
+| [DualityBridges.monotone_entry_value_exists](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L226) | 226 |
+| [DualityBridges.strict_entry_improvement_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L258) | 258 |
+| [DualityBridges.dualBound_zero_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L344) | 344 |
+| [DualityBridges.zero_dualBound_iff_affine_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L371) | 371 |
+| [DualityBridges.krylovSub_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L423) | 423 |
+| [DualityBridges.stepLinearMap_mem_krylovSub_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L428) | 428 |
+| [DualityBridges.krylovSub_step_eq_of_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L433) | 433 |
+| [DualityBridges.krylovSub_stabilizes_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L439) | 439 |
+| [DualityBridges.krylovSub_stabilizes_before_card](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L445) | 445 |
+| [DualityBridges.wordVec_mem_krylovSub_pred](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L450) | 450 |
+| [DualityBridges.finite_krylov_zero_minimax_radius](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L466) | 466 |
 
 Definitions and types:
 
-- `def` [DualityBridges.PrimalFeasibleVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L29) (L29)
-- `def` [DualityBridges.dualBoundVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L34) (L34)
-- `def` [DualityBridges.extendQueryFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L180) (L180)
-- `def` [DualityBridges.extendDualCoeff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L185) (L185)
-- `def` [DualityBridges.stepOp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L400) (L400)
-- `def` [DualityBridges.stepLinearMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L404) (L404)
-- `def` [DualityBridges.wordVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L416) (L416)
-- `def` [DualityBridges.survVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L422) (L422)
-- `def` [DualityBridges.krylovSub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L426) (L426)
-- `abbrev` [DualityBridges.ShortWord](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L547) (L547)
-- `def` [DualityBridges.shortWordQuery](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L551) (L551)
+- `def` [DualityBridges.PrimalFeasibleVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L30) (L30)
+- `def` [DualityBridges.dualBoundVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L35) (L35)
+- `def` [DualityBridges.extendQueryFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L181) (L181)
+- `def` [DualityBridges.extendDualCoeff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L186) (L186)
+- `abbrev` [DualityBridges.stepOp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L401) (L401)
+- `abbrev` [DualityBridges.stepLinearMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L405) (L405)
+- `abbrev` [DualityBridges.wordVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L410) (L410)
+- `abbrev` [DualityBridges.survVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L415) (L415)
+- `abbrev` [DualityBridges.krylovSub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L419) (L419)
+- `abbrev` [DualityBridges.ShortWord](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L456) (L456)
+- `def` [DualityBridges.shortWordQuery](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L460) (L460)
 
 </details>
 

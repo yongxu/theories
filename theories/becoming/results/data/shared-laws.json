@@ -58,9 +58,9 @@
   ]
  },
  "counts": {
-  "laws": 4548,
+  "laws": 4553,
   "no_declarations": 9,
-  "outside": 416,
+  "outside": 421,
   "grammar": 1179,
   "balance, represented": 642,
   "anchor, not reached": 99,
@@ -21236,6 +21236,108 @@
      "SurvivalDistinguishability.c2Op",
      "SurvivalDistinguishability.c2_coupled_survival_separation"
     ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "SurvivalDistinguishability.survVec_eq_finiteKrylov",
+     "SurvivalDistinguishability.krylovSub_eq_finiteKrylov",
+     "SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred"
+    ],
+    "outside": [
+     "SurvivalDistinguishability.survVec_eq_finiteKrylov",
+     "SurvivalDistinguishability.krylovSub_eq_finiteKrylov",
+     "SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred"
+    ]
+   }
+  ],
+  "finite-probability-and-krylov-foundation": [
+   {
+    "law": 1,
+    "declarations": [
+     "FiniteProb.FinDist",
+     "FiniteProb.FinDist.ext",
+     "FiniteProb.diracDist",
+     "FiniteProb.pushforward",
+     "FiniteProb.pushforward_comp",
+     "FiniteProb.tvDist",
+     "FiniteProb.tvDist_nonneg",
+     "FiniteProb.tvDist_self",
+     "FiniteProb.tvDist_symm",
+     "FiniteProb.tvDist_eq_zero_iff",
+     "FiniteProb.tvDist_triangle",
+     "FiniteProb.tvDist_pushforward_le",
+     "FiniteProb.massOutside",
+     "FiniteProb.massOutside_nonneg",
+     "FiniteProb.optimal_query_tv_floor",
+     "FiniteProb.empty_source_infeasible"
+    ],
+    "outside": [
+     "FiniteProb.FinDist",
+     "FiniteProb.FinDist.ext",
+     "FiniteProb.diracDist",
+     "FiniteProb.pushforward",
+     "FiniteProb.pushforward_comp",
+     "FiniteProb.tvDist",
+     "FiniteProb.tvDist_nonneg",
+     "FiniteProb.tvDist_self",
+     "FiniteProb.tvDist_symm",
+     "FiniteProb.tvDist_eq_zero_iff",
+     "FiniteProb.tvDist_triangle",
+     "FiniteProb.tvDist_pushforward_le",
+     "FiniteProb.massOutside",
+     "FiniteProb.massOutside_nonneg",
+     "FiniteProb.optimal_query_tv_floor",
+     "FiniteProb.empty_source_infeasible"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "FiniteKrylov.stepOp",
+     "FiniteKrylov.stepLinearMap",
+     "FiniteKrylov.wordVec",
+     "FiniteKrylov.survVec",
+     "FiniteKrylov.krylovSub",
+     "FiniteKrylov.krylovSub_mono",
+     "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+     "FiniteKrylov.krylovSub_step_eq_of_eq",
+     "FiniteKrylov.krylovSub_stabilizes_from",
+     "FiniteKrylov.krylovSub_stabilizes_before_rank",
+     "FiniteKrylov.krylovSub_stabilizes_before_card",
+     "FiniteKrylov.wordVec_mem_krylovSub_pred"
+    ],
+    "outside": [
+     "FiniteKrylov.stepOp",
+     "FiniteKrylov.stepLinearMap",
+     "FiniteKrylov.wordVec",
+     "FiniteKrylov.survVec",
+     "FiniteKrylov.krylovSub",
+     "FiniteKrylov.krylovSub_mono",
+     "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+     "FiniteKrylov.krylovSub_step_eq_of_eq",
+     "FiniteKrylov.krylovSub_stabilizes_from",
+     "FiniteKrylov.krylovSub_stabilizes_before_rank",
+     "FiniteKrylov.krylovSub_stabilizes_before_card",
+     "FiniteKrylov.wordVec_mem_krylovSub_pred"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "FiniteKrylov.FiberLumpable",
+     "FiniteKrylov.pullbackLinear",
+     "FiniteKrylov.mem_range_pullbackLinear_iff",
+     "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+     "FiniteKrylov.lumpable_obs_horizon_one_witness"
+    ],
+    "outside": [
+     "FiniteKrylov.FiberLumpable",
+     "FiniteKrylov.pullbackLinear",
+     "FiniteKrylov.mem_range_pullbackLinear_iff",
+     "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+     "FiniteKrylov.lumpable_obs_horizon_one_witness"
+    ]
    }
   ],
   "finite-trace-transport": [
@@ -35915,6 +36017,21 @@
      "ObservationalFidelity.sharpBoolKernel",
      "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
      "ObservationalFidelity.feedback_destroys_openloop_contraction"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+     "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+     "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+     "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness"
+    ],
+    "outside": [
+     "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+     "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+     "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+     "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness"
     ]
    }
   ],

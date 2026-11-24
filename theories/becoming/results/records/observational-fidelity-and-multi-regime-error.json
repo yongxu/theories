@@ -7,7 +7,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-24T12:40:28+00:00",
+  "reviewed_at_utc": "2026-11-24T16:37:00+00:00",
   "statement": {
     "en": "Over Mathlib ℝ (standard axioms only), ObservationalFidelity proves the query TV blindness floor, empty-source infeasibility, zero-TV coexistence with FiberViabilitySplit, three-way query separation, Dobrushin-MetricLaxSim kernel tubes, [0,1] risk transfer, and sharp/feedback controls."
   },
@@ -73,11 +73,20 @@
         "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
         "ObservationalFidelity.feedback_destroys_openloop_contraction"
       ]
+    },
+    {
+      "en": "Over FiniteProbKrylov, zero rowDefect characterizes pushforward commutation (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward) and exists-L characterization of FiberLumpable (fiberLumpable_iff_exists_zero_rowDefect), while mismatched fixed L still yields rowDefect = 1 on FiberLumpable Bool fibers (fixed_macro_nonzero_rowDefect_witness).",
+      "declarations": [
+        "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+        "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+        "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+        "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) through the Mathlib periphery workspace (#13); requires finite Fintype state/query spaces, Nonempty U for optimal TV attainment, time-homogeneous Markov steps, and [0, 1]-bounded macro readout b for risk transfer."
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) through the Mathlib periphery workspace; requires finite Fintype state/query spaces, Nonempty U for optimal TV attainment, time-homogeneous Markov steps, and [0, 1]-bounded macro readout b for risk transfer."
     },
     {
       "en": "kernel_contraction_tube_via_metricLaxSim additionally assumes alpha in [0, 1), uniform Dobrushin bound <= alpha, uniform rowDefect <= eps (eps >= 0), a macro Viability.Certificate (guardQ, invQ), initial invQ lam0 with tvDist (pushforward f p0) lam0 <= d0 (d0 >= 0), and guard closure (guardQ lam and tvDist (pushforward f p) lam <= max d0 (eps / (1 - alpha)) -> guardS p)."
@@ -97,7 +106,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
       "detail": {
-        "en": "empty_source_infeasible (IsEmpty U), zero_tv_does_not_prevent_fiber_viability_split (zero TV on C2CoupledAlignmentWitness where in-phase has Viability.Kernel and anti-phase lacks one, refuting any sound and complete macro predicate), per_query_not_implies_joint_marginal (3/5 gap), joint_marginal_not_implies_joint_dist (1/2 gap), sharp_oplax_dobrushin_attainment (tight d_n equality on Bool), fiber_split_readout_floor (1/2 gap on {0,1} split), feedback_destroys_openloop_contraction (alpha=0 rows switching to alpha=1 identity), and three_regime_error_contrast part 3 (ConcurrentSerialWitness depletion)."
+        "en": "empty_source_infeasible (IsEmpty U), zero_tv_does_not_prevent_fiber_viability_split (zero TV on C2CoupledAlignmentWitness where in-phase has Viability.Kernel and anti-phase lacks one, refuting any sound and complete macro predicate), per_query_not_implies_joint_marginal (3/5 gap), joint_marginal_not_implies_joint_dist (1/2 gap), sharp_oplax_dobrushin_attainment (tight d_n equality on Bool), fiber_split_readout_floor (1/2 gap on {0,1} split), feedback_destroys_openloop_contraction (alpha=0 rows switching to alpha=1 identity), three_regime_error_contrast part 3 (ConcurrentSerialWitness depletion), and fixed_macro_nonzero_rowDefect_witness (FiberLumpable singleton fibers with mismatched fixed L giving rowDefect = 1)."
       }
     }
   ],
@@ -110,7 +119,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T140733.167446Z): all 56 declarations (35 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it."
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162457.244500Z): all 60 declaration audits (39 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it."
   },
   "next_delta": {
     "en": "Human read by Ren; sample-complexity / concentration inequalities or continuous measurable query spaces if required beyond finite laws."
@@ -121,6 +130,13 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
   "aliases": [],
   "dependencies": [
+    {
+      "id": "finite-probability-and-krylov-foundation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Imports FiniteProb.* (FinDist, diracDist, pushforward, tvDist, tvDist_eq_zero_iff, massOutside, optimal_query_tv_floor, empty_source_infeasible) and FiniteKrylov.FiberLumpable."
+      }
+    },
     {
       "id": "oplax-history-comparison-and-relational-loss",
       "relation": "formal-reuse",
@@ -180,14 +196,18 @@
         "ObservationalFidelity.sharpBoolKernel",
         "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
         "ObservationalFidelity.feedback_destroys_openloop_contraction",
-        "ObservationalFidelity.three_regime_kernel_contrast"
+        "ObservationalFidelity.three_regime_kernel_contrast",
+        "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+        "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+        "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+        "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness"
       ],
-      "sha256": "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d"
+      "sha256": "902b5b7bfcd9fb9b4178d71ca73903ffc26846fcbf867de064a78750f7b84662"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/check_observational_fidelity.py",
       "role": "integration",
-      "sha256": "34382397f4cc84aa63950e15ef07ddef17510c056728c13e54fbf36483fe5b6e"
+      "sha256": "550eac97136cbd962f70e88a4588ef6896060b01d74bde5137af037085080bdb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T085020.963689Z/verification.json",
@@ -201,16 +221,16 @@
       "sha256": "b56d67b2a6f1391b0ab68e81b04b460d22545f6fb3e67ffba92a8e0dd979d4cb"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T140733.167446Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T162457.244500Z/verification.json",
       "role": "receipt",
-      "sha256": "4ea6a14c5ad27bcc0f960dae2aabe92ce85c2789e8016aa4f5a60689bdab45a4",
+      "sha256": "a6cb962010f85dffc2d905ff6e96abbd37dea4d647e262fe1b7828fd6ac8c33e",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T140733.167446Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T162457.244500Z/verification.json",
       "sha256_pointer": "/source_sha256/ObservationalFidelity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -218,13 +238,16 @@
   ],
   "history": [
     {
-      "en": "24 November 2026 (Wave U6): added ObservationalFidelity (Mathlib periphery #13, v4.30.0-rc2) formalizing WenHeHua v7 Appendix G / v9 formal/61 TV query blindness floors, multi-query convex separations, and a three-regime error contrast joining AlignmentReals, BecomingReals, Becoming.OplaxHistory, and Becoming.PolyComposition. AI-written."
+      "en": "24 November 2026 (Wave U6): added ObservationalFidelity (Mathlib v4.30.0-rc2 periphery) formalizing WenHeHua v7 Appendix G / v9 formal/61 TV query blindness floors, multi-query convex separations, and a three-regime error contrast joining AlignmentReals, BecomingReals, Becoming.OplaxHistory, and Becoming.PolyComposition. AI-written."
     },
     {
       "en": "24 November 2026 (Track B1): extended ObservationalFidelity with rowDefect, Dobrushin contraction (tvDist_pushKernel_dobrushin, tvDist_pushKernel_dobrushin_step), literal AlignmentReals.MetricLaxSim kernel instantiation (kernelMetricLaxSim), derived Viability.Kernel tube transfer, [0, 1] viability_risk_transfer_bound + fiber_split_readout_floor, sharpBoolKernel attainment, and feedback_destroys_openloop_contraction (initial receipt 20261124T120707.983329Z; refreshed on 0397c5edd to 20261124T140733.167446Z). AI-written."
     },
     {
       "en": "24 November 2026 (Astra audit fix): refreshed reviewed_at_utc, added full kernel_contraction_tube_via_metricLaxSim transfer hypotheses and identity-query massOutside f precision, and fixed C2CoupledAlignmentWitness counterexample wording (in-phase viable vs anti-phase non-viable, refuting a sound and complete macro predicate). AI-written."
+    },
+    {
+      "en": "24 November 2026 (Wave 1): deduplicated shared FinDist/TV declarations onto FiniteProbKrylov and added B1-B2 FiberLumpable-rowDefect characterizations (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, fiberLumpable_iff_exists_zero_rowDefect, fixed_macro_nonzero_rowDefect_witness; receipt 20261124T162457.244500Z). AI-written."
     }
   ]
 }

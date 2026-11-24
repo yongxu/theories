@@ -20,22 +20,22 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2380,
-    "distinct_byte_contents": 1971,
+    "lean_paths": 2381,
+    "distinct_byte_contents": 1972,
     "byte_identical_duplicate_groups": 140,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1305,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 1036
+      "working-source": 1037
     },
-    "working_named_theorem_lemma_occurrences": 34229,
-    "working_explicit_named_declaration_occurrences": 50842,
+    "working_named_theorem_lemma_occurrences": 34257,
+    "working_explicit_named_declaration_occurrences": 50882,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 420,
-      "becoming-periphery": 15,
+      "becoming-periphery": 16,
       "becoming-ring": 18,
       "concern": 15,
       "core": 148,
@@ -16663,7 +16663,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean",
-      "sha256": "4a8acf2067c986f3d03e7755aaac7d8173f503b6e617937c6ef32f9586803d8d",
+      "sha256": "dad6f4d1c81ccc740265f43f0432e48aad88e63c50d9a1219bfedec5f36c5e0d",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -16674,7 +16674,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean",
-      "sha256": "854def026f25eac5745dc1ba11de7c786f981d67556bc70ad75f08ed2459712f",
+      "sha256": "d80978edfbac42510a3ca29a4aee6ba8c1d4691211198419aa36eca8d9dc324f",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -16685,7 +16685,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean",
-      "sha256": "cac323a74f9c9421c317e674880ad312da0638f4472735aa586b91888df16f32",
+      "sha256": "9d6a64ce8d7d0bdf0c0ddb37d6561e1ebb8faa43d03d16747df226b848d5ec02",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -17894,6 +17894,17 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
         "experiments/evidence-replay/README.md",
         "experiments/evidence-replay/RESULTS.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
+      "sha256": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -19234,7 +19245,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
-      "sha256": "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d",
+      "sha256": "902b5b7bfcd9fb9b4178d71ca73903ffc26846fcbf867de064a78750f7b84662",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -19258,7 +19269,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "sha256": "8dc6d2bcbc7b8636e8120c8e26e62a4d5994005c0e395b920a52474c709c02ac",
+      "sha256": "795e2ef83d3aa0eb8e024b6bb4e8e30905adffeeebcf6c5e6790d1600be92057",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -19296,7 +19307,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
-      "sha256": "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154",
+      "sha256": "64e4d9757051c817012cac345e0541ae3e76e228527b22fb7de036326dff2929",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -151495,158 +151506,6 @@
       },
       "print_axioms_commands": 0
     },
-    "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154": {
-      "byte_size": 14375,
-      "line_count": 279,
-      "imports": [
-        "Mathlib.Algebra.BigOperators.Field",
-        "Mathlib.LinearAlgebra.Dimension.Constructions",
-        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
-        "Mathlib.Tactic",
-        "Becoming.OplaxHistory"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "stepOp",
-          "qualified_name_hint": "SurvivalDistinguishability.stepOp",
-          "line": 21
-        },
-        {
-          "kind": "def",
-          "name": "survVec",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec",
-          "line": 29
-        },
-        {
-          "kind": "theorem",
-          "name": "survVec_cons",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec_cons",
-          "line": 34
-        },
-        {
-          "kind": "def",
-          "name": "krylovSub",
-          "qualified_name_hint": "SurvivalDistinguishability.krylovSub",
-          "line": 39
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_mono",
-          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_mono",
-          "line": 43
-        },
-        {
-          "kind": "theorem",
-          "name": "one_le_finrank_krylov_zero",
-          "qualified_name_hint": "SurvivalDistinguishability.one_le_finrank_krylov_zero",
-          "line": 47
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_chain_stabilizes",
-          "qualified_name_hint": "SurvivalDistinguishability.nat_chain_stabilizes",
-          "line": 58
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_map_step_le",
-          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_map_step_le",
-          "line": 76
-        },
-        {
-          "kind": "theorem",
-          "name": "survVec_mem_krylov_stabilized",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec_mem_krylov_stabilized",
-          "line": 83
-        },
-        {
-          "kind": "theorem",
-          "name": "survival_indistinguishable_iff_le_card_pred",
-          "qualified_name_hint": "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
-          "line": 95
-        },
-        {
-          "kind": "def",
-          "name": "countdownK",
-          "qualified_name_hint": "SurvivalDistinguishability.countdownK",
-          "line": 115
-        },
-        {
-          "kind": "theorem",
-          "name": "survVec_countdownK",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec_countdownK",
-          "line": 118
-        },
-        {
-          "kind": "theorem",
-          "name": "countdown_attains_card_pred",
-          "qualified_name_hint": "SurvivalDistinguishability.countdown_attains_card_pred",
-          "line": 147
-        },
-        {
-          "kind": "def",
-          "name": "switchK",
-          "qualified_name_hint": "SurvivalDistinguishability.switchK",
-          "line": 172
-        },
-        {
-          "kind": "theorem",
-          "name": "survVec_switchK_false",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_false",
-          "line": 176
-        },
-        {
-          "kind": "theorem",
-          "name": "survVec_switchK_true",
-          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_true",
-          "line": 185
-        },
-        {
-          "kind": "theorem",
-          "name": "three_state_mode_switch_counterexample",
-          "qualified_name_hint": "SurvivalDistinguishability.three_state_mode_switch_counterexample",
-          "line": 198
-        },
-        {
-          "kind": "abbrev",
-          "name": "C2FinState",
-          "qualified_name_hint": "SurvivalDistinguishability.C2FinState",
-          "line": 209
-        },
-        {
-          "kind": "def",
-          "name": "c2Embed",
-          "qualified_name_hint": "SurvivalDistinguishability.c2Embed",
-          "line": 212
-        },
-        {
-          "kind": "def",
-          "name": "c2Op",
-          "qualified_name_hint": "SurvivalDistinguishability.c2Op",
-          "line": 217
-        },
-        {
-          "kind": "theorem",
-          "name": "c2_coupled_survival_separation",
-          "qualified_name_hint": "SurvivalDistinguishability.c2_coupled_survival_separation",
-          "line": 226
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 1,
-        "def": 7,
-        "theorem": 13
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "3a2c1c3a431e96b6da8f5ddea9dfcccb60d56d08816d16d6ae778916af29c4fd": {
       "byte_size": 33783,
       "line_count": 630,
@@ -198361,331 +198220,6 @@
       "declaration_counts": {
         "def": 7,
         "theorem": 25
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "4a8acf2067c986f3d03e7755aaac7d8173f503b6e617937c6ef32f9586803d8d": {
-      "byte_size": 119746,
-      "line_count": 2251,
-      "imports": [
-        "Mathlib.Analysis.LocallyConvex.Separation",
-        "Mathlib.Analysis.Convex.StdSimplex",
-        "Mathlib.Analysis.Normed.Module.FiniteDimension",
-        "Mathlib.Tactic"
-      ],
-      "declarations": [
-        {
-          "kind": "structure",
-          "name": "FinDist",
-          "qualified_name_hint": "ConsequenceDuality.FinDist",
-          "line": 49
-        },
-        {
-          "kind": "theorem",
-          "name": "FinDist.ext",
-          "qualified_name_hint": "ConsequenceDuality.FinDist.ext",
-          "line": 54
-        },
-        {
-          "kind": "def",
-          "name": "diracDist",
-          "qualified_name_hint": "ConsequenceDuality.diracDist",
-          "line": 62
-        },
-        {
-          "kind": "def",
-          "name": "pushforward",
-          "qualified_name_hint": "ConsequenceDuality.pushforward",
-          "line": 68
-        },
-        {
-          "kind": "theorem",
-          "name": "pushforward_comp",
-          "qualified_name_hint": "ConsequenceDuality.pushforward_comp",
-          "line": 81
-        },
-        {
-          "kind": "def",
-          "name": "tvDist",
-          "qualified_name_hint": "ConsequenceDuality.tvDist",
-          "line": 101
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_nonneg",
-          "qualified_name_hint": "ConsequenceDuality.tvDist_nonneg",
-          "line": 104
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_self",
-          "qualified_name_hint": "ConsequenceDuality.tvDist_self",
-          "line": 108
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_symm",
-          "qualified_name_hint": "ConsequenceDuality.tvDist_symm",
-          "line": 112
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_triangle",
-          "qualified_name_hint": "ConsequenceDuality.tvDist_triangle",
-          "line": 117
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushforward_le",
-          "qualified_name_hint": "ConsequenceDuality.tvDist_pushforward_le",
-          "line": 125
-        },
-        {
-          "kind": "def",
-          "name": "massOutside",
-          "qualified_name_hint": "ConsequenceDuality.massOutside",
-          "line": 147
-        },
-        {
-          "kind": "theorem",
-          "name": "massOutside_nonneg",
-          "qualified_name_hint": "ConsequenceDuality.massOutside_nonneg",
-          "line": 151
-        },
-        {
-          "kind": "theorem",
-          "name": "optimal_query_tv_floor",
-          "qualified_name_hint": "ConsequenceDuality.optimal_query_tv_floor",
-          "line": 159
-        },
-        {
-          "kind": "theorem",
-          "name": "empty_source_infeasible",
-          "qualified_name_hint": "ConsequenceDuality.empty_source_infeasible",
-          "line": 343
-        },
-        {
-          "kind": "def",
-          "name": "PrimalFeasible",
-          "qualified_name_hint": "ConsequenceDuality.PrimalFeasible",
-          "line": 352
-        },
-        {
-          "kind": "def",
-          "name": "primalGap",
-          "qualified_name_hint": "ConsequenceDuality.primalGap",
-          "line": 357
-        },
-        {
-          "kind": "def",
-          "name": "dualBound",
-          "qualified_name_hint": "ConsequenceDuality.dualBound",
-          "line": 361
-        },
-        {
-          "kind": "theorem",
-          "name": "primalGap_le_dualBound",
-          "qualified_name_hint": "ConsequenceDuality.primalGap_le_dualBound",
-          "line": 367
-        },
-        {
-          "kind": "theorem",
-          "name": "continuous_finset_sup'",
-          "qualified_name_hint": "ConsequenceDuality.continuous_finset_sup'",
-          "line": 433
-        },
-        {
-          "kind": "theorem",
-          "name": "pi_norm_eq_sup'",
-          "qualified_name_hint": "ConsequenceDuality.pi_norm_eq_sup'",
-          "line": 452
-        },
-        {
-          "kind": "theorem",
-          "name": "dualBound_attained",
-          "qualified_name_hint": "ConsequenceDuality.dualBound_attained",
-          "line": 468
-        },
-        {
-          "kind": "theorem",
-          "name": "finDistPair_of_zeroSum_l1Le",
-          "qualified_name_hint": "ConsequenceDuality.finDistPair_of_zeroSum_l1Le",
-          "line": 593
-        },
-        {
-          "kind": "theorem",
-          "name": "consequence_minimax_duality",
-          "qualified_name_hint": "ConsequenceDuality.consequence_minimax_duality",
-          "line": 645
-        },
-        {
-          "kind": "def",
-          "name": "multiQueryTvError",
-          "qualified_name_hint": "ConsequenceDuality.multiQueryTvError",
-          "line": 941
-        },
-        {
-          "kind": "def",
-          "name": "multiQueryDualObj",
-          "qualified_name_hint": "ConsequenceDuality.multiQueryDualObj",
-          "line": 947
-        },
-        {
-          "kind": "theorem",
-          "name": "multiQueryDualObj_le_multiQueryTvError",
-          "qualified_name_hint": "ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError",
-          "line": 954
-        },
-        {
-          "kind": "theorem",
-          "name": "common_history_tv_duality",
-          "qualified_name_hint": "ConsequenceDuality.common_history_tv_duality",
-          "line": 1022
-        },
-        {
-          "kind": "theorem",
-          "name": "one_query_tv_floor_via_duality",
-          "qualified_name_hint": "ConsequenceDuality.one_query_tv_floor_via_duality",
-          "line": 1401
-        },
-        {
-          "kind": "def",
-          "name": "diagSupport",
-          "qualified_name_hint": "ConsequenceDuality.diagSupport",
-          "line": 1496
-        },
-        {
-          "kind": "theorem",
-          "name": "diagSupport_fst_eq_snd",
-          "qualified_name_hint": "ConsequenceDuality.diagSupport_fst_eq_snd",
-          "line": 1499
-        },
-        {
-          "kind": "def",
-          "name": "fourFifthsBool",
-          "qualified_name_hint": "ConsequenceDuality.fourFifthsBool",
-          "line": 1506
-        },
-        {
-          "kind": "def",
-          "name": "oneFifthBool",
-          "qualified_name_hint": "ConsequenceDuality.oneFifthBool",
-          "line": 1512
-        },
-        {
-          "kind": "def",
-          "name": "diagLift",
-          "qualified_name_hint": "ConsequenceDuality.diagLift",
-          "line": 1518
-        },
-        {
-          "kind": "theorem",
-          "name": "two_query_diagonal_three_fifths_witness",
-          "qualified_name_hint": "ConsequenceDuality.two_query_diagonal_three_fifths_witness",
-          "line": 1530
-        },
-        {
-          "kind": "def",
-          "name": "uniformPairBool",
-          "qualified_name_hint": "ConsequenceDuality.uniformPairBool",
-          "line": 1587
-        },
-        {
-          "kind": "def",
-          "name": "fairBool",
-          "qualified_name_hint": "ConsequenceDuality.fairBool",
-          "line": 1593
-        },
-        {
-          "kind": "theorem",
-          "name": "joint_distribution_one_half_witness",
-          "qualified_name_hint": "ConsequenceDuality.joint_distribution_one_half_witness",
-          "line": 1600
-        },
-        {
-          "kind": "def",
-          "name": "policyMargin",
-          "qualified_name_hint": "ConsequenceDuality.policyMargin",
-          "line": 1659
-        },
-        {
-          "kind": "def",
-          "name": "fiberActionMargin",
-          "qualified_name_hint": "ConsequenceDuality.fiberActionMargin",
-          "line": 1664
-        },
-        {
-          "kind": "def",
-          "name": "fiberBestMargin",
-          "qualified_name_hint": "ConsequenceDuality.fiberBestMargin",
-          "line": 1671
-        },
-        {
-          "kind": "theorem",
-          "name": "policyMargin_le_fiberBestMargin",
-          "qualified_name_hint": "ConsequenceDuality.policyMargin_le_fiberBestMargin",
-          "line": 1676
-        },
-        {
-          "kind": "theorem",
-          "name": "decision_margin_minimax",
-          "qualified_name_hint": "ConsequenceDuality.decision_margin_minimax",
-          "line": 1699
-        },
-        {
-          "kind": "theorem",
-          "name": "decision_margin_pos_iff_common_action",
-          "qualified_name_hint": "ConsequenceDuality.decision_margin_pos_iff_common_action",
-          "line": 1740
-        },
-        {
-          "kind": "theorem",
-          "name": "two_state_exact_minimax",
-          "qualified_name_hint": "ConsequenceDuality.two_state_exact_minimax",
-          "line": 1765
-        },
-        {
-          "kind": "theorem",
-          "name": "public_port_vs_recipient_exact",
-          "qualified_name_hint": "ConsequenceDuality.public_port_vs_recipient_exact",
-          "line": 1882
-        },
-        {
-          "kind": "theorem",
-          "name": "b2_aliasing_08_exact_certificate",
-          "qualified_name_hint": "ConsequenceDuality.b2_aliasing_08_exact_certificate",
-          "line": 2035
-        },
-        {
-          "kind": "def",
-          "name": "diagSurvivalProb",
-          "qualified_name_hint": "ConsequenceDuality.diagSurvivalProb",
-          "line": 2104
-        },
-        {
-          "kind": "theorem",
-          "name": "diagSurvivalProb_eq",
-          "qualified_name_hint": "ConsequenceDuality.diagSurvivalProb_eq",
-          "line": 2108
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_short_word_amplification",
-          "qualified_name_hint": "ConsequenceDuality.noisy_short_word_amplification",
-          "line": 2120
-        }
-      ],
-      "declaration_counts": {
-        "def": 19,
-        "structure": 1,
-        "theorem": 30
       },
       "textual_markers": {
         "sorry": [],
@@ -258994,6 +258528,177 @@
       },
       "print_axioms_commands": 0
     },
+    "64e4d9757051c817012cac345e0541ae3e76e228527b22fb7de036326dff2929": {
+      "byte_size": 15851,
+      "line_count": 304,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.LinearAlgebra.Dimension.Constructions",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.Tactic",
+        "FiniteProbKrylov",
+        "Becoming.OplaxHistory"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "stepOp",
+          "qualified_name_hint": "SurvivalDistinguishability.stepOp",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "survVec",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_cons",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_cons",
+          "line": 33
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_eq_finiteKrylov",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_eq_finiteKrylov",
+          "line": 37
+        },
+        {
+          "kind": "def",
+          "name": "krylovSub",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_eq_finiteKrylov",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_eq_finiteKrylov",
+          "line": 51
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_mono",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_mono",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "one_le_finrank_krylov_zero",
+          "qualified_name_hint": "SurvivalDistinguishability.one_le_finrank_krylov_zero",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_chain_stabilizes",
+          "qualified_name_hint": "SurvivalDistinguishability.nat_chain_stabilizes",
+          "line": 75
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_map_step_le",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_map_step_le",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_mem_krylov_stabilized",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_mem_krylov_stabilized",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "survival_indistinguishable_iff_le_card_pred",
+          "qualified_name_hint": "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+          "line": 112
+        },
+        {
+          "kind": "theorem",
+          "name": "survival_indistinguishable_iff_le_obs_pred",
+          "qualified_name_hint": "SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred",
+          "line": 131
+        },
+        {
+          "kind": "def",
+          "name": "countdownK",
+          "qualified_name_hint": "SurvivalDistinguishability.countdownK",
+          "line": 140
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_countdownK",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_countdownK",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "countdown_attains_card_pred",
+          "qualified_name_hint": "SurvivalDistinguishability.countdown_attains_card_pred",
+          "line": 172
+        },
+        {
+          "kind": "def",
+          "name": "switchK",
+          "qualified_name_hint": "SurvivalDistinguishability.switchK",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_switchK_false",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_false",
+          "line": 201
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_switchK_true",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_true",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "three_state_mode_switch_counterexample",
+          "qualified_name_hint": "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+          "line": 223
+        },
+        {
+          "kind": "abbrev",
+          "name": "C2FinState",
+          "qualified_name_hint": "SurvivalDistinguishability.C2FinState",
+          "line": 234
+        },
+        {
+          "kind": "def",
+          "name": "c2Embed",
+          "qualified_name_hint": "SurvivalDistinguishability.c2Embed",
+          "line": 237
+        },
+        {
+          "kind": "def",
+          "name": "c2Op",
+          "qualified_name_hint": "SurvivalDistinguishability.c2Op",
+          "line": 242
+        },
+        {
+          "kind": "theorem",
+          "name": "c2_coupled_survival_separation",
+          "qualified_name_hint": "SurvivalDistinguishability.c2_coupled_survival_separation",
+          "line": 251
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 2,
+        "def": 6,
+        "theorem": 16
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "64ee41012a257fbeb39e453fb9a2c95153300a85bfc21496591bfe5c3fbd7bc2": {
       "byte_size": 31827,
       "line_count": 607,
@@ -304997,6 +304702,384 @@
       },
       "print_axioms_commands": 0
     },
+    "795e2ef83d3aa0eb8e024b6bb4e8e30905adffeeebcf6c5e6790d1600be92057": {
+      "byte_size": 45212,
+      "line_count": 749,
+      "imports": [
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Tactic",
+        "ObservationalFidelity"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "judgeScore",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "residualMean",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "poolMean",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "poolMean_eq",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "residualMean_mem",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "judgeScore_sub",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
+          "line": 81
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_sub_le_one_of_unit",
+          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "shared_score_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_disagreement_ceiling",
+          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_shared_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
+          "line": 129
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_ceiling_attained",
+          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
+          "line": 146
+        },
+        {
+          "kind": "theorem",
+          "name": "anchor_detects_shared_drift",
+          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
+          "line": 158
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_blindness_vs_anchor",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+          "line": 177
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
+          "line": 193
+        },
+        {
+          "kind": "def",
+          "name": "aliasedProbe",
+          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
+          "line": 220
+        },
+        {
+          "kind": "def",
+          "name": "SeparatesUnderNoise",
+          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_fiber_gap",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "midpoint_admissible",
+          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
+          "line": 238
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
+          "line": 249
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_separates",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
+          "line": 264
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_separable_iff",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
+          "line": 290
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
+          "line": 316
+        },
+        {
+          "kind": "def",
+          "name": "mixDist",
+          "qualified_name_hint": "QuantitativeTransfer.mixDist",
+          "line": 326
+        },
+        {
+          "kind": "def",
+          "name": "testMass",
+          "qualified_name_hint": "QuantitativeTransfer.testMass",
+          "line": 334
+        },
+        {
+          "kind": "theorem",
+          "name": "testMass_add_not",
+          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
+          "line": 338
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_le_one",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "two_point_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
+          "line": 354
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_mixDist_same",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_aliasing_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
+          "line": 393
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_floor_attained",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "le_of_deriv_le_on_Icc",
+          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
+          "line": 423
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_horizon_wall",
+          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_iff_linear",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
+          "line": 467
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_trajectory_premises",
+          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
+          "line": 477
+        },
+        {
+          "kind": "def",
+          "name": "switchLag",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag",
+          "line": 487
+        },
+        {
+          "kind": "theorem",
+          "name": "switching_score_persists",
+          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_strictMono_rho",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
+          "line": 508
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_nonpos_tabular",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
+          "line": 518
+        },
+        {
+          "kind": "theorem",
+          "name": "leakage_lag_wall",
+          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
+          "line": 527
+        },
+        {
+          "kind": "theorem",
+          "name": "b1_headroom_witness",
+          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
+          "line": 548
+        },
+        {
+          "kind": "def",
+          "name": "guardRef",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef",
+          "line": 557
+        },
+        {
+          "kind": "theorem",
+          "name": "guardRef_trace",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
+          "line": 560
+        },
+        {
+          "kind": "theorem",
+          "name": "dist_add_le_of_norm",
+          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
+          "line": 567
+        },
+        {
+          "kind": "def",
+          "name": "trustProj",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj",
+          "line": 576
+        },
+        {
+          "kind": "theorem",
+          "name": "norm_trustProj_le",
+          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
+          "line": 579
+        },
+        {
+          "kind": "theorem",
+          "name": "trustProj_of_norm_le",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
+          "line": 586
+        },
+        {
+          "kind": "def",
+          "name": "trustStep",
+          "qualified_name_hint": "QuantitativeTransfer.trustStep",
+          "line": 589
+        },
+        {
+          "kind": "def",
+          "name": "rawStep",
+          "qualified_name_hint": "QuantitativeTransfer.rawStep",
+          "line": 593
+        },
+        {
+          "kind": "def",
+          "name": "trustRegionMetricLaxSim",
+          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
+          "line": 599
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
+          "line": 634
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_viability",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
+          "line": 656
+        },
+        {
+          "kind": "theorem",
+          "name": "unprojected_step_overshoots",
+          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
+          "line": 676
+        },
+        {
+          "kind": "def",
+          "name": "trustRun",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun",
+          "line": 695
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_eq",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
+          "line": 699
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_trace",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
+          "line": 707
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_iterate",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
+          "line": 718
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube_attained",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
+          "line": 725
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
+          "line": 739
+        }
+      ],
+      "declaration_counts": {
+        "def": 14,
+        "theorem": 45
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "798cd9a0419407f3dc2648f6c52e4d90f614cf1b0790a0aa6a4d2181d5f8976d": {
       "byte_size": 6627,
       "line_count": 121,
@@ -329475,200 +329558,6 @@
       },
       "print_axioms_commands": 0
     },
-    "854def026f25eac5745dc1ba11de7c786f981d67556bc70ad75f08ed2459712f": {
-      "byte_size": 32292,
-      "line_count": 603,
-      "imports": [
-        "Mathlib.Analysis.LocallyConvex.Separation",
-        "Mathlib.Analysis.Convex.StdSimplex",
-        "Mathlib.Analysis.Normed.Module.FiniteDimension",
-        "Mathlib.Tactic",
-        "ConsequenceDuality"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "PrimalFeasibleVec",
-          "qualified_name_hint": "DualityBridges.PrimalFeasibleVec",
-          "line": 29
-        },
-        {
-          "kind": "def",
-          "name": "dualBoundVec",
-          "qualified_name_hint": "DualityBridges.dualBoundVec",
-          "line": 34
-        },
-        {
-          "kind": "theorem",
-          "name": "approx_feasible_of_model_error",
-          "qualified_name_hint": "DualityBridges.approx_feasible_of_model_error",
-          "line": 41
-        },
-        {
-          "kind": "theorem",
-          "name": "primalGap_le_dualBoundVec",
-          "qualified_name_hint": "DualityBridges.primalGap_le_dualBoundVec",
-          "line": 83
-        },
-        {
-          "kind": "theorem",
-          "name": "dualBound_with_model_error",
-          "qualified_name_hint": "DualityBridges.dualBound_with_model_error",
-          "line": 153
-        },
-        {
-          "kind": "theorem",
-          "name": "dualBound_with_uniform_model_error",
-          "qualified_name_hint": "DualityBridges.dualBound_with_uniform_model_error",
-          "line": 166
-        },
-        {
-          "kind": "def",
-          "name": "extendQueryFamily",
-          "qualified_name_hint": "DualityBridges.extendQueryFamily",
-          "line": 180
-        },
-        {
-          "kind": "def",
-          "name": "extendDualCoeff",
-          "qualified_name_hint": "DualityBridges.extendDualCoeff",
-          "line": 185
-        },
-        {
-          "kind": "theorem",
-          "name": "dualBound_extendQueryFamily",
-          "qualified_name_hint": "DualityBridges.dualBound_extendQueryFamily",
-          "line": 190
-        },
-        {
-          "kind": "theorem",
-          "name": "monotone_entry_value",
-          "qualified_name_hint": "DualityBridges.monotone_entry_value",
-          "line": 207
-        },
-        {
-          "kind": "theorem",
-          "name": "monotone_entry_value_exists",
-          "qualified_name_hint": "DualityBridges.monotone_entry_value_exists",
-          "line": 225
-        },
-        {
-          "kind": "theorem",
-          "name": "strict_entry_improvement_witness",
-          "qualified_name_hint": "DualityBridges.strict_entry_improvement_witness",
-          "line": 257
-        },
-        {
-          "kind": "theorem",
-          "name": "dualBound_zero_eq_zero_iff",
-          "qualified_name_hint": "DualityBridges.dualBound_zero_eq_zero_iff",
-          "line": 343
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_dualBound_iff_affine_span",
-          "qualified_name_hint": "DualityBridges.zero_dualBound_iff_affine_span",
-          "line": 370
-        },
-        {
-          "kind": "def",
-          "name": "stepOp",
-          "qualified_name_hint": "DualityBridges.stepOp",
-          "line": 400
-        },
-        {
-          "kind": "def",
-          "name": "stepLinearMap",
-          "qualified_name_hint": "DualityBridges.stepLinearMap",
-          "line": 404
-        },
-        {
-          "kind": "def",
-          "name": "wordVec",
-          "qualified_name_hint": "DualityBridges.wordVec",
-          "line": 416
-        },
-        {
-          "kind": "def",
-          "name": "survVec",
-          "qualified_name_hint": "DualityBridges.survVec",
-          "line": 422
-        },
-        {
-          "kind": "def",
-          "name": "krylovSub",
-          "qualified_name_hint": "DualityBridges.krylovSub",
-          "line": 426
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_mono",
-          "qualified_name_hint": "DualityBridges.krylovSub_mono",
-          "line": 430
-        },
-        {
-          "kind": "theorem",
-          "name": "stepLinearMap_mem_krylovSub_succ",
-          "qualified_name_hint": "DualityBridges.stepLinearMap_mem_krylovSub_succ",
-          "line": 437
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_step_eq_of_eq",
-          "qualified_name_hint": "DualityBridges.krylovSub_step_eq_of_eq",
-          "line": 445
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_stabilizes_from",
-          "qualified_name_hint": "DualityBridges.krylovSub_stabilizes_from",
-          "line": 464
-        },
-        {
-          "kind": "theorem",
-          "name": "krylovSub_stabilizes_before_card",
-          "qualified_name_hint": "DualityBridges.krylovSub_stabilizes_before_card",
-          "line": 481
-        },
-        {
-          "kind": "theorem",
-          "name": "wordVec_mem_krylovSub_pred",
-          "qualified_name_hint": "DualityBridges.wordVec_mem_krylovSub_pred",
-          "line": 531
-        },
-        {
-          "kind": "abbrev",
-          "name": "ShortWord",
-          "qualified_name_hint": "DualityBridges.ShortWord",
-          "line": 547
-        },
-        {
-          "kind": "def",
-          "name": "shortWordQuery",
-          "qualified_name_hint": "DualityBridges.shortWordQuery",
-          "line": 551
-        },
-        {
-          "kind": "theorem",
-          "name": "finite_krylov_zero_minimax_radius",
-          "qualified_name_hint": "DualityBridges.finite_krylov_zero_minimax_radius",
-          "line": 557
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 1,
-        "def": 10,
-        "theorem": 17
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d": {
       "byte_size": 52259,
       "line_count": 1109,
@@ -350146,384 +350035,6 @@
       },
       "print_axioms_commands": 0
     },
-    "8dc6d2bcbc7b8636e8120c8e26e62a4d5994005c0e395b920a52474c709c02ac": {
-      "byte_size": 45136,
-      "line_count": 749,
-      "imports": [
-        "Mathlib.Analysis.Calculus.MeanValue",
-        "Mathlib.Topology.Order.IntermediateValue",
-        "Mathlib.Tactic",
-        "ObservationalFidelity"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "judgeScore",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
-          "line": 51
-        },
-        {
-          "kind": "def",
-          "name": "residualMean",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean",
-          "line": 56
-        },
-        {
-          "kind": "def",
-          "name": "poolMean",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean",
-          "line": 60
-        },
-        {
-          "kind": "theorem",
-          "name": "poolMean_eq",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
-          "line": 63
-        },
-        {
-          "kind": "theorem",
-          "name": "residualMean_mem",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
-          "line": 71
-        },
-        {
-          "kind": "theorem",
-          "name": "judgeScore_sub",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
-          "line": 81
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_sub_le_one_of_unit",
-          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
-          "line": 86
-        },
-        {
-          "kind": "theorem",
-          "name": "shared_score_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
-          "line": 91
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_disagreement_ceiling",
-          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_shared_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
-          "line": 129
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_ceiling_attained",
-          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
-          "line": 146
-        },
-        {
-          "kind": "theorem",
-          "name": "anchor_detects_shared_drift",
-          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
-          "line": 158
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_blindness_vs_anchor",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
-          "line": 177
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
-          "line": 193
-        },
-        {
-          "kind": "def",
-          "name": "aliasedProbe",
-          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
-          "line": 220
-        },
-        {
-          "kind": "def",
-          "name": "SeparatesUnderNoise",
-          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
-          "line": 225
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_fiber_gap",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
-          "line": 230
-        },
-        {
-          "kind": "theorem",
-          "name": "midpoint_admissible",
-          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
-          "line": 238
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
-          "line": 249
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_separates",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
-          "line": 264
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_separable_iff",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
-          "line": 290
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
-          "line": 305
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
-          "line": 316
-        },
-        {
-          "kind": "def",
-          "name": "mixDist",
-          "qualified_name_hint": "QuantitativeTransfer.mixDist",
-          "line": 326
-        },
-        {
-          "kind": "def",
-          "name": "testMass",
-          "qualified_name_hint": "QuantitativeTransfer.testMass",
-          "line": 334
-        },
-        {
-          "kind": "theorem",
-          "name": "testMass_add_not",
-          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
-          "line": 338
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_le_one",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
-          "line": 344
-        },
-        {
-          "kind": "theorem",
-          "name": "two_point_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
-          "line": 354
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_mixDist_same",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
-          "line": 378
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_aliasing_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
-          "line": 393
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_floor_attained",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
-          "line": 410
-        },
-        {
-          "kind": "theorem",
-          "name": "le_of_deriv_le_on_Icc",
-          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
-          "line": 423
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_horizon_wall",
-          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
-          "line": 447
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_iff_linear",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
-          "line": 467
-        },
-        {
-          "kind": "theorem",
-          "name": "linear_trajectory_premises",
-          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
-          "line": 477
-        },
-        {
-          "kind": "def",
-          "name": "switchLag",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag",
-          "line": 487
-        },
-        {
-          "kind": "theorem",
-          "name": "switching_score_persists",
-          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
-          "line": 492
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_strictMono_rho",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
-          "line": 508
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_nonpos_tabular",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
-          "line": 518
-        },
-        {
-          "kind": "theorem",
-          "name": "leakage_lag_wall",
-          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
-          "line": 527
-        },
-        {
-          "kind": "theorem",
-          "name": "b1_headroom_witness",
-          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
-          "line": 548
-        },
-        {
-          "kind": "def",
-          "name": "guardRef",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef",
-          "line": 557
-        },
-        {
-          "kind": "theorem",
-          "name": "guardRef_trace",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
-          "line": 560
-        },
-        {
-          "kind": "theorem",
-          "name": "dist_add_le_of_norm",
-          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
-          "line": 567
-        },
-        {
-          "kind": "def",
-          "name": "trustProj",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj",
-          "line": 576
-        },
-        {
-          "kind": "theorem",
-          "name": "norm_trustProj_le",
-          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
-          "line": 579
-        },
-        {
-          "kind": "theorem",
-          "name": "trustProj_of_norm_le",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
-          "line": 586
-        },
-        {
-          "kind": "def",
-          "name": "trustStep",
-          "qualified_name_hint": "QuantitativeTransfer.trustStep",
-          "line": 589
-        },
-        {
-          "kind": "def",
-          "name": "rawStep",
-          "qualified_name_hint": "QuantitativeTransfer.rawStep",
-          "line": 593
-        },
-        {
-          "kind": "def",
-          "name": "trustRegionMetricLaxSim",
-          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
-          "line": 599
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
-          "line": 634
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_viability",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
-          "line": 656
-        },
-        {
-          "kind": "theorem",
-          "name": "unprojected_step_overshoots",
-          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
-          "line": 676
-        },
-        {
-          "kind": "def",
-          "name": "trustRun",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun",
-          "line": 695
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_eq",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
-          "line": 699
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_trace",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
-          "line": 707
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_iterate",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
-          "line": 718
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube_attained",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
-          "line": 725
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
-          "line": 739
-        }
-      ],
-      "declaration_counts": {
-        "def": 14,
-        "theorem": 45
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "8dcc06f6a8b394bbd5abbc72f7086e6a8616fb2f2ee6b40e34bf815b3d529e45": {
       "byte_size": 3662,
       "line_count": 95,
@@ -356484,6 +355995,387 @@
       ],
       "declaration_counts": {
         "def": 1
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "902b5b7bfcd9fb9b4178d71ca73903ffc26846fcbf867de064a78750f7b84662": {
+      "byte_size": 60984,
+      "line_count": 917,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Tactic",
+        "FiniteProbKrylov",
+        "AlignmentReals",
+        "BecomingReals",
+        "Becoming.OplaxHistory"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "FinDist",
+          "qualified_name_hint": "ObservationalFidelity.FinDist",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "FinDist.ext",
+          "qualified_name_hint": "ObservationalFidelity.FinDist.ext",
+          "line": 52
+        },
+        {
+          "kind": "abbrev",
+          "name": "diracDist",
+          "qualified_name_hint": "ObservationalFidelity.diracDist",
+          "line": 56
+        },
+        {
+          "kind": "abbrev",
+          "name": "pushforward",
+          "qualified_name_hint": "ObservationalFidelity.pushforward",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "pushforward_comp",
+          "qualified_name_hint": "ObservationalFidelity.pushforward_comp",
+          "line": 64
+        },
+        {
+          "kind": "abbrev",
+          "name": "tvDist",
+          "qualified_name_hint": "ObservationalFidelity.tvDist",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_nonneg",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_nonneg",
+          "line": 73
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_self",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_self",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_symm",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_symm",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_triangle",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_triangle",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushforward_le",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushforward_le",
+          "line": 87
+        },
+        {
+          "kind": "abbrev",
+          "name": "massOutside",
+          "qualified_name_hint": "ObservationalFidelity.massOutside",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "massOutside_nonneg",
+          "qualified_name_hint": "ObservationalFidelity.massOutside_nonneg",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_query_tv_floor",
+          "qualified_name_hint": "ObservationalFidelity.optimal_query_tv_floor",
+          "line": 105
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_source_infeasible",
+          "qualified_name_hint": "ObservationalFidelity.empty_source_infeasible",
+          "line": 116
+        },
+        {
+          "kind": "theorem",
+          "name": "coarsening_tv_mono",
+          "qualified_name_hint": "ObservationalFidelity.coarsening_tv_mono",
+          "line": 123
+        },
+        {
+          "kind": "theorem",
+          "name": "macro_refinement_tv_mono",
+          "qualified_name_hint": "ObservationalFidelity.macro_refinement_tv_mono",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_tv_does_not_prevent_fiber_viability_split",
+          "qualified_name_hint": "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
+          "line": 192
+        },
+        {
+          "kind": "def",
+          "name": "diagSupport",
+          "qualified_name_hint": "ObservationalFidelity.diagSupport",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "diagSupport_fst_eq_snd",
+          "qualified_name_hint": "ObservationalFidelity.diagSupport_fst_eq_snd",
+          "line": 230
+        },
+        {
+          "kind": "def",
+          "name": "fourFifthsBool",
+          "qualified_name_hint": "ObservationalFidelity.fourFifthsBool",
+          "line": 239
+        },
+        {
+          "kind": "def",
+          "name": "oneFifthBool",
+          "qualified_name_hint": "ObservationalFidelity.oneFifthBool",
+          "line": 245
+        },
+        {
+          "kind": "def",
+          "name": "diagLift",
+          "qualified_name_hint": "ObservationalFidelity.diagLift",
+          "line": 251
+        },
+        {
+          "kind": "theorem",
+          "name": "per_query_not_implies_joint_marginal",
+          "qualified_name_hint": "ObservationalFidelity.per_query_not_implies_joint_marginal",
+          "line": 266
+        },
+        {
+          "kind": "def",
+          "name": "uniformPairBool",
+          "qualified_name_hint": "ObservationalFidelity.uniformPairBool",
+          "line": 298
+        },
+        {
+          "kind": "def",
+          "name": "fairBool",
+          "qualified_name_hint": "ObservationalFidelity.fairBool",
+          "line": 304
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_marginal_not_implies_joint_dist",
+          "qualified_name_hint": "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
+          "line": 314
+        },
+        {
+          "kind": "def",
+          "name": "FinKernel",
+          "qualified_name_hint": "ObservationalFidelity.FinKernel",
+          "line": 358
+        },
+        {
+          "kind": "def",
+          "name": "pushKernel",
+          "qualified_name_hint": "ObservationalFidelity.pushKernel",
+          "line": 362
+        },
+        {
+          "kind": "def",
+          "name": "compKernel",
+          "qualified_name_hint": "ObservationalFidelity.compKernel",
+          "line": 375
+        },
+        {
+          "kind": "def",
+          "name": "prodDist",
+          "qualified_name_hint": "ObservationalFidelity.prodDist",
+          "line": 380
+        },
+        {
+          "kind": "def",
+          "name": "tensorKernel",
+          "qualified_name_hint": "ObservationalFidelity.tensorKernel",
+          "line": 392
+        },
+        {
+          "kind": "theorem",
+          "name": "pushKernel_tv_step",
+          "qualified_name_hint": "ObservationalFidelity.pushKernel_tv_step",
+          "line": 397
+        },
+        {
+          "kind": "def",
+          "name": "iterKernel",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "sequential_kernel_tv_bound",
+          "qualified_name_hint": "ObservationalFidelity.sequential_kernel_tv_bound",
+          "line": 454
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_prodDist_le",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_prodDist_le",
+          "line": 467
+        },
+        {
+          "kind": "theorem",
+          "name": "independent_tensor_tv_bound",
+          "qualified_name_hint": "ObservationalFidelity.independent_tensor_tv_bound",
+          "line": 499
+        },
+        {
+          "kind": "theorem",
+          "name": "three_regime_error_contrast",
+          "qualified_name_hint": "ObservationalFidelity.three_regime_error_contrast",
+          "line": 519
+        },
+        {
+          "kind": "def",
+          "name": "rowDefect",
+          "qualified_name_hint": "ObservationalFidelity.rowDefect",
+          "line": 563
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_floor_le_rowDefect",
+          "qualified_name_hint": "ObservationalFidelity.optimal_floor_le_rowDefect",
+          "line": 567
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_pushforward_mul",
+          "qualified_name_hint": "ObservationalFidelity.sum_pushforward_mul",
+          "line": 577
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_dobrushin",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin",
+          "line": 585
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_dobrushin_step",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
+          "line": 641
+        },
+        {
+          "kind": "theorem",
+          "name": "iterKernel_succ_comm",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel_succ_comm",
+          "line": 670
+        },
+        {
+          "kind": "theorem",
+          "name": "iterKernel_trace",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel_trace",
+          "line": 674
+        },
+        {
+          "kind": "theorem",
+          "name": "trace_ofMap_eq_iterKernel",
+          "qualified_name_hint": "ObservationalFidelity.trace_ofMap_eq_iterKernel",
+          "line": 679
+        },
+        {
+          "kind": "def",
+          "name": "kernelMetricLaxSim",
+          "qualified_name_hint": "ObservationalFidelity.kernelMetricLaxSim",
+          "line": 689
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_iter_bound",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_iter_bound",
+          "line": 715
+        },
+        {
+          "kind": "theorem",
+          "name": "kernel_contraction_tube_via_metricLaxSim",
+          "qualified_name_hint": "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim",
+          "line": 731
+        },
+        {
+          "kind": "theorem",
+          "name": "viability_risk_transfer_bound",
+          "qualified_name_hint": "ObservationalFidelity.viability_risk_transfer_bound",
+          "line": 744
+        },
+        {
+          "kind": "theorem",
+          "name": "fiber_split_readout_floor",
+          "qualified_name_hint": "ObservationalFidelity.fiber_split_readout_floor",
+          "line": 770
+        },
+        {
+          "kind": "def",
+          "name": "sharpBoolKernel",
+          "qualified_name_hint": "ObservationalFidelity.sharpBoolKernel",
+          "line": 780
+        },
+        {
+          "kind": "theorem",
+          "name": "sharp_oplax_dobrushin_attainment",
+          "qualified_name_hint": "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
+          "line": 786
+        },
+        {
+          "kind": "theorem",
+          "name": "feedback_destroys_openloop_contraction",
+          "qualified_name_hint": "ObservationalFidelity.feedback_destroys_openloop_contraction",
+          "line": 828
+        },
+        {
+          "kind": "theorem",
+          "name": "three_regime_kernel_contrast",
+          "qualified_name_hint": "ObservationalFidelity.three_regime_kernel_contrast",
+          "line": 841
+        },
+        {
+          "kind": "theorem",
+          "name": "rowDefect_eq_zero_iff_pushforward",
+          "qualified_name_hint": "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+          "line": 857
+        },
+        {
+          "kind": "theorem",
+          "name": "modeRowDefect_eq_zero_iff_pushforward",
+          "qualified_name_hint": "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+          "line": 863
+        },
+        {
+          "kind": "theorem",
+          "name": "fiberLumpable_iff_exists_zero_rowDefect",
+          "qualified_name_hint": "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+          "line": 870
+        },
+        {
+          "kind": "theorem",
+          "name": "fixed_macro_nonzero_rowDefect_witness",
+          "qualified_name_hint": "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness",
+          "line": 894
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 5,
+        "def": 15,
+        "theorem": 39
       },
       "textual_markers": {
         "sorry": [],
@@ -388717,6 +388609,207 @@
       "declaration_counts": {
         "def": 2,
         "theorem": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "9d6a64ce8d7d0bdf0c0ddb37d6561e1ebb8faa43d03d16747df226b848d5ec02": {
+      "byte_size": 38652,
+      "line_count": 707,
+      "imports": [
+        "Mathlib.Analysis.LocallyConvex.Separation",
+        "Mathlib.Analysis.Convex.StdSimplex",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension",
+        "Mathlib.Tactic",
+        "ConsequenceDuality",
+        "DualityBridges"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "MarkovKernel",
+          "qualified_name_hint": "DualityLifting.MarkovKernel",
+          "line": 29
+        },
+        {
+          "kind": "def",
+          "name": "kernelMatrix",
+          "qualified_name_hint": "DualityLifting.kernelMatrix",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "pushKernel",
+          "qualified_name_hint": "DualityLifting.pushKernel",
+          "line": 37
+        },
+        {
+          "kind": "def",
+          "name": "iterStepOp",
+          "qualified_name_hint": "DualityLifting.iterStepOp",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "osc",
+          "qualified_name_hint": "DualityLifting.osc",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "mid",
+          "qualified_name_hint": "DualityLifting.mid",
+          "line": 61
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_stepOp_eq_pushKernel",
+          "qualified_name_hint": "DualityLifting.sum_stepOp_eq_pushKernel",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "stepOp_const",
+          "qualified_name_hint": "DualityLifting.stepOp_const",
+          "line": 81
+        },
+        {
+          "kind": "theorem",
+          "name": "iterStepOp_const",
+          "qualified_name_hint": "DualityLifting.iterStepOp_const",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "stepOp_sub",
+          "qualified_name_hint": "DualityLifting.stepOp_sub",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "stepOp_smul_right",
+          "qualified_name_hint": "DualityLifting.stepOp_smul_right",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "stepOp_finset_sum",
+          "qualified_name_hint": "DualityLifting.stepOp_finset_sum",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "iterStepOp_sub",
+          "qualified_name_hint": "DualityLifting.iterStepOp_sub",
+          "line": 110
+        },
+        {
+          "kind": "theorem",
+          "name": "iterStepOp_finset_sum",
+          "qualified_name_hint": "DualityLifting.iterStepOp_finset_sum",
+          "line": 117
+        },
+        {
+          "kind": "theorem",
+          "name": "iterStepOp_smul_right",
+          "qualified_name_hint": "DualityLifting.iterStepOp_smul_right",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "iterStepOp_linear_residual",
+          "qualified_name_hint": "DualityLifting.iterStepOp_linear_residual",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "osc_nonneg",
+          "qualified_name_hint": "DualityLifting.osc_nonneg",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_sub_mid_le_half_osc",
+          "qualified_name_hint": "DualityLifting.abs_sub_mid_le_half_osc",
+          "line": 152
+        },
+        {
+          "kind": "theorem",
+          "name": "half_osc_le_sup_abs",
+          "qualified_name_hint": "DualityLifting.half_osc_le_sup_abs",
+          "line": 162
+        },
+        {
+          "kind": "theorem",
+          "name": "osc_stepOp_le_dobrushin",
+          "qualified_name_hint": "DualityLifting.osc_stepOp_le_dobrushin",
+          "line": 176
+        },
+        {
+          "kind": "theorem",
+          "name": "osc_iterStepOp_le",
+          "qualified_name_hint": "DualityLifting.osc_iterStepOp_le",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "dobrushin_dualBound_lift",
+          "qualified_name_hint": "DualityLifting.dobrushin_dualBound_lift",
+          "line": 237
+        },
+        {
+          "kind": "theorem",
+          "name": "dobrushin_horizon_primalGap_bound",
+          "qualified_name_hint": "DualityLifting.dobrushin_horizon_primalGap_bound",
+          "line": 270
+        },
+        {
+          "kind": "def",
+          "name": "prodQueryFamily",
+          "qualified_name_hint": "DualityLifting.prodQueryFamily",
+          "line": 296
+        },
+        {
+          "kind": "def",
+          "name": "prodSumConsequence",
+          "qualified_name_hint": "DualityLifting.prodSumConsequence",
+          "line": 302
+        },
+        {
+          "kind": "theorem",
+          "name": "tensor_dualBound_subadditive",
+          "qualified_name_hint": "DualityLifting.tensor_dualBound_subadditive",
+          "line": 306
+        },
+        {
+          "kind": "theorem",
+          "name": "coupled_relational_gap_witness",
+          "qualified_name_hint": "DualityLifting.coupled_relational_gap_witness",
+          "line": 350
+        },
+        {
+          "kind": "theorem",
+          "name": "empirical_estimate_error_bound",
+          "qualified_name_hint": "DualityLifting.empirical_estimate_error_bound",
+          "line": 593
+        },
+        {
+          "kind": "theorem",
+          "name": "empirical_threshold_safety_certificate",
+          "qualified_name_hint": "DualityLifting.empirical_threshold_safety_certificate",
+          "line": 688
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "structure": 1,
+        "theorem": 21
       },
       "textual_markers": {
         "sorry": [],
@@ -430457,6 +430550,229 @@
         "unsafe": []
       },
       "print_axioms_commands": 24
+    },
+    "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f": {
+      "byte_size": 30684,
+      "line_count": 645,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.LinearAlgebra.Dimension.Constructions",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.Tactic"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "FinDist",
+          "qualified_name_hint": "FiniteProb.FinDist",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "FinDist.ext",
+          "qualified_name_hint": "FiniteProb.FinDist.ext",
+          "line": 39
+        },
+        {
+          "kind": "def",
+          "name": "diracDist",
+          "qualified_name_hint": "FiniteProb.diracDist",
+          "line": 47
+        },
+        {
+          "kind": "def",
+          "name": "pushforward",
+          "qualified_name_hint": "FiniteProb.pushforward",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "pushforward_comp",
+          "qualified_name_hint": "FiniteProb.pushforward_comp",
+          "line": 66
+        },
+        {
+          "kind": "def",
+          "name": "tvDist",
+          "qualified_name_hint": "FiniteProb.tvDist",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_nonneg",
+          "qualified_name_hint": "FiniteProb.tvDist_nonneg",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_self",
+          "qualified_name_hint": "FiniteProb.tvDist_self",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_symm",
+          "qualified_name_hint": "FiniteProb.tvDist_symm",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_eq_zero_iff",
+          "qualified_name_hint": "FiniteProb.tvDist_eq_zero_iff",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_triangle",
+          "qualified_name_hint": "FiniteProb.tvDist_triangle",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushforward_le",
+          "qualified_name_hint": "FiniteProb.tvDist_pushforward_le",
+          "line": 122
+        },
+        {
+          "kind": "def",
+          "name": "massOutside",
+          "qualified_name_hint": "FiniteProb.massOutside",
+          "line": 144
+        },
+        {
+          "kind": "theorem",
+          "name": "massOutside_nonneg",
+          "qualified_name_hint": "FiniteProb.massOutside_nonneg",
+          "line": 148
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_query_tv_floor",
+          "qualified_name_hint": "FiniteProb.optimal_query_tv_floor",
+          "line": 159
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_source_infeasible",
+          "qualified_name_hint": "FiniteProb.empty_source_infeasible",
+          "line": 343
+        },
+        {
+          "kind": "def",
+          "name": "stepOp",
+          "qualified_name_hint": "FiniteKrylov.stepOp",
+          "line": 357
+        },
+        {
+          "kind": "def",
+          "name": "stepLinearMap",
+          "qualified_name_hint": "FiniteKrylov.stepLinearMap",
+          "line": 361
+        },
+        {
+          "kind": "def",
+          "name": "wordVec",
+          "qualified_name_hint": "FiniteKrylov.wordVec",
+          "line": 373
+        },
+        {
+          "kind": "def",
+          "name": "survVec",
+          "qualified_name_hint": "FiniteKrylov.survVec",
+          "line": 379
+        },
+        {
+          "kind": "def",
+          "name": "krylovSub",
+          "qualified_name_hint": "FiniteKrylov.krylovSub",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_mono",
+          "qualified_name_hint": "FiniteKrylov.krylovSub_mono",
+          "line": 387
+        },
+        {
+          "kind": "theorem",
+          "name": "stepLinearMap_mem_krylovSub_succ",
+          "qualified_name_hint": "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+          "line": 394
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_step_eq_of_eq",
+          "qualified_name_hint": "FiniteKrylov.krylovSub_step_eq_of_eq",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_stabilizes_from",
+          "qualified_name_hint": "FiniteKrylov.krylovSub_stabilizes_from",
+          "line": 421
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_stabilizes_before_rank",
+          "qualified_name_hint": "FiniteKrylov.krylovSub_stabilizes_before_rank",
+          "line": 440
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_stabilizes_before_card",
+          "qualified_name_hint": "FiniteKrylov.krylovSub_stabilizes_before_card",
+          "line": 504
+        },
+        {
+          "kind": "theorem",
+          "name": "wordVec_mem_krylovSub_pred",
+          "qualified_name_hint": "FiniteKrylov.wordVec_mem_krylovSub_pred",
+          "line": 514
+        },
+        {
+          "kind": "def",
+          "name": "FiberLumpable",
+          "qualified_name_hint": "FiniteKrylov.FiberLumpable",
+          "line": 532
+        },
+        {
+          "kind": "def",
+          "name": "pullbackLinear",
+          "qualified_name_hint": "FiniteKrylov.pullbackLinear",
+          "line": 539
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_range_pullbackLinear_iff",
+          "qualified_name_hint": "FiniteKrylov.mem_range_pullbackLinear_iff",
+          "line": 545
+        },
+        {
+          "kind": "theorem",
+          "name": "survival_indistinguishable_iff_le_obs_pred",
+          "qualified_name_hint": "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+          "line": 561
+        },
+        {
+          "kind": "theorem",
+          "name": "lumpable_obs_horizon_one_witness",
+          "qualified_name_hint": "FiniteKrylov.lumpable_obs_horizon_one_witness",
+          "line": 617
+        }
+      ],
+      "declaration_counts": {
+        "def": 11,
+        "structure": 1,
+        "theorem": 21
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "b062315f1166b61ea22a0b6c5b1f832378dad9ae05810b98df271639c409afc8": {
       "byte_size": 19827,
@@ -500585,207 +500901,6 @@
       },
       "print_axioms_commands": 0
     },
-    "cac323a74f9c9421c317e674880ad312da0638f4472735aa586b91888df16f32": {
-      "byte_size": 38508,
-      "line_count": 707,
-      "imports": [
-        "Mathlib.Analysis.LocallyConvex.Separation",
-        "Mathlib.Analysis.Convex.StdSimplex",
-        "Mathlib.Analysis.Normed.Module.FiniteDimension",
-        "Mathlib.Tactic",
-        "ConsequenceDuality",
-        "DualityBridges"
-      ],
-      "declarations": [
-        {
-          "kind": "structure",
-          "name": "MarkovKernel",
-          "qualified_name_hint": "DualityLifting.MarkovKernel",
-          "line": 29
-        },
-        {
-          "kind": "def",
-          "name": "kernelMatrix",
-          "qualified_name_hint": "DualityLifting.kernelMatrix",
-          "line": 33
-        },
-        {
-          "kind": "def",
-          "name": "pushKernel",
-          "qualified_name_hint": "DualityLifting.pushKernel",
-          "line": 37
-        },
-        {
-          "kind": "def",
-          "name": "iterStepOp",
-          "qualified_name_hint": "DualityLifting.iterStepOp",
-          "line": 51
-        },
-        {
-          "kind": "def",
-          "name": "osc",
-          "qualified_name_hint": "DualityLifting.osc",
-          "line": 57
-        },
-        {
-          "kind": "def",
-          "name": "mid",
-          "qualified_name_hint": "DualityLifting.mid",
-          "line": 61
-        },
-        {
-          "kind": "theorem",
-          "name": "sum_stepOp_eq_pushKernel",
-          "qualified_name_hint": "DualityLifting.sum_stepOp_eq_pushKernel",
-          "line": 64
-        },
-        {
-          "kind": "theorem",
-          "name": "stepOp_const",
-          "qualified_name_hint": "DualityLifting.stepOp_const",
-          "line": 81
-        },
-        {
-          "kind": "theorem",
-          "name": "iterStepOp_const",
-          "qualified_name_hint": "DualityLifting.iterStepOp_const",
-          "line": 86
-        },
-        {
-          "kind": "theorem",
-          "name": "stepOp_sub",
-          "qualified_name_hint": "DualityLifting.stepOp_sub",
-          "line": 92
-        },
-        {
-          "kind": "theorem",
-          "name": "stepOp_smul_right",
-          "qualified_name_hint": "DualityLifting.stepOp_smul_right",
-          "line": 97
-        },
-        {
-          "kind": "theorem",
-          "name": "stepOp_finset_sum",
-          "qualified_name_hint": "DualityLifting.stepOp_finset_sum",
-          "line": 103
-        },
-        {
-          "kind": "theorem",
-          "name": "iterStepOp_sub",
-          "qualified_name_hint": "DualityLifting.iterStepOp_sub",
-          "line": 110
-        },
-        {
-          "kind": "theorem",
-          "name": "iterStepOp_finset_sum",
-          "qualified_name_hint": "DualityLifting.iterStepOp_finset_sum",
-          "line": 117
-        },
-        {
-          "kind": "theorem",
-          "name": "iterStepOp_smul_right",
-          "qualified_name_hint": "DualityLifting.iterStepOp_smul_right",
-          "line": 125
-        },
-        {
-          "kind": "theorem",
-          "name": "iterStepOp_linear_residual",
-          "qualified_name_hint": "DualityLifting.iterStepOp_linear_residual",
-          "line": 131
-        },
-        {
-          "kind": "theorem",
-          "name": "osc_nonneg",
-          "qualified_name_hint": "DualityLifting.osc_nonneg",
-          "line": 143
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_sub_mid_le_half_osc",
-          "qualified_name_hint": "DualityLifting.abs_sub_mid_le_half_osc",
-          "line": 152
-        },
-        {
-          "kind": "theorem",
-          "name": "half_osc_le_sup_abs",
-          "qualified_name_hint": "DualityLifting.half_osc_le_sup_abs",
-          "line": 162
-        },
-        {
-          "kind": "theorem",
-          "name": "osc_stepOp_le_dobrushin",
-          "qualified_name_hint": "DualityLifting.osc_stepOp_le_dobrushin",
-          "line": 176
-        },
-        {
-          "kind": "theorem",
-          "name": "osc_iterStepOp_le",
-          "qualified_name_hint": "DualityLifting.osc_iterStepOp_le",
-          "line": 225
-        },
-        {
-          "kind": "theorem",
-          "name": "dobrushin_dualBound_lift",
-          "qualified_name_hint": "DualityLifting.dobrushin_dualBound_lift",
-          "line": 237
-        },
-        {
-          "kind": "theorem",
-          "name": "dobrushin_horizon_primalGap_bound",
-          "qualified_name_hint": "DualityLifting.dobrushin_horizon_primalGap_bound",
-          "line": 270
-        },
-        {
-          "kind": "def",
-          "name": "prodQueryFamily",
-          "qualified_name_hint": "DualityLifting.prodQueryFamily",
-          "line": 296
-        },
-        {
-          "kind": "def",
-          "name": "prodSumConsequence",
-          "qualified_name_hint": "DualityLifting.prodSumConsequence",
-          "line": 302
-        },
-        {
-          "kind": "theorem",
-          "name": "tensor_dualBound_subadditive",
-          "qualified_name_hint": "DualityLifting.tensor_dualBound_subadditive",
-          "line": 306
-        },
-        {
-          "kind": "theorem",
-          "name": "coupled_relational_gap_witness",
-          "qualified_name_hint": "DualityLifting.coupled_relational_gap_witness",
-          "line": 350
-        },
-        {
-          "kind": "theorem",
-          "name": "empirical_estimate_error_bound",
-          "qualified_name_hint": "DualityLifting.empirical_estimate_error_bound",
-          "line": 593
-        },
-        {
-          "kind": "theorem",
-          "name": "empirical_threshold_safety_certificate",
-          "qualified_name_hint": "DualityLifting.empirical_threshold_safety_certificate",
-          "line": 688
-        }
-      ],
-      "declaration_counts": {
-        "def": 7,
-        "structure": 1,
-        "theorem": 21
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "cacaf414eae00c9b3aa95ee116010da703c323989c3942c0bffd280d8d37b1f3": {
       "byte_size": 7664,
       "line_count": 135,
@@ -529801,6 +529916,201 @@
       },
       "print_axioms_commands": 0
     },
+    "d80978edfbac42510a3ca29a4aee6ba8c1d4691211198419aa36eca8d9dc324f": {
+      "byte_size": 28461,
+      "line_count": 512,
+      "imports": [
+        "Mathlib.Analysis.LocallyConvex.Separation",
+        "Mathlib.Analysis.Convex.StdSimplex",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension",
+        "Mathlib.Tactic",
+        "FiniteProbKrylov",
+        "ConsequenceDuality"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "PrimalFeasibleVec",
+          "qualified_name_hint": "DualityBridges.PrimalFeasibleVec",
+          "line": 30
+        },
+        {
+          "kind": "def",
+          "name": "dualBoundVec",
+          "qualified_name_hint": "DualityBridges.dualBoundVec",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "approx_feasible_of_model_error",
+          "qualified_name_hint": "DualityBridges.approx_feasible_of_model_error",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "primalGap_le_dualBoundVec",
+          "qualified_name_hint": "DualityBridges.primalGap_le_dualBoundVec",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "dualBound_with_model_error",
+          "qualified_name_hint": "DualityBridges.dualBound_with_model_error",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "dualBound_with_uniform_model_error",
+          "qualified_name_hint": "DualityBridges.dualBound_with_uniform_model_error",
+          "line": 167
+        },
+        {
+          "kind": "def",
+          "name": "extendQueryFamily",
+          "qualified_name_hint": "DualityBridges.extendQueryFamily",
+          "line": 181
+        },
+        {
+          "kind": "def",
+          "name": "extendDualCoeff",
+          "qualified_name_hint": "DualityBridges.extendDualCoeff",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "dualBound_extendQueryFamily",
+          "qualified_name_hint": "DualityBridges.dualBound_extendQueryFamily",
+          "line": 191
+        },
+        {
+          "kind": "theorem",
+          "name": "monotone_entry_value",
+          "qualified_name_hint": "DualityBridges.monotone_entry_value",
+          "line": 208
+        },
+        {
+          "kind": "theorem",
+          "name": "monotone_entry_value_exists",
+          "qualified_name_hint": "DualityBridges.monotone_entry_value_exists",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "strict_entry_improvement_witness",
+          "qualified_name_hint": "DualityBridges.strict_entry_improvement_witness",
+          "line": 258
+        },
+        {
+          "kind": "theorem",
+          "name": "dualBound_zero_eq_zero_iff",
+          "qualified_name_hint": "DualityBridges.dualBound_zero_eq_zero_iff",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_dualBound_iff_affine_span",
+          "qualified_name_hint": "DualityBridges.zero_dualBound_iff_affine_span",
+          "line": 371
+        },
+        {
+          "kind": "abbrev",
+          "name": "stepOp",
+          "qualified_name_hint": "DualityBridges.stepOp",
+          "line": 401
+        },
+        {
+          "kind": "abbrev",
+          "name": "stepLinearMap",
+          "qualified_name_hint": "DualityBridges.stepLinearMap",
+          "line": 405
+        },
+        {
+          "kind": "abbrev",
+          "name": "wordVec",
+          "qualified_name_hint": "DualityBridges.wordVec",
+          "line": 410
+        },
+        {
+          "kind": "abbrev",
+          "name": "survVec",
+          "qualified_name_hint": "DualityBridges.survVec",
+          "line": 415
+        },
+        {
+          "kind": "abbrev",
+          "name": "krylovSub",
+          "qualified_name_hint": "DualityBridges.krylovSub",
+          "line": 419
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_mono",
+          "qualified_name_hint": "DualityBridges.krylovSub_mono",
+          "line": 423
+        },
+        {
+          "kind": "theorem",
+          "name": "stepLinearMap_mem_krylovSub_succ",
+          "qualified_name_hint": "DualityBridges.stepLinearMap_mem_krylovSub_succ",
+          "line": 428
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_step_eq_of_eq",
+          "qualified_name_hint": "DualityBridges.krylovSub_step_eq_of_eq",
+          "line": 433
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_stabilizes_from",
+          "qualified_name_hint": "DualityBridges.krylovSub_stabilizes_from",
+          "line": 439
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_stabilizes_before_card",
+          "qualified_name_hint": "DualityBridges.krylovSub_stabilizes_before_card",
+          "line": 445
+        },
+        {
+          "kind": "theorem",
+          "name": "wordVec_mem_krylovSub_pred",
+          "qualified_name_hint": "DualityBridges.wordVec_mem_krylovSub_pred",
+          "line": 450
+        },
+        {
+          "kind": "abbrev",
+          "name": "ShortWord",
+          "qualified_name_hint": "DualityBridges.ShortWord",
+          "line": 456
+        },
+        {
+          "kind": "def",
+          "name": "shortWordQuery",
+          "qualified_name_hint": "DualityBridges.shortWordQuery",
+          "line": 460
+        },
+        {
+          "kind": "theorem",
+          "name": "finite_krylov_zero_minimax_radius",
+          "qualified_name_hint": "DualityBridges.finite_krylov_zero_minimax_radius",
+          "line": 466
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 6,
+        "def": 5,
+        "theorem": 17
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "d8122cf2b9ab6be77c98458a0cecaa5769960aa2145e50c016055beccc286f2b": {
       "byte_size": 55510,
       "line_count": 964,
@@ -535313,6 +535623,332 @@
         "def": 15,
         "inductive": 1,
         "theorem": 16
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "dad6f4d1c81ccc740265f43f0432e48aad88e63c50d9a1219bfedec5f36c5e0d": {
+      "byte_size": 108692,
+      "line_count": 2017,
+      "imports": [
+        "Mathlib.Analysis.LocallyConvex.Separation",
+        "Mathlib.Analysis.Convex.StdSimplex",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension",
+        "Mathlib.Tactic",
+        "FiniteProbKrylov"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "FinDist",
+          "qualified_name_hint": "ConsequenceDuality.FinDist",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "FinDist.ext",
+          "qualified_name_hint": "ConsequenceDuality.FinDist.ext",
+          "line": 52
+        },
+        {
+          "kind": "abbrev",
+          "name": "diracDist",
+          "qualified_name_hint": "ConsequenceDuality.diracDist",
+          "line": 57
+        },
+        {
+          "kind": "abbrev",
+          "name": "pushforward",
+          "qualified_name_hint": "ConsequenceDuality.pushforward",
+          "line": 61
+        },
+        {
+          "kind": "theorem",
+          "name": "pushforward_comp",
+          "qualified_name_hint": "ConsequenceDuality.pushforward_comp",
+          "line": 65
+        },
+        {
+          "kind": "abbrev",
+          "name": "tvDist",
+          "qualified_name_hint": "ConsequenceDuality.tvDist",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_nonneg",
+          "qualified_name_hint": "ConsequenceDuality.tvDist_nonneg",
+          "line": 74
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_self",
+          "qualified_name_hint": "ConsequenceDuality.tvDist_self",
+          "line": 77
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_symm",
+          "qualified_name_hint": "ConsequenceDuality.tvDist_symm",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_triangle",
+          "qualified_name_hint": "ConsequenceDuality.tvDist_triangle",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushforward_le",
+          "qualified_name_hint": "ConsequenceDuality.tvDist_pushforward_le",
+          "line": 88
+        },
+        {
+          "kind": "abbrev",
+          "name": "massOutside",
+          "qualified_name_hint": "ConsequenceDuality.massOutside",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "massOutside_nonneg",
+          "qualified_name_hint": "ConsequenceDuality.massOutside_nonneg",
+          "line": 98
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_query_tv_floor",
+          "qualified_name_hint": "ConsequenceDuality.optimal_query_tv_floor",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_source_infeasible",
+          "qualified_name_hint": "ConsequenceDuality.empty_source_infeasible",
+          "line": 112
+        },
+        {
+          "kind": "def",
+          "name": "PrimalFeasible",
+          "qualified_name_hint": "ConsequenceDuality.PrimalFeasible",
+          "line": 118
+        },
+        {
+          "kind": "def",
+          "name": "primalGap",
+          "qualified_name_hint": "ConsequenceDuality.primalGap",
+          "line": 123
+        },
+        {
+          "kind": "def",
+          "name": "dualBound",
+          "qualified_name_hint": "ConsequenceDuality.dualBound",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "primalGap_le_dualBound",
+          "qualified_name_hint": "ConsequenceDuality.primalGap_le_dualBound",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "continuous_finset_sup'",
+          "qualified_name_hint": "ConsequenceDuality.continuous_finset_sup'",
+          "line": 199
+        },
+        {
+          "kind": "theorem",
+          "name": "pi_norm_eq_sup'",
+          "qualified_name_hint": "ConsequenceDuality.pi_norm_eq_sup'",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "dualBound_attained",
+          "qualified_name_hint": "ConsequenceDuality.dualBound_attained",
+          "line": 234
+        },
+        {
+          "kind": "theorem",
+          "name": "finDistPair_of_zeroSum_l1Le",
+          "qualified_name_hint": "ConsequenceDuality.finDistPair_of_zeroSum_l1Le",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "consequence_minimax_duality",
+          "qualified_name_hint": "ConsequenceDuality.consequence_minimax_duality",
+          "line": 411
+        },
+        {
+          "kind": "def",
+          "name": "multiQueryTvError",
+          "qualified_name_hint": "ConsequenceDuality.multiQueryTvError",
+          "line": 707
+        },
+        {
+          "kind": "def",
+          "name": "multiQueryDualObj",
+          "qualified_name_hint": "ConsequenceDuality.multiQueryDualObj",
+          "line": 713
+        },
+        {
+          "kind": "theorem",
+          "name": "multiQueryDualObj_le_multiQueryTvError",
+          "qualified_name_hint": "ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError",
+          "line": 720
+        },
+        {
+          "kind": "theorem",
+          "name": "common_history_tv_duality",
+          "qualified_name_hint": "ConsequenceDuality.common_history_tv_duality",
+          "line": 788
+        },
+        {
+          "kind": "theorem",
+          "name": "one_query_tv_floor_via_duality",
+          "qualified_name_hint": "ConsequenceDuality.one_query_tv_floor_via_duality",
+          "line": 1167
+        },
+        {
+          "kind": "def",
+          "name": "diagSupport",
+          "qualified_name_hint": "ConsequenceDuality.diagSupport",
+          "line": 1262
+        },
+        {
+          "kind": "theorem",
+          "name": "diagSupport_fst_eq_snd",
+          "qualified_name_hint": "ConsequenceDuality.diagSupport_fst_eq_snd",
+          "line": 1265
+        },
+        {
+          "kind": "def",
+          "name": "fourFifthsBool",
+          "qualified_name_hint": "ConsequenceDuality.fourFifthsBool",
+          "line": 1272
+        },
+        {
+          "kind": "def",
+          "name": "oneFifthBool",
+          "qualified_name_hint": "ConsequenceDuality.oneFifthBool",
+          "line": 1278
+        },
+        {
+          "kind": "def",
+          "name": "diagLift",
+          "qualified_name_hint": "ConsequenceDuality.diagLift",
+          "line": 1284
+        },
+        {
+          "kind": "theorem",
+          "name": "two_query_diagonal_three_fifths_witness",
+          "qualified_name_hint": "ConsequenceDuality.two_query_diagonal_three_fifths_witness",
+          "line": 1296
+        },
+        {
+          "kind": "def",
+          "name": "uniformPairBool",
+          "qualified_name_hint": "ConsequenceDuality.uniformPairBool",
+          "line": 1353
+        },
+        {
+          "kind": "def",
+          "name": "fairBool",
+          "qualified_name_hint": "ConsequenceDuality.fairBool",
+          "line": 1359
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_distribution_one_half_witness",
+          "qualified_name_hint": "ConsequenceDuality.joint_distribution_one_half_witness",
+          "line": 1366
+        },
+        {
+          "kind": "def",
+          "name": "policyMargin",
+          "qualified_name_hint": "ConsequenceDuality.policyMargin",
+          "line": 1425
+        },
+        {
+          "kind": "def",
+          "name": "fiberActionMargin",
+          "qualified_name_hint": "ConsequenceDuality.fiberActionMargin",
+          "line": 1430
+        },
+        {
+          "kind": "def",
+          "name": "fiberBestMargin",
+          "qualified_name_hint": "ConsequenceDuality.fiberBestMargin",
+          "line": 1437
+        },
+        {
+          "kind": "theorem",
+          "name": "policyMargin_le_fiberBestMargin",
+          "qualified_name_hint": "ConsequenceDuality.policyMargin_le_fiberBestMargin",
+          "line": 1442
+        },
+        {
+          "kind": "theorem",
+          "name": "decision_margin_minimax",
+          "qualified_name_hint": "ConsequenceDuality.decision_margin_minimax",
+          "line": 1465
+        },
+        {
+          "kind": "theorem",
+          "name": "decision_margin_pos_iff_common_action",
+          "qualified_name_hint": "ConsequenceDuality.decision_margin_pos_iff_common_action",
+          "line": 1506
+        },
+        {
+          "kind": "theorem",
+          "name": "two_state_exact_minimax",
+          "qualified_name_hint": "ConsequenceDuality.two_state_exact_minimax",
+          "line": 1531
+        },
+        {
+          "kind": "theorem",
+          "name": "public_port_vs_recipient_exact",
+          "qualified_name_hint": "ConsequenceDuality.public_port_vs_recipient_exact",
+          "line": 1648
+        },
+        {
+          "kind": "theorem",
+          "name": "b2_aliasing_08_exact_certificate",
+          "qualified_name_hint": "ConsequenceDuality.b2_aliasing_08_exact_certificate",
+          "line": 1801
+        },
+        {
+          "kind": "def",
+          "name": "diagSurvivalProb",
+          "qualified_name_hint": "ConsequenceDuality.diagSurvivalProb",
+          "line": 1870
+        },
+        {
+          "kind": "theorem",
+          "name": "diagSurvivalProb_eq",
+          "qualified_name_hint": "ConsequenceDuality.diagSurvivalProb_eq",
+          "line": 1874
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_short_word_amplification",
+          "qualified_name_hint": "ConsequenceDuality.noisy_short_word_amplification",
+          "line": 1886
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 5,
+        "def": 15,
+        "theorem": 30
       },
       "textual_markers": {
         "sorry": [],
@@ -611762,362 +612398,6 @@
       "declaration_counts": {
         "def": 13,
         "inductive": 2,
-        "theorem": 35
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d": {
-      "byte_size": 68511,
-      "line_count": 1092,
-      "imports": [
-        "Mathlib.Algebra.BigOperators.Field",
-        "Mathlib.Tactic",
-        "AlignmentReals",
-        "BecomingReals",
-        "Becoming.OplaxHistory"
-      ],
-      "declarations": [
-        {
-          "kind": "structure",
-          "name": "FinDist",
-          "qualified_name_hint": "ObservationalFidelity.FinDist",
-          "line": 49
-        },
-        {
-          "kind": "theorem",
-          "name": "FinDist.ext",
-          "qualified_name_hint": "ObservationalFidelity.FinDist.ext",
-          "line": 54
-        },
-        {
-          "kind": "def",
-          "name": "diracDist",
-          "qualified_name_hint": "ObservationalFidelity.diracDist",
-          "line": 61
-        },
-        {
-          "kind": "def",
-          "name": "pushforward",
-          "qualified_name_hint": "ObservationalFidelity.pushforward",
-          "line": 67
-        },
-        {
-          "kind": "theorem",
-          "name": "pushforward_comp",
-          "qualified_name_hint": "ObservationalFidelity.pushforward_comp",
-          "line": 80
-        },
-        {
-          "kind": "def",
-          "name": "tvDist",
-          "qualified_name_hint": "ObservationalFidelity.tvDist",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_nonneg",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_nonneg",
-          "line": 103
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_self",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_self",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_symm",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_symm",
-          "line": 111
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_triangle",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_triangle",
-          "line": 116
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushforward_le",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_pushforward_le",
-          "line": 124
-        },
-        {
-          "kind": "def",
-          "name": "massOutside",
-          "qualified_name_hint": "ObservationalFidelity.massOutside",
-          "line": 146
-        },
-        {
-          "kind": "theorem",
-          "name": "massOutside_nonneg",
-          "qualified_name_hint": "ObservationalFidelity.massOutside_nonneg",
-          "line": 150
-        },
-        {
-          "kind": "theorem",
-          "name": "optimal_query_tv_floor",
-          "qualified_name_hint": "ObservationalFidelity.optimal_query_tv_floor",
-          "line": 161
-        },
-        {
-          "kind": "theorem",
-          "name": "empty_source_infeasible",
-          "qualified_name_hint": "ObservationalFidelity.empty_source_infeasible",
-          "line": 347
-        },
-        {
-          "kind": "theorem",
-          "name": "coarsening_tv_mono",
-          "qualified_name_hint": "ObservationalFidelity.coarsening_tv_mono",
-          "line": 357
-        },
-        {
-          "kind": "theorem",
-          "name": "macro_refinement_tv_mono",
-          "qualified_name_hint": "ObservationalFidelity.macro_refinement_tv_mono",
-          "line": 404
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_tv_does_not_prevent_fiber_viability_split",
-          "qualified_name_hint": "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
-          "line": 426
-        },
-        {
-          "kind": "def",
-          "name": "diagSupport",
-          "qualified_name_hint": "ObservationalFidelity.diagSupport",
-          "line": 460
-        },
-        {
-          "kind": "theorem",
-          "name": "diagSupport_fst_eq_snd",
-          "qualified_name_hint": "ObservationalFidelity.diagSupport_fst_eq_snd",
-          "line": 464
-        },
-        {
-          "kind": "def",
-          "name": "fourFifthsBool",
-          "qualified_name_hint": "ObservationalFidelity.fourFifthsBool",
-          "line": 473
-        },
-        {
-          "kind": "def",
-          "name": "oneFifthBool",
-          "qualified_name_hint": "ObservationalFidelity.oneFifthBool",
-          "line": 479
-        },
-        {
-          "kind": "def",
-          "name": "diagLift",
-          "qualified_name_hint": "ObservationalFidelity.diagLift",
-          "line": 485
-        },
-        {
-          "kind": "theorem",
-          "name": "per_query_not_implies_joint_marginal",
-          "qualified_name_hint": "ObservationalFidelity.per_query_not_implies_joint_marginal",
-          "line": 500
-        },
-        {
-          "kind": "def",
-          "name": "uniformPairBool",
-          "qualified_name_hint": "ObservationalFidelity.uniformPairBool",
-          "line": 532
-        },
-        {
-          "kind": "def",
-          "name": "fairBool",
-          "qualified_name_hint": "ObservationalFidelity.fairBool",
-          "line": 538
-        },
-        {
-          "kind": "theorem",
-          "name": "joint_marginal_not_implies_joint_dist",
-          "qualified_name_hint": "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
-          "line": 548
-        },
-        {
-          "kind": "def",
-          "name": "FinKernel",
-          "qualified_name_hint": "ObservationalFidelity.FinKernel",
-          "line": 592
-        },
-        {
-          "kind": "def",
-          "name": "pushKernel",
-          "qualified_name_hint": "ObservationalFidelity.pushKernel",
-          "line": 596
-        },
-        {
-          "kind": "def",
-          "name": "compKernel",
-          "qualified_name_hint": "ObservationalFidelity.compKernel",
-          "line": 609
-        },
-        {
-          "kind": "def",
-          "name": "prodDist",
-          "qualified_name_hint": "ObservationalFidelity.prodDist",
-          "line": 614
-        },
-        {
-          "kind": "def",
-          "name": "tensorKernel",
-          "qualified_name_hint": "ObservationalFidelity.tensorKernel",
-          "line": 626
-        },
-        {
-          "kind": "theorem",
-          "name": "pushKernel_tv_step",
-          "qualified_name_hint": "ObservationalFidelity.pushKernel_tv_step",
-          "line": 631
-        },
-        {
-          "kind": "def",
-          "name": "iterKernel",
-          "qualified_name_hint": "ObservationalFidelity.iterKernel",
-          "line": 681
-        },
-        {
-          "kind": "theorem",
-          "name": "sequential_kernel_tv_bound",
-          "qualified_name_hint": "ObservationalFidelity.sequential_kernel_tv_bound",
-          "line": 688
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_prodDist_le",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_prodDist_le",
-          "line": 701
-        },
-        {
-          "kind": "theorem",
-          "name": "independent_tensor_tv_bound",
-          "qualified_name_hint": "ObservationalFidelity.independent_tensor_tv_bound",
-          "line": 733
-        },
-        {
-          "kind": "theorem",
-          "name": "three_regime_error_contrast",
-          "qualified_name_hint": "ObservationalFidelity.three_regime_error_contrast",
-          "line": 753
-        },
-        {
-          "kind": "def",
-          "name": "rowDefect",
-          "qualified_name_hint": "ObservationalFidelity.rowDefect",
-          "line": 797
-        },
-        {
-          "kind": "theorem",
-          "name": "optimal_floor_le_rowDefect",
-          "qualified_name_hint": "ObservationalFidelity.optimal_floor_le_rowDefect",
-          "line": 801
-        },
-        {
-          "kind": "theorem",
-          "name": "sum_pushforward_mul",
-          "qualified_name_hint": "ObservationalFidelity.sum_pushforward_mul",
-          "line": 811
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushKernel_dobrushin",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin",
-          "line": 819
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushKernel_dobrushin_step",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
-          "line": 877
-        },
-        {
-          "kind": "theorem",
-          "name": "iterKernel_succ_comm",
-          "qualified_name_hint": "ObservationalFidelity.iterKernel_succ_comm",
-          "line": 906
-        },
-        {
-          "kind": "theorem",
-          "name": "iterKernel_trace",
-          "qualified_name_hint": "ObservationalFidelity.iterKernel_trace",
-          "line": 910
-        },
-        {
-          "kind": "theorem",
-          "name": "trace_ofMap_eq_iterKernel",
-          "qualified_name_hint": "ObservationalFidelity.trace_ofMap_eq_iterKernel",
-          "line": 915
-        },
-        {
-          "kind": "def",
-          "name": "kernelMetricLaxSim",
-          "qualified_name_hint": "ObservationalFidelity.kernelMetricLaxSim",
-          "line": 925
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushKernel_iter_bound",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_iter_bound",
-          "line": 951
-        },
-        {
-          "kind": "theorem",
-          "name": "kernel_contraction_tube_via_metricLaxSim",
-          "qualified_name_hint": "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim",
-          "line": 967
-        },
-        {
-          "kind": "theorem",
-          "name": "viability_risk_transfer_bound",
-          "qualified_name_hint": "ObservationalFidelity.viability_risk_transfer_bound",
-          "line": 980
-        },
-        {
-          "kind": "theorem",
-          "name": "fiber_split_readout_floor",
-          "qualified_name_hint": "ObservationalFidelity.fiber_split_readout_floor",
-          "line": 1006
-        },
-        {
-          "kind": "def",
-          "name": "sharpBoolKernel",
-          "qualified_name_hint": "ObservationalFidelity.sharpBoolKernel",
-          "line": 1016
-        },
-        {
-          "kind": "theorem",
-          "name": "sharp_oplax_dobrushin_attainment",
-          "qualified_name_hint": "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
-          "line": 1022
-        },
-        {
-          "kind": "theorem",
-          "name": "feedback_destroys_openloop_contraction",
-          "qualified_name_hint": "ObservationalFidelity.feedback_destroys_openloop_contraction",
-          "line": 1064
-        },
-        {
-          "kind": "theorem",
-          "name": "three_regime_kernel_contrast",
-          "qualified_name_hint": "ObservationalFidelity.three_regime_kernel_contrast",
-          "line": 1077
-        }
-      ],
-      "declaration_counts": {
-        "def": 19,
-        "structure": 1,
         "theorem": 35
       },
       "textual_markers": {

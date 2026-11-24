@@ -2964,12 +2964,17 @@
     "observational-fidelity-and-multi-regime-error": {
       "region": "knowing",
       "base": "periphery",
-      "note": "ObservationalFidelity (Wave U6, Mathlib periphery #13): query TV floor, coarsening/macro monotonicity, 3-way convex separation, and 3-regime error contrast"
+      "note": "ObservationalFidelity (Wave U6/B1/Wave 1, Mathlib periphery): query TV floor, 3-way separation, Dobrushin-MetricLaxSim tubes, and FiberLumpable rowDefect joins over FiniteProbKrylov"
     },
     "finite-mode-survival-distinguishability": {
       "region": "knowing",
       "base": "periphery",
-      "note": "SurvivalDistinguishability (Track B2, Mathlib periphery #14): Krylov card - 1 real-matrix distinguishability, countdown sharpness, mode-switch counterexample, and C2 witness"
+      "note": "SurvivalDistinguishability (Track B2/Wave 1, Mathlib periphery): Krylov card - 1 and FiberLumpable obs-horizon survival bounds (substochastic) over FiniteProbKrylov, countdown/switch/C2 witnesses"
+    },
+    "finite-probability-and-krylov-foundation": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "FiniteProbKrylov (Wave 1, Mathlib v4.30.0-rc2 periphery): shared FinDist/TV laws, rank-form Krylov stabilization, and substochastic FiberLumpable observable-horizon bridge"
     },
     "endogenous-detection-before-capture-lock": {
       "region": "knowing",
@@ -5206,12 +5211,17 @@
     "ObservationalFidelity": {
       "region": "knowing",
       "base": "periphery",
-      "note": "Mathlib v4.30.0-rc2 periphery #13: query TV floor, 3-way query separation, rowDefect-Dobrushin contraction via MetricLaxSim, [0,1] risk transfer, sharp 1->2 attainment, and closed-loop instability"
+      "note": "Mathlib v4.30.0-rc2 periphery (Wave U6/B1/Wave 1): query TV floor, 3-way separation, rowDefect-Dobrushin-MetricLaxSim contraction, FiberLumpable zero-rowDefect joins, and closed-loop instability"
     },
     "SurvivalDistinguishability": {
       "region": "knowing",
       "base": "periphery",
-      "note": "Mathlib v4.30.0-rc2 periphery #14: Krylov (card - 1) survival distinguishability bound, countdown sharpness, mode-switch counterexample, and C2CoupledAlignmentWitness separation"
+      "note": "Mathlib v4.30.0-rc2 periphery (Track B2/Wave 1): Krylov card - 1 and FiberLumpable obs-horizon survival bounds (substochastic), countdown sharpness, mode-switch control, and C2 witness"
+    },
+    "FiniteProbKrylov": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "Mathlib v4.30.0-rc2 periphery (Wave 1): shared FinDist/TV metric and query floor + rank-form Krylov stabilization and FiberLumpable observable-horizon compression"
     },
     "Becoming.EndogenousEmergence": {
       "region": "knowing",
