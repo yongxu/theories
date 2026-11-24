@@ -34,7 +34,7 @@ The work was made with AI, and its readings are AI's unless their home says othe
 
 | Read | Check | See |
 |---|---|---|
-| [One page](theories/becoming/ONE-PAGE.md) | [The tests](TESTS.md) | [The map](theories/becoming/results/map/THE-MAP.md) |
+| [One page](theories/becoming/ONE-PAGE.md) | [The tests](TESTS.md) | [The canonical map](theories/becoming/CANONICAL-MAP.md) |
 | [What it is for, and how far](theories/becoming/USES.md) | [The register of results](RESULTS.md) | [The atlas of dynamics](theories/becoming/results/atlas/ATLAS.md) |
 | [The overview](theories/becoming/THE-THEORY-OF-BECOMING.md) | [What is open](OPEN-QUESTIONS.md) | [The theory graph](theories/becoming/results/THEORY-GRAPH.md) |
 | [The eight chapters](theories/becoming/chapters/README.md) | [Check the proofs](MAP.md#check-the-proofs-yourself) | [The connections](theories/becoming/results/atlas/CROSSWALK.md) |
