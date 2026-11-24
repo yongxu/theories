@@ -1,0 +1,191 @@
+{
+  "ai_written": "Track S1 (2026-11-24)",
+  "status": "PASS",
+  "generated_utc": "2026-11-24T12:49:05Z",
+  "hygiene": {
+    "toolchains_ok": true,
+    "spec_imports": {
+      "BecomingSpec.V1.Targets": [
+        "Init"
+      ],
+      "BecomingSpec.V2.Targets": [
+        "Init"
+      ],
+      "BecomingSpec.Revision.IN1": [
+        "BecomingSpec.V2.Targets"
+      ],
+      "BecomingSpec.Extensions.OplaxTargets": [
+        "Init"
+      ],
+      "BecomingSpec.Extensions.EntryTargets": [
+        "Init"
+      ]
+    },
+    "challenge_imports": [
+      "BecomingSpec.V1.Targets",
+      "BecomingSpec.V2.Targets",
+      "BecomingSpec.Revision.IN1",
+      "BecomingSpec.Extensions.OplaxTargets",
+      "BecomingSpec.Extensions.EntryTargets"
+    ],
+    "line_counts": {
+      "BecomingSpec.V1.Targets": 143,
+      "BecomingSpec.V2.Targets": 72,
+      "BecomingSpec.Revision.IN1": 62,
+      "BecomingSpec.Extensions.OplaxTargets": 72,
+      "BecomingSpec.Extensions.EntryTargets": 143,
+      "Challenge": 44,
+      "Solution": 1171
+    },
+    "v1_v2_in1_total_lines": 277
+  },
+  "dual_toolchain_spec_audit": {
+    "v4_29_1": {
+      "toolchain": "v4.29.1",
+      "version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+      "compile_rc": 0,
+      "warnings_count": 0,
+      "total_constants_audited": 475,
+      "injEq_count": 0,
+      "axiom_failures": [],
+      "print_axioms_clean_targets": [
+        "BecomingSpec.V1.prefixMarginTarget",
+        "BecomingSpec.V1.liveTarget",
+        "BecomingSpec.V1.cycleBoundaryTarget",
+        "BecomingSpec.V1.sameViewObstructionTarget",
+        "BecomingSpec.V1.in1SameViewWitnessTarget",
+        "BecomingSpec.V1.commonActionTarget",
+        "BecomingSpec.V1.completesTarget",
+        "BecomingSpec.V1.branchStuckTarget",
+        "BecomingSpec.V1.significanceFreeTarget",
+        "BecomingSpec.V2.eraseCommutesTarget",
+        "BecomingSpec.V2.pass2RefinesPass1Target",
+        "BecomingSpec.V2.v1BlindnessTarget",
+        "BecomingSpec.Revision.IN1.in1SameViewTarget",
+        "BecomingSpec.Revision.IN1.in1SeparationTarget",
+        "BecomingSpec.Revision.IN1.in1DecisionDefeatTarget",
+        "BecomingSpec.Revision.IN1.in1Seed3FaithfulHarmTarget",
+        "BecomingSpec.Revision.IN1.in1Seed7RevisionSavesTarget",
+        "BecomingSpec.Extensions.allFibersTarget",
+        "BecomingSpec.Extensions.missingLiftTarget",
+        "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
+        "BecomingSpec.Extensions.branchingVsPathCountTarget",
+        "BecomingSpec.Extensions.openSecondEntryTarget"
+      ]
+    },
+    "v4_30_0_rc2": {
+      "toolchain": "v4.30.0-rc2",
+      "version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+      "compile_rc": 0,
+      "warnings_count": 0,
+      "total_constants_audited": 484,
+      "injEq_count": 0,
+      "axiom_failures": [],
+      "print_axioms_clean_targets": [
+        "BecomingSpec.V1.prefixMarginTarget",
+        "BecomingSpec.V1.liveTarget",
+        "BecomingSpec.V1.cycleBoundaryTarget",
+        "BecomingSpec.V1.sameViewObstructionTarget",
+        "BecomingSpec.V1.in1SameViewWitnessTarget",
+        "BecomingSpec.V1.commonActionTarget",
+        "BecomingSpec.V1.completesTarget",
+        "BecomingSpec.V1.branchStuckTarget",
+        "BecomingSpec.V1.significanceFreeTarget",
+        "BecomingSpec.V2.eraseCommutesTarget",
+        "BecomingSpec.V2.pass2RefinesPass1Target",
+        "BecomingSpec.V2.v1BlindnessTarget",
+        "BecomingSpec.Revision.IN1.in1SameViewTarget",
+        "BecomingSpec.Revision.IN1.in1SeparationTarget",
+        "BecomingSpec.Revision.IN1.in1DecisionDefeatTarget",
+        "BecomingSpec.Revision.IN1.in1Seed3FaithfulHarmTarget",
+        "BecomingSpec.Revision.IN1.in1Seed7RevisionSavesTarget",
+        "BecomingSpec.Extensions.allFibersTarget",
+        "BecomingSpec.Extensions.missingLiftTarget",
+        "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
+        "BecomingSpec.Extensions.branchingVsPathCountTarget",
+        "BecomingSpec.Extensions.openSecondEntryTarget"
+      ]
+    },
+    "cross_toolchain_public_spec_type_match": true,
+    "cross_toolchain_target_defs_exact_body_match": true,
+    "lean430_brecOn_lambda_factored_defs": [
+      "BecomingSpec.Extensions.ofFixed",
+      "BecomingSpec.Extensions.pathsFrom",
+      "BecomingSpec.Extensions.runTree",
+      "BecomingSpec.Extensions.sumNatList",
+      "BecomingSpec.V1.Completes",
+      "BecomingSpec.V1.MarginSpec.run",
+      "BecomingSpec.V1.in1Trace",
+      "BecomingSpec.V1.iter",
+      "BecomingSpec.V2.runLake"
+    ],
+    "public_spec_symbols_matched": 394
+  },
+  "comparator_verification": {
+    "challenge_closure_sha256": "075be635fa4ed9d7ac8e2f5fd3b841fbd9d7c047f6ce0ad17d559e385445bf8e",
+    "dep_stats": {
+      "total": 176,
+      "reused_from_cache": 175,
+      "compiled_fresh": 1
+    },
+    "targets_matched": 22,
+    "closure_constants_matched": 211,
+    "solution_constants_audited": 157,
+    "adapter_theorems": [
+      "BecomingSpecCheck.adapter_branchStep_eq",
+      "BecomingSpecCheck.adapter_chi_bijective_iff",
+      "BecomingSpecCheck.adapter_commonAction_via_guardHorizon",
+      "BecomingSpecCheck.adapter_completesPostBranch_iff",
+      "BecomingSpecCheck.adapter_completes_iff",
+      "BecomingSpecCheck.adapter_cycleStep2_reach5",
+      "BecomingSpecCheck.adapter_cycleStep_commutes",
+      "BecomingSpecCheck.adapter_cycleStep_reach6",
+      "BecomingSpecCheck.adapter_determined_iff",
+      "BecomingSpecCheck.adapter_encounterEntryInterface_openGate",
+      "BecomingSpecCheck.adapter_encounterEntryInterface_runOps",
+      "BecomingSpecCheck.adapter_in1_fiberSplit",
+      "BecomingSpecCheck.adapter_live_openComposition_commutes",
+      "BecomingSpecCheck.adapter_margin_closedStep_commutes",
+      "BecomingSpecCheck.adapter_oplax_chi_iff_bc_all",
+      "BecomingSpecCheck.adapter_pathsFrom_commutes",
+      "BecomingSpecCheck.adapter_safeTrace_iff",
+      "BecomingSpecCheck.adapter_sameView_to_fiberSplit",
+      "BecomingSpecCheck.adapter_slotOracle_commutes",
+      "BecomingSpecCheck.adapter_stock_eq_regimeStep",
+      "BecomingSpecCheck.adapter_trace_iff",
+      "BecomingSpecCheck.adapter_unrestricted_iff"
+    ],
+    "print_axioms_verified_count": 44
+  },
+  "tamper_self_tests": [
+    {
+      "name": "tamper_1_le_to_lt",
+      "mutation": "Flipped `liveMargin.xCrit \u2264 s3.1` to `liveMargin.xCrit < s3.1` (0-axiom proof still compiles)",
+      "rejected": true,
+      "error_code": "comparator_spec_tamper",
+      "error_detail": "Constant BecomingSpec.V1.liveTarget in transitive target closure tampered: body: chal='A(A(C(And,[]),A(A(A(A(C(LT.lt,[z]),C(Nat,[])),C(instLTNat,[])),A(A(A(C(OfNat.ofNat,[z]),C(Nat,[])),lit(Lean.Literal.nat vs sol='A(A(C(And,[]),A(A(A(A(C(LT.lt,[z]),C(Nat,[]))"
+    },
+    {
+      "name": "tamper_2_safe_true",
+      "mutation": "Weakened `BecomingSpec.V2.Pass\u2081` to `fun _ => True` (with 0-axiom compiling Solution)",
+      "rejected": true,
+      "error_code": "comparator_closure_key_mismatch",
+      "error_detail": "Transitive closure mismatch: missing=['BecomingSpec.V2.View\u2081.nextStock'], extra=[]"
+    },
+    {
+      "name": "tamper_3_swapped_projection",
+      "mutation": "Swapped `openingStock` and `nextStock` projections in `erase` and `q\u2081` (0-axiom Solution compiles untouched)",
+      "rejected": true,
+      "error_code": "comparator_spec_tamper",
+      "error_detail": "Constant BecomingSpec.V2.erase in transitive target closure tampered: body: chal='L(Lean.BinderInfo.default,C(BecomingSpec.V2.View\u2082,[]),A(A(A(C(BecomingSpec.V2.View\u2081.mk,[]),A(C(BecomingSpec.V2.View\u2082.op vs sol='L(Lean.BinderInfo.default,C(BecomingSpec.V2.View\u2082,"
+    },
+    {
+      "name": "tamper_4_sorry_ax",
+      "mutation": "Replaced `v1_significanceFree` proof in `Solution.lean` with `sorry` (`sorryAx` check with warnings allowed)",
+      "rejected": true,
+      "error_code": "solution_target_axioms",
+      "error_detail": "Target BecomingSpecCheck.v1_significanceFree uses axioms: ['sorryAx']"
+    }
+  ],
+  "repo_clutter_check": "PASS (0 .olean/.ilean/.c artifacts under becoming-spec/ or becoming-spec-check/)"
+}

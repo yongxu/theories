@@ -1,0 +1,84 @@
+{
+  "ai_written": "Track S3 (24 November 2026), Section 5 communication-order + B2/B4 probe benchmark",
+  "two_item_blackbox": {
+    "n_episodes": 200,
+    "fifo_diagnostic_match_load0": 100,
+    "lifo_diagnostic_match_load0": 0,
+    "receiver_marginal_tokA_first_fifo": 0.49,
+    "receiver_marginal_tokA_first_lifo": 0.46,
+    "no_diagnostic_accuracy": 0.475,
+    "diagnostic_coupled_accuracy": 1.0,
+    "scrambled_reply_control_accuracy": 0.5,
+    "false_receipt_control_accuracy": 0.0,
+    "late_probe_control_accuracy": 0.475
+  },
+  "eight_slot_4bit": {
+    "total_instances": 2048,
+    "pigeonhole_upper_bound": 1696,
+    "warehouse_first_prefix4_hits": 1536,
+    "warehouse_first_rep4_hits": 1536,
+    "requester_first_3plus1_hits": 2048,
+    "private_naming_trials": 30,
+    "paid_pairing_queries_per_shift": 21,
+    "paid_pairing_bits_per_shift": 84,
+    "mean_unaligned_hits": 1130.67,
+    "mean_learned_hits": 2048.0,
+    "mean_shifted_stale_hits": 1130.67,
+    "mean_relearned_hits": 2048.0,
+    "mean_scrambled_control_hits": 1156.27
+  },
+  "b2_b4_probe_connection": {
+    "b2_4bit_probe_aliasing": [
+      {
+        "probe_aliasing": 0.0,
+        "probe_bits": 4,
+        "paired_separation_rate": 1.0
+      },
+      {
+        "probe_aliasing": 0.5,
+        "probe_bits": 4,
+        "paired_separation_rate": 1.0
+      },
+      {
+        "probe_aliasing": 0.8,
+        "probe_bits": 4,
+        "paired_separation_rate": 0.816
+      },
+      {
+        "probe_aliasing": 1.0,
+        "probe_bits": 4,
+        "paired_separation_rate": 0.4
+      }
+    ],
+    "b4_probe_regime_contrast": [
+      {
+        "regime": "unguarded_nominal",
+        "n_seeds": 12,
+        "collapse_rate": 1.0,
+        "mean_min_r_hidden": 0.0,
+        "mean_fiber_triggers": 0.0
+      },
+      {
+        "regime": "guarded_targeted_low_alias",
+        "n_seeds": 12,
+        "collapse_rate": 0.0,
+        "mean_min_r_hidden": 0.77,
+        "mean_fiber_triggers": 10.0
+      },
+      {
+        "regime": "guarded_blind_high_alias",
+        "n_seeds": 12,
+        "collapse_rate": 0.3333,
+        "mean_min_r_hidden": 0.222,
+        "mean_fiber_triggers": 1.75
+      },
+      {
+        "regime": "guarded_late_lag8",
+        "n_seeds": 12,
+        "collapse_rate": 0.1667,
+        "mean_min_r_hidden": 0.39,
+        "mean_fiber_triggers": 24.5
+      }
+    ]
+  }
+}

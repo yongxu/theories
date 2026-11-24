@@ -1,0 +1,515 @@
+{
+  "checked_at_utc": "2026-11-24T12:48:42.407003+00:00",
+  "status": "passed",
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "lean_version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+  "lean_binary_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
+  "module": "EncounterEntry",
+  "source_file": "EncounterEntry.lean",
+  "source_sha256": "f7c3f507cd992ec72358c81141bb7dcfd5ab7d612ae70ddc0cdd2854c4cd453f",
+  "checker_sha256": "0cf502211d68bbd2ffd00f5391ea13824a798a48b3e75eac1f13abe63b1163d3",
+  "imports": [
+    "Init"
+  ],
+  "declaration_count": 91,
+  "theorem_count": 35,
+  "declarations": [
+    {
+      "kind": "def",
+      "name": "EncounterEntry.boolEq",
+      "line": 54
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.boolEq_true_of_eq",
+      "line": 60
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.boolEq_false_of_ne",
+      "line": 66
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.natLeBool",
+      "line": 72
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.natLeBool_true_iff",
+      "line": 77
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.natLtBool",
+      "line": 84
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.lt_of_natLtBool",
+      "line": 86
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.nat_le_sub_of_add_le",
+      "line": 89
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.InquiryTree",
+      "line": 99
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.runTree",
+      "line": 103
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.ofFixed",
+      "line": 108
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.WithinQueries",
+      "line": 113
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.runTree_ofFixed",
+      "line": 119
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.withinQueries_ofFixed",
+      "line": 126
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.SlotState",
+      "line": 132
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.slotEqBool",
+      "line": 136
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.slot_eq_of_eqBool",
+      "line": 139
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.slot_ne_of_eqBool_false",
+      "line": 157
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.slotState_ne_of_loc",
+      "line": 162
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.slotState_ne_of_val",
+      "line": 165
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.SlotProbe",
+      "line": 168
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.slotOracle",
+      "line": 173
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.adaptiveSlotTree",
+      "line": 178
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.adaptiveSlotTree_within_two",
+      "line": 184
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.adaptive_two_step_identifies_pair",
+      "line": 190
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.fixed_two_step_oracle_collision",
+      "line": 197
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.fixed_two_step_misses_pair",
+      "line": 212
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.valueOnlyDecode",
+      "line": 235
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.fixed_two_step_recovers_value_only",
+      "line": 241
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.BranchState",
+      "line": 250
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.branchStateEq",
+      "line": 256
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.BranchLabel",
+      "line": 274
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.PostReq",
+      "line": 279
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.postLabel",
+      "line": 283
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.BranchSys",
+      "line": 287
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.sysA",
+      "line": 290
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.sysB",
+      "line": 297
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.sumNatList",
+      "line": 304
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.pathsFrom",
+      "line": 308
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.entryToExitCount",
+      "line": 312
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.sysA_path_counts_2xa_2xb",
+      "line": 315
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.pathCount_eq",
+      "line": 320
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.CompletesPostBranch",
+      "line": 342
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.sysA_completes_all",
+      "line": 346
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.sysB_branch_stuck",
+      "line": 361
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.reserveFloor",
+      "line": 368
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.queueCap",
+      "line": 369
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.World",
+      "line": 371
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.publicRead",
+      "line": 376
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.IncumbentPhase",
+      "line": 378
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.Act",
+      "line": 381
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.protect_ne_normalOp",
+      "line": 386
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.InstalledRule",
+      "line": 388
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.Submission",
+      "line": 392
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.VerifiedReport",
+      "line": 398
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.FreshObserver",
+      "line": 402
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.canonicalObserver",
+      "line": 406
+    },
+    {
+      "kind": "structure",
+      "name": "EncounterEntry.ProcState",
+      "line": 410
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.initResolved",
+      "line": 421
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.matchesInstalled",
+      "line": 432
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.matchesInstalled_cons_hit",
+      "line": 438
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.policyAct",
+      "line": 444
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.openGate",
+      "line": 449
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.openGate_components",
+      "line": 454
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.ExpressibleInInstalled",
+      "line": 478
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.sealingGate",
+      "line": 484
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.ProcOp",
+      "line": 487
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.actDraw",
+      "line": 493
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.verifyPasses",
+      "line": 499
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.execStep",
+      "line": 507
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.runOps",
+      "line": 576
+    },
+    {
+      "kind": "inductive",
+      "name": "EncounterEntry.ReachableProc",
+      "line": 583
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.runOps_implies_reachable",
+      "line": 590
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.reachable_preserves_phase_and_installed_mono",
+      "line": 606
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.drainQueueOps",
+      "line": 681
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.runOps_append",
+      "line": 685
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.two_mul_succ",
+      "line": 703
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.drainQueue_reduces_prefix",
+      "line": 707
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.fair_open_entry_after_any_revision",
+      "line": 816
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.worldSafeBase",
+      "line": 932
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.worldRisk1",
+      "line": 937
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.worldRisk2",
+      "line": 942
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.entrant1Sub",
+      "line": 947
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.falseSub",
+      "line": 953
+    },
+    {
+      "kind": "def",
+      "name": "EncounterEntry.entrant2Sub",
+      "line": 959
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.clause1_acquisition_and_independent_verification",
+      "line": 965
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.clause2a_causal_uptake_vs_masking",
+      "line": 984
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.clause2b_false_objection_rejected",
+      "line": 1013
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.sealing_gate_blocks_entrants",
+      "line": 1031
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.clause3_second_entrant_after_revision1",
+      "line": 1050
+    },
+    {
+      "kind": "theorem",
+      "name": "EncounterEntry.encounter_refines_and_preserves_entry",
+      "line": 1090
+    }
+  ],
+  "nonempty_axioms": {},
+  "transitive_injEq_dependencies": {},
+  "transitive_axiom_dependencies": {},
+  "unused_generated_injEq": {
+    "EncounterEntry.InstalledRule.mk.injEq": "[propext]",
+    "EncounterEntry.SlotState.mk.injEq": "[propext]",
+    "EncounterEntry.ProcState.mk.injEq": "[propext]",
+    "EncounterEntry.ProcOp.verifyHead.injEq": "[propext]",
+    "EncounterEntry.FreshObserver.mk.injEq": "[propext]",
+    "EncounterEntry.VerifiedReport.mk.injEq": "[propext]",
+    "EncounterEntry.ProcOp.actuate.injEq": "[propext]",
+    "EncounterEntry.InquiryTree.stop.injEq": "[propext]",
+    "EncounterEntry.BranchSys.mk.injEq": "[propext]",
+    "EncounterEntry.InquiryTree.ask.injEq": "[propext]",
+    "EncounterEntry.World.mk.injEq": "[propext]",
+    "EncounterEntry.Submission.mk.injEq": "[propext]",
+    "EncounterEntry.ProcOp.applyRevision.injEq": "[propext]",
+    "EncounterEntry.ProcOp.submit.injEq": "[propext]"
+  },
+  "negative_self_tests": [
+    {
+      "case": "reject_omega_propext",
+      "rejected": true,
+      "reason": "Non-empty axiom dependencies: {'NegTest.bad': ['propext', 'Quot.sound']}"
+    },
+    {
+      "case": "reject_injEq_via_simp",
+      "rejected": true,
+      "reason": "Non-empty axiom dependencies: {'NegTest.bad': ['propext']}"
+    },
+    {
+      "case": "reject_sorryAx",
+      "rejected": true,
+      "reason": "Forbidden proof-escape token: sorry"
+    },
+    {
+      "case": "reject_market_word",
+      "rejected": true,
+      "reason": "Forbidden market words in declarations: {'NegTest.unitCost': ['cost']}"
+    }
+  ],
+  "leaked_olean_files": []
+}

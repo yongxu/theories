@@ -1,0 +1,496 @@
+{
+  "ai_written": "Track S3 (24 November 2026), exact fractions.Fraction primal-vs-dual verifier",
+  "section_7_1": {
+    "exact_absorption_b": [
+      "1/4",
+      "3/4"
+    ],
+    "first_3_resolvent_terms_A": [
+      "1/8",
+      "1/16",
+      "1/32"
+    ],
+    "first_3_resolvent_terms_B": [
+      "3/8",
+      "3/16",
+      "3/32"
+    ],
+    "public_only_rows": [
+      {
+        "name": "sec7_1_public_eps_0",
+        "eps": "0",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0"
+        ]
+      },
+      {
+        "name": "sec7_1_public_eps_1/16",
+        "eps": "1/16",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0"
+        ]
+      },
+      {
+        "name": "sec7_1_public_eps_1/8",
+        "eps": "1/8",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0"
+        ]
+      },
+      {
+        "name": "sec7_1_public_eps_1/4",
+        "eps": "1/4",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0"
+        ]
+      }
+    ],
+    "with_recipient_rows": [
+      {
+        "name": "sec7_1_recipient_eps_0",
+        "eps": "0",
+        "exact_value": "0",
+        "primal_gap": "0",
+        "dual_bound": "0",
+        "mu": [
+          "1",
+          "0"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "0",
+        "c": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "name": "sec7_1_recipient_eps_1/16",
+        "eps": "1/16",
+        "exact_value": "1/8",
+        "primal_gap": "1/8",
+        "dual_bound": "1/8",
+        "mu": [
+          "1/2",
+          "1/2"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "0",
+        "c": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "name": "sec7_1_recipient_eps_1/8",
+        "eps": "1/8",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "0",
+        "c": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "name": "sec7_1_recipient_eps_1/4",
+        "eps": "1/4",
+        "exact_value": "1/4",
+        "primal_gap": "1/4",
+        "dual_bound": "1/4",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "dropped_recipient_restores_1_4": {
+      "name": "sec7_1_dropped_recipient_eps_0",
+      "eps": "0",
+      "exact_value": "1/4",
+      "primal_gap": "1/4",
+      "dual_bound": "1/4",
+      "mu": [
+        "0",
+        "1"
+      ],
+      "nu": [
+        "1",
+        "0"
+      ],
+      "b": "1/2",
+      "c": [
+        "0"
+      ]
+    }
+  },
+  "b2_aliasing": {
+    "simulation": {
+      "0.0": {
+        "strained": {
+          "report_pos": 0,
+          "report_rate": "0",
+          "survived": 0,
+          "survival_rate": "0",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        },
+        "intact": {
+          "report_pos": 1000,
+          "report_rate": "1",
+          "survived": 1000,
+          "survival_rate": "1",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        }
+      },
+      "0.8": {
+        "strained": {
+          "report_pos": 285,
+          "report_rate": "57/200",
+          "survived": 0,
+          "survival_rate": "0",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        },
+        "intact": {
+          "report_pos": 632,
+          "report_rate": "79/125",
+          "survived": 1000,
+          "survival_rate": "1",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        }
+      },
+      "1.0": {
+        "strained": {
+          "report_pos": 434,
+          "report_rate": "217/500",
+          "survived": 0,
+          "survival_rate": "0",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        },
+        "intact": {
+          "report_pos": 434,
+          "report_rate": "217/500",
+          "survived": 1000,
+          "survival_rate": "1",
+          "macro_counts": [
+            108,
+            188,
+            547,
+            157
+          ]
+        }
+      }
+    },
+    "duality_certificates": {
+      "0.0": {
+        "name": "b2_alpha_0.0",
+        "eps": "1/20",
+        "exact_value": "1/20",
+        "primal_gap": "1/20",
+        "dual_bound": "1/20",
+        "mu": [
+          "9/10",
+          "1/10"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "0",
+        "c": [
+          "1"
+        ]
+      },
+      "0.8": {
+        "name": "b2_alpha_0.8",
+        "eps": "1/20",
+        "exact_value": "50/347",
+        "primal_gap": "50/347",
+        "dual_bound": "50/347",
+        "mu": [
+          "247/347",
+          "100/347"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "-285/347",
+        "c": [
+          "1000/347"
+        ]
+      },
+      "1.0": {
+        "name": "b2_alpha_1.0",
+        "eps": "1/20",
+        "exact_value": "1/2",
+        "primal_gap": "1/2",
+        "dual_bound": "1/2",
+        "mu": [
+          "0",
+          "1"
+        ],
+        "nu": [
+          "1",
+          "0"
+        ],
+        "b": "1/2",
+        "c": [
+          "0"
+        ]
+      }
+    },
+    "s2_explicit_handshake_value": "50/347"
+  },
+  "track_b_amplification": [
+    {
+      "name": "trackB_d1/4_n1_e1/16",
+      "eps": "1/16",
+      "exact_value": "1/16",
+      "primal_gap": "1/16",
+      "dual_bound": "1/16",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "1/2",
+        "1/2"
+      ],
+      "b": "0",
+      "c": [
+        "1"
+      ],
+      "delta": "1/4",
+      "n": 1,
+      "expected_formula": "1/16"
+    },
+    {
+      "name": "trackB_d1/4_n2_e1/16",
+      "eps": "1/16",
+      "exact_value": "7/64",
+      "primal_gap": "7/64",
+      "dual_bound": "7/64",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "1/2",
+        "1/2"
+      ],
+      "b": "-3/4",
+      "c": [
+        "7/4"
+      ],
+      "delta": "1/4",
+      "n": 2,
+      "expected_formula": "7/64"
+    },
+    {
+      "name": "trackB_d1/4_n3_e1/16",
+      "eps": "1/16",
+      "exact_value": "37/256",
+      "primal_gap": "37/256",
+      "dual_bound": "37/256",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "1/2",
+        "1/2"
+      ],
+      "b": "-21/16",
+      "c": [
+        "37/16"
+      ],
+      "delta": "1/4",
+      "n": 3,
+      "expected_formula": "37/256"
+    },
+    {
+      "name": "trackB_d1/4_n3_e1/4",
+      "eps": "1/4",
+      "exact_value": "37/128",
+      "primal_gap": "37/128",
+      "dual_bound": "37/128",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "0",
+        "1"
+      ],
+      "b": "91/128",
+      "c": [
+        "0"
+      ],
+      "delta": "1/4",
+      "n": 3,
+      "expected_formula": "37/128"
+    },
+    {
+      "name": "trackB_d1/5_n4_e1/20",
+      "eps": "1/20",
+      "exact_value": "369/2500",
+      "primal_gap": "369/2500",
+      "dual_bound": "369/2500",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "1/2",
+        "1/2"
+      ],
+      "b": "-244/125",
+      "c": [
+        "369/125"
+      ],
+      "delta": "1/5",
+      "n": 4,
+      "expected_formula": "369/2500"
+    },
+    {
+      "name": "trackB_d1/2_n3_e1/8",
+      "eps": "1/8",
+      "exact_value": "7/32",
+      "primal_gap": "7/32",
+      "dual_bound": "7/32",
+      "mu": [
+        "1",
+        "0"
+      ],
+      "nu": [
+        "1/2",
+        "1/2"
+      ],
+      "b": "-3/4",
+      "c": [
+        "7/4"
+      ],
+      "delta": "1/2",
+      "n": 3,
+      "expected_formula": "7/32"
+    }
+  ],
+  "negative_tamper_checks": [
+    {
+      "case": "tampered_L_gt_U",
+      "rejected": true,
+      "reason": "Weak duality violated: L=1/2 > U=50/347"
+    },
+    {
+      "case": "primal_eps_violation",
+      "rejected": true,
+      "reason": "PrimalFeasible violated on row 0: |F_j(mu-nu)|=347/2000 > 2*eps=1/10"
+    },
+    {
+      "case": "nonzero_duality_gap",
+      "rejected": true,
+      "reason": "Optimality gap nonzero: L=50/347 != U=1/2"
+    },
+    {
+      "case": "invalid_distribution",
+      "rejected": true,
+      "reason": "Invalid distribution mu: sum=1"
+    }
+  ]
+}

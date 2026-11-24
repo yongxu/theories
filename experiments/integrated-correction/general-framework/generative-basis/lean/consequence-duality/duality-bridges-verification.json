@@ -1,0 +1,312 @@
+{
+  "module": "DualityBridges",
+  "source_file": "DualityBridges.lean",
+  "source_sha256": "854def026f25eac5745dc1ba11de7c786f981d67556bc70ad75f08ed2459712f",
+  "verified_at_utc": "2026-11-24T12:48:57.509802+00:00",
+  "ai_written": true,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "status": "passed",
+  "standard_axioms_allowed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_axioms_used": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sorry_ax_count": 0,
+  "static_checks": {
+    "private_declarations": [],
+    "unnamed_instances": [],
+    "forbidden_tokens": [],
+    "market_word_hits": [],
+    "missing_required_declarations": []
+  },
+  "declaration_count": 28,
+  "theorem_count": 17,
+  "definition_count": 11,
+  "structure_count": 0,
+  "required_declarations_verified": [
+    "DualityBridges.PrimalFeasibleVec",
+    "DualityBridges.dualBoundVec",
+    "DualityBridges.approx_feasible_of_model_error",
+    "DualityBridges.primalGap_le_dualBoundVec",
+    "DualityBridges.dualBound_with_model_error",
+    "DualityBridges.dualBound_with_uniform_model_error",
+    "DualityBridges.extendQueryFamily",
+    "DualityBridges.extendDualCoeff",
+    "DualityBridges.dualBound_extendQueryFamily",
+    "DualityBridges.monotone_entry_value",
+    "DualityBridges.monotone_entry_value_exists",
+    "DualityBridges.strict_entry_improvement_witness",
+    "DualityBridges.dualBound_zero_eq_zero_iff",
+    "DualityBridges.zero_dualBound_iff_affine_span",
+    "DualityBridges.stepOp",
+    "DualityBridges.stepLinearMap",
+    "DualityBridges.wordVec",
+    "DualityBridges.survVec",
+    "DualityBridges.krylovSub",
+    "DualityBridges.krylovSub_stabilizes_before_card",
+    "DualityBridges.wordVec_mem_krylovSub_pred",
+    "DualityBridges.ShortWord",
+    "DualityBridges.shortWordQuery",
+    "DualityBridges.finite_krylov_zero_minimax_radius"
+  ],
+  "declarations": [
+    {
+      "kind": "def",
+      "name": "DualityBridges.PrimalFeasibleVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.dualBoundVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.approx_feasible_of_model_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.primalGap_le_dualBoundVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.dualBound_with_model_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.dualBound_with_uniform_model_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.extendQueryFamily",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.extendDualCoeff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.dualBound_extendQueryFamily",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.monotone_entry_value",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.monotone_entry_value_exists",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.strict_entry_improvement_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.dualBound_zero_eq_zero_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.zero_dualBound_iff_affine_span",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.stepOp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.stepLinearMap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.wordVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.survVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.krylovSub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.krylovSub_mono",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.stepLinearMap_mem_krylovSub_succ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.krylovSub_step_eq_of_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.krylovSub_stabilizes_from",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.krylovSub_stabilizes_before_card",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.wordVec_mem_krylovSub_pred",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "abbrev",
+      "name": "DualityBridges.ShortWord",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityBridges.shortWordQuery",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityBridges.finite_krylov_zero_minimax_radius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}
