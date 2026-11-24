@@ -6,6 +6,7 @@ import Becoming.MultiScaleViability
 import Becoming.Viability
 import Becoming.CoreHelpers
 import Becoming.GrammarLaws
+import Becoming.RelSpan
 
 /-!
 # Causal Abstraction: Interventional Systems, Lax Viability Transfer, and Compositional Bounds
@@ -318,10 +319,8 @@ theorem exactCausal_trace_map {S : Type u} {A : Type v} {I : Type w}
     {π : S → Q} {φ : A → B} {ω : I → J}
     (abs : ExactCausalAbs C₁ C₂ π φ ω) (i : I) :
     ∀ {s s' : S} {w : List A}, Trace (C₁.proc i) s w s' →
-      Trace (C₂.proc (ω i)) (π s) (w.map φ) (π s')
-  | _, _, [], .nil _ => .nil _
-  | _, _, _ :: _, .cons step rest =>
-    .cons (abs.factors i _ _ _ step) (exactCausal_trace_map abs i rest)
+      Trace (C₂.proc (ω i)) (π s) (w.map φ) (π s') :=
+  fun tr => RelSpan.mapTrace tr (abs.factors i)
 
 /-- With fibrewise lifting, abstract traces correspond exactly to mapped concrete traces. -/
 theorem exactCausal_trace_exact_iff {S : Type u} {A : Type v} {I : Type w}

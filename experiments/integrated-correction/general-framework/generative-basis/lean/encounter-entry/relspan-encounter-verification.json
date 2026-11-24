@@ -1,0 +1,45 @@
+{
+  "ai_written": true,
+  "status": "passed",
+  "module": "RelSpanEncounterAdapter",
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "lean_version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+  "checked_utc": "2026-11-24T20:01:07.991172+00:00",
+  "theorem_count": 7,
+  "declaration_count": 13,
+  "declarations": [
+    "RelSpanEncounterAdapter.listNth?",
+    "RelSpanEncounterAdapter.mem_of_listNth?_eq_some",
+    "RelSpanEncounterAdapter.exists_listNth?_eq_some_of_mem",
+    "RelSpanEncounterAdapter.Mid",
+    "RelSpanEncounterAdapter.ExitOcc",
+    "RelSpanEncounterAdapter.ExitWitness",
+    "RelSpanEncounterAdapter.forgetIdx",
+    "RelSpanEncounterAdapter.proj_surjective_iff_completesPostBranch",
+    "RelSpanEncounterAdapter.sysA_proj_surjective",
+    "RelSpanEncounterAdapter.sysB_leftMid_reqB_empty_fiber",
+    "RelSpanEncounterAdapter.heldout_pathCount_vs_branch_fiber_separation",
+    "RelSpanEncounterAdapter.branchProcess",
+    "RelSpanEncounterAdapter.branchProcess_mapTrace"
+  ],
+  "axioms_empty": true,
+  "transitive_injEq_dependencies": {},
+  "transitive_axiom_dependencies": {},
+  "unused_generated_injEq": {
+    "RelSpanEncounterAdapter.ExitOcc.mk.injEq": "[propext]"
+  },
+  "source_paths": {
+    "GenerativeCore": "GenerativeCore.lean",
+    "Becoming.Prelude": "becoming/Becoming/Prelude.lean",
+    "Becoming.RelSpan": "becoming/Becoming/RelSpan.lean",
+    "EncounterEntry": "encounter-entry/EncounterEntry.lean",
+    "RelSpanEncounterAdapter": "encounter-entry/RelSpanEncounterAdapter.lean"
+  },
+  "source_sha256": {
+    "GenerativeCore": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
+    "Becoming.Prelude": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+    "Becoming.RelSpan": "74bd894a6643db9a9bce9489b90bbf555f5277b6e76bfd0c53238a86782c34ce",
+    "EncounterEntry": "f7c3f507cd992ec72358c81141bb7dcfd5ab7d612ae70ddc0cdd2854c4cd453f",
+    "RelSpanEncounterAdapter": "f3ea0792dd3f234b41ae176af0070cbc1c133f05bf868d43218de9fbb79e384f"
+  }
+}

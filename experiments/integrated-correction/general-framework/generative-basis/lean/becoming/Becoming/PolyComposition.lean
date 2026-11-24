@@ -1,6 +1,7 @@
 import Becoming.OpenComposition
 import Becoming.Reconfiguration
 import Becoming.PoolFromCourse
+import Becoming.RelSpan
 
 /-!
 # Polynomial composition: mode-dependent ports, anchored self-modification, serialized reconfiguration, and coupled-substrate small gain
@@ -593,13 +594,10 @@ theorem ofOpenComponent_trace_to_poly {S Obs Dist Int Ext Env : Type}
       Trace (OpenComposition.closedProcess C c obs channel G envDraw jointAdm) st w st' →
       Trace (polyClosedProcess (PolyComponent.ofOpenComponent C) (fun _ k => [k])
           (PolyContract.ofInterfaceContract c) (fun _ => obs) channel G envDraw jointAdm)
-        (ofOpenState st) (w.map fun a => (a.1, ⟨(), a.2⟩)) (ofOpenState st')
-  | st, _, [], .nil _ => .nil (ofOpenState st)
-  | st, _, a :: _, .cons hstep htr =>
-    .cons
-      ((ofOpenComponent_closedProcess_step_iff C c obs channel G envDraw jointAdm
-          (ofOpenState st) (ofOpenState _) (a.1, ⟨(), a.2⟩)).mpr hstep)
-      (ofOpenComponent_trace_to_poly C c obs channel G envDraw jointAdm htr)
+        (ofOpenState st) (w.map fun a => (a.1, ⟨(), a.2⟩)) (ofOpenState st') :=
+  fun tr => RelSpan.mapTrace tr (fun s a t =>
+    (ofOpenComponent_closedProcess_step_iff C c obs channel G envDraw jointAdm
+      (ofOpenState s) (ofOpenState t) (a.1, ⟨(), a.2⟩)).mpr)
 
 theorem ofOpenComponent_trace_from_poly {S Obs Dist Int Ext Env : Type}
     (C : OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
@@ -614,13 +612,10 @@ theorem ofOpenComponent_trace_from_poly {S Obs Dist Int Ext Env : Type}
           (PolyContract.ofInterfaceContract c) (fun _ => obs) channel G envDraw jointAdm)
         st w st' →
       Trace (OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
-        (toOpenState st) (w.map fun a => (a.1, a.2.2)) (toOpenState st')
-  | st, _, [], .nil _ => .nil (toOpenState st)
-  | st, _, a :: _, .cons hstep htr =>
-    .cons
-      ((ofOpenComponent_closedProcess_step_iff C c obs channel G envDraw jointAdm
-          st _ a).mp hstep)
-      (ofOpenComponent_trace_from_poly C c obs channel G envDraw jointAdm htr)
+        (toOpenState st) (w.map fun a => (a.1, a.2.2)) (toOpenState st') :=
+  fun tr => RelSpan.mapTrace tr (fun s a t =>
+    (ofOpenComponent_closedProcess_step_iff C c obs channel G envDraw jointAdm
+      s t a).mp)
 
 theorem ofOpenComponent_trace_iff {S Obs Dist Int Ext Env : Type}
     (C : OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}

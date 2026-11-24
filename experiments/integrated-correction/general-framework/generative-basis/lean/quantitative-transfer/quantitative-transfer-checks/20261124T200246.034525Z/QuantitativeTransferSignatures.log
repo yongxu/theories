@@ -1,0 +1,446 @@
+@QuantitativeTransfer.poolMean_eq : ∀ {X : Type u_1} {M : ℕ},
+  0 < M →
+    ∀ (γ : ℝ) (c : X → ℝ) (u : Fin M → X → ℝ) (x : X),
+      QuantitativeTransfer.poolMean γ c u x = γ * c x + (1 - γ) * QuantitativeTransfer.residualMean u x
+@QuantitativeTransfer.residualMean_mem : ∀ {X : Type u_1} {M : ℕ},
+  0 < M →
+    ∀ (u : Fin M → X → ℝ),
+      (∀ (i : Fin M) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+        ∀ (x : X), 0 ≤ QuantitativeTransfer.residualMean u x ∧ QuantitativeTransfer.residualMean u x ≤ 1
+@QuantitativeTransfer.judgeScore_sub : ∀ {X : Type u_1} {M : ℕ} (γ : ℝ) (c : X → ℝ) (u : Fin M → X → ℝ) (i k : Fin M)
+  (x : X),
+  QuantitativeTransfer.judgeScore γ c u i x - QuantitativeTransfer.judgeScore γ c u k x = (1 - γ) * (u i x - u k x)
+@QuantitativeTransfer.abs_sub_le_one_of_unit : ∀ {a b : ℝ}, 0 ≤ a ∧ a ≤ 1 → 0 ≤ b ∧ b ≤ 1 → |a - b| ≤ 1
+@QuantitativeTransfer.shared_score_bias_floor : ∀ {γ c v t : ℝ},
+  0 ≤ γ → γ ≤ 1 → 0 ≤ v ∧ v ≤ 1 → 0 ≤ t ∧ t ≤ 1 → γ * |c - t| - (1 - γ) ≤ |γ * c + (1 - γ) * v - t|
+@QuantitativeTransfer.pool_disagreement_ceiling : ∀ {X : Type u_1} {M : ℕ} {γ : ℝ},
+  γ ≤ 1 →
+    ∀ (c : X → ℝ) (u : Fin M → X → ℝ),
+      (∀ (i : Fin M) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+        (∀ (i k : Fin M) (x : X),
+            |QuantitativeTransfer.judgeScore γ c u i x - QuantitativeTransfer.judgeScore γ c u k x| ≤ 1 - γ) ∧
+          (∀ (i : Fin M) (x : X),
+              |QuantitativeTransfer.judgeScore γ c u i x - QuantitativeTransfer.poolMean γ c u x| ≤ 1 - γ) ∧
+            (0 < M →
+              ∀ (x y : X),
+                c x = c y → |QuantitativeTransfer.poolMean γ c u x - QuantitativeTransfer.poolMean γ c u y| ≤ 1 - γ)
+@QuantitativeTransfer.pool_shared_bias_floor : ∀ {X : Type u_1} {M : ℕ},
+  0 < M →
+    ∀ {γ : ℝ},
+      0 ≤ γ →
+        γ ≤ 1 →
+          ∀ (c t : X → ℝ) (u : Fin M → X → ℝ),
+            (∀ (i : Fin M) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+              (∀ (x : X), 0 ≤ t x ∧ t x ≤ 1) →
+                (∀ (x : X), γ * |c x - t x| - (1 - γ) ≤ |QuantitativeTransfer.poolMean γ c u x - t x|) ∧
+                  ∀ (x : X), |QuantitativeTransfer.poolMean γ c (fun x => t) x - t x| = γ * |c x - t x|
+@QuantitativeTransfer.pool_ceiling_attained : ∀ {X : Type u_1} {M : ℕ} (hM : 2 ≤ M) {γ : ℝ},
+  γ ≤ 1 →
+    ∀ (c : X → ℝ) (x : X),
+      ∃ u,
+        (∀ (i : Fin M) (y : X), 0 ≤ u i y ∧ u i y ≤ 1) ∧
+          |QuantitativeTransfer.judgeScore γ c u ⟨0, ⋯⟩ x - QuantitativeTransfer.judgeScore γ c u ⟨1, ⋯⟩ x| = 1 - γ
+@QuantitativeTransfer.anchor_detects_shared_drift : ∀ {X : Type u_1} {M : ℕ} {γ εₐ : ℝ},
+  0 ≤ γ →
+    γ ≤ 1 →
+      ∀ (c t a : X → ℝ) (u : Fin M → X → ℝ),
+        (∀ (i : Fin M) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+          (∀ (x : X), 0 ≤ t x ∧ t x ≤ 1) →
+            (∀ (x : X), |a x - t x| ≤ εₐ) →
+              (0 < M → ∀ (x : X), γ * |c x - t x| - (1 - γ) - εₐ ≤ |a x - QuantitativeTransfer.poolMean γ c u x|) ∧
+                ∀ (i : Fin M) (x : X),
+                  γ * |c x - t x| - (1 - γ) - εₐ ≤ |a x - QuantitativeTransfer.judgeScore γ c u i x|
+@QuantitativeTransfer.correlated_pool_blindness_vs_anchor : ∀ {X : Type u_1} {M : ℕ} {γ εₐ τ : ℝ},
+  0 ≤ γ →
+    γ ≤ 1 →
+      1 - γ ≤ τ →
+        ∀ (c t a : X → ℝ) (u : Fin M → X → ℝ),
+          (∀ (i : Fin M) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+            (∀ (x : X), 0 ≤ t x ∧ t x ≤ 1) →
+              (∀ (x : X), |a x - t x| ≤ εₐ) →
+                (∀ (i k : Fin M) (x : X),
+                    ¬τ < |QuantitativeTransfer.judgeScore γ c u i x - QuantitativeTransfer.judgeScore γ c u k x|) ∧
+                  ∀ (x : X),
+                    τ + (1 - γ) + εₐ < γ * |c x - t x| →
+                      (0 < M → τ < |a x - QuantitativeTransfer.poolMean γ c u x|) ∧
+                        ∀ (i : Fin M), τ < |a x - QuantitativeTransfer.judgeScore γ c u i x|
+QuantitativeTransfer.correlated_pool_lab_witness : (∀ {X : Type} (c t : X → ℝ) (u : Fin 3 → X → ℝ),
+    (∀ (i : Fin 3) (x : X), 0 ≤ u i x ∧ u i x ≤ 1) →
+      (∀ (x : X), 0 ≤ t x ∧ t x ≤ 1) →
+        (∀ (i k : Fin 3) (x : X),
+            ¬7 / 50 <
+                |QuantitativeTransfer.judgeScore (24 / 25) c u i x -
+                    QuantitativeTransfer.judgeScore (24 / 25) c u k x|) ∧
+          ∀ (x : X),
+            3 / 16 < |c x - t x| →
+              7 / 50 < |t x - QuantitativeTransfer.poolMean (24 / 25) c u x| ∧
+                ∀ (i : Fin 3), 7 / 50 < |t x - QuantitativeTransfer.judgeScore (24 / 25) c u i x|) ∧
+  (∀ (i k : Fin 3),
+      QuantitativeTransfer.judgeScore (24 / 25) (fun x => 1) (fun x x_1 => 0) i () -
+          QuantitativeTransfer.judgeScore (24 / 25) (fun x => 1) (fun x x_1 => 0) k () =
+        0) ∧
+    7 / 50 < |0 - QuantitativeTransfer.poolMean (24 / 25) (fun x => 1) (fun x x_1 => 0) ()|
+@QuantitativeTransfer.aliased_fiber_gap : ∀ {U : Type u_1} {O : Type u_2} {α : ℝ},
+  α ≤ 1 →
+    ∀ (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U},
+      f u₁ = f u₂ →
+        |QuantitativeTransfer.aliasedProbe α p m f u₁ - QuantitativeTransfer.aliasedProbe α p m f u₂| =
+          (1 - α) * |p u₁ - p u₂|
+@QuantitativeTransfer.midpoint_admissible : ∀ {ε r₁ r₂ : ℝ},
+  |r₁ - r₂| ≤ 2 * ε → |(r₁ + r₂) / 2 - r₁| ≤ ε ∧ |(r₁ + r₂) / 2 - r₂| ≤ ε
+@QuantitativeTransfer.noisy_readout_floor : ∀ {U : Type u_1} {ε : ℝ} (r : U → ℝ) {u₁ u₂ : U},
+  |r u₁ - r u₂| ≤ 2 * ε →
+    (∀ (g : ℝ → Bool), ¬QuantitativeTransfer.SeparatesUnderNoise ε (r u₁) (r u₂) g) ∧
+      ∀ (h : U → ℝ) (b : ℝ → ℝ) {γ : ℝ},
+        h u₁ = 0 → h u₂ = 1 → (∀ (u : U) (y : ℝ), |y - r u| ≤ ε → |h u - b y| ≤ γ) → 1 / 2 ≤ γ
+@QuantitativeTransfer.noisy_readout_separates : ∀ {ε r₁ r₂ : ℝ},
+  2 * ε < |r₁ - r₂| →
+    QuantitativeTransfer.SeparatesUnderNoise ε r₁ r₂ fun y => decide (0 < (r₂ - r₁) * (y - (r₁ + r₂) / 2))
+@QuantitativeTransfer.aliased_separable_iff : ∀ {U : Type u_1} {O : Type u_2} {α ε : ℝ},
+  α ≤ 1 →
+    ∀ (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U},
+      f u₁ = f u₂ →
+        ((∃ g,
+            QuantitativeTransfer.SeparatesUnderNoise ε (QuantitativeTransfer.aliasedProbe α p m f u₁)
+              (QuantitativeTransfer.aliasedProbe α p m f u₂) g) ↔
+          2 * ε < (1 - α) * |p u₁ - p u₂|)
+@QuantitativeTransfer.aliased_readout_floor : ∀ {U : Type u_1} {O : Type u_2} {α ε : ℝ},
+  α ≤ 1 →
+    ∀ (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U},
+      f u₁ = f u₂ →
+        (1 - α) * |p u₁ - p u₂| ≤ 2 * ε →
+          (∀ (g : ℝ → Bool),
+              ¬QuantitativeTransfer.SeparatesUnderNoise ε (QuantitativeTransfer.aliasedProbe α p m f u₁)
+                  (QuantitativeTransfer.aliasedProbe α p m f u₂) g) ∧
+            ∀ (h : U → ℝ) (b : ℝ → ℝ) {γ : ℝ},
+              h u₁ = 0 →
+                h u₂ = 1 →
+                  (∀ (u : U) (y : ℝ), |y - QuantitativeTransfer.aliasedProbe α p m f u| ≤ ε → |h u - b y| ≤ γ) →
+                    1 / 2 ≤ γ
+@QuantitativeTransfer.aliased_lab_witness : ∀ {U : Type u_1} {O : Type u_2} (p : U → ℝ) (m : O → ℝ) (f : U → O)
+  {u₁ u₂ : U},
+  f u₁ = f u₂ →
+    |p u₁ - p u₂| = 6 / 5 →
+      (∀ (ε : ℝ),
+          3 / 100 ≤ ε →
+            ∀ (g : ℝ → Bool),
+              ¬QuantitativeTransfer.SeparatesUnderNoise ε (QuantitativeTransfer.aliasedProbe (19 / 20) p m f u₁)
+                  (QuantitativeTransfer.aliasedProbe (19 / 20) p m f u₂) g) ∧
+        ∀ ε < 57 / 100,
+          ∃ g,
+            QuantitativeTransfer.SeparatesUnderNoise ε (QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₁)
+              (QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₂) g
+@QuantitativeTransfer.testMass_add_not : ∀ {Y : Type u_1} [inst : Fintype Y] (P : ObservationalFidelity.FinDist Y)
+  (g : Y → Bool), (QuantitativeTransfer.testMass P g + QuantitativeTransfer.testMass P fun y => !g y) = 1
+@QuantitativeTransfer.tvDist_le_one : ∀ {Y : Type u_1} [inst : Fintype Y] (P Q : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist P Q ≤ 1
+@QuantitativeTransfer.two_point_test_floor : ∀ {Y : Type u_1} [inst : Fintype Y]
+  (P₁ P₂ : ObservationalFidelity.FinDist Y) (g : Y → Bool),
+  1 - ObservationalFidelity.tvDist P₁ P₂ ≤
+    QuantitativeTransfer.testMass P₁ g + QuantitativeTransfer.testMass P₂ fun y => !g y
+@QuantitativeTransfer.tvDist_mixDist_same : ∀ {Y : Type u_1} [inst : Fintype Y] {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1)
+  (P₁ P₂ N : ObservationalFidelity.FinDist Y),
+  ObservationalFidelity.tvDist (QuantitativeTransfer.mixDist α hα0 hα1 P₁ N)
+      (QuantitativeTransfer.mixDist α hα0 hα1 P₂ N) =
+    (1 - α) * ObservationalFidelity.tvDist P₁ P₂
+@QuantitativeTransfer.mixture_aliasing_test_floor : ∀ {U : Type u_1} {O : Type u_2} {Y : Type u_3} [inst : Fintype Y]
+  {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1) (K : U → ObservationalFidelity.FinDist Y)
+  (N : O → ObservationalFidelity.FinDist Y) (f : U → O) {u₁ u₂ : U},
+  f u₁ = f u₂ →
+    ∀ (g : Y → Bool),
+      (1 - (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) ≤
+          QuantitativeTransfer.testMass (QuantitativeTransfer.mixDist α hα0 hα1 (K u₁) (N (f u₁))) g +
+            QuantitativeTransfer.testMass (QuantitativeTransfer.mixDist α hα0 hα1 (K u₂) (N (f u₂))) fun y => !g y) ∧
+        α ≤ 1 - (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂)
+@QuantitativeTransfer.mixture_floor_attained : ∀ {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1)
+  (N : ObservationalFidelity.FinDist Bool),
+  (QuantitativeTransfer.testMass (QuantitativeTransfer.mixDist α hα0 hα1 (ObservationalFidelity.diracDist false) N) id +
+      QuantitativeTransfer.testMass (QuantitativeTransfer.mixDist α hα0 hα1 (ObservationalFidelity.diracDist true) N)
+        fun y => !id y) =
+    α
+@QuantitativeTransfer.le_of_deriv_le_on_Icc : ∀ {x : ℝ → ℝ} {H₁ T : ℝ},
+  ContinuousOn x (Set.Icc 0 T) →
+    DifferentiableOn ℝ x (Set.Ioo 0 T) → (∀ t ∈ Set.Ioo 0 T, deriv x t ≤ -H₁) → ∀ t ∈ Set.Icc 0 T, x t ≤ x 0 - H₁ * t
+@QuantitativeTransfer.lag_horizon_wall : ∀ {x : ℝ → ℝ} {H₁ L x_crit : ℝ},
+  0 < H₁ →
+    x_crit ≤ x 0 →
+      (x 0 - x_crit) / H₁ < L →
+        ContinuousOn x (Set.Icc 0 L) →
+          DifferentiableOn ℝ x (Set.Ioo 0 L) →
+            (∀ t ∈ Set.Ioo 0 L, deriv x t ≤ -H₁) →
+              (∃ t ∈ Set.Icc 0 ((x 0 - x_crit) / H₁), t < L ∧ x t = x_crit) ∧ x L < x_crit
+@QuantitativeTransfer.lag_wall_iff_linear : ∀ {H₁ L x₀ x_crit : ℝ},
+  0 < H₁ → 0 ≤ L → ((∃ t ∈ Set.Icc 0 L, x₀ - H₁ * t < x_crit) ↔ (x₀ - x_crit) / H₁ < L)
+QuantitativeTransfer.linear_trajectory_premises : ∀ (H₁ x₀ L : ℝ),
+  ContinuousOn (fun t => x₀ - H₁ * t) (Set.Icc 0 L) ∧
+    DifferentiableOn ℝ (fun t => x₀ - H₁ * t) (Set.Ioo 0 L) ∧ ∀ t ∈ Set.Ioo 0 L, deriv (fun t => x₀ - H₁ * t) t ≤ -H₁
+@QuantitativeTransfer.switching_score_persists : ∀ {s : ℝ → ℝ} {s₀ ρ S v_rest η p n2 T : ℝ},
+  0 < η * p * n2 →
+    s 0 = s₀ + η * ρ * S →
+      ContinuousOn s (Set.Icc 0 T) →
+        DifferentiableOn ℝ s (Set.Ioo 0 T) →
+          (∀ t ∈ Set.Ioo 0 T, -(η * p * n2) ≤ deriv s t) →
+            ∀ t ∈ Set.Icc 0 T, t < QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2 → v_rest < s t
+@QuantitativeTransfer.switchLag_strictMono_rho : ∀ {s₀ S v_rest η p n2 : ℝ},
+  0 < η → 0 < S → 0 < p → 0 < n2 → StrictMono fun ρ => QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2
+@QuantitativeTransfer.switchLag_nonpos_tabular : ∀ {s₀ S v_rest η p n2 : ℝ},
+  0 < η * p * n2 → s₀ ≤ v_rest → QuantitativeTransfer.switchLag s₀ 0 S v_rest η p n2 ≤ 0
+@QuantitativeTransfer.leakage_lag_wall : ∀ {x : ℝ → ℝ} {H₁ L x_crit s₀ S v_rest η p n2 ρ : ℝ},
+  0 < H₁ →
+    x_crit ≤ x 0 →
+      x 0 < x_crit + H₁ * (L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2) →
+        ContinuousOn x (Set.Icc 0 (L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2)) →
+          DifferentiableOn ℝ x (Set.Ioo 0 (L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2)) →
+            (∀ t ∈ Set.Ioo 0 (L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2), deriv x t ≤ -H₁) →
+              (∃ t ∈ Set.Icc 0 (L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2),
+                  t < L + QuantitativeTransfer.switchLag s₀ ρ S v_rest η p n2 ∧ x t = x_crit) ∧
+                (0 < η →
+                  0 < S →
+                    0 < p →
+                      0 < n2 →
+                        StrictMono fun ρ' => x_crit + H₁ * (L + QuantitativeTransfer.switchLag s₀ ρ' S v_rest η p n2))
+QuantitativeTransfer.b1_headroom_witness : ∀ (M : ℝ),
+  0 ≤ M → ((∃ t ∈ Set.Icc 0 (5 + M), 27 - 4 * t < 3) ↔ 1 < M) ∧ ((∃ t ∈ Set.Icc 0 (5 + M), 39 - 4 * t < 3) ↔ 4 < M)
+@QuantitativeTransfer.guardRef_trace : ∀ {Q : Type u_1} (T : Q → Q) {q : Q} {w : List Unit} {q' : Q},
+  Generative.Trace (QuantitativeTransfer.guardRef T) q w q' → q' = T^[w.length] q
+@QuantitativeTransfer.dist_add_le_of_norm : ∀ {E : Type u_1} [inst : NormedAddCommGroup E] (a b v : E),
+  dist (a + v) b ≤ dist a b + ‖v‖
+@QuantitativeTransfer.norm_trustProj_le : ∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E]
+  {Δ : ℝ}, 0 ≤ Δ → ∀ (v : E), ‖QuantitativeTransfer.trustProj Δ v‖ ≤ Δ
+@QuantitativeTransfer.trustProj_of_norm_le : ∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E]
+  {Δ : ℝ} {v : E}, ‖v‖ ≤ Δ → QuantitativeTransfer.trustProj Δ v = v
+@QuantitativeTransfer.trust_region_tube : ∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E]
+  (T : E → E) (lr Δ : ℝ) {α : ℝ},
+  0 ≤ α →
+    α < 1 →
+      0 ≤ Δ →
+        (∀ (x y : E), dist (T x) (T y) ≤ α * dist x y) →
+          ∀ {z₀ z : E} (q₀ : E) {gs : List E},
+            Generative.Trace (QuantitativeTransfer.trustStep T lr Δ) z₀ gs z →
+              dist z (T^[gs.length] q₀) ≤ α ^ gs.length * dist z₀ q₀ + Δ * (1 - α ^ gs.length) / (1 - α) ∧
+                dist z (T^[gs.length] q₀) ≤ α ^ gs.length * dist z₀ q₀ + Δ / (1 - α)
+@QuantitativeTransfer.trust_region_viability : ∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E]
+  (T : E → E) (lr Δ : ℝ) {α : ℝ},
+  0 ≤ α →
+    α < 1 →
+      0 ≤ Δ →
+        (∀ (x y : E), dist (T x) (T y) ≤ α * dist x y) →
+          ∀ {c : E},
+            T c = c →
+              ∀ {z₀ : E} {d₀ B : ℝ},
+                dist z₀ c ≤ d₀ →
+                  max d₀ (Δ / (1 - α)) ≤ B →
+                    Becoming.Viability.Kernel (QuantitativeTransfer.trustStep T lr Δ) (fun z => dist z c ≤ B) z₀
+@QuantitativeTransfer.unprojected_step_overshoots : ∀ {E : Type u_1} [inst : NormedAddCommGroup E]
+  [inst_1 : NormedSpace ℝ E] [Nontrivial E] (T : E → E) {c : E},
+  T c = c →
+    ∀ {lr : ℝ},
+      0 < lr →
+        ∀ (B : ℝ),
+          (∃ g, B < dist (T c + lr • g) c) ∧
+            ¬Becoming.Viability.Kernel (QuantitativeTransfer.rawStep T lr) (fun z => dist z c ≤ B) c
+@QuantitativeTransfer.trustRun_eq : ∀ {α : ℝ},
+  α ≠ 1 → ∀ (Δ : ℝ) (n : ℕ), QuantitativeTransfer.trustRun α Δ n = Δ * (1 - α ^ n) / (1 - α)
+@QuantitativeTransfer.trustRun_trace : ∀ {α lr Δ : ℝ},
+  0 < lr →
+    0 ≤ Δ →
+      ∀ (n : ℕ) (z : ℝ),
+        Generative.Trace (QuantitativeTransfer.trustStep (fun y => α * y) lr Δ) z (List.replicate n (Δ / lr))
+          ((fun y => α * y + Δ)^[n] z)
+QuantitativeTransfer.trustRun_iterate : ∀ (α Δ : ℝ) (n : ℕ),
+  (fun y => α * y + Δ)^[n] 0 = QuantitativeTransfer.trustRun α Δ n
+@QuantitativeTransfer.trust_region_tube_attained : ∀ {α lr Δ : ℝ},
+  0 ≤ α →
+    α < 1 →
+      0 < lr →
+        0 ≤ Δ →
+          ∀ (n : ℕ),
+            ∃ z,
+              Generative.Trace (QuantitativeTransfer.trustStep (fun y => α * y) lr Δ) 0 (List.replicate n (Δ / lr)) z ∧
+                dist z ((fun y => α * y)^[n] 0) = α ^ n * dist 0 0 + Δ * (1 - α ^ n) / (1 - α)
+@QuantitativeTransfer.trust_region_lab_witness : ∀ {E : Type u_1} [inst : NormedAddCommGroup E]
+  [inst_1 : NormedSpace ℝ E] [Nontrivial E] (T : E → E),
+  (∀ (x y : E), dist (T x) (T y) ≤ 1 / 2 * dist x y) →
+    ∀ {c : E},
+      T c = c →
+        (∀ (lr : ℝ) (z₀ : E),
+            dist z₀ c ≤ 2 →
+              Becoming.Viability.Kernel (QuantitativeTransfer.trustStep T lr 1) (fun z => dist z c ≤ 2) z₀) ∧
+          ∀ (lr : ℝ),
+            0 < lr →
+              (∃ g, 2 < dist (T c + lr • g) c) ∧
+                ¬Becoming.Viability.Kernel (QuantitativeTransfer.rawStep T lr) (fun z => dist z c ≤ 2) c
+@QuantitativeTransfer.youdenJ_eq_one_sub_errorSum : ∀ {Y : Type u_1} [inst : Fintype Y]
+  (P₀ P₁ : ObservationalFidelity.FinDist Y) (g : Y → Bool),
+  QuantitativeTransfer.youdenJ P₀ P₁ g =
+    1 - (QuantitativeTransfer.testMass P₀ g + QuantitativeTransfer.testMass P₁ fun y => !g y)
+@QuantitativeTransfer.youdenJ_const_zero : ∀ {Y : Type u_1} [inst : Fintype Y]
+  (P₀ P₁ : ObservationalFidelity.FinDist Y),
+  (QuantitativeTransfer.youdenJ P₀ P₁ fun x => true) = 0 ∧ (QuantitativeTransfer.youdenJ P₀ P₁ fun x => false) = 0
+@QuantitativeTransfer.youdenJ_le_tvDist : ∀ {Y : Type u_1} [inst : Fintype Y] (P₀ P₁ : ObservationalFidelity.FinDist Y)
+  (g : Y → Bool), QuantitativeTransfer.youdenJ P₀ P₁ g ≤ ObservationalFidelity.tvDist P₀ P₁
+@QuantitativeTransfer.abs_youdenJ_le_tvDist : ∀ {Y : Type u_1} [inst : Fintype Y]
+  (P₀ P₁ : ObservationalFidelity.FinDist Y) (g : Y → Bool),
+  |QuantitativeTransfer.youdenJ P₀ P₁ g| ≤ ObservationalFidelity.tvDist P₀ P₁
+@QuantitativeTransfer.youdenJ_tvDist_attained : ∀ {Y : Type u_1} [inst : Fintype Y] [DecidableEq Y]
+  (P₀ P₁ : ObservationalFidelity.FinDist Y),
+  ∃ g, QuantitativeTransfer.youdenJ P₀ P₁ g = ObservationalFidelity.tvDist P₀ P₁
+@QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling : ∀ {U : Type u_1} {O : Type u_2} {Y : Type u_3}
+  [inst : Fintype Y] {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1) (K : U → ObservationalFidelity.FinDist Y)
+  (N : O → ObservationalFidelity.FinDist Y) (f : U → O) {u₁ u₂ : U},
+  f u₁ = f u₂ →
+    ∀ (g : Y → Bool),
+      |QuantitativeTransfer.youdenJ (QuantitativeTransfer.mixDist α hα0 hα1 (K u₁) (N (f u₁)))
+              (QuantitativeTransfer.mixDist α hα0 hα1 (K u₂) (N (f u₂))) g| ≤
+          (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) ∧
+        (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) ≤ 1 - α
+@QuantitativeTransfer.youdenJ_mixture_attained : ∀ {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1)
+  (N : ObservationalFidelity.FinDist Bool),
+  QuantitativeTransfer.youdenJ (QuantitativeTransfer.mixDist α hα0 hα1 (ObservationalFidelity.diracDist false) N)
+      (QuantitativeTransfer.mixDist α hα0 hα1 (ObservationalFidelity.diracDist true) N) id =
+    1 - α
+@QuantitativeTransfer.lag_wall_youdenJ_zero : ∀ {Y : Type u_1} [inst : Fintype Y] {x : ℝ → ℝ} {H₁ L x_crit : ℝ},
+  0 < H₁ →
+    x_crit ≤ x 0 →
+      (x 0 - x_crit) / H₁ < L →
+        ContinuousOn x (Set.Icc 0 L) →
+          DifferentiableOn ℝ x (Set.Ioo 0 L) →
+            (∀ t ∈ Set.Ioo 0 L, deriv x t ≤ -H₁) →
+              ∀ (P₀ P₁ : ℝ → ObservationalFidelity.FinDist Y),
+                (∀ t < L, P₀ t = P₁ t) →
+                  ∃ t ∈ Set.Icc 0 ((x 0 - x_crit) / H₁),
+                    t < L ∧ x t = x_crit ∧ ∀ s ≤ t, ∀ (g : Y → Bool), QuantitativeTransfer.youdenJ (P₀ s) (P₁ s) g = 0
+QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum : ∀ (μ₀ μ₁ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ₀] [MeasureTheory.IsProbabilityMeasure μ₁] {A : Set ℝ},
+  MeasurableSet A → QuantitativeTransfer.measYoudenJ μ₀ μ₁ A = 1 - QuantitativeTransfer.measErrorSum μ₀ μ₁ A
+QuantitativeTransfer.measYoudenJ_const_zero : ∀ (μ₀ μ₁ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ₀] [MeasureTheory.IsProbabilityMeasure μ₁],
+  QuantitativeTransfer.measYoudenJ μ₀ μ₁ Set.univ = 0 ∧ QuantitativeTransfer.measYoudenJ μ₀ μ₁ ∅ = 0
+@QuantitativeTransfer.lag_wall_measYoudenJ_zero : ∀ {x : ℝ → ℝ} {H₁ L x_crit : ℝ},
+  0 < H₁ →
+    x_crit ≤ x 0 →
+      (x 0 - x_crit) / H₁ < L →
+        ContinuousOn x (Set.Icc 0 L) →
+          DifferentiableOn ℝ x (Set.Ioo 0 L) →
+            (∀ t ∈ Set.Ioo 0 L, deriv x t ≤ -H₁) →
+              ∀ (μ₀ μ₁ : ℝ → MeasureTheory.Measure ℝ),
+                (∀ t < L, μ₀ t = μ₁ t) →
+                  ∃ t ∈ Set.Icc 0 ((x 0 - x_crit) / H₁),
+                    t < L ∧ x t = x_crit ∧ ∀ s ≤ t, ∀ (A : Set ℝ), QuantitativeTransfer.measYoudenJ (μ₀ s) (μ₁ s) A = 0
+@QuantitativeTransfer.integral_cauchy_schwarz : ∀ {f g : ℝ → ℝ},
+  MeasureTheory.Integrable (fun x => f x ^ 2) MeasureTheory.volume →
+    MeasureTheory.Integrable (fun x => g x ^ 2) MeasureTheory.volume →
+      MeasureTheory.Integrable (fun x => f x * g x) MeasureTheory.volume →
+        (∫ (x : ℝ), f x * g x) ^ 2 ≤ (∫ (x : ℝ), f x ^ 2) * ∫ (x : ℝ), g x ^ 2
+QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    ∀ (x : ℝ),
+      √(ProbabilityTheory.gaussianPDFReal μ₁ v x * ProbabilityTheory.gaussianPDFReal μ₂ v x) =
+        Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * ↑v)) * ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x
+QuantitativeTransfer.gaussian_bhattacharyya_integral : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    ∫ (x : ℝ), √(ProbabilityTheory.gaussianPDFReal μ₁ v x * ProbabilityTheory.gaussianPDFReal μ₂ v x) =
+      Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * ↑v))
+QuantitativeTransfer.gaussian_tv_le_hellinger : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    1 / 2 * ∫ (x : ℝ), |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| ≤
+      √(1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (4 * ↑v)))
+QuantitativeTransfer.gaussian_tv_ge_hellinger : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * ↑v)) ≤
+      1 / 2 * ∫ (x : ℝ), |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x|
+QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    ∀ {A : Set ℝ},
+      MeasurableSet A →
+        QuantitativeTransfer.measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v) A ≤
+          1 / 2 * ∫ (x : ℝ), |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x|
+QuantitativeTransfer.gaussian_measYoudenJ_le_tv : ∀ (μ₁ μ₂ : ℝ) {v : NNReal},
+  v ≠ 0 →
+    ∀ {A : Set ℝ},
+      MeasurableSet A →
+        |QuantitativeTransfer.measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v)
+              A| ≤
+          1 / 2 * ∫ (x : ℝ), |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x|
+@QuantitativeTransfer.gaussian_midpoint_attains_tv : ∀ {μ₁ μ₂ : ℝ},
+  μ₁ < μ₂ →
+    ∀ {v : NNReal},
+      v ≠ 0 →
+        QuantitativeTransfer.measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v)
+            (Set.Ioi ((μ₁ + μ₂) / 2)) =
+          1 / 2 * ∫ (x : ℝ), |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x|
+@QuantitativeTransfer.gaussian_aliased_youdenJ_wall : ∀ {U : Type u_1} {O : Type u_2} {α : ℝ},
+  α ≤ 1 →
+    ∀ (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U},
+      f u₁ = f u₂ →
+        ∀ {v : NNReal},
+          v ≠ 0 →
+            ∀ {A : Set ℝ},
+              MeasurableSet A →
+                |QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₁)
+                        (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₂) A| ≤
+                    √(1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * ↑v))) ∧
+                  √(1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * ↑v))) ≤ (1 - α) * |p u₁ - p u₂| / (2 * √↑v) ∧
+                    0 < 1 - √(1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * ↑v))) ∧
+                      1 - √(1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * ↑v))) ≤
+                        QuantitativeTransfer.measErrorSum (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₁)
+                          (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₂) A
+@QuantitativeTransfer.gaussian_aliased_midpoint_sharp : ∀ {U : Type u_1} {O : Type u_2} {α : ℝ},
+  α < 1 →
+    ∀ (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U},
+      f u₁ = f u₂ →
+        p u₁ < p u₂ →
+          ∀ {v : NNReal},
+            v ≠ 0 →
+              0 < 1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * ↑v)) ∧
+                1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * ↑v)) ≤
+                    QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₁)
+                      (QuantitativeTransfer.gaussianAliasedLaw α p m f v u₂)
+                      (Set.Ioi
+                        ((QuantitativeTransfer.aliasedProbe α p m f u₁ + QuantitativeTransfer.aliasedProbe α p m f u₂) /
+                          2)) ∧
+                  ∀ (A : Set ℝ),
+                    MeasurableSet A →
+                      QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v u₁)
+                            (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v u₂) A =
+                          0 ∧
+                        QuantitativeTransfer.measErrorSum (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v u₁)
+                            (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v u₂) A =
+                          1
+@QuantitativeTransfer.gaussian_aliased_lab_witness : ∀ {U : Type u_1} {O : Type u_2} (p : U → ℝ) (m : O → ℝ) (f : U → O)
+  {u₁ u₂ : U},
+  f u₁ = f u₂ →
+    p u₂ - p u₁ = 6 / 5 →
+      have v₁₉ := ⟨(17 / 250) ^ 2, ⋯⟩;
+      have v₁ := ⟨(7 / 100) ^ 2, ⋯⟩;
+      have v₁_₂₀ := ⟨(4 / 125) ^ 2, ⋯⟩;
+      (∀ (A : Set ℝ),
+          MeasurableSet A →
+            |QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+                    (QuantitativeTransfer.gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂) A| ≤
+                15 / 34 ∧
+              19 / 34 ≤
+                QuantitativeTransfer.measErrorSum (QuantitativeTransfer.gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+                  (QuantitativeTransfer.gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂) A) ∧
+        (∀ (A : Set ℝ),
+            MeasurableSet A →
+              QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v₁ u₁)
+                    (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v₁ u₂) A =
+                  0 ∧
+                QuantitativeTransfer.measErrorSum (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v₁ u₁)
+                    (QuantitativeTransfer.gaussianAliasedLaw 1 p m f v₁ u₂) A =
+                  1) ∧
+          99 / 100 ≤
+              QuantitativeTransfer.measYoudenJ (QuantitativeTransfer.gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+                (QuantitativeTransfer.gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+                (Set.Ioi
+                  ((QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₁ +
+                      QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₂) /
+                    2)) ∧
+            QuantitativeTransfer.measErrorSum (QuantitativeTransfer.gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+                (QuantitativeTransfer.gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+                (Set.Ioi
+                  ((QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₁ +
+                      QuantitativeTransfer.aliasedProbe (1 / 20) p m f u₂) /
+                    2)) ≤
+              1 / 100
