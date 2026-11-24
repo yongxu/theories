@@ -21,3 +21,11 @@
 ## What is not said
 
 He did not lift Rule 7: he did not authorize pushing to any remote, redeploying the site, licensing, sending materials out, or running external API experiments.
+
+## Post-diff sign-off on `AGENTS.md` (Rule 3)
+
+*Context (AI-authored):* After landing `1A`–`5A` on local `main` (`0397c5edd`) and presenting the verbatim `git diff 688b934e3..main -- AGENTS.md` (`AGENTS.md` blob `20c554885`) for Rule 3 review, Ren confirmed agreement with `AGENTS.md`.
+
+21:07 WIB, 24 November 2026:
+
+> I agree with your AGENTS.md file.
