@@ -156,7 +156,7 @@ OK
   "status": "draft",
   "family": "F04",
   "statement": {
-    "en": "An observation-only learner turning a pool reading from its registration step hits the exact window of ClosedCapture: locked out if already outnumbered when read, turning permanently if still outnumbered next step. Under one-time-mask split evidence, sound local filters stay silenced while exchange turns.",
+    "en": "An observation-only learner moving a pool reading at its registration step hits the exact ClosedCapture window: locked out if already outnumbered when read, turning permanently if not outnumbered next step. Under one-time-mask split evidence, sound local filters stay silent while exchange turns.",
     "zh": "仅读任务回报之学习者，其登记步令他者之池读切换，恰落入封闭捕获之窗口：读步时若载体已不少则锁定，次步仍不占优则永转。一次掩码分裂证据下，局部可靠警报归零，交换一位则转。"
   },
   "hypotheses": [
