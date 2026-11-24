@@ -101,6 +101,26 @@
       "receipt": "becoming/fallible-inquiry-verification.json",
       "checker": "becoming/check_fallible_inquiry.py",
       "record": "finite-fallible-inquiry-necessity"
+    },
+    {
+      "module": "BecomingReals",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "becoming-reals/BecomingReals.lean",
+      "receipt": "becoming-reals/becoming-reals-verification.json",
+      "checker": "becoming-reals/check_becoming_reals.py",
+      "record": "unified-becoming-over-reals"
+    },
+    {
+      "module": "RenewalBridge",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.29.1",
+      "mathlib": false,
+      "source": "conditional/renewal/RenewalBridge.lean",
+      "receipt": "conditional/renewal/renewal-bridge-verification.json",
+      "checker": "conditional/renewal/check_renewal_bridge.py",
+      "record": "renewal-bridge-to-keepable-step"
     }
   ]
 }

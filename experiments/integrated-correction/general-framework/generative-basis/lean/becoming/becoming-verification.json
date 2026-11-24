@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261124T040228.916780Z",
+  "utc": "20261124T061916.734612Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261124T040228.916780Z",
+  "retained_run": "becoming-checks/20261124T061916.734612Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -414,6 +414,7 @@
     "Becoming.ScopeDynamics",
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
+    "Becoming.MasterSpine",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -845,6 +846,7 @@
     "Becoming.ScopeDynamics",
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
+    "Becoming.MasterSpine",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1290,6 +1292,7 @@
     "Becoming.ScopeDynamics",
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
+    "Becoming.MasterSpine",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1724,6 +1727,7 @@
     "Becoming.ScopeDynamics",
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
+    "Becoming.MasterSpine",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2158,6 +2162,7 @@
     "Becoming.ScopeDynamics": "becoming/Becoming/ScopeDynamics.lean",
     "Becoming.EndogenousOrder": "becoming/Becoming/EndogenousOrder.lean",
     "Becoming.AlignmentSpine": "becoming/Becoming/AlignmentSpine.lean",
+    "Becoming.MasterSpine": "becoming/Becoming/MasterSpine.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2592,6 +2597,7 @@
     "Becoming.ScopeDynamics": "c6836307de32f3e2890c4eb9d620973901b4964ec50bd4d62d38307382fca881",
     "Becoming.EndogenousOrder": "8e03226f29101afce5ca456ee2786aa31d1fb558399d2ef3d69c2e003b94cb34",
     "Becoming.AlignmentSpine": "934bb44b4a6a5203a7659ba186d6f8b63e5002d6465afd113ad9031f3d536f9c",
+    "Becoming.MasterSpine": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2610,19 +2616,17 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "db3cf482429ef18a45c529385c0b1d3d74d52f4a3d37c1a862f6db9540375b2a"
+    "Becoming": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75"
   },
   "checker_sha256": {
-    "check_becoming.py": "3b7f1d21ff8cad09c81dd668c116e558fcb59475b42d36e9a5e2458322963b15",
+    "check_becoming.py": "efd4803977c41c9ccc3f929e02c78947feb289706fedff57c09c3c5cb1bfce8b",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "2a29cf1ff332d6c819c6cbe78fc58360eab7b5fe",
+    "main": "8490bba3641b5c391bddf49ef0224fbd54425ba4",
     "copied": [
-      "Becoming.ActiveInquiryLoop.lean",
-      "Becoming.EndogenousOrder.lean",
-      "Becoming.EvolutionaryDrawdown.lean",
+      "Becoming.MasterSpine.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2633,21 +2637,18 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "Becoming.EndogenousOrder.log",
-      "BecomingEndogenousOrderAxiomAudit.log",
-      "BecomingEndogenousOrderSignatures.log",
+      "BecomingMasterSpineSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
-      "Becoming.EndogenousOrder.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
       "Becoming.Grammar.log": {
-        "utc": "20261109T145250.971566Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingGrammarAxiomAudit.log": {
         "utc": "20261109T145250.971566Z",
@@ -2670,8 +2671,8 @@
         "retained": "/Users/ren/theories/.claude/worktrees/admiring-shamir-666169/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T163116.755062Z"
       },
       "Becoming.GrammarMap.log": {
-        "utc": "20261109T145250.971566Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingGrammarMapAxiomAudit.log": {
         "utc": "20261109T163116.755062Z",
@@ -2694,8 +2695,8 @@
         "retained": "/Users/ren/theories/.claude/worktrees/admiring-shamir-666169/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T163116.755062Z"
       },
       "Becoming.Prelude.log": {
-        "utc": "20261106T131410.463549Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/lm/k1"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingPreludeAxiomAudit.log": {
         "utc": "20261106T132906.779148Z",
@@ -2706,8 +2707,8 @@
         "retained": "/Users/ren/tmp/lm/work/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z"
       },
       "Becoming.PredicateIteration.log": {
-        "utc": "20261123T211941.923588Z",
-        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T211941.923588Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingPredicateIterationAxiomAudit.log": {
         "utc": "20261123T212116.218407Z",
@@ -2730,16 +2731,16 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z"
       },
       "RelationalRenewal.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "RelationalRenewalAxiomAudit.log": {
         "utc": "20261104T201844.426739Z",
         "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
       },
       "Becoming.GrammarLaws.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingGrammarLawsAxiomAudit.log": {
         "utc": "20261123T224222.254857Z",
@@ -2750,8 +2751,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Amounts.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingAmountsAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2762,8 +2763,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Renewal.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRenewalAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2774,16 +2775,16 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "GenerativeCore.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "GenerativeCoreAxiomAudit.log": {
         "utc": "20261104T201844.426739Z",
         "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
       },
       "Becoming.Frame.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingFrameAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2794,8 +2795,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.World.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingWorldAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2806,8 +2807,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Witnesses.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingWitnessesAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2818,8 +2819,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Dependence.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDependenceAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2830,8 +2831,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Restoration.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRestorationAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2842,8 +2843,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Arising.log": {
-        "utc": "20261123T224313.838738Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingArisingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2854,8 +2855,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Flow.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingFlowAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2866,8 +2867,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Change.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingChangeAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2878,8 +2879,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Population.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingPopulationAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2902,8 +2903,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Recurrence.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRecurrenceAxiomAudit.log": {
         "utc": "20261123T224245.814015Z",
@@ -2914,8 +2915,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Labelled.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLabelledAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2926,8 +2927,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Laws.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLawsAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2938,8 +2939,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Joint.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingJointAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2950,8 +2951,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Experiment.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingExperimentAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2962,8 +2963,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Mechanism.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingMechanismAxiomAudit.log": {
         "utc": "20261123T224523.417062Z",
@@ -2974,8 +2975,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Evolution.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingEvolutionAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2986,8 +2987,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Dissipation.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDissipationAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -2998,8 +2999,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Locality.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLocalityAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3010,8 +3011,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Roles.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRolesAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3022,8 +3023,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Reserve.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingReserveAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3034,8 +3035,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.InAmounts.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingInAmountsAxiomAudit.log": {
         "utc": "20261123T224523.417062Z",
@@ -3046,8 +3047,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Space.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingSpaceAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3058,8 +3059,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Unfolding.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingUnfoldingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3082,8 +3083,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Admission.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingAdmissionAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3106,8 +3107,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Continuation.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingContinuationAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3118,8 +3119,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Decidedness.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDecidednessAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3202,8 +3203,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.CommonResponse.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingCommonResponseAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3238,8 +3239,8 @@
         "retained": "/Users/ren/theories/.claude/worktrees/admiring-shamir-666169/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T163116.755062Z"
       },
       "InquirySufficiency.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "InquirySufficiencyAxiomAudit.log": {
         "utc": "20261104T201844.426739Z",
@@ -3294,8 +3295,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Attraction.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingAttractionAxiomAudit.log": {
         "utc": "20261123T224245.814015Z",
@@ -3306,8 +3307,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Capture.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingCaptureAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3318,8 +3319,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Branching.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingBranchingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3330,8 +3331,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Diagonal.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDiagonalAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3342,8 +3343,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Context.log": {
-        "utc": "20261106T131410.463549Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/lm/k1"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingContextAxiomAudit.log": {
         "utc": "20261106T132906.779148Z",
@@ -3378,8 +3379,8 @@
         "retained": "/Users/ren/tmp/lm/work/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z"
       },
       "Becoming.Ideals.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingIdealsAxiomAudit.log": {
         "utc": "20261104T201844.426739Z",
@@ -3390,8 +3391,8 @@
         "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
       },
       "Becoming.Horizon.log": {
-        "utc": "20261123T224421.400808Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingHorizonAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3414,8 +3415,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Regions.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRegionsAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3426,8 +3427,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Retaining.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRetainingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3438,8 +3439,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Clearing.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingClearingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3450,8 +3451,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Interdependence.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingInterdependenceAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3462,8 +3463,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Feedback.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingFeedbackAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3474,8 +3475,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Testing.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingTestingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3498,8 +3499,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Histories.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingHistoriesAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3714,8 +3715,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Selection.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingSelectionAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3726,8 +3727,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Learning.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLearningAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3738,8 +3739,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Description.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDescriptionAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3750,8 +3751,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Refinement.log": {
-        "utc": "20261123T224523.417062Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingRefinementAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3762,8 +3763,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Identification.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingIdentificationAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3774,8 +3775,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Likeness.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLikenessAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3786,8 +3787,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Distinguishing.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingDistinguishingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3798,8 +3799,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Viability.log": {
-        "utc": "20261123T224245.814015Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingViabilityAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3810,8 +3811,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Lasting.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingLastingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3822,8 +3823,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Parting.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingPartingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -3834,8 +3835,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Onward.log": {
-        "utc": "20261123T224748.868428Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingOnwardAxiomAudit.log": {
         "utc": "20261123T224748.868428Z",
@@ -5070,8 +5071,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Keeping.log": {
-        "utc": "20261123T230148.446951Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingKeepingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -5082,8 +5083,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.JointKeeping.log": {
-        "utc": "20261123T230148.446951Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingJointKeepingAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -5658,8 +5659,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.KeepableStep.log": {
-        "utc": "20261123T234229.023849Z",
-        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "BecomingKeepableStepAxiomAudit.log": {
         "utc": "20261123T234229.023849Z",
@@ -7565,6 +7566,18 @@
         "utc": "20261123T233506.832906Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
+      "Becoming.EndogenousOrder.log": {
+        "utc": "20261124T040228.916780Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z"
+      },
+      "BecomingEndogenousOrderAxiomAudit.log": {
+        "utc": "20261124T040228.916780Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z"
+      },
+      "BecomingEndogenousOrderSignatures.log": {
+        "utc": "20261124T040228.916780Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z"
+      },
       "Becoming.AlignmentSpine.log": {
         "utc": "20261123T233506.832906Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
@@ -7576,6 +7589,14 @@
       "BecomingAlignmentSpineSignatures.log": {
         "utc": "20261123T233506.832906Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+      },
+      "Becoming.MasterSpine.log": {
+        "utc": "20261124T061457.033356Z",
+        "retained": "scratch build, not retained: /Users/ren/.gemini/antigravity/brain/e447f583-8be1-44bd-9dbc-7f74e7e1cdd6/scratch/tree"
+      },
+      "BecomingMasterSpineAxiomAudit.log": {
+        "utc": "20261124T061457.033356Z",
+        "retained": "scratch build, not retained: /Users/ren/.gemini/antigravity/brain/e447f583-8be1-44bd-9dbc-7f74e7e1cdd6/scratch/tree"
       },
       "Becoming.SeedReach.log": {
         "utc": "20261123T234229.023849Z",
@@ -7794,48 +7815,48 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.Grammar.PreludeOnly.log": {
-        "utc": "20261109T145250.971566Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.GrammarReadings.PreludeOnly.log": {
         "utc": "20261109T145250.971566Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
       },
       "Becoming.GrammarMap.PreludeOnly.log": {
-        "utc": "20261109T145250.971566Z",
-        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.GrammarTesting.PreludeOnly.log": {
         "utc": "20261109T145250.971566Z",
         "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories--claude-worktrees-admiring-shamir-666169/dce58fb5-291c-4c2d-9b0e-1a17b2f2e9b9/scratchpad/tree"
       },
       "Becoming.Prelude.PreludeOnly.log": {
-        "utc": "20261106T131410.463549Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/lm/k1"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.PredicateIteration.PreludeOnly.log": {
-        "utc": "20261123T211941.923588Z",
-        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T211941.923588Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.GrammarCandidates.PreludeOnly.log": {
         "utc": "20261123T212116.218407Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T212116.218407Z"
       },
       "RelationalRenewal.PreludeOnly.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.GrammarLaws.PreludeOnly.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.Amounts.PreludeOnly.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.Renewal.PreludeOnly.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "GenerativeCore.PreludeOnly.log": {
         "utc": "20261104T201844.426739Z",
@@ -7982,8 +8003,8 @@
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
       },
       "Becoming.CommonResponse.PreludeOnly.log": {
-        "utc": "20261123T224222.254857Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.GrammarTransport.PreludeOnly.log": {
         "utc": "20261123T234229.023849Z",
@@ -8030,8 +8051,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
       "Becoming.Context.PreludeOnly.log": {
-        "utc": "20261106T131410.463549Z",
-        "retained": "scratch build, not retained: /Users/ren/tmp/lm/k1"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.ContextArrivalTraces.PreludeOnly.log": {
         "utc": "20261123T234229.023849Z",
@@ -8042,8 +8063,8 @@
         "retained": "scratch build, not retained: /Users/ren/tmp/lm/k1"
       },
       "Becoming.Ideals.PreludeOnly.log": {
-        "utc": "20261104T201844.426739Z",
-        "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+        "utc": "20261124T052740.023045Z",
+        "retained": "/Users/ren/.gemini/antigravity/brain/80183ee4-de57-437a-98ab-78e3f25a217a/scratch/fresh-out/renewal-bridge-checks/20261124T052740.023045Z"
       },
       "Becoming.Horizon.PreludeOnly.log": {
         "utc": "20261123T224245.814015Z",
@@ -9437,9 +9458,17 @@
         "utc": "20261123T233506.832906Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
       },
+      "Becoming.EndogenousOrder.PreludeOnly.log": {
+        "utc": "20261124T040228.916780Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z"
+      },
       "Becoming.AlignmentSpine.PreludeOnly.log": {
         "utc": "20261123T233506.832906Z",
         "retained": "scratch build, not retained: /Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming"
+      },
+      "Becoming.MasterSpine.PreludeOnly.log": {
+        "utc": "20261124T061656.122385Z",
+        "retained": "scratch prelude check"
       },
       "Becoming.SeedReach.PreludeOnly.log": {
         "utc": "20261123T234229.023849Z",
@@ -10751,6 +10780,9 @@
       "Becoming.AlignmentSpine.log": "fc9cdfc4d175b7e0f371915f25955b3be82cd518d245e83519b80005ecf3481b",
       "BecomingAlignmentSpineAxiomAudit.log": "d0c44763c8f31909c174534fbd4e0beca7f4a428a6cbf4cf90617d813dec99ac",
       "BecomingAlignmentSpineSignatures.log": "895dd5cea5b03f7bc54284962a7e506584298d775a347aeea192657fe76a98da",
+      "Becoming.MasterSpine.log": "a16e2cee04b7cbadb8f19bc30372bac28095aa62b2212e37e2e2ccfb6e1b4496",
+      "BecomingMasterSpineAxiomAudit.log": "873014d8d44048585a3db72ffde7c0ff1b1d0ae2a80d3b18808d9e1b477d20cd",
+      "BecomingMasterSpineSignatures.log": "2cd3b269430f0c6f5cbe2b974e5a2e270306e98f598733d98bf6e7e86156b625",
       "Becoming.SeedReach.log": "cf9eb2713c746bcf5f5fd59b861f73d117197f8561bccf7819db09a8a01c0754",
       "BecomingSeedReachAxiomAudit.log": "70e943984f6d846910ab8a8ba2613993549f8f1e17321c78d6e9753adef89f02",
       "BecomingSeedReachSignatures.log": "c6473f5e4d2ea119627f0dec2ab5ea51e787e1e8056ee3593095bdefef7a9f0a",
@@ -10805,11 +10837,11 @@
       "Becoming.ResponseLearning.log": "1a17665f5c5768e139a04cfd95a69b8740edbf8eb4c8996ca97876d8e5d60137",
       "BecomingResponseLearningAxiomAudit.log": "01c055930301ca704665e4d34a2ebd9569b3a2df3f79d419c578e9bc71370a99",
       "BecomingResponseLearningSignatures.log": "556b1621184f75a2371f3f0b8bb8288680e97a2aa14584fe51fda7442c215b18",
-      "Becoming.log": "63a98203e30f034a6735795e54c60b4521fcfedfbf1f11f2fe9be46b3f861e3f",
-      "BecomingAxiomAudit.log": "e308f779a06316bf452605cdfdd1a9e19475c07bfb11943226731e217c84d0a8",
-      "BecomingSignatures.log": "fe6356c117c1ff364abbe6651a12400ad9cbdbc9afd5084da632efa5301c3a5d",
-      "EnvironmentAudit.log": "aae570a5c11e8694a2b9ae26ed6ef67d8bd48078628fcd631f20b4877fd8a4b2",
-      "Controls.log": "bacdc2357c8cf7f2e91cd6f8e39a954f7bfca99dc6fe8ab6fcee0e3d8ac54481",
+      "Becoming.log": "891d1cef3069857f948f81e2bdc4d4a06af40120ddc783326797c21dbd9b9aa3",
+      "BecomingAxiomAudit.log": "2f9f50de4bf31047f6db20f0d343271d04f7ba9745090b3ef8abece88fe3b81a",
+      "BecomingSignatures.log": "aef7b164ddb78feba27d0f16104520e1d76ca1a1d7bcd72042ecbf08f50cabde",
+      "EnvironmentAudit.log": "a65fc15cb0359fc8629e7631c678295f5eec93e919069f4765963000ce06cea2",
+      "Controls.log": "d34e572f0571a5d67b3b0d45dad36359f2ab82e25b5e90de7e7d5f9a4975ba04",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -11223,6 +11255,7 @@
       "Becoming.ScopeDynamics.PreludeOnly.log": "dcd270cd1efb1ebc9eeb36a94ccf8de17b54abcf2f2b4b4d1ad3011f3ee2769c",
       "Becoming.EndogenousOrder.PreludeOnly.log": "e32c1ef1e9e775c8168265c51d97b1fa78117be624194d997dad26a75b13f210",
       "Becoming.AlignmentSpine.PreludeOnly.log": "60df843f22ce3a4c4b741a254f399d6bbf268abcefee1718fbf370a021dbb130",
+      "Becoming.MasterSpine.PreludeOnly.log": "6cd1f240674a3e2288632f562c775941fe321c4c426f9fba7b338b67fd604eda",
       "Becoming.SeedReach.PreludeOnly.log": "7e04a6d8b67d6f20b37825cb985a826beca383e22fddc30fcef1c24761cb2de1",
       "Becoming.ScopedReach.PreludeOnly.log": "61c4ec26936ea37d90b16cd0691ac396824562ea6f90f9d0a7f8d72b2a6b2301",
       "Becoming.Hexagrams.PreludeOnly.log": "a28cc0c497c7a60e4c4cb2d1994079fee9ffa3ee44c56f5b4cc946a5fcda47da",
@@ -11241,22 +11274,19 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c666414c0d47f431ba3c3ff5d5f96f1d473ab4bc867fcea08a8aa3dff90a9526",
       "Becoming.RuleRebuilding.PreludeOnly.log": "45867368e3275e934e74d8d0eaaec1ae15900222483070f9e34af25882c4b13d",
       "Becoming.ResponseLearning.PreludeOnly.log": "80cf26ffe53e097b90b10e96f1ac2681f491877019a10afda5e0c877896a0a31",
-      "Becoming.PreludeOnly.log": "f022535272c9ddc9e3b370da55914c791a632dae01fd136199086dfc739a83d5"
+      "Becoming.PreludeOnly.log": "1ed8c690dd2465a5827c555f142c2824bcc0d6cf29e01a785c861d8a0b4e89f6"
     },
     "seconds": {
-      "version.log": 0.047,
-      "Becoming.EndogenousOrder.log": 3.75,
-      "BecomingEndogenousOrderAxiomAudit.log": 0.672,
-      "BecomingEndogenousOrderSignatures.log": 0.543,
-      "Becoming.log": 0.434,
-      "BecomingAxiomAudit.log": 0.462,
-      "BecomingSignatures.log": 0.462,
-      "EnvironmentAudit.log": 32.84,
-      "Controls.log": 0.487,
-      "Becoming.EndogenousOrder.PreludeOnly.log": 3.078,
-      "Becoming.PreludeOnly.log": 0.318
+      "version.log": 0.904,
+      "BecomingMasterSpineSignatures.log": 2.077,
+      "Becoming.log": 2.461,
+      "BecomingAxiomAudit.log": 0.613,
+      "BecomingSignatures.log": 0.604,
+      "EnvironmentAudit.log": 44.566,
+      "Controls.log": 0.663,
+      "Becoming.PreludeOnly.log": 1.493
     },
-    "wall_seconds": 38.595
+    "wall_seconds": 50.387
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -13605,6 +13635,7 @@
     "Becoming.ScopeDynamics": 504,
     "Becoming.EndogenousOrder": 709,
     "Becoming.AlignmentSpine": 294,
+    "Becoming.MasterSpine": 756,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -14539,6 +14570,18 @@
       "propext"
     ],
     "Becoming.EndogenousOrder.CourseRealization.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.MasterSpine.WholeArchitecture.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.MasterSpine.WholeBecomingWitness.EvoPlace.wideLin.injEq": [
+      "propext"
+    ],
+    "Becoming.MasterSpine.WholeBecomingWitness.BadPlace.goodLin.injEq": [
+      "propext"
+    ],
+    "Becoming.MasterSpine.WholeBecomingWitness.BadPlace.badAgent.injEq": [
       "propext"
     ],
     "Becoming.Hexagram.mk.injEq": [
@@ -162902,6 +162945,962 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.MasterSpine",
+      "spine": true,
+      "layer": "core",
+      "theorems": 58,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.polyUniformToOpenComponent"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.polyUniformToOpen_closedStep_eq"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.polyUniformToOpenContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeGSum"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.wholeGSum_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeWireObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeInnerBlk"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeInnerBlkContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeSealedLeft"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeSealedLeftContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeScopeOpen"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeScopeOpenContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.scopeOpenComponent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.scopeOpenContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeOpContract"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeScopeOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.wholeInquirySpec"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.IsProbeAt"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.IsOpState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.IsOpTheta"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.IsOpWithInit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.extractOpState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.extractOpDist"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.inquiry_step_phase"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.inquiry_phase_inv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.exploreMarginInv_init"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.exploreMarginInv_along_run"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.postProbe_isOpTheta"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.postProbe_step_lemma"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.postProbeRun"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.postProbeRun_opInvariants"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.MasterSpine.WholeArchitecture"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.initLeft"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.initOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.leftComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.cLeft"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.rightComp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.cRight"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.compOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.cOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.spec"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.inqCertAndKernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeArchitecture.phaseInv"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeArchitecture.invAll"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitecture.rOp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeArchitecture.rOp_kernel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeArchitectureViableProp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.whole_architecture_viable_and_coupled"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.whole_architecture_scopeMode_bridge"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.MasterSpineGrammarLiftsProp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.masterSpine_grammar_lifts"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.AlignmentPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.PolyPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.CausalPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.GeneralObstructionsProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.ActiveInquiryPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.EndogenousOrderPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.EvolutionaryDrawdownPanoramaProp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.FullObstructionPanoramaProp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.masterSpine_readsOnlyDynamics"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.masterSpine_admits_rival"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.K6EthicsFirewallProp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.k6_ethics_chain_and_firewall"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.MasterAlignmentDichotomyProp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.whole_becoming_master_theorem"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wG"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wG_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wProbeObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wObsL"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wObsR"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wWorld"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSp₁"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSp₂"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wG_hide"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wG_hide_rises"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wFlagOf"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wWireObs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBaseR"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wInitR"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wProposeR"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wChannel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPlan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wProbeDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wProbeStepDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wInfer"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCompOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wInitOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCLeft"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCRight"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSpec"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.WOpS"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDefaultDist"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wStepFull"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDefaultTol"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.w_r_full"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDrawExt_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_eq_of_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_zero_iff"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSlackNat"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSlackLeft"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wRX"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wRA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wRB"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDrawQA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDrawQB"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSimX"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSimA"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wSimB"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wMacroGuard"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCertQ"
+        },
+        {
+          "kind": "abbrev",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.WCausalQ"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPiCausal"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_goAlike"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_nonconst"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.EvoPlace"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvoLevel"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wWEvo"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wLEvo"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wGEvo"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_acting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_descended"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_exact"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvoLgs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wEvoVal"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.BadPlace"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBadLevelFn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBadTakeFn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wWBad"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wLBad"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_acting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_dependent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wGBad"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_family"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_descended"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wOrdItems"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wOrdOwn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wUOrd"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wFeedbackOrd"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wAOrd"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBOrd"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.WNashAct"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.WNashForm"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.WNashCond"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wNashActs"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wNarrowMenu"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wWideMenu"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wDrawOf"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wYieldOf"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wBaseDraw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wGateOpen"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake1"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake2"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeBase"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeGate"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolGive"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_oo"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_or"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_ro"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_or_ge16"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_ro_ge16"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCRWeb"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCRFlow"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_balances"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_acting"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_dependent"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool_iff"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCR"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_tracks_rOp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.MasterSpine.polyUniformToOpenComponent": [],
+        "Becoming.MasterSpine.polyUniformToOpen_closedStep_eq": [],
+        "Becoming.MasterSpine.polyUniformToOpenContract": [],
+        "Becoming.MasterSpine.wholeGSum": [],
+        "Becoming.MasterSpine.wholeGSum_rises": [],
+        "Becoming.MasterSpine.wholeWireObs": [],
+        "Becoming.MasterSpine.wholeInnerBlk": [],
+        "Becoming.MasterSpine.wholeInnerBlkContract": [],
+        "Becoming.MasterSpine.wholeSealedLeft": [],
+        "Becoming.MasterSpine.wholeSealedLeftContract": [],
+        "Becoming.MasterSpine.wholeScopeOpen": [],
+        "Becoming.MasterSpine.wholeScopeOpenContract": [],
+        "Becoming.MasterSpine.scopeOpenComponent": [],
+        "Becoming.MasterSpine.scopeOpenContract": [],
+        "Becoming.MasterSpine.wholeOp": [],
+        "Becoming.MasterSpine.wholeOpContract": [],
+        "Becoming.MasterSpine.wholeScopeOp": [],
+        "Becoming.MasterSpine.wholeInquirySpec": [],
+        "Becoming.MasterSpine.IsProbeAt": [],
+        "Becoming.MasterSpine.IsOpState": [],
+        "Becoming.MasterSpine.IsOpTheta": [],
+        "Becoming.MasterSpine.IsOpWithInit": [],
+        "Becoming.MasterSpine.extractOpState": [],
+        "Becoming.MasterSpine.extractOpDist": [],
+        "Becoming.MasterSpine.inquiry_step_phase": [],
+        "Becoming.MasterSpine.inquiry_phase_inv": [],
+        "Becoming.MasterSpine.exploreMarginInv_init": [],
+        "Becoming.MasterSpine.exploreMarginInv_along_run": [],
+        "Becoming.MasterSpine.postProbe_isOpTheta": [],
+        "Becoming.MasterSpine.postProbe_step_lemma": [],
+        "Becoming.MasterSpine.postProbeRun": [],
+        "Becoming.MasterSpine.postProbeRun_opInvariants": [],
+        "Becoming.MasterSpine.WholeArchitecture": [],
+        "Becoming.MasterSpine.WholeArchitecture.initLeft": [],
+        "Becoming.MasterSpine.WholeArchitecture.initOp": [],
+        "Becoming.MasterSpine.WholeArchitecture.leftComp": [],
+        "Becoming.MasterSpine.WholeArchitecture.cLeft": [],
+        "Becoming.MasterSpine.WholeArchitecture.rightComp": [],
+        "Becoming.MasterSpine.WholeArchitecture.cRight": [],
+        "Becoming.MasterSpine.WholeArchitecture.compOp": [],
+        "Becoming.MasterSpine.WholeArchitecture.cOp": [],
+        "Becoming.MasterSpine.WholeArchitecture.spec": [],
+        "Becoming.MasterSpine.WholeArchitecture.inqCertAndKernel": [],
+        "Becoming.MasterSpine.WholeArchitecture.phaseInv": [],
+        "Becoming.MasterSpine.WholeArchitecture.invAll": [],
+        "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta": [],
+        "Becoming.MasterSpine.WholeArchitecture.rOp": [],
+        "Becoming.MasterSpine.WholeArchitecture.rOp_kernel": [],
+        "Becoming.MasterSpine.WholeArchitectureViableProp": [],
+        "Becoming.MasterSpine.whole_architecture_viable_and_coupled": [],
+        "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable": [],
+        "Becoming.MasterSpine.whole_architecture_scopeMode_bridge": [],
+        "Becoming.MasterSpine.MasterSpineGrammarLiftsProp": [],
+        "Becoming.MasterSpine.masterSpine_grammar_lifts": [],
+        "Becoming.MasterSpine.AlignmentPanoramaProp": [],
+        "Becoming.MasterSpine.PolyPanoramaProp": [],
+        "Becoming.MasterSpine.CausalPanoramaProp": [],
+        "Becoming.MasterSpine.GeneralObstructionsProp": [],
+        "Becoming.MasterSpine.ActiveInquiryPanoramaProp": [],
+        "Becoming.MasterSpine.EndogenousOrderPanoramaProp": [],
+        "Becoming.MasterSpine.EvolutionaryDrawdownPanoramaProp": [],
+        "Becoming.MasterSpine.FullObstructionPanoramaProp": [],
+        "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama": [],
+        "Becoming.MasterSpine.masterSpine_readsOnlyDynamics": [],
+        "Becoming.MasterSpine.masterSpine_admits_rival": [],
+        "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted": [],
+        "Becoming.MasterSpine.K6EthicsFirewallProp": [],
+        "Becoming.MasterSpine.k6_ethics_chain_and_firewall": [],
+        "Becoming.MasterSpine.MasterAlignmentDichotomyProp": [],
+        "Becoming.MasterSpine.whole_becoming_master_theorem": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wG": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wG_rises": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wProbeObs": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wObsL": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wObsR": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wWorld": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSp₁": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSp₂": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wG_hide": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wG_hide_rises": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wFlagOf": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wWireObs": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBaseR": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wInitR": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wProposeR": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wChannel": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPlan": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wProbeDraw": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wProbeStepDraw": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wInfer": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCompOp": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wInitOp": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCLeft": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCRight": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCOp": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSpec": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.WOpS": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDefaultDist": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wStepFull": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDefaultTol": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.w_r_full": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDrawExt_pos": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_le": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_eq_of_le": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_zero_iff": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSlackNat": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSlackLeft": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wRX": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wRA": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wRB": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDrawQA": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDrawQB": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSimX": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSimA": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wSimB": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wMacroGuard": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCertQ": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.WCausalQ": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPiCausal": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCausal_goAlike": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCausal_nonconst": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.EvoPlace": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvoLevel": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wWEvo": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wLEvo": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wGEvo": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvo_acting": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvo_descended": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvo_exact": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvoLgs": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wEvoVal": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.BadPlace": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBadLevelFn": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBadTakeFn": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wWBad": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wLBad": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBad_balances": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBad_acting": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBad_dependent": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wGBad": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wGBad_family": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wGBad_descended": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wOrdItems": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wOrdOwn": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wUOrd": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wFeedbackOrd": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wAOrd": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBOrd": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.WNashAct": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.WNashForm": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.WNashCond": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wNashActs": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wNarrowMenu": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wWideMenu": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wDrawOf": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wYieldOf": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wBaseDraw": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wGateOpen": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake1": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake2": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeBase": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeGate": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolGive": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_oo": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_or": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_ro": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_or_ge16": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_ro_ge16": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCRWeb": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCRFlow": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCR_balances": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCR_acting": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCR_dependent": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool_iff": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCR": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.wCR_tracks_rOp": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture": [],
+        "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -170845,27 +171844,21 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.ActiveInquiryLoop.lean": "7a5103b1c5069896182bf846d27bfd27b732902380f1d2f711df5cd3f48cb6f1",
-    "Becoming.EndogenousOrder.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.EndogenousOrder.lean": "8e03226f29101afce5ca456ee2786aa31d1fb558399d2ef3d69c2e003b94cb34",
-    "Becoming.EndogenousOrder.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.EvolutionaryDrawdown.lean": "6e8cd6d9f93938acd0880b2fb2c20a0382f683983f2facd0e1b13397299a059b",
+    "Becoming.MasterSpine.lean": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "db3cf482429ef18a45c529385c0b1d3d74d52f4a3d37c1a862f6db9540375b2a",
+    "Becoming.lean": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingEndogenousOrderAxiomAudit.lean": "9144824c8011fc99454afa449a43ba4dcf47c5d4912fd564816dc4e7be2d53e1",
-    "BecomingEndogenousOrderAxiomAudit.log": "cfa2dab07b9be810cb3e942bf3b913fb457ec941d1c7191d6a79fc63d3014a3f",
-    "BecomingEndogenousOrderSignatures.lean": "bd6b91f5911f7518e1efb509507cd805a9a6c86e254c3b362e830f652a1765f6",
-    "BecomingEndogenousOrderSignatures.log": "164b4013a2d6eb57cb5290c07cb4f6368addf4f2e7a101f9140932c6cbf1f6e4",
+    "BecomingMasterSpineSignatures.lean": "7816da8ddcff1d375f232e8de60444e2dbafbcc85b186b5ea7253642511118e2",
+    "BecomingMasterSpineSignatures.log": "026170b66a6ff6fd1bab1e4b33d8b8b46d7945b8cfe86e4383c1287108ccbbfa",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "2766a53f9ff6ed62e526477523019a414887f0614aee524ed5f9199bf7b0e23b",
-    "EnvironmentAudit.log": "4c1f06c070379776e152ee1894aa92cd7334475ac0e2af48f4cd51bbf862d54a",
-    "check_becoming.py": "3b7f1d21ff8cad09c81dd668c116e558fcb59475b42d36e9a5e2458322963b15",
+    "EnvironmentAudit.lean": "8ac5c446e4182b31d653fc707bd15b085d60d683e837bf1a76c7945d96cffae2",
+    "EnvironmentAudit.log": "fbc70e9f980cfefe36d0098148ff1055d4733fc38b3bfcbd14a6591d5d932a01",
+    "check_becoming.py": "efd4803977c41c9ccc3f929e02c78947feb289706fedff57c09c3c5cb1bfce8b",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }
