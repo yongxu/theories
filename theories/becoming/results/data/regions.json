@@ -2871,6 +2871,16 @@
    "base": "general",
    "note": "OpenComposition L0: open port-split components and contracts, gluing compose/hide with ComponentEquiv associativity, preserved closed viability vs. hidden-coupling collapse, heterogeneous refinement and live rewrite, widening healing, and synchronous-product LaxSim composition"
   },
+  "polynomial-dynamic-interfaces-and-coupled-laxity": {
+   "region": "map",
+   "base": "general",
+   "note": "PolyComposition L1 (Wave U3): mode-dependent polynomial interfaces embedding OpenComposition, PoolFromCourse anchored self-modification vs. self-blinding, epoch- and reserve-serialized concurrent reconfig, and coupled-substrate LaxSim small-gain"
+  },
+  "interventional-causal-abstraction-and-goodhart": {
+   "region": "knowing",
+   "base": "general",
+   "note": "CausalAbstraction L1 (Wave U3): exact and lax interventional causal abstraction, Viability.Kernel policy transfer, vertical/horizontal composition vs. leakage, Causal Goodhart separation, and GrammarLaws/ExchangeLaw.Sensitive bridges"
+  },
   "transformative-viability-order": {
    "region": "map",
    "base": "general",
@@ -5032,6 +5042,16 @@
    "region": "map",
    "base": "general",
    "note": "L5 0-axiom 3-pillar OpenComposition master alignment spine, failure/non-entailment dichotomy, and CE01-CE15 hypothesis-dropping sharpness suite"
+  },
+  "Becoming.PolyComposition": {
+   "region": "map",
+   "base": "general",
+   "note": "L1 (Wave U3): mode-dependent polynomial interfaces embedding OpenComposition, PoolFromCourse anchored self-modification, serialized concurrent reconfiguration, and coupled-substrate LaxSim small-gain"
+  },
+  "Becoming.CausalAbstraction": {
+   "region": "knowing",
+   "base": "general",
+   "note": "L1 (Wave U3): exact and lax interventional causal abstraction, kernel policy transfer, vertical/horizontal composition, Causal Goodhart witness, and GrammarLaws/ExchangeLaw.Sensitive bridges"
   },
   "AlignmentReals": {
    "region": "map",

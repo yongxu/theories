@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "77c5d56a0728a22f5d51a99138ff66dae1734f0f",
-  "core_run": "20261123T234229.023849Z"
+  "commit": "f83ae6ea0a83cc6b64a3b124e76f85283a2d8c5d",
+  "core_run": "20261124T014702.078186Z"
  },
- "core_sources_sha256": "6860b26db255124498d0249ad2a0ec3146af8bcf3a4008b873033acf5352fed1",
+ "core_sources_sha256": "888d379b528a2fb520757fe7fc731819651613a4e80b95b815403eeac0f24051",
  "modules": {
   "Becoming": {
-   "source_sha256": "4f5c4c2014f8e313a1410eddf4e25b3f010c0f35d90ad8e2c503cc5c9ba676a0",
+   "source_sha256": "f991e989db8f605e13e4e9c453431bd181b17741c41e7fbeb5f06025ac74a450",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -124,6 +124,10 @@
   "Becoming.Cascade": {
    "source_sha256": "6895594db6e8492064f71549db8457b97b29d7f3dac7379a409d56e555cee04d",
    "theorems": 10
+  },
+  "Becoming.CausalAbstraction": {
+   "source_sha256": "99758e4ef405a3f5f2e5dbcbefcc1a53193ef405e558ee89dcbc9610f14034d6",
+   "theorems": 82
   },
   "Becoming.CausalGrowth": {
    "source_sha256": "e47c7723ce68c678049f5645899adad7350e261b334768818bf2f56774960827",
@@ -1053,6 +1057,10 @@
    "source_sha256": "e966e63f45e6c16213581f19607557a274051648c4f6afa816f66e9eaa6e71b0",
    "theorems": 62
   },
+  "Becoming.PolyComposition": {
+   "source_sha256": "e30e753991112f94faf8a4ddd89e937e2b9384e42ac3e39a7ac269dde43a2d43",
+   "theorems": 124
+  },
   "Becoming.PoolCourse": {
    "source_sha256": "a9c556cf9a875397133c51264faa56b84756558c0ec2683363b62ad5b94d35cd",
    "theorems": 17
@@ -1719,8 +1727,8 @@
   }
  },
  "counts": {
-  "modules": 427,
-  "theorems": 21756,
-  "uses_without_row": 34
+  "modules": 429,
+  "theorems": 21962,
+  "uses_without_row": 42
  }
 }

@@ -1,0 +1,82 @@
+{"name": "Becoming.CausalGoodhartWitness.macro_boost_kernel", "uses": ["Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.CausalGoodhartWitness.micro_boost_guardS_collapses", "uses": []}
+{"name": "Becoming.CausalGoodhartWitness.micro_boost_proxy_collapses", "uses": []}
+{"name": "Becoming.CausalGoodhartWitness.no_exact_causal_abs_any_omega", "uses": ["Becoming.ExactCausalAbs.factors"]}
+{"name": "Becoming.CausalGoodhartWitness.no_small_slack_lax_causal_abs", "uses": ["Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.sim_block", "Becoming.distNat_symm", "Becoming.distNat_tri", "Becoming.succ_sub_self"]}
+{"name": "Becoming.CausalGoodhartWitness.no_zero_slack_lax_causal_abs", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.strict", "Becoming.LaxSim.advance_blocks", "Becoming.Strict.le_self", "Becoming.add_right_cancel", "Becoming.le_dest", "Becoming.nil_of_length_zero", "_private.Becoming.CausalAbstraction.0.Becoming.CausalGoodhartWitness.macro_three_steps_ne_zero", "_private.Becoming.CausalAbstraction.0.Becoming.CausalGoodhartWitness.micro_boost_from_three"]}
+{"name": "Becoming.CausalGoodhartWitness.passive_commuting_all", "uses": []}
+{"name": "Becoming.CausalGoodhartWitness.passive_macro_kernel", "uses": ["Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.CausalGoodhartWitness.passive_micro_kernel", "uses": ["Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.CausalGoodhartWitness.stepObs_nonexpansive", "uses": []}
+{"name": "Becoming.ExactCausalAbs.Lifts.comp", "uses": []}
+{"name": "Becoming.ExactCausalAbs.comp", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.ExactCausalAbs.obs_eq"]}
+{"name": "Becoming.ExactCausalAbs.composeOpen", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.ExactCausalAbs.obs_eq", "Becoming.ofOpenComposite_step_iff"]}
+{"name": "Becoming.ExactCausalAbs.factors", "uses": []}
+{"name": "Becoming.ExactCausalAbs.obs_eq", "uses": []}
+{"name": "Becoming.ExactCausalAbs.prod", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.ExactCausalAbs.obs_eq"]}
+{"name": "Becoming.HorizontalLeakageWitness.exact_marginal_A", "uses": []}
+{"name": "Becoming.HorizontalLeakageWitness.exact_on_obs", "uses": []}
+{"name": "Becoming.HorizontalLeakageWitness.exact_passive_A_marginal_B", "uses": []}
+{"name": "Becoming.HorizontalLeakageWitness.no_exact_causal_abs", "uses": ["Becoming.ExactCausalAbs.factors"]}
+{"name": "Becoming.HorizontalLeakageWitness.no_zero_slack_lax_abs", "uses": ["Becoming.GrammarLaws.length_replicate", "Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.sim_block", "Becoming.LaxCausalAbs.strict", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.le_dest", "_private.Becoming.CausalAbstraction.0.Becoming.HorizontalLeakageWitness.micro_leak_iterate"]}
+{"name": "Becoming.LaxCausalAbs.epoch_proj", "uses": []}
+{"name": "Becoming.LaxCausalAbs.epoch_step", "uses": []}
+{"name": "Becoming.LaxCausalAbs.excursion", "uses": []}
+{"name": "Becoming.LaxCausalAbs.obs_eq", "uses": []}
+{"name": "Becoming.LaxCausalAbs.sim_block", "uses": []}
+{"name": "Becoming.LaxCausalAbs.strict", "uses": []}
+{"name": "Becoming.LaxCausalAbs.α_mono", "uses": []}
+{"name": "Becoming.LaxCausalAbs.β_ge_id", "uses": []}
+{"name": "Becoming.LaxCausalAbs.β_mono", "uses": []}
+{"name": "Becoming.PositiveCoupledFeedbackWitness.feedback_viability_kernel", "uses": ["Becoming.CoreHelpers.le_sub_add_nat", "Becoming.CoreHelpers.natBlt_true_iff", "Becoming.ListTests.all_mem", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.or_true_iff", "Becoming.laxCausal_feedback_kernel_transfer", "Becoming.mem_downFrom", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.margin_witness"]}
+{"name": "Becoming.PositiveCoupledFeedbackWitness.no_exact_causal_abs", "uses": ["Becoming.ExactCausalAbs.factors"]}
+{"name": "Becoming.PositiveCoupledFeedbackWitness.openLoop_viability_kernel", "uses": ["Becoming.Viability.Certificate.kernel", "Becoming.laxCausal_openLoop_kernel_transfer", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.margin_witness"]}
+{"name": "Becoming.PositiveCoupledFeedbackWitness.step_projection_err", "uses": ["Becoming.ListTests.all_mem", "Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.Naturals.add_sub_cancel_left", "Becoming.distNat_self", "Becoming.le_dest", "Becoming.mem_downFrom", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.damp_ge_of_ge", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_of_two_mul_add_gen"]}
+{"name": "Becoming.causal_underdetermined_of_untaken", "uses": ["Becoming.Run.not_fixesThrough_of_untaken", "Becoming.Run.stepsThrough_of_factors", "Becoming.retarget_determined", "Becoming.retarget_step"]}
+{"name": "Becoming.exactCausalMap_exists_iff", "uses": ["Becoming.ExactCausalAbs.factors"]}
+{"name": "Becoming.exactCausal_commuting_iff", "uses": []}
+{"name": "Becoming.exactCausal_exists_iff_causalGoAlike", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.«因像定当且仅当因同行»"]}
+{"name": "Becoming.exactCausal_feedback_kernel_transfer", "uses": ["Becoming.exactCausal_feedback_trace_map"]}
+{"name": "Becoming.exactCausal_feedback_trace_map", "uses": ["Becoming.ExactCausalAbs.factors", "Generative.Trace.brecOn"]}
+{"name": "Becoming.exactCausal_of_exchange_sensitive_in", "uses": ["Becoming.exactCausal_exists_iff_causalGoAlike", "Becoming.exchange_givesAlike_iff_sensitive_in", "Becoming.keepHist_eq_iff", "Becoming.projectHistList_eq_iff", "Becoming.total_congr_on"]}
+{"name": "Becoming.exactCausal_passive_factors", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.ExactCausalAbs.obs_eq"]}
+{"name": "Becoming.exactCausal_refuted_of_confound_varied", "uses": ["Becoming.Confound.confounded", "Becoming.Confound.varied_refutes", "Becoming.ExactCausalAbs.factors", "Becoming.Run.stepsThrough_of_factors"]}
+{"name": "Becoming.exactCausal_trace_exact_iff", "uses": ["Becoming.exactCausal_trace_map", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.exactCausal_trace_map", "uses": ["Becoming.ExactCausalAbs.factors", "Generative.Trace.brecOn"]}
+{"name": "Becoming.exchange_givesAlike_iff_sensitive_in", "uses": ["Becoming.alike_of_sensitive_agree", "Becoming.keepHist_eq_iff"]}
+{"name": "Becoming.imageMap_iff_grammar", "uses": []}
+{"name": "Becoming.keepHist_eq_iff", "uses": ["Becoming.keepRow_eq_iff", "Becoming.le_succ_cases"]}
+{"name": "Becoming.keepRow_eq_iff", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.keepRow.eq_def"]}
+{"name": "Becoming.laxCausal_feedback_keptFor_linear", "uses": ["Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.epoch_step", "Becoming.LaxCausalAbs.sim_block", "Becoming.LaxCausalAbs.β_ge_id", "Becoming.SlackDist.refl", "Becoming.succ_sub_self"]}
+{"name": "Becoming.laxCausal_feedback_kernel_transfer", "uses": ["Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.β_ge_id", "Becoming.SlackDist.refl", "_private.Becoming.CausalAbstraction.0.Becoming.feedback_invariant_steps"]}
+{"name": "Becoming.laxCausal_feedback_kernel_transfer_of_ball_invariant", "uses": ["Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within", "Becoming.laxCausal_feedback_kernel_transfer"]}
+{"name": "Becoming.laxCausal_openLoop_keptFor_linear", "uses": ["Becoming.LaxCausalAbs.strict", "Becoming.coarsenIndex_sample", "Becoming.lax_keptFor_linear_of_kernel"]}
+{"name": "Becoming.laxCausal_openLoop_kernel_transfer", "uses": ["Becoming.LaxCausalAbs.strict", "Becoming.coarsenIndex_sample", "Becoming.lax_kernel_of_kernel"]}
+{"name": "Becoming.laxCausal_sampledFeedback_kernel_transfer", "uses": ["Becoming.LaxCausalAbs.epoch_proj", "Becoming.LaxCausalAbs.excursion", "Becoming.LaxCausalAbs.sim_block", "Becoming.LaxCausalAbs.strict", "Becoming.LaxSim.epoch_trace", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_le_of_le_add", "Becoming.SlackDist.refl", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_right_cancel", "Becoming.add_sub_of_le", "Becoming.block_of_strict", "Becoming.le_of_add_le_add_right", "Becoming.sampledFeedbackProcess_trace_block", "Becoming.strict_mono_le", "Becoming.sub_eq_zero_of_le", "Becoming.trace_split"]}
+{"name": "Becoming.length_snoc", "uses": []}
+{"name": "Becoming.mechanism_intervention_underdetermined", "uses": ["Becoming.inputs_intervention_unfixed", "Becoming.inputs_model_fixes"]}
+{"name": "Becoming.ofOpenComposite_boundary_local", "uses": ["Becoming.ofOpenComposite_step_iff"]}
+{"name": "Becoming.ofOpenComposite_step_iff", "uses": []}
+{"name": "Becoming.projectHistList_eq_iff", "uses": ["Becoming.keepHist_eq_iff"]}
+{"name": "Becoming.sampledFeedbackProcess_trace_block", "uses": ["Becoming.ListTests.beq_false_of_ne", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.ne_of_lt", "Becoming.beq_self", "Becoming.coarsenIndex_eq", "Becoming.coarsenIndex_sample", "Becoming.nil_of_length_zero"]}
+{"name": "Becoming.scheduledProcess_trace_block", "uses": ["Becoming.coarsenIndex_eq"]}
+{"name": "Becoming.sensitive_in_of_through", "uses": ["Becoming.ExchangeLaw.Through.couples_of_sensitive"]}
+{"name": "Becoming.trace_snoc", "uses": ["Generative.Trace.brecOn"]}
+{"name": "Becoming.withAct_self_next_pointwise", "uses": ["Becoming.total_congr"]}
+{"name": "Becoming.withAct_self_next_projectHistList", "uses": ["Becoming.projectHistList_eq_iff", "Becoming.withAct_self_next_pointwise"]}
+{"name": "Becoming.withAct_sensitive_iff", "uses": []}
+{"name": "Becoming.«因像定当且仅当因同行»", "uses": ["Becoming.«像定后当且仅当同行»", "Becoming.«同行之逐点»"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.CausalGoodhartWitness.macro_three_steps_ne_zero", "uses": []}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.CausalGoodhartWitness.micro_boost_from_three", "uses": []}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.HorizontalLeakageWitness.micro_leak_iterate", "uses": []}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.damp_ge_of_ge", "uses": ["Becoming.CoreHelpers.ite_neg'"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_add2", "uses": ["Becoming.CoreHelpers.div_add_self"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_mono", "uses": ["_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_of_two_mul_add", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_rem"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_of_two_mul_add", "uses": ["_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_add2"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_of_two_mul_add_gen", "uses": ["_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_add2"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_rem", "uses": []}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div4_rem", "uses": []}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.margin_witness", "uses": ["Becoming.CoreHelpers.le_sub_add_nat", "Becoming.le_of_add_le_add_right", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_of_two_mul_add", "_private.Becoming.CausalAbstraction.0.Becoming.PositiveCoupledFeedbackWitness.div2_rem"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.feedback_invariant_steps", "uses": ["Becoming.LaxCausalAbs.epoch_step", "Becoming.LaxCausalAbs.sim_block", "Becoming.succ_sub_self", "Generative.Trace.brecOn"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.openComposite_trace_left", "uses": ["Becoming.ofOpenComposite_step_iff", "Generative.Trace.brecOn"]}
+{"name": "_private.Becoming.CausalAbstraction.0.Becoming.openComposite_trace_right", "uses": ["Becoming.ofOpenComposite_step_iff", "Generative.Trace.brecOn"]}

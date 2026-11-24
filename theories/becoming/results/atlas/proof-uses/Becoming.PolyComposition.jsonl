@@ -1,0 +1,124 @@
+{"name": "Becoming.PolyComposition.AnchoredBase.emits_on_warn", "uses": []}
+{"name": "Becoming.PolyComposition.AnchoredBase.eta_bound", "uses": []}
+{"name": "Becoming.PolyComposition.AnchoredBase.within", "uses": []}
+{"name": "Becoming.PolyComposition.AnchoredInit.init_in", "uses": []}
+{"name": "Becoming.PolyComposition.AnchoredModeAdmit.admit_sound", "uses": []}
+{"name": "Becoming.PolyComposition.AnchoredModeAdmit.fallback_sound", "uses": []}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.SideMode.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.candidate_load_eq", "uses": []}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.concurrent_serial_dichotomy", "uses": ["Becoming.PolyComposition.ConcurrentSerialWitness.csKernel_of_inv", "Becoming.PolyComposition.ConcurrentSerialWitness.w₀_reconfig_eq", "Becoming.Reconfiguration.admits_true_iff", "Becoming.Reconfiguration.reconfigure_stales_epoch"]}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.csKernel_of_inv", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.PolyComposition.ConcurrentSerialWitness.gSub_rises", "Becoming.PolyComposition.serialReconfig_kernel"]}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.gSub_rises", "uses": []}
+{"name": "Becoming.PolyComposition.ConcurrentSerialWitness.w₀_reconfig_eq", "uses": ["Becoming.Reconfiguration.admits_true_iff", "Becoming.Reconfiguration.readiness_cases"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24_bounds", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMin", "Becoming.CoreHelpers.natMin_le_left"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24_lip", "uses": ["Becoming.PolyComposition.distNat_natMax_const_le", "Becoming.PolyComposition.distNat_natMin_const_le"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.coupled_small_gain_viable", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.PolyComposition.CoupledSmallGainWitness.le_sub_of_distNat_le", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_1", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_2", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_3", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_4", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_5", "Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX._proof_6", "Becoming.PolyComposition.coupled_closed_lax_kernel", "Becoming.lax_kernel_of_certificate", "Becoming.succ_sub_self"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.distNat_le_of_le", "uses": ["Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.div2_add_div2_succ", "uses": ["Becoming.CoreHelpers.div_mod_decomp", "Becoming.CoreHelpers.div_mul_add_rem", "Becoming.Naturals.two_mul", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.half_const_step_lip", "uses": ["Becoming.CoreHelpers.div_mul_add_rem", "Becoming.Naturals.add_sub_cancel_left", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.sub_le_of_le_add", "Becoming.PolyComposition.CoupledSmallGainWitness.div2_add_div2_succ", "Becoming.PolyComposition.CoupledSmallGainWitness.succ_div2_le", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_div_two_le", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two", "Becoming.PolyComposition.add_div_le_nat", "Becoming.PolyComposition.div_mono_nat", "Becoming.add_mul_split", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.le_sub_of_distNat_le", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.sub_add_cancel", "Becoming.le_of_add_le_add_right"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.no_reduced_law_coupled", "uses": []}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.nonzero_bidirectional_coupling", "uses": []}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.sgSubStep_within_24", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.two_mul", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_div_two_le"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.small_gain_violation_contrast", "uses": ["Becoming.CoreHelpers.div_mod_decomp", "Becoming.CoreHelpers.div_mul_add_rem", "Becoming.Naturals.two_mul", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two", "Becoming.PolyComposition.div_mono_nat", "Becoming.distNat_self"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.succ_div2_le", "uses": ["Becoming.CoreHelpers.div_mul_add_rem", "Becoming.Naturals.two_mul", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two", "Becoming.PolyComposition.div_mono_nat"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_div_two_le", "uses": ["Becoming.CoreHelpers.div_mod_decomp", "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two"]}
+{"name": "Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two", "uses": ["Becoming.Naturals.two_mul"]}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.DynMode.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.G_dyn_rises", "uses": []}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.cycleRun_modes_and_viability", "uses": ["Becoming.PolyComposition.DynamicPortWitness.dyn_viable_kernel", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.dyn_viable_kernel", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.PolyComposition.DynamicPortWitness.G_dyn_rises", "Becoming.PolyComposition.poly_close_kernel"]}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.stayBlind_crashes", "uses": ["Becoming.PolyComposition.DynamicPortWitness.stayBlind_trace"]}
+{"name": "Becoming.PolyComposition.DynamicPortWitness.stayBlind_trace", "uses": ["Generative.trace_append_iff"]}
+{"name": "Becoming.PolyComposition.ModeRefines.lag_le", "uses": []}
+{"name": "Becoming.PolyComposition.ModeRefines.post_le", "uses": []}
+{"name": "Becoming.PolyComposition.ModeRefines.pre_le", "uses": []}
+{"name": "Becoming.PolyComposition.ModeRefines.silence_le", "uses": []}
+{"name": "Becoming.PolyComposition.ModeRefines.warn_widened", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.drawMod_mono", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.draw_lip", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.epoch_proj", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.epoch_step", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.gain_mono", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.sim_block", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.step_excursion", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.β_ge_left", "uses": []}
+{"name": "Becoming.PolyComposition.OpenSubLaxSim.β_mono", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.cert", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.emits_on_warn", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.eta_alarm_step", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.eta_alarm_zero", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.eta_bound", "uses": []}
+{"name": "Becoming.PolyComposition.PolyContract.init_in", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb_rises", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.ofNat_ctorIdx", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_admits_selfWiden", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb_rises", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbAdmit_sound", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit_anchored", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbModeRefines", "Becoming.PolyComposition.monotone_selfWidening_viable"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_rejects_selfBlind", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb_rises", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbAdmit_sound", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit_anchored", "Becoming.PolyComposition.anchored_selfMod_viable"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbAdmit_sound", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right", "Becoming.ListTests.decide_true_iff", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbDist_eq_unit", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit_anchored", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbModeRefines", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_accrues", "uses": []}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_stays_blind", "uses": ["Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_accrues", "Becoming.PolyComposition.poly_poolWindow_unregistered_stays_blind"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_step_x", "uses": ["Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_succ_selfBlind", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_succ_selfBlind", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchored_crashes", "uses": ["Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_stays_blind", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit.eq_def", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_step_x", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_succ_selfBlind"]}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.epoch_proj", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.epoch_step", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.gain_mono", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.sim_block", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.step_excursion", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.β_ge_left", "uses": []}
+{"name": "Becoming.PolyComposition.SubstrateLaxSim.β_mono", "uses": []}
+{"name": "Becoming.PolyComposition.add_div_le_nat", "uses": ["Becoming.CoreHelpers.div_mod_decomp", "Becoming.CoreHelpers.div_mul_add_rem", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.sub_le_of_le_add", "Becoming.add_mul_split"]}
+{"name": "Becoming.PolyComposition.anchored_selfMod_viable", "uses": ["Becoming.PolyComposition.poly_close_kernel_allModes"]}
+{"name": "Becoming.PolyComposition.closedTrace_proj", "uses": []}
+{"name": "Becoming.PolyComposition.const_add_sub", "uses": []}
+{"name": "Becoming.PolyComposition.coupled_closed_lax_kernel", "uses": ["Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.PolyComposition.laxSim_trace_epoch", "Becoming.Viability.Certificate.within", "Becoming.lax_kernel_of_certificate"]}
+{"name": "Becoming.PolyComposition.coupled_excursion_bound", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.not_mem_nil", "Becoming.Naturals.succ_ne_zero", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.PolyComposition.OpenSubLaxSim.drawMod_mono", "Becoming.PolyComposition.OpenSubLaxSim.draw_lip", "Becoming.PolyComposition.OpenSubLaxSim.epoch_step", "Becoming.PolyComposition.OpenSubLaxSim.step_excursion", "Becoming.PolyComposition.SubstrateLaxSim.epoch_step", "Becoming.PolyComposition.SubstrateLaxSim.step_excursion", "Becoming.PolyComposition.distNat_add_le", "Becoming.PolyComposition.le_iterStepGain", "Becoming.Viability.Certificate.closed"]}
+{"name": "Becoming.PolyComposition.distNat_add_le", "uses": ["Becoming.PolyComposition.sub_add_le_add_sub_nat"]}
+{"name": "Becoming.PolyComposition.distNat_const_add", "uses": ["Becoming.PolyComposition.const_add_sub"]}
+{"name": "Becoming.PolyComposition.distNat_div_le", "uses": ["Becoming.CoreHelpers.dite_neg'", "Becoming.PolyComposition.div_mono_nat", "Becoming.PolyComposition.div_sub_le_nat", "Becoming.distNat_self", "Becoming.sub_eq_zero_of_le", "Nat.div.eq_1"]}
+{"name": "Becoming.PolyComposition.distNat_natMax_const_le", "uses": ["Becoming.CoreHelpers.natMax_le", "Becoming.PolyComposition.distNat_natMax_le", "Becoming.distNat_self"]}
+{"name": "Becoming.PolyComposition.distNat_natMax_le", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.PolyComposition.natMax_sub_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.PolyComposition.distNat_natMin_const_le", "uses": ["Becoming.CoreHelpers.natMax_le", "Becoming.PolyComposition.distNat_natMin_le", "Becoming.distNat_self"]}
+{"name": "Becoming.PolyComposition.distNat_natMin_le", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.PolyComposition.natMin_sub_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.PolyComposition.distNat_sub_le", "uses": ["Becoming.PolyComposition.sub_sub_le_add_sub_nat"]}
+{"name": "Becoming.PolyComposition.div_mono_nat", "uses": ["Becoming.CoreHelpers.dite_neg'", "Becoming.CoreHelpers.div_mod_decomp", "Nat.div.eq_1"]}
+{"name": "Becoming.PolyComposition.div_sub_le_nat", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.sub_le_of_le_add", "Becoming.PolyComposition.add_div_le_nat"]}
+{"name": "Becoming.PolyComposition.iterStepGain_mono_n", "uses": ["Becoming.PolyComposition.le_jointOneStepGain"]}
+{"name": "Becoming.PolyComposition.iterStepGain_mono_r", "uses": ["Becoming.PolyComposition.jointOneStepGain_mono"]}
+{"name": "Becoming.PolyComposition.jointOneStepGain_mono", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.PolyComposition.OpenSubLaxSim.drawMod_mono", "Becoming.PolyComposition.OpenSubLaxSim.β_mono", "Becoming.PolyComposition.SubstrateLaxSim.β_mono"]}
+{"name": "Becoming.PolyComposition.laxSim_trace_epoch", "uses": ["Becoming.LaxSim.epoch_step", "Generative.Trace.brecOn"]}
+{"name": "Becoming.PolyComposition.le_iterStepGain", "uses": ["Becoming.PolyComposition.iterStepGain_mono_n"]}
+{"name": "Becoming.PolyComposition.le_jointOneStepGain", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.PolyComposition.SubstrateLaxSim.β_ge_left"]}
+{"name": "Becoming.PolyComposition.le_sumPortDraws_of_mem", "uses": ["Becoming.ListTests.not_mem_nil"]}
+{"name": "Becoming.PolyComposition.monotone_selfWidening_viable", "uses": ["Becoming.PolyComposition.ModeRefines.lag_le", "Becoming.PolyComposition.ModeRefines.post_le", "Becoming.PolyComposition.ModeRefines.pre_le", "Becoming.PolyComposition.ModeRefines.silence_le", "Becoming.PolyComposition.ModeRefines.warn_widened", "Becoming.PolyComposition.poly_close_kernel_allModes_on_K"]}
+{"name": "Becoming.PolyComposition.mul_add_nat", "uses": []}
+{"name": "Becoming.PolyComposition.natMax_sub_le", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.Naturals.sub_antitone"]}
+{"name": "Becoming.PolyComposition.natMin_sub_le", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMin_eq_left", "Becoming.CoreHelpers.natMin_eq_right", "Becoming.CoreHelpers.natMin_le_left", "Becoming.CoreHelpers.natMin_le_right"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "uses": []}
+{"name": "Becoming.PolyComposition.ofOpenComponent_closedStep_eq", "uses": []}
+{"name": "Becoming.PolyComposition.ofOpenComponent_guard_iff", "uses": []}
+{"name": "Becoming.PolyComposition.ofOpenComponent_kernel_iff", "uses": ["Becoming.PolyComposition.ofOpenComponent_guard_iff", "Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "Becoming.PolyComposition.ofOpenComponent_trace_iff"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_trace_iff", "uses": ["Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "Becoming.PolyComposition.ofOpenComponent_trace_to_poly", "Becoming.map_comp_eq", "Becoming.map_eq_of"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_trace_to_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.PolyComposition.ofOpenState_toOpenState", "uses": []}
+{"name": "Becoming.PolyComposition.polySiteDraw_compose", "uses": ["Becoming.PolyComposition.sumPortDraws_append", "Becoming.PolyComposition.sumPortDraws_map"]}
+{"name": "Becoming.PolyComposition.poly_close_kernel", "uses": ["Becoming.PolyComposition.poly_close_viable", "Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.PolyComposition.poly_close_kernel_allModes", "uses": ["Becoming.PolyComposition.poly_close_kernel"]}
+{"name": "Becoming.PolyComposition.poly_close_kernel_allModes_on_K", "uses": ["Becoming.PolyComposition.poly_close_viable_on_K", "Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.PolyComposition.poly_close_viable", "uses": ["Becoming.PolyComposition.poly_close_viable_on_K"]}
+{"name": "Becoming.PolyComposition.poly_close_viable_on_K", "uses": ["Becoming.OpenComposition.substrate_margin_step", "Becoming.PolyComposition.PolyContract.cert", "Becoming.PolyComposition.PolyContract.emits_on_warn", "Becoming.PolyComposition.PolyContract.eta_alarm_step", "Becoming.PolyComposition.PolyContract.eta_alarm_zero", "Becoming.PolyComposition.PolyContract.eta_bound", "Becoming.PolyComposition.PolyContract.init_in", "Becoming.PolyComposition.sumPortDraws_le", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.PolyComposition.poly_poolRead_absent_invariant", "uses": ["Becoming.PoolFromCourse.read_absent"]}
+{"name": "Becoming.PolyComposition.poly_poolWindow_unregistered_stays_blind", "uses": ["Becoming.ClosedCapture.loss_grows", "Becoming.Pace.paced_fast_succ", "Becoming.Pace.paced_succ", "Becoming.PoolFromCourse.stands_not_readmitted", "Becoming.PoolFromCourse.window_through"]}
+{"name": "Becoming.PolyComposition.serialReconfig_epoch_stale_on_step", "uses": ["Becoming.Reconfiguration.reconfigure_stales_epoch"]}
+{"name": "Becoming.PolyComposition.serialReconfig_kernel", "uses": ["Becoming.PolyComposition.serialReconfig_viable", "Becoming.Viability.Certificate.kernel"]}
+{"name": "Becoming.PolyComposition.serialReconfig_viable", "uses": ["Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.OpenComposition.substrate_margin_step", "Becoming.PolyComposition.PolyContract.cert", "Becoming.PolyComposition.PolyContract.emits_on_warn", "Becoming.PolyComposition.PolyContract.eta_alarm_step", "Becoming.PolyComposition.PolyContract.eta_alarm_zero", "Becoming.PolyComposition.PolyContract.eta_bound", "Becoming.PolyComposition.sumPortDraws_le", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.PolyComposition.sub_add_le_add_sub_nat", "uses": ["Becoming.CoreHelpers.le_sub_add_nat", "Becoming.Naturals.sub_le_of_le_add"]}
+{"name": "Becoming.PolyComposition.sub_sub_le_add_sub_nat", "uses": ["Becoming.CoreHelpers.le_sub_add_nat", "Becoming.Naturals.sub_le_of_le_add", "Becoming.Naturals.sub_sub"]}
+{"name": "Becoming.PolyComposition.sumPortDraws_append", "uses": []}
+{"name": "Becoming.PolyComposition.sumPortDraws_cons", "uses": []}
+{"name": "Becoming.PolyComposition.sumPortDraws_le", "uses": []}
+{"name": "Becoming.PolyComposition.sumPortDraws_map", "uses": []}
