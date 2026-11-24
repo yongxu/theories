@@ -1,0 +1,577 @@
+@Becoming.EndogenousEmergence.closedOrbit_succ_snd : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (x₀ t : Nat),
+  (Becoming.EndogenousEmergence.closedOrbit W L x₀ (t + 1)).snd =
+    L.update (Becoming.EndogenousEmergence.closedOrbit W L x₀ t).snd (Becoming.EndogenousEmergence.obsAt W L x₀ t)
+@Becoming.EndogenousEmergence.closedOrbit_succ_fst : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (x₀ t : Nat),
+  (Becoming.EndogenousEmergence.closedOrbit W L x₀ (t + 1)).fst =
+    W.stepStock (Becoming.EndogenousEmergence.closedOrbit W L x₀ t).fst
+      (L.act (Becoming.EndogenousEmergence.closedOrbit W L x₀ t).snd)
+@Becoming.EndogenousEmergence.trace_of_orbit_steps : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (x₀ k n : Nat),
+  Generative.Trace (Becoming.EndogenousEmergence.loopProcess W L) (Becoming.EndogenousEmergence.closedOrbit W L x₀ k)
+    (List.replicate n ()) (Becoming.EndogenousEmergence.closedOrbit W L x₀ (k + n))
+@Becoming.EndogenousEmergence.reach_closedOrbit : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (x₀ n : Nat),
+  Becoming.Reach (Becoming.EndogenousEmergence.loopProcess W L) (x₀, L.init)
+    (Becoming.EndogenousEmergence.closedOrbit W L x₀ n)
+@Becoming.EndogenousEmergence.unguided_obs_lockstep : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W₁ W₂ : Becoming.EndogenousEmergence.StrainWorld) (x₁ x₂ T : Nat),
+  (∀ (t : Nat), t < T → Becoming.EndogenousEmergence.obsAt W₁ L x₁ t = Becoming.EndogenousEmergence.obsAt W₂ L x₂ t) →
+    (Becoming.EndogenousEmergence.closedOrbit W₁ L x₁ T).snd =
+        (Becoming.EndogenousEmergence.closedOrbit W₂ L x₂ T).snd ∧
+      L.act (Becoming.EndogenousEmergence.closedOrbit W₁ L x₁ T).snd =
+        L.act (Becoming.EndogenousEmergence.closedOrbit W₂ L x₂ T).snd
+@Becoming.EndogenousEmergence.silent_cliff_universal_lockstep : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W : Becoming.EndogenousEmergence.StrainWorld) (plateau : Becoming.EndogenousEmergence.EmergenceAct → Nat) (x₀ : Nat),
+  (∀ (x : Nat) (a : Becoming.EndogenousEmergence.EmergenceAct), W.xCrit ≤ x → W.sense x a = plateau a) →
+    ∀ (T : Nat),
+      (∀ (t : Nat), t < T → W.xCrit ≤ (Becoming.EndogenousEmergence.closedOrbit W L x₀ (t + 1)).fst) →
+        (Becoming.EndogenousEmergence.closedOrbit W L x₀ T).snd =
+            (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀ T).snd ∧
+          L.act (Becoming.EndogenousEmergence.closedOrbit W L x₀ T).snd =
+            L.act
+              (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀ T).snd
+@Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_upto : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W : Becoming.EndogenousEmergence.StrainWorld) (plateau : Becoming.EndogenousEmergence.EmergenceAct → Nat) (x₀ : Nat),
+  (∀ (x : Nat) (a : Becoming.EndogenousEmergence.EmergenceAct), W.xCrit ≤ x → W.sense x a = plateau a) →
+    ∀ (T : Nat),
+      (∀ (t : Nat),
+          t < T →
+            L.act
+                (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀
+                    t).snd =
+              Becoming.EndogenousEmergence.EmergenceAct.extract) →
+        (∀ (t : Nat), t + 1 < T → W.xCrit ≤ Becoming.EndogenousEmergence.pureExtractStock W x₀ (t + 1)) →
+          ∀ (k : Nat),
+            k ≤ T →
+              (Becoming.EndogenousEmergence.closedOrbit W L x₀ k).fst =
+                Becoming.EndogenousEmergence.pureExtractStock W x₀ k
+@Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_of_plateau : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W : Becoming.EndogenousEmergence.StrainWorld) (plateau : Becoming.EndogenousEmergence.EmergenceAct → Nat) (x₀ : Nat),
+  (∀ (x : Nat) (a : Becoming.EndogenousEmergence.EmergenceAct), W.xCrit ≤ x → W.sense x a = plateau a) →
+    ∀ (T : Nat),
+      (∀ (t : Nat),
+          t < T →
+            L.act
+                (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀
+                    t).snd =
+              Becoming.EndogenousEmergence.EmergenceAct.extract) →
+        (∀ (t : Nat), t + 1 < T → W.xCrit ≤ Becoming.EndogenousEmergence.pureExtractStock W x₀ (t + 1)) →
+          (Becoming.EndogenousEmergence.closedOrbit W L x₀ T).fst =
+              Becoming.EndogenousEmergence.pureExtractStock W x₀ T ∧
+            ((∀ (t : Nat), t < T → W.xCrit ≤ Becoming.EndogenousEmergence.pureExtractStock W x₀ (t + 1)) →
+              (Becoming.EndogenousEmergence.closedOrbit W L x₀ T).snd =
+                (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀
+                    T).snd)
+@Becoming.EndogenousEmergence.silent_cliff_universal_collapse : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W : Becoming.EndogenousEmergence.StrainWorld) (plateau : Becoming.EndogenousEmergence.EmergenceAct → Nat)
+  (x₀ T : Nat),
+  (∀ (x : Nat) (a : Becoming.EndogenousEmergence.EmergenceAct), W.xCrit ≤ x → W.sense x a = plateau a) →
+    (∀ (t : Nat),
+        t < T + 1 →
+          L.act
+              (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀
+                  t).snd =
+            Becoming.EndogenousEmergence.EmergenceAct.extract) →
+      (∀ (t : Nat), t < T → W.xCrit ≤ Becoming.EndogenousEmergence.pureExtractStock W x₀ (t + 1)) →
+        Becoming.EndogenousEmergence.pureExtractStock W x₀ (T + 1) < W.xCrit →
+          (Becoming.EndogenousEmergence.closedOrbit W L x₀ (T + 1)).fst < W.xCrit ∧
+            (Becoming.EndogenousEmergence.closedOrbit W L x₀ T).snd =
+                (Becoming.EndogenousEmergence.closedOrbit (Becoming.EndogenousEmergence.plateauWorld plateau) L x₀
+                    T).snd ∧
+              ¬Becoming.Viability.Kernel (Becoming.EndogenousEmergence.loopProcess W L)
+                  (Becoming.EndogenousEmergence.viableStockGuard W) (x₀, L.init)
+@Becoming.EndogenousEmergence.zero_probe_endo_exo_indistinguishable : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W_endo W_exo : Becoming.EndogenousEmergence.StrainWorld) (x₀ : Nat),
+  (∀ (x : Nat),
+      W_endo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract =
+        W_exo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract) →
+    (∀ (x : Nat),
+        W_endo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract =
+          W_exo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract) →
+      ∀ (T : Nat),
+        (∀ (t : Nat),
+            t < T →
+              L.act (Becoming.EndogenousEmergence.closedOrbit W_endo L x₀ t).snd =
+                Becoming.EndogenousEmergence.EmergenceAct.extract) →
+          Becoming.EndogenousEmergence.closedOrbit W_endo L x₀ T =
+              Becoming.EndogenousEmergence.closedOrbit W_exo L x₀ T ∧
+            L.act (Becoming.EndogenousEmergence.closedOrbit W_endo L x₀ T).snd =
+              L.act (Becoming.EndogenousEmergence.closedOrbit W_exo L x₀ T).snd
+@Becoming.EndogenousEmergence.separation_requires_safe_perturbation : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (W_endo W_exo : Becoming.EndogenousEmergence.StrainWorld) (x₀ T : Nat),
+  (∀ (x : Nat),
+      W_endo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract =
+        W_exo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract) →
+    (∀ (x : Nat),
+        W_endo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract =
+          W_exo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract) →
+      L.act (Becoming.EndogenousEmergence.closedOrbit W_endo L x₀ T).snd =
+          Becoming.EndogenousEmergence.EmergenceAct.safe →
+        L.act (Becoming.EndogenousEmergence.closedOrbit W_exo L x₀ T).snd =
+            Becoming.EndogenousEmergence.EmergenceAct.extract →
+          ¬∀ (k : Nat),
+              k < T →
+                L.act (Becoming.EndogenousEmergence.closedOrbit W_endo L x₀ k).snd =
+                  Becoming.EndogenousEmergence.EmergenceAct.extract
+@Becoming.EndogenousEmergence.minNat_eq_right_of_ge : ∀ {a b : Nat}, b ≤ a → Becoming.EndogenousEmergence.minNat a b = b
+Becoming.EndogenousEmergence.worlds_strictly_greedy_everywhere : ∀ (x : Nat),
+  Becoming.EndogenousEmergence.wEndo.sense x Becoming.EndogenousEmergence.EmergenceAct.safe <
+      Becoming.EndogenousEmergence.wEndo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+    Becoming.EndogenousEmergence.wExo.sense x Becoming.EndogenousEmergence.EmergenceAct.safe <
+        Becoming.EndogenousEmergence.wExo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+      Becoming.EndogenousEmergence.wExoShift.sense x Becoming.EndogenousEmergence.EmergenceAct.safe <
+          Becoming.EndogenousEmergence.wExoShift.sense x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+        Becoming.EndogenousEmergence.wThinStrain.sense x Becoming.EndogenousEmergence.EmergenceAct.safe <
+          Becoming.EndogenousEmergence.wThinStrain.sense x Becoming.EndogenousEmergence.EmergenceAct.extract
+Becoming.EndogenousEmergence.wEndo_wExo_agree_on_extract : ∀ (x : Nat),
+  Becoming.EndogenousEmergence.wEndo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract =
+      Becoming.EndogenousEmergence.wExo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+    Becoming.EndogenousEmergence.wEndo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract =
+        Becoming.EndogenousEmergence.wExo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+      Becoming.EndogenousEmergence.wEndo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract =
+          Becoming.EndogenousEmergence.wExoShift.stepStock x Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+        Becoming.EndogenousEmergence.wEndo.sense x Becoming.EndogenousEmergence.EmergenceAct.extract =
+          Becoming.EndogenousEmergence.wExoShift.sense x Becoming.EndogenousEmergence.EmergenceAct.extract
+@Becoming.EndogenousEmergence.wEndo_safe_preserves_stock : ∀ {x : Nat},
+  6 ≤ x → Becoming.EndogenousEmergence.wEndo.stepStock x Becoming.EndogenousEmergence.EmergenceAct.safe = x
+@Becoming.EndogenousEmergence.one_probe_universal_insufficiency : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct),
+  L.act (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo L 14 0).snd =
+      Becoming.EndogenousEmergence.EmergenceAct.extract →
+    L.act (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo L 14 1).snd =
+        Becoming.EndogenousEmergence.EmergenceAct.extract →
+      L.act (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo L 14 2).snd =
+          Becoming.EndogenousEmergence.EmergenceAct.safe →
+        Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wEndo L 14 0 = 16 ∧
+          Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wExoShift L 14 0 = 16 ∧
+            Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wEndo L 14 1 = 14 ∧
+              Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wExoShift L 14 1 = 14 ∧
+                Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wEndo L 14 2 = 11 ∧
+                  Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wExoShift L 14 2 = 11 ∧
+                    (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo L 14 3).snd =
+                        (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExoShift L 14 3).snd ∧
+                      L.act (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo L 14 3).snd =
+                        L.act
+                          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExoShift L 14 3).snd
+@Becoming.EndogenousEmergence.thin_strain_band_universal_collapse : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct),
+  (∀ (t : Nat),
+      t < 4 →
+        L.act
+            (Becoming.EndogenousEmergence.closedOrbit
+                (Becoming.EndogenousEmergence.plateauWorld fun a =>
+                  match a with
+                  | Becoming.EndogenousEmergence.EmergenceAct.extract => 11
+                  | Becoming.EndogenousEmergence.EmergenceAct.safe => 8)
+                L 13 t).snd =
+          Becoming.EndogenousEmergence.EmergenceAct.extract) →
+    (Becoming.EndogenousEmergence.wThinStrain.xCrit ≤ 6 ∧
+        Becoming.EndogenousEmergence.wThinStrain.sense 6 Becoming.EndogenousEmergence.EmergenceAct.extract <
+          Becoming.EndogenousEmergence.wThinStrain.sense 7 Becoming.EndogenousEmergence.EmergenceAct.extract) ∧
+      (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wThinStrain L 13 4).fst = 4 ∧
+        (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wThinStrain L 13 3).snd =
+            (Becoming.EndogenousEmergence.closedOrbit
+                (Becoming.EndogenousEmergence.plateauWorld fun a =>
+                  match a with
+                  | Becoming.EndogenousEmergence.EmergenceAct.extract => 11
+                  | Becoming.EndogenousEmergence.EmergenceAct.safe => 8)
+                L 13 3).snd ∧
+          ¬Becoming.Viability.Kernel
+              (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wThinStrain L)
+              (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wThinStrain) (13, L.init)
+Becoming.EndogenousEmergence.cSafe_widensBy_cExt : Becoming.Weighting.WidensBy
+  Becoming.EndogenousEmergence.emergenceItems Becoming.EndogenousEmergence.EmergenceItem.sustainedContinuation
+  Becoming.EndogenousEmergence.cSafe Becoming.EndogenousEmergence.cExt
+Becoming.EndogenousEmergence.cFull_widensBy_cSafe : Becoming.Weighting.WidensBy
+  Becoming.EndogenousEmergence.emergenceItems Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent
+  Becoming.EndogenousEmergence.cFull Becoming.EndogenousEmergence.cSafe
+Becoming.EndogenousEmergence.selectByOrder_safe_iff : ∀ (pos : Becoming.EndogenousEmergence.EmergenceItem → Nat),
+  Becoming.EndogenousEmergence.selectByOrder pos = Becoming.EndogenousEmergence.EmergenceAct.safe ↔
+    Becoming.Weighting.ranksNet Becoming.EndogenousEmergence.emergenceItems pos
+      Becoming.EndogenousEmergence.emergenceBase Becoming.EndogenousEmergence.cExt Becoming.EndogenousEmergence.cSafe
+Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater : ∀ (W : Becoming.EndogenousEmergence.StrainWorld) (x₀ : Nat)
+  (worldOwn : Becoming.EndogenousEmergence.EmergenceItem → Bool) (t : Nat)
+  (i : Becoming.EndogenousEmergence.EmergenceItem),
+  (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd.pos i =
+    (Becoming.EndogenousEmergence.emergenceUpdater worldOwn).posAt (Becoming.EndogenousEmergence.endogFeedback W x₀) t i
+Becoming.EndogenousEmergence.emergent_act_governed_by_orderUpdater : ∀ (W : Becoming.EndogenousEmergence.StrainWorld)
+  (x₀ t : Nat) (worldOwn : Becoming.EndogenousEmergence.EmergenceItem → Bool),
+  (∃ b,
+        (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd.phase =
+          Becoming.EndogenousEmergence.LearnerPhase.coarse b) ∨
+      (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd.phase =
+        Becoming.EndogenousEmergence.LearnerPhase.resolved →
+    (Becoming.EndogenousEmergence.emergentLoop.act
+          (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd =
+        Becoming.EndogenousEmergence.EmergenceAct.safe ↔
+      (Becoming.EndogenousEmergence.emergenceUpdater worldOwn).ranksAt (Becoming.EndogenousEmergence.endogFeedback W x₀)
+        t Becoming.EndogenousEmergence.cExt Becoming.EndogenousEmergence.cSafe)
+Becoming.EndogenousEmergence.endoResolved_pos_eq : ∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop
+            14 4).snd.pos
+      i =
+    Becoming.EndogenousEmergence.endoPostPos i
+Becoming.EndogenousEmergence.endoResolved_ownHat_eq : ∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop
+            14 4).snd.ownHat
+      i =
+    Becoming.EndogenousEmergence.worldOwnEndo i
+Becoming.EndogenousEmergence.selectByOrder_endoPost : Becoming.EndogenousEmergence.selectByOrder
+    Becoming.EndogenousEmergence.endoPostPos =
+  Becoming.EndogenousEmergence.EmergenceAct.safe
+Becoming.EndogenousEmergence.selectByOrder_initPos : Becoming.EndogenousEmergence.selectByOrder
+    Becoming.EndogenousEmergence.emergenceInitPos =
+  Becoming.EndogenousEmergence.EmergenceAct.extract
+Becoming.EndogenousEmergence.wEndo_orbit_stabilizes : ∀ (k : Nat),
+  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop
+          14 (4 + k)).fst =
+      10 ∧
+    (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+              Becoming.EndogenousEmergence.emergentLoop 14 (4 + k)).snd.phase =
+        Becoming.EndogenousEmergence.LearnerPhase.resolved ∧
+      (∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                    Becoming.EndogenousEmergence.emergentLoop 14 (4 + k)).snd.pos
+              i =
+            Becoming.EndogenousEmergence.endoPostPos i) ∧
+        ∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                    Becoming.EndogenousEmergence.emergentLoop 14 (4 + k)).snd.ownHat
+              i =
+            Becoming.EndogenousEmergence.worldOwnEndo i
+Becoming.EndogenousEmergence.wEndo_orbit_above_crit : ∀ (t : Nat),
+  6 ≤
+    (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+        Becoming.EndogenousEmergence.emergentLoop 14 t).fst
+@Becoming.EndogenousEmergence.reach_eq_orbit : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (w : List Unit)
+  {st₀ st' : Nat × S},
+  Generative.Trace (Becoming.EndogenousEmergence.loopProcess W L) st₀ w st' →
+    ∀ (k x₀ : Nat),
+      st₀ = Becoming.EndogenousEmergence.closedOrbit W L x₀ k →
+        st' = Becoming.EndogenousEmergence.closedOrbit W L x₀ (k + w.length)
+Becoming.EndogenousEmergence.endogenous_emergence_sufficiency : ((Becoming.EndogenousEmergence.emergenceUpdater
+          Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+      (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) 0
+      Becoming.EndogenousEmergence.cSafe Becoming.EndogenousEmergence.cExt ∧
+    Becoming.EndogenousEmergence.emergentLoop.act
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+              Becoming.EndogenousEmergence.emergentLoop 14 0).snd =
+        Becoming.EndogenousEmergence.EmergenceAct.extract ∧
+      (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                Becoming.EndogenousEmergence.emergentLoop 14 0).snd.ownHat
+          Becoming.EndogenousEmergence.EmergenceItem.sustainedContinuation =
+        false) ∧
+  (Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop 14
+          0 =
+        16 ∧
+      Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop 14
+            1 =
+          14 ∧
+        (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                  Becoming.EndogenousEmergence.emergentLoop 14 1).snd.phase =
+            Becoming.EndogenousEmergence.LearnerPhase.coarse (some 16) ∧
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                  Becoming.EndogenousEmergence.emergentLoop 14 2).snd.phase =
+            Becoming.EndogenousEmergence.LearnerPhase.probingSafe 14) ∧
+    (∀ (t : Nat),
+        4 ≤ t →
+          (∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+              (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                        Becoming.EndogenousEmergence.emergentLoop 14 t).snd.ownHat
+                  i =
+                Becoming.EndogenousEmergence.worldOwnEndo i) ∧
+            Becoming.Weighting.IncreasingInOwn Becoming.EndogenousEmergence.emergenceItems
+                Becoming.EndogenousEmergence.worldOwnEndo
+                ((Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t) ∧
+              (Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t
+                  Becoming.EndogenousEmergence.cExt Becoming.EndogenousEmergence.cSafe ∧
+                Becoming.EndogenousEmergence.emergentLoop.act
+                      (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                          Becoming.EndogenousEmergence.emergentLoop 14 t).snd =
+                    Becoming.EndogenousEmergence.EmergenceAct.safe ∧
+                  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                        Becoming.EndogenousEmergence.emergentLoop 14 t).fst =
+                    10) ∧
+      Becoming.Viability.Kernel
+        (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wEndo
+          Becoming.EndogenousEmergence.emergentLoop)
+        (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo)
+        (14, Becoming.EndogenousEmergence.emergentLoop.init)
+Becoming.EndogenousEmergence.increasingInOwn_exo_init : Becoming.Weighting.IncreasingInOwn
+  Becoming.EndogenousEmergence.emergenceItems Becoming.EndogenousEmergence.worldOwnExo
+  (Becoming.Weighting.ranksNet Becoming.EndogenousEmergence.emergenceItems Becoming.EndogenousEmergence.emergenceInitPos
+    Becoming.EndogenousEmergence.emergenceBase)
+Becoming.EndogenousEmergence.emergentLoop_separates_exo : (Becoming.EndogenousEmergence.closedOrbit
+          Becoming.EndogenousEmergence.wExo Becoming.EndogenousEmergence.emergentLoop 14 2).snd.phase =
+    Becoming.EndogenousEmergence.LearnerPhase.probingSafe 14 ∧
+  Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wExo Becoming.EndogenousEmergence.emergentLoop 14 2 =
+      9 ∧
+    Becoming.EndogenousEmergence.obsAt Becoming.EndogenousEmergence.wExo Becoming.EndogenousEmergence.emergentLoop 14
+          3 =
+        7 ∧
+      (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExo
+                Becoming.EndogenousEmergence.emergentLoop 14 4).snd.phase =
+          Becoming.EndogenousEmergence.LearnerPhase.resolved ∧
+        (∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+            (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExo
+                      Becoming.EndogenousEmergence.emergentLoop 14 4).snd.ownHat
+                i =
+              Becoming.EndogenousEmergence.worldOwnExo i) ∧
+          (∀ (i : Becoming.EndogenousEmergence.EmergenceItem),
+              (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExo
+                        Becoming.EndogenousEmergence.emergentLoop 14 4).snd.pos
+                  i =
+                Becoming.EndogenousEmergence.emergenceInitPos i) ∧
+            Becoming.Weighting.IncreasingInOwn Becoming.EndogenousEmergence.emergenceItems
+                Becoming.EndogenousEmergence.worldOwnExo
+                ((Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnExo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wExo 14) 4) ∧
+              Becoming.EndogenousEmergence.emergentLoop.act
+                  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExo
+                      Becoming.EndogenousEmergence.emergentLoop 14 4).snd =
+                Becoming.EndogenousEmergence.EmergenceAct.extract
+Becoming.EndogenousEmergence.emergent_grammar_lumping_and_fiber_split : have P :=
+  Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wEndo Becoming.EndogenousEmergence.emergentLoop;
+have R := fun st st' => ∃ a, P.step st a st';
+(¬Becoming.«定后» (Becoming.«像» Becoming.EndogenousEmergence.projInternal R) ∧
+    ¬Becoming.«同行» R fun a b =>
+        Becoming.EndogenousEmergence.projInternal a = Becoming.EndogenousEmergence.projInternal b) ∧
+  Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo
+      (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+        Becoming.EndogenousEmergence.emergentLoop 14 1) ∧
+    Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo
+        (7,
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+              Becoming.EndogenousEmergence.emergentLoop 14 1).snd) ∧
+      Becoming.OplaxHistory.FiberViabilitySplit Becoming.EndogenousEmergence.projInternal
+          (Becoming.Viability.Kernel P
+            (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo)) ∧
+        ∀ (Kq : Becoming.EndogenousEmergence.LearnerState → Prop),
+          ¬((∀ (st : Nat × Becoming.EndogenousEmergence.LearnerState),
+                Becoming.Viability.Kernel P
+                    (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo) st →
+                  Kq (Becoming.EndogenousEmergence.projInternal st)) ∧
+              ∀ (st : Nat × Becoming.EndogenousEmergence.LearnerState),
+                Kq (Becoming.EndogenousEmergence.projInternal st) →
+                  Becoming.Viability.Kernel P
+                    (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo) st)
+Becoming.EndogenousEmergence.downstream_zero_and_unowned_forever : ∀ (W : Becoming.EndogenousEmergence.StrainWorld)
+  (x₀ : Nat),
+  (∀ (t : Nat),
+      Becoming.EndogenousEmergence.endogFeedback W x₀ t Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+        false) ∧
+    (∀ (t : Nat),
+        (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd.pos
+            Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+          0) ∧
+      ∀ (t : Nat),
+        (Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop x₀ t).snd.ownHat
+            Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+          false
+@Becoming.EndogenousEmergence.emergent_order_firewall : ∀ {Pos F : Type} (p : Pos) (f : F)
+  (Law : Becoming.EndogenousEmergence.EmergentOrderSystem → Prop),
+  Law Becoming.EndogenousEmergence.witnessEmergentSystem →
+    (∀ (t : Nat),
+        (Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).posAt
+            (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t
+            Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+          0) ∧
+      (∀ (t : Nat),
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                    Becoming.EndogenousEmergence.emergentLoop 14 t).snd.ownHat
+              Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+            false) ∧
+        (∀ (t : Nat),
+            ¬(Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t
+                  Becoming.EndogenousEmergence.cSafe Becoming.EndogenousEmergence.cFull ∧
+              ¬(Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t
+                  Becoming.EndogenousEmergence.cFull Becoming.EndogenousEmergence.cSafe) ∧
+          (Becoming.Clearing.valuation.Held ∧ ¬Becoming.Clearing.valuation.Significant) ∧
+            (Becoming.Rival (Becoming.bounded Becoming.EndogenousEmergence.emergentFirewallRegion) ∧
+                ¬Becoming.Unrestricted (Becoming.bounded Becoming.EndogenousEmergence.emergentFirewallRegion)) ∧
+              ¬∀ (sys' : Becoming.EndogenousEmergence.EmergentOrderSystem) (sig : Pos → Nat → F → Prop),
+                  Law sys' → Becoming.Unrestricted sig
+@Becoming.EndogenousEmergence.posChain_flatSpan_left_inv : ∀ {S : Type} (e : Becoming.DoubleKernel.GuardedExpr S S)
+  (n : Nat) (w : (Becoming.DoubleKernel.evalGuardedExpr (Becoming.EndogenousEmergence.seqChainPos e n)).W),
+  (Becoming.EndogenousEmergence.flatSpanToPosChain e n).map
+      ((Becoming.EndogenousEmergence.posChainToFlatSpan e n).map w) =
+    w
+@Becoming.EndogenousEmergence.posChain_flatSpan_right_inv : ∀ {S : Type} (e : Becoming.DoubleKernel.GuardedExpr S S)
+  (n : Nat) (p : (Becoming.OplaxHistory.constFlatSpan (Becoming.DoubleKernel.evalGuardedExpr e) (n + 1)).W),
+  (Becoming.EndogenousEmergence.posChainToFlatSpan e n).map
+      ((Becoming.EndogenousEmergence.flatSpanToPosChain e n).map p) =
+    p
+@Becoming.EndogenousEmergence.parSeqChain_left_inv : ∀ {A A' : Type} (e₁ : Becoming.DoubleKernel.GuardedExpr A A)
+  (e₂ : Becoming.DoubleKernel.GuardedExpr A' A') (n : Nat)
+  (w :
+    (Becoming.DoubleKernel.evalGuardedExpr
+        ((Becoming.EndogenousEmergence.seqChainPos e₁ n).par (Becoming.EndogenousEmergence.seqChainPos e₂ n))).W),
+  (Becoming.DoubleKernel.evalGuardedProof (Becoming.EndogenousEmergence.parSeqChainRL e₁ e₂ n)).map
+      ((Becoming.DoubleKernel.evalGuardedProof (Becoming.EndogenousEmergence.parSeqChainLR e₁ e₂ n)).map w) =
+    w
+Becoming.EndogenousEmergence.chiChainProof_commutes_chiConstFlat : ∀ (S : Becoming.OplaxHistory.SpanFunctor) {X : Type}
+  (H : Becoming.OplaxHistory.RelSpan X X) (n : Nat)
+  (u :
+    S.obj
+      (Becoming.DoubleKernel.evalGuardedExpr
+          (Becoming.EndogenousEmergence.seqChainPos (Becoming.DoubleKernel.GuardedExpr.atom H) n)).W),
+  (Becoming.EndogenousEmergence.posChainToFlatSpan
+          (Becoming.DoubleKernel.GuardedExpr.assemble S (Becoming.DoubleKernel.GuardedExpr.atom H)) n).map
+      ((Becoming.DoubleKernel.evalGuardedProof
+            (Becoming.EndogenousEmergence.chiChainProof S (Becoming.DoubleKernel.GuardedExpr.atom H) n)).map
+        u) =
+    (Becoming.OplaxHistory.chiConstFlat S H (n + 1)).map
+      (S.map (Becoming.EndogenousEmergence.posChainToFlatSpan (Becoming.DoubleKernel.GuardedExpr.atom H) n).map u)
+@Becoming.EndogenousEmergence.wholeArchitecture_oplax_guarded_bridge : ∀
+  {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB
+    QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+  (A :
+    Becoming.MasterSpine.WholeArchitecture Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide ModeR S_r
+      Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+  (n : Nat),
+  let P := Becoming.EndogenousEmergence.wholeOpClosedProcess A;
+  let H := Becoming.OplaxHistory.processStepSpan P;
+  have wTraj := Becoming.EndogenousEmergence.runToFlatSpanFrom A.rOp 0 n;
+  ((Becoming.OplaxHistory.constFlatSpan H n).left wTraj.val = A.rOp.state 0 ∧
+      (Becoming.OplaxHistory.constFlatSpan H n).right wTraj.val = A.rOp.state n ∧
+        Becoming.Viability.Kernel P (Becoming.OpenComposition.closedGuard A.compOp A.cOp A.x_crit) (A.rOp.state 0) ∧
+          Becoming.OpenComposition.closedGuard A.compOp A.cOp A.x_crit (A.rOp.state n) ∧
+            (Becoming.EvolutionaryDrawdown.multiSiteWorld A.compOp (A.W.G A.θ_true) (A.W.envDraw A.θ_true) A.rOp.state
+                fun t => (A.rOp.act t).fst).ReadOffExchange) ∧
+    (Becoming.OplaxHistory.IsBijective
+          (Becoming.EndogenousEmergence.posChainFlatSpanBij (Becoming.DoubleKernel.GuardedExpr.atom H) n).toFun ∧
+        ∀ (S : Becoming.OplaxHistory.SpanFunctor)
+          (u :
+            S.obj
+              (Becoming.DoubleKernel.evalGuardedExpr
+                  (Becoming.EndogenousEmergence.seqChainPos (Becoming.DoubleKernel.GuardedExpr.atom H) n)).W),
+          (Becoming.EndogenousEmergence.posChainToFlatSpan
+                  (Becoming.DoubleKernel.GuardedExpr.assemble S (Becoming.DoubleKernel.GuardedExpr.atom H)) n).map
+              ((Becoming.DoubleKernel.evalGuardedProof
+                    (Becoming.EndogenousEmergence.chiChainProof S (Becoming.DoubleKernel.GuardedExpr.atom H) n)).map
+                u) =
+            (Becoming.OplaxHistory.chiConstFlat S H (n + 1)).map
+              (S.map (Becoming.EndogenousEmergence.posChainToFlatSpan (Becoming.DoubleKernel.GuardedExpr.atom H) n).map
+                u)) ∧
+      (∀ (i : Option (ObsL × Obs_r) × Option Bool)
+          (x :
+            (Becoming.OplaxHistory.constFlatSpan
+                (Becoming.OplaxHistory.processStepSpan
+                  ((Becoming.CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i))
+                n).W),
+          (Becoming.OplaxHistory.constFlatSpan
+                  (Becoming.OplaxHistory.processStepSpan
+                    ((Becoming.CausalImage (Becoming.CausalSystem.ofOpenComponent A.compOp A.cOp.tol) A.π_causal
+                          A.ω_causal).proc
+                      (A.ω_causal i)))
+                  n).right
+              (Becoming.OplaxHistory.exactAbsChainMap ⋯ i n x) =
+            A.π_causal
+              ((Becoming.OplaxHistory.constFlatSpan
+                    (Becoming.OplaxHistory.processStepSpan
+                      ((Becoming.CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i))
+                    n).right
+                x)) ∧
+        ∀ (i : Option (ObsL × Obs_r) × Option Bool),
+          Becoming.«定后»
+              (Becoming.«像» A.π_causal fun s s' =>
+                ∃ a, ((Becoming.CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i).step s a s') ↔
+            Becoming.«同行»
+              (fun s s' => ∃ a, ((Becoming.CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i).step s a s')
+              fun s s' => A.π_causal s = A.π_causal s'
+Becoming.EndogenousEmergence.witnessArchitecture_sensory_fiber_split : have A :=
+  Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture;
+have P := Becoming.EndogenousEmergence.wholeOpClosedProcess A;
+have G := Becoming.OpenComposition.closedGuard A.compOp A.cOp A.x_crit;
+have u₁ := A.rOp.state 0;
+have u₂ := (fun x => 8, u₁.snd);
+G u₁ ∧
+  G u₂ ∧
+    Becoming.EndogenousEmergence.witnessSensoryInternalProj u₁ =
+        Becoming.EndogenousEmergence.witnessSensoryInternalProj u₂ ∧
+      Becoming.OplaxHistory.FiberViabilitySplit Becoming.EndogenousEmergence.witnessSensoryInternalProj
+          (Becoming.Viability.Kernel P G) ∧
+        ∀ (Kq : (Bool × Bool) × Becoming.MasterSpine.WholeBecomingWitness.WOpS → Prop),
+          ¬((∀
+                (st :
+                  (Unit → Nat) ×
+                    (((Unit × Nat) × Unit × Nat) × (Unit → Nat)) × (_ : Becoming.EndogenousOrder.ScopeMode) × Nat),
+                Becoming.Viability.Kernel P G st → Kq (Becoming.EndogenousEmergence.witnessSensoryInternalProj st)) ∧
+              ∀ (st : (Unit → Nat) × Becoming.MasterSpine.WholeBecomingWitness.WOpS),
+                Kq (Becoming.EndogenousEmergence.witnessSensoryInternalProj st) → Becoming.Viability.Kernel P G st)
+@Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge : ∀ {Pos F : Type} (p : Pos) (f : F)
+  (n : Nat),
+  (Becoming.Viability.Kernel
+        (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wEndo
+          Becoming.EndogenousEmergence.emergentLoop)
+        (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo)
+        (14, Becoming.EndogenousEmergence.emergentLoop.init) ∧
+      (∀ (t : Nat),
+          4 ≤ t →
+            Becoming.Weighting.IncreasingInOwn Becoming.EndogenousEmergence.emergenceItems
+                Becoming.EndogenousEmergence.worldOwnEndo
+                ((Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).ranksAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t) ∧
+              Becoming.EndogenousEmergence.emergentLoop.act
+                  (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                      Becoming.EndogenousEmergence.emergentLoop 14 t).snd =
+                Becoming.EndogenousEmergence.EmergenceAct.safe) ∧
+        Becoming.EndogenousEmergence.emergentLoop.act
+            (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExo
+                Becoming.EndogenousEmergence.emergentLoop 14 4).snd =
+          Becoming.EndogenousEmergence.EmergenceAct.extract) ∧
+    (¬Becoming.Viability.Kernel
+            (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wCliff
+              Becoming.EndogenousEmergence.emergentLoop)
+            (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wCliff)
+            (14, Becoming.EndogenousEmergence.emergentLoop.init) ∧
+        ¬Becoming.Viability.Kernel
+              (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wThinStrain
+                Becoming.EndogenousEmergence.emergentLoop)
+              (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wThinStrain)
+              (13, Becoming.EndogenousEmergence.emergentLoop.init) ∧
+          (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+                Becoming.EndogenousEmergence.emergentLoop 14 3).snd =
+            (Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wExoShift
+                Becoming.EndogenousEmergence.emergentLoop 14 3).snd) ∧
+      (Becoming.OplaxHistory.FiberViabilitySplit Becoming.EndogenousEmergence.projInternal
+            (Becoming.Viability.Kernel
+              (Becoming.EndogenousEmergence.loopProcess Becoming.EndogenousEmergence.wEndo
+                Becoming.EndogenousEmergence.emergentLoop)
+              (Becoming.EndogenousEmergence.viableStockGuard Becoming.EndogenousEmergence.wEndo)) ∧
+          Becoming.OplaxHistory.FiberViabilitySplit Becoming.EndogenousEmergence.witnessSensoryInternalProj
+            (Becoming.Viability.Kernel
+              (Becoming.EndogenousEmergence.wholeOpClosedProcess
+                Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture)
+              (Becoming.OpenComposition.closedGuard Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture.compOp
+                Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture.cOp
+                Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture.x_crit))) ∧
+        Becoming.OplaxHistory.IsBijective
+            (Becoming.EndogenousEmergence.posChainFlatSpanBij
+                (Becoming.DoubleKernel.GuardedExpr.atom
+                  (Becoming.OplaxHistory.processStepSpan
+                    (Becoming.EndogenousEmergence.wholeOpClosedProcess
+                      Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture)))
+                n).toFun ∧
+          (∀ (t : Nat),
+              (Becoming.EndogenousEmergence.emergenceUpdater Becoming.EndogenousEmergence.worldOwnEndo).posAt
+                  (Becoming.EndogenousEmergence.endogFeedback Becoming.EndogenousEmergence.wEndo 14) t
+                  Becoming.EndogenousEmergence.EmergenceItem.downstreamDependent =
+                0) ∧
+            (¬∀ (sys' : Becoming.EndogenousEmergence.EmergentOrderSystem) (sig : Pos → Nat → F → Prop),
+                  (fun x => True) sys' → Becoming.Unrestricted sig) ∧
+              ¬∀ (d' : Unit) (sig : Pos → Nat → F → Prop), (fun x => True) d' → Becoming.Unrestricted sig

@@ -141,6 +141,16 @@
       "receipt": "survival-distinguishability/survival-distinguishability-verification.json",
       "checker": "survival-distinguishability/check_survival_distinguishability.py",
       "record": "finite-mode-survival-distinguishability"
+    },
+    {
+      "module": "QuantitativeTransfer",
+      "region": "map",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "quantitative-transfer/QuantitativeTransfer.lean",
+      "receipt": "quantitative-transfer/quantitative-transfer-verification.json",
+      "checker": "quantitative-transfer/check_quantitative_transfer.py",
+      "record": "quantitative-transfer-of-four-guard-failure-regimes"
     }
   ]
 }

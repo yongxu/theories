@@ -1,0 +1,765 @@
+Becoming.EndogenousDetectionRace.gate_extract : ∀ (b : Bool),
+  Becoming.EndogenousDetectionRace.gate b Becoming.EndogenousEmergence.EmergenceAct.extract =
+    Becoming.EndogenousEmergence.EmergenceAct.extract
+@Becoming.EndogenousDetectionRace.gate_of_admitted : ∀ {b : Bool} {a : Becoming.EndogenousEmergence.EmergenceAct},
+  (a = Becoming.EndogenousEmergence.EmergenceAct.safe → b = true) → Becoming.EndogenousDetectionRace.gate b a = a
+@Becoming.EndogenousDetectionRace.gatedStep_eq_closed : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) {adm : Bool}
+  {st : Nat × S},
+  (L.act st.snd = Becoming.EndogenousEmergence.EmergenceAct.safe → adm = true) →
+    Becoming.EndogenousDetectionRace.gatedStep W L adm st = Becoming.EndogenousEmergence.closedLoopStep W L st
+@Becoming.EndogenousDetectionRace.gated_eq_closed : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (adm : Nat → Bool)
+  (x₀ T : Nat),
+  (∀ (k : Nat),
+      k < T →
+        L.act (Becoming.EndogenousEmergence.closedOrbit W L x₀ k).snd = Becoming.EndogenousEmergence.EmergenceAct.safe →
+          adm k = true) →
+    Becoming.EndogenousDetectionRace.gatedOrbit W L adm x₀ T = Becoming.EndogenousEmergence.closedOrbit W L x₀ T
+@Becoming.EndogenousDetectionRace.lockout_pure_extract : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (adm : Nat → Bool)
+  (x₀ τ : Nat),
+  (∀ (k : Nat), τ ≤ k → adm k = false) →
+    ∀ (k : Nat),
+      (Becoming.EndogenousDetectionRace.gatedOrbit W L adm x₀ (τ + k)).fst =
+        Becoming.EndogenousEmergence.pureExtractStock W (Becoming.EndogenousDetectionRace.gatedOrbit W L adm x₀ τ).fst k
+@Becoming.EndogenousDetectionRace.lockout_learner_irrelevant : ∀ {S₁ S₂ : Type}
+  (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L₁ : Becoming.EndogenousEmergence.UnguidedLoop S₁ Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (L₂ : Becoming.EndogenousEmergence.UnguidedLoop S₂ Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (adm₁ adm₂ : Nat → Bool) (x₁ x₂ τ : Nat),
+  (∀ (k : Nat), τ ≤ k → adm₁ k = false) →
+    (∀ (k : Nat), τ ≤ k → adm₂ k = false) →
+      (Becoming.EndogenousDetectionRace.gatedOrbit W L₁ adm₁ x₁ τ).fst =
+          (Becoming.EndogenousDetectionRace.gatedOrbit W L₂ adm₂ x₂ τ).fst →
+        ∀ (k : Nat),
+          (Becoming.EndogenousDetectionRace.gatedOrbit W L₁ adm₁ x₁ (τ + k)).fst =
+            (Becoming.EndogenousDetectionRace.gatedOrbit W L₂ adm₂ x₂ (τ + k)).fst
+@Becoming.EndogenousDetectionRace.turn_fst : ∀ {A R : Type} (f : A → R → A) (h : A → R → R) (b : Bool) (p : A × R),
+  (Becoming.Pace.turn f h b p).fst = f p.fst p.snd
+@Becoming.EndogenousDetectionRace.turn_sim : ∀ {A B B' R : Type} {f : A × B → R → A × B} {f' : A × B' → R → A × B'}
+  {h : A × B → R → R} {h' : A × B' → R → R} (b : Bool) (p : (A × B) × R) (q : (A × B') × R),
+  (f p.fst p.snd).fst = (f' q.fst q.snd).fst →
+    h p.fst p.snd = h' q.fst q.snd →
+      p.snd = q.snd →
+        (Becoming.Pace.turn f h b p).fst.fst = (Becoming.Pace.turn f' h' b q).fst.fst ∧
+          (Becoming.Pace.turn f h b p).snd = (Becoming.Pace.turn f' h' b q).snd
+@Becoming.EndogenousDetectionRace.turn_sim_plain : ∀ {A B R : Type} {f : A × B → R → A × B} {f' : A → R → A}
+  {h : A × B → R → R} {h' : A → R → R} (b : Bool) (p : (A × B) × R) (q : A × R),
+  (f p.fst p.snd).fst = f' q.fst q.snd →
+    h p.fst p.snd = h' q.fst q.snd →
+      p.snd = q.snd →
+        (Becoming.Pace.turn f h b p).fst.fst = (Becoming.Pace.turn f' h' b q).fst ∧
+          (Becoming.Pace.turn f h b p).snd = (Becoming.Pace.turn f' h' b q).snd
+@Becoming.EndogenousDetectionRace.select_keeps_admitted : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  x.carrier ≤ x.other → g.disfavours → (x.select g).carrier ≤ (x.select g).other
+@Becoming.EndogenousDetectionRace.not_admits_of_le : ∀ {x y : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le x y →
+    x.other < x.carrier → Becoming.EndogenousDetectionRace.admits y = false
+@Becoming.EndogenousDetectionRace.region_stays : ∀ {A R : Type} {f : A → R → A} {h : A → R → R} {reads : Nat → Bool}
+  {Q : A × R → Prop},
+  (∀ (b : Bool) (p : A × R), Q p → Q (Becoming.Pace.turn f h b p)) →
+    ∀ {c : A × R}, Q c → ∀ (k : Nat), Q (Becoming.Pace.paced f h reads c k)
+@Becoming.EndogenousDetectionRace.rule_kept_span : ∀ {A R : Type} {f : A → R → A} {h : A → R → R} {reads : Nat → Bool}
+  (c : A × R) (t₀ d : Nat),
+  (∀ (m : Nat), m < d → reads (t₀ + m) = false) →
+    (Becoming.Pace.paced f h reads c (t₀ + d)).snd = (Becoming.Pace.paced f h reads c t₀).snd
+@Becoming.EndogenousDetectionRace.mark_beyond_succ : ∀ {B : Type}
+  (fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B) (mark : B → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool)
+  (c : (Becoming.RuleCapture.CarrierCounts × B) × Becoming.RuleCapture.CarrierCounts) (t : Nat),
+  (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads c (t + 1)).fst.snd =
+    fB (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads c t).fst
+      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads c t).snd
+@Becoming.EndogenousDetectionRace.mark_reads_beyond : ∀ {B : Type}
+  (fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B) (mark : B → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) {x : Becoming.RuleCapture.CarrierCounts} {b₁ b₂ : B}
+  {g : Becoming.RuleCapture.CarrierCounts},
+  mark b₁ = true →
+    mark b₂ = false →
+      Becoming.ClosedCapture.Drawn.pool u w x ≠ Becoming.ClosedCapture.Drawn.pool u v x →
+        ¬Becoming.ClosedCapture.Unread (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select fB)
+            (Becoming.EndogenousDetectionRace.markRead mark u v w)
+Becoming.EndogenousDetectionRace.markRead_eq_lossPool : ∀ (u v w : Becoming.RuleCapture.CarrierCounts) {m : Bool}
+  {t τ : Nat},
+  (m = true ↔ τ ≤ t) →
+    ∀ (x g : Becoming.RuleCapture.CarrierCounts),
+      (bif m then Becoming.ClosedCapture.Drawn.pool u w x else Becoming.ClosedCapture.Drawn.pool u v x) =
+        Becoming.ClosedCapture.Thinned.lossPool u v w τ (x, t) g
+@Becoming.EndogenousDetectionRace.mark_eq_thinned : ∀ {B : Type}
+  (fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B) (mark : B → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool) (s₀ g₀ : Becoming.RuleCapture.CarrierCounts)
+  (b₀ : B) (τ : Nat),
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = true ↔ τ ≤ t) →
+    ∀ (t : Nat),
+      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.fst =
+          (Becoming.ClosedCapture.Thinned.course Becoming.ClosedCapture.Beyond.lossStep u v w τ reads ((s₀, 0), g₀)
+                t).fst.fst ∧
+        (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).snd =
+            (Becoming.ClosedCapture.Thinned.course Becoming.ClosedCapture.Beyond.lossStep u v w τ reads ((s₀, 0), g₀)
+                t).snd ∧
+          (Becoming.ClosedCapture.Thinned.course Becoming.ClosedCapture.Beyond.lossStep u v w τ reads ((s₀, 0), g₀)
+                  t).fst.snd =
+            t
+@Becoming.EndogenousDetectionRace.mark_never_eq_pre : ∀ {B : Type}
+  (fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B) (mark : B → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool) (s₀ g₀ : Becoming.RuleCapture.CarrierCounts)
+  (b₀ : B),
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = false) →
+    ∀ (t : Nat),
+      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.fst =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select (Becoming.ClosedCapture.Drawn.poolRead u v)
+              reads (s₀, g₀) t).fst ∧
+        (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).snd =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select (Becoming.ClosedCapture.Drawn.poolRead u v)
+              reads (s₀, g₀) t).snd
+@Becoming.EndogenousDetectionRace.closed_trap_outlives_loss : ∀ {B : Type}
+  {fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B} {mark : B → Bool}
+  {u v w : Becoming.RuleCapture.CarrierCounts} {reads : Nat → Bool} {s₀ g₀ : Becoming.RuleCapture.CarrierCounts}
+  {b₀ : B},
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = false) →
+    Becoming.RuleCapture.CarrierCounts.order.le v u →
+      u.favours →
+        v.favours →
+          ∀ {r r' : Nat},
+            reads r = true →
+              reads r' = true →
+                r < r' →
+                  ∀ (loss₀ k : Nat),
+                    have m := Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀);
+                    have trapped :=
+                      Becoming.Pace.paced
+                        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+                          Becoming.ClosedCapture.Beyond.lossStep)
+                        (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u v))
+                        (fun j => reads (r' + 1 + j)) (((m (r' + 1)).fst.fst, loss₀), (m (r' + 1)).snd);
+                    loss₀ + k ≤ (trapped k).fst.snd ∧
+                      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                          Becoming.RuleCapture.CarrierCounts.favours (Becoming.ClosedCapture.Drawn.poolRead u v)
+                          ((m (r' + 1 + k)).fst.fst, (m (r' + 1 + k)).snd) ∧
+                        Becoming.RuleCapture.CarrierCounts.order.le (m (r' + 1)).fst.fst (m (r' + 1 + k)).fst.fst ∧
+                          Becoming.RuleCapture.CarrierCounts.order.le (m (r' + 1)).snd (m (r' + 1 + k)).snd
+@Becoming.EndogenousDetectionRace.mark_kept_iff : ∀ {B : Type}
+  {fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B} {mark : B → Bool}
+  {u v w : Becoming.RuleCapture.CarrierCounts} {reads : Nat → Bool} {s₀ g₀ : Becoming.RuleCapture.CarrierCounts}
+  {b₀ : B} {τ : Nat},
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = true ↔ τ ≤ t) →
+    w.carrier = u.other →
+      w.other = u.carrier →
+        u.other < u.carrier →
+          ∀ {r : Nat},
+            reads r = true →
+              τ ≤ r →
+                (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).snd.favours →
+                  ((∀ (k : Nat),
+                      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                        Becoming.RuleCapture.CarrierCounts.favours (Becoming.ClosedCapture.Drawn.poolRead u w)
+                        ((Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                (r + (1 + k))).fst.fst,
+                          (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              (r + (1 + k))).snd)) ↔
+                    (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.other ≤
+                      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              r).fst.fst.carrier)
+@Becoming.EndogenousDetectionRace.mark_kept_locks_out : ∀ {B : Type}
+  {fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B} {mark : B → Bool}
+  {u v w : Becoming.RuleCapture.CarrierCounts} {reads : Nat → Bool} {s₀ g₀ : Becoming.RuleCapture.CarrierCounts}
+  {b₀ : B} {τ : Nat},
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = true ↔ τ ≤ t) →
+    w.carrier = u.other →
+      w.other = u.carrier →
+        u.other < u.carrier →
+          ∀ {r : Nat},
+            reads r = true →
+              τ ≤ r →
+                (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).snd.favours →
+                  (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.other ≤
+                      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              r).fst.fst.carrier →
+                    (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                (r + 1)).fst.fst.other <
+                        (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                (r + 1)).fst.fst.carrier →
+                      ∀ (k : Nat),
+                        Becoming.EndogenousDetectionRace.admits
+                            (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                  (r + (1 + k))).fst.fst =
+                          false
+@Becoming.EndogenousDetectionRace.mark_turned_iff : ∀ {B : Type}
+  {fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B} {mark : B → Bool}
+  {u v w : Becoming.RuleCapture.CarrierCounts} {reads : Nat → Bool} {s₀ g₀ : Becoming.RuleCapture.CarrierCounts}
+  {b₀ : B} {τ : Nat},
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = true ↔ τ ≤ t) →
+    w.carrier = u.other →
+      w.other = u.carrier →
+        u.other < u.carrier →
+          ∀ {r r' : Nat},
+            reads r = true →
+              τ ≤ r →
+                (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.carrier ≤
+                    (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.other →
+                  r < r' →
+                    (∀ (j : Nat), r < j → j < r' → reads j = false) →
+                      reads r' = true →
+                        (∀ (j : Nat),
+                            r + 1 ≤ j →
+                              j ≤ r' →
+                                (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) j).snd =
+                                    Becoming.ClosedCapture.Drawn.pool u w
+                                      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                            r).fst.fst ∧
+                                  (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                        j).snd.disfavours) ∧
+                          ((∀ (k : Nat),
+                              Becoming.RuleCapture.Locked
+                                (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+                                Becoming.RuleCapture.CarrierCounts.disfavours
+                                (Becoming.ClosedCapture.Drawn.poolRead u w)
+                                ((Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                        (r' + (1 + k))).fst.fst,
+                                  (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                      (r' + (1 + k))).snd)) ↔
+                            (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                      r').fst.fst.carrier ≤
+                              (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                      r').fst.fst.other)
+@Becoming.EndogenousDetectionRace.mark_turned_admits_iff : ∀ {B : Type}
+  {fB : Becoming.RuleCapture.CarrierCounts × B → Becoming.RuleCapture.CarrierCounts → B} {mark : B → Bool}
+  {u v w : Becoming.RuleCapture.CarrierCounts} {reads : Nat → Bool} {s₀ g₀ : Becoming.RuleCapture.CarrierCounts}
+  {b₀ : B} {τ : Nat},
+  (∀ (t : Nat),
+      mark (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) t).fst.snd = true ↔ τ ≤ t) →
+    w.carrier = u.other →
+      w.other = u.carrier →
+        u.other < u.carrier →
+          ∀ {r : Nat},
+            reads r = true →
+              τ ≤ r →
+                (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.carrier ≤
+                    (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀) r).fst.fst.other →
+                  ((∀ (k : Nat),
+                      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              (r + 1 + k)).snd.disfavours ∧
+                        Becoming.EndogenousDetectionRace.admits
+                            (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                                  (r + 1 + k)).fst.fst =
+                          true) ↔
+                    (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              (r + 1)).fst.fst.carrier ≤
+                      (Becoming.EndogenousDetectionRace.markCourse fB mark u v w reads ((s₀, b₀), g₀)
+                              (r + 1)).fst.fst.other)
+@Becoming.EndogenousDetectionRace.race_reads_beyond : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (mark : S → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) {x : Becoming.RuleCapture.CarrierCounts} {s₁ s₂ : S}
+  {g : Becoming.RuleCapture.CarrierCounts},
+  mark s₁ = true →
+    mark s₂ = false →
+      Becoming.ClosedCapture.Drawn.pool u w x ≠ Becoming.ClosedCapture.Drawn.pool u v x →
+        ¬Becoming.ClosedCapture.Unread
+            (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.EndogenousDetectionRace.raceStep W L))
+            (Becoming.EndogenousDetectionRace.markRead (fun b => mark b.snd) u v w)
+@Becoming.EndogenousDetectionRace.race_stock_is_gated : ∀ {S : Type} (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct) (mark : S → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool) (s₀ g₀ : Becoming.RuleCapture.CarrierCounts)
+  (x₀ t : Nat),
+  (Becoming.EndogenousDetectionRace.raceCourse W L mark u v w reads ((s₀, x₀, L.init), g₀) t).fst.snd =
+    Becoming.EndogenousDetectionRace.gatedOrbit W L
+      (fun k =>
+        Becoming.EndogenousDetectionRace.admits
+          (Becoming.EndogenousDetectionRace.raceCourse W L mark u v w reads ((s₀, x₀, L.init), g₀) k).fst.fst)
+      x₀ t
+@Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant : ∀ {S : Type}
+  (W : Becoming.EndogenousEmergence.StrainWorld)
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Nat Becoming.EndogenousEmergence.EmergenceAct)
+  (u v : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool) (s : Becoming.RuleCapture.CarrierCounts)
+  (b b' : Nat × S) (g : Becoming.RuleCapture.CarrierCounts) (t : Nat),
+  (Becoming.Pace.paced
+            (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.EndogenousDetectionRace.raceStep W L))
+            (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u v)) reads ((s, b), g) t).fst.fst =
+      (Becoming.Pace.paced
+            (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.EndogenousDetectionRace.raceStep W L))
+            (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u v)) reads ((s, b'), g)
+            t).fst.fst ∧
+    (Becoming.Pace.paced
+          (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+            (Becoming.EndogenousDetectionRace.raceStep W L))
+          (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u v)) reads ((s, b), g) t).snd =
+      (Becoming.Pace.paced
+          (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+            (Becoming.EndogenousDetectionRace.raceStep W L))
+          (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u v)) reads ((s, b'), g) t).snd
+Becoming.EndogenousDetectionRace.registers_stays : ∀ (s : Becoming.EndogenousEmergence.LearnerState) (y : Nat),
+  Becoming.EndogenousDetectionRace.registers s = true →
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousEmergence.emergentLoop.update s y) = true
+Becoming.EndogenousDetectionRace.resolved_unregistered_stays : ∀ (s : Becoming.EndogenousEmergence.LearnerState)
+  (y : Nat),
+  s.phase = Becoming.EndogenousEmergence.LearnerPhase.resolved →
+    Becoming.EndogenousDetectionRace.registers s = false →
+      (Becoming.EndogenousEmergence.emergentLoop.update s y).phase =
+          Becoming.EndogenousEmergence.LearnerPhase.resolved ∧
+        Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousEmergence.emergentLoop.update s y) = false
+Becoming.EndogenousDetectionRace.registers_from_of_resolved : ∀ (W : Becoming.EndogenousEmergence.StrainWorld)
+  (adm : Nat → Bool) (x₀ τ : Nat),
+  (∀ (t : Nat),
+      t < τ →
+        Becoming.EndogenousDetectionRace.registers
+            (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ t).snd =
+          false) →
+    Becoming.EndogenousDetectionRace.registers
+          (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ τ).snd =
+        true →
+      ∀ (t : Nat),
+        Becoming.EndogenousDetectionRace.registers
+              (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ t).snd =
+            true ↔
+          τ ≤ t
+Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved : ∀ (W : Becoming.EndogenousEmergence.StrainWorld)
+  (adm : Nat → Bool) (x₀ τ : Nat),
+  (∀ (t : Nat),
+      t < τ →
+        Becoming.EndogenousDetectionRace.registers
+            (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ t).snd =
+          false) →
+    (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ τ).snd.phase =
+        Becoming.EndogenousEmergence.LearnerPhase.resolved →
+      Becoming.EndogenousDetectionRace.registers
+            (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ τ).snd =
+          false →
+        ∀ (t : Nat),
+          Becoming.EndogenousDetectionRace.registers
+              (Becoming.EndogenousDetectionRace.gatedOrbit W Becoming.EndogenousEmergence.emergentLoop adm x₀ t).snd =
+            false
+Becoming.EndogenousDetectionRace.cadence3_mod : ∀ (j : Nat),
+  Becoming.EndogenousDetectionRace.cadence3 (3 * j) = false ∧
+    Becoming.EndogenousDetectionRace.cadence3 (3 * j + 1) = false ∧
+      Becoming.EndogenousDetectionRace.cadence3 (3 * j + 2) = true
+Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd : Becoming.PacedStock.ReadAtSpanEnd (fun j => 3 * j)
+  Becoming.EndogenousDetectionRace.cadence3
+Becoming.EndogenousDetectionRace.hi_lo_hc : Becoming.RuleCapture.CarrierCounts.lo.carrier =
+  Becoming.RuleCapture.CarrierCounts.hi.other
+Becoming.EndogenousDetectionRace.hi_lo_ho : Becoming.RuleCapture.CarrierCounts.lo.other =
+  Becoming.RuleCapture.CarrierCounts.hi.carrier
+Becoming.EndogenousDetectionRace.hi_strict : Becoming.RuleCapture.CarrierCounts.hi.other <
+  Becoming.RuleCapture.CarrierCounts.hi.carrier
+Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before : ∀ (W : Becoming.EndogenousEmergence.StrainWorld)
+  (others : Nat) (hpos : 0 < others) (reads : Nat → Bool) (T : Nat),
+  (∀ (k : Nat),
+      k < T →
+        Becoming.EndogenousDetectionRace.admits
+            (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads k).fst.fst =
+          true) →
+    (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads T).fst.snd =
+      Becoming.EndogenousEmergence.closedOrbit W Becoming.EndogenousEmergence.emergentLoop 14 T
+Becoming.EndogenousDetectionRace.reg4_of_race : ∀ (W : Becoming.EndogenousEmergence.StrainWorld) (others : Nat)
+  (hpos : 0 < others) (reads : Nat → Bool),
+  Becoming.EndogenousDetectionRace.registers
+        (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 0).fst.snd.snd =
+      false →
+    Becoming.EndogenousDetectionRace.registers
+          (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 1).fst.snd.snd =
+        false →
+      Becoming.EndogenousDetectionRace.registers
+            (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 2).fst.snd.snd =
+          false →
+        Becoming.EndogenousDetectionRace.registers
+              (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 3).fst.snd.snd =
+            false →
+          Becoming.EndogenousDetectionRace.registers
+                (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 4).fst.snd.snd =
+              true →
+            ∀ (t : Nat),
+              Becoming.EndogenousDetectionRace.registers
+                    (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads t).fst.snd.snd =
+                  true ↔
+                4 ≤ t
+Becoming.EndogenousDetectionRace.unreg_of_race : ∀ (W : Becoming.EndogenousEmergence.StrainWorld) (others : Nat)
+  (hpos : 0 < others) (reads : Nat → Bool),
+  Becoming.EndogenousDetectionRace.registers
+        (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 0).fst.snd.snd =
+      false →
+    Becoming.EndogenousDetectionRace.registers
+          (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 1).fst.snd.snd =
+        false →
+      Becoming.EndogenousDetectionRace.registers
+            (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 2).fst.snd.snd =
+          false →
+        Becoming.EndogenousDetectionRace.registers
+              (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 3).fst.snd.snd =
+            false →
+          (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 4).fst.snd.snd.phase =
+              Becoming.EndogenousEmergence.LearnerPhase.resolved →
+            Becoming.EndogenousDetectionRace.registers
+                  (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads 4).fst.snd.snd =
+                false →
+              ∀ (t : Nat),
+                Becoming.EndogenousDetectionRace.registers
+                    (Becoming.EndogenousDetectionRace.emergentRace W others hpos reads t).fst.snd.snd =
+                  false
+Becoming.EndogenousDetectionRace.race_in_time : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w1Race t).fst.snd.snd = true ↔ 4 ≤ t) ∧
+  (∀ (k : Nat),
+      (Becoming.EndogenousDetectionRace.w1Race (5 + k)).snd.disfavours ∧
+        Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w1Race (5 + k)).fst.fst = true) ∧
+    (∀ (t : Nat),
+        (Becoming.EndogenousDetectionRace.w1Race t).fst.snd =
+          Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+            Becoming.EndogenousEmergence.emergentLoop 14 t) ∧
+      (∀ (t : Nat),
+          Becoming.EndogenousEmergence.wEndo.xCrit ≤ (Becoming.EndogenousDetectionRace.w1Race t).fst.snd.fst) ∧
+        ∀ (t : Nat),
+          4 ≤ t →
+            Becoming.EndogenousEmergence.emergentLoop.act (Becoming.EndogenousDetectionRace.w1Race t).fst.snd.snd =
+                Becoming.EndogenousEmergence.EmergenceAct.safe ∧
+              (Becoming.EndogenousDetectionRace.w1Race t).fst.snd.fst = 10
+Becoming.EndogenousDetectionRace.race_late_after_registration : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w2Race t).fst.snd.snd = true ↔ 4 ≤ t) ∧
+  (∀ (k : Nat),
+      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+        (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+          Becoming.RuleCapture.CarrierCounts.lo)
+        ((Becoming.EndogenousDetectionRace.w2Race (5 + k)).fst.fst,
+          (Becoming.EndogenousDetectionRace.w2Race (5 + k)).snd)) ∧
+    (∀ (k : Nat),
+        Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w2Race (4 + k)).fst.fst = false) ∧
+      (Becoming.EndogenousDetectionRace.w2Race 7).fst.snd.fst = 3 ∧
+        (Becoming.EndogenousDetectionRace.w2Race 7).fst.snd.fst < Becoming.EndogenousEmergence.wEndo.xCrit
+Becoming.EndogenousDetectionRace.race_probe_blocked : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w3Race t).fst.snd.snd = false) ∧
+  (∀ (t : Nat),
+      (Becoming.EndogenousDetectionRace.w3Race t).fst.fst =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                Becoming.RuleCapture.Second.oneToOne)
+              (fun x => true) ({ carrier := 1, other := 4, other_pos := ⋯ }, Becoming.RuleCapture.CarrierCounts.hi)
+              t).fst ∧
+        (Becoming.EndogenousDetectionRace.w3Race t).snd =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                Becoming.RuleCapture.Second.oneToOne)
+              (fun x => true) ({ carrier := 1, other := 4, other_pos := ⋯ }, Becoming.RuleCapture.CarrierCounts.hi)
+              t).snd) ∧
+    (∀ (k : Nat),
+        Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+            (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+              Becoming.RuleCapture.Second.oneToOne)
+            ((Becoming.EndogenousDetectionRace.w3Race (2 + k)).fst.fst,
+              (Becoming.EndogenousDetectionRace.w3Race (2 + k)).snd) ∧
+          Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w3Race (2 + k)).fst.fst = false) ∧
+      (Becoming.EndogenousDetectionRace.w3Race 5).fst.snd.fst = 3 ∧
+        (Becoming.EndogenousDetectionRace.w3Race 5).fst.snd.fst < Becoming.EndogenousEmergence.wEndo.xCrit
+Becoming.EndogenousDetectionRace.race_masked_strain : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w4Race t).fst.snd.snd = true ↔ 5 ≤ t) ∧
+  (∀ (k : Nat),
+      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+        (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+          Becoming.RuleCapture.CarrierCounts.lo)
+        ((Becoming.EndogenousDetectionRace.w4Race (8 + k)).fst.fst,
+          (Becoming.EndogenousDetectionRace.w4Race (8 + k)).snd)) ∧
+    (∀ (k : Nat),
+        Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w4Race (6 + k)).fst.fst = false) ∧
+      (Becoming.EndogenousDetectionRace.w4Race 8).fst.snd.fst = 3 ∧
+        (Becoming.EndogenousDetectionRace.w4Race 8).fst.snd.fst < Becoming.EndogenousDetectionRace.wMasked.xCrit
+Becoming.EndogenousDetectionRace.race_slow_cadence : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w5SlowRace t).fst.snd.snd = true ↔
+      4 ≤ t) ∧
+  (∀ (k : Nat),
+      Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+        (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+          Becoming.RuleCapture.CarrierCounts.lo)
+        ((Becoming.EndogenousDetectionRace.w5SlowRace (6 + k)).fst.fst,
+          (Becoming.EndogenousDetectionRace.w5SlowRace (6 + k)).snd)) ∧
+    (∀ (k : Nat),
+        Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w5SlowRace (4 + k)).fst.fst = false) ∧
+      (Becoming.EndogenousDetectionRace.w5SlowRace 7).fst.snd.fst = 3 ∧
+        (Becoming.EndogenousDetectionRace.w5SlowRace 7).fst.snd.fst < Becoming.EndogenousEmergence.wEndo.xCrit
+Becoming.EndogenousDetectionRace.race_fast_cadence : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w5FastRace t).fst.snd.snd = true ↔
+      4 ≤ t) ∧
+  (∀ (k : Nat),
+      (Becoming.EndogenousDetectionRace.w5FastRace (5 + k)).snd.disfavours ∧
+        Becoming.EndogenousDetectionRace.admits (Becoming.EndogenousDetectionRace.w5FastRace (5 + k)).fst.fst = true) ∧
+    (∀ (t : Nat),
+        (Becoming.EndogenousDetectionRace.w5FastRace t).fst.snd =
+          Becoming.EndogenousEmergence.closedOrbit Becoming.EndogenousEmergence.wEndo
+            Becoming.EndogenousEmergence.emergentLoop 14 t) ∧
+      ∀ (t : Nat),
+        Becoming.EndogenousEmergence.wEndo.xCrit ≤ (Becoming.EndogenousDetectionRace.w5FastRace t).fst.snd.fst
+Becoming.EndogenousDetectionRace.race_exo_no_false_turn : (∀ (t : Nat),
+    Becoming.EndogenousDetectionRace.registers (Becoming.EndogenousDetectionRace.w6Race t).fst.snd.snd = false) ∧
+  (∀ (t : Nat),
+      (Becoming.EndogenousDetectionRace.w6Race t).fst.fst =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                Becoming.RuleCapture.Second.oneToOne)
+              (fun x => true) ({ carrier := 1, other := 20, other_pos := ⋯ }, Becoming.RuleCapture.CarrierCounts.hi)
+              t).fst ∧
+        (Becoming.EndogenousDetectionRace.w6Race t).snd =
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+              (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                Becoming.RuleCapture.Second.oneToOne)
+              (fun x => true) ({ carrier := 1, other := 20, other_pos := ⋯ }, Becoming.RuleCapture.CarrierCounts.hi)
+              t).snd) ∧
+    ∀ (t : Nat), (Becoming.EndogenousDetectionRace.w6Race t).snd.favours
+Becoming.EndogenousDetectionRace.mask_involutive : ∀ (a b : Bool),
+  Becoming.EndogenousDetectionRace.mask a (Becoming.EndogenousDetectionRace.mask a b) = b
+Becoming.EndogenousDetectionRace.mask_comm : ∀ (a b : Bool),
+  Becoming.EndogenousDetectionRace.mask a b = Becoming.EndogenousDetectionRace.mask b a
+Becoming.EndogenousDetectionRace.mask_assoc : ∀ (a b c : Bool),
+  Becoming.EndogenousDetectionRace.mask (Becoming.EndogenousDetectionRace.mask a b) c =
+    Becoming.EndogenousDetectionRace.mask a (Becoming.EndogenousDetectionRace.mask b c)
+Becoming.EndogenousDetectionRace.mask_cancel_left : ∀ (a b : Bool),
+  Becoming.EndogenousDetectionRace.mask a (Becoming.EndogenousDetectionRace.mask a b) = b
+@Becoming.EndogenousDetectionRace.feedList_snoc : ∀ {S Obs Act : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Obs Act) (os : List Obs) (o : Obs) (s : S),
+  Becoming.EndogenousDetectionRace.feedList L s (os ++ [o]) =
+    L.update (Becoming.EndogenousDetectionRace.feedList L s os) o
+@Becoming.EndogenousDetectionRace.streamPrefix_succ : ∀ {Obs : Type} (obs : Nat → Obs) (T : Nat),
+  Becoming.EndogenousDetectionRace.streamPrefix obs (T + 1) =
+    Becoming.EndogenousDetectionRace.streamPrefix obs T ++ [obs T]
+@Becoming.EndogenousDetectionRace.feedList_prefix : ∀ {S Obs Act : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Obs Act) (obs : Nat → Obs) (T : Nat),
+  Becoming.EndogenousDetectionRace.feedList L L.init (Becoming.EndogenousDetectionRace.streamPrefix obs T) =
+    Becoming.EndogenousDetectionRace.feed L obs T
+Becoming.EndogenousDetectionRace.viewBList_prefix : ∀ (d θ : Nat → Bool) (T : Nat),
+  Becoming.EndogenousDetectionRace.viewBList d (Becoming.EndogenousDetectionRace.streamPrefix θ T) =
+    Becoming.EndogenousDetectionRace.streamPrefix (Becoming.EndogenousDetectionRace.viewB d θ) T
+@Becoming.EndogenousDetectionRace.feed_lockstep : ∀ {S Obs Act : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Obs Act) (obs₁ obs₂ : Nat → Obs) (T : Nat),
+  (∀ (k : Nat), k < T → obs₁ k = obs₂ k) →
+    Becoming.EndogenousDetectionRace.feed L obs₁ T = Becoming.EndogenousDetectionRace.feed L obs₂ T
+Becoming.EndogenousDetectionRace.retag_symmetry : ∀ (dD dS θ : Nat → Bool) (t : Nat),
+  Becoming.EndogenousDetectionRace.retag dD (Becoming.EndogenousDetectionRace.retag dD θ) t = θ t ∧
+    Becoming.EndogenousDetectionRace.viewB dD θ t =
+      Becoming.EndogenousDetectionRace.viewB dS
+        (fun k => Becoming.EndogenousDetectionRace.mask (Becoming.EndogenousDetectionRace.retag dD θ k) (dS k)) t
+Becoming.EndogenousDetectionRace.split_two_of_two : ∀ (d θ : Nat → Bool) (t : Nat),
+  Becoming.EndogenousDetectionRace.viewB d θ t =
+      Becoming.EndogenousDetectionRace.viewA (Becoming.EndogenousDetectionRace.retag d θ) t ∧
+    Becoming.EndogenousDetectionRace.viewA θ t =
+      Becoming.EndogenousDetectionRace.viewB d (Becoming.EndogenousDetectionRace.retag d θ) t
+Becoming.EndogenousDetectionRace.count_view_invariant : ∀ (T : Nat) (F : List Bool → Bool) (d : Nat → Bool),
+  (Becoming.EndogenousDetectionRace.countTags T fun θ => F (Becoming.EndogenousDetectionRace.viewBList d θ)) =
+    Becoming.EndogenousDetectionRace.countTags T F
+@Becoming.EndogenousDetectionRace.split_marginal_count_eq : ∀ {S : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Bool Becoming.EndogenousEmergence.EmergenceAct) (s : S)
+  (alarm : S → Bool) (dD dS : Nat → Bool) (T : Nat),
+  (Becoming.EndogenousDetectionRace.countTags T fun θ =>
+      alarm (Becoming.EndogenousDetectionRace.feedList L s (Becoming.EndogenousDetectionRace.viewBList dD θ))) =
+    Becoming.EndogenousDetectionRace.countTags T fun θ =>
+      alarm (Becoming.EndogenousDetectionRace.feedList L s (Becoming.EndogenousDetectionRace.viewBList dS θ))
+@Becoming.EndogenousDetectionRace.split_marginal_impossibility : ∀ {S_A S_B : Type}
+  (L_A : Becoming.EndogenousEmergence.UnguidedLoop S_A Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (L_B : Becoming.EndogenousEmergence.UnguidedLoop S_B Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (dD dS : Nat → Bool) (T : Nat),
+  (∀ (θ : Nat → Bool),
+      Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T =
+        Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T) ∧
+    (∀ (θ : Nat → Bool),
+        Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dD θ) T =
+          Becoming.EndogenousDetectionRace.feed L_B
+            (Becoming.EndogenousDetectionRace.viewB dS fun k =>
+              Becoming.EndogenousDetectionRace.mask (Becoming.EndogenousDetectionRace.retag dD θ k) (dS k))
+            T) ∧
+      (∀ (alarm : S_A → Bool),
+          ¬((∀ (θ : Nat → Bool),
+                alarm (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T) = true) ∧
+              ∀ (θ : Nat → Bool),
+                alarm (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T) =
+                  false)) ∧
+        ∀ (alarm : S_B → Bool),
+          ¬((∀ (θ : Nat → Bool),
+                alarm (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dD θ) T) =
+                  true) ∧
+              ∀ (θ : Nat → Bool),
+                alarm (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dS θ) T) =
+                  false)
+@Becoming.EndogenousDetectionRace.silencing_consensus : ∀ {S_A S_B : Type}
+  (L_A : Becoming.EndogenousEmergence.UnguidedLoop S_A Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (L_B : Becoming.EndogenousEmergence.UnguidedLoop S_B Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (alarmA : S_A → Bool) (alarmB : S_B → Bool) (c : Bool → Bool → Bool),
+  c false false = false →
+    ∀ (dD dS : Nat → Bool) (T : Nat),
+      (∀ (θ : Nat → Bool),
+          alarmA (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T) = false) →
+        (∀ (θ : Nat → Bool),
+            alarmB (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dS θ) T) =
+              false) →
+          ∀ (θ : Nat → Bool),
+            c (alarmA (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) T))
+                (alarmB (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dD θ) T)) =
+              false
+Becoming.EndogenousDetectionRace.verdict_leak : ∀ (d θ : Nat → Bool) (t : Nat),
+  have L_A :=
+    { init := false, act := fun x => Becoming.EndogenousEmergence.EmergenceAct.extract, update := fun x o => o };
+  have L_B :=
+    { init := false, act := fun x => Becoming.EndogenousEmergence.EmergenceAct.extract, update := fun x o => o };
+  Becoming.EndogenousDetectionRace.exchange
+      (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) (t + 1))
+      (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB d θ) (t + 1)) =
+    d t
+Becoming.EndogenousDetectionRace.exchange_detects : ∀ (d θ : Nat → Bool) (t : Nat),
+  Becoming.EndogenousDetectionRace.exchange (Becoming.EndogenousDetectionRace.viewA θ t)
+      (Becoming.EndogenousDetectionRace.viewB d θ t) =
+    d t
+@Becoming.EndogenousDetectionRace.markCourse_feedStep_eq : ∀ {S Obs Act : Type}
+  (L : Becoming.EndogenousEmergence.UnguidedLoop S Obs Act) (obs : Nat → Obs) (mark : S → Bool)
+  (u v w : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool) (s₀ g₀ : Becoming.RuleCapture.CarrierCounts)
+  (t : Nat),
+  (Becoming.EndogenousDetectionRace.markCourse (Becoming.EndogenousDetectionRace.feedStep L obs) (fun b => mark b.snd) u
+          v w reads ((s₀, 0, L.init), g₀) t).fst.snd =
+    (t, Becoming.EndogenousDetectionRace.feed L obs t)
+@Becoming.EndogenousDetectionRace.feed_pairLoop : ∀ {S_A S_B : Type}
+  (L_A : Becoming.EndogenousEmergence.UnguidedLoop S_A Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (L_B : Becoming.EndogenousEmergence.UnguidedLoop S_B Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (oA oB : Nat → Bool) (t : Nat),
+  Becoming.EndogenousDetectionRace.feed (Becoming.EndogenousDetectionRace.pairLoop L_A L_B) (fun k => (oA k, oB k)) t =
+    (Becoming.EndogenousDetectionRace.feed L_A oA t, Becoming.EndogenousDetectionRace.feed L_B oB t)
+Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01 : ∀ (d θ : Nat → Bool),
+  d 0 = false →
+    d 1 = true →
+      ∀ (t : Nat),
+        Becoming.EndogenousDetectionRace.feed Becoming.EndogenousDetectionRace.exchangeLoop
+              (fun k => (Becoming.EndogenousDetectionRace.viewA θ k, Becoming.EndogenousDetectionRace.viewB d θ k)) t =
+            true ↔
+          2 ≤ t
+Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe : ∀ (dS θ : Nat → Bool),
+  (∀ (t : Nat), dS t = false) →
+    ∀ (t : Nat),
+      Becoming.EndogenousDetectionRace.feed Becoming.EndogenousDetectionRace.exchangeLoop
+          (fun k => (Becoming.EndogenousDetectionRace.viewA θ k, Becoming.EndogenousDetectionRace.viewB dS θ k)) t =
+        false
+@Becoming.EndogenousDetectionRace.split_silenced_trapped : ∀ {S_A S_B : Type}
+  (L_A : Becoming.EndogenousEmergence.UnguidedLoop S_A Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (L_B : Becoming.EndogenousEmergence.UnguidedLoop S_B Bool Becoming.EndogenousEmergence.EmergenceAct)
+  (alarmA : S_A → Bool) (alarmB : S_B → Bool) (c : Bool → Bool → Bool),
+  c false false = false →
+    ∀ (dD dS : Nat → Bool),
+      (∀ (t : Nat) (θ : Nat → Bool),
+          alarmA (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) t) = false) →
+        (∀ (t : Nat) (θ : Nat → Bool),
+            alarmB (Becoming.EndogenousDetectionRace.feed L_B (Becoming.EndogenousDetectionRace.viewB dS θ) t) =
+              false) →
+          ∀ (u v w s₀ g₀ : Becoming.RuleCapture.CarrierCounts) (reads : Nat → Bool),
+            Becoming.RuleCapture.CarrierCounts.order.le v u →
+              u.favours →
+                v.favours →
+                  ∀ {r r' : Nat},
+                    reads r = true →
+                      reads r' = true →
+                        r < r' →
+                          ∀ (loss₀ : Nat) (θ : Nat → Bool),
+                            have pair := Becoming.EndogenousDetectionRace.pairLoop L_A L_B;
+                            have mark := fun s => c (alarmA s.fst) (alarmB s.snd);
+                            have M :=
+                              Becoming.EndogenousDetectionRace.markCourse
+                                (Becoming.EndogenousDetectionRace.feedStep pair fun k =>
+                                  (Becoming.EndogenousDetectionRace.viewA θ k,
+                                    Becoming.EndogenousDetectionRace.viewB dD θ k))
+                                (fun b => mark b.snd) u v w reads ((s₀, 0, pair.init), g₀);
+                            (∀ (t : Nat), mark (M t).fst.snd.snd = false) ∧
+                              (∀ (t : Nat),
+                                  (M t).fst.fst =
+                                      (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                                          (Becoming.ClosedCapture.Drawn.poolRead u v) reads (s₀, g₀) t).fst ∧
+                                    (M t).snd =
+                                      (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                                          (Becoming.ClosedCapture.Drawn.poolRead u v) reads (s₀, g₀) t).snd) ∧
+                                (∀ (k : Nat),
+                                    Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                                      Becoming.RuleCapture.CarrierCounts.favours
+                                      (Becoming.ClosedCapture.Drawn.poolRead u v)
+                                      ((M (r' + 1 + k)).fst.fst, (M (r' + 1 + k)).snd)) ∧
+                                  ∀ (k : Nat),
+                                    loss₀ + k ≤
+                                      (Becoming.Pace.paced
+                                            (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select
+                                              Becoming.ClosedCapture.Beyond.lossStep)
+                                            (Becoming.ClosedCapture.joinRead
+                                              (Becoming.ClosedCapture.Drawn.poolRead u v))
+                                            (fun j => reads (r' + 1 + j))
+                                            (((M (r' + 1)).fst.fst, loss₀), (M (r' + 1)).snd) k).fst.snd
+Becoming.EndogenousDetectionRace.split_exchange_turns : ∀ (dD dS : Nat → Bool),
+  dD 0 = false →
+    dD 1 = true →
+      (∀ (t : Nat), dS t = false) →
+        ∀ (θ : Nat → Bool),
+          have MD :=
+            Becoming.EndogenousDetectionRace.markCourse
+              (Becoming.EndogenousDetectionRace.feedStep Becoming.EndogenousDetectionRace.exchangeLoop fun k =>
+                (Becoming.EndogenousDetectionRace.viewA θ k, Becoming.EndogenousDetectionRace.viewB dD θ k))
+              (fun b => b.snd) Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.Second.oneToOne
+              Becoming.RuleCapture.CarrierCounts.lo (fun x => true)
+              ((Becoming.EndogenousDetectionRace.s20, 0, false), Becoming.RuleCapture.CarrierCounts.hi);
+          have MS :=
+            Becoming.EndogenousDetectionRace.markCourse
+              (Becoming.EndogenousDetectionRace.feedStep Becoming.EndogenousDetectionRace.exchangeLoop fun k =>
+                (Becoming.EndogenousDetectionRace.viewA θ k, Becoming.EndogenousDetectionRace.viewB dS θ k))
+              (fun b => b.snd) Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.Second.oneToOne
+              Becoming.RuleCapture.CarrierCounts.lo (fun x => true)
+              ((Becoming.EndogenousDetectionRace.s20, 0, false), Becoming.RuleCapture.CarrierCounts.hi);
+          (∀ (t : Nat),
+              (MD t).fst.fst = (Becoming.EndogenousDetectionRace.thinnedExchange t).fst.fst ∧
+                (MD t).snd = (Becoming.EndogenousDetectionRace.thinnedExchange t).snd) ∧
+            (∀ (k : Nat),
+                (MD (3 + k)).snd.disfavours ∧ Becoming.EndogenousDetectionRace.admits (MD (3 + k)).fst.fst = true) ∧
+              ∀ (t : Nat), (MS t).fst.snd.snd = false ∧ (MS t).snd.favours
+Becoming.EndogenousDetectionRace.split_witness_endo : Becoming.EndogenousDetectionRace.dEndo 0 = false ∧
+  Becoming.EndogenousDetectionRace.dEndo 1 = true ∧
+    (∀ {S : Type} (L : Becoming.EndogenousEmergence.UnguidedLoop S Bool Becoming.EndogenousEmergence.EmergenceAct)
+        (s : S) (alarm : S → Bool) (T : Nat),
+        (Becoming.EndogenousDetectionRace.countTags T fun θ =>
+            alarm
+              (Becoming.EndogenousDetectionRace.feedList L s
+                (Becoming.EndogenousDetectionRace.viewBList Becoming.EndogenousDetectionRace.dEndo θ))) =
+          Becoming.EndogenousDetectionRace.countTags T fun θ =>
+            alarm
+              (Becoming.EndogenousDetectionRace.feedList L s
+                (Becoming.EndogenousDetectionRace.viewBList Becoming.EndogenousDetectionRace.dSafe θ))) ∧
+      (∀ {S_A S_B : Type}
+          (L_A : Becoming.EndogenousEmergence.UnguidedLoop S_A Bool Becoming.EndogenousEmergence.EmergenceAct)
+          (L_B : Becoming.EndogenousEmergence.UnguidedLoop S_B Bool Becoming.EndogenousEmergence.EmergenceAct)
+          (alarmA : S_A → Bool) (alarmB : S_B → Bool) (c : Bool → Bool → Bool),
+          c false false = false →
+            (∀ (t : Nat) (θ : Nat → Bool),
+                alarmA (Becoming.EndogenousDetectionRace.feed L_A (Becoming.EndogenousDetectionRace.viewA θ) t) =
+                  false) →
+              (∀ (t : Nat) (θ : Nat → Bool),
+                  alarmB
+                      (Becoming.EndogenousDetectionRace.feed L_B
+                        (Becoming.EndogenousDetectionRace.viewB Becoming.EndogenousDetectionRace.dSafe θ) t) =
+                    false) →
+                ∀ (θ : Nat → Bool) (k : Nat),
+                  have pair := Becoming.EndogenousDetectionRace.pairLoop L_A L_B;
+                  have mark := fun s => c (alarmA s.fst) (alarmB s.snd);
+                  have M :=
+                    Becoming.EndogenousDetectionRace.markCourse
+                      (Becoming.EndogenousDetectionRace.feedStep pair fun j =>
+                        (Becoming.EndogenousDetectionRace.viewA θ j,
+                          Becoming.EndogenousDetectionRace.viewB Becoming.EndogenousDetectionRace.dEndo θ j))
+                      (fun b => mark b.snd) Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.Second.oneToOne
+                      Becoming.RuleCapture.CarrierCounts.lo (fun x => true)
+                      ((Becoming.EndogenousDetectionRace.s20, 0, pair.init), Becoming.RuleCapture.CarrierCounts.hi);
+                  Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                    Becoming.RuleCapture.CarrierCounts.favours
+                    (Becoming.ClosedCapture.Drawn.poolRead Becoming.RuleCapture.CarrierCounts.hi
+                      Becoming.RuleCapture.Second.oneToOne)
+                    ((M (2 + k)).fst.fst, (M (2 + k)).snd)) ∧
+        ∀ (θ : Nat → Bool) (k : Nat),
+          have MD :=
+            Becoming.EndogenousDetectionRace.markCourse
+              (Becoming.EndogenousDetectionRace.feedStep Becoming.EndogenousDetectionRace.exchangeLoop fun j =>
+                (Becoming.EndogenousDetectionRace.viewA θ j,
+                  Becoming.EndogenousDetectionRace.viewB Becoming.EndogenousDetectionRace.dEndo θ j))
+              (fun b => b.snd) Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.Second.oneToOne
+              Becoming.RuleCapture.CarrierCounts.lo (fun x => true)
+              ((Becoming.EndogenousDetectionRace.s20, 0, false), Becoming.RuleCapture.CarrierCounts.hi);
+          (MD (3 + k)).snd.disfavours ∧ Becoming.EndogenousDetectionRace.admits (MD (3 + k)).fst.fst = true

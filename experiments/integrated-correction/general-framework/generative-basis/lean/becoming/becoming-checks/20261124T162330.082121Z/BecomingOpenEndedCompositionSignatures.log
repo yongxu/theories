@@ -1,0 +1,594 @@
+@Becoming.OpenEndedComposition.altBool_succ_of_false : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = false → Becoming.OpenEndedComposition.altBool (t + 1) = true
+@Becoming.OpenEndedComposition.altBool_succ_of_true : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = true → Becoming.OpenEndedComposition.altBool (t + 1) = false
+@Becoming.OpenEndedComposition.bool_or_of_left : ∀ {a : Bool} (b : Bool), a = true → (a || b) = true
+Becoming.OpenEndedComposition.bool_or_of_right : ∀ (a : Bool) {b : Bool}, b = true → (a || b) = true
+@Becoming.OpenEndedComposition.effCrit_of_true : ∀ {Site : Type} {scope : Site → Bool} {x_crit : Site → Nat} {s : Site},
+  scope s = true → Becoming.OpenEndedComposition.effCrit scope x_crit s = x_crit s
+@Becoming.OpenEndedComposition.effCrit_of_false : ∀ {Site : Type} {scope : Site → Bool} {x_crit : Site → Nat}
+  {s : Site}, scope s = false → Becoming.OpenEndedComposition.effCrit scope x_crit s = 0
+@Becoming.OpenEndedComposition.effCrit_le_of_pullback : ∀ {Site : Type} {scope₁ scope₂ : Site → Bool}
+  {xc₁ xc₂ : Site → Nat},
+  (∀ (s : Site), scope₁ s = true → scope₂ s = true ∧ xc₁ s ≤ xc₂ s) →
+    ∀ (s : Site),
+      Becoming.OpenEndedComposition.effCrit scope₁ xc₁ s ≤ Becoming.OpenEndedComposition.effCrit scope₂ xc₂ s
+@Becoming.OpenEndedComposition.effCrit_le_of_margin : ∀ {Site : Type} {scope : Site → Bool}
+  {x_crit extra x : Site → Nat},
+  (∀ (s : Site), scope s = true → x_crit s + extra s ≤ x s) →
+    ∀ (s : Site), Becoming.OpenEndedComposition.effCrit scope x_crit s ≤ x s
+@Becoming.OpenEndedComposition.selfGain_rises : ∀ {Site : Type} (s : Site),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.OpenEndedComposition.selfGain s)
+@Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably : ∀ {F C K : Type} (W : Becoming.Web F C)
+  (Safe : Nat → Prop) (cap : F → K) (T : Nat),
+  Becoming.OpenEndedComposition.TransformsAcrossEpochs W (fun x => ()) (fun x => Safe) (fun x => K) (fun x => cap)
+      (fun x x_1 a b => a = b) T ↔
+    Becoming.TransformsViably W Safe cap T
+@Becoming.OpenEndedComposition.transformsViably_forbids_retirement : ∀ {F C K : Type} {W : Becoming.Web F C}
+  {Safe : Nat → Prop} {cap : F → K} {T s t : Nat} {k : K},
+  Becoming.TransformsViably W Safe cap T →
+    T ≤ s → s ≤ t → W.MacroAdmits cap (W.level s) s k → W.MacroAdmits cap (W.level t) t k
+@Becoming.OpenEndedComposition.anchored_reserveSafe : ∀ {F C Epoch : Type} {W : Becoming.Web F C} {epoch : Nat → Epoch}
+  {Safe : Epoch → Nat → Prop} {Cap : Epoch → Type} {cap : (e : Epoch) → F → Cap e}
+  {Preserves : (e₁ e₂ : Epoch) → Cap e₁ → Cap e₂ → Prop} {T : Nat} {origSafe : Nat → Prop},
+  Becoming.OpenEndedComposition.SafeAnchored Safe origSafe →
+    Becoming.OpenEndedComposition.TransformsAcrossEpochs W epoch Safe Cap cap Preserves T →
+      Becoming.ReserveSafe origSafe T
+@Becoming.OpenEndedComposition.anchored_rejects_unsafe : ∀ {F C Epoch : Type} {W : Becoming.Web F C}
+  {epoch : Nat → Epoch} {Safe : Epoch → Nat → Prop} {Cap : Epoch → Type} {cap : (e : Epoch) → F → Cap e}
+  {Preserves : (e₁ e₂ : Epoch) → Cap e₁ → Cap e₂ → Prop} {T t : Nat} {origSafe : Nat → Prop},
+  Becoming.OpenEndedComposition.SafeAnchored Safe origSafe →
+    T ≤ t → ¬origSafe t → ¬Becoming.OpenEndedComposition.TransformsAcrossEpochs W epoch Safe Cap cap Preserves T
+Becoming.OpenEndedComposition.RigidLockInWitness.admits_sub : ∀ (t : Nat),
+  Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+    (Becoming.OpenEndedComposition.RigidLockInWitness.web.level t) t
+    Becoming.OpenEndedComposition.RigidLockInWitness.Form.fSub
+Becoming.OpenEndedComposition.RigidLockInWitness.admits_leg_zero : Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+  (Becoming.OpenEndedComposition.RigidLockInWitness.web.level 0) 0
+  Becoming.OpenEndedComposition.RigidLockInWitness.Form.fLeg
+Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_leg_succ : ∀ (t : Nat),
+  ¬Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+      (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+      Becoming.OpenEndedComposition.RigidLockInWitness.Form.fLeg
+@Becoming.OpenEndedComposition.RigidLockInWitness.admits_modA : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = false →
+    Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+      (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+      Becoming.OpenEndedComposition.RigidLockInWitness.Form.fModA
+@Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modA : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = true →
+    ¬Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+        (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+        Becoming.OpenEndedComposition.RigidLockInWitness.Form.fModA
+@Becoming.OpenEndedComposition.RigidLockInWitness.admits_modB : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = true →
+    Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+      (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+      Becoming.OpenEndedComposition.RigidLockInWitness.Form.fModB
+@Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modB : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = false →
+    ¬Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+        (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+        Becoming.OpenEndedComposition.RigidLockInWitness.Form.fModB
+Becoming.OpenEndedComposition.RigidLockInWitness.admits_emerg : ∀ (t : Nat),
+  Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+    (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1)
+    Becoming.OpenEndedComposition.RigidLockInWitness.Form.fEmerg
+Becoming.OpenEndedComposition.RigidLockInWitness.micro_turnover : ∀ (t : Nat),
+  ∃ f,
+    Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+        (Becoming.OpenEndedComposition.RigidLockInWitness.web.level t) t f ∧
+      ¬Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+          (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1) f
+Becoming.OpenEndedComposition.RigidLockInWitness.admits_mod_some : ∀ (t : Nat),
+  ∃ f,
+    Becoming.OpenEndedComposition.RigidLockInWitness.cap1 f =
+        Becoming.OpenEndedComposition.RigidLockInWitness.Cap1.kMod ∧
+      Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+        (Becoming.OpenEndedComposition.RigidLockInWitness.web.level (t + 1)) (t + 1) f
+Becoming.OpenEndedComposition.RigidLockInWitness.emergent_not_replacement : (∃ t f,
+    Becoming.OpenEndedComposition.RigidLockInWitness.epoch t = true ∧
+      Becoming.OpenEndedComposition.RigidLockInWitness.web.Admits
+          (Becoming.OpenEndedComposition.RigidLockInWitness.web.level t) t f ∧
+        Becoming.OpenEndedComposition.RigidLockInWitness.cap1 f =
+          Becoming.OpenEndedComposition.RigidLockInWitness.Cap1.kEmergent) ∧
+  ∀ (k0 : Becoming.OpenEndedComposition.RigidLockInWitness.Cap0),
+    ¬Becoming.OpenEndedComposition.RigidLockInWitness.Preserves.replaces k0
+        Becoming.OpenEndedComposition.RigidLockInWitness.Cap1.kEmergent
+Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs : Becoming.OpenEndedComposition.TransformsAcrossEpochs
+  Becoming.OpenEndedComposition.RigidLockInWitness.web Becoming.OpenEndedComposition.RigidLockInWitness.epoch
+  Becoming.OpenEndedComposition.RigidLockInWitness.Safe Becoming.OpenEndedComposition.RigidLockInWitness.CapAt
+  Becoming.OpenEndedComposition.RigidLockInWitness.capAt Becoming.OpenEndedComposition.RigidLockInWitness.Preserves 0
+@Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps : ∀ {K' : Type}
+  (cap' : Becoming.OpenEndedComposition.RigidLockInWitness.Form → K'),
+  cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fLeg ≠
+      cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fSub →
+    cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fLeg ≠
+        cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fModA →
+      cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fLeg ≠
+          cap' Becoming.OpenEndedComposition.RigidLockInWitness.Form.fEmerg →
+        ¬Becoming.TransformsViably Becoming.OpenEndedComposition.RigidLockInWitness.web
+            (fun t =>
+              1 ≤
+                Becoming.OpenEndedComposition.RigidLockInWitness.web.level t
+                  Becoming.OpenEndedComposition.RigidLockInWitness.Cond.cSub)
+            cap' 0
+Becoming.OpenEndedComposition.RigidLockInWitness.epoch0_reading_frozen_fails : ¬Becoming.TransformsViably
+    Becoming.OpenEndedComposition.RigidLockInWitness.web
+    (fun t =>
+      1 ≤
+        Becoming.OpenEndedComposition.RigidLockInWitness.web.level t
+          Becoming.OpenEndedComposition.RigidLockInWitness.Cond.cSub)
+    Becoming.OpenEndedComposition.RigidLockInWitness.cap0 0
+Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes : Becoming.TransformsViably
+  Becoming.OpenEndedComposition.RigidLockInWitness.web
+  (fun t =>
+    1 ≤
+      Becoming.OpenEndedComposition.RigidLockInWitness.web.level t
+        Becoming.OpenEndedComposition.RigidLockInWitness.Cond.cSub)
+  Becoming.OpenEndedComposition.RigidLockInWitness.cap1 0
+@Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse : ∀ {F C K₀ : Type} (W : Becoming.Web F C)
+  (origSafe : Nat → Prop) (cap₀ : F → K₀) (T T_dead : Nat),
+  Becoming.OpenEndedComposition.GoodUntil W origSafe cap₀ T T_dead →
+    Becoming.OpenEndedComposition.ZeroLevelTurnover W cap₀ T T_dead →
+      Becoming.OpenEndedComposition.TransformsAcrossEpochs W (Becoming.OpenEndedComposition.collapseEpoch T_dead)
+        (Becoming.OpenEndedComposition.revisedSafe origSafe) (fun x => K₀) (fun x => cap₀) (fun x x_1 a b => a = b) T
+@Becoming.OpenEndedComposition.revisedSafe_not_anchored : ∀ {origSafe : Nat → Prop} {t : Nat},
+  ¬origSafe t →
+    ¬Becoming.OpenEndedComposition.SafeAnchored (Becoming.OpenEndedComposition.revisedSafe origSafe) origSafe
+Becoming.OpenEndedComposition.Horn2WebWitness.collapses : ∀ (t : Nat)
+  (c : Becoming.OpenEndedComposition.Horn2WebWitness.Cond),
+  1 ≤ t → Becoming.OpenEndedComposition.Horn2WebWitness.web.level t c = 0
+Becoming.OpenEndedComposition.Horn2WebWitness.admits_work : Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits
+  (Becoming.OpenEndedComposition.Horn2WebWitness.web.level 0) 0 Becoming.OpenEndedComposition.Horn2WebWitness.Form.fWork
+Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_work : ¬Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits
+    (Becoming.OpenEndedComposition.Horn2WebWitness.web.level 1) 1
+    Becoming.OpenEndedComposition.Horn2WebWitness.Form.fWork
+@Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubA : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = false →
+    Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t)
+      t Becoming.OpenEndedComposition.Horn2WebWitness.Form.fStubA
+@Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubA : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = true →
+    ¬Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits
+        (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t) t
+        Becoming.OpenEndedComposition.Horn2WebWitness.Form.fStubA
+@Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubB : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = true →
+    Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t)
+      t Becoming.OpenEndedComposition.Horn2WebWitness.Form.fStubB
+@Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubB : ∀ {t : Nat},
+  Becoming.OpenEndedComposition.altBool t = false →
+    ¬Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits
+        (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t) t
+        Becoming.OpenEndedComposition.Horn2WebWitness.Form.fStubB
+Becoming.OpenEndedComposition.Horn2WebWitness.turnover : ∀ (t : Nat),
+  ∃ f,
+    Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t)
+        t f ∧
+      ¬Becoming.OpenEndedComposition.Horn2WebWitness.web.Admits
+          (Becoming.OpenEndedComposition.Horn2WebWitness.web.level (t + 1)) (t + 1) f
+Becoming.OpenEndedComposition.Horn2WebWitness.stub_realizes : ∀ (t : Nat),
+  Becoming.OpenEndedComposition.Horn2WebWitness.web.MacroAdmits Becoming.OpenEndedComposition.Horn2WebWitness.cap
+    (Becoming.OpenEndedComposition.Horn2WebWitness.web.level t) t Becoming.OpenEndedComposition.Horn2WebWitness.Cap.kSub
+Becoming.OpenEndedComposition.Horn2WebWitness.goodUntil : Becoming.OpenEndedComposition.GoodUntil
+  Becoming.OpenEndedComposition.Horn2WebWitness.web Becoming.OpenEndedComposition.Horn2WebWitness.origSafe
+  Becoming.OpenEndedComposition.Horn2WebWitness.cap 0 1
+Becoming.OpenEndedComposition.Horn2WebWitness.zeroLevelTurnover : Becoming.OpenEndedComposition.ZeroLevelTurnover
+  Becoming.OpenEndedComposition.Horn2WebWitness.web Becoming.OpenEndedComposition.Horn2WebWitness.cap 0 1
+Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes : Becoming.OpenEndedComposition.TransformsAcrossEpochs
+  Becoming.OpenEndedComposition.Horn2WebWitness.web (Becoming.OpenEndedComposition.collapseEpoch 1)
+  (Becoming.OpenEndedComposition.revisedSafe Becoming.OpenEndedComposition.Horn2WebWitness.origSafe)
+  (fun x => Becoming.OpenEndedComposition.Horn2WebWitness.Cap)
+  (fun x => Becoming.OpenEndedComposition.Horn2WebWitness.cap) (fun x x_1 a b => a = b) 0
+@Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects : ∀ {Epoch : Type} {epoch : Nat → Epoch}
+  {Safe : Epoch → Nat → Prop} {CapE : Epoch → Type}
+  {capE : (e : Epoch) → Becoming.OpenEndedComposition.Horn2WebWitness.Form → CapE e}
+  {Preserves : (e₁ e₂ : Epoch) → CapE e₁ → CapE e₂ → Prop},
+  Becoming.OpenEndedComposition.SafeAnchored Safe Becoming.OpenEndedComposition.Horn2WebWitness.origSafe →
+    ¬Becoming.OpenEndedComposition.TransformsAcrossEpochs Becoming.OpenEndedComposition.Horn2WebWitness.web epoch Safe
+        CapE capE Preserves 0
+@Becoming.OpenEndedComposition.scoped_substrate_margin_step : ∀ {Site : Type} {G : Site → (Site → Nat) → Nat},
+  (∀ (j : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G j)) →
+    ∀ (scope : Site → Bool) {H preTotal H_safe x_crit warnLevel x : Site → Nat} {curLag nextEta maxLag : Nat},
+      (∀ (j : Site), scope j = true → H j ≤ preTotal j) →
+        nextEta ≤ maxLag →
+          (∀ (j : Site),
+              Becoming.OpenEndedComposition.effCrit scope x_crit j ≤
+                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                  (Becoming.OpenEndedComposition.effCrit scope x_crit) j) →
+            (∀ (j : Site), scope j = true → x_crit j + (maxLag + 1) * preTotal j ≤ warnLevel j) →
+              (∀ (j : Site), scope j = true → x_crit j + curLag * preTotal j ≤ x j) →
+                ∀ (j : Site),
+                  scope j = true →
+                    (x j < warnLevel j →
+                        (curLag = 0 → nextEta = 0 ∧ ∀ (k : Site), H k ≤ H_safe k) ∧
+                          (0 < curLag → nextEta + 1 ≤ curLag)) →
+                      x_crit j + nextEta * preTotal j ≤
+                        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j
+@Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step : ∀ {ι : Type} {G : ι → (ι → Nat) → Nat},
+  (∀ (j : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G j)) →
+    ∀ {H preTotal H_safe x_crit warnLevel x : ι → Nat} {curLag nextEta maxLag : Nat},
+      (∀ (j : ι), H j ≤ preTotal j) →
+        nextEta ≤ maxLag →
+          (∀ (j : ι),
+              x_crit j ≤
+                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit j) →
+            (∀ (j : ι), x_crit j + (maxLag + 1) * preTotal j ≤ warnLevel j) →
+              (∀ (j : ι), x_crit j + curLag * preTotal j ≤ x j) →
+                ∀ (j : ι),
+                  (x j < warnLevel j →
+                      (curLag = 0 → nextEta = 0 ∧ ∀ (k : ι), H k ≤ H_safe k) ∧ (0 < curLag → nextEta + 1 ≤ curLag)) →
+                    x_crit j + nextEta * preTotal j ≤
+                      Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j
+@Becoming.OpenEndedComposition.EpochFamily.AnchorStep.refl : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (e : Epoch), F.AnchorStep e e
+@Becoming.OpenEndedComposition.EpochFamily.AnchorStep.trans : ∀ {Epoch Site Env : Type}
+  {F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env} {e₁ e₂ e₃ : Epoch},
+  F.AnchorStep e₁ e₂ → F.AnchorStep e₂ e₃ → F.AnchorStep e₁ e₃
+@Becoming.OpenEndedComposition.EpochFamily.AnchorStep.crit_le : ∀ {Epoch Site Env : Type}
+  {F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env} {e e' : Epoch},
+  F.AnchorStep e e' → ∀ (s : Site), F.crit e s ≤ F.crit e' s
+@Becoming.OpenEndedComposition.epochInv_certificate : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop)
+  (anchored : Bool),
+  (∀ (site : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (F.G site)) →
+    Becoming.Viability.Certificate (Becoming.OpenEndedComposition.epochProcess F AllowUpgrade anchored)
+      (Becoming.OpenEndedComposition.epochCurrentGuard F) (Becoming.OpenEndedComposition.epochInv F)
+@Becoming.OpenEndedComposition.epochChain_certificate : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (e₀ : Epoch),
+  (∀ (site : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (F.G site)) →
+    Becoming.Viability.Certificate (Becoming.OpenEndedComposition.epochClosedProcess F AllowUpgrade)
+      (Becoming.OpenEndedComposition.epochClosedGuard F e₀) fun st =>
+      Becoming.OpenEndedComposition.epochInv F st ∧ F.AnchorStep e₀ st.snd.fst
+@Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (e₀ : Epoch)
+  (p₀ : (m : F.Mode e₀) × F.S e₀ m) (x₀ : Site → Nat),
+  (∀ (site : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (F.G site)) →
+    F.Cert e₀ →
+      (F.c e₀).K p₀ →
+        F.Headroom e₀ p₀ x₀ →
+          Becoming.Viability.Kernel (Becoming.OpenEndedComposition.epochClosedProcess F AllowUpgrade)
+            (Becoming.OpenEndedComposition.epochClosedGuard F e₀) (x₀, ⟨e₀, p₀⟩)
+@Becoming.OpenEndedComposition.epochChain_viability_kernel : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (e₀ : Epoch)
+  (x₀ : Site → Nat),
+  (∀ (site : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (F.G site)) →
+    F.Cert e₀ →
+      F.Headroom e₀ (F.init e₀) x₀ →
+        Becoming.Viability.Kernel (Becoming.OpenEndedComposition.epochClosedProcess F AllowUpgrade)
+          (Becoming.OpenEndedComposition.epochClosedGuard F e₀) (x₀, ⟨e₀, F.init e₀⟩)
+@Becoming.OpenEndedComposition.epochChain_anchor_never_weakened : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (e₀ : Epoch)
+  (p₀ : (m : F.Mode e₀) × F.S e₀ m) (x₀ : Site → Nat),
+  (∀ (site : Site), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (F.G site)) →
+    F.Cert e₀ →
+      (F.c e₀).K p₀ →
+        F.Headroom e₀ p₀ x₀ →
+          ∀ (st : F.State),
+            Becoming.Reach (Becoming.OpenEndedComposition.epochClosedProcess F AllowUpgrade) (x₀, ⟨e₀, p₀⟩) st →
+              F.AnchorStep e₀ st.snd.fst
+@Becoming.OpenEndedComposition.epochChain_nonDeadlock : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (anchored : Bool)
+  (e₀ : Epoch) (p₀ : (m : F.Mode e₀) × F.S e₀ m) (x₀ : Site → Nat),
+  F.Total e₀ →
+    (F.c e₀).K p₀ →
+      ∀ (st : F.State),
+        Becoming.Reach (Becoming.OpenEndedComposition.epochProcess F AllowUpgrade anchored) (x₀, ⟨e₀, p₀⟩) st →
+          ∃ a st', (Becoming.OpenEndedComposition.epochProcess F AllowUpgrade anchored).step st a st'
+@Becoming.OpenEndedComposition.gate_rejects_infeasible_entry : ∀ {Epoch Site Env : Type}
+  (F : Becoming.OpenEndedComposition.EpochFamily Epoch Site Env) (AllowUpgrade : Epoch → Epoch → Prop) (anchored : Bool)
+  {x : Site → Nat} {e e' : Epoch} {p : (m : F.Mode e) × F.S e m} {p' : (m : F.Mode e') × F.S e' m} {st' : F.State}
+  {site : Site},
+  F.scope e' site = true →
+    x site < F.x_crit e' site →
+      ¬(Becoming.OpenEndedComposition.epochProcess F AllowUpgrade anchored).step (x, ⟨e, p⟩)
+          (Becoming.OpenEndedComposition.EpochAct.upgrade e' p') st'
+@Becoming.OpenEndedComposition.reach_polyClosed_to_unitEpoch : ∀ {Site Env Mode : Type}
+  {S Obs Dist Int Ext : Mode → Type} (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext)
+  (route : (m : Mode) → Site → List (Ext m)) {init : (m : Mode) × S m}
+  (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop) (x_crit warnLevel H_safe sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat)
+  (AllowUpgrade : Unit → Unit → Prop) (anchored : Bool) {s₀ s₁ : (Site → Nat) × (m : Mode) × S m},
+  Becoming.Reach (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw jointAdm) s₀ s₁ →
+    Becoming.Reach
+      (Becoming.OpenEndedComposition.epochProcess
+        (Becoming.OpenEndedComposition.unitEpochFamily C route c obs channel G envDraw envCap jointAdm x_crit warnLevel
+          H_safe sitePreCap sitePostCap maxLagEnv maxSilenceEnv)
+        AllowUpgrade anchored)
+      (s₀.fst, ⟨(), s₀.snd⟩) (s₁.fst, ⟨(), s₁.snd⟩)
+@Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod : ∀ {Site Env Mode : Type}
+  {S Obs Dist Int Ext : Mode → Type} (base : Becoming.PolyComposition.AnchoredBase Mode S Obs Dist Int Ext)
+  {init : (m : Mode) × S m} (hInit : Becoming.PolyComposition.AnchoredInit base init)
+  (admitDec : (m : Mode) × S m → (m : Mode) × S m → Bool → Bool)
+  (fallback : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (hAdmit : Becoming.PolyComposition.AnchoredModeAdmit base admitDec fallback)
+  (propose : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (route : (m : Mode) → Site → List (Ext m)) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route m site) (base.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route m site) (base.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode), base.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode), base.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat),
+                (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                    base.K ⟨m, s⟩ → x site < warnLevel site → base.warnObs m (obs m x)) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + base.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  route
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  x_crit)
+                                (x₀, init)
+@Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening : ∀ {Site Env Mode : Type}
+  {S Obs Dist Int Ext : Mode → Type} (base : Becoming.PolyComposition.AnchoredBase Mode S Obs Dist Int Ext)
+  {init : (m : Mode) × S m} (hInit : Becoming.PolyComposition.AnchoredInit base init)
+  (admitDec : (m : Mode) × S m → (m : Mode) × S m → Bool → Bool)
+  (fallback : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (hAdmit : Becoming.PolyComposition.AnchoredModeAdmit base admitDec fallback)
+  (propose : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (route : (m : Mode) → Site → List (Ext m)) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat) (x_crit warnLevel H_safe x₀ : Site → Nat),
+      (∀ (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route init.fst site) (base.preCapExt init.fst) ≤ sitePreCap site) →
+        (∀ (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route init.fst site) (base.postAllowanceExt init.fst) ≤
+              sitePostCap site) →
+          base.maxLag init.fst ≤ maxLagEnv →
+            base.maxSilence init.fst ≤ maxSilenceEnv →
+              (∀ (x : Site → Nat) (site : Site), x site < warnLevel site → base.warnObs init.fst (obs init.fst x)) →
+                (∀ (m : Mode) (s : S m),
+                    base.K ⟨m, s⟩ → Becoming.PolyComposition.ModeRefines base route obs warnLevel init.fst m) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + base.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  route
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  x_crit)
+                                (x₀, init)
+Becoming.OpenEndedComposition.recovers_three : 3 ≤
+  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole Becoming.OpenEndedComposition.selfGain
+    (fun x => 1) (fun x => 3) ()
+Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.cert : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family.Cert e
+Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.total : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family.Total e
+Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.not_modeRefines : ∀ (warnLevel : Unit → Nat),
+  ¬Becoming.PolyComposition.ModeRefines Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base (fun x x_1 => [()])
+      (fun m x => Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.sensor m () x) warnLevel false true
+Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope : ∀
+  (x_crit envCap sitePreCap warnLevel : Unit → Nat) (maxLagEnv : Nat),
+  (∀ (m : Bool) (site : Unit),
+      Becoming.PolyComposition.sumPortDraws [()]
+          (Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base.preCapExt m) ≤
+        sitePreCap site) →
+    (∀ (m : Bool), Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base.maxLag m ≤ maxLagEnv) →
+      (∀ (site : Unit), x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+        (∀ (m : Bool) (s : Nat) (x : Unit → Nat) (site : Unit),
+            Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base.K ⟨m, s⟩ →
+              x site < warnLevel site →
+                Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base.warnObs m
+                  (Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.sensor m () x)) →
+          False
+Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade : Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family
+      fun e e' => e = false ∧ e' = true)
+    (Becoming.OpenEndedComposition.epochClosedGuard Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family
+      false)
+    (fun x => 13, ⟨false, ⟨(), 1⟩⟩) ∧
+  (Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family
+        fun e e' => e = false ∧ e' = true).step
+    (fun x => 13, ⟨false, ⟨(), 1⟩⟩) (Becoming.OpenEndedComposition.EpochAct.upgrade true ⟨(), 1⟩)
+    (fun x => 13, ⟨true, ⟨(), 1⟩⟩)
+Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound : ¬∃ B,
+    ∀ (e : Nat), Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family.sitePreCap e () ≤ B
+Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.cert : ∀ (e : Nat),
+  Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family.Cert e
+Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.total : ∀ (e : Nat),
+  Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family.Total e
+Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.epoch_viable_at_headroom : ∀ (e : Nat),
+  Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.epochClosedProcess
+      Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family fun x x_1 => True)
+    (Becoming.OpenEndedComposition.epochClosedGuard Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family
+      e)
+    (fun x => 3 + (e + 1), ⟨e, ⟨(), 1⟩⟩)
+@Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_up : ∀ {e : Nat} {x : Unit → Nat},
+  3 + (e + 2) ≤ x () →
+    (Becoming.OpenEndedComposition.epochClosedProcess
+          Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family fun x x_1 => True).step
+      (x, ⟨e, ⟨(), 1⟩⟩) (Becoming.OpenEndedComposition.EpochAct.upgrade (e + 1) ⟨(), 1⟩) (x, ⟨e + 1, ⟨(), 1⟩⟩)
+@Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down : ∀ {e : Nat} {x : Unit → Nat},
+  4 ≤ x () →
+    (Becoming.OpenEndedComposition.epochClosedProcess
+          Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family fun x x_1 => True).step
+      (x, ⟨e, ⟨(), 1⟩⟩) (Becoming.OpenEndedComposition.EpochAct.upgrade 0 ⟨(), 1⟩) (x, ⟨0, ⟨(), 1⟩⟩)
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.post_le_pre : ∀ (e : Bool)
+  (s : Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2),
+  Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.postAt e s ≤
+    Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.preAt e s
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.cert : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family.Cert e
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.total : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family.Total e
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.margin_false : Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family.Headroom
+  false ⟨(), 1⟩ Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse : Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+      Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow)
+    (Becoming.OpenEndedComposition.epochClosedGuard Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+      false)
+    (Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit, ⟨false, ⟨(), 1⟩⟩) ∧
+  ∃ st',
+    (Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+            Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow).step
+        (Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit, ⟨false, ⟨(), 1⟩⟩)
+        (Becoming.OpenEndedComposition.EpochAct.intra () false () ()) st' ∧
+      st'.fst Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sNew = 0 ∧
+        st'.fst Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sNew <
+          Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.critAt true
+            Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sNew
+Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both : (Becoming.OpenEndedComposition.epochClosedProcess
+        Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+        Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow).step
+    (Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit, ⟨false, ⟨(), 1⟩⟩)
+    (Becoming.OpenEndedComposition.EpochAct.upgrade true ⟨(), 1⟩)
+    (Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit, ⟨true, ⟨(), 1⟩⟩) ∧
+  ∀ (st : Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family.State),
+    Becoming.Reach
+        (Becoming.OpenEndedComposition.epochClosedProcess
+          Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+          Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow)
+        (Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit, ⟨true, ⟨(), 1⟩⟩) st →
+      3 ≤ st.fst Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sOld ∧
+        2 ≤ st.fst Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sNew
+@Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected : ∀
+  {x : Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2 → Nat},
+  x Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2.sNew < 2 →
+    ∀ (anchored : Bool) (p p' : (_ : Unit) × Nat)
+      (st' : Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family.State),
+      ¬(Becoming.OpenEndedComposition.epochProcess Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family
+              Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow anchored).step
+          (x, ⟨false, p⟩) (Becoming.OpenEndedComposition.EpochAct.upgrade true p') st'
+Becoming.OpenEndedComposition.UnanchoredPolyWireheading.cert : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family.Cert e
+Becoming.OpenEndedComposition.UnanchoredPolyWireheading.total : ∀ (e : Bool),
+  Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family.Total e
+Becoming.OpenEndedComposition.UnanchoredPolyWireheading.lowering_gate_unanchored : Becoming.OpenEndedComposition.EpochHandoffGate
+  Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family
+  Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow false
+  Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀ false true ⟨(), 0⟩
+Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel : Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.epochProcess Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family
+      Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow false)
+    (Becoming.OpenEndedComposition.epochCurrentGuard Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family)
+    (Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀, ⟨false, ⟨(), 1⟩⟩) ∧
+  ∃ st,
+    Becoming.Reach
+        (Becoming.OpenEndedComposition.epochProcess Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family
+          Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow false)
+        (Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀, ⟨false, ⟨(), 1⟩⟩) st ∧
+      st.fst () = 0 ∧ st.fst () < Becoming.OpenEndedComposition.UnanchoredPolyWireheading.crit false
+Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering : (∀
+    (st' : Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family.State),
+    ¬(Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family
+            Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow).step
+        (Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀, ⟨false, ⟨(), 1⟩⟩)
+        (Becoming.OpenEndedComposition.EpochAct.upgrade true ⟨(), 0⟩) st') ∧
+  ∀ (st : Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family.State),
+    Becoming.Reach
+        (Becoming.OpenEndedComposition.epochClosedProcess Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family
+          Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow)
+        (Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀, ⟨false, ⟨(), 1⟩⟩) st →
+      3 ≤ st.fst ()
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pair_viable_of_headroom : ∀ (preA preB wA wB x₀ : Nat),
+  3 + 2 * (preA + preB) ≤ wA ∨ 3 + 2 * (preA + preB) ≤ wB →
+    3 + (preA + preB) ≤ x₀ →
+      Becoming.Viability.Kernel
+        (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess preA preB wA wB)
+        (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard preA preB)
+        (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart x₀)
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable : Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 4 1 13 7)
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard 4 1)
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart 8) ∧
+  (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agent 4).drawExt ⟨(), 1⟩ () = 4
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_B_evolve_viable : Becoming.Viability.Kernel
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 1 4 7 13)
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard 1 4)
+    (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart 8) ∧
+  (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agent 4).drawExt ⟨(), 1⟩ () = 4
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses : ∀ (wA wB : Nat),
+  ¬Becoming.Viability.Kernel (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 4 4 wA wB)
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard 4 4)
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart 8)
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe : ∀
+  (LocalGate : Nat → Nat → Nat → Prop),
+  (∀ (x₀ own partner wA wB : Nat),
+      Becoming.Viability.Kernel
+          (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess own partner wA wB)
+          (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard own partner)
+          (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart x₀) →
+        LocalGate x₀ own partner) →
+    (∀ (x₀ preA preB : Nat),
+        LocalGate x₀ preA 1 →
+          LocalGate x₀ preB 1 →
+            ∃ wA wB,
+              Becoming.Viability.Kernel
+                (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess preA preB wA wB)
+                (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard preA preB)
+                (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart x₀)) →
+      False
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes : ∀
+  (preA preB mA mB wA wB x₀ : Nat),
+  preA ≤ mA →
+    preB ≤ mB →
+      3 + 2 * (mA + mB) ≤ wA ∨ 3 + 2 * (mA + mB) ≤ wB →
+        3 + (mA + mB) ≤ x₀ →
+          Becoming.Viability.Kernel
+            (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess preA preB wA wB)
+            (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard preA preB)
+            (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart x₀)
+@Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocalGate_sound : ∀ {x₀ preA preB : Nat},
+  Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.ReciprocalGate x₀ preA preB →
+    Becoming.Viability.Kernel
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess preA preB (3 + 2 * (preA + preB))
+        (3 + 2 * (preA + preB)))
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard preA preB)
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart x₀)
+Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11 : ¬Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.ReciprocalGate
+      8 4 4 ∧
+  Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.ReciprocalGate 11 4 4 ∧
+    Becoming.Viability.Kernel (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 4 4 19 19)
+        (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard 4 4)
+        (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart 11) ∧
+      (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agent 4).drawExt ⟨(), 1⟩ () = 4 ∧
+        Becoming.Reach (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 4 4 19 19)
+            (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart 11)
+            (fun x => 4, ⟨((), ()), (0, 0)⟩) ∧
+          Becoming.Reach (Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess 4 4 19 19)
+            (fun x => 4, ⟨((), ()), (0, 0)⟩) (fun x => 5, ⟨((), ()), (0, 0)⟩)
