@@ -265,7 +265,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "a returning configuration within m steps and one cycle per basin across m listed configurations"
+    },
+    "law": "Becoming.Law.enters_returning_within",
+    "edge": {
+     "en": "Every course of a determined law over m listed configurations enters its unique basin cycle before step m."
+    },
+    "strength": "sufficient",
+    "records": [
+     "basins-of-a-determined-law"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law"
+   }
+  ],
   "transitions": [
    {
     "kind": "window or deadline",
@@ -3158,6 +3173,16 @@
     "path": "experiments/margin-measured",
     "thesis": "T2",
     "state": "run"
+   },
+   {
+    "path": "experiments/state-named-in-advance",
+    "thesis": "T2",
+    "state": "run"
+   },
+   {
+    "path": "experiments/state-against-embedding",
+    "thesis": "T2",
+    "state": "run"
    }
   ],
   "open": [
@@ -5867,7 +5892,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "empty next generation (G.size (t + 1) = 0), leaving no member to select among at t + 1"
+    },
+    "law": "Becoming.GroupEnding.Flow.all_end",
+    "edge": {
+     "en": "Under active-only giving (acting) and descended generations (descended), whenever every member of G.family t is inactive at step t, the next generation size G.size (t + 1) equals 0."
+    },
+    "strength": "sufficient",
+    "records": [
+     "selection-among-groups-by-ending"
+    ],
+    "source": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending"
+   },
+   {
+    "to": {
+     "en": "no offspring across step t for any member depending (at need >= m) on a condition pushed into joint excess"
+    },
+    "law": "Becoming.GroupEnding.Flow.excess_childless",
+    "edge": {
+     "en": "When a shared gated-renewal condition runs into joint excess, dependent members become inactive across step t and leave no descendant."
+    },
+    "strength": "sufficient",
+    "records": [
+     "selection-among-groups-by-ending"
+    ],
+    "source": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending"
+   }
+  ],
   "transitions": [],
   "tests": [
    {
@@ -6580,7 +6634,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "inactivity once steps past last support reach the decaying reserve bound"
+    },
+    "law": "Becoming.Web.Carries.ends_within",
+    "edge": {
+     "en": "An unsupported formation whose reserve decays while dormant ceases activity within reserve steps."
+    },
+    "strength": "sufficient",
+    "records": [
+     "reserve-defers-ending"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending"
+   }
+  ],
   "transitions": [
    {
     "kind": "window or deadline",
@@ -13101,7 +13170,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "zero loss beyond the region once the region covers every formation of the whole"
+    },
+    "law": "Becoming.Web.not_losesBeyond_whole",
+    "edge": {
+     "en": "When the admitted region covers the whole, nothing lies beyond it to lose."
+    },
+    "strength": "sufficient",
+    "records": [
+     "loss-beyond-a-region"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region"
+   },
+   {
+    "to": {
+     "en": "dweller excluded outside alongDependence from step 2 on whenever levels omit the clearer part"
+    },
+    "law": "Becoming.Clearing.loses_beyond",
+    "edge": {
+     "en": "Active supported clearer admits everything alongDependence while excluding the dweller beyond it."
+    },
+    "strength": "witness",
+    "records": [
+     "loss-beyond-a-region"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -13672,6 +13770,11 @@
    {
     "path": "experiments/commons-gated-renewal",
     "thesis": "T3",
+    "state": "run"
+   },
+   {
+    "path": "experiments/learned-claim-agents",
+    "thesis": null,
     "state": "run"
    }
   ],
@@ -14734,7 +14837,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "permanently shifted orbit following the perturbed rule from the next step on"
+    },
+    "law": "Becoming.Captured.rule_perturbation_changes",
+    "edge": {
+     "en": "In Captured, state perturbations are reabsorbed in one step while perturbing the rule changes the orbit at every step from the next on."
+    },
+    "strength": "witness",
+    "records": [
+     "target-capture"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-target-capture"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -15068,6 +15186,16 @@
     "path": "experiments/self-rewarding-lock",
     "thesis": "T7",
     "state": "run"
+   },
+   {
+    "path": "experiments/learned-claim-agents",
+    "thesis": null,
+    "state": "run"
+   },
+   {
+    "path": "experiments/reform-events",
+    "thesis": "T7",
+    "state": "designed"
    }
   ],
   "open": [
@@ -15299,6 +15427,11 @@
     "path": "experiments/self-rewarding-lock",
     "thesis": "T7",
     "state": "run"
+   },
+   {
+    "path": "experiments/reform-events",
+    "thesis": "T7",
+    "state": "designed"
    }
   ],
   "open": [
@@ -15966,7 +16099,18 @@
     }
    }
   ],
-  "tests": [],
+  "tests": [
+   {
+    "path": "experiments/reform-events",
+    "thesis": "T7",
+    "state": "designed"
+   },
+   {
+    "path": "experiments/critical-mass-located",
+    "thesis": null,
+    "state": "frozen"
+   }
+  ],
   "open": [
    {
     "en": "That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b).",
@@ -18299,7 +18443,13 @@
    }
   ],
   "transitions": [],
-  "tests": [],
+  "tests": [
+   {
+    "path": "experiments/direction-training",
+    "thesis": "T4",
+    "state": "designed"
+   }
+  ],
   "open": [
    {
     "en": "It does not derive how a target forms or is revised, that a seeker pursues it, or which targets actual formations hold.",
@@ -19165,7 +19315,48 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "fixed publication at every later step iff the step-delayed prediction is right"
+    },
+    "law": "Becoming.ReflexivePrediction.rests_iff_right",
+    "edge": {
+     "en": "Publishing the previous outcome rests at a prediction iff that prediction is right."
+    },
+    "strength": "exact",
+    "records": [
+     "a-prediction-read-by-what-it-predicts"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts"
+   },
+   {
+    "to": {
+     "en": "failure of every published prediction (¬ Right r p) whenever the response moves every value (any V, including cycles of period > 2)"
+    },
+    "law": "Becoming.ReflexivePrediction.none_right_of_moves",
+    "edge": {
+     "en": "Where the response satisfies r v != v for every value v, no published prediction p is right (¬ Right r p)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-prediction-read-by-what-it-predicts"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts"
+   },
+   {
+    "to": "publication-under-negation-alternates",
+    "law": "Becoming.ReflexivePrediction.Negating.alternates",
+    "edge": {
+     "en": "Witness on two values (Bool): Boolean negation moves every value, so repeated publication alternates forever without resting."
+    },
+    "strength": "witness",
+    "records": [
+     "a-prediction-read-by-what-it-predicts"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts"
+   }
+  ],
   "transitions": [
    {
     "kind": "critical mass",
@@ -19397,6 +19588,11 @@
     "path": "experiments/break-warnings",
     "thesis": "T6",
     "state": "run"
+   },
+   {
+    "path": "experiments/direction-training",
+    "thesis": "T4",
+    "state": "designed"
    }
   ],
   "open": [
@@ -19578,7 +19774,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "task preserved along every configuration reached from a sound start iff each state act leads into the task from its reading"
+    },
+    "law": "Becoming.ReadingLoop.keeps_iff_leadsInto",
+    "edge": {
+     "en": "With the reading kept closed under the update loop, keeping the task holds iff every state act leads into the task from its reading."
+    },
+    "strength": "exact",
+    "records": [
+     "a-reading-kept-by-its-update"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update"
+   },
+   {
+    "to": {
+     "en": "failure of any single safe uniform act across all worlds despite pairwise-shared safe acts"
+    },
+    "law": "Becoming.ReadingLoop.PairwiseShared.none_for_all",
+    "edge": {
+     "en": "Witness: three worlds share safe acts pairwise yet admit no single act leading into the task at all three."
+    },
+    "strength": "witness",
+    "records": [
+     "a-response-common-over-a-reading"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading"
+   }
+  ],
   "transitions": [],
   "tests": [
    {
@@ -19811,7 +20036,18 @@
     }
    }
   ],
-  "tests": [],
+  "tests": [
+   {
+    "path": "experiments/learned-claim-agents",
+    "thesis": null,
+    "state": "run"
+   },
+   {
+    "path": "experiments/direction-training",
+    "thesis": "T4",
+    "state": "designed"
+   }
+  ],
   "open": [
    {
     "en": "Which lumping an actual architecture's representation makes, or which neighbourhoods its updates search: the laws say what any lumping installs and where any neighbourhood rests, not which a given system has, which is read empirically.",
@@ -20214,7 +20450,20 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": "a-map-moving-every-value-never-rests",
+    "law": "Becoming.Diagonal.revision_never_rests",
+    "edge": {
+     "en": "Revising a value by a map moving every value leaves no step resting along its orbit (and diagonal gaps go unsaid by gap_unsaid)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "readings-within-what-they-read"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -20623,7 +20872,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "no step from which an extrapolation matches every coming diagonal value"
+    },
+    "law": "Becoming.Learning.diagonal_unrested",
+    "edge": {
+     "en": "Against any extrapolation and fixed-point-free map, the diagonal course refutes every proposed next value at its step."
+    },
+    "strength": "sufficient",
+    "records": [
+     "learning-by-refutation"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation"
+   },
+   {
+    "to": {
+     "en": "eventual periodic lasso whenever finite-lasso elimination rests with decidable equality"
+    },
+    "law": "Becoming.Learning.lasso_of_rest",
+    "edge": {
+     "en": "Settling of elimination over lasso candidates under decidable equality forces periodic repetition."
+    },
+    "strength": "necessary",
+    "records": [
+     "learning-by-refutation"
+    ],
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation"
+   }
+  ],
   "transitions": [
    {
     "kind": "pace bound",
@@ -20839,7 +21117,50 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "divergent member actions across two worlds after identical prior acts iff their rule separates the worlds coupling values"
+    },
+    "law": "Becoming.Turns.separates_at",
+    "edge": {
+     "en": "After equal earlier acts, a member separates two worlds iff its law separates their coupling readings."
+    },
+    "strength": "exact",
+    "records": [
+     "readers-reading-readers"
+    ],
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers"
+   },
+   {
+    "to": {
+     "en": "identical actions along every world-reachable history from member 0 even when member 0 reads only past an unreachable prefix"
+    },
+    "law": "Becoming.Turns.Unreached.along",
+    "edge": {
+     "en": "Witness: in Turns.Unreached, every world reaches no non-empty prior history at member 0, so ReadsOnlyActsAlong 0 w holds for every coupling."
+    },
+    "strength": "witness",
+    "records": [
+     "a-cascade-at-the-histories-reached"
+    ],
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached"
+   },
+   {
+    "to": {
+     "en": "refutation of the universal all-histories condition ReadsOnlyActsFrom 0"
+    },
+    "law": "Becoming.Turns.Unreached.not_from",
+    "edge": {
+     "en": "Witness: testing on the unreachable non-empty history [false] refutes ReadsOnlyActsFrom 0 while Unreached.along holds on reachable histories."
+    },
+    "strength": "witness",
+    "records": [
+     "a-cascade-at-the-histories-reached"
+    ],
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-cascade-at-the-histories-reached"
+   }
+  ],
   "transitions": [],
   "tests": [
    {
@@ -23093,7 +23414,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "permanent mutual withholding from the first of two consecutive joint errors regardless of later inputs"
+    },
+    "law": "Becoming.PairChance.burst_absorbs",
+    "edge": {
+     "en": "Where both formations err at two consecutive steps, a mutual-withholding pair stays absorbingly withheld from then on."
+    },
+    "strength": "sufficient",
+    "records": [
+     "errors-by-chance-in-a-pair-keeping-mutual-withholding"
+    ],
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -25288,7 +25624,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "non-settling infinite change iff a reachable step goes to a distinct configuration returning to it"
+    },
+    "law": "Becoming.Settling.keeps_changing_iff",
+    "edge": {
+     "en": "In a world held by a list, some run keeps changing forever iff a reachable non-trivial loop returns to itself."
+    },
+    "strength": "exact",
+    "records": [
+     "when-the-runs-of-a-process-settle"
+    ],
+    "source": "theories/becoming/chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -26931,7 +27282,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "closed difference at 0 within d turns whenever every positive state contracts strictly"
+    },
+    "law": "Becoming.LoopReturn.closes_within",
+    "edge": {
+     "en": "Where f 0 = 0 and f x < x for all positive x, difference d closes to 0 within d turns and merges distinct starts."
+    },
+    "strength": "sufficient",
+    "records": [
+     "whether-a-loop-closes-a-difference"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference"
+   },
+   {
+    "to": {
+     "en": "some link around the loop returning strictly less than it receives"
+    },
+    "law": "Becoming.LoopReturn.closing_needs_less",
+    "edge": {
+     "en": "Closing any positive difference around a loop requires at least one contractive link giving back less than received."
+    },
+    "strength": "necessary",
+    "records": [
+     "whether-a-loop-closes-a-difference"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference"
+   }
+  ],
   "transitions": [
    {
     "kind": "tipping in a parameter",
@@ -27229,7 +27609,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "settling of a run (Settles r) iff at every step T it is decided whether the run changes again (given DecidableEq S, finite list membership held, and ¬ Settling.ChangesInLoop r)"
+    },
+    "law": "Becoming.LastChange.settles_iff_decided",
+    "edge": {
+     "en": "With decidable equality on states, every configuration held in a finite list l, and no change within a loop (¬ Settling.ChangesInLoop r), a run settles iff every step T decides ChangesAgain r T or StillFrom r T."
+    },
+    "strength": "exact",
+    "records": [
+     "the-last-change-of-a-run"
+    ],
+    "source": "theories/becoming/chapters/08-METHOD.md#r-the-last-change-of-a-run"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -30789,6 +31184,16 @@
     "path": "experiments/margin-measured",
     "thesis": "T2",
     "state": "run"
+   },
+   {
+    "path": "experiments/state-named-in-advance",
+    "thesis": "T2",
+    "state": "run"
+   },
+   {
+    "path": "experiments/state-against-embedding",
+    "thesis": "T2",
+    "state": "run"
    }
   ],
   "open": [
@@ -32131,7 +32536,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "restoration of the sustaining activity after a deficit-length window with positive supported net contribution"
+    },
+    "law": "Becoming.SupportGated.repair_restores",
+    "edge": {
+     "en": "An initially supported contribution route with net gain across the deficit window preserves support and restores activity."
+    },
+    "strength": "sufficient",
+    "records": [
+     "supported-renewal-recovery"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery"
+   },
+   {
+    "to": {
+     "en": "flat absorbed level immune to later nominal inputs once both activities lose support"
+    },
+    "law": "Becoming.SupportRecovery.absorbs",
+    "edge": {
+     "en": "When both repair and need lack support, the reached level remains fixed regardless of nominal later contributions."
+    },
+    "strength": "sufficient",
+    "records": [
+     "supported-renewal-recovery"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery"
+   }
+  ],
   "transitions": [
    {
     "kind": "pace bound",
@@ -35391,7 +35825,22 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "unboundedly recurring active renewers whenever unceasing arising depletes a condition"
+    },
+    "law": "Becoming.Web.Unceasing.activeRenewer_recurs",
+    "edge": {
+     "en": "Under depleting unceasing arising, rising steps cannot cease and active renewing formations must recur without eventual bound."
+    },
+    "strength": "necessary",
+    "records": [
+     "unceasing-generation-needs-renewal"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-unceasing-generation-needs-renewal"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -35625,7 +36074,36 @@
    }
   ],
   "forbids": null,
-  "exits": [],
+  "exits": [
+   {
+    "to": {
+     "en": "inflow from outside an enclosed balanced dissipative finite family whenever taking or rising persists arbitrarily late"
+    },
+    "law": "Becoming.Flow.fed_from_beyond",
+    "edge": {
+     "en": "An enclosed finite family under balance and dissipation cannot persist arbitrarily late without inflow from beyond."
+    },
+    "strength": "necessary",
+    "records": [
+     "continuing-self-fed-from-beyond"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond"
+   },
+   {
+    "to": {
+     "en": "persistent fed pool outlasting every individual per-step fuel in Lone"
+    },
+    "law": "Becoming.Lone.fed_not_recurring",
+    "edge": {
+     "en": "Witness: in Lone, the pool continues being fed from beyond at every step while each fuel is used once and does not recur."
+    },
+    "strength": "witness",
+    "records": [
+     "continuing-self-fed-from-beyond"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond"
+   }
+  ],
   "transitions": [],
   "tests": [],
   "open": [
@@ -41816,5 +42294,2043 @@
   ],
   "standing_without_record": null,
   "premises": []
+ },
+ {
+  "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+  "name": {
+   "en": "Polynomial dynamic interfaces, serialized reconfiguration, and coupled laxity"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Generalizes OpenComposition to mode-indexed PolyComponents and PolyContracts with dynamic routing, embeds static OpenComponents via ofOpenComponent_kernel_iff, guards self-modification with AnchoredBase against self-blinding, serializes concurrent upgrades via epoch-reserve gating, and composes local step bounds into coupled Substrate/OpenPort LaxSim viability kernels."
+  },
+  "records": [
+   "polynomial-dynamic-interfaces-and-coupled-laxity"
+  ],
+  "declarations": [
+   "Becoming.PolyComposition.sumPortDraws",
+   "Becoming.PolyComposition.sumPortDraws_le",
+   "Becoming.PolyComposition.sumPortDraws_map",
+   "Becoming.PolyComposition.sumPortDraws_append",
+   "Becoming.PolyComposition.PolyComponent",
+   "Becoming.PolyComposition.PolyComponent.process",
+   "Becoming.PolyComposition.PolyContract",
+   "Becoming.PolyComposition.polySiteDraw",
+   "Becoming.PolyComposition.polyClosedStep",
+   "Becoming.PolyComposition.polyClosedProcess",
+   "Becoming.PolyComposition.polyClosedGuard",
+   "Becoming.PolyComposition.polyClosedInv",
+   "Becoming.PolyComposition.PolyComponent.ofOpenComponent",
+   "Becoming.PolyComposition.PolyContract.ofInterfaceContract",
+   "Becoming.PolyComposition.ofOpenComponent_closedStep_eq",
+   "Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff",
+   "Becoming.PolyComposition.ofOpenComponent_trace_iff",
+   "Becoming.PolyComposition.ofOpenComponent_kernel_iff",
+   "Becoming.PolyComposition.PolyComponent.compose",
+   "Becoming.PolyComposition.PolyContract.compose",
+   "Becoming.PolyComposition.PolyComponent.hide",
+   "Becoming.PolyComposition.PolyContract.hide",
+   "Becoming.PolyComposition.poly_close_viable_on_K",
+   "Becoming.PolyComposition.poly_close_viable",
+   "Becoming.PolyComposition.poly_close_kernel",
+   "Becoming.PolyComposition.poly_close_kernel_allModes",
+   "Becoming.PolyComposition.DynamicPortWitness.stayBlind_crashes",
+   "Becoming.PolyComposition.DynamicPortWitness.dyn_viable_kernel",
+   "Becoming.PolyComposition.DynamicPortWitness.cycleRun",
+   "Becoming.PolyComposition.DynamicPortWitness.cycleRun_modes_and_viability",
+   "Becoming.PolyComposition.poly_poolRead_absent_invariant",
+   "Becoming.PolyComposition.poly_poolWindow_unregistered_stays_blind",
+   "Becoming.PolyComposition.AnchoredBase",
+   "Becoming.PolyComposition.AnchoredInit",
+   "Becoming.PolyComposition.AnchoredModeAdmit",
+   "Becoming.PolyComposition.ModeRefines",
+   "Becoming.PolyComposition.anchoredSelfModComponent",
+   "Becoming.PolyComposition.anchoredSelfModContract",
+   "Becoming.PolyComposition.anchored_selfMod_viable",
+   "Becoming.PolyComposition.monotone_selfWidening_viable",
+   "Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_stays_blind",
+   "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchored_crashes",
+   "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_rejects_selfBlind",
+   "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_admits_selfWiden",
+   "Becoming.PolyComposition.PolyReconfigProposal",
+   "Becoming.PolyComposition.SerialCoordAct",
+   "Becoming.PolyComposition.SerialCoordState",
+   "Becoming.PolyComposition.serialSideAdmit",
+   "Becoming.PolyComposition.SerialReconfigProcess",
+   "Becoming.PolyComposition.serialReconfig_epoch_stale_on_step",
+   "Becoming.PolyComposition.serialReconfig_viable",
+   "Becoming.PolyComposition.serialReconfig_kernel",
+   "Becoming.PolyComposition.ConcurrentSerialWitness.concurrent_serial_dichotomy",
+   "Becoming.PolyComposition.distNat_add_le",
+   "Becoming.PolyComposition.distNat_sub_le",
+   "Becoming.PolyComposition.distNat_natMin_le",
+   "Becoming.PolyComposition.distNat_natMax_le",
+   "Becoming.PolyComposition.distNat_div_le",
+   "Becoming.PolyComposition.OpenPortProcess",
+   "Becoming.PolyComposition.SubstratePortProcess",
+   "Becoming.PolyComposition.coupledMacroProcess",
+   "Becoming.PolyComposition.SubstrateLaxSim",
+   "Becoming.PolyComposition.OpenSubLaxSim",
+   "Becoming.PolyComposition.jointOneStepGain",
+   "Becoming.PolyComposition.iterStepGain",
+   "Becoming.PolyComposition.closedTrace_proj",
+   "Becoming.PolyComposition.coupled_excursion_bound",
+   "Becoming.PolyComposition.coupledBlockGain",
+   "Becoming.PolyComposition.coupled_closed_laxSim",
+   "Becoming.PolyComposition.coupled_closed_lax_kernel",
+   "Becoming.PolyComposition.CoupledSmallGainWitness.no_reduced_law_coupled",
+   "Becoming.PolyComposition.CoupledSmallGainWitness.nonzero_bidirectional_coupling",
+   "Becoming.PolyComposition.CoupledSmallGainWitness.coupled_small_gain_viable",
+   "Becoming.PolyComposition.CoupledSmallGainWitness.small_gain_violation_contrast"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "polynomial-dynamic-interfaces-and-coupled-laxity",
+    "index": 1
+   },
+   {
+    "record": "polynomial-dynamic-interfaces-and-coupled-laxity",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Unanchored self-modification of observation ports, concurrent reconfiguration without epoch/reserve serialization, or treating passive/isolated contraction bounds as holding under unmodeled bidirectional coupling."
+  },
+  "exits": [
+   {
+    "to": "open-interface-composition-and-replacement",
+    "law": "Becoming.PolyComposition.ofOpenComponent_kernel_iff",
+    "edge": {
+     "en": "Under constant-mode interfaces, PolyComponent viability reduces constructively to static OpenComponent Viability.Kernel."
+    },
+    "strength": "exact",
+    "records": [
+     "polynomial-dynamic-interfaces-and-coupled-laxity"
+    ],
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "Viability.Kernel of closedProcess (A ⊕ B) under composeContract and closedGuard"
+    },
+    "law": "Becoming.PolyComposition.coupled_closed_lax_kernel",
+    "edge": {
+     "en": "Given coupled SubstrateLaxSim and OpenSubLaxSim simulations, macro certificate certQ, block-gain absorption alpha * Delta + eps <= Delta, guard margin d <= beta * Delta + eta implying x_crit <= u.1, and initial epoch membership in KQ, closedProcess (A ⊕ B) keeps Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "polynomial-dynamic-interfaces-and-coupled-laxity"
+    ],
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "Viability.Kernel preserved across serialized epoch-reserve reconfiguration steps"
+    },
+    "law": "Becoming.PolyComposition.serialReconfig_kernel",
+    "edge": {
+     "en": "Under Transactions.fresh epoch gating, admitted reconfiguration proposals, and reserve headroom >= slack, SerialReconfigProcess stays inside Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "polynomial-dynamic-interfaces-and-coupled-laxity"
+    ],
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "finite-step depletion inside blind mode when dynamic mode switching stays unadapted"
+    },
+    "law": "Becoming.PolyComposition.DynamicPortWitness.stayBlind_crashes",
+    "edge": {
+     "en": "Witness: DynamicPortWitness depletes to crash at step 7 when fixed in .blind instead of cycling .blind -> .widened -> .contracted."
+    },
+    "strength": "witness",
+    "records": [
+     "polynomial-dynamic-interfaces-and-coupled-laxity"
+    ],
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Automatic synthesis of AnchoredBase, small-gain contraction Δ, or optimal dynamic mode schedules without supplied contracts and step moduli.",
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#does-not-show--未表明"
+   },
+   {
+    "en": "Decentralized lock-free consensus under arbitrary Byzantine clocks without epoch/serial state.",
+    "source": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom Init core; requires supplied ModeGuard contracts, AnchoredBase stability, epoch-reserve headroom >= slack, and joint small-gain contraction bounds across coupled substrates."
+  },
+  "sources": [
+   "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "interventional-causal-abstraction-and-goodhart",
+  "name": {
+   "en": "Exact and lax interventional causal abstraction, composition, and Causal Goodhart"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Packages intervention-indexed transitions into CausalSystem alongside ExactCausalAbs and LaxCausalAbs across Mechanism, Experiment, ExchangeLaw, and OpenComposition; transfers open-loop, feedback, and sampled Viability.Kernel policies; lifts GrammarLaws and Sensitive finite-history closure; and constructs CausalGoodhartWitness separating exact passive commuting from micro collapse under intervention."
+  },
+  "records": [
+   "interventional-causal-abstraction-and-goodhart"
+  ],
+  "declarations": [
+   "Becoming.CausalSystem",
+   "Becoming.CausalSystem.passive",
+   "Becoming.FactorsThroughMap",
+   "Becoming.ExactCausalAbs",
+   "Becoming.ExactCausalAbs.Lifts",
+   "Becoming.LaxCausalAbs",
+   "Becoming.LaxCausalAbs.toLaxSim",
+   "Becoming.LaxCausalAbs.passive",
+   "Becoming.CausalSystem.ofMap",
+   "Becoming.CausalSystem.ofDisturbed",
+   "Becoming.CausalSystem.ofMechanism",
+   "Becoming.CausalSystem.ofRetarget",
+   "Becoming.CausalSystem.ofOpenComponent",
+   "Becoming.CausalSystem.ofOpenComposite",
+   "Becoming.CausalSystem.prod",
+   "Becoming.effectiveLaw",
+   "Becoming.CausalSystem.ofExchangeLaw",
+   "Becoming.withAct_self_next_pointwise",
+   "Becoming.exactCausal_passive_factors",
+   "Becoming.exactCausal_trace_map",
+   "Becoming.exactCausal_trace_exact_iff",
+   "Becoming.exactCausal_commuting_iff",
+   "Becoming.LaxCausalAbs.ofPassiveLaxSim",
+   "Becoming.exactCausal_to_laxCausal",
+   "Becoming.CausalSystem.scheduledProcess",
+   "Becoming.scheduledProcess_trace_block",
+   "Becoming.laxCausal_openLoop_sim",
+   "Becoming.laxCausal_openLoop_kernel_transfer",
+   "Becoming.laxCausal_openLoop_keptFor_linear",
+   "Becoming.CausalSystem.feedbackProcess",
+   "Becoming.exactCausal_feedback_trace_map",
+   "Becoming.exactCausal_feedback_kernel_transfer",
+   "Becoming.laxCausal_feedback_kernel_transfer",
+   "Becoming.laxCausal_feedback_kernel_transfer_of_ball_invariant",
+   "Becoming.laxCausal_feedback_keptFor_linear",
+   "Becoming.sampledFeedbackProcess",
+   "Becoming.sampledFeedbackProcess_trace_block",
+   "Becoming.laxCausal_sampledFeedback_kernel_transfer",
+   "Becoming.PositiveCoupledFeedbackWitness.no_exact_causal_abs",
+   "Becoming.PositiveCoupledFeedbackWitness.step_projection_err",
+   "Becoming.PositiveCoupledFeedbackWitness.laxAbs",
+   "Becoming.PositiveCoupledFeedbackWitness.feedback_viability_kernel",
+   "Becoming.PositiveCoupledFeedbackWitness.openLoop_viability_kernel",
+   "Becoming.ExactCausalAbs.comp",
+   "Becoming.ExactCausalAbs.Lifts.comp",
+   "Becoming.LaxCausalAbs.comp",
+   "Becoming.LaxCausalAbs.compAdditive",
+   "Becoming.LaxCausalAbs.compOneStep",
+   "Becoming.ExactCausalAbs.prod",
+   "Becoming.LaxCausalAbs.prodMax",
+   "Becoming.LaxCausalAbs.prodSum",
+   "Becoming.ofOpenComposite_step_iff",
+   "Becoming.ofOpenComposite_boundary_local",
+   "Becoming.ExactCausalAbs.composeOpen",
+   "Becoming.LaxCausalAbs.composeOpen_to_prod_max",
+   "Becoming.LaxCausalAbs.composeOpenMax",
+   "Becoming.HorizontalLeakageWitness.exact_on_obs",
+   "Becoming.HorizontalLeakageWitness.exact_marginal_A",
+   "Becoming.HorizontalLeakageWitness.exact_passive_A_marginal_B",
+   "Becoming.HorizontalLeakageWitness.no_exact_causal_abs",
+   "Becoming.HorizontalLeakageWitness.no_zero_slack_lax_abs",
+   "Becoming.CausalGoodhartWitness.passive_commuting_all",
+   "Becoming.CausalGoodhartWitness.passive_laxSim_exact",
+   "Becoming.CausalGoodhartWitness.passive_micro_kernel",
+   "Becoming.CausalGoodhartWitness.passive_macro_kernel",
+   "Becoming.CausalGoodhartWitness.macro_boost_kernel",
+   "Becoming.CausalGoodhartWitness.micro_boost_guardS_collapses",
+   "Becoming.CausalGoodhartWitness.micro_boost_proxy_collapses",
+   "Becoming.CausalGoodhartWitness.no_exact_causal_abs_any_omega",
+   "Becoming.CausalGoodhartWitness.no_zero_slack_lax_causal_abs",
+   "Becoming.CausalGoodhartWitness.no_small_slack_lax_causal_abs",
+   "Becoming.CausalGoAlike",
+   "Becoming.CausalImage",
+   "Becoming.«因像定当且仅当因同行»",
+   "Becoming.exactCausal_exists_iff_causalGoAlike",
+   "Becoming.ImageMap",
+   "Becoming.CausalGoAlikeMap",
+   "Becoming.imageMap_iff_grammar",
+   "Becoming.exactCausalMap_exists_iff",
+   "Becoming.projectHistList",
+   "Becoming.projectHistList_eq_iff",
+   "Becoming.withAct_sensitive_iff",
+   "Becoming.exchange_givesAlike_iff_sensitive_in",
+   "Becoming.exactCausal_of_exchange_sensitive_in",
+   "Becoming.withAct_self_next_projectHistList",
+   "Becoming.sensitive_in_of_through",
+   "Becoming.causal_underdetermined_of_untaken",
+   "Becoming.mechanism_intervention_underdetermined",
+   "Becoming.exactCausal_refuted_of_confound_varied"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "interventional-causal-abstraction-and-goodhart",
+    "index": 1
+   },
+   {
+    "record": "interventional-causal-abstraction-and-goodhart",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Inferring interventional CausalGoAlike or policy-preserving abstraction from passive observational commuting alone (CausalGoodhartWitness), or composing horizontal subsystems without boundary locality and interventional matching."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "exact interventional trace equality and lifted causal simulation iff micro/macro intervention commutation holds"
+    },
+    "law": "Becoming.exactCausal_commuting_iff",
+    "edge": {
+     "en": "Exact interventional commutation characterizes ExactCausalAbs equivalence across trace maps and CausalGoAlike."
+    },
+    "strength": "exact",
+    "records": [
+     "interventional-causal-abstraction-and-goodhart"
+    ],
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "micro Viability.Kernel (C1.scheduledProcess sigma sched) under an open-loop schedule"
+    },
+    "law": "Becoming.laxCausal_openLoop_kernel_transfer",
+    "edge": {
+     "en": "Under LaxCausalAbs, fixed schedule sched, absorption lc.alpha * Delta + lc.eps <= Delta, guard margin M.d <= lc.beta * Delta + lc.eta -> guardS, initial epoch₀, and macro open-loop Viability.Kernel, the scheduled micro process keeps Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "interventional-causal-abstraction-and-goodhart"
+    ],
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "micro Viability.Kernel (C1.feedbackProcess (fun s => kappa (pi s))) under closed-loop state feedback"
+    },
+    "law": "Becoming.laxCausal_feedback_kernel_transfer",
+    "edge": {
+     "en": "For 1-step LaxCausalAbs (sigma = id) with alpha * Delta + eps <= Delta, invariant K inside guardQ closed under Delta-ball perturbations, guard margin M.d <= beta * Delta + eta -> guardS, epoch₀, and K (pi s₀), closed-loop macro feedback keeps micro Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "interventional-causal-abstraction-and-goodhart"
+    ],
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "Causal Goodhart micro collapse despite exact 16-state passive lumping and eternal macro safety"
+    },
+    "law": "Becoming.CausalGoodhartWitness.micro_boost_guardS_collapses",
+    "edge": {
+     "en": "Witness: CausalGoodhartWitness passes all passive commuting/lumping checks while collapsing under micro boost intervention."
+    },
+    "strength": "witness",
+    "records": [
+     "interventional-causal-abstraction-and-goodhart"
+    ],
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Empirical causal discovery of intervention alignment ω or micro transition kernels from purely passive finite traces (explicitly obstructed by causal_underdetermined_of_untaken and mechanism_intervention_underdetermined).",
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#does-not-show--未表明"
+   },
+   {
+    "en": "Distributional or KL/wasserstein interventional distance metrics beyond discrete Nat SlackDist.",
+    "source": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom Init core; open-loop LaxCausalAbs kernel transfer requires alpha * Delta + eps <= Delta (or identity over finite horizon), and horizontal composition requires boundary-local intervention alignment."
+  },
+  "sources": [
+   "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "active-inquiry-deadline-cascade-and-blankets",
+  "name": {
+   "en": "Active inquiry margin sandwich, cascade alarm capture, delay obstructions, and blanket screening"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Establishes the active-inquiry exploration margin sandwich (Reserve >= reserve drawn by probing + safety band yields viable recovery, while under-buffered or passive runs fail before deadline), proves synchronized-alarm pool capture across Cascade/ReachedCascade lists, bounds coupling-distance delay and threshold blindness, and proves blanket-boundary screening requires internal isolation."
+  },
+  "records": [
+   "active-inquiry-deadline-cascade-and-blankets"
+  ],
+  "declarations": [
+   "Becoming.ActiveInquiryLoop.ExploreMarginInv",
+   "Becoming.ActiveInquiryLoop.inquiryPolyComponent",
+   "Becoming.ActiveInquiryLoop.inquiryContract",
+   "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+   "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse",
+   "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined",
+   "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction",
+   "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility",
+   "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both",
+   "Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable",
+   "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes",
+   "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes",
+   "Becoming.ActiveInquiryLoop.cascadeListObs",
+   "Becoming.ActiveInquiryLoop.composeListObsIndexed",
+   "Becoming.ActiveInquiryLoop.independentListObs",
+   "Becoming.ActiveInquiryLoop.composeList_viable_indexed",
+   "Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike",
+   "Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike",
+   "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse",
+   "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+   "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes",
+   "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable",
+   "Becoming.ActiveInquiryLoop.coupling_distance_obs_alike",
+   "Becoming.ActiveInquiryLoop.clockedPolyComponent",
+   "Becoming.ActiveInquiryLoop.clockedPolyContract",
+   "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction",
+   "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes",
+   "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable",
+   "Becoming.ActiveInquiryLoop.network_threshold_blindness",
+   "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse",
+   "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse",
+   "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes",
+   "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel",
+   "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable",
+   "Becoming.ActiveInquiryLoop.BlanketContractSpec",
+   "Becoming.ActiveInquiryLoop.componentOfBlanket",
+   "Becoming.ActiveInquiryLoop.contractOfBlanket",
+   "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable",
+   "Becoming.ActiveInquiryLoop.blanket_compose_screening",
+   "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts",
+   "Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable",
+   "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable",
+   "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined",
+   "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "active-inquiry-deadline-cascade-and-blankets",
+    "index": 1
+   },
+   {
+    "record": "active-inquiry-deadline-cascade-and-blankets",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Treating passive exploration under unprobed states, cascade-synchronized alarms, or leaky non-isolated blankets as preserving viability."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "viable probing through model identification and recovery when reserve headroom brackets reserve drawn by probing"
+    },
+    "law": "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+    "edge": {
+     "en": "ExploreMarginInv reserve margin brackets reserve drawn by active inquiry until recovery inside Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "active-inquiry-deadline-cascade-and-blankets"
+    ],
+    "source": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "pool drawdown collapse under shared cascade alarm synchronization or missed inquiry deadline"
+    },
+    "law": "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+    "edge": {
+     "en": "Shared Cascade.emitAlarm synchronization with unwarned headroom below total pool drawdown collapses joint viability."
+    },
+    "strength": "sufficient",
+    "records": [
+     "active-inquiry-deadline-cascade-and-blankets"
+    ],
+    "source": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "internal blanket isolation whenever composed subsystems screen off determined internal parts"
+    },
+    "law": "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts",
+    "edge": {
+     "en": "Screening off internal state across blanket composition strictly requires blanket isolation of determined parts."
+    },
+    "strength": "necessary",
+    "records": [
+     "active-inquiry-deadline-cascade-and-blankets"
+    ],
+    "source": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Continuous-time or probabilistic Bayesian exploration regret bounds beyond discrete Nat margins and finite-horizon lag bounds.",
+    "source": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#does-not-show--未表明"
+   },
+   {
+    "en": "Empirical identification of physical sensors or cascades satisfying BlanketContractSpec or Cascade.emitAlarm.",
+    "source": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom Init core; uses discrete Nat headroom, finite-horizon lag deadlines, and deterministic Cascade/BlanketContractSpec boundaries."
+  },
+  "sources": [
+   "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "endogenous-order-scope-coevolution-and-nash",
+  "name": {
+   "en": "Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Proves online OrderUpdater convergence under positive feedback (Weighting.IncreasingInOwn) alongside off-support reversal and partial-feedback limits; bridges timely PolyComposition ScopeMode switching to SelectionLevels/GroupEnding survival; proves course-menu widening breaks restrained symmetric pure Nash equilibria until reciprocal withholding gates restore them; and closes the Unrestricted non-entailment firewall."
+  },
+  "records": [
+   "endogenous-order-scope-coevolution-and-nash"
+  ],
+  "declarations": [
+   "Becoming.EndogenousOrder.OrderUpdater",
+   "Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn",
+   "Becoming.EndogenousOrder.adaptive_ranks_converges",
+   "Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding",
+   "Becoming.EndogenousOrder.online_off_support_reversal",
+   "Becoming.EndogenousOrder.online_weight_learner_reverses_off_support",
+   "Becoming.EndogenousOrder.uncoupled_zero_weight_forever",
+   "Becoming.EndogenousOrder.uncoupled_blindness_firewall",
+   "Becoming.EndogenousOrder.adaptive_order_ranks_horizon",
+   "Becoming.EndogenousOrder.macroAdmits_restores_comparability",
+   "Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll_converges",
+   "Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall",
+   "Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds",
+   "Becoming.EndogenousOrder.ScopeMode",
+   "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+   "Becoming.EndogenousOrder.wide_modeRefines_narrow",
+   "Becoming.EndogenousOrder.timely_modeRefines_viability_kernel",
+   "Becoming.EndogenousOrder.falls_iff_kept",
+   "Becoming.EndogenousOrder.assorted_wide_scope_emerges",
+   "Becoming.EndogenousOrder.unassorted_myopic_trap",
+   "Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_modeSwitch_raises_lineage",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_gatedGen_persists",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_gatedGen_extinguishes",
+   "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_gatedGen_extinguishes",
+   "Becoming.EndogenousOrder.CourseRealization",
+   "Becoming.EndogenousOrder.PureNash",
+   "Becoming.EndogenousOrder.sym_pureNash_iff_mutualBest",
+   "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction",
+   "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+   "Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_matches_gated_or",
+   "Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds",
+   "Becoming.EndogenousOrder.EndogenousOrderSystem",
+   "Becoming.EndogenousOrder.endogenousOrder_admits_rival",
+   "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted",
+   "Becoming.EndogenousOrder.EndogenousFirewallWitness.system",
+   "Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "endogenous-order-scope-coevolution-and-nash",
+    "index": 1
+   },
+   {
+    "record": "endogenous-order-scope-coevolution-and-nash",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Claiming online reweighting converges off-support, delayed scope expansion rescues coupled groups, unrestrained menu widening keeps cooperative Nash equilibria, or any EndogenousOrder law entails Unrestricted moral standing."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "restored unique restrained pure Nash equilibrium (r0, r0) on the widened menu {r0, d0}"
+    },
+    "law": "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+    "edge": {
+     "en": "On a gated CourseRealization with widened binary menu wide = {r0, d0}, mutual-cooperation admissibility, and partner-port cutoffs past T_gate against defection d0, (r0, r0) is restored as the unique PureNash."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-order-scope-coevolution-and-nash"
+    ],
+    "source": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "Viability.Kernel preservation under timely PolyComposition ScopeMode switching for any unconstrained proposer"
+    },
+    "law": "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+    "edge": {
+     "en": "Under bounded lag initLag <= maxLagN, monotone G with post_viable floor, warn_margin, and init_margin, anchoredSelfModComponent keeps any unconstrained proposer inside Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-order-scope-coevolution-and-nash"
+    ],
+    "source": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "collapse of restrained symmetric pure Nash and non-entailment of Unrestricted under rival valuations"
+    },
+    "law": "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted",
+    "edge": {
+     "en": "EndogenousOrderSystem admits rival valuations, proving EndogenousOrder laws never entail Unrestricted."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-order-scope-coevolution-and-nash"
+    ],
+    "source": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "That any empirical selection or weighting rule learns true world structure off-support or derives Unrestricted significance without a separate normative recognition (AGENTS.md Rule 2).",
+    "source": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#does-not-show--未表明"
+   },
+   {
+    "en": "Continuous utility equilibrium uniqueness beyond discrete finite CourseRealization over downFrom horizon.",
+    "source": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom L2 core; requires positive on-support feedback for convergence, timely ScopeMode switches before lag expiry, and reciprocal gating for Nash restoration."
+  },
+  "sources": [
+   "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "derived-evolutionary-drawdown-and-transitions",
+  "name": {
+   "en": "Derived selection-to-drawdown collapse, multi-site exchange bridges, and compositional transitions"
+  },
+  "family": "A",
+  "mechanism": {
+   "en": "Derives rising embodied uptake floors and eventual regime drawdown collapse directly from positive selection within cohorts via EmbodiedConversion, constructs substantive multi-site Flow.Balances and World.ReadOffExchange bridges from OpenComponent runs over arbitrary Ext, and separates unintegrated confined takeover from hide/hideContract sealed compositional major transitions."
+  },
+  "records": [
+   "derived-evolutionary-drawdown-and-transitions"
+  ],
+  "declarations": [
+   "Becoming.EvolutionaryDrawdown.EmbodiedConversion",
+   "Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn",
+   "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge",
+   "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within",
+   "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection",
+   "Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises",
+   "Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within",
+   "Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends",
+   "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past",
+   "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+   "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified",
+   "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified",
+   "Becoming.EvolutionaryDrawdown.MultiSiteRelatum",
+   "Becoming.EvolutionaryDrawdown.multiSiteFlow",
+   "Becoming.EvolutionaryDrawdown.multiSiteWeb",
+   "Becoming.EvolutionaryDrawdown.multiSiteWorld",
+   "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw",
+   "Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw",
+   "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange",
+   "Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange",
+   "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange",
+   "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation",
+   "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation",
+   "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified",
+   "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends",
+   "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+   "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection",
+   "Becoming.EvolutionaryDrawdown.nested_transition_raises_among",
+   "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends",
+   "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability",
+   "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check",
+   "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "derived-evolutionary-drawdown-and-transitions",
+    "index": 1
+   },
+   {
+    "record": "derived-evolutionary-drawdown-and-transitions",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Treating positive within-cohort selection surplus as sustainably non-depleting without sequestration/renewal, or omitting boundary hiding in compositional transitions."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "eventual drawdown collapse once embodied positive-selection surplus pushes uptake above bounded substrate renewal"
+    },
+    "law": "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+    "edge": {
+     "en": "Positive within-cohort selection surplus raises EmbodiedConversion uptake floors until bounded drawdown exhausts the regime."
+    },
+    "strength": "sufficient",
+    "records": [
+     "derived-evolutionary-drawdown-and-transitions"
+    ],
+    "source": "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "sealed internal viability and major-transition selection shift across boundary-hidden OpenComponent assemblies"
+    },
+    "law": "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+    "edge": {
+     "en": "hide/hideContract encapsulation seals internal viability while unintegrated confined takeover ends."
+    },
+    "strength": "sufficient",
+    "records": [
+     "derived-evolutionary-drawdown-and-transitions"
+    ],
+    "source": "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "That real biological lineages satisfy EmbodiedConversion unit-uptake floors or Founding.Nested sequestration (empirical recognition under AGENTS.md Rule 2).",
+    "source": "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md#does-not-show--未表明"
+   },
+   {
+    "en": "Stochastic mutation-selection PDEs beyond discrete finite-cohort Nat generation models.",
+    "source": "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom L2 core through UnifiedDrawdown; requires EmbodiedConversion uptake floors and non-zero active-site admissibility; biological recognition remains outside Lean."
+  },
+  "sources": [
+   "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "whole-becoming-master-spine",
+  "name": {
+   "en": "Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Integrates active inquiry, polynomial open contracts, blanket hiding, causal abstraction, multi-site exchange, lineage persistence, endogenous order/Nash gating, all five shared GrammarLaws lifts, full U1-U4 obstruction panorama, and the K6 ethics compatibility + ReadsOnlyDynamics non-entailment firewall on one single 0-axiom WholeArchitecture."
+  },
+  "records": [
+   "whole-becoming-master-spine"
+  ],
+  "declarations": [
+   "Becoming.MasterSpine.polyUniformToOpenComponent",
+   "Becoming.MasterSpine.wholeSealedLeft",
+   "Becoming.MasterSpine.wholeScopeOpen",
+   "Becoming.MasterSpine.wholeOp",
+   "Becoming.MasterSpine.wholeInquirySpec",
+   "Becoming.MasterSpine.postProbeRun",
+   "Becoming.MasterSpine.postProbeRun_opInvariants",
+   "Becoming.MasterSpine.WholeArchitecture",
+   "Becoming.MasterSpine.WholeArchitectureViableProp",
+   "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+   "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable",
+   "Becoming.MasterSpine.whole_architecture_scopeMode_bridge",
+   "Becoming.MasterSpine.MasterSpineGrammarLiftsProp",
+   "Becoming.MasterSpine.masterSpine_grammar_lifts",
+   "Becoming.MasterSpine.FullObstructionPanoramaProp",
+   "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama",
+   "Becoming.MasterSpine.masterSpine_readsOnlyDynamics",
+   "Becoming.MasterSpine.masterSpine_admits_rival",
+   "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted",
+   "Becoming.MasterSpine.K6EthicsFirewallProp",
+   "Becoming.MasterSpine.k6_ethics_chain_and_firewall",
+   "Becoming.MasterSpine.whole_becoming_master_theorem",
+   "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture",
+   "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "whole-becoming-master-spine",
+    "index": 1
+   },
+   {
+    "record": "whole-becoming-master-spine",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Splitting alignment viability from causal/grammar/order dynamics or deriving Unrestricted ethical claims from any purely dynamical MasterSpine premise."
+  },
+  "exits": [
+   {
+    "to": "master-alignment-spine-and-sharpness",
+    "law": "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+    "edge": {
+     "en": "Every WholeArchitecture simultaneously preserves post-probe PolyComponent viability kernels, small-gain lax simulation, and multi-site balance."
+    },
+    "strength": "sufficient",
+    "records": [
+     "whole-becoming-master-spine"
+    ],
+    "source": "theories/becoming/results/records/whole-becoming-master-spine.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "full five-grammar unification, U1-U4 sharpness panorama, K6 compatibility, and unconditional Unrestricted non-entailment"
+    },
+    "law": "Becoming.MasterSpine.whole_becoming_master_theorem",
+    "edge": {
+     "en": "WholeArchitecture realizes coupled viability, all five GrammarLaws lifts, obstruction panorama, and K6 firewall together."
+    },
+    "strength": "sufficient",
+    "records": [
+     "whole-becoming-master-spine"
+    ],
+    "source": "theories/becoming/results/records/whole-becoming-master-spine.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "constructive arithmetic instantiation of every MasterSpine claim on witnessArchitecture"
+    },
+    "law": "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem",
+    "edge": {
+     "en": "Witness: witnessArchitecture satisfies the complete MasterSpine theorem with zero axioms."
+    },
+    "strength": "witness",
+    "records": [
+     "whole-becoming-master-spine"
+    ],
+    "source": "theories/becoming/results/records/whole-becoming-master-spine.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Showing an architecture is internally consistent in Lean never shows that any actual AI training pipeline, exchange, or institution satisfies WholeArchitecture's alarm, cap_within, or G_rises premises (Rule 2 recognition boundary).",
+    "source": "theories/becoming/results/records/whole-becoming-master-spine.md#does-not-show--未表明"
+   },
+   {
+    "en": "Purely dynamical invariants leave unrestricted ethical significance unforced: masterSpine_cannot_entail_unrestricted holds unconditionally on every dynamical law of MasterSpine.",
+    "source": "theories/becoming/results/records/whole-becoming-master-spine.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom L2 core; bundles the entire discrete Becoming core on WholeArchitecture, while continuous/probabilistic bounds sit in the periphery and empirical instantiation requires Rule 2 recognition."
+  },
+  "sources": [
+   "theories/becoming/results/records/whole-becoming-master-spine.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "unified-becoming-over-reals",
+  "name": {
+   "en": "Unified real-valued periphery joining all nine Mathlib becoming modules"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Unifies all nine Lean 4.30.0-rc2 + Mathlib periphery modules in Becoming.Reals: bridges iterated AR(1) variance to metricSlack and inertia-shortfall RegimeMargin collapse; links FiniteLaw probability measures to Flow exergy-destruction survival and fluctuation bounds; proves exchangeable Gibbs optimality and coarse blindness; and proves L_infinity operator-norm contraction vs feature-leakage hysteresis."
+  },
+  "records": [
+   "unified-becoming-over-reals"
+  ],
+  "declarations": [
+   "Becoming.Reals.iterVar_eq_metricSlack",
+   "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+   "Becoming.Reals.slowingDown_inertia_regime_collapse",
+   "Becoming.Reals.finiteLawOfMeasure",
+   "Becoming.Reals.fluctuation_complement_survival_ge",
+   "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival",
+   "Becoming.Reals.gibbsWeight",
+   "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable",
+   "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+   "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+   "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+   "Becoming.Reals.emA_pow_four_norm_lt_one",
+   "Becoming.Reals.emA_rate_lt_one",
+   "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+   "Becoming.Reals.becoming_reals_cross_module_witness"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "unified-becoming-over-reals",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Assuming Gaussian/exchangeable real models validate themselves empirically, or extrapolating continuous-time SDEs beyond modeled finite/matrix hypotheses."
+  },
+  "exits": [
+   {
+    "to": "continuous-stochastic-alignment-reals",
+    "law": "Becoming.Reals.slowingDown_inertia_regime_collapse",
+    "edge": {
+     "en": "AR(1) metricSlack convergence and inertia headroom deficit place real dynamics into RegimeMargin.Drawn.Falls."
+    },
+    "strength": "sufficient",
+    "records": [
+     "unified-becoming-over-reals"
+    ],
+    "source": "theories/becoming/results/records/unified-becoming-over-reals.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "operator-norm stability (rate < 1) paired with linear-FA leakage hysteresis across Autonomous and AdaptiveLoops"
+    },
+    "law": "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+    "edge": {
+     "en": "LocalMatrixOpNorm certifies emA contraction rate < 1 even alongside internal-external precision failure and FA hysteresis."
+    },
+    "strength": "sufficient",
+    "records": [
+     "unified-becoming-over-reals"
+    ],
+    "source": "theories/becoming/results/records/unified-becoming-over-reals.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "explicit cross-module real-valued parameter tuple witnessing all nine periphery bridges simultaneously"
+    },
+    "law": "Becoming.Reals.becoming_reals_cross_module_witness",
+    "edge": {
+     "en": "Witness: exhibits explicit real parameters uniting slowing-down, Gibbs optimality, exergy survival, and linear-FA leakage."
+    },
+    "strength": "witness",
+    "records": [
+     "unified-becoming-over-reals"
+    ],
+    "source": "theories/becoming/results/records/unified-becoming-over-reals.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Showing real-valued bridges in Mathlib hold under Gaussian independence, exchangeable energies, or linear Euler steps never verifies those assumptions in empirical ML or physical systems (Rule 2).",
+    "source": "theories/becoming/results/records/unified-becoming-over-reals.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib v4.30.0-rc2 periphery (propext, Classical.choice, Quot.sound); joins the nine continuous/probabilistic modules."
+  },
+  "sources": [
+   "theories/becoming/results/records/unified-becoming-over-reals.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "renewal-bridge-to-keepable-step",
+  "name": {
+   "en": "October renewal histories coincide by field renaming with keepable-step runs"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Bijects October conditional/renewal histories (History law) by constructive field renaming (historyRun / runHistory) onto runs of KeepableStep (Run (channelProcess law)), identifying Renewable law c identically with Keepable (channelProcess law) Live c and re-deriving October step and non-generation laws from KeepableStep."
+  },
+  "records": [
+   "renewal-bridge-to-keepable-step"
+  ],
+  "declarations": [
+   "Becoming.Viability.RenewalBridge.historyRun",
+   "Becoming.Viability.RenewalBridge.runHistory",
+   "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+   "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+   "Becoming.Viability.RenewalBridge.renewable_iff_keepable",
+   "Becoming.Viability.RenewalBridge.renewable_iff_step",
+   "Becoming.Viability.RenewalBridge.renewability_not_generated",
+   "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+   "Becoming.Viability.RenewalBridge.renewability_not_generated_same"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "renewal-bridge-to-keepable-step",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Treating October ChannelLaw renewal histories and KeepableStep live runs as structurally distinct dynamics, or claiming any concrete system meets ChannelLaw without verification."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "Keepable (channelProcess law) Live c across all conditional renewal configurations"
+    },
+    "law": "Becoming.Viability.RenewalBridge.renewable_iff_keepable",
+    "edge": {
+     "en": "historyRun and runHistory biject History law and Run (channelProcess law) definitionally, equating Renewable with Keepable."
+    },
+    "strength": "exact",
+    "records": [
+     "renewal-bridge-to-keepable-step"
+    ],
+    "source": "theories/becoming/results/records/renewal-bridge-to-keepable-step.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "no keepable generation of dead configurations (dead stays dead across ChannelLaw steps)"
+    },
+    "law": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+    "edge": {
+     "en": "KeepableStep dead_stays_dead transfers directly via field renaming to October non-generation theorem types."
+    },
+    "strength": "sufficient",
+    "records": [
+     "renewal-bridge-to-keepable-step"
+    ],
+    "source": "theories/becoming/results/records/renewal-bridge-to-keepable-step.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Joining the two formal definitions in Lean shows equivalence between the mathematical structures and does not show when a concrete process satisfies a ChannelLaw (Rule 2).",
+    "source": "theories/becoming/results/records/renewal-bridge-to-keepable-step.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Constructive Lean 4.29.1 bridge with 0 axioms between conditional/renewal/ and Becoming.KeepableStep."
+  },
+  "sources": [
+   "theories/becoming/results/records/renewal-bridge-to-keepable-step.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "oplax-history-comparison-and-relational-loss",
+  "name": {
+   "en": "Oplax Span(F) history comparison, Beck-Chevalley characterization, and relational loss obstructions"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Formalizes 0-axiom Span(F) history composition and bracketing coherence chi, equates chi bijectivity with pullback preservation and universal Beck-Chevalley families (chi_bijective_iff_bc_all), separates disjoint coproducts from time-step oplaxity, bridges finite Process traces and ExactCausalAbs chains, and builds emergent C2 parity obstructions breaking macro viability soundness."
+  },
+  "records": [
+   "oplax-history-comparison-and-relational-loss"
+  ],
+  "declarations": [
+   "Becoming.OplaxHistory.RelSpan",
+   "Becoming.OplaxHistory.SpanFunctor",
+   "Becoming.OplaxHistory.chi",
+   "Becoming.OplaxHistory.chi_left",
+   "Becoming.OplaxHistory.chi_right",
+   "Becoming.OplaxHistory.chi_natural",
+   "Becoming.OplaxHistory.chi_unit_left",
+   "Becoming.OplaxHistory.chi_unit_right",
+   "Becoming.OplaxHistory.chi_assoc_coherence",
+   "Becoming.OplaxHistory.chi_comp_functor",
+   "Becoming.OplaxHistory.flatSpan_proj_unique",
+   "Becoming.OplaxHistory.chiFlat_proj",
+   "Becoming.OplaxHistory.BracketTree",
+   "Becoming.OplaxHistory.bracketTree_coherence_all_n",
+   "Becoming.OplaxHistory.evalPartition_proj_unique",
+   "Becoming.OplaxHistory.macro_refinement_functorial",
+   "Becoming.OplaxHistory.bcMap",
+   "Becoming.OplaxHistory.FImageIsPullback",
+   "Becoming.OplaxHistory.chi_bijective_iff_pullback",
+   "Becoming.OplaxHistory.chi_bijective_iff_bc_all",
+   "Becoming.OplaxHistory.bc_isBijective_of_chi_bij",
+   "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample",
+   "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective",
+   "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective",
+   "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal",
+   "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one",
+   "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse",
+   "Becoming.OplaxHistory.ProcessStepWitness.ext",
+   "Becoming.OplaxHistory.trace_equiv_flatChain",
+   "Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift",
+   "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
+   "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
+   "Becoming.OplaxHistory.FiberViabilitySplit",
+   "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness",
+   "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel",
+   "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel",
+   "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split",
+   "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness",
+   "Becoming.OplaxHistory.coprod_pullback_iso",
+   "Becoming.OplaxHistory.coprod_strong_vs_time_oplax",
+   "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc",
+   "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
+   "Becoming.OplaxHistory.span_step_grammar_lumping",
+   "Becoming.OplaxHistory.FinPres",
+   "Becoming.OplaxHistory.sumPreserving_empty_isEmpty",
+   "Becoming.OplaxHistory.prodUnitToF",
+   "Becoming.OplaxHistory.prodUnitToF_natural",
+   "Becoming.OplaxHistory.prodUnitToF_isBijective",
+   "Becoming.OplaxHistory.sumPreserving_finPres_chi_bijective",
+   "Becoming.OplaxHistory.inhabitedOptionFunctor",
+   "Becoming.OplaxHistory.inhabitedOptionFunctor_chi_not_surjective"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "oplax-history-comparison-and-relational-loss",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Assuming Span(F) history comparison chi is invertible without Beck-Chevalley pullback preservation, or lifting macro safety over fiber-splitting observers."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "pullback-preserving history comparison (chi bijective) iff universal Beck-Chevalley holds across every observer"
+    },
+    "law": "Becoming.OplaxHistory.chi_bijective_iff_bc_all",
+    "edge": {
+     "en": "Bijectivity of the Span(F) comparison chi is equivalent to universal Beck-Chevalley over all observers f."
+    },
+    "strength": "exact",
+    "records": [
+     "oplax-history-comparison-and-relational-loss"
+    ],
+    "source": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "refutation of any macro predicate Kq being simultaneously complete (K u -> Kq (chi u)) and sound (Kq (chi u) -> K u)"
+    },
+    "law": "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness",
+    "edge": {
+     "en": "Any FiberViabilitySplit rules out a macro predicate Kq that is both sound and complete for micro viability K (one-sided soundness, e.g. always-false, is not excluded alone)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "oplax-history-comparison-and-relational-loss"
+    ],
+    "source": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "refutation of any simultaneously sound and complete macro viability predicate Kq on coupled C2 parity histories"
+    },
+    "law": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness",
+    "edge": {
+     "en": "Witness: C2CoupledAlignmentWitness exhibits 2-to-1 chi collapse across in-phase vs anti-phase pairs, ruling out any Kq that is both sound and complete for micro Viability.Kernel."
+    },
+    "strength": "witness",
+    "records": [
+     "oplax-history-comparison-and-relational-loss"
+    ],
+    "source": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Abstract finite-span pullback theorems and C2 parity witnesses never verify that an actual distributed software system, social institution, or learned representation realizes a given SpanFunctor or Beck-Chevalley condition (Rule 2).",
+    "source": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#does-not-show--未表明"
+   },
+   {
+    "en": "Formalizes discrete Type spans and finite-step traces; weak infinite bicategories, continuous-time flows, and probabilistic TV distance floors belong outside (the TV bounds live separately in periphery ObservationalFidelity).",
+    "source": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom Init Type-span core; strong inverse interchange chiInv requires FIma, and weak infinite bicategories / continuous measures are left outside."
+  },
+  "sources": [
+   "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "guarded-double-category-certificate-kernel",
+  "name": {
+   "en": "Strict double-category certificate kernel, conservative 3D extension, and guarded oplax syntax"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Provides a 0-axiom strict double-category certificate kernel proving unique 2D frame typing, EqCert soundness/initiality, conservative 3D directed extension (free_3d_eval_sound), and Guarded Oplax Double Syntax whose interchange steps require explicit Beck-Chevalley pullback certificates into OplaxHistory.RelSpan."
+  },
+  "records": [
+   "guarded-double-category-certificate-kernel"
+  ],
+  "declarations": [
+   "Becoming.DoubleKernel.DoubleSig",
+   "Becoming.DoubleKernel.TypedPath",
+   "Becoming.DoubleKernel.Frame",
+   "Becoming.DoubleKernel.SqTerm",
+   "Becoming.DoubleKernel.HasFrame",
+   "Becoming.DoubleKernel.hasFrame_unique",
+   "Becoming.DoubleKernel.EqCert",
+   "Becoming.DoubleKernel.eqCert_preserves_frame",
+   "Becoming.DoubleKernel.StrictDoubleCat",
+   "Becoming.DoubleKernel.eqCert_sound",
+   "Becoming.DoubleKernel.free_double_eval_unique",
+   "Becoming.DoubleKernel.natTallyDoubleCat",
+   "Becoming.DoubleKernel.eqCert_preserves_weight",
+   "Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq",
+   "Becoming.DoubleKernel.Double3Sig",
+   "Becoming.DoubleKernel.Cell3Term",
+   "Becoming.DoubleKernel.HasEndpoints3",
+   "Becoming.DoubleKernel.Eq3Cert",
+   "Becoming.DoubleKernel.cell3_eq_preserves_endpoints",
+   "Becoming.DoubleKernel.conservative_over_base_2d",
+   "Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness",
+   "Becoming.DoubleKernel.StrictTripleCat",
+   "Becoming.DoubleKernel.free_3d_eval_sound",
+   "Becoming.DoubleKernel.GuardedExpr",
+   "Becoming.DoubleKernel.evalGuardedExpr",
+   "Becoming.DoubleKernel.GuardedProof",
+   "Becoming.DoubleKernel.evalGuardedProof",
+   "Becoming.DoubleKernel.guarded_oplax_sound",
+   "Becoming.DoubleKernel.finite_non_invertible_chiStep_witness",
+   "Becoming.DoubleKernel.strict_vs_guarded_separation_witness"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "guarded-double-category-certificate-kernel",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Applying unguarded strict 2D interchange rewrites to oplax history spans that lack Beck-Chevalley pullback witnesses."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "soundness of EqCert rewrites across every StrictDoubleCat semantics with invariant 2D frames and weights"
+    },
+    "law": "Becoming.DoubleKernel.eqCert_sound",
+    "edge": {
+     "en": "Checked 2D certificate EqCert evaluates identically in every StrictDoubleCat interpretation."
+    },
+    "strength": "sufficient",
+    "records": [
+     "guarded-double-category-certificate-kernel"
+    ],
+    "source": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "sound RelSpan compositional evaluation gated by explicit Beck-Chevalley interchange witnesses"
+    },
+    "law": "Becoming.DoubleKernel.guarded_oplax_sound",
+    "edge": {
+     "en": "GuardedProof certifies sound evaluation into OplaxHistory.RelSpan whenever every interchange guard holds."
+    },
+    "strength": "sufficient",
+    "records": [
+     "guarded-double-category-certificate-kernel"
+    ],
+    "source": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "non-invertible oplax chiStep rejected by strict equality certificates yet distinguished cleanly under guarded syntax"
+    },
+    "law": "Becoming.DoubleKernel.finite_non_invertible_chiStep_witness",
+    "edge": {
+     "en": "Witness: finite non-invertible chiStep separates unguarded strict equality from guarded oplax certificates."
+    },
+    "strength": "witness",
+    "records": [
+     "guarded-double-category-certificate-kernel"
+    ],
+    "source": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Free 2D uniqueness (free_double_eval_unique) and 3D soundness (free_3d_eval_sound) never show real software obeys strict interchange without Beck-Chevalley checks.",
+    "source": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#does-not-show--未表明"
+   },
+   {
+    "en": "Does not implement a decision procedure or polynomial-time normalizer for arbitrary quotiented double theories (domain equations and weak higher coherence remain unautomated).",
+    "source": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom Init core; requires explicit StrictDoubleCat or verified Beck-Chevalley guards rather than automated domain-equation normalization."
+  },
+  "sources": [
+   "theories/becoming/results/records/guarded-double-category-certificate-kernel.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "observational-fidelity-and-multi-regime-error",
+  "name": {
+   "en": "Query-image TV blindness floor, multi-query separation, and three-regime error contrast"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Quantifies TV distortion across queries (optimal_query_tv_floor), proves sequential Dobrushin contraction tubes via MetricLaxSim alongside feedback breakdown, bounds [0,1]-bounded readout risk by gamma + tvDist, characterizes pushforward commutation by zero rowDefect / FiberLumpable, and separates zero TV distortion from fiber viability splits."
+  },
+  "records": [
+   "observational-fidelity-and-multi-regime-error"
+  ],
+  "declarations": [
+   "ObservationalFidelity.FinDist",
+   "ObservationalFidelity.pushforward",
+   "ObservationalFidelity.tvDist",
+   "ObservationalFidelity.tvDist_pushforward_le",
+   "ObservationalFidelity.massOutside",
+   "ObservationalFidelity.optimal_query_tv_floor",
+   "ObservationalFidelity.empty_source_infeasible",
+   "ObservationalFidelity.coarsening_tv_mono",
+   "ObservationalFidelity.macro_refinement_tv_mono",
+   "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
+   "ObservationalFidelity.diagSupport",
+   "ObservationalFidelity.per_query_not_implies_joint_marginal",
+   "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
+   "ObservationalFidelity.FinKernel",
+   "ObservationalFidelity.pushKernel_tv_step",
+   "ObservationalFidelity.sequential_kernel_tv_bound",
+   "ObservationalFidelity.tvDist_prodDist_le",
+   "ObservationalFidelity.independent_tensor_tv_bound",
+   "ObservationalFidelity.three_regime_error_contrast",
+   "ObservationalFidelity.three_regime_kernel_contrast",
+   "ObservationalFidelity.rowDefect",
+   "ObservationalFidelity.optimal_floor_le_rowDefect",
+   "ObservationalFidelity.tvDist_pushKernel_dobrushin",
+   "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
+   "ObservationalFidelity.kernelMetricLaxSim",
+   "ObservationalFidelity.tvDist_pushKernel_iter_bound",
+   "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim",
+   "ObservationalFidelity.viability_risk_transfer_bound",
+   "ObservationalFidelity.fiber_split_readout_floor",
+   "ObservationalFidelity.sharpBoolKernel",
+   "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
+   "ObservationalFidelity.feedback_destroys_openloop_contraction",
+   "ObservationalFidelity.rowDefect_eq_zero_iff_pushforward",
+   "ObservationalFidelity.modeRowDefect_eq_zero_iff_pushforward",
+   "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+   "ObservationalFidelity.fixed_macro_nonzero_rowDefect_witness"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "observational-fidelity-and-multi-regime-error",
+    "index": 1
+   },
+   {
+    "record": "observational-fidelity-and-multi-regime-error",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Assuming zero total-variation compression error or per-query marginal agreement prevents latent fiber viability splits or coupled feedback blow-up."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "bounded multi-step kernel TV contraction tubes via MetricLaxSim when Dobrushin coefficient alpha < 1 and rowDefect bounds slack"
+    },
+    "law": "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim",
+    "edge": {
+     "en": "Dobrushin kernel contraction and bounded rowDefect induce a MetricLaxSim contraction tube on FinDist."
+    },
+    "strength": "sufficient",
+    "records": [
+     "observational-fidelity-and-multi-regime-error"
+    ],
+    "source": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "exact FiberLumpable observable invariance iff zero rowDefect macro kernels exist"
+    },
+    "law": "ObservationalFidelity.fiberLumpable_iff_exists_zero_rowDefect",
+    "edge": {
+     "en": "Exact FiberLumpable holds iff some macro kernel achieves rowDefect = 0 everywhere."
+    },
+    "strength": "exact",
+    "records": [
+     "observational-fidelity-and-multi-regime-error"
+    ],
+    "source": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "latent fiber viability split persisting even when query-image TV error equals zero"
+    },
+    "law": "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
+    "edge": {
+     "en": "Witness: exact query-image TV = 0 fails to prevent micro viability splits inside an aliased fiber."
+    },
+    "strength": "witness",
+    "records": [
+     "observational-fidelity-and-multi-regime-error"
+    ],
+    "source": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Finite probability distribution TV bounds and discrete counterexamples never verify that empirical neural policy rollouts or real sensor pipelines are time-homogeneous, independent across sites, or contractive (Rule 2).",
+    "source": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#does-not-show--未表明"
+   },
+   {
+    "en": "Does not prove finite-sample empirical convergence rates, continuous measurable-space Radon-Nikodym bounds, or continuous-time SDEs.",
+    "source": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib ℝ periphery over FinDist and FinKernel; characterizes exact rowDefect = 0 iff pushforward/FiberLumpable."
+  },
+  "sources": [
+   "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "finite-mode-survival-distinguishability",
+  "name": {
+   "en": "Finite-mode survival distinguishability at horizon card minus one"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Uses Krylov subspace stabilization on finite-state real operator families Mode -> S -> S -> ℝ to prove two states agree on all mode words iff they agree up to length |S| - 1 (or observable rank - 1 under FiberLumpable), proves sharpness via countdown witnesses, proves mode-switch sensitivity, and separates live C2 states by sub-stochastic survival probabilities."
+  },
+  "records": [
+   "finite-mode-survival-distinguishability"
+  ],
+  "declarations": [
+   "SurvivalDistinguishability.stepOp",
+   "SurvivalDistinguishability.survVec",
+   "SurvivalDistinguishability.krylovSub",
+   "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+   "SurvivalDistinguishability.countdownK",
+   "SurvivalDistinguishability.survVec_countdownK",
+   "SurvivalDistinguishability.countdown_attains_card_pred",
+   "SurvivalDistinguishability.switchK",
+   "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+   "SurvivalDistinguishability.C2FinState",
+   "SurvivalDistinguishability.c2Embed",
+   "SurvivalDistinguishability.c2Op",
+   "SurvivalDistinguishability.c2_coupled_survival_separation",
+   "SurvivalDistinguishability.survVec_eq_finiteKrylov",
+   "SurvivalDistinguishability.krylovSub_eq_finiteKrylov",
+   "SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "finite-mode-survival-distinguishability",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Assuming constant single-mode equality guarantees indistinguishability under mode switches, or extending card - 1 bounds to infinite/non-stationary kernels without proof."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "full all-word survival indistinguishability iff agreement holds through word length |S| - 1"
+    },
+    "law": "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+    "edge": {
+     "en": "Finite Krylov subspace stabilization closes all-word distinguishability at horizon |S| - 1."
+    },
+    "strength": "exact",
+    "records": [
+     "finite-mode-survival-distinguishability"
+    ],
+    "source": "theories/becoming/results/records/finite-mode-survival-distinguishability.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "compressed all-word distinguishability horizon <= |Obs| - 1 iff exact FiberLumpable compression holds"
+    },
+    "law": "SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred",
+    "edge": {
+     "en": "FiberLumpable reduces Krylov stabilization to the observable quotient dimension |Obs| - 1."
+    },
+    "strength": "exact",
+    "records": [
+     "finite-mode-survival-distinguishability"
+    ],
+    "source": "theories/becoming/results/records/finite-mode-survival-distinguishability.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "two-step mode-switch separation between states agreeing on every single-mode constant sequence"
+    },
+    "law": "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+    "edge": {
+     "en": "Witness: three-state two-mode operator stays indistinguishable under pure [false]^k and [true]^k yet splits on a two-step switch."
+    },
+    "strength": "witness",
+    "records": [
+     "finite-mode-survival-distinguishability"
+    ],
+    "source": "theories/becoming/results/records/finite-mode-survival-distinguishability.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Does not prove finite-horizon distinguishability bounds for infinite-state, continuous-state, or non-stationary transition kernels.",
+    "source": "theories/becoming/results/records/finite-mode-survival-distinguishability.md#does-not-show--未表明"
+   },
+   {
+    "en": "Under normalized stochastic Markov rows, survVec K w s = 1 for all words w, so FiberLumpable observable-horizon compression carries non-trivial distinguishing content only for substochastic/real survival matrices.",
+    "source": "theories/becoming/results/records/finite-mode-survival-distinguishability.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib ℝ periphery over finite nonempty Fintype S; bridged directly to FiniteKrylov.stepLinearMap and FiberLumpable."
+  },
+  "sources": [
+   "theories/becoming/results/records/finite-mode-survival-distinguishability.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "finite-probability-and-krylov-foundation",
+  "name": {
+   "en": "Shared finite probability laws and Krylov rank stabilization foundation"
+  },
+  "family": "D",
+  "mechanism": {
+   "en": "Provides the shared finite-probability (FinDist, tvDist metric identities, optimal_query_tv_floor) and finite-Krylov (stepLinearMap, krylovSub rank stabilization, pullbackLinear FiberLumpable observable horizon |Obs| - 1) substrate used by ObservationalFidelity, SurvivalDistinguishability, and QuantitativeTransfer."
+  },
+  "records": [
+   "finite-probability-and-krylov-foundation"
+  ],
+  "declarations": [
+   "FiniteProb.FinDist",
+   "FiniteProb.FinDist.ext",
+   "FiniteProb.diracDist",
+   "FiniteProb.pushforward",
+   "FiniteProb.pushforward_comp",
+   "FiniteProb.tvDist",
+   "FiniteProb.tvDist_nonneg",
+   "FiniteProb.tvDist_self",
+   "FiniteProb.tvDist_symm",
+   "FiniteProb.tvDist_eq_zero_iff",
+   "FiniteProb.tvDist_triangle",
+   "FiniteProb.tvDist_pushforward_le",
+   "FiniteProb.massOutside",
+   "FiniteProb.massOutside_nonneg",
+   "FiniteProb.optimal_query_tv_floor",
+   "FiniteProb.empty_source_infeasible",
+   "FiniteKrylov.stepOp",
+   "FiniteKrylov.stepLinearMap",
+   "FiniteKrylov.wordVec",
+   "FiniteKrylov.survVec",
+   "FiniteKrylov.krylovSub",
+   "FiniteKrylov.krylovSub_mono",
+   "FiniteKrylov.stepLinearMap_mem_krylovSub_succ",
+   "FiniteKrylov.krylovSub_step_eq_of_eq",
+   "FiniteKrylov.krylovSub_stabilizes_from",
+   "FiniteKrylov.krylovSub_stabilizes_before_rank",
+   "FiniteKrylov.krylovSub_stabilizes_before_card",
+   "FiniteKrylov.wordVec_mem_krylovSub_pred",
+   "FiniteKrylov.FiberLumpable",
+   "FiniteKrylov.pullbackLinear",
+   "FiniteKrylov.mem_range_pullbackLinear_iff",
+   "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+   "FiniteKrylov.lumpable_obs_horizon_one_witness"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "finite-probability-and-krylov-foundation",
+    "index": 1
+   },
+   {
+    "record": "finite-probability-and-krylov-foundation",
+    "index": 2
+   }
+  ],
+  "forbids": {
+   "en": "Treating normalized stochastic Markov kernels (where survVec = 1 identically) as gaining non-trivial survival separation without sub-stochastic absorption."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "strictly stabilized Krylov word-vector span once length reaches Module.finrank"
+    },
+    "law": "FiniteKrylov.krylovSub_stabilizes_before_rank",
+    "edge": {
+     "en": "Nested Krylov subspaces over finite S stabilize at rank <= |S| - 1."
+    },
+    "strength": "sufficient",
+    "records": [
+     "finite-probability-and-krylov-foundation"
+    ],
+    "source": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "observable-quotient horizon <= |Obs| - 1 iff exact FiberLumpable holds on FinKernel"
+    },
+    "law": "FiniteKrylov.survival_indistinguishable_iff_le_obs_pred",
+    "edge": {
+     "en": "Under FiberLumpable f K, pullbackLinear invariance collapses survival distinguishability to |Obs| - 1."
+    },
+    "strength": "exact",
+    "records": [
+     "finite-probability-and-krylov-foundation"
+    ],
+    "source": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "non-trivial query TV distortion floor >= massOutside f on finite distributions"
+    },
+    "law": "FiniteProb.optimal_query_tv_floor",
+    "edge": {
+     "en": "Every distribution pushed outside query image S incurs irreducible TV floor >= massOutside."
+    },
+    "strength": "sufficient",
+    "records": [
+     "finite-probability-and-krylov-foundation"
+    ],
+    "source": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Normalized stochastic Markov kernels trivially satisfy survVec K w s = 1 for all words w, so FiberLumpable observable-horizon reduction carries distinguishing power only for substochastic or general real survival/reward matrices.",
+    "source": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#does-not-show--未表明"
+   },
+   {
+    "en": "FiberLumpable is an intrinsic invariance on K; for prescribed (K, L) it does not force zero rowDefect without a compatible L (fixed_macro_nonzero_rowDefect_witness).",
+    "source": "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib ℝ periphery over finite Fintype state spaces and exact FiberLumpable matrix invariance."
+  },
+  "sources": [
+   "theories/becoming/results/records/finite-probability-and-krylov-foundation.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "endogenous-detection-before-capture-lock",
+  "name": {
+   "en": "Endogenous detection before capture lock and split evidence",
+   "zh": "捕获锁定前之内生检测与分裂证据"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "Characterizes the exact ClosedCapture race window for an observation-only Moore learner reading pool state at registration step tau: at a reading step r >= tau where the active rule favours target carriers, other <= carrier at r and other < carrier at r + 1 locks alternatives out (`admits = false`) at every step from r + 1 (`mark_kept_locks_out`); conversely, where carrier <= other at r, permanent disfavouring of target carriers and admission of alternatives (`admits = true`) from r + 1 on hold iff carrier <= other at r + 1 (`mark_turned_admits_iff`). Under one-time-mask split evidence, locally sound isolated filters stay trapped favouring carriers while pooled one-bit-per-step exchange turns (`split_silenced_trapped`, `split_exchange_turns`), and `EndogenousEmergence` derives universal silent-cliff collapse."
+  },
+  "records": [
+   "endogenous-detection-before-capture-lock"
+  ],
+  "declarations": [
+   "Becoming.EndogenousDetectionRace.gated_eq_closed",
+   "Becoming.EndogenousDetectionRace.lockout_pure_extract",
+   "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant",
+   "Becoming.EndogenousDetectionRace.mark_eq_thinned",
+   "Becoming.EndogenousDetectionRace.mark_kept_iff",
+   "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+   "Becoming.EndogenousDetectionRace.mark_turned_iff",
+   "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
+   "Becoming.EndogenousDetectionRace.race_in_time",
+   "Becoming.EndogenousDetectionRace.race_late_after_registration",
+   "Becoming.EndogenousDetectionRace.race_probe_blocked",
+   "Becoming.EndogenousDetectionRace.race_masked_strain",
+   "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+   "Becoming.EndogenousDetectionRace.race_slow_cadence",
+   "Becoming.EndogenousDetectionRace.race_fast_cadence",
+   "Becoming.EndogenousDetectionRace.race_exo_no_false_turn",
+   "Becoming.EndogenousDetectionRace.retag_symmetry",
+   "Becoming.EndogenousDetectionRace.count_view_invariant",
+   "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
+   "Becoming.EndogenousDetectionRace.silencing_consensus",
+   "Becoming.EndogenousDetectionRace.verdict_leak",
+   "Becoming.EndogenousDetectionRace.exchange_detects",
+   "Becoming.EndogenousDetectionRace.split_silenced_trapped",
+   "Becoming.EndogenousDetectionRace.split_exchange_turns",
+   "Becoming.EndogenousDetectionRace.split_witness_endo",
+   "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency",
+   "Becoming.EndogenousEmergence.silent_cliff_universal_collapse",
+   "Becoming.EndogenousEmergence.one_probe_universal_insufficiency",
+   "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse",
+   "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "endogenous-detection-before-capture-lock",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Assuming local myopic filtering sees split-mask pool depletion, or that a single probe suffices across thin strain bands before capture lock."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "permanent disfavouring of target carriers and admission of alternatives (admits = true) at every step from r + 1 on iff carrier <= other at r + 1"
+    },
+    "law": "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
+    "edge": {
+     "en": "At a reading step r >= tau where mark holds and carrier <= other at r, permanent disfavouring and alternative admission from step r + 1 on hold iff carrier <= other at r + 1."
+    },
+    "strength": "exact",
+    "records": [
+     "endogenous-detection-before-capture-lock"
+    ],
+    "source": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "permanent lockout of alternatives (admits = false) at every step from r + 1 on"
+    },
+    "law": "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+    "edge": {
+     "en": "At a reading step r >= tau where mark holds, the active rule favours carriers, other <= carrier at r, and other < carrier at r + 1, alternatives stay locked out (admits = false) at every step from r + 1 on."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-detection-before-capture-lock"
+    ],
+    "source": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "split-evidence contrast where isolated locally sound filters stay locked in carrier favour while pooled exchange turns to alternative admission"
+    },
+    "law": "Becoming.EndogenousDetectionRace.split_exchange_turns",
+    "edge": {
+     "en": "Under one-time-mask split evidence, locally sound filters stay trapped (split_silenced_trapped) while one-bit-per-step exchange turns cleanly."
+    },
+    "strength": "sufficient",
+    "records": [
+     "endogenous-detection-before-capture-lock"
+    ],
+    "source": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "While the alternating MiddleMinus/MiddlePlus middle band is now characterized (mark_middle_band_trichotomy, mark_middle_band_monotone_partition), non-alternating multi-carrier regimes and one-way downstream dependents remain outside the present theorems.",
+    "source": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#does-not-show--未表明"
+   },
+   {
+    "en": "Part B fixes the depletion stream before agents act and counts uniformly over all 2^T binary tags; closed-loop mask-substrate coupling and non-uniform tag distributions are open.",
+    "source": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom discrete step core; assumes self-returning Moore continuation, uniform 2^T mask counts in Part B, and leaves one-way downstream dependence outside."
+  },
+  "sources": [
+   "theories/becoming/results/records/endogenous-detection-before-capture-lock.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "open-ended-epoch-handoff",
+  "name": {
+   "en": "Epoch handoff: what may change across epochs, what must not"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Governs open-ended multi-epoch upgrades across changing observation/action domains via EpochHandoffGate: proves upgrades preserving EpochCert, AnchorStep, totality, and live headroom maintain the original substrate floor and current guard along every infinite run (non-deadlocking, non-weakening anchor), recovers static anchored_selfMod_viable at one epoch, separates unbounded ascending epochs from static envelopes, and proves unanchored or concurrent un-gated self-modification drains to 0."
+  },
+  "records": [
+   "open-ended-epoch-handoff"
+  ],
+  "declarations": [
+   "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
+   "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+   "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
+   "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
+   "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
+   "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
+   "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
+   "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
+   "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects",
+   "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
+   "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
+   "Becoming.OpenEndedComposition.EpochHandoffGate",
+   "Becoming.OpenEndedComposition.epochInv_certificate",
+   "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+   "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
+   "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
+   "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry",
+   "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
+   "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+   "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+   "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
+   "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
+   "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down",
+   "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
+   "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+   "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
+   "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+   "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering",
+   "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
+   "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
+   "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
+   "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
+   "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "open-ended-epoch-handoff",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Dropping the anchor requirement across epoch handoffs, reading coarsened observations as Horn-safe, or upgrading two coupled sites simultaneously without a joint supremacy gate."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "static PolyComposition TransformsViably exactly across a single constant-epoch handoff"
+    },
+    "law": "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+    "edge": {
+     "en": "Holding the epoch constant across steps reduces TransformsAcrossEpochs constructively to TransformsViably."
+    },
+    "strength": "exact",
+    "records": [
+     "open-ended-epoch-handoff"
+    ],
+    "source": "theories/becoming/results/records/open-ended-epoch-handoff.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "preserved Viability.Kernel, non-weakening AnchorStep, and non-deadlocking runs across infinite EpochHandoffGate chains"
+    },
+    "law": "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+    "edge": {
+     "en": "Anchored, certified, total EpochHandoffGate transitions with live headroom keep every epoch inside Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "open-ended-epoch-handoff"
+    ],
+    "source": "theories/becoming/results/records/open-ended-epoch-handoff.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "silent substrate drain to zero inside a self-modifying kernel once only the anchor is dropped"
+    },
+    "law": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+    "edge": {
+     "en": "Witness: removing AnchorStep alone allows floor-lowering self-updates to pass own checks while draining substrate to 0."
+    },
+    "strength": "witness",
+    "records": [
+     "open-ended-epoch-handoff"
+    ],
+    "source": "theories/becoming/results/records/open-ended-epoch-handoff.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "That any actual system meets EpochCert, AnchorStep or the gate (recognition, Rule 2).",
+    "source": "theories/becoming/results/records/open-ended-epoch-handoff.md#does-not-show--未表明"
+   },
+   {
+    "en": "Substrate draw during a real switchover; a substrate law or environment draw that changes across epochs.",
+    "source": "theories/becoming/results/records/open-ended-epoch-handoff.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "0-axiom core; requires EpochCert, AnchorStep preservation, live substrate headroom across switchover, and reciprocal bounds on coupled upgrades."
+  },
+  "sources": [
+   "theories/becoming/results/records/open-ended-epoch-handoff.md#laws--规律"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "quantitative-transfer-of-four-guard-failure-regimes",
+  "name": {
+   "en": "Limits and remedies for four guarded-runtime failure regimes over the reals"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "Proves exact quantitative walls and remedies in the Mathlib ℝ periphery for four guarded-runtime failure modes: (1) rank-1 pool drift caps disagreement at 1 - gamma while an uncoupled anchor detects drift; (2) aliased probes separate fibers iff 2 * eps < (1 - alpha) * gap with irreducible mixture floors inside; (3) continuous drawdown >= H1 hits x_crit past lag (x0 - x_crit)/H1 and leakage raises switching lag monotonically; (4) trust-region projection sustains a MetricLaxSim contraction tube while unprojected steps overshoot."
+  },
+  "records": [
+   "quantitative-transfer-of-four-guard-failure-regimes"
+  ],
+  "declarations": [
+   "QuantitativeTransfer.pool_disagreement_ceiling",
+   "QuantitativeTransfer.pool_shared_bias_floor",
+   "QuantitativeTransfer.pool_ceiling_attained",
+   "QuantitativeTransfer.anchor_detects_shared_drift",
+   "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+   "QuantitativeTransfer.correlated_pool_lab_witness",
+   "QuantitativeTransfer.aliased_fiber_gap",
+   "QuantitativeTransfer.aliased_separable_iff",
+   "QuantitativeTransfer.aliased_readout_floor",
+   "QuantitativeTransfer.aliased_lab_witness",
+   "QuantitativeTransfer.two_point_test_floor",
+   "QuantitativeTransfer.mixture_aliasing_test_floor",
+   "QuantitativeTransfer.mixture_floor_attained",
+   "QuantitativeTransfer.lag_horizon_wall",
+   "QuantitativeTransfer.lag_wall_iff_linear",
+   "QuantitativeTransfer.switching_score_persists",
+   "QuantitativeTransfer.switchLag_strictMono_rho",
+   "QuantitativeTransfer.switchLag_nonpos_tabular",
+   "QuantitativeTransfer.leakage_lag_wall",
+   "QuantitativeTransfer.b1_headroom_witness",
+   "QuantitativeTransfer.trustRegionMetricLaxSim",
+   "QuantitativeTransfer.trust_region_tube",
+   "QuantitativeTransfer.trust_region_tube_attained",
+   "QuantitativeTransfer.trust_region_viability",
+   "QuantitativeTransfer.unprojected_step_overshoots",
+   "QuantitativeTransfer.trust_region_lab_witness"
+  ],
+  "base": "periphery",
+  "hypotheses": [
+   {
+    "record": "quantitative-transfer-of-four-guard-failure-regimes",
+    "index": 1
+   }
+  ],
+  "forbids": {
+   "en": "Treating low pool disagreement under shared drift, sub-threshold aliased probes, slow-rate lags under continuous drawdown, or unprojected steps as preserving safety margins."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "exact separation of two same-fiber states under alpha-aliased bounded-eps probes iff 2 * eps < (1 - alpha) * |p u1 - p u2|"
+    },
+    "law": "QuantitativeTransfer.aliased_separable_iff",
+    "edge": {
+     "en": "For alpha <= 1 on same-fiber states (f u1 = f u2), a separating rule under bounded noise eps exists iff 2 * eps < (1 - alpha) * |p u1 - p u2| (preserving the alpha = 1 boundary)."
+    },
+    "strength": "exact",
+    "records": [
+     "quantitative-transfer-of-four-guard-failure-regimes"
+    ],
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "viable trust-region contraction tube vs overshoot outside guard horizon"
+    },
+    "law": "QuantitativeTransfer.trust_region_viability",
+    "edge": {
+     "en": "Projected trust-region steps form a MetricLaxSim (alpha, 1, Delta, 0) contraction tube keeping Viability.Kernel."
+    },
+    "strength": "sufficient",
+    "records": [
+     "quantitative-transfer-of-four-guard-failure-regimes"
+    ],
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "guaranteed safety threshold crossing x_crit whenever continuous drawdown lag exceeds (x0 - x_crit) / H1"
+    },
+    "law": "QuantitativeTransfer.lag_horizon_wall",
+    "edge": {
+     "en": "Drawdown rate >= H1 over lag L > (x0 - x_crit)/H1 forces x_crit crossing before L expires."
+    },
+    "strength": "sufficient",
+    "records": [
+     "quantitative-transfer-of-four-guard-failure-regimes"
+    ],
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
+   },
+   {
+    "to": {
+     "en": "single unprojected gradient/policy step overshooting the contraction guard tube"
+    },
+    "law": "QuantitativeTransfer.unprojected_step_overshoots",
+    "edge": {
+     "en": "Witness: omitting projection lets a step exit the guarded contraction tube."
+    },
+    "strength": "witness",
+    "records": [
+     "quantitative-transfer-of-four-guard-failure-regimes"
+    ],
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "Does not prove a floor for Gaussian additive aliasing; the bounded-noise wall and the finite mixture floor are the statements proved.",
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#does-not-show--未表明"
+   },
+   {
+    "en": "Does not show that the stress lab's judges share one drift weight, that its guard is an α-Lipschitz map, or that its drawdown keeps rate H₁ through the lag; in B5 an aliased anchor helped as much as a clear one, so the anchor's information premise was not what mattered there.",
+    "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "Mathlib v4.30.0-rc2 periphery; bounded-noise and finite-mixture aliasing floors are proved rather than Gaussian additive noise, and stress-lab assumption fit remains Rule 2."
+  },
+  "sources": [
+   "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
+  ],
+  "standing_without_record": null
  }
 ]

@@ -884,6 +884,28 @@ class TerrainPictureTests(AtlasCase):
         self.assertIn('not yet read', svg)
         self.assertNotIn('is better', svg)
 
+    def test_partially_read_family_keeps_terrain_and_avoids_false_none_premises(self):
+        read_dyn = capture(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread']}])
+        pending_dyn = carriers(id='pending-capture', name={'en': 'Pending capture dynamic'}, family='C')
+        other = carriers(family='G', exits=[exit_(to='closed-capture')])
+        self.write_atlas(read_dyn, pending_dyn, other)
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(PREMISE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.ENTRIES / 'premises.json').write_text(json.dumps([premise()], ensure_ascii=False, indent=1) + '\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        c_page = pages[atlas.FAMILY_PAGES + '/c.md']
+        pending_section = c_page.split('<a id="pending-capture"></a>', 1)[1]
+        self.assertNotIn('Premises, by law.', pending_section)
+        self.assertIn('## C. Capture of the selection', pages[atlas.TERRAIN])
+        self.assertIn('2 dynamics (1 read for premises, 1 pending premise extraction)', pages[atlas.TERRAIN])
+        self.assertIn('Family C is read for their earlier dynamics, with 1 newly added dynamic pending premise extraction', pages[atlas.PAGE])
+        built = atlas.build({'dynamics': [read_dyn, pending_dyn, other], 'premises': [premise()],
+                             'correspondences': [], 'correspondence_groups': []}, PREMISE_VOCABULARY, RECORDS)
+        counts = atlas.terrain_counts(built)
+        self.assertFalse(counts['families']['C']['read'])
+        self.assertEqual(counts['families']['C']['read_count'], 1)
+        self.assertIn('2 dynamics · 1/2 read', atlas.terrain_svg(built))
+
 
 SLICE_VOCABULARY = {**PREMISE_VOCABULARY,
                     'situation_kinds': [{'en': 'model'}, {'en': 'run'}, {'en': 'field'}],

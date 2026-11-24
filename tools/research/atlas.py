@@ -1690,7 +1690,10 @@ def page(atlas: dict) -> str:
     keep = {d['id']: _marks([d['id'], old[d['id']]], taken) for d in atlas['dynamics']}
     read = [f for f in families if any(d['family'] == f['id'] for d in atlas['dynamics'])
             and all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])]
-    unread = [f for f in families if f not in read]
+    partial = [f for f in families if f not in read
+               and any(d['family'] == f['id'] and 'premises' in d for d in atlas['dynamics'])]
+    unread = [f for f in families if f not in read and f not in partial]
+    pending_n = sum(1 for d in atlas['dynamics'] if 'premises' not in d and any(d['family'] == f['id'] for f in partial))
     behind = _behind_words(atlas)
     out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE, atlas), '',
            *([f'**How far it is read** ([AA\'s plan §13]({_href(PLAN_NEXT)})). Every dynamic is listed with the records and '
@@ -1699,13 +1702,18 @@ def page(atlas: dict) -> str:
                  f'{"are" if len(read) != 1 else "is"} read for the premises their laws take, every hypothesis a law binds, and '
                  f'for where their exits lead: [the premise ledger]({_href(PREMISES_PAGE)}), [the terrain]({_href(TERRAIN)}). '
                  if read else '')
+              + (f'Famil{"ies" if len(partial) != 1 else "y"} {_and([f["id"] for f in partial])} '
+                 f'{"are" if len(partial) != 1 else "is"} read for their earlier dynamics, with {pending_n} newly added '
+                 f'dynamic{"s" if pending_n != 1 else ""} pending premise extraction'
+                 + (f' ([the premise ledger]({_href(PREMISES_PAGE)}), [the terrain]({_href(TERRAIN)}))' if not read else '')
+                 + '. ' if partial else '')
               + (f'{len(atlas["bindings"])} rows of the tests table are bound to the dynamics they bear on ([the bindings]({_href(BINDINGS_PAGE)})). '
                  if atlas.get('bindings') else '')
               + (f'{len(atlas["situations"])} situation{"s are" if len(atlas["situations"]) != 1 else " is"} written in the account\'s '
                  f'words ([the situations]({_href(SITUATIONS_PAGE)})). ' if atlas.get('situations') else '')
-              + (f'The other {len(unread)} famil{"ies are" if len(unread) != 1 else "y is"} not yet read for premises or exits.' if unread and read else '')
+              + (f'The other {len(unread)} famil{"ies are" if len(unread) != 1 else "y is"} not yet read for premises or exits.' if unread and (read or partial) else '')
               # where the print of uses between proofs does not bind the core receipt, the front page says so here
-              + ((' ' if unread and read else '') + behind if behind else ''),
+              + ((' ' if unread and (read or partial) else '') + behind if behind else ''),
               '', f'![The terrain: the eight families and the recorded exits between them, drawn from the entries alone]({_href(TERRAIN_SVG)})', '']
              if atlas.get('premises') else [behind, ''] if behind else []),
            _atlas_lead(ATLAS, 'proof_uses' in atlas), '',
@@ -2726,8 +2734,7 @@ def terrain_page(atlas: dict) -> str:
            'meets the next exit\'s conditions: it says where the stated exits point, not that a course goes there. Nothing here '
            'ranks courses or says where a course should go.*', '']
     read_families = [f for f in atlas['vocabulary']['families']
-                     if any(d['family'] == f['id'] for d in atlas['dynamics'])
-                     and all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])]
+                     if any(d['family'] == f['id'] and 'premises' in d for d in atlas['dynamics'])]
     if any(d['family'] in {f['id'] for f in read_families} and x.get('standing_without_law')
            for d in atlas['dynamics'] for x in d['exits']):
         out += ['*A dashed edge from an exit no law shows names, in words or as a dynamic, where its source argues, '
@@ -2735,7 +2742,7 @@ def terrain_page(atlas: dict) -> str:
                 'ranks below every step a law shows.*', '']
     for f in atlas['vocabulary']['families']:
         listed = [d for d in atlas['dynamics'] if d['family'] == f['id']]
-        if not listed or not all('premises' in d for d in listed):
+        if not listed or not any('premises' in d for d in listed):
             continue
         ids = {d['id'] for d in listed}
         nodes, lines, ends = {}, [], 0
@@ -2757,7 +2764,11 @@ def terrain_page(atlas: dict) -> str:
                     lines.append(f'  {target}(["{_clip(label, 70)}"])')
                 lines.append(f'  {node(d["id"])} {arrows[_seen(x)]}|{_seen(x)}| {target}')
         decl = [f'  {n}["{_clip(_mermaid(names[i]), 60)}"]' + (':::other' if i not in ids else '') for i, n in nodes.items()]
-        out += [f'## {f["id"]}. {f["en"]}', '', f'{len(listed)} dynamics, {sum(len(d["exits"]) for d in listed)} exits.', '',
+        pending = sum(1 for d in listed if 'premises' not in d)
+        count_line = (f'{len(listed)} dynamics ({len(listed) - pending} read for premises, {pending} pending premise extraction), '
+                      f'{sum(len(d["exits"]) for d in listed)} exits.' if pending
+                      else f'{len(listed)} dynamics, {sum(len(d["exits"]) for d in listed)} exits.')
+        out += [f'## {f["id"]}. {f["en"]}', '', count_line, '',
                 '```mermaid', 'flowchart LR', *decl, *lines, '  classDef other stroke-dasharray: 3 3', '```', '',
                 '| Dynamic | Leaves to | Reaches by named exits (weakest step) |', '|---|---|---|']
         for d in listed:
@@ -2853,12 +2864,15 @@ def terrain_counts(atlas: dict) -> dict:
     families the exits from a dynamic of the first to a dynamic of the second, where a law places them and where none does."""
     family = {d['id']: d['family'] for d in atlas['dynamics']}
     fams = [f['id'] for f in atlas['vocabulary']['families']]
-    out = {'families': {f: {'dynamics': 0, 'read': True, 'within_law': 0, 'within_reading': 0, 'to_state': 0, 'unread_to': 0, 'exits': 0}
+    out = {'families': {f: {'dynamics': 0, 'read': True, 'read_count': 0, 'within_law': 0, 'within_reading': 0, 'to_state': 0, 'unread_to': 0, 'exits': 0}
                         for f in fams}, 'between': {}}
     for d in atlas['dynamics']:
         f = out['families'][d['family']]
         f['dynamics'] += 1
-        f['read'] = f['read'] and d.get('premises') is not None
+        has_prem = d.get('premises') is not None
+        f['read'] = f['read'] and has_prem
+        if has_prem:
+            f['read_count'] += 1
         for x in d['exits']:
             f['exits'] += 1
             kind = 'reading' if x.get('standing_without_law') else 'law'
@@ -2905,6 +2919,8 @@ def terrain_svg(atlas: dict) -> str:
     c = terrain_counts(atlas)
     fams = atlas['vocabulary']['families']
     read = [f['id'] for f in fams if c['families'][f['id']]['read'] and c['families'][f['id']]['dynamics']]
+    partial = [f['id'] for f in fams if f['id'] not in read and c['families'][f['id']]['read_count']]
+    unread = [f['id'] for f in fams if f['id'] not in read and f['id'] not in partial]
     cx, cy, r, bw, bh = TS_W / 2, 545, 345, 184, 100
     pos = {f['id']: (cx + r * math.cos(math.radians(-90 + 360 * i / len(fams))), cy + r * math.sin(math.radians(-90 + 360 * i / len(fams))))
            for i, f in enumerate(fams)}
@@ -2916,12 +2932,27 @@ def terrain_svg(atlas: dict) -> str:
             f'counts the recorded exits from a dynamic of one family to a dynamic of another: {n_law} such exits a law places, '
             f'drawn solid, and {n_reading} that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each '
             'box are the exits that stay within the family and those whose destination is a state said in words. '
-            + (f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
-               'their laws take and where their exits lead' + ('; ' if len(read) < len(fams) else '. ') if read else '')
-            + ('the families drawn dashed are not yet read so, their exits as first entered. ' if len(read) < len(fams) else '')
+            + ((f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
+                'their laws take and where their exits lead; ' if read else '')
+               + f'Famil{"ies" if len(partial) != 1 else "y"} {_and(partial)} {"are" if len(partial) != 1 else "is"} partially read '
+               '(earlier dynamics read, newly added dynamics pending premise extraction)'
+               + ('; ' if unread else '. ')
+               + ('the unread families drawn dashed are not yet read so, their exits as first entered. ' if unread else '')
+               if partial else
+               (f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
+                'their laws take and where their exits lead' + ('; ' if len(read) < len(fams) else '. ') if read else '')
+               + ('the families drawn dashed are not yet read so, their exits as first entered. ' if len(read) < len(fams) else ''))
             + 'An arrow is an exit, not a route: '
             'nothing here checks that one exit\'s destination meets the next one\'s conditions, ranks courses, or says where a '
             'course should go.')
+    subtitle = (
+        (f'Read for premises: {_and(read)}; ' if read else '')
+        + f'partial (new dynamics pending): {_and(partial)}. Dashed: unextracted.'
+        if partial else
+        (f'Read for premises and exits: {_and(read)}.' + (' Dashed boxes: not yet read, their exits as first entered.'
+                                                          if len(read) < len(fams) else '')
+         if read else 'No family is read for premises and exits yet.')
+    )
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {TS_W} {TS_H}" width="{TS_W}" height="{TS_H}" role="img" '
            f'aria-labelledby="ts-title ts-desc" font-family="{html.escape(TS_FONT)}">',
            f'<title id="ts-title">{html.escape(title)}</title>', f'<desc id="ts-desc">{html.escape(desc)}</desc>',
@@ -2932,9 +2963,7 @@ def terrain_svg(atlas: dict) -> str:
            f'<rect x="0.5" y="0.5" width="{TS_W - 1}" height="{TS_H - 1}" rx="10" fill="{TS_PAPER}" stroke="{TS_RULE}"/>',
            _ts_text(24, 36, title, 18, 'bold', 'start'),
            _ts_text(24, 58, 'Drawn from the atlas\'s entries alone: an arrow counts recorded exits between two families, not a route.', 13, anchor='start', fill=TS_MUTED),
-           _ts_text(24, 78, (f'Read for premises and exits: {_and(read)}.' + (' Dashed boxes: not yet read, their exits as first entered.'
-                                                                             if len(read) < len(fams) else '')
-                             if read else 'No family is read for premises and exits yet.'), 13, anchor='start', fill=TS_MUTED)]
+           _ts_text(24, 78, subtitle, 13, anchor='start', fill=TS_MUTED)]
     # Arrows first, under the boxes: each a curve bowed toward the centre, so that it passes no other box; the two kinds
     # of a pair, and its two directions, bow apart.
     for (a, b) in sorted(between):
@@ -2962,14 +2991,16 @@ def terrain_svg(atlas: dict) -> str:
         x, y = pos[f['id']]
         k = c['families'][f['id']]
         is_read = f['id'] in read
+        is_partial = f['id'] in partial
         out.append(f'<rect x="{x - bw / 2:.1f}" y="{y - bh / 2:.1f}" width="{bw}" height="{bh}" rx="8" fill="#ffffff" '
                    f'stroke="{TS_INK if is_read else TS_MUTED}" stroke-width="{1.6 if is_read else 1.1}"' + ('' if is_read else ' stroke-dasharray="5 4"') + '/>')
         name = _wrap(f'{f["id"]}. {f["en"]}', 26)
         top = y - bh / 2 + 18
         for i, line in enumerate(name[:2]):
-            out.append(_ts_text(x, top + i * 15, line, 12.5, 'bold', fill=TS_INK if is_read else TS_MUTED))
+            out.append(_ts_text(x, top + i * 15, line, 12.5, 'bold', fill=TS_INK if (is_read or is_partial) else TS_MUTED))
         y1 = top + len(name[:2]) * 15 + 4
-        out.append(_ts_text(x, y1, f'{k["dynamics"]} dynamics · ' + ('read' if is_read else 'not yet read'), 11.5, fill=TS_INK if is_read else TS_MUTED))
+        status_txt = f'{k["read_count"]}/{k["dynamics"]} read' if is_partial else ('read' if is_read else 'not yet read')
+        out.append(_ts_text(x, y1, f'{k["dynamics"]} dynamics · {status_txt}', 11.5, fill=TS_INK if is_read else TS_MUTED))
         within = k['within_law'] + k['within_reading']
         out.append(_ts_text(x, y1 + 15, f'{within} exit{"s" if within != 1 else ""} within · {k["to_state"]} to a state in words', 11, fill=TS_MUTED))
         if k['unread_to']:
@@ -2980,7 +3011,11 @@ def terrain_svg(atlas: dict) -> str:
             f'<line x1="32" y1="{ly + 24}" x2="82" y2="{ly + 24}" stroke="{TS_READING}" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>',
             _ts_text(92, ly + 28, 'exits no law shows: argued, conjectured, a reading or open', 12, anchor='start'),
             *([f'<rect x="32" y="{ly + 40}" width="50" height="16" rx="4" fill="#ffffff" stroke="{TS_MUTED}" stroke-dasharray="5 4"/>',
-               _ts_text(92, ly + 52, 'a family not yet read for its premises and exits', 12, anchor='start')] if len(read) < len(fams) else []),
+               _ts_text(92, ly + 52,
+                        'a family not yet read for its premises and exits' if unread and not partial
+                        else 'a family with newly added dynamics pending premise extraction' if partial and not unread
+                        else 'a family not yet fully read for its premises and exits',
+                        12, anchor='start')] if len(read) < len(fams) else []),
             '</svg>']
     return '\n'.join(out) + '\n'
 

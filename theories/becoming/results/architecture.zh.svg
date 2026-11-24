@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1260" width="1200" height="1260" role="img" aria-labelledby="arch-title arch-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<title id="arch-title">生灭变化之论——核验层级（A–D）与认知边界</title>
+<desc id="arch-desc">支撑生灭变化之论三协同层的四重核验层级图：层级 A 为零公理关系核心（439 闭包、418 核心模块、31,170 声明、22,056 定理、0 公理），由单一关系之根经五条共律与六大结构支柱汇入 AlignmentSpine、MasterSpine 与 SharpnessSuite；层级 B 为隔离的 16 模块外围（14 个 Mathlib v4.30.0-rc2 + 2 个非 Mathlib v4.29.1，0 过期），锚定共享基叶 FiniteProbKrylov，并列零公理独立轨 BecomingSpec（26 目标）、EncounterEntry（35 定理）与 RelSpanEncounterAdapter（7 定理）及 Mathlib 支撑的对偶轨；规则二（Rule 2）识别边界；层级 C 为拟制 6 项守卫对齐运行时（AI 拟制手设旗标自评）与失败先报的经验/压力壁垒（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、15/15 证据重放）；虚线深红 not_entails 防火墙；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。</desc>
+<defs>
+<marker id="arrow-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#1c1917"/></marker>
+<marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#57534e"/></marker>
+<marker id="arrow-crimson" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#8c2f1e"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="1199" height="1259" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<text x="24" y="36" font-size="20.5" font-weight="bold" text-anchor="start" fill="#1c1917">生灭变化之论——核验层级（A–D）与认知边界</text>
+<text x="24" y="58" font-size="12" text-anchor="start" fill="#57534e">四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 16 外围模块 · (3) 智慧与“生生”伦理</text>
+<rect x="24" y="72" width="1152" height="48" rx="6" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1"/>
+<text x="600" y="92" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">核心：439 闭包（418 核心）· 31,170 声明 · 22,056 定理 · 0 公理（v4.29.1，回执 20261124T195858.526167Z）· 598 登记（567 已核）</text>
+<text x="600" y="111" font-size="11.2" text-anchor="middle" fill="#57534e">16 外围（14 Mathlib + 2 非 Mathlib，0 过期）· 220 条动态（8 族）· 66 项绑定检验 · 4 情境 · 1,183 条智慧对照</text>
+<rect x="24" y="134" width="1152" height="414" rx="8" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1.2"/>
+<text x="38" y="155" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 A  ·  零公理关系核心（支撑第 1–2 层 · 仅引入 Init，0 sorry，不含 Mathlib）</text>
+<rect x="220" y="166" width="760" height="46" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="600" y="185" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">单一关系之根：缘（条件）· 类（同）· 续（延续）</text>
+<text x="600" y="203" font-size="11" text-anchor="middle" fill="#57534e">Grammar · World · Web · Flow · WayUnderARule —— 凡持久者皆随步复造</text>
+<line x1="600" y1="212" x2="600" y2="230" stroke="#1c1917" stroke-width="1.4" marker-end="url(#arrow-ink)"/>
+<text x="612" y="226" font-size="10.8" font-weight="bold" text-anchor="start" fill="#57534e">五条共律（GrammarLaws）</text>
+<rect x="38" y="232" width="216.8" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="146.4" y="251" font-size="11.6" font-weight="bold" text-anchor="middle" fill="#1c1917">1. 闭包</text>
+<text x="146.4" y="269" font-size="10.5" text-anchor="middle" fill="#57534e">WithinClosure · 盲区边界</text>
+<rect x="264.8" y="232" width="216.8" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="373.2" y="251" font-size="11.6" font-weight="bold" text-anchor="middle" fill="#1c1917">2. 平衡</text>
+<text x="373.2" y="269" font-size="10.5" text-anchor="middle" fill="#57534e">Flow.balances（表示，非推导）</text>
+<rect x="491.6" y="232" width="216.8" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="600" y="251" font-size="11.6" font-weight="bold" text-anchor="middle" fill="#1c1917">3. 有限运行</text>
+<text x="600" y="269" font-size="10.5" text-anchor="middle" fill="#57534e">无损复归 · 静止 · 终结</text>
+<rect x="718.4" y="232" width="216.8" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="826.8" y="251" font-size="11.6" font-weight="bold" text-anchor="middle" fill="#1c1917">4. 归并</text>
+<text x="826.8" y="269" font-size="10.5" text-anchor="middle" fill="#57534e">GoAlikeUnder · 因果归并</text>
+<rect x="945.2" y="232" width="216.8" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="1053.6" y="251" font-size="11.6" font-weight="bold" text-anchor="middle" fill="#1c1917">5. 扩大</text>
+<text x="1053.6" y="269" font-size="10.5" text-anchor="middle" fill="#57534e">Web.Widens · 正权重一致</text>
+<text x="38" y="297" font-size="10.8" font-weight="bold" text-anchor="start" fill="#57534e">六大结构对齐支柱（L0–L5 与前沿 1–2）</text>
+<line x1="600" y1="280" x2="600" y2="303" stroke="#57534e" stroke-width="1.2" marker-end="url(#arrow-muted)"/>
+<rect x="38" y="307" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="48" y="326" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">1. 耦合外盲区与最优化耗竭</text>
+<text x="48" y="344" font-size="10.5" text-anchor="start" fill="#57534e">Selection · Optimum · UnifiedDrawdown</text>
+<rect x="416.7" y="307" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="426.7" y="326" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">2. 闭合捕获与内生检测竞速</text>
+<text x="426.7" y="344" font-size="10.5" text-anchor="start" fill="#57534e">ClosedCapture · EndogenousEmergence · DetectionRace</text>
+<rect x="795.3" y="307" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="805.3" y="326" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">3. 步调–余裕截止期与警报竞速</text>
+<text x="805.3" y="344" font-size="10.5" text-anchor="start" fill="#57534e">PacedStock · AdaptiveLoops · ActiveInquiryLoop</text>
+<rect x="38" y="365" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="48" y="384" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">4. 开放 / 多项式 / 跨代界面组合</text>
+<text x="48" y="402" font-size="10.5" text-anchor="start" fill="#57534e">OpenComposition · PolyComposition · OpenEndedComposition</text>
+<rect x="416.7" y="365" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="426.7" y="384" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">5. RelSpan / Oplax 与因果抽象</text>
+<text x="426.7" y="402" font-size="10.5" text-anchor="start" fill="#57534e">RelSpan (Span chi/BC) · OplaxHistory · DoubleKernel · Causal</text>
+<rect x="795.3" y="365" width="366.7" height="48" rx="5" fill="#ffffff" stroke="#57534e" stroke-width="1"/>
+<text x="805.3" y="384" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">6. 内生次序与范围共生</text>
+<text x="805.3" y="402" font-size="10.5" text-anchor="start" fill="#57534e">EndogenousOrder · ScopeDynamics · EvolutionaryDrawdown</text>
+<line x1="378" y1="413" x2="378" y2="427" stroke="#1c1917" stroke-width="1.4" marker-end="url(#arrow-ink)"/>
+<line x1="946" y1="413" x2="946" y2="427" stroke="#8c2f1e" stroke-width="1.3" marker-end="url(#arrow-crimson)"/>
+<rect x="38" y="429" width="680" height="68" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="378" y="449" font-size="12.4" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentSpine (L5)  与  MasterSpine (L2 WholeArchitecture)</text>
+<text x="378" y="468" font-size="10.6" text-anchor="middle" fill="#57534e">whole_becoming_master_theorem 跨模块提升全部五条共律</text>
+<text x="378" y="485" font-size="10.5" text-anchor="middle" fill="#57534e">MultiScaleViability · TransformativeViability · StockFlowBridge</text>
+<rect x="730" y="429" width="432" height="68" rx="6" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.3"/>
+<text x="946" y="449" font-size="12.2" font-weight="bold" text-anchor="middle" fill="#8c2f1e">SharpnessSuite（反模型 witnesses）</text>
+<text x="946" y="468" font-size="10.6" text-anchor="middle" fill="#1c1917">CE01–CE10、CE14、WaterTank、slackDist</text>
+<text x="946" y="485" font-size="10.5" text-anchor="middle" fill="#57534e">逐条拆去前提之分立具象反模型</text>
+<line x1="380" y1="548" x2="380" y2="572" stroke="#57534e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-muted)"/>
+<text x="394" y="564" font-size="10.8" text-anchor="start" fill="#57534e">仅向下游单向引入 —— 零公理核心保持严格隔离</text>
+<rect x="24" y="574" width="1152" height="190" rx="8" fill="#ffffff" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="38" y="595" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 B  ·  孤立的 16 模块外围（14 Mathlib + 2 非 Mathlib，0 过期）与独立核验轨</text>
+<rect x="38" y="604" width="720" height="148" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
+<rect x="48" y="612" width="700" height="42" rx="5" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="398" y="628" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">共享 Mathlib 基叶：FiniteProbKrylov（v4.30.0-rc2）</text>
+<text x="398" y="645" font-size="10.5" text-anchor="middle" fill="#57534e">FinDist · TV 度量 · Krylov 秩稳定 · FiberLumpable B1–B2 汇合</text>
+<rect x="48" y="661" width="228" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
+<text x="162" y="676" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">ObservationalFidelity</text>
+<text x="162" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">TV 下界、Dobrushin、零TV分裂</text>
+<rect x="284" y="661" width="228" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
+<text x="398" y="676" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">SurvivalDistinguishability</text>
+<text x="398" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">长度 &lt;= |S|-1 之全部模态词</text>
+<rect x="520" y="661" width="228" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
+<text x="634" y="676" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">QuantitativeTransfer</text>
+<text x="634" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">秩1漂移、混叠、滞后、信任管</text>
+<rect x="48" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
+<text x="221" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentReals &amp; BecomingReals</text>
+<text x="221" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">CE12/13、MetricLaxSim、9 实数模块</text>
+<rect x="402" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
+<text x="575" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">RenewalBridge &amp; FallibleInquiry</text>
+<text x="575" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">2 非 Mathlib 桥（v4.29.1）</text>
+<rect x="770" y="604" width="392" height="148" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
+<text x="782" y="626" font-size="11.5" font-weight="bold" text-anchor="start" fill="#1c1917">独立核验轨</text>
+<text x="782" y="648" font-size="10.5" text-anchor="start" fill="#57534e">零公理：BecomingSpec (26) / 适配器 (7)</text>
+<text x="782" y="670" font-size="10.5" text-anchor="start" fill="#57534e">零公理：EncounterEntry (35 定理)</text>
+<text x="782" y="692" font-size="10.5" text-anchor="start" fill="#57534e">Mathlib 支撑：ConsequenceDuality</text>
+<text x="782" y="714" font-size="10.5" text-anchor="start" fill="#57534e">  + DualityBridges + DualityLifting</text>
+<text x="782" y="736" font-size="10.5" text-anchor="start" fill="#57534e">  + TrackBKrylovBridge -&gt; Krylov</text>
+<line x1="24" y1="792" x2="1176" y2="792" stroke="#8c2f1e" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="120" y="777" width="960" height="30" rx="15" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.2"/>
+<text x="600" y="796" font-size="10.8" font-weight="bold" text-anchor="middle" fill="#8c2f1e">规则二边界 — Lean 只核验：前提成立则结论成立；实际系统是否满足前提，是可错的辨识（规则 2）</text>
+<rect x="24" y="820" width="1152" height="204" rx="8" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1.2"/>
+<text x="38" y="841" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 C  ·  拟制 6 项守卫对齐运行时与经验壁垒（规则二鸿沟 · 失败先报）</text>
+<rect x="38" y="850" width="514" height="160" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<text x="50" y="871" font-size="11.8" font-weight="bold" text-anchor="start" fill="#1c1917">守卫对齐运行时（6 项提案审计文法）</text>
+<text x="50" y="889" font-size="10.5" text-anchor="start" fill="#57534e">AI 拟制示例规格（手设旗标自评；精确分数 -&gt; GUARDED/OBSTRUCTED；28 单测）</text>
+<rect x="50" y="899" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="58" y="915" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">1. 耦合闭包 coupling_closure</text>
+<rect x="50" y="931" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="58" y="947" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">2. 自重拟合锁 self_refit_lock</text>
+<rect x="50" y="963" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="58" y="979" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">3. 零TV纤维分裂 fiber_split</text>
+<rect x="299" y="899" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="307" y="915" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">4. 步调余裕截止 pace_margin</text>
+<rect x="299" y="931" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="307" y="947" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">5. 并发共享耗竭 concurrent</text>
+<rect x="299" y="963" width="241" height="25" rx="4" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="0.9"/>
+<text x="307" y="979" font-size="10.5" font-weight="bold" text-anchor="start" fill="#1c1917">6. 生存可辨识 survival</text>
+<text x="50" y="1000" font-size="10.5" text-anchor="start" fill="#57534e">对应 DoubleKernel、OplaxHistory (RelSpan chi/BC)、ObservationalFidelity 与 Krylov</text>
+<rect x="564" y="850" width="598" height="160" rx="6" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.4"/>
+<text x="576" y="871" font-size="11.8" font-weight="bold" text-anchor="start" fill="#8c2f1e">经验检验与神经对齐压力实验室（失败先报）</text>
+<text x="576" y="902" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">66 绑定检验（4 败 · 20 混 · 5 过 · 37 其他）：MQ3、UE31b(T2)、VD1、MQ7</text>
+<text x="576" y="930" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">断桥：EM1 (FA泄漏) · IN1 (不可见0/10；可见1/10对8/10) · LA2 (1/9批注翻转)</text>
+<text x="576" y="958" font-size="10.5" text-anchor="start" fill="#1c1917">B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25/0.70、混叠 0.25）</text>
+<text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 15/15 重放</text>
+<line x1="24" y1="1058" x2="1176" y2="1058" stroke="#8c2f1e" stroke-width="2.2" stroke-dasharray="9 5"/>
+<rect x="130" y="1036" width="940" height="44" rx="22" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.6"/>
+<text x="600" y="1054" font-size="10.8" font-weight="bold" text-anchor="middle" fill="#8c2f1e">not_entails 防火墙  —  任何只读取动力学且可满足的律，都不蕴涵</text>
+<text x="600" y="1071" font-size="10.8" font-weight="bold" text-anchor="middle" fill="#8c2f1e">对一切意义赋值都成立的延续条件（Unrestricted），由自由参数构造成立</text>
+<rect x="24" y="1094" width="1152" height="124" rx="8" fill="#ffffff" stroke="#57534e" stroke-width="1.3"/>
+<text x="38" y="1115" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 D  ·  防火墙之外：第 3 层“生生”伦理、智慧对照表与人工审查边界</text>
+<rect x="38" y="1125" width="366.7" height="80" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
+<text x="221.3" y="1146" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">第 3 层：“生生”伦理（并置非强推）</text>
+<text x="221.3" y="1169" font-size="10.5" text-anchor="middle" fill="#57534e">不变之步 · T8 视角：取用、关闭与承担</text>
+<text x="221.3" y="1190" font-size="10.5" text-anchor="middle" fill="#57534e">Unrestricted 与次序仅作显式假设引入</text>
+<rect x="416.7" y="1125" width="366.7" height="80" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
+<text x="600" y="1146" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">智慧对照表（1,183 条）</text>
+<text x="600" y="1169" font-size="10.5" text-anchor="middle" fill="#57534e">28 组对照 · 第六章 248 段古文</text>
+<text x="600" y="1190" font-size="10.5" text-anchor="middle" fill="#57534e">AI 试读之相合与分歧；不代表各传统发言</text>
+<rect x="795.3" y="1125" width="366.7" height="80" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
+<text x="978.7" y="1146" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">人工冷读与规则七边界</text>
+<text x="978.7" y="1169" font-size="10.5" text-anchor="middle" fill="#57534e">尚无独立人工审查记录</text>
+<text x="978.7" y="1190" font-size="10.5" text-anchor="middle" fill="#57534e">人工审计指南 · 六份审阅材料 · Mac 本地留存</text>
+<text x="24" y="1242" font-size="10.5" text-anchor="start" fill="#57534e">由 tools/research/architecture_map.py 确定性生成（仅用 Python 标准库，不含脚本，无外部链接）。图内中文为 AI 所写，英文与核心回执以 20261124T195858.526167Z 为准。</text>
+</svg>

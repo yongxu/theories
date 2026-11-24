@@ -281,8 +281,15 @@
       "theories/becoming/results/atlas/families/*.md",
       "theories/becoming/results/atlas/PREMISES.md",
       "theories/becoming/results/atlas/premises/*.md",
+      "theories/becoming/results/atlas/PREMISE-FAMILIES.md",
       "theories/becoming/results/atlas/TERRAIN.md",
       "theories/becoming/CANONICAL-MAP.md",
+      "theories/becoming/CANONICAL-MAP.zh.md",
+      "theories/becoming/ALIGNMENT-FOUNDATION.md",
+      "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+      "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+      "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+      "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md",
       "GOALS.md",
       "theories/meta-attractor/README.md"
     ],
@@ -300,6 +307,11 @@
         "page": "experiments/recipient-value-learning/README.md",
         "pattern": "PYTHONPATH=/tmp/\\S+ /Users/\\S+/python3",
         "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
+      },
+      {
+        "page": "experiments/guarded-alignment-runtime/README.md",
+        "pattern": "/tmp/spec\\.json",
+        "to": "tmp/spec.json"
       },
       {
         "pattern": " The pages for reading are also on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."
@@ -354,6 +366,8 @@
       "theories/becoming/results/atlas/terrain.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
+      "theories/becoming/results/architecture.svg",
+      "theories/becoming/results/architecture.zh.svg",
       "theories/becoming/results/standings.svg",
       "theories/becoming/results/standings.zh.svg",
       "theories/lineage.svg",
@@ -372,6 +386,10 @@
       [
         "theories/becoming/ONE-PAGE.md",
         "One page"
+      ],
+      [
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "Foundation"
       ],
       [
         "theories/becoming/THE-THEORY-OF-BECOMING.md",
@@ -404,6 +422,10 @@
       [
         "theories/becoming/review/README.md",
         "Reviewers"
+      ],
+      [
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "Audit guide"
       ],
       [
         null,
@@ -448,6 +470,13 @@
         "zh": "theories/becoming/ONE-PAGE.zh.md",
         "label": "One page",
         "text": "What the account claims, how far each claim has been seen, and what would show it wrong.",
+        "group": "Read"
+      },
+      {
+        "path": "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "zh": "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "label": "Alignment foundation",
+        "text": "The three-layer convergence joining the 0-axiom core, 14+2 periphery, stylised runtime, and failure-first stress and real-learner bounds.",
         "group": "Read"
       },
       {
@@ -514,10 +543,24 @@
         "group": "Check"
       },
       {
+        "path": "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "zh": "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "label": "Human audit guide",
+        "text": "One-hour independent verification guide covering retained core hashes, the 14+2 periphery, stylised runtime checks, and failure-first empirical bounds.",
+        "group": "Check"
+      },
+      {
         "path": "theories/becoming/CANONICAL-MAP.md",
+        "zh": "theories/becoming/CANONICAL-MAP.zh.md",
         "label": "The canonical map",
         "group": "See",
-        "text": "One cold-read synthesis joining the 0-axiom formal spine, the 66 bound tests, checked situations, CPU stress tests, and wisdom/ethics boundaries."
+        "text": "One cold-read synthesis joining the 0-axiom core, 14+2 periphery, 66 bound tests (failures first), stylised runtime, stress lab, real-learner bounds, and wisdom/ethics boundaries."
+      },
+      {
+        "path": "theories/becoming/results/atlas/PREMISE-FAMILIES.md",
+        "label": "Premise families",
+        "group": "See",
+        "text": "Structural taxonomy organizing hypothesis entries and distinct premise strings across live records and the atlas premise ledger, marking where new extractions remain pending."
       },
       {
         "path": "theories/becoming/results/atlas/ATLAS.md",
@@ -578,6 +621,10 @@
         "一页"
       ],
       [
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "对齐基础"
+      ],
+      [
         "theories/becoming/USES.zh.md",
         "用途"
       ],
@@ -598,6 +645,10 @@
         "怎样长成"
       ],
       [
+        "theories/becoming/CANONICAL-MAP.zh.md",
+        "规范地图"
+      ],
+      [
         "theories/becoming/results/atlas/ATLAS.md",
         "图集（英文）"
       ],
@@ -616,6 +667,10 @@
       [
         "theories/becoming/review/README.zh.md",
         "审查包"
+      ],
+      [
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "人工审计指南"
       ],
       [
         "theories/becoming/chapters/README.md",

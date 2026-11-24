@@ -6,6 +6,9 @@ A map of how anything comes to be, lasts, changes and ends within one relational
 
 *Eighty-six to a hundred and twelve minutes to read.*
 
+> **This is the November 13 long-form account.** Start here: [One page](ONE-PAGE.md) /
+> [Canonical Map](CANONICAL-MAP.md) -> [Alignment Foundation](ALIGNMENT-FOUNDATION.md) + [Human Audit Guide](HUMAN-AUDIT-GUIDE.md) -> [Review](review/README.md).
+
 ## How to read this
 
 This overview gives the theory's claims as one argument, in the order of the eight chapters, for a reader who does not read Lean. Read for alignment, its line runs through which differences make a difference to a selection (§3), how low an optimum leaves what makes none (§5), how a rule set again from the share it raises can lock, and the meta-attractor, the loop in which what a selection raises comes to set the selection, whose closed form can lock (§2), and what alignment asks (§7); read for wisdom, §6 and [the crosswalk](results/atlas/CROSSWALK.md) say where traditions and sciences meet it and where not. The argument does not derive everything from the root: of the declarations [08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge) takes as central, a few are cases of the root, more use its theorems in their proofs and most use none (§1). It summarizes; each result is stated once, with its hypotheses, Lean names and record, in its home section in [the chapters](chapters/01-ROOT.md), and nothing here is stronger than its home. Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](ONE-ARGUMENT.md), one line carried from what it assumes through the theorem and the tests that could fail it to a mixed case (about thirty-four to forty-four minutes), [the free-energy principle](FREE-ENERGY-PRINCIPLE.md), [a collective's course](COLLECTIVE-DIRECTION.md), [what it is for](USES.md), [the sciences](review/SCIENCES.md) and [the dossiers](review/README.md).

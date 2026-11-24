@@ -16,6 +16,9 @@
 
 **做对齐工作？** 先读[对齐审查材料的十分钟部分](review/ALIGNMENT.md#the-dossier-in-ten-minutes)，再读[对一个语言模型评判者的审计](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)与[它的表单](USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，那是一张就一条流水线自己的文档、日志与运行来填写的表单。
 
+> **此页为 2026 年 11 月 13 日长篇总述（基线版本）。** 请从这里开始：
+> [一页](ONE-PAGE.zh.md) / [规范地图](CANONICAL-MAP.zh.md) -> [对齐基础](ALIGNMENT-FOUNDATION.zh.md) + [人工审计指南](HUMAN-AUDIT-GUIDE.zh.md) -> [审查包](review/README.zh.md)。
+
 <a id="field-by-field"></a>
 ## 逐个领域
 

@@ -1403,7 +1403,20 @@
      "Becoming.ReadingLoop.possible_least"
     ],
     "how": {
-     "en": "TR5 (FREEZE-2) bears on RF3, a reading kept by its update: V1 to V3 test that a language model is a policy from its visible history, V4 and V5 two bridges about a reading it states, `possible_least` as the floor. TR4, in the same row, reads RF6.1 (a-revision-that-opens-a-correction, family H), outside this slice. The dynamic lists fresh as its test. Not run."
+     "en": "TR5 (FREEZE-2) bears on RF3, a reading kept by its update: V1 to V3 test that a language model is a policy from its visible history, V4 and V5 two bridges about a reading it states, `possible_least` as the floor. The dynamic links `experiments/formations-that-read/fresh`. Not run."
+    }
+   },
+   {
+    "dynamic": "a-revision-that-opens-a-correction",
+    "records": [
+     "a-revision-that-opens-a-correction"
+    ],
+    "laws": [
+     "Becoming.OpenedCorrection.coarser_opens_nothing",
+     "Becoming.OpenedCorrection.correctable_iff"
+    ],
+    "how": {
+     "en": "TR4 (FREEZE-2) tests RF6.1 (`a-revision-that-opens-a-correction`): a clerk keeps a register under a coarsened count-only rule and a crew chooses line corrections or replenishment from that record. Coarsening with no executable act gained opens nothing (`coarser_opens_nothing`, tested on arm C by crew match rate m2); arm L checks the reader-functioning baseline on uncoarsened line records (`correctable_iff` premise check >= 48/60), while m1, m3, and m4 test for line-content or act dependence leaking past the coarsened register rule (records naming the faulty line, clerk record dependence, or crew act dependence on the line). The dynamic links `experiments/formations-that-read` (`TR4`, frozen). Not run."
     }
    }
   ],
