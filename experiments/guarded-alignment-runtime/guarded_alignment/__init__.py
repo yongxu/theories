@@ -66,6 +66,14 @@ from .oplax_history import (
     id_span,
     synthesize_bij_cert,
 )
+from .proposal_audit import (
+    check_concurrent_reserve,
+    check_coupling_closure,
+    check_pace_margin_deadline,
+    check_proposal_fiber_split,
+    check_self_refit_lock,
+    evaluate_alignment_proposal,
+)
 
 __all__ = [
     "BijCert",
@@ -99,12 +107,17 @@ __all__ = [
     "c2_two_to_one_witness",
     "check_3d_irreversibility",
     "check_coarsening",
+    "check_concurrent_reserve",
+    "check_coupling_closure",
     "check_endpoints3",
     "check_eq3_cert",
     "check_eq_cert",
     "check_fiber_viability_split",
     "check_macro_refinement",
     "check_multi_query_feasibility",
+    "check_pace_margin_deadline",
+    "check_proposal_fiber_split",
+    "check_self_refit_lock",
     "check_weight_separation",
     "comp_span",
     "contractive_tube_bound",
@@ -113,6 +126,7 @@ __all__ = [
     "emergent_zero_to_one_witness",
     "eval_guarded_expr",
     "eval_guarded_proof",
+    "evaluate_alignment_proposal",
     "evaluate_pipeline_spec",
     "extract_base_conservativity_cert",
     "find_tally_separator",
