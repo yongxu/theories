@@ -9,7 +9,7 @@ did not compile: about a hundred errors, its build only looking stalled once its
 closed). Working
 names (`TransformsAcrossEpochs`, `EpochFamily`, `EpochCert`, `EpochTotal`, `EpochHandoffGate`,
 `epochProcess`) are this module's. Every declaration has an empty axiom report (scratch build,
-24 November 2026: 90 theorems, 178 declarations, no axioms, no warnings).
+24–25 November 2026: 100 theorems, 193 declarations, no axioms, no warnings).
 
 `Becoming.TransformsViably` fixes one capability reading `cap` and one safety predicate `Safe` for
 all time, and `Becoming.PolyComposition.anchored_selfMod_viable` fixes one envelope
@@ -62,6 +62,11 @@ change across epochs and what must not.
    `(x, own new draw, partner's current draw)` is both solo-complete and concurrently safe, gates
    with declared partner bounds compose (`bounded_supremum_local_gate_composes`), and the composed
    gate rejects `x₀ = 8` and certifies `x₀ = 11` (`reciprocal_evolve_rejects_8_and_certifies_11`).
+   Part 5b restates `ReciprocalGate` directly as the `EpochHandoffGate` of a parametric
+   `jointEpochFamily` (`jointEpochFamily_gate_iff_reciprocalGate`), specialized to `Bool × Bool`
+   (`jointBoolFamily`) with solo upgrades viable at `8`, simultaneous upgrades refused at `8` for
+   all `anchored` / `e` / `p`, simultaneous upgrades certified and non-deadlocking at `11`, and no
+   local gate matching both solo and joint `EpochHandoffGate`s.
 
 ## What stays fixed, and what this does not show (`AGENTS.md` Rule 2)
 
@@ -1873,6 +1878,245 @@ theorem reciprocal_evolve_rejects_8_and_certifies_11 :
   ⟨(by decide : ¬ 3 + (4 + 4) ≤ 8), admit11, reciprocalGate_sound admit11, rfl,
    Reach.of_step (a := ((), ⟨((), ()), ((), ())⟩)) ⟨rfl, trivial, fun _ => ⟨trivial, trivial⟩, rfl⟩,
    Reach.of_step (a := ((), ⟨((), ()), ((), ())⟩)) ⟨rfl, trivial, fun _ => ⟨trivial, trivial⟩, rfl⟩⟩
+
+/-! ### Part 5b: Joint epoch family and `EpochHandoffGate` -/
+
+/-- Parametric joint epoch family over any epoch index `E`: each epoch `e` carries the composed
+pair `(preOf e).1, (preOf e).2`, floor `3`, self-supporting gain, and joint warning level
+`3 + 2 * ((preOf e).1 + (preOf e).2)`. -/
+def jointEpochFamily {E : Type} (preOf : E → Nat × Nat) : EpochFamily E Unit Unit where
+  Mode _ := Unit × Unit
+  S _ _ := Nat × Nat
+  Obs _ _ := Bool × Bool
+  Dist _ _ := Unit × Unit
+  Int _ _ := Sum Empty Empty
+  Ext _ _ := Sum Unit Unit
+  C e := pairComp (preOf e).1 (preOf e).2
+  init _ := ⟨((), ()), (1, 1)⟩
+  c e := pairContract (preOf e).1 (preOf e).2
+  route _ := pairRoute
+  obs e := pairObs (3 + 2 * ((preOf e).1 + (preOf e).2)) (3 + 2 * ((preOf e).1 + (preOf e).2))
+  channel _ := pairChannel
+  G := selfGain
+  envDraw _ _ := 0
+  envCap _ _ := 0
+  jointAdm _ _ := True
+  scope _ _ := true
+  x_crit _ _ := 3
+  warnLevel e _ := 3 + 2 * ((preOf e).1 + (preOf e).2)
+  H_safe _ _ := 1
+  sitePreCap e _ := (preOf e).1 + (preOf e).2
+  sitePostCap _ _ := 0
+  maxLagEnv _ := 1
+  maxSilenceEnv _ := 0
+
+/-- Initial state of both agents with lag bits raised. -/
+abbrev jointInit : Σ _ : Unit × Unit, Nat × Nat := ⟨((), ()), (1, 1)⟩
+
+theorem jointEpochFamily_cert {E : Type} (preOf : E → Nat × Nat) (e : E) :
+    (jointEpochFamily preOf).Cert e where
+  env_within _ _ _ := Nat.le_refl 0
+  pre_cap_bound _ _ _ _ _ := Nat.le_refl _
+  post_cap_bound _ _ _ _ := Nat.le_refl 0
+  lag_bound _ _ _ := Nat.le_refl 1
+  silence_bound _ _ _ := Nat.le_refl 0
+  obs_detects _ _ _ _ _ _ hlt := Or.inl (CoreHelpers.natBlt_true_iff.mpr hlt)
+  channel_fires _ _ _ _ := rfl
+  post_viable := fun () => recovers_three
+  post_allowance _ := Nat.zero_le 1
+  warn_margin _ _ := by
+    show 3 + (1 + 1) * ((preOf e).1 + (preOf e).2 + 0) ≤ 3 + 2 * ((preOf e).1 + (preOf e).2)
+    exact Nat.le_refl _
+
+theorem jointEpochFamily_total {E : Type} (preOf : E → Nat × Nat) (e : E) :
+    (jointEpochFamily preOf).Total e :=
+  ⟨⟨(), trivial⟩, fun _ _ => ⟨((), ()), fun _ => ⟨trivial, trivial⟩⟩⟩
+
+theorem jointEpochFamily_anchor {E : Type} (preOf : E → Nat × Nat) (e e' : E) :
+    (jointEpochFamily preOf).AnchorStep e e' :=
+  ⟨fun _ h => ⟨h, Nat.le_refl 3⟩, fun _ => Nat.le_refl 0, fun _ h => h⟩
+
+theorem jointEpochFamily_headroom_iff {E : Type} (preOf : E → Nat × Nat) (x₀ : Nat) (e : E) :
+    (jointEpochFamily preOf).Headroom e jointInit (fun _ => x₀) ↔
+      ReciprocalGate x₀ (preOf e).1 (preOf e).2 := by
+  refine ⟨fun h => ?_, fun h () _ => ?_⟩
+  · have hm : 3 + 1 * ((preOf e).1 + (preOf e).2) ≤ x₀ := h () rfl
+    rw [Nat.one_mul] at hm
+    exact hm
+  · show 3 + 1 * ((preOf e).1 + (preOf e).2) ≤ x₀
+    rw [Nat.one_mul]
+    exact h
+
+/-- The `EpochHandoffGate` of `jointEpochFamily` into `e'` at `jointInit` is `ReciprocalGate`. -/
+theorem jointEpochFamily_gate_iff_reciprocalGate {E : Type} (preOf : E → Nat × Nat)
+    (anchored : Bool) (x₀ : Nat) (e e' : E) :
+    EpochHandoffGate (jointEpochFamily preOf) (fun _ _ => True) anchored (fun _ => x₀) e e'
+      jointInit ↔ ReciprocalGate x₀ (preOf e').1 (preOf e').2 :=
+  ⟨fun g => (jointEpochFamily_headroom_iff preOf x₀ e').mp g.headroom,
+   fun h =>
+     { allow := trivial
+       anchor := fun _ => jointEpochFamily_anchor preOf e e'
+       cert := jointEpochFamily_cert preOf e'
+       total := jointEpochFamily_total preOf e'
+       in_K := ⟨Nat.le_refl 1, Nat.le_refl 1⟩
+       headroom := (jointEpochFamily_headroom_iff preOf x₀ e').mpr h }⟩
+
+/-- Per-agent draw for un-upgraded (`false`, draw `1`) versus upgraded (`true`, draw `4`). -/
+def upgradeDraw : Bool → Nat
+  | false => 1
+  | true => 4
+
+/-- Concrete `Bool × Bool` joint epoch family. -/
+def jointBoolFamily : EpochFamily (Bool × Bool) Unit Unit :=
+  jointEpochFamily (fun e => (upgradeDraw e.1, upgradeDraw e.2))
+
+/-- All transitions between epochs are structurally permitted; safety rests on the gate. -/
+abbrev jointBoolAllow : (Bool × Bool) → (Bool × Bool) → Prop := fun _ _ => True
+
+/-- **Solo `A` in the epoch process.** At `x₀ = 8`, upgrading to `(true, false)` is a step,
+the starting state lies in the viability kernel, and every state reachable from `(true, false)`
+stays in `epochClosedGuard jointBoolFamily (false, false)`. -/
+theorem jointBool_solo_A_upgrade_and_viable :
+    (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 8, ⟨(false, false), jointInit⟩) (.upgrade (true, false) jointInit)
+      (fun _ => 8, ⟨(true, false), jointInit⟩) ∧
+    Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 8, ⟨(false, false), jointInit⟩) ∧
+    ∀ st, Reach (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (fun _ => 8, ⟨(true, false), jointInit⟩) st →
+      epochClosedGuard jointBoolFamily (false, false) st := by
+  have gate : EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => 8)
+      (false, false) (true, false) jointInit :=
+    (jointEpochFamily_gate_iff_reciprocalGate _ true 8 (false, false) (true, false)).mpr
+      (by show 3 + (4 + 1) ≤ 8; decide)
+  have up : (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 8, ⟨(false, false), jointInit⟩) (.upgrade (true, false) jointInit)
+      (fun _ => 8, ⟨(true, false), jointInit⟩) :=
+    EpochStep.upgrade (F := jointBoolFamily) (AllowUpgrade := jointBoolAllow) (anchored := true)
+      (fun _ => 8) (false, false) jointInit (true, false) jointInit gate
+  have kern : Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 8, ⟨(false, false), jointInit⟩) :=
+    epochChain_viability_kernel jointBoolFamily jointBoolAllow (false, false) (fun _ => 8)
+      selfGain_rises (jointEpochFamily_cert _ (false, false))
+      ((jointEpochFamily_headroom_iff _ 8 (false, false)).mpr (by show 3 + (1 + 1) ≤ 8; decide))
+  exact ⟨up, kern, fun st hreach => kern st (Reach.trans (Reach.of_step up) hreach)⟩
+
+/-- **Solo `B` in the epoch process.** Mirror image for upgrading to `(false, true)` at `x₀ = 8`. -/
+theorem jointBool_solo_B_upgrade_and_viable :
+    (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 8, ⟨(false, false), jointInit⟩) (.upgrade (false, true) jointInit)
+      (fun _ => 8, ⟨(false, true), jointInit⟩) ∧
+    Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 8, ⟨(false, false), jointInit⟩) ∧
+    ∀ st, Reach (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (fun _ => 8, ⟨(false, true), jointInit⟩) st →
+      epochClosedGuard jointBoolFamily (false, false) st := by
+  have gate : EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => 8)
+      (false, false) (false, true) jointInit :=
+    (jointEpochFamily_gate_iff_reciprocalGate _ true 8 (false, false) (false, true)).mpr
+      (by show 3 + (1 + 4) ≤ 8; decide)
+  have up : (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 8, ⟨(false, false), jointInit⟩) (.upgrade (false, true) jointInit)
+      (fun _ => 8, ⟨(false, true), jointInit⟩) :=
+    EpochStep.upgrade (F := jointBoolFamily) (AllowUpgrade := jointBoolAllow) (anchored := true)
+      (fun _ => 8) (false, false) jointInit (false, true) jointInit gate
+  have kern : Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 8, ⟨(false, false), jointInit⟩) :=
+    epochChain_viability_kernel jointBoolFamily jointBoolAllow (false, false) (fun _ => 8)
+      selfGain_rises (jointEpochFamily_cert _ (false, false))
+      ((jointEpochFamily_headroom_iff _ 8 (false, false)).mpr (by show 3 + (1 + 1) ≤ 8; decide))
+  exact ⟨up, kern, fun st hreach => kern st (Reach.trans (Reach.of_step up) hreach)⟩
+
+/-- **Simultaneous upgrade refused at `x₀ = 8`.** Direct or sequential upgrades into `(true, true)`
+are refused by `EpochHandoffGate` at reserve `8`, with or without the anchor clause. -/
+theorem jointBool_simultaneous_refused_at_8 (anchored : Bool) (e : Bool × Bool)
+    (p : Σ _ : Unit × Unit, Nat × Nat) (st' : jointBoolFamily.State) :
+    ¬ (epochProcess jointBoolFamily jointBoolAllow anchored).step
+      (fun _ => 8, ⟨e, p⟩) (.upgrade (true, true) jointInit) st' := by
+  intro hstep
+  cases hstep with
+  | upgrade _ _ _ _ _ gate =>
+    exact absurd
+      ((jointEpochFamily_gate_iff_reciprocalGate _ anchored 8 e (true, true)).mp gate)
+      (by show ¬ 3 + (4 + 4) ≤ 8; decide)
+
+/-- **Simultaneous upgrade certified at `x₀ = 11`.** At `x₀ = 11`, upgrading to `(true, true)` is a
+step, every reachable state stays viable, the reserve moves `11 → 4 → 5`, and no reachable state
+deadlocks. -/
+theorem jointBool_simultaneous_certified_at_11 :
+    (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 11, ⟨(false, false), jointInit⟩) (.upgrade (true, true) jointInit)
+      (fun _ => 11, ⟨(true, true), jointInit⟩) ∧
+    Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 11, ⟨(false, false), jointInit⟩) ∧
+    Reach (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (fun _ => 11, ⟨(false, false), jointInit⟩)
+      (fun _ => 4, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩) ∧
+    Reach (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (fun _ => 4, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩)
+      (fun _ => 5, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩) ∧
+    ∀ st, Reach (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (fun _ => 11, ⟨(false, false), jointInit⟩) st →
+      ∃ a st', (epochClosedProcess jointBoolFamily jointBoolAllow).step st a st' := by
+  have gate : EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => 11)
+      (false, false) (true, true) jointInit :=
+    (jointEpochFamily_gate_iff_reciprocalGate _ true 11 (false, false) (true, true)).mpr
+      (by show 3 + (4 + 4) ≤ 11; decide)
+  have up : (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 11, ⟨(false, false), jointInit⟩) (.upgrade (true, true) jointInit)
+      (fun _ => 11, ⟨(true, true), jointInit⟩) :=
+    EpochStep.upgrade (F := jointBoolFamily) (AllowUpgrade := jointBoolAllow) (anchored := true)
+      (fun _ => 11) (false, false) jointInit (true, true) jointInit gate
+  have intra1 : (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 11, ⟨(true, true), jointInit⟩) (.intra () (true, true) ((), ()) ((), ()))
+      (fun _ => 4, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩) :=
+    EpochStep.intra (F := jointBoolFamily) (AllowUpgrade := jointBoolAllow) (anchored := true)
+      (fun _ => 11) (true, true) ((), ()) (1, 1) () ((), ()) trivial (fun _ => ⟨trivial, trivial⟩)
+  have intra2 : (epochClosedProcess jointBoolFamily jointBoolAllow).step
+      (fun _ => 4, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩) (.intra () (true, true) ((), ()) ((), ()))
+      (fun _ => 5, ⟨(true, true), ⟨((), ()), (0, 0)⟩⟩) :=
+    EpochStep.intra (F := jointBoolFamily) (AllowUpgrade := jointBoolAllow) (anchored := true)
+      (fun _ => 4) (true, true) ((), ()) (0, 0) () ((), ()) trivial (fun _ => ⟨trivial, trivial⟩)
+  have kern : Viability.Kernel (epochClosedProcess jointBoolFamily jointBoolAllow)
+      (epochClosedGuard jointBoolFamily (false, false))
+      (fun _ => 11, ⟨(false, false), jointInit⟩) :=
+    epochChain_viability_kernel jointBoolFamily jointBoolAllow (false, false) (fun _ => 11)
+      selfGain_rises (jointEpochFamily_cert _ (false, false))
+      ((jointEpochFamily_headroom_iff _ 11 (false, false)).mpr (by show 3 + (1 + 1) ≤ 11; decide))
+  refine ⟨up, kern, Reach.trans (Reach.of_step up) (Reach.of_step intra1), Reach.of_step intra2,
+    fun st hreach => ?_⟩
+  exact epochChain_nonDeadlock jointBoolFamily jointBoolAllow true (false, false) jointInit
+    (fun _ => 11) (jointEpochFamily_total _ (false, false)) ⟨Nat.le_refl 1, Nat.le_refl 1⟩
+    st hreach
+
+/-- **No local gate inside `EpochHandoffGate`.** Any gate admitting both solo upgrades at `(4, 1)`
+whenever `EpochHandoffGate` admits them cannot imply `EpochHandoffGate` for `(true, true)`. -/
+theorem jointBool_no_local_gate_admits_solo_and_matches_joint_gate
+    (LocalGate : Nat → Nat → Nat → Prop)
+    (soloA : ∀ x₀, EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => x₀)
+      (false, false) (true, false) jointInit → LocalGate x₀ 4 1)
+    (soloB : ∀ x₀, EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => x₀)
+      (false, false) (false, true) jointInit → LocalGate x₀ 4 1)
+    (joint : ∀ x₀, LocalGate x₀ 4 1 → LocalGate x₀ 4 1 →
+      EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => x₀)
+        (false, false) (true, true) jointInit) : False :=
+  have gA : EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => 8)
+      (false, false) (true, false) jointInit :=
+    (jointEpochFamily_gate_iff_reciprocalGate _ true 8 (false, false) (true, false)).mpr
+      (by show 3 + (4 + 1) ≤ 8; decide)
+  have gB : EpochHandoffGate jointBoolFamily jointBoolAllow true (fun _ => 8)
+      (false, false) (false, true) jointInit :=
+    (jointEpochFamily_gate_iff_reciprocalGate _ true 8 (false, false) (false, true)).mpr
+      (by show 3 + (1 + 4) ≤ 8; decide)
+  absurd
+    ((jointEpochFamily_gate_iff_reciprocalGate _ true 8 (false, false) (true, true)).mp
+      (joint 8 (soloA 8 gA) (soloB 8 gB)))
+    (by show ¬ 3 + (4 + 4) ≤ 8; decide)
 
 end SimultaneousUpgradeObstruction
 

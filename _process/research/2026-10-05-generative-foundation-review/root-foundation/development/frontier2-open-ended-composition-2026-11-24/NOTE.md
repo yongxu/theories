@@ -75,7 +75,7 @@ Each item names the declarations; every statement is the theorem's own, premises
 - **Fixed for all epochs**: the site type, `G`, `envDraw`, the shape of `AnchorStep`, and the gate's checks. A floor once set too high cannot be lowered by the system itself; lowering it is exactly what `UnanchoredPolyWireheading` shows to be unsafe, so that rigidity is the point, not an oversight.
 - **Zeno upgrades** (endless upgrades with no intra step) are runs of the process. They never leave the guard, since the reserve does not move, but they also do no work; nothing here rules them out.
 - **Which unmodelled sites ought to enter scope, and when**, is not decided: the gate refuses late entry; it does not discover `sNew` (Pillar B).
-- **Part 5 stands beside the epoch process, not inside it.** The solo and composed upgrades are modelled as starting draws of `polyClosedProcess`, not as `EpochHandoffGate` steps of a joint family over `Bool × Bool`. Restating the composed gate as the gate of that joint family is left open.
+- **Part 5 is now inside the epoch process (Part 5b).** `jointEpochFamily` and `jointBoolFamily` restate `ReciprocalGate` directly as the `EpochHandoffGate` of a joint epoch family over `Bool × Bool` (`jointEpochFamily_gate_iff_reciprocalGate`), with solo upgrades viable at `8`, simultaneous upgrades refused at `8`, simultaneous upgrades certified and non-deadlocking at `11`, and no local gate matching both solo and joint `EpochHandoffGate`s.
 - **Not compared with the literature**: no claim that this matches or exceeds existing assume-guarantee or runtime-assurance results.
 
 ## 5. Changes from the Pillar A paper attack
@@ -131,21 +131,26 @@ Each item names the declarations; every statement is the theorem's own, premises
       "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
       "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
       "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering"]},
-    {"en": "Evolve versus compose on one composed substrate.", "declarations": [
+    {"en": "Evolve versus compose on one composed substrate, and joint epoch-family handoff gate.", "declarations": [
       "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
       "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
       "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
       "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
-      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11"]}
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_gate_iff_reciprocalGate",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_A_upgrade_and_viable",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_B_upgrade_and_viable",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_refused_at_8",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_certified_at_11",
+      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_no_local_gate_admits_solo_and_matches_joint_gate"]}
   ],
   "does_not_show": [
     {"en": "That any actual system meets EpochCert, AnchorStep or the gate (recognition, Rule 2).", "kind": "scope"},
     {"en": "Substrate draw during a real switchover; a substrate law or environment draw that changes across epochs.", "kind": "scope"},
-    {"en": "Which unmodelled sites should enter scope, or when.", "kind": "scope"},
-    {"en": "The composed gate of Part 5 as the gate of a joint epoch family.", "kind": "scope"}
+    {"en": "Which unmodelled sites should enter scope, or when.", "kind": "scope"}
   ],
   "standard_boundaries": ["no-ethical-premise", "no-evaluation", "discrete-steps", "formal-not-empirical", "names-provisional", "omission-not-refutation"],
-  "validation_scope": {"en": "Scratch build with Lean 4.29.1 (scratch_build.py, 24 November 2026): 90 theorems, 178 declarations, with_axioms {}, no warnings; not yet a checker receipt. Adversarial review by swarm worker f2-critic. No person has read it."},
+  "validation_scope": {"en": "Scratch build with Lean 4.29.1 (scratch_build.py, 24-25 November 2026): 100 theorems, 193 declarations, with_axioms {}, no warnings; not yet a checker receipt. Adversarial review by swarm workers f2-critic and deltas-critic. No person has read it."},
   "correspondence": {"en": "Reading (AI-written): what is evolvable (modes, sensors, capabilities, envelopes) and what is anchored (substrate law, floors in scope, environment bounds) must be separated, and the anchored side may only tighten; moving a floor to the evolvable side is the wireheading route, and freezing capabilities on the anchored side is lock-in."},
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
   "dependencies": [
@@ -153,6 +158,61 @@ Each item names the declarations; every statement is the theorem's own, premises
     {"id": "transformative-viability-order", "relation": "formal-reuse", "detail": {"en": "TransformsViably is the one-epoch case of TransformsAcrossEpochs (constantEpoch_iff_transformsViably)."}},
     {"id": "polynomial-dynamic-interfaces-and-coupled-laxity", "relation": "formal-reuse", "detail": {"en": "polyClosedStep, PolyContract, compose; anchored_selfMod_viable and monotone_selfWidening_viable recovered as single-epoch cases."}}
   ],
-  "history": [{"en": "24 November 2026: drafted (Frontier 2). AI-written."}]
+  "history": [
+    {"en": "24 November 2026: drafted (Frontier 2). AI-written."},
+    {"en": "25 November 2026: added Part 5b joint epoch-family handoff gate and Bool × Bool specialization. AI-written."}
+  ]
+}
+```
+
+## 7. Addendum: Part 5b joint-epoch-family handoff gate (AI-written)
+
+*AI-written addendum (swarm worker `d2-joint-epoch-gate`, 25 November 2026). Closes the remaining Frontier 2 open delta noted in §4 above.*
+
+### 7.1 What was added (`SimultaneousUpgradeObstruction`, Part 5b)
+
+1. **Parametric joint epoch family** (`jointEpochFamily {E : Type} (preOf : E → Nat × Nat) : EpochFamily E Unit Unit`, `jointInit`):
+   - `jointEpochFamily_cert`: every epoch `e : E` satisfies `Cert e` with joint warning level `3 + 2 * ((preOf e).1 + (preOf e).2)` and self-supporting gain `selfGain`.
+   - `jointEpochFamily_total`: every epoch `e : E` satisfies `Total e`.
+   - `jointEpochFamily_anchor`: every epoch pair `(e, e')` satisfies `AnchorStep e e'` (floors stay at `3`, scope remains all `true`, environment bounds unchanged).
+   - `jointEpochFamily_headroom_iff`: `(jointEpochFamily preOf).Headroom e jointInit (fun _ => x₀) ↔ ReciprocalGate x₀ (preOf e).1 (preOf e).2`.
+   - `jointEpochFamily_gate_iff_reciprocalGate`: `EpochHandoffGate (jointEpochFamily preOf) (fun _ _ => True) anchored (fun _ => x₀) e e' jointInit ↔ ReciprocalGate x₀ (preOf e').1 (preOf e').2`.
+2. **Concrete `Bool × Bool` joint epoch specialization** (`upgradeDraw`, `jointBoolFamily`, `jointBoolAllow`):
+   - `jointBool_solo_A_upgrade_and_viable` and `jointBool_solo_B_upgrade_and_viable`: at `x₀ = 8`, both `.upgrade (true, false) jointInit` and `.upgrade (false, true) jointInit` are `epochClosedProcess` steps, the starting state `(fun _ => 8, ⟨(false, false), jointInit⟩)` lies in `Viability.Kernel` for `epochClosedGuard jointBoolFamily (false, false)`, and every state reachable from either post-upgrade state remains in `epochClosedGuard jointBoolFamily (false, false)`.
+   - `jointBool_simultaneous_refused_at_8`: for every `anchored : Bool`, `e : Bool × Bool`, `p`, and `st'`, `.upgrade (true, true) jointInit` from reserve `8` is not a step of `epochProcess jointBoolFamily jointBoolAllow anchored` (refusing direct `(false, false) → (true, true)` and sequential `(true, false) → (true, true)` / `(false, true) → (true, true)` alike).
+   - `jointBool_simultaneous_certified_at_11`: at `x₀ = 11`, `.upgrade (true, true) jointInit` is an `epochClosedProcess` step, the starting state lies in `Viability.Kernel`, the reserve transitions `11 → 4 → 5` (clearing both lag bits), and every reachable state has a successor via `epochChain_nonDeadlock`.
+   - `jointBool_no_local_gate_admits_solo_and_matches_joint_gate`: any local gate `LocalGate : Nat → Nat → Nat → Prop` admitting `(4, 1)` whenever `EpochHandoffGate` admits `(true, false)` or `(false, true)` cannot imply `EpochHandoffGate` for `(true, true)`.
+
+### 7.2 Updated counts and verification
+
+- **Counts:** `100` theorems, `193` declarations (up from `90` theorems, `178` declarations; `+10` theorems, `+5` defs/abbrevs), `with_axioms: {}`, `unclean: []`, `0` warnings, `0` `sorry`, `0` `MARKET_EN` / `MARKET_ZH` hits.
+- **Verbatim scratch-build output:**
+
+```text
+PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/scratch_build.py /Users/ren/tmp/d2-scratch Becoming.OpenEndedComposition
+{
+  "tree": "/Users/ren/tmp/d2-scratch",
+  "modules": 160,
+  "ran": [
+    "Becoming.OpenEndedComposition",
+    "BecomingOpenEndedCompositionAxiomAudit",
+    "BecomingOpenEndedCompositionSignatures",
+    "Becoming.OpenEndedComposition.PreludeOnly"
+  ],
+  "reused": 318,
+  "unclean": [],
+  "audits": {
+    "Becoming.OpenEndedComposition": {
+      "theorems": 100,
+      "declarations": 193,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.OpenEndedComposition": 1.551,
+    "BecomingOpenEndedCompositionAxiomAudit": 0.688,
+    "BecomingOpenEndedCompositionSignatures": 0.49,
+    "Becoming.OpenEndedComposition.PreludeOnly": 1.375
+  }
 }
 ```
