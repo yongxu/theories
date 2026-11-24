@@ -51,7 +51,13 @@ SCOPE = (
     "increasing in ρ and <= 0 at ρ = 0, B1 headroom witness; "
     "(4) trust-region projection after an α-Lipschitz guard map is an AlignmentReals.MetricLaxSim with "
     "(α, 1, Δ, 0), giving the tube α^n d₀ + Δ(1 - α^n)/(1 - α) via advance_blocks (attained on ℝ) and "
-    "Viability.Kernel via metric_laxSim_contraction_tube, while unprojected steps leave every bounded band in one step."
+    "Viability.Kernel via metric_laxSim_contraction_tube, while unprojected steps leave every bounded band in one step; "
+    "(5) detector advantage Youden J = TPR - FPR = 1 - errSum: |J| <= tvDist (attained), same-fiber aliased mixtures "
+    "capped at (1 - α) tvDist <= 1 - α (attained on Bool), and zero Youden J up to crossing under delayed separation; "
+    "(6) measure-theoretic measYoudenJ and Gaussian-additive aliasing floor over Measure ℝ via ProbabilityTheory.gaussianReal: "
+    "Bhattacharyya + Cauchy-Schwarz + Hellinger bounds 1 - exp(-Δ^2/(8v)) <= TV <= sqrt(1 - exp(-Δ^2/(4v))), "
+    "|measYoudenJ| <= TV attained at the midpoint, positive error floor and linear J ceiling for gaussianAliasedLaw, "
+    "midpoint sharpness and α = 1 complete blindness, and the B5 Gaussian lab witness."
 )
 
 

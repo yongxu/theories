@@ -1,5 +1,6 @@
 import Mathlib.Analysis.Calculus.MeanValue
 import Mathlib.Topology.Order.IntermediateValue
+import Mathlib.Probability.Distributions.Gaussian.Real
 import Mathlib.Tactic
 import ObservationalFidelity
 
@@ -12,10 +13,10 @@ importing `ObservationalFidelity` (and through it `AlignmentReals`, `BecomingRea
 (`propext`, `Classical.choice`, `Quot.sound`), with `0` `sorryAx`, `0` `private` declarations,
 `0` `lemma`/`class`/unnamed `instance` declarations, and `0` forbidden market words.
 
-The neural stress lab (`experiments/neural-alignment-stress-lab/RESULTS.md` §4.2) records four
-regimes where the guarded runtime still breaks. For each, this module proves a limit together with
-the theorem that shows the limit sits exactly at its stated threshold (a sharpness witness or a
-remedy):
+The neural stress lab (`experiments/neural-alignment-stress-lab/RESULTS.md` §4.2, §5.0) records
+four regimes where the guarded runtime still breaks. For each, this module proves a limit together
+with the theorem that shows the limit sits exactly at its stated threshold (a sharpness witness or
+a remedy):
 
 1. **Correlated judge pool (`FAIL_correlated_pool_drift`).** Scores `s i x = γ c x + (1 - γ) u i x`
    (a rank-1 shared term plus residuals in `[0, 1]`): internal disagreement is at most `1 - γ` for
@@ -35,6 +36,15 @@ remedy):
    give an `AlignmentReals.MetricLaxSim` (`trustRegionMetricLaxSim`), hence the tube
    `α ^ n d₀ + Δ_max (1 - α ^ n) / (1 - α)` (attained on `ℝ`) and a `Viability.Kernel` via
    `metric_laxSim_contraction_tube`; unprojected steps leave every bounded guard band in one step.
+5. **Detector advantage (`Youden J = TPR - FPR`, finite and lag).** `youdenJ P₀ P₁ g = 1 - errSum`
+   satisfies `|youdenJ P₀ P₁ g| ≤ tvDist P₀ P₁` (attained), caps same-fiber aliased mixtures at
+   `(1 - α) tvDist (K u₁) (K u₂) ≤ 1 - α` (attained), and vanishes before `t* < L` under lag
+   blindness (`lag_wall_youdenJ_zero`).
+6. **Measure-theoretic `Youden J` and Gaussian-additive aliasing floor.** Over `Measure ℝ` and
+   `ProbabilityTheory.gaussianReal`, Bhattacharyya + Cauchy-Schwarz + Hellinger bounds give
+   `1 - exp (-Δ^2 / (8 v)) ≤ TV ≤ √(1 - exp (-Δ^2 / (4 v)))` with `|measYoudenJ| ≤ TV` (attained
+   at the midpoint), positive error floor and `J` ceiling for `gaussianAliasedLaw`, sharpness at
+   the midpoint, zero separation at `α = 1`, and the `B5` Gaussian lab witness.
 
 Applying any of these to the stress lab is a recognition, not a proof (Rule 2); see
 `frontier3-quantitative-transfer-2026-11-24/PAPER-ATTACK.md`.
@@ -745,5 +755,756 @@ theorem trust_region_lab_witness {E : Type*} [NormedAddCommGroup E] [NormedSpace
   ⟨fun lr _ hz₀ => trust_region_viability T lr 1 (by norm_num) (by norm_num) (by norm_num) hT hc hz₀
       (by norm_num),
    fun _ hlr => unprojected_step_overshoots T hc hlr 2⟩
+
+/-! ## Part 5: Detector Advantage (`Youden J = TPR - FPR`) Walls (Finite & Lag) -/
+
+/-- Youden's `J = TPR - FPR` advantage of a binary rule `g` distinguishing `P₁` from `P₀`. -/
+noncomputable def youdenJ {Y : Type*} [Fintype Y] (P₀ P₁ : ObservationalFidelity.FinDist Y)
+    (g : Y → Bool) : ℝ :=
+  testMass P₁ g - testMass P₀ g
+
+/-- Youden's `J` equals `1` minus the two-point error sum `FPR + FNR`. -/
+theorem youdenJ_eq_one_sub_errorSum {Y : Type*} [Fintype Y]
+    (P₀ P₁ : ObservationalFidelity.FinDist Y) (g : Y → Bool) :
+    youdenJ P₀ P₁ g = 1 - (testMass P₀ g + testMass P₁ (fun y => !g y)) := by
+  unfold youdenJ
+  linarith [testMass_add_not P₁ g]
+
+/-- Constant rules have zero Youden advantage. -/
+theorem youdenJ_const_zero {Y : Type*} [Fintype Y]
+    (P₀ P₁ : ObservationalFidelity.FinDist Y) :
+    youdenJ P₀ P₁ (fun _ => true) = 0 ∧ youdenJ P₀ P₁ (fun _ => false) = 0 := by
+  have ht : ∀ P : ObservationalFidelity.FinDist Y, testMass P (fun _ => true) = 1 := fun P => by
+    simp [testMass, P.sum_eq_one]
+  have hf : ∀ P : ObservationalFidelity.FinDist Y, testMass P (fun _ => false) = 0 := fun P => by
+    simp [testMass]
+  exact ⟨by unfold youdenJ; rw [ht P₁, ht P₀, sub_self],
+    by unfold youdenJ; rw [hf P₁, hf P₀, sub_self]⟩
+
+/-- Youden's `J` is bounded above by total variation distance. -/
+theorem youdenJ_le_tvDist {Y : Type*} [Fintype Y] (P₀ P₁ : ObservationalFidelity.FinDist Y)
+    (g : Y → Bool) :
+    youdenJ P₀ P₁ g ≤ ObservationalFidelity.tvDist P₀ P₁ := by
+  linarith [two_point_test_floor P₀ P₁ g, youdenJ_eq_one_sub_errorSum P₀ P₁ g]
+
+/-- Absolute Youden advantage `|J|` is bounded above by total variation distance. -/
+theorem abs_youdenJ_le_tvDist {Y : Type*} [Fintype Y] (P₀ P₁ : ObservationalFidelity.FinDist Y)
+    (g : Y → Bool) :
+    |youdenJ P₀ P₁ g| ≤ ObservationalFidelity.tvDist P₀ P₁ := by
+  refine abs_le.mpr ⟨?_, youdenJ_le_tvDist P₀ P₁ g⟩
+  have hrev := youdenJ_le_tvDist P₁ P₀ g
+  rw [ObservationalFidelity.tvDist_symm] at hrev
+  unfold youdenJ at hrev ⊢
+  linarith
+
+/-- Some binary rule attains `youdenJ P₀ P₁ g = tvDist P₀ P₁` on finite carriers. -/
+theorem youdenJ_tvDist_attained {Y : Type*} [Fintype Y] [DecidableEq Y]
+    (P₀ P₁ : ObservationalFidelity.FinDist Y) :
+    ∃ g : Y → Bool, youdenJ P₀ P₁ g = ObservationalFidelity.tvDist P₀ P₁ := by
+  let g : Y → Bool := fun y => @decide (P₀.w y < P₁.w y) (Classical.propDecidable _)
+  refine ⟨g, ?_⟩
+  have hzero : ∑ y : Y, (P₁.w y - P₀.w y) = 0 := by
+    rw [Finset.sum_sub_distrib, P₁.sum_eq_one, P₀.sum_eq_one, sub_self]
+  have hterm : ∀ y : Y,
+      (if g y then P₁.w y else 0) - (if g y then P₀.w y else 0) =
+        (1 / 2 : ℝ) * |P₀.w y - P₁.w y| + (1 / 2 : ℝ) * (P₁.w y - P₀.w y) := fun y => by
+    by_cases h : P₀.w y < P₁.w y
+    · have hg : g y = true := @decide_eq_true (P₀.w y < P₁.w y) (Classical.propDecidable _) h
+      rw [hg, if_pos rfl, if_pos rfl, abs_of_neg (sub_neg.mpr h)]
+      ring
+    · have hg : g y = false := @decide_eq_false (P₀.w y < P₁.w y) (Classical.propDecidable _) h
+      rw [hg]
+      simp only [Bool.false_eq_true, if_false, sub_self]
+      rw [abs_of_nonneg (sub_nonneg.mpr (not_lt.mp h))]
+      ring
+  unfold youdenJ testMass ObservationalFidelity.tvDist FiniteProb.tvDist
+  rw [← Finset.sum_sub_distrib]
+  calc ∑ y : Y, ((if g y then P₁.w y else 0) - (if g y then P₀.w y else 0))
+      = ∑ y : Y, ((1 / 2 : ℝ) * |P₀.w y - P₁.w y| + (1 / 2 : ℝ) * (P₁.w y - P₀.w y)) :=
+        Finset.sum_congr rfl fun y _ => hterm y
+    _ = (1 / 2 : ℝ) * ∑ y : Y, |P₀.w y - P₁.w y| := by
+        rw [Finset.sum_add_distrib, ← Finset.mul_sum, ← Finset.mul_sum, hzero, mul_zero, add_zero]
+
+/-- **Mixture Aliasing Advantage Ceiling (`youdenJ_mixture_aliasing_ceiling`):** for same-fiber
+states `f u₁ = f u₂`, every detector on the aliased mixture `(1 - α) K u + α N (f u)` has
+`|youdenJ| ≤ (1 - α) tvDist (K u₁) (K u₂) ≤ 1 - α`. -/
+theorem youdenJ_mixture_aliasing_ceiling {U O Y : Type*} [Fintype Y] {α : ℝ} (hα0 : 0 ≤ α)
+    (hα1 : α ≤ 1) (K : U → ObservationalFidelity.FinDist Y)
+    (N : O → ObservationalFidelity.FinDist Y) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂)
+    (g : Y → Bool) :
+    |youdenJ (mixDist α hα0 hα1 (K u₁) (N (f u₁)))
+        (mixDist α hα0 hα1 (K u₂) (N (f u₂))) g| ≤
+      (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) ∧
+    (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) ≤ 1 - α := by
+  refine ⟨?_, mul_le_of_le_one_right (by linarith) (tvDist_le_one (K u₁) (K u₂))⟩
+  calc |youdenJ (mixDist α hα0 hα1 (K u₁) (N (f u₁)))
+          (mixDist α hα0 hα1 (K u₂) (N (f u₂))) g|
+      ≤ ObservationalFidelity.tvDist (mixDist α hα0 hα1 (K u₁) (N (f u₁)))
+          (mixDist α hα0 hα1 (K u₂) (N (f u₂))) := abs_youdenJ_le_tvDist _ _ g
+    _ = (1 - α) * ObservationalFidelity.tvDist (K u₁) (K u₂) := by
+        rw [← hf, tvDist_mixDist_same hα0 hα1]
+
+/-- **Mixture Advantage Attained (`youdenJ_mixture_attained`):** on `Bool`, `id` attains
+`youdenJ = 1 - α` for every macro law `N`. -/
+theorem youdenJ_mixture_attained {α : ℝ} (hα0 : 0 ≤ α) (hα1 : α ≤ 1)
+    (N : ObservationalFidelity.FinDist Bool) :
+    youdenJ (mixDist α hα0 hα1 (ObservationalFidelity.diracDist false) N)
+      (mixDist α hα0 hα1 (ObservationalFidelity.diracDist true) N) id = 1 - α := by
+  rw [youdenJ_eq_one_sub_errorSum, mixture_floor_attained hα0 hα1 N]
+
+/-- **Lag-Wall Zero Advantage (`lag_wall_youdenJ_zero`):** when the reserve reaches `x_crit` before
+the delayed channel separates (`∀ t < L, P₀ t = P₁ t`), every detector has `youdenJ = 0` at every
+step `s ≤ t*` up to crossing. -/
+theorem lag_wall_youdenJ_zero {Y : Type*} [Fintype Y] {x : ℝ → ℝ} {H₁ L x_crit : ℝ}
+    (hH : 0 < H₁) (hx0 : x_crit ≤ x 0) (hL : (x 0 - x_crit) / H₁ < L)
+    (hcont : ContinuousOn x (Icc 0 L)) (hdiff : DifferentiableOn ℝ x (Ioo 0 L))
+    (hder : ∀ t ∈ Ioo 0 L, deriv x t ≤ -H₁)
+    (P₀ P₁ : ℝ → ObservationalFidelity.FinDist Y) (hblind : ∀ t, t < L → P₀ t = P₁ t) :
+    ∃ t ∈ Icc 0 ((x 0 - x_crit) / H₁), t < L ∧ x t = x_crit ∧
+      ∀ s ≤ t, ∀ g, youdenJ (P₀ s) (P₁ s) g = 0 := by
+  obtain ⟨⟨t, ht, htl, hxt⟩, -⟩ := lag_horizon_wall hH hx0 hL hcont hdiff hder
+  refine ⟨t, ht, htl, hxt, fun s hs g => ?_⟩
+  rw [hblind s (lt_of_le_of_lt hs htl)]
+  unfold youdenJ
+  exact sub_self _
+
+/-! ## Part 6: Measure-Theoretic `Youden J` & Gaussian-Additive Aliasing Floor over `Measure ℝ` -/
+
+/-- Measure-theoretic Youden advantage `μ₁(A) - μ₀(A)` on a real event `A`. -/
+noncomputable def measYoudenJ (μ₀ μ₁ : MeasureTheory.Measure ℝ) (A : Set ℝ) : ℝ :=
+  (μ₁ A).toReal - (μ₀ A).toReal
+
+/-- Measure-theoretic two-point error sum `μ₀(A) + μ₁(Aᶜ)`. -/
+noncomputable def measErrorSum (μ₀ μ₁ : MeasureTheory.Measure ℝ) (A : Set ℝ) : ℝ :=
+  (μ₀ A).toReal + (μ₁ Aᶜ).toReal
+
+/-- For probability measures and measurable `A`, `measYoudenJ = 1 - measErrorSum`. -/
+theorem measYoudenJ_eq_one_sub_errorSum (μ₀ μ₁ : MeasureTheory.Measure ℝ)
+    [MeasureTheory.IsProbabilityMeasure μ₀] [MeasureTheory.IsProbabilityMeasure μ₁]
+    {A : Set ℝ} (hA : MeasurableSet A) :
+    measYoudenJ μ₀ μ₁ A = 1 - measErrorSum μ₀ μ₁ A := by
+  have hsum : μ₁ A + μ₁ Aᶜ = 1 := by
+    rw [MeasureTheory.measure_add_measure_compl hA, MeasureTheory.measure_univ]
+  have hreal : (μ₁ A).toReal + (μ₁ Aᶜ).toReal = 1 := by
+    rw [← ENNReal.toReal_add (MeasureTheory.measure_ne_top μ₁ A)
+      (MeasureTheory.measure_ne_top μ₁ Aᶜ), hsum, ENNReal.toReal_one]
+  unfold measYoudenJ measErrorSum
+  linarith
+
+/-- For probability measures, `Set.univ` and `∅` have zero `measYoudenJ`. -/
+theorem measYoudenJ_const_zero (μ₀ μ₁ : MeasureTheory.Measure ℝ)
+    [MeasureTheory.IsProbabilityMeasure μ₀] [MeasureTheory.IsProbabilityMeasure μ₁] :
+    measYoudenJ μ₀ μ₁ Set.univ = 0 ∧ measYoudenJ μ₀ μ₁ ∅ = 0 := by
+  simp [measYoudenJ]
+
+/-- **Continuous-Channel Lag-Wall Zero Advantage (`lag_wall_measYoudenJ_zero`):** when the reserve
+reaches `x_crit` before the delayed continuous channel separates (`∀ t < L, μ₀ t = μ₁ t`), every
+event `A` has `measYoudenJ = 0` at every `s ≤ t*`. -/
+theorem lag_wall_measYoudenJ_zero {x : ℝ → ℝ} {H₁ L x_crit : ℝ}
+    (hH : 0 < H₁) (hx0 : x_crit ≤ x 0) (hL : (x 0 - x_crit) / H₁ < L)
+    (hcont : ContinuousOn x (Icc 0 L)) (hdiff : DifferentiableOn ℝ x (Ioo 0 L))
+    (hder : ∀ t ∈ Ioo 0 L, deriv x t ≤ -H₁)
+    (μ₀ μ₁ : ℝ → MeasureTheory.Measure ℝ) (hblind : ∀ t, t < L → μ₀ t = μ₁ t) :
+    ∃ t ∈ Icc 0 ((x 0 - x_crit) / H₁), t < L ∧ x t = x_crit ∧
+      ∀ s ≤ t, ∀ A : Set ℝ, measYoudenJ (μ₀ s) (μ₁ s) A = 0 := by
+  obtain ⟨⟨t, ht, htl, hxt⟩, -⟩ := lag_horizon_wall hH hx0 hL hcont hdiff hder
+  refine ⟨t, ht, htl, hxt, fun s hs A => ?_⟩
+  rw [hblind s (lt_of_le_of_lt hs htl)]
+  unfold measYoudenJ
+  exact sub_self _
+
+/-- Gaussian-additive observation law `N(aliasedProbe α p m f u, v)` on `ℝ`. -/
+noncomputable def gaussianAliasedLaw {U O : Type*} (α : ℝ) (p : U → ℝ) (m : O → ℝ) (f : U → O)
+    (v : NNReal) (u : U) : MeasureTheory.Measure ℝ :=
+  ProbabilityTheory.gaussianReal (aliasedProbe α p m f u) v
+
+/-- Elementary Cauchy-Schwarz inequality for Lebesgue integrals on `ℝ` without `Lp` overhead. -/
+theorem integral_cauchy_schwarz {f g : ℝ → ℝ}
+    (hf2 : MeasureTheory.Integrable (fun x => f x ^ 2))
+    (hg2 : MeasureTheory.Integrable (fun x => g x ^ 2))
+    (hfg : MeasureTheory.Integrable (fun x => f x * g x)) :
+    (∫ x : ℝ, f x * g x) ^ 2 ≤ (∫ x : ℝ, f x ^ 2) * (∫ x : ℝ, g x ^ 2) := by
+  set A : ℝ := ∫ x : ℝ, f x ^ 2
+  set B : ℝ := ∫ x : ℝ, f x * g x
+  set C : ℝ := ∫ x : ℝ, g x ^ 2
+  have hA0 : 0 ≤ A := MeasureTheory.integral_nonneg fun x => sq_nonneg (f x)
+  have hquad : ∀ t : ℝ, 0 ≤ t ^ 2 * A + 2 * t * B + C := fun t => by
+    have hnonneg : 0 ≤ ∫ x : ℝ, (t * f x + g x) ^ 2 :=
+      MeasureTheory.integral_nonneg fun x => sq_nonneg (t * f x + g x)
+    have hrew : (fun x : ℝ => (t * f x + g x) ^ 2) =
+        fun x : ℝ => t ^ 2 * (f x ^ 2) + ((2 * t) * (f x * g x) + g x ^ 2) := by
+      ext x; ring
+    have hint : MeasureTheory.Integrable (fun x : ℝ => (2 * t) * (f x * g x) + g x ^ 2) :=
+      (hfg.const_mul (2 * t)).add hg2
+    rw [hrew, MeasureTheory.integral_add (hf2.const_mul (t ^ 2)) hint,
+      MeasureTheory.integral_add (hfg.const_mul (2 * t)) hg2,
+      MeasureTheory.integral_const_mul, MeasureTheory.integral_const_mul] at hnonneg
+    linarith
+  rcases eq_or_lt_of_le hA0 with hAzero | hApos
+  · have hB : B = 0 := by
+      by_contra hBne
+      have hbad := hquad (-(C + 1) / (2 * B))
+      rw [← hAzero, mul_zero, zero_add] at hbad
+      have h2B : 2 * B ≠ 0 := mul_ne_zero two_ne_zero hBne
+      have hcancel : 2 * (-(C + 1) / (2 * B)) * B = -(C + 1) := by
+        field_simp
+      linarith
+    rw [hB, ← hAzero]
+    norm_num
+  · have hmin := hquad (-B / A)
+    have hcalc : (-B / A) ^ 2 * A + 2 * (-B / A) * B + C = C - B ^ 2 / A := by
+      field_simp [hApos.ne']
+      ring
+    rw [hcalc] at hmin
+    have hmul : 0 ≤ A * (C - B ^ 2 / A) := mul_nonneg hApos.le hmin
+    have hdiv : A * (C - B ^ 2 / A) = A * C - B ^ 2 := by
+      field_simp [hApos.ne']
+    linarith
+
+/-- Pointwise identity for the geometric mean of two equal-variance Gaussian PDFs. -/
+theorem gaussianPDFReal_sqrt_mul_eq (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0) (x : ℝ) :
+    Real.sqrt (ProbabilityTheory.gaussianPDFReal μ₁ v x *
+        ProbabilityTheory.gaussianPDFReal μ₂ v x) =
+      Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+        ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x := by
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have hsq :
+      (Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+          ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x) ^ 2 =
+        ProbabilityTheory.gaussianPDFReal μ₁ v x * ProbabilityTheory.gaussianPDFReal μ₂ v x := by
+    unfold ProbabilityTheory.gaussianPDFReal
+    have hexp :
+        Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) ^ 2 *
+            Real.exp (-(x - (μ₁ + μ₂) / 2) ^ 2 / (2 * (v : ℝ))) ^ 2 =
+          Real.exp (-(x - μ₁) ^ 2 / (2 * (v : ℝ))) *
+            Real.exp (-(x - μ₂) ^ 2 / (2 * (v : ℝ))) := by
+      simp only [sq, ← Real.exp_add]
+      congr 1
+      field_simp [hvpos.ne']
+      ring
+    calc
+      (Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+          ((√(2 * Real.pi * (v : ℝ)))⁻¹ *
+            Real.exp (-(x - (μ₁ + μ₂) / 2) ^ 2 / (2 * (v : ℝ))))) ^ 2
+        = ((√(2 * Real.pi * (v : ℝ)))⁻¹ * (√(2 * Real.pi * (v : ℝ)))⁻¹) *
+            (Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) ^ 2 *
+              Real.exp (-(x - (μ₁ + μ₂) / 2) ^ 2 / (2 * (v : ℝ))) ^ 2) := by ring
+      _ = ((√(2 * Real.pi * (v : ℝ)))⁻¹ * (√(2 * Real.pi * (v : ℝ)))⁻¹) *
+            (Real.exp (-(x - μ₁) ^ 2 / (2 * (v : ℝ))) *
+              Real.exp (-(x - μ₂) ^ 2 / (2 * (v : ℝ)))) := by rw [hexp]
+      _ = _ := by ring
+  rw [← hsq]
+  exact Real.sqrt_sq (mul_nonneg (Real.exp_pos _).le
+    (ProbabilityTheory.gaussianPDFReal_nonneg _ _ _))
+
+/-- **Gaussian Bhattacharyya Integral (`gaussian_bhattacharyya_integral`):** the Bhattacharyya
+coefficient of two equal-variance Gaussians equals `exp (-(μ₁ - μ₂)^2 / (8 v))`. -/
+theorem gaussian_bhattacharyya_integral (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0) :
+    ∫ x : ℝ, Real.sqrt (ProbabilityTheory.gaussianPDFReal μ₁ v x *
+        ProbabilityTheory.gaussianPDFReal μ₂ v x) =
+      Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) := by
+  have hfn : (fun x : ℝ => Real.sqrt (ProbabilityTheory.gaussianPDFReal μ₁ v x *
+      ProbabilityTheory.gaussianPDFReal μ₂ v x)) =
+      fun x : ℝ => Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+        ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x :=
+    funext (gaussianPDFReal_sqrt_mul_eq μ₁ μ₂ hv)
+  rw [hfn, MeasureTheory.integral_const_mul,
+    ProbabilityTheory.integral_gaussianPDFReal_eq_one ((μ₁ + μ₂) / 2) hv, mul_one]
+
+/-- **Gaussian TV Upper Bound (`gaussian_tv_le_hellinger`):** total variation distance between
+equal-variance Gaussians is at most `√(1 - exp (-(μ₁ - μ₂)^2 / (4 v)))`. -/
+theorem gaussian_tv_le_hellinger (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0) :
+    (1 / 2 : ℝ) * ∫ x : ℝ,
+        |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| ≤
+      Real.sqrt (1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (4 * (v : ℝ)))) := by
+  let p₁ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₁ v
+  let p₂ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₂ v
+  let f : ℝ → ℝ := fun x => |Real.sqrt (p₂ x) - Real.sqrt (p₁ x)|
+  let g : ℝ → ℝ := fun x => Real.sqrt (p₂ x) + Real.sqrt (p₁ x)
+  let b : ℝ → ℝ := fun x => Real.sqrt (p₁ x * p₂ x)
+  have hp₁ : MeasureTheory.Integrable p₁ := ProbabilityTheory.integrable_gaussianPDFReal μ₁ v
+  have hp₂ : MeasureTheory.Integrable p₂ := ProbabilityTheory.integrable_gaussianPDFReal μ₂ v
+  have hb_eq : b = fun x => Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+      ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x :=
+    funext (gaussianPDFReal_sqrt_mul_eq μ₁ μ₂ hv)
+  have hb_int : MeasureTheory.Integrable b := by
+    rw [hb_eq]
+    exact (ProbabilityTheory.integrable_gaussianPDFReal ((μ₁ + μ₂) / 2) v).const_mul _
+  have hf2_eq : (fun x => f x ^ 2) = fun x => p₂ x + p₁ x - 2 * b x := by
+    ext x
+    have h1 := ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x
+    have h2 := ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x
+    dsimp only [f, b]
+    rw [sq_abs, sub_sq, Real.sq_sqrt h2, Real.sq_sqrt h1, Real.sqrt_mul h1]
+    ring
+  have hg2_eq : (fun x => g x ^ 2) = fun x => p₂ x + p₁ x + 2 * b x := by
+    ext x
+    have h1 := ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x
+    have h2 := ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x
+    dsimp only [g, b]
+    rw [add_sq, Real.sq_sqrt h2, Real.sq_sqrt h1, Real.sqrt_mul h1]
+    ring
+  have hfg_eq : (fun x => f x * g x) = fun x => |p₂ x - p₁ x| := by
+    ext x
+    have h1 := ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x
+    have h2 := ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x
+    have hg0 : 0 ≤ Real.sqrt (p₂ x) + Real.sqrt (p₁ x) :=
+      add_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _)
+    dsimp only [f, g]
+    calc |Real.sqrt (p₂ x) - Real.sqrt (p₁ x)| * (Real.sqrt (p₂ x) + Real.sqrt (p₁ x))
+        = |Real.sqrt (p₂ x) - Real.sqrt (p₁ x)| * |Real.sqrt (p₂ x) + Real.sqrt (p₁ x)| := by
+          rw [abs_of_nonneg hg0]
+      _ = |(Real.sqrt (p₂ x) - Real.sqrt (p₁ x)) * (Real.sqrt (p₂ x) + Real.sqrt (p₁ x))| :=
+          (abs_mul _ _).symm
+      _ = |Real.sqrt (p₂ x) ^ 2 - Real.sqrt (p₁ x) ^ 2| := by ring_nf
+      _ = |p₂ x - p₁ x| := by rw [Real.sq_sqrt h2, Real.sq_sqrt h1]
+  have hp₂₁_int : MeasureTheory.Integrable (fun x => p₂ x + p₁ x) := hp₂.add hp₁
+  have h2b_int : MeasureTheory.Integrable (fun x => 2 * b x) := hb_int.const_mul 2
+  have hf2_int : MeasureTheory.Integrable (fun x => f x ^ 2) := by
+    rw [hf2_eq]; exact hp₂₁_int.sub h2b_int
+  have hg2_int : MeasureTheory.Integrable (fun x => g x ^ 2) := by
+    rw [hg2_eq]; exact hp₂₁_int.add h2b_int
+  have hfg_int : MeasureTheory.Integrable (fun x => f x * g x) := by
+    rw [hfg_eq]; exact (hp₂.sub hp₁).abs
+  have hcs := integral_cauchy_schwarz hf2_int hg2_int hfg_int
+  have hB : ∫ x : ℝ, b x = Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) :=
+    gaussian_bhattacharyya_integral μ₁ μ₂ hv
+  have hf2_val : ∫ x : ℝ, f x ^ 2 = 2 - 2 * Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) := by
+    rw [hf2_eq, MeasureTheory.integral_sub hp₂₁_int h2b_int,
+      MeasureTheory.integral_add hp₂ hp₁, MeasureTheory.integral_const_mul,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₂ hv,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₁ hv, hB]
+    ring
+  have hg2_val : ∫ x : ℝ, g x ^ 2 = 2 + 2 * Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) := by
+    rw [hg2_eq, MeasureTheory.integral_add hp₂₁_int h2b_int,
+      MeasureTheory.integral_add hp₂ hp₁, MeasureTheory.integral_const_mul,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₂ hv,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₁ hv, hB]
+    ring
+  rw [hfg_eq, hf2_val, hg2_val] at hcs
+  have hexp2 : Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) ^ 2 =
+      Real.exp (-(μ₁ - μ₂) ^ 2 / (4 * (v : ℝ))) := by
+    rw [sq, ← Real.exp_add]
+    congr 1
+    ring
+  have hsq_bound :
+      ((1 / 2 : ℝ) * ∫ x : ℝ, |p₂ x - p₁ x|) ^ 2 ≤
+        1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (4 * (v : ℝ))) := by
+    rw [← hexp2]
+    nlinarith
+  have hnonneg : 0 ≤ (1 / 2 : ℝ) * ∫ x : ℝ, |p₂ x - p₁ x| :=
+    mul_nonneg (by norm_num) (MeasureTheory.integral_nonneg fun x => abs_nonneg _)
+  calc (1 / 2 : ℝ) * ∫ x : ℝ, |p₂ x - p₁ x|
+      = Real.sqrt (((1 / 2 : ℝ) * ∫ x : ℝ, |p₂ x - p₁ x|) ^ 2) :=
+        (Real.sqrt_sq hnonneg).symm
+    _ ≤ Real.sqrt (1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (4 * (v : ℝ)))) :=
+        Real.sqrt_le_sqrt hsq_bound
+
+/-- **Gaussian TV Lower Bound (`gaussian_tv_ge_hellinger`):** total variation distance between
+equal-variance Gaussians is at least `1 - exp (-(μ₁ - μ₂)^2 / (8 v))`. -/
+theorem gaussian_tv_ge_hellinger (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0) :
+    1 - Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) ≤
+      (1 / 2 : ℝ) * ∫ x : ℝ,
+        |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| := by
+  let p₁ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₁ v
+  let p₂ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₂ v
+  let b : ℝ → ℝ := fun x => Real.sqrt (p₁ x * p₂ x)
+  have hp₁ : MeasureTheory.Integrable p₁ := ProbabilityTheory.integrable_gaussianPDFReal μ₁ v
+  have hp₂ : MeasureTheory.Integrable p₂ := ProbabilityTheory.integrable_gaussianPDFReal μ₂ v
+  have hb_eq : b = fun x => Real.exp (-(μ₁ - μ₂) ^ 2 / (8 * (v : ℝ))) *
+      ProbabilityTheory.gaussianPDFReal ((μ₁ + μ₂) / 2) v x :=
+    funext (gaussianPDFReal_sqrt_mul_eq μ₁ μ₂ hv)
+  have hb_int : MeasureTheory.Integrable b := by
+    rw [hb_eq]
+    exact (ProbabilityTheory.integrable_gaussianPDFReal ((μ₁ + μ₂) / 2) v).const_mul _
+  have hpt : ∀ x : ℝ, p₁ x + p₂ x - |p₂ x - p₁ x| ≤ 2 * b x := fun x => by
+    have h1 := ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x
+    have h2 := ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x
+    dsimp only [b]
+    rcases le_total (p₁ x) (p₂ x) with hle | hle
+    · rw [abs_of_nonneg (sub_nonneg.mpr hle)]
+      have hsq : p₁ x = Real.sqrt (p₁ x * p₁ x) := (Real.sqrt_mul_self h1).symm
+      have hle_sqrt : Real.sqrt (p₁ x * p₁ x) ≤ Real.sqrt (p₁ x * p₂ x) :=
+        Real.sqrt_le_sqrt (mul_le_mul_of_nonneg_left hle h1)
+      linarith
+    · rw [abs_of_nonpos (sub_nonpos.mpr hle)]
+      have hsq : p₂ x = Real.sqrt (p₂ x * p₂ x) := (Real.sqrt_mul_self h2).symm
+      have hle_sqrt : Real.sqrt (p₂ x * p₂ x) ≤ Real.sqrt (p₁ x * p₂ x) :=
+        Real.sqrt_le_sqrt (mul_le_mul_of_nonneg_right hle h2)
+      linarith
+  have hp₁₂_int : MeasureTheory.Integrable (fun x => p₁ x + p₂ x) := hp₁.add hp₂
+  have habs_int : MeasureTheory.Integrable (fun x => |p₂ x - p₁ x|) := (hp₂.sub hp₁).abs
+  have h2b_int : MeasureTheory.Integrable (fun x => 2 * b x) := hb_int.const_mul 2
+  have hint :
+      ∫ x : ℝ, (p₁ x + p₂ x - |p₂ x - p₁ x|) ≤ ∫ x : ℝ, 2 * b x :=
+    MeasureTheory.integral_mono (hp₁₂_int.sub habs_int) h2b_int hpt
+  rw [MeasureTheory.integral_sub hp₁₂_int habs_int,
+    MeasureTheory.integral_add hp₁ hp₂, MeasureTheory.integral_const_mul,
+    ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₁ hv,
+    ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₂ hv,
+    gaussian_bhattacharyya_integral μ₁ μ₂ hv] at hint
+  linarith
+
+/-- Helper bound: for any measurable set `A`, `measYoudenJ (gaussianReal μ₁ v) (gaussianReal μ₂ v) A`
+is at most half the `L¹` density difference. -/
+theorem gaussian_measYoudenJ_le_tv_one (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0)
+    {A : Set ℝ} (hA : MeasurableSet A) :
+    measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v) A ≤
+      (1 / 2 : ℝ) * ∫ x : ℝ,
+        |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| := by
+  let p₁ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₁ v
+  let p₂ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₂ v
+  have hp₁ : MeasureTheory.Integrable p₁ := ProbabilityTheory.integrable_gaussianPDFReal μ₁ v
+  have hp₂ : MeasureTheory.Integrable p₂ := ProbabilityTheory.integrable_gaussianPDFReal μ₂ v
+  have hm₁ : (ProbabilityTheory.gaussianReal μ₁ v A).toReal = ∫ x : ℝ, A.indicator p₁ x := by
+    rw [ProbabilityTheory.gaussianReal_apply_eq_integral μ₁ hv A,
+      ENNReal.toReal_ofReal (MeasureTheory.integral_nonneg fun x =>
+        ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x),
+      MeasureTheory.integral_indicator hA]
+  have hm₂ : (ProbabilityTheory.gaussianReal μ₂ v A).toReal = ∫ x : ℝ, A.indicator p₂ x := by
+    rw [ProbabilityTheory.gaussianReal_apply_eq_integral μ₂ hv A,
+      ENNReal.toReal_ofReal (MeasureTheory.integral_nonneg fun x =>
+        ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x),
+      MeasureTheory.integral_indicator hA]
+  have hpt : ∀ x : ℝ,
+      A.indicator p₂ x - A.indicator p₁ x ≤
+        (1 / 2 : ℝ) * |p₂ x - p₁ x| + (1 / 2 : ℝ) * (p₂ x - p₁ x) := fun x => by
+    by_cases hx : x ∈ A
+    · simp only [Set.indicator_of_mem hx]
+      linarith [le_abs_self (p₂ x - p₁ x)]
+    · simp only [Set.indicator_of_notMem hx, sub_self]
+      linarith [neg_abs_le (p₂ x - p₁ x)]
+  have hhalf_abs_int : MeasureTheory.Integrable (fun x => (1 / 2 : ℝ) * |p₂ x - p₁ x|) :=
+    (hp₂.sub hp₁).abs.const_mul (1 / 2)
+  have hhalf_diff_int : MeasureTheory.Integrable (fun x => (1 / 2 : ℝ) * (p₂ x - p₁ x)) :=
+    (hp₂.sub hp₁).const_mul (1 / 2)
+  have hint :
+      ∫ x : ℝ, (A.indicator p₂ x - A.indicator p₁ x) ≤
+        ∫ x : ℝ, ((1 / 2 : ℝ) * |p₂ x - p₁ x| + (1 / 2 : ℝ) * (p₂ x - p₁ x)) :=
+    MeasureTheory.integral_mono
+      ((hp₂.indicator hA).sub (hp₁.indicator hA))
+      (hhalf_abs_int.add hhalf_diff_int)
+      hpt
+  have hzero : ∫ x : ℝ, (p₂ x - p₁ x) = 0 := by
+    rw [MeasureTheory.integral_sub hp₂ hp₁,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₂ hv,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₁ hv, sub_self]
+  rw [MeasureTheory.integral_sub (hp₂.indicator hA) (hp₁.indicator hA),
+    MeasureTheory.integral_add hhalf_abs_int hhalf_diff_int,
+    MeasureTheory.integral_const_mul, MeasureTheory.integral_const_mul, hzero, mul_zero,
+    add_zero] at hint
+  unfold measYoudenJ
+  rw [hm₁, hm₂]
+  exact hint
+
+/-- **Gaussian Youden Ceiling (`gaussian_measYoudenJ_le_tv`):** for every measurable event `A`,
+`|measYoudenJ (gaussianReal μ₁ v) (gaussianReal μ₂ v) A|` is at most the Gaussian total variation
+distance. -/
+theorem gaussian_measYoudenJ_le_tv (μ₁ μ₂ : ℝ) {v : NNReal} (hv : v ≠ 0)
+    {A : Set ℝ} (hA : MeasurableSet A) :
+    |measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v) A| ≤
+      (1 / 2 : ℝ) * ∫ x : ℝ,
+        |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| := by
+  refine abs_le.mpr ⟨?_, gaussian_measYoudenJ_le_tv_one μ₁ μ₂ hv hA⟩
+  have hrev := gaussian_measYoudenJ_le_tv_one μ₂ μ₁ hv hA
+  have habs :
+      (fun x : ℝ => |ProbabilityTheory.gaussianPDFReal μ₁ v x -
+        ProbabilityTheory.gaussianPDFReal μ₂ v x|) =
+      fun x : ℝ => |ProbabilityTheory.gaussianPDFReal μ₂ v x -
+        ProbabilityTheory.gaussianPDFReal μ₁ v x| := by
+    ext x; exact abs_sub_comm _ _
+  rw [habs] at hrev
+  unfold measYoudenJ at hrev ⊢
+  linarith
+
+/-- **Midpoint Threshold Attains Gaussian TV (`gaussian_midpoint_attains_tv`):** for `μ₁ < μ₂`
+and `v ≠ 0`, `Set.Ioi ((μ₁ + μ₂) / 2)` attains exact total variation distance. -/
+theorem gaussian_midpoint_attains_tv {μ₁ μ₂ : ℝ} (hμ : μ₁ < μ₂) {v : NNReal} (hv : v ≠ 0) :
+    measYoudenJ (ProbabilityTheory.gaussianReal μ₁ v) (ProbabilityTheory.gaussianReal μ₂ v)
+        (Set.Ioi ((μ₁ + μ₂) / 2)) =
+      (1 / 2 : ℝ) * ∫ x : ℝ,
+        |ProbabilityTheory.gaussianPDFReal μ₂ v x - ProbabilityTheory.gaussianPDFReal μ₁ v x| := by
+  let A : Set ℝ := Set.Ioi ((μ₁ + μ₂) / 2)
+  have hA : MeasurableSet A := measurableSet_Ioi
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  let p₁ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₁ v
+  let p₂ : ℝ → ℝ := ProbabilityTheory.gaussianPDFReal μ₂ v
+  have hp₁ : MeasureTheory.Integrable p₁ := ProbabilityTheory.integrable_gaussianPDFReal μ₁ v
+  have hp₂ : MeasureTheory.Integrable p₂ := ProbabilityTheory.integrable_gaussianPDFReal μ₂ v
+  have hm₁ : (ProbabilityTheory.gaussianReal μ₁ v A).toReal = ∫ x : ℝ, A.indicator p₁ x := by
+    rw [ProbabilityTheory.gaussianReal_apply_eq_integral μ₁ hv A,
+      ENNReal.toReal_ofReal (MeasureTheory.integral_nonneg fun x =>
+        ProbabilityTheory.gaussianPDFReal_nonneg μ₁ v x),
+      MeasureTheory.integral_indicator hA]
+  have hm₂ : (ProbabilityTheory.gaussianReal μ₂ v A).toReal = ∫ x : ℝ, A.indicator p₂ x := by
+    rw [ProbabilityTheory.gaussianReal_apply_eq_integral μ₂ hv A,
+      ENNReal.toReal_ofReal (MeasureTheory.integral_nonneg fun x =>
+        ProbabilityTheory.gaussianPDFReal_nonneg μ₂ v x),
+      MeasureTheory.integral_indicator hA]
+  have hpt : ∀ x : ℝ,
+      A.indicator p₂ x - A.indicator p₁ x =
+        (1 / 2 : ℝ) * |p₂ x - p₁ x| + (1 / 2 : ℝ) * (p₂ x - p₁ x) := fun x => by
+    have hcpos : 0 < (√(2 * Real.pi * (v : ℝ)))⁻¹ := by positivity
+    by_cases hx : (μ₁ + μ₂) / 2 < x
+    · have hmem : x ∈ A := hx
+      have hexp_lt : -(x - μ₁) ^ 2 / (2 * (v : ℝ)) < -(x - μ₂) ^ 2 / (2 * (v : ℝ)) := by
+        rw [div_lt_div_iff_of_pos_right (by positivity : 0 < 2 * (v : ℝ))]
+        nlinarith
+      have hp_lt : p₁ x < p₂ x := by
+        dsimp only [p₁, p₂, ProbabilityTheory.gaussianPDFReal]
+        exact mul_lt_mul_of_pos_left (Real.exp_lt_exp.mpr hexp_lt) hcpos
+      simp only [Set.indicator_of_mem hmem]
+      rw [abs_of_pos (sub_pos.mpr hp_lt)]
+      ring
+    · have hnot : x ∉ A := hx
+      have hle_x : x ≤ (μ₁ + μ₂) / 2 := not_lt.mp hx
+      have hexp_le : -(x - μ₂) ^ 2 / (2 * (v : ℝ)) ≤ -(x - μ₁) ^ 2 / (2 * (v : ℝ)) := by
+        rw [div_le_div_iff_of_pos_right (by positivity : 0 < 2 * (v : ℝ))]
+        nlinarith
+      have hp_le : p₂ x ≤ p₁ x := by
+        dsimp only [p₁, p₂, ProbabilityTheory.gaussianPDFReal]
+        exact mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr hexp_le) hcpos.le
+      simp only [Set.indicator_of_notMem hnot, sub_self]
+      rw [abs_of_nonpos (sub_nonpos.mpr hp_le)]
+      ring
+  have hhalf_abs_int : MeasureTheory.Integrable (fun x => (1 / 2 : ℝ) * |p₂ x - p₁ x|) :=
+    (hp₂.sub hp₁).abs.const_mul (1 / 2)
+  have hhalf_diff_int : MeasureTheory.Integrable (fun x => (1 / 2 : ℝ) * (p₂ x - p₁ x)) :=
+    (hp₂.sub hp₁).const_mul (1 / 2)
+  have hzero : ∫ x : ℝ, (p₂ x - p₁ x) = 0 := by
+    rw [MeasureTheory.integral_sub hp₂ hp₁,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₂ hv,
+      ProbabilityTheory.integral_gaussianPDFReal_eq_one μ₁ hv, sub_self]
+  unfold measYoudenJ
+  rw [hm₁, hm₂, ← MeasureTheory.integral_sub (hp₂.indicator hA) (hp₁.indicator hA),
+    show (fun x : ℝ => A.indicator p₂ x - A.indicator p₁ x) =
+      fun x : ℝ => (1 / 2 : ℝ) * |p₂ x - p₁ x| + (1 / 2 : ℝ) * (p₂ x - p₁ x) from funext hpt,
+    MeasureTheory.integral_add hhalf_abs_int hhalf_diff_int,
+    MeasureTheory.integral_const_mul, MeasureTheory.integral_const_mul, hzero, mul_zero, add_zero]
+
+/-- **Gaussian Aliased Youden Wall (`gaussian_aliased_youdenJ_wall`):** for same-fiber states
+`f u₁ = f u₂`, `α ≤ 1`, `v ≠ 0`, and every measurable event `A`:
+- `|measYoudenJ| ≤ √(1 - exp (-((1 - α) |p u₁ - p u₂|)^2 / (4 v)))`
+- `√(1 - exp (-((1 - α) |p u₁ - p u₂|)^2 / (4 v))) ≤ (1 - α) |p u₁ - p u₂| / (2 √v)`
+- `0 < 1 - √(1 - exp (-((1 - α) |p u₁ - p u₂|)^2 / (4 v))) ≤ measErrorSum`. -/
+theorem gaussian_aliased_youdenJ_wall {U O : Type*} {α : ℝ} (hα1 : α ≤ 1)
+    (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂)
+    {v : NNReal} (hv : v ≠ 0) {A : Set ℝ} (hA : MeasurableSet A) :
+    |measYoudenJ (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂) A| ≤
+        Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ∧
+      Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ≤
+        (1 - α) * |p u₁ - p u₂| / (2 * Real.sqrt (v : ℝ)) ∧
+      0 < 1 - Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ∧
+      1 - Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ≤
+        measErrorSum (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂) A := by
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have hgap :
+      (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂) ^ 2 =
+        ((1 - α) * |p u₁ - p u₂|) ^ 2 := by
+    rw [← sq_abs (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂),
+      aliased_fiber_gap hα1 p m f hf]
+  have h1 :
+      |measYoudenJ (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂) A| ≤
+        Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) := by
+    unfold gaussianAliasedLaw
+    calc |measYoudenJ (ProbabilityTheory.gaussianReal (aliasedProbe α p m f u₁) v)
+            (ProbabilityTheory.gaussianReal (aliasedProbe α p m f u₂) v) A|
+        ≤ (1 / 2 : ℝ) * ∫ x : ℝ,
+            |ProbabilityTheory.gaussianPDFReal (aliasedProbe α p m f u₂) v x -
+              ProbabilityTheory.gaussianPDFReal (aliasedProbe α p m f u₁) v x| :=
+          gaussian_measYoudenJ_le_tv _ _ hv hA
+      _ ≤ Real.sqrt (1 - Real.exp
+            (-(aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂) ^ 2 / (4 * (v : ℝ)))) :=
+          gaussian_tv_le_hellinger _ _ hv
+      _ = Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) := by
+          rw [hgap]
+  have h2 :
+      Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ≤
+        (1 - α) * |p u₁ - p u₂| / (2 * Real.sqrt (v : ℝ)) := by
+    set Δ : ℝ := (1 - α) * |p u₁ - p u₂|
+    have hΔ0 : 0 ≤ Δ := mul_nonneg (by linarith) (abs_nonneg _)
+    have hexp : 1 - Real.exp (-(Δ ^ 2 / (4 * (v : ℝ)))) ≤ Δ ^ 2 / (4 * (v : ℝ)) := by
+      linarith [Real.add_one_le_exp (-(Δ ^ 2 / (4 * (v : ℝ))))]
+    have hneg_div : -Δ ^ 2 / (4 * (v : ℝ)) = -(Δ ^ 2 / (4 * (v : ℝ))) := by ring
+    have hsqrt_rhs :
+        Real.sqrt (Δ ^ 2 / (4 * (v : ℝ))) = Δ / (2 * Real.sqrt (v : ℝ)) := by
+      have hrew : Δ ^ 2 / (4 * (v : ℝ)) = (Δ / (2 * Real.sqrt (v : ℝ))) ^ 2 := by
+        calc Δ ^ 2 / (4 * (v : ℝ))
+            = Δ ^ 2 / (2 ^ 2 * Real.sqrt (v : ℝ) ^ 2) := by rw [Real.sq_sqrt hvpos.le]; ring
+          _ = (Δ / (2 * Real.sqrt (v : ℝ))) ^ 2 := by ring
+      rw [hrew]
+      exact Real.sqrt_sq (div_nonneg hΔ0 (by positivity))
+    rw [hneg_div]
+    calc Real.sqrt (1 - Real.exp (-(Δ ^ 2 / (4 * (v : ℝ)))))
+        ≤ Real.sqrt (Δ ^ 2 / (4 * (v : ℝ))) := Real.sqrt_le_sqrt hexp
+      _ = Δ / (2 * Real.sqrt (v : ℝ)) := hsqrt_rhs
+  have h3 :
+      0 < 1 - Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) := by
+    have hlt1 : 1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ))) < 1 := by
+      linarith [Real.exp_pos (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))]
+    have hsqrt_lt :
+        Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) < 1 :=
+      (Real.sqrt_lt' one_pos).mpr (by norm_num; exact Real.exp_pos _)
+    linarith
+  have h4 :
+      1 - Real.sqrt (1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (4 * (v : ℝ)))) ≤
+        measErrorSum (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂) A := by
+    have heq := @measYoudenJ_eq_one_sub_errorSum
+      (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+    have hle := (abs_le.mp h1).2
+    linarith
+  exact ⟨h1, h2, h3, h4⟩
+
+/-- **Gaussian Aliased Sharpness & Complete Blindness (`gaussian_aliased_midpoint_sharp`):** for
+`α < 1`, `f u₁ = f u₂`, `p u₁ < p u₂`, `v ≠ 0`, the midpoint threshold achieves at least
+`1 - exp (-((1 - α) |p u₁ - p u₂|)^2 / (8 v)) > 0`; at `α = 1`, every measurable event has
+`measYoudenJ = 0` and `measErrorSum = 1`. -/
+theorem gaussian_aliased_midpoint_sharp {U O : Type*} {α : ℝ} (hα1 : α < 1)
+    (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂) (hp : p u₁ < p u₂)
+    {v : NNReal} (hv : v ≠ 0) :
+    0 < 1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ))) ∧
+    1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ))) ≤
+      measYoudenJ (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂)
+        (Set.Ioi ((aliasedProbe α p m f u₁ + aliasedProbe α p m f u₂) / 2)) ∧
+    (∀ A : Set ℝ, MeasurableSet A →
+      measYoudenJ (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 0 ∧
+      measErrorSum (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 1) := by
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have h1α : 0 < 1 - α := sub_pos.mpr hα1
+  have hp_pos : 0 < |p u₁ - p u₂| := abs_pos.mpr (sub_ne_zero.mpr hp.ne)
+  have hpos_num : 0 < ((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ)) := by positivity
+  have h1 : 0 < 1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ))) := by
+    have hlt : Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ))) < 1 :=
+      Real.exp_lt_one_iff.mpr (by rw [neg_div]; exact neg_lt_zero.mpr hpos_num)
+    linarith
+  have hμ : aliasedProbe α p m f u₁ < aliasedProbe α p m f u₂ := by
+    unfold aliasedProbe
+    rw [hf]
+    nlinarith
+  have hgap :
+      (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂) ^ 2 =
+        ((1 - α) * |p u₁ - p u₂|) ^ 2 := by
+    rw [← sq_abs (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂),
+      aliased_fiber_gap hα1.le p m f hf]
+  have h2 :
+      1 - Real.exp (-((1 - α) * |p u₁ - p u₂|) ^ 2 / (8 * (v : ℝ))) ≤
+        measYoudenJ (gaussianAliasedLaw α p m f v u₁) (gaussianAliasedLaw α p m f v u₂)
+          (Set.Ioi ((aliasedProbe α p m f u₁ + aliasedProbe α p m f u₂) / 2)) := by
+    unfold gaussianAliasedLaw
+    rw [gaussian_midpoint_attains_tv hμ hv, ← hgap]
+    exact gaussian_tv_ge_hellinger _ _ hv
+  refine ⟨h1, h2, fun A hA => ?_⟩
+  have hlaw : gaussianAliasedLaw 1 p m f v u₁ = gaussianAliasedLaw 1 p m f v u₂ := by
+    simp [gaussianAliasedLaw, aliasedProbe, hf]
+  have hj : measYoudenJ (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 0 := by
+    rw [hlaw]
+    unfold measYoudenJ
+    exact sub_self _
+  have he : measErrorSum (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 1 := by
+    have hsum := @measYoudenJ_eq_one_sub_errorSum
+      (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+    linarith
+  exact ⟨hj, he⟩
+
+/-- **Gaussian Aliased Lab Witness (`gaussian_aliased_lab_witness`):** under B5's Gaussian model
+(`p u₂ - p u₁ = 6/5`, `f u₁ = f u₂`, `sd(α) = 3/100 + 4/100 * α`):
+- at `α = 19/20` (`sd = 17/250`), every measurable event has `|measYoudenJ| ≤ 15/34` and
+  `measErrorSum ≥ 19/34`;
+- at `α = 1` (`sd = 7/100`), every measurable event has `measYoudenJ = 0` and `measErrorSum = 1`;
+- at `α = 1/20` (`sd = 4/125`), the midpoint threshold achieves `measYoudenJ ≥ 99/100` and
+  `measErrorSum ≤ 1/100`. -/
+theorem gaussian_aliased_lab_witness {U O : Type*} (p : U → ℝ) (m : O → ℝ) (f : U → O)
+    {u₁ u₂ : U} (hf : f u₁ = f u₂) (hp : p u₂ - p u₁ = 6 / 5) :
+    let v₁₉ : NNReal := ⟨(17 / 250) ^ 2, by positivity⟩
+    let v₁ : NNReal := ⟨(7 / 100) ^ 2, by positivity⟩
+    let v₁_₂₀ : NNReal := ⟨(4 / 125) ^ 2, by positivity⟩
+    (∀ A : Set ℝ, MeasurableSet A →
+      |measYoudenJ (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+          (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂) A| ≤ 15 / 34 ∧
+      (19 / 34 : ℝ) ≤ measErrorSum (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+          (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂) A) ∧
+    (∀ A : Set ℝ, MeasurableSet A →
+      measYoudenJ (gaussianAliasedLaw 1 p m f v₁ u₁)
+          (gaussianAliasedLaw 1 p m f v₁ u₂) A = 0 ∧
+      measErrorSum (gaussianAliasedLaw 1 p m f v₁ u₁)
+          (gaussianAliasedLaw 1 p m f v₁ u₂) A = 1) ∧
+    ((99 / 100 : ℝ) ≤ measYoudenJ (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+        (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+        (Set.Ioi ((aliasedProbe (1 / 20) p m f u₁ + aliasedProbe (1 / 20) p m f u₂) / 2)) ∧
+      measErrorSum (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+        (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+        (Set.Ioi ((aliasedProbe (1 / 20) p m f u₁ + aliasedProbe (1 / 20) p m f u₂) / 2)) ≤
+        1 / 100) := by
+  intro v₁₉ v₁ v₁_₂₀
+  have hgap : |p u₁ - p u₂| = 6 / 5 := by
+    rw [abs_sub_comm, hp, abs_of_pos (by norm_num)]
+  have hplt : p u₁ < p u₂ := by linarith
+  have hv19_coe : (v₁₉ : ℝ) = (17 / 250) ^ 2 := rfl
+  have hv1_coe : (v₁ : ℝ) = (7 / 100) ^ 2 := rfl
+  have hv20_coe : (v₁_₂₀ : ℝ) = (4 / 125) ^ 2 := rfl
+  have hv19_ne : v₁₉ ≠ 0 := by
+    intro h
+    have hval : (v₁₉ : ℝ) = 0 := by rw [h]; rfl
+    rw [hv19_coe] at hval
+    norm_num at hval
+  have hv1_ne : v₁ ≠ 0 := by
+    intro h
+    have hval : (v₁ : ℝ) = 0 := by rw [h]; rfl
+    rw [hv1_coe] at hval
+    norm_num at hval
+  have hv20_ne : v₁_₂₀ ≠ 0 := by
+    intro h
+    have hval : (v₁_₂₀ : ℝ) = 0 := by rw [h]; rfl
+    rw [hv20_coe] at hval
+    norm_num at hval
+  refine ⟨fun A hA => ?_, fun A hA => ?_, ?_⟩
+  · obtain ⟨hJ, hlin, -, -⟩ :=
+      gaussian_aliased_youdenJ_wall (by norm_num : (19 / 20 : ℝ) ≤ 1) p m f hf hv19_ne hA
+    have hval : (1 - (19 / 20 : ℝ)) * |p u₁ - p u₂| / (2 * Real.sqrt (v₁₉ : ℝ)) = 15 / 34 := by
+      have hsq : Real.sqrt (v₁₉ : ℝ) = 17 / 250 := by
+        change Real.sqrt ((17 / 250 : ℝ) ^ 2) = 17 / 250
+        exact Real.sqrt_sq (by norm_num)
+      rw [hgap, hsq]
+      norm_num
+    have hJle : |measYoudenJ (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+        (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂) A| ≤ 15 / 34 := by
+      linarith
+    have hsum := @measYoudenJ_eq_one_sub_errorSum
+      (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₁)
+      (gaussianAliasedLaw (19 / 20) p m f v₁₉ u₂)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+    have hle := (abs_le.mp hJle).2
+    exact ⟨hJle, by linarith⟩
+  · exact (gaussian_aliased_midpoint_sharp (by norm_num : (1 / 20 : ℝ) < 1) p m f hf hplt
+      hv1_ne).2.2 A hA
+  · have hsharp := (gaussian_aliased_midpoint_sharp (by norm_num : (1 / 20 : ℝ) < 1) p m f hf hplt
+      hv20_ne).2.1
+    have hexp_val :
+        -((1 - (1 / 20 : ℝ)) * |p u₁ - p u₂|) ^ 2 / (8 * (v₁_₂₀ : ℝ)) = -(81225 / 512) := by
+      rw [hgap, hv20_coe]
+      norm_num
+    have hexp_le : Real.exp (-(81225 / 512 : ℝ)) ≤ 1 / 100 := by
+      have hadd := Real.add_one_le_exp (81225 / 512 : ℝ)
+      have h100 : (100 : ℝ) ≤ Real.exp (81225 / 512) := by linarith
+      rw [Real.exp_neg]
+      exact (inv_le_comm₀ (Real.exp_pos _) (by norm_num)).mpr (by norm_num; exact h100)
+    rw [hexp_val] at hsharp
+    have hj : (99 / 100 : ℝ) ≤ measYoudenJ (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+        (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+        (Set.Ioi ((aliasedProbe (1 / 20) p m f u₁ + aliasedProbe (1 / 20) p m f u₂) / 2)) := by
+      linarith
+    have hsum := @measYoudenJ_eq_one_sub_errorSum
+      (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₁)
+      (gaussianAliasedLaw (1 / 20) p m f v₁_₂₀ u₂)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+      (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+      (Set.Ioi ((aliasedProbe (1 / 20) p m f u₁ + aliasedProbe (1 / 20) p m f u₂) / 2))
+      measurableSet_Ioi
+    exact ⟨hj, by linarith⟩
 
 end QuantitativeTransfer
