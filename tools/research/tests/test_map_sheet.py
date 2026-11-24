@@ -244,16 +244,25 @@ class BuildTests(unittest.TestCase):
 class RepositoryTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        cls.archived = not (ROOT / map_sheet.SHEET).is_file()
+        if cls.archived:
+            return
         (cls.d, cls.dyn, cls.tests), errs = map_sheet.load()
         assert not errs, errs
         cls.m = map_sheet.build(cls.d); cls.m['dyn_names'] = cls.dyn; cls.m['totals'] = map_sheet.totals()
         cls.pages, cls.errors = map_sheet.render()
 
+    def _require_live(self):
+        if self.archived:
+            self.skipTest('results/map/ archived to theories/becoming/history/results-map-2026-11-23/')
+
     def test_the_repository_s_map_passes_and_every_theorem_it_names_is_in_the_lean(self):
+        self._require_live()
         self.assertEqual(self.errors, [])
         self.assertEqual(map_sheet.validate(self.d, dyn_ids=set(self.dyn), test_ids=self.tests, lean=map_sheet.lean_names()), [])
 
     def test_the_views_are_the_page_its_two_pages_of_detail_the_pictures_and_the_map_to_operate_in_both_languages(self):
+        self._require_live()
         want = {map_sheet.INTERACTIVE}
         for lang in ('en', 'zh'):
             want |= {map_sheet.PAGE[lang], map_sheet.PLACES[lang], map_sheet.PATHS_PAGE[lang], map_sheet.PICTURE[lang]}
@@ -264,6 +273,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual([str(p) for p in map_sheet.inputs() if not p.is_file()], [])
 
     def test_the_page_opens_with_what_the_map_is_of_and_tells_its_first_path(self):
+        self._require_live()
         page = self.pages[map_sheet.PAGE['en']]
         self.assertIn(map_sheet.GENERATED, page)
         self.assertIn(self.d['sheet']['lead_en'], page.split('## ')[0])
@@ -279,6 +289,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn('[English](THE-MAP.md)', zh)
 
     def test_every_box_and_every_arrow_has_its_place_on_the_page_of_places_in_both_languages(self):
+        self._require_live()
         for lang in ('en', 'zh'):
             places = self.pages[map_sheet.PLACES[lang]]
             self.assertEqual(sorted(re.findall(r'^<a id="(box-[^"]+)"></a>$', places, re.M)), sorted('box-' + b['id'].replace('.', '-') for b in self.d['sheet']['boxes']))
@@ -288,6 +299,7 @@ class RepositoryTests(unittest.TestCase):
             self.assertEqual(sorted(re.findall(r'^<a id="(?:path|test)-([^"]+)"></a>$', paths, re.M)), sorted([p['id'] for p in self.m['paths']] + [t['id'] for t in self.m['tests']]))
 
     def test_the_pages_link_one_another_at_anchors_that_exist(self):
+        self._require_live()
         from tools.research import reading_catalogue, research
         self.assertEqual(research.check_links(self.pages, set(self.pages) | {map_sheet.LEDGER, map_sheet.LAWS_PAGE, map_sheet.DYNAMICS_PAGE, map_sheet.CASES_PAGE}), [])
         pages = {p.rsplit('/', 1)[1]: body for p, body in self.pages.items() if p.endswith('.md')}
@@ -298,6 +310,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(missing, [])
 
     def test_each_picture_is_one_drawing_that_stands_alone(self):
+        self._require_live()
         for name, body in self.pages.items():
             if name.endswith('.svg'):
                 svg = ElementTree.fromstring(body)
@@ -309,6 +322,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(len(re.findall(r'<g class="badge ', lock)), self.m['paths'][0]['n'])  # every step of the first path is numbered on its picture
 
     def test_the_map_to_operate_is_one_document_the_site_takes(self):
+        self._require_live()
         from tools.publishing import build_site
         document = self.pages[map_sheet.INTERACTIVE]
         self.assertLess(len(document.encode('utf-8')), map_sheet.MAX_INTERACTIVE)
@@ -328,6 +342,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual([p['id'] for p in data['paths']], [p['id'] for p in self.d['paths']['paths']])
 
     def test_a_map_to_operate_too_large_for_the_site_stops_the_render(self):
+        self._require_live()
         with mock.patch.object(map_sheet, 'MAX_INTERACTIVE', 1000):
             pages, errs = map_sheet.render()
         self.assertEqual(pages, {})
@@ -335,6 +350,18 @@ class RepositoryTests(unittest.TestCase):
 
     def test_the_site_publishes_every_view_and_its_navigation_names_the_map(self):
         site = json.loads((ROOT / '_process/research-config.json').read_text(encoding='utf-8'))['site']
+        if self.archived:
+            self.assertIn('theories/becoming/CANONICAL-MAP.md', site['pages'])
+            self.assertIn(['theories/becoming/CANONICAL-MAP.md', 'Map'], site['nav'])
+            self.assertNotIn([map_sheet.PAGE['zh'], '地图'], site['nav_zh'])
+            for lang in ('en', 'zh'):
+                for page in (map_sheet.PAGE[lang], map_sheet.PLACES[lang], map_sheet.PATHS_PAGE[lang]):
+                    self.assertNotIn(page, site['pages'])
+                self.assertNotIn(map_sheet.PICTURE[lang], site['assets'])
+            self.assertNotIn(map_sheet.INTERACTIVE, site['assets'])
+            card = next(w for w in site['ways_in'] if w['path'] == 'theories/becoming/CANONICAL-MAP.md')
+            self.assertEqual(card['group'], 'See')
+            return
         for name in self.pages:
             self.assertIn(name, site['pages'] if name.endswith('.md') else site['assets'], name)
         self.assertIn([map_sheet.PAGE['en'], 'Map'], site['nav'])
@@ -344,6 +371,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(card['zh'], map_sheet.PAGE['zh'])
 
     def test_what_the_page_says_of_itself_is_counted_from_the_data(self):
+        self._require_live()
         c = self.m['counts']
         P = self.d['passages']['passages']
         self.assertEqual(c['arrows'], len(P))
@@ -369,6 +397,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn('most of the %d ways out of a condition and the %d passages between conditions' % (tot['exits'], tot['transitions']), page)
 
     def test_what_the_whole_map_says_of_its_arrows_along_a_row_is_what_the_counts_give(self):
+        self._require_live()
         # the page: most that run right are proved with no further premise; most that run back need a further premise, or are built
         along = self.m['counts']['along']
         right = {k[6:]: v for k, v in along.items() if k.startswith('right/')}
@@ -377,9 +406,19 @@ class RepositoryTests(unittest.TestCase):
         self.assertGreater(left.get('needs', 0) + left.get('built', 0), sum(left.values()) / 2)
 
     def test_every_step_of_every_path_lies_in_the_picture_of_its_path(self):
+        self._require_live()
         self.assertEqual(map_sheet.built_errors(self.m), [])
 
     def test_frozen_views_match_disk(self):
+        if self.archived:
+            archive = ROOT / 'theories/becoming/history/results-map-2026-11-23'
+            self.assertTrue((archive / 'README.md').is_file())
+            self.assertTrue((archive / 'sheet.json').is_file())
+            redirect = (ROOT / 'theories/becoming/results/map/README.md').read_text(encoding='utf-8')
+            self.assertIn('../../history/results-map-2026-11-23/README.md', redirect)
+            self.assertIn('CANONICAL-MAP.md', redirect)
+            self.assertIn('ATLAS.md', redirect)
+            return
         if self.d['sheet'].get('frozen'):
             for path, body in self.pages.items():
                 self.assertEqual((ROOT / path).read_text(encoding='utf-8'), body, path)
