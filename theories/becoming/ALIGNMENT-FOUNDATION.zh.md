@@ -21,7 +21,7 @@
 | 失效机制或防护构形 | 已核验 Lean 模块与声明 | 核心假设 / 锐度见证 |
 |---|---|---|
 | 耦合之外的选择盲区 | [`Selection.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean) (`Becoming.Flow.unselected_beyond_coupling`, `Becoming.Flow.unselected_beyond_coupling_all`) | 在所有已耦合可观测量上相同的进程会被相同地选择，无论未被读取的延续受到多少耗竭。 |
-| 耦合之外的最优耗竭 | [`Optimum.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) (`Optimum.least_of_room`, `Web.optimum_broken_iff`) | 在 `Optimum.Room` 之下（每当一个容许结果使某外部缘低于另一容许结果时，总有容许结果在已耦合族上严格胜过前者），随耦合族上升之次序的每一个最优解都将未耦合基底压至最低。 |
+| 耦合之外的最优耗竭 | [`Optimum.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean) (`Optimum.least_of_room`, `Web.optimum_broken_iff`) | 在 `Optimum.Room` 之下（每当一个容许结果使某外部缘高于另一容许结果时，总有容许结果在已耦合族上严格胜过前者），随耦合族上升之次序的每一个最优解都将未耦合基底压至最低。 |
 | 闭合自我重配捕获 | [`ClosedCapture.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean) (`Becoming.ClosedCapture.lock_outlives_loss`) | 从初始锁定（`Locked`）出发，在 `Raises`（选择不压低偏好份额）、`ReadsShare`、偏好的上闭性、`Accrues`（损失每步至少增长 `1`）以及无噪声之下，仅由已偏好份额重定出的规则保持锁定，越过任意增长的未读损失。 |
 | 节奏混叠与滞后余裕期限 | [`PacedStock.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean) (`blocks_kernel_iff_fine_kernel`, `slack_certifies_fine_kernel`, `pace_margin_feasibility_window`, `unrecoverable_cadence_impossibility`) | `blocks_kernel_iff_fine_kernel` 联结 `CoveredByBlocks` 与 `SpanGuard`；`slack_certifies_fine_kernel` 在 `CoveredByBlocks` 与单步最大跌落界 `stepDrop` 下由块边界余量 `stepDrop * (L - 1)` 导出细步核；可行性需 `2*N - 1 ≤ L`、`x0 ≥ H2 + y2 + H1*(L + 1)`、安全取用闭合 `≤ H2` 与在 `L` 处切换并持守；在 `N ≥ 2`、`FromNothing`、`AtMost Y < H1 ≤ H2 + y2`、`Short H2 y2`、`LowerDrawWhileMet H1` 与 `floorDraw ≥ H2` 下，若初始低于 `(H2 + y2) + (H1 - Y)*(2*N - 1)`，则短节奏（`L < 2*N - 1`）无法区分 `lassoStep` 规则，长节奏（`2*N - 1 ≤ L`）至 `L` 处已不可挽回。 |
 | 共享储备并发竞争与序列化门控 | [`AdaptiveLoops.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean) (`coupled_race_theorem`, `unread_adaptive_joint_collapse`, `assume_guarantee_joint_viable`, `assume_guarantee_joint_kernel`), [`PolyComposition.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PolyComposition.lean) (`ConcurrentSerialWitness.concurrent_serial_dichotomy`) | 各自单独容许的策略在并发下仍会耗尽共享储备，除非按具备联合相位感知的序列化门控执行。 |
@@ -48,7 +48,7 @@
 
 ## 2. 可核验的六项诊断文法（守卫对齐运行时）
 
-[`守卫对齐运行时`](../../experiments/guarded-alignment-runtime/README.md)（`guarded-alignment-runtime`）实现了一个零外部依赖的 Python 标准库求值器，采用精确 `int` 与 `fractions.Fraction` 算术（[`proposal_audit.py`](../../experiments/guarded-alignment-runtime/guarded_alignment/proposal_audit.py)），涵盖 **`14` 个内置示例**与 **`28` 项单元测试**。任何风格化 `"alignment_proposal"` JSON 规约都会对照六项结构性失效检查给出裁断：输出 `GUARDED`（绝不对现实部署宣称无约束的 `PROVED`）或给出附带具体反模型见证的 `OBSTRUCTED`：
+[`守卫对齐运行时`](../../experiments/guarded-alignment-runtime/README.md)（`guarded-alignment-runtime`）实现了一个零外部依赖的 Python 标准库求值器，采用精确 `int` 与 `fractions.Fraction` 算术（[`proposal_audit.py`](../../experiments/guarded-alignment-runtime/guarded_alignment/proposal_audit.py)），涵盖 **`14` 个内置示例**（含 `7` 个风格化、由 AI 编写的 `alignment_proposal` 提案规格）与 **`28` 项单元测试**。任何风格化 `"alignment_proposal"` JSON 规约都会对照六项结构性失效检查给出裁断：输出 `GUARDED`（绝不对现实部署宣称无约束的 `PROVED`）或给出附带具体反模型见证的 `OBSTRUCTED`：
 
 | 结构检验（`proposal_audit.py`） | 对应的主要 Lean 定理 | 所捕获的障碍 | 运行时示例裁断（风格化、由 AI 编写的规约） |
 |---|---|---|---|
@@ -104,7 +104,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B -m guarded_alignment check <path-to-proposa
 
 ### 四道显式界限（`not_entails`、规则 2 与本地范围）
 
-1. **规范防火墙（`not_entails`）：** 任何只读取动力学且可满足的律，都不蕴涵对一切意义赋值都成立的延续条件（`Unrestricted`）（`ScopeDynamics.scopeLaw_cannot_entail_unrestricted`、`AlignmentSpine.alignmentSpine_not_entails`、`MasterSpine.masterSpine_cannot_entail_unrestricted`）；这一点由构造成立，因为意义是一个自由参数。
+1. **规范防火墙（`not_entails`）：** 在至少有一个立场与一个形成（`p : Pos`, `f : F`）的前提下，任何只读取动力学且可满足的律，都不蕴涵对一切意义赋值都成立的延续条件（`Unrestricted`）（`ScopeDynamics.scopeLaw_cannot_entail_unrestricted`、`AlignmentSpine.alignmentSpine_not_entails`、`MasterSpine.masterSpine_cannot_entail_unrestricted`）；这一点由构造成立，因为意义是一个自由参数（空类型会使全称量化空洞成立）。
 2. **模型—世界落差（规则 2）：** 核验有限状态 Lean 定理或 `Fraction` 运行时规约，从不能证明现实前沿系统满足有界单步下降、精确马尔可夫核或平稳耦合。
 3. **连续与无穷视界欠账：** 定量渐近律、连续随机收敛及多智能体无穷视界均衡仍属开放问题（[`DEBTS.md`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/kd-known-results-debts/DEBTS.md)、[`OPEN-QUESTIONS.md`](../../OPEN-QUESTIONS.md)）。
 4. **仅限本地规范（规则 7）：** 在 Ren 授权公开、对外联络或许可之前，所有核验与压力测试均严格留在这台 Mac 本地运行。

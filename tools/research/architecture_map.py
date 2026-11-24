@@ -249,7 +249,7 @@ SPEC = {
             'Rule 2 model-to-world gap; '
             'Tier C stylised 6-test runtime (AI-authored hand-set flags) and empirical/stress walls with failures first '
             '(MQ3, UE31b, VD1, MQ7, EM1, IN1, LA2, B4 25-50% collapses, B5 4/11 failures P8-P11, Wave 2 B1/B2 bounds, 15/15 replay); '
-            'dashed crimson not_entails firewall (no satisfiable dynamics-only law entails Unrestricted for every significance); '
+            'dashed crimson not_entails firewall (given >=1 standpoint & formation, no satisfiable dynamics-only law entails Unrestricted for every significance); '
             'Tier D Layer 3 ethics of 生生, 1,183 wisdom crosswalk entries, and human cold-read boundary.'
         ),
         'subtitle': 'Four verification tiers supporting 3 layers: (1) Coupled adaptive alignment · (2) 0-axiom ledger & 16-mod periphery · (3) 生生 ethics & wisdom',
@@ -320,8 +320,8 @@ SPEC = {
             ('B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25/0.70, alias 0.25)', False),
             ('B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 15/15 replay', False),
         ],
-        'firewall_l1': 'not_entails FIREWALL  —  No satisfiable law reading only the dynamics entails',
-        'firewall_l2': 'the continuation condition (Unrestricted) for every significance assignment (free parameter)',
+        'firewall_l1': 'not_entails FIREWALL — Given >= 1 standpoint & formation (p : Pos, f : F), no satisfiable',
+        'firewall_l2': 'dynamics-only law entails Unrestricted sig for every significance assignment (free parameter)',
         'l3_head': 'TIER D  ·  BEYOND FIREWALL: LAYER 3 ETHICS OF 生生, WISDOM & AUDIT BOUNDARY',
         'l3_cards': [
             (
@@ -352,7 +352,7 @@ SPEC = {
             '锚定共享基叶 FiniteProbKrylov，并列零公理独立轨 BecomingSpec（26 目标）、EncounterEntry（35 定理）与 RelSpanEncounterAdapter（7 定理）及 Mathlib 支撑的对偶轨；'
             '规则二（Rule 2）识别边界；层级 C 为拟制 6 项守卫对齐运行时（AI 拟制手设旗标自评）与失败先报的经验/压力壁垒'
             '（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、15/15 证据重放）；'
-            '虚线深红 not_entails 防火墙；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。'
+            '虚线深红 not_entails 防火墙（在至少一立场与一形成前提下，无只读动力学可满足律对一切意义蕴涵 Unrestricted）；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。'
         ),
         'subtitle': '四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 16 外围模块 · (3) 智慧与“生生”伦理',
         'metrics_1': '核心：439 闭包（418 核心）· 31,170 声明 · 22,056 定理 · 0 公理（v4.29.1，回执 20261124T195858.526167Z）· 598 登记（567 已核）',
@@ -422,8 +422,8 @@ SPEC = {
             ('B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25/0.70、混叠 0.25）', False),
             ('B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 15/15 重放', False),
         ],
-        'firewall_l1': 'not_entails 防火墙  —  任何只读取动力学且可满足的律，都不蕴涵',
-        'firewall_l2': '对一切意义赋值都成立的延续条件（Unrestricted），由自由参数构造成立',
+        'firewall_l1': 'not_entails 防火墙 — 在至少一立场与一形成 (p : Pos, f : F) 前提下，无只读动力学',
+        'firewall_l2': '的可满足律蕴涵对一切意义赋值成立的延续条件 Unrestricted（由自由参数构造成立）',
         'l3_head': '层级 D  ·  防火墙之外：第 3 层“生生”伦理、智慧对照表与人工审查边界',
         'l3_cards': [
             (

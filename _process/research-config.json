@@ -311,7 +311,7 @@
       {
         "page": "experiments/guarded-alignment-runtime/README.md",
         "pattern": "/tmp/spec\\.json",
-        "to": "tmp/spec.json"
+        "to": "./spec.json"
       },
       {
         "pattern": " The pages for reading are also on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."

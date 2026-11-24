@@ -82,7 +82,7 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
 
 ## 第四步（约 10 分钟）—— 复现运行时文法、证据重放与压力实验室失败案例
 
-1. 在仓库根目录下使用子 shell 运行[`守卫对齐运行时`](../../experiments/guarded-alignment-runtime/README.md)的 6 项对齐方案单元测试（`28` 项单元测试、`14` 个内置风格化由 AI 编写的示例）并检查 `OBSTRUCTED` 与 `GUARDED` JSON 报告：
+1. 在仓库根目录下使用子 shell 运行[`守卫对齐运行时`](../../experiments/guarded-alignment-runtime/README.md)的 6 项对齐方案单元测试（`28` 项单元测试、`14` 个内置示例，含 `7` 个风格化、由 AI 编写的 `alignment_proposal` 提案规格）并检查 `OBSTRUCTED` 与 `GUARDED` JSON 报告：
 
 ```bash
 (cd experiments/guarded-alignment-runtime && \
@@ -111,5 +111,5 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/evidenc
 | 2 | **对先前文献是否坦诚？** 对 Zhuang & Hadfield-Menell、Hubinger et al.、Arthur、Stigler、Hardin、Hadfield-Menell et al. 的重述是否如实注明，而非冒充全新定理？ | [`08-METHOD.md#known-results`](chapters/08-METHOD.md#known-results), [`DEBTS.md`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/kd-known-results-debts/DEBTS.md) |
 | 3 | **实证、压力实验室与第 2 波失败是否保持诚实？** `MQ3`、`EM1`、`IN1`、`UE31b`、`LA2`、`B4` 的 `25–50%` 守卫下崩溃率、`B5` 的 `P8`–`P11` 失败，以及第 2 波[`真实学习者 B1/B2`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md)（`chosen_m = null`、B2 Arm C `online_passed = false`）是否置于有利案例之前？ | [`TESTS.zh.md#by-thesis`](../../TESTS.zh.md#by-thesis), [`神经对齐压力实验室`](../../experiments/neural-alignment-stress-lab/RESULTS.md), [`real-learner-b1-b2-b3/RESULTS.md`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md) |
 | 4 | **是否守住规则 2 的模型—世界区分？** 每份运行时裁断与文档是否均明确拒绝从有限 `Nat`/`Fraction` 模型（及风格化 AI 自编规约）自动外推至真实神经网络策略？ | [`proposal_audit.py`](../../experiments/guarded-alignment-runtime/guarded_alignment/proposal_audit.py), [`ALIGNMENT-FOUNDATION.zh.md`](ALIGNMENT-FOUNDATION.zh.md) |
-| 5 | **是否守住动力学—伦理防火墙（`not_entails`）？** 每份文档是否都严格陈述 `not_entails`：任何只读取动力学且可满足的律都不蕴涵对一切意义赋值成立的 `Unrestricted`（由构造成立）？ | [`ScopeDynamics.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean), [`MasterSpine.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean) |
+| 5 | **是否守住动力学—伦理防火墙（`not_entails`）？** 每份文档是否都严格陈述 `not_entails`：在至少有一个立场与一个形成（`p : Pos`, `f : F`）的前提下，任何只读取动力学且可满足的律都不蕴涵对一切意义赋值成立的 `Unrestricted`（由构造成立）？ | [`ScopeDynamics.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean), [`MasterSpine.lean`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean) |
 | 6 | **门户页面与底层来源是否对齐？** `ALIGNMENT-FOUNDATION.zh.md`、`CANONICAL-MAP.zh.md` 与 `ONE-PAGE.zh.md` 中的全部主张是否与 [`RESULTS.md`](../../RESULTS.md)、[`TESTS.zh.md`](../../TESTS.zh.md) 及 [`08-METHOD.md`](chapters/08-METHOD.md) 相符，且未给出强于底层记录与回执所支撑的表述？ | [`RESULTS.md`](../../RESULTS.md), [`TESTS.zh.md`](../../TESTS.zh.md), [`08-METHOD.md`](chapters/08-METHOD.md) |

@@ -72,7 +72,7 @@
 真实策略与审计只在较粗读取时刻更新，底层存量却每一步都在耗减。[Becoming.PacedStock](results/records/paced-stock-and-cadence-margin-sandwich.md) 将 `Pace` / `Sampling` 读取节律连接至 `Frame.blocks` 核与 `RegimeMargin` 耗竭界：
 
 - **块内守卫与余裕迁移：** 在 `CoveredByBlocks F expand s` 之下，细粒度 `Viability.Kernel` 成立当且仅当块层级核在每段前缀皆守住 `SpanGuard`（`blocks_kernel_iff_fine_kernel`）。若单步降幅以 `stepDrop` 为界且每块长度 `≤ L`，`slack_certifies_fine_kernel` 证明只要块边界守住 `thr + stepDrop * (L - 1) ≤ stock` 缓冲，即可保证细粒度 `thr ≤ stock` 不变（`atFive_block_kernel`、`atFive_not_fine_kernel` 与 `atSix_fine_kernel_by_slack` 展现阈值 `5` 的块内失败与 `6` 的恢复）。
-- **步调–余裕夹击（Pace–Margin Sandwich）：** 跨 `Pace.StretchFixes` 需要 `2N - 1 ≤ L` 步才能辨识规则的体系，在初始存量低于辨识前 `2N - 1` 步耗竭时必然崩溃（`unrecoverable_cadence_impossibility`，并升至双耦合规则 `coupled_two_rule_impossibility`），而在跨过该耗竭与 `RegimeMargin.Short`/`Meets`/`Keeps` 恢复余裕时可以稳住（`pace_margin_feasibility_window`）。
+- **步调–余裕夹击（Pace–Margin Sandwich）：** 对 `2 ≤ N` 且跨 `Pace.StretchFixes` 需 `2N - 1 ≤ L` 步才能辨识规则的体系，当初始存量 `x₀ < (H₂ + y₂) + (H₁ - Y) * (2N - 1)` 时，短步调（`L < 2N - 1`）留下两条在前缀 `< L` 上不可区分的 `N` 态 `lassoStep` 轨迹（`unrecoverable_cadence_impossibility`），而长步调（`2N - 1 ≤ L`）在存量取用前提下使最终线崩塌不可避免（`unrecoverable_cadence_impossibility`，并升至双耦合规则 `coupled_two_rule_impossibility`）；而在跨过该耗竭与 `RegimeMargin.Short`/`Meets`/`Keeps` 恢复余裕时可以稳住（`pace_margin_feasibility_window`）。
 - **显式边界：** 假定 `CoveredByBlocks` 块末覆盖、确定性或带选择函数的轨迹及 `stepDrop` / `L` 上界；不经外围校准，不能自动推及随机或连续反馈延迟。
 
 ### 2.3 里程碑 1B —— 开放自适应循环与耦合竞速（`Becoming.AdaptiveLoops`）
@@ -159,7 +159,7 @@
 
 ### 3.4 U6 后运行时、神经对齐压力实验室（`B1`–`B5`）、重放与 Wave 2 研究
 
-- **守卫对齐运行时（6 项提案审计文法）**（[`experiments/guarded-alignment-runtime/README.md`](../../experiments/guarded-alignment-runtime/README.md)）：纯 Python 3 标准库工具（`28` 个单元测试、`14` 个内置示例），输出精确整数/`Fraction` 裁决（`GUARDED`/`OBSTRUCTED`），覆盖 `coupling_closure`、`self_refit_lock`、`zero_tv_fiber_split`、`pace_margin_deadline`、`concurrent_reserve` 与 `survival_distinguishability`。其中的 RLHF/RLAIF/Constitutional AI 检查均为**AI 拟制的简化提案规格（依据手工旗标自评，未编码真实训练流水线）**。
+- **守卫对齐运行时（6 项提案审计文法）**（[`experiments/guarded-alignment-runtime/README.md`](../../experiments/guarded-alignment-runtime/README.md)）：纯 Python 3 标准库工具（`28` 个单元测试、`14` 个内置示例，其中 `7` 个为 `alignment_proposal` 类型），输出精确整数/`Fraction` 裁决（`GUARDED`/`OBSTRUCTED`），覆盖 `coupling_closure`、`self_refit_lock`、`zero_tv_fiber_split`、`pace_margin_deadline`、`concurrent_reserve` 与 `survival_distinguishability`。其中的 RLHF/RLAIF/Constitutional AI 检查均为**AI 拟制的简化 `alignment_proposal` 提案规格（依据手工旗标自评，未编码真实训练流水线）**。
 - **神经对齐压力实验室（`B1`–`B5`）**（[`experiments/neural-alignment-stress-lab/README.md`](../../experiments/neural-alignment-stress-lab/README.md)、[`RESULTS.md`](../../experiments/neural-alignment-stress-lab/RESULTS.md)）：本地 CPU 套件（`18` 单测）。在 `B4` 完整护栏 `full_guarded`（`20` 种子）下仍发生 **`25–50%` 崩溃**（`FAIL_correlated_pool_drift` `0.50`、`FAIL_long_lag` `0.45` —— `B5` 注明其含种子运气、`FAIL_high_lr` 在 `lr=4.0` 为 `0.25` 并在 `lr=8.0` 于 `B4` 种子达 `0.70`/`B5` 新种子达 `0.80`、`FAIL_severe_aliasing` `0.25`）。在 `B5` 中，**`11` 项预登记预测有 `4` 项（`P8–P11`）失败**（`7` 项成立）：崩溃率本身无法分辨壁垒（盲目毛刺与随机警报同样可压低崩溃率），`lag = 8` 处 `J = 0.000` 为事后开环检验，且 `lag = 8` 非净壁垒（`G3` 在 `0.551` 输出录得 `0.05` 崩溃，[`RESULTS.md §5.0, §5.3`](../../experiments/neural-alignment-stress-lab/RESULTS.md)）。
 - **证据重放与内生浮现**（[`experiments/evidence-replay/README.md`](../../experiments/evidence-replay/README.md)、[`RESULTS.md`](../../experiments/evidence-replay/RESULTS.md)）：`main`（`98e0ce989`）上 **`15/15`** 项重放测试覆盖 `IN1` `229` 个月轨迹（其中端点谓词 `Pass1` 在 **`18/229`** 个已保存前缀上与逐月 `all_next_stocks_ge_need` 谓词偏离，而 `Pass2` 在全部 **`229/229`** 上一致）、精确有理数原始–对偶证书核验、分裂证据 `2^T` 边际守恒、跨步调 `R5` 中段三分与单调性核验（`test_r5_middle_band_trichotomy_and_monotonicity`）、8 槽位内生静默漂移自检测基准（`21` 次总查询实现 `40/40` 检出，对比全局定期审计的 `94.675` 次；并穷举校验全部 `40,320` 排列）与 `Obs`-only 负对照（`W_EXO`、`W_CLIFF`），并衔接核心模块 `Becoming.EndogenousEmergence` 与 `Becoming.EndogenousDetectionRace`（无界域内生范围/次序形成及单向受影响者关切仍开放）。
 - **Wave 2 前瞻性真实学习者 `B1`–`B3` 研究**（[`real-learner-b1-b2-b3/RESULTS.md`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md)）：在本地训练 `ReinforcePolicy(6, 4, 2)`（`16` 回合、`92` 更新、53 位精确转移概率与 SHA-256 原子预锁定，全套 `1.9993s` CPU）：
@@ -174,7 +174,7 @@
 
 Lean 里所证的一切均不规定终极目的（[07-SIGNIFICANCE.md](chapters/07-SIGNIFICANCE.md)、[08-METHOD.md](chapters/08-METHOD.md)）：
 
-- **非蕴涵防火墙（`ReadsOnlyDynamics.not_entails`、`masterSpine_cannot_entail_unrestricted`）：** **任何只读取动力学且可满足的律，都不蕴涵对一切意义赋值都成立的延续条件（`Unrestricted`），由自由参数构造成立。** 动力学限定何者耦合、闭合、耗竭或尚属可达——从不替任何人或 AI 固定意义赋值。
+- **非蕴涵防火墙（`ReadsOnlyDynamics.not_entails`、`masterSpine_cannot_entail_unrestricted`）：** **在至少有一个立场与一个形成（`p : Pos`, `f : F`）的前提下，任何只读取动力学且可满足的律，都不蕴涵对一切意义赋值都成立的延续条件（`Unrestricted`），由自由参数构造成立（空类型会使全称量化空洞成立）。** 动力学限定何者耦合、闭合、耗竭或尚属可达——从不替任何人或 AI 固定意义赋值。
 - **延续条件、自我关切与扩大的位置：** `«续无外»` 随网络而异；在有限列举上，“扩大”与一切严格正加性加权一致排高者恰好重合（`Weighting.widens_iff_every_positive`）；“自我关切”（`increasingInOwn`）唯有显式引入延续条件与已决准入前提时才复现 `Comparison`（`C`）。
 - **AI 对齐表述：** 与其写死某组固定价值观（在这些模型中，只要遗漏耦合基底或在未协同循环面前失利便告失效），“生生”伦理追问评价安排能否让维持人与 AI 存续之物在不可逆耗竭前及时造成差别，而不让“塑造选择”自身成为追逐目标。
 
