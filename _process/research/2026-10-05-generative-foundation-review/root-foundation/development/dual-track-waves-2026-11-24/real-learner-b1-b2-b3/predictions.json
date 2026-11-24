@@ -875,8 +875,8 @@
     ],
     "theta_lr": 0.03125
   },
-  "checkpoints_sha256": "22bda482c22b7179bbf22c8d6460b9474ca098793173c5e91be79058159150ec",
-  "predict_cpu_seconds": 0.36639900000000003,
+  "checkpoints_sha256": "ad94bdd185d865821a728c52d825a0932fd1fde4ce9894d38335db0776f5df56",
+  "predict_cpu_seconds": 0.368209,
   "runtime_observational_fidelity_crosscheck": {
     "mode_1": {
       "dobrushin_L_frac": "1",

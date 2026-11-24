@@ -59,7 +59,7 @@ def cmd_predict() -> int:
     CKPT_FILE.write_bytes(ckpt_bytes)
 
     # Strip large exact Fraction tables not needed downstream while keeping chosen_m, blocks, tubes, B2/B3
-    b1_serial = {k: v for k, v in b1_pred.items() if k not in ("k_frac", "l_frac")}
+    b1_serial = {k: v for k, v in b1_pred.items() if k not in ("k_frac", "l_frac", "tubes_frac")}
     pred_payload: Dict[str, Any] = {
         "ai_written": True,
         "predict_cpu_seconds": elapsed,

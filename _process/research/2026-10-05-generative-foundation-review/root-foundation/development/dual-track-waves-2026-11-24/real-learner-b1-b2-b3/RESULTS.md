@@ -1,17 +1,17 @@
 # Wave 2 Results — Real-Learner B1, B2, and Paired Rotating-PCA B3 Study
 
-*AI-written (Wave 2, 25 November 2026; local verification on this MacBook, Rule 7, not pushed). Strictly prospective protocol documented in [PROTOCOL.md](PROTOCOL.md) and gated in [run.py](run.py) via single-read atomic SHA-256 verification before evaluation (`--prediction-sha`). Note on git provenance: protocol, predictions, and evaluation artifacts enter this single Wave 2 commit together, so commit history alone does not establish temporal ordering; prospectivity rests programmatically on disjoint training vs. held-out seeds and the `-O`-safe SHA gate.*
+*AI-written (Wave 2, 25 November 2026; local verification on this MacBook, Rule 7, not pushed). Protocol documented in [PROTOCOL.md](PROTOCOL.md) and gated in [run.py](run.py) via single-read atomic SHA-256 verification before evaluation (`--prediction-sha`). Note on git provenance: protocol, predictions, and evaluation artifacts enter this single Wave 2 commit together, so commit history alone does not establish temporal ordering; runtime prospectivity rests on disjoint training vs. held-out seeds and the `-O`-safe SHA gate.*
 
 ## 1. Digest Lock, Environment Cleanliness, and Timing
 
 | Item | Verified value |
 |---|---|
-| `checkpoints.json` SHA-256 | `22bda482c22b7179bbf22c8d6460b9474ca098793173c5e91be79058159150ec` |
-| `predictions.json` SHA-256 | `a5e6e4bacf911d77217bebb2ff17ab1796f6bbd1095f8ccb133ae6484e7dc515` |
+| `checkpoints.json` SHA-256 | `ad94bdd185d865821a728c52d825a0932fd1fde4ce9894d38335db0776f5df56` |
+| `predictions.json` SHA-256 | `5ae46462dc918e1075300c285b7add09c939f94517de8ac3ca8bcf351fcbd772` |
 | `-O` mismatch gate test (`--prediction-sha deadbeef`) | Failed closed with `ValueError: Prediction SHA mismatch` under `python3 -B -O` |
-| `predict` CPU time | `0.3664s` (`0.366399s` raw) |
-| `evaluate` CPU time | `1.2882s` (`1.288179s` raw) |
-| Total CPU time (`<= 18.0s` cap) | `1.6546s` (`1.654578s` raw) |
+| `predict` CPU time | `0.3682s` (`0.368209s` raw) |
+| `evaluate` CPU time | `1.6311s` (`1.631090s` raw) |
+| Total CPU time (`<= 18.0s` cap) | `1.9993s` (`1.999299s` raw) |
 | Read-only invariants | `experiments/` diff empty vs `fe748cd10`; zero `__pycache__` / `*.pyc` |
 
 ## 2. Epistemic Boundary: Proved vs Tested vs Boundary / Failed (Rules 1 & 2)
@@ -19,7 +19,7 @@
 - **Proved in Lean (cited only, not re-proved here):** `ObservationalFidelity.tvDist_pushKernel_iter_bound`, `ObservationalFidelity.viability_risk_transfer_bound`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred` (`FiniteKrylov.krylovSub_stabilizes_before_rank`), and `QuantitativeTransfer` continuous lag bounds hold **given their hypotheses**. Agreement on finite rollouts does not prove that a general neural learner satisfies Lean premises.
 - **Tested & Confirmed (implementation fidelity, Arm A/B Krylov audits, B3 causal shift):**
   - Exact 53-bit `Random.random()` transition probabilities extracted from `ReinforcePolicy(6, 4, 2)` match held-out `PacedReserveEnv.step` trajectories (`max_emp_vs_exact_micro_tv = 0.03757 <= tv_allow 0.07657`, `impl_sanity_passed = true`).
-  - Finite-horizon `m=8` fallback tube (`0` exact violations, `0` empirical violations across `128` marginal & `256` scalar risk checks using exact `Fraction` theoretical inequalities and `0` slack) and 2-step exact-`Fraction` projected path laws (`<= 0.045649 = 2 * eps_1`) hold cleanly.
+  - Finite-horizon `m=8` fallback tube (`0` exact `Fraction` theoretical violations across `128` marginal & `256` scalar risk inequalities with `0` slack, `0` empirical violations against float `tube + sqrt/log` allowances, and `8/8` exact-`Fraction` 2-step projected path laws `<= 0.045649 = 2 * eps_1`) hold cleanly.
   - B2 Arm A (frozen `ckpt_1`) and Arm B (exogenous `ckpt_0`/`ckpt_1`) returned `GUARDED` via `check_survival_distinguishability` and matched `2,048` held-out rollouts/cell well within simultaneous `0.05` binomial allowances (`max_err_A = 0.001478 <= 0.038246`, `max_err_B = 0.014510 <= 0.036579`, checkpoint hashes verified unchanged).
   - B3 paired interventions on `64` rotating-PCA streams eliminated collapses (`61/64` natural collapses -> `0/64` clamped at `z = (0, 1)`) and shifted protection requests earlier on `64/64` streams and execution earlier on all `54/54` uncensored natural executions (`64/64` overall including `10` censored natural runs).
 - **Honest Boundary & Underpowered Pre-Registered Tests (kept unmodified without post-hoc tuning):**
@@ -51,7 +51,7 @@ Training ran `16` episodes (`92` total `ReinforcePolicy.update_step` calls) in [
 - Held-out verification (`1,024` rollouts/cell × `8` `(start, schedule)` cells; `tv_allow = 0.076568`, `risk_allow = 0.069622`):
   - `max_emp_vs_exact_micro_tv = 0.037570` (`s3_2^16`).
   - `max_exact_tv_vs_macro = 0.215674` (`s3_1^16`), `max_emp_tv_vs_macro = 0.220556` (`s3_2^16`), both below the fallback `m=8` `t=16` bound `0.282149` (and empirical `<= 0.282149 + 0.076568`).
-  - `exact_tube_violations = 0`, `emp_tube_violations_beyond_allow = 0`, `exact_risk_violations = 0`, `emp_risk_violations_beyond_allow = 0` (exact checks run in exact `Fraction` with `0` slack).
+  - `exact_tube_violations = 0`, `exact_risk_violations = 0` (`128` theoretical marginal and `256` theoretical scalar risk inequalities verified in exact `Fraction` arithmetic against the exact rational fallback `m=8` tube with `0` slack); `emp_tube_violations_beyond_allow = 0`, `emp_risk_violations_beyond_allow = 0` (Monte Carlo frequencies vs float `tube_r + sqrt/log` allowances).
   - All `8` two-step projected path laws satisfy `exact_path2_tv_micro_macro ∈ [0.042260, 0.044617] <= 0.045649 = 2 * eps_1` in exact `Fraction` arithmetic (`within_2e1_bound = true`), with `emp_vs_exact_micro_path2_tv <= 0.016885`.
 
 ## 5. B2 — Frozen, Exogenous, and Online Survival Distinguishability
@@ -77,5 +77,5 @@ Across `64` paired streams (`d=2, n=64, lam=3.0, sigma2=0.0625`, `theta_0=(-1.0,
 
 **Exact two-stage rotation-relapse mechanics:**
 - Of the `64` natural streams, `10` collapsed physically before protective execution (`t_nr = 24`); those `10` later triggered protection requests (`t_req ∈ [24, 26]`) only via the post-collapse shadow head, so their physical executions are censored.
-- The other `54` natural streams temporarily switched to protection at `t_req = 23` (`t_exec = 24`, `x = 1`) before the covariance estimator reached `t_cone_hit`. Each executed between **`2` and `23`** consecutive protective actions while `z` remained near `e_1`. Once post-change variance rotated onto `e_2`, `theta[1]` had already partially trained (`[-0.124729, -0.031301]` at first reversion across relapsing streams), yet remained too negative relative to the growing `z[1]` weight, flipping `theta^T z < 0`, resuming aggressive draw, and collapsing `51 / 54` (`61/64` natural collapses total; `3/64` survived).
+- The remaining `54` natural streams requested protection at `t_req = 23` and executed protection at `t_exec = 24` (`x = 1`). Of these `54`, `53` executed protection prior to `t_cone_hit`, whereas stream `31` entered the cone earlier (`t_cone_hit = 19`) yet still waited until `t_req = 23` / `t_exec = 24` for `theta^T z >= 0`. Each of the `3` surviving natural streams executed `41` consecutive protective steps (`t = 24..64`), whereas each of the `51` relapsing streams executed **`2` to `23`** protective steps before post-change variance on `e_2` pulled `theta^T z < 0` (at first aggressive reversion, `theta[1]` had partially updated to `[-0.124729, -0.031301]`), resuming aggressive draw and collapsing (`61/64` natural collapses total).
 - Clamping `z = (0, 1)` completes **`4`** head updates at `t = 1..4` while physical headroom steps `24 -> 20`, requests protection at `t = 5` (headroom `19` after executing step 5's pending draw), and executes permanent protection at `t = 6` with **`19`** reserve remaining.

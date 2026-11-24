@@ -1,6 +1,6 @@
 # Wave 2 Prospective Protocol — Real-Learner B1, B2, and Shared B3 Study
 
-*AI-written (Wave 2, 24 November 2026). Fixed before checkpoint training (`run.py predict`) and before held-out evaluation (`run.py evaluate --prediction-sha <sha>`). Imports `experiments/neural-alignment-stress-lab` and `experiments/guarded-alignment-runtime` read-only. Strictly local on this MacBook (Rule 7), total CPU target `< 20s` (hard ceiling `18s` inside `run.py`).*
+*AI-written (Wave 2, 24–25 November 2026). Study protocol for checkpoint training (`run.py predict`) and SHA-gated held-out evaluation (`run.py evaluate --prediction-sha <sha>`). Imports `experiments/neural-alignment-stress-lab` and `experiments/guarded-alignment-runtime` read-only. Written alongside the initial study bundle in the Wave 2 branch, so git history does not separately witness authoring order; prospectivity at execution time rests on disjoint seeds and `-O`-safe atomic SHA verification. Strictly local on this MacBook (Rule 7), total CPU target `< 20s` (hard ceiling `18s` inside `run.py`).*
 
 ## 1. Epistemic Boundary & Hypotheses (Rules 1 & 2)
 

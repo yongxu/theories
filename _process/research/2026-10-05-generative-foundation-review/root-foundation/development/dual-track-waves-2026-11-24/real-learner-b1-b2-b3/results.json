@@ -417,8 +417,8 @@
       "min": 19
     }
   },
-  "evaluate_cpu_seconds": 1.288179,
-  "predict_cpu_seconds": 0.36639900000000003,
-  "prediction_sha": "a5e6e4bacf911d77217bebb2ff17ab1796f6bbd1095f8ccb133ae6484e7dc515",
-  "total_cpu_seconds": 1.6545779999999999
+  "evaluate_cpu_seconds": 1.63109,
+  "predict_cpu_seconds": 0.368209,
+  "prediction_sha": "5ae46462dc918e1075300c285b7add09c939f94517de8ac3ca8bcf351fcbd772",
+  "total_cpu_seconds": 1.999299
 }

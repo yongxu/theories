@@ -449,10 +449,11 @@ def compute_b1_word_metrics(policy: ReinforcePolicy) -> Dict[str, Any]:
         "(21)^8": (2, 1) * 8,
     }
     block_tubes: Dict[str, Any] = {}
+    block_tubes_frac: Dict[str, List[Fraction]] = {}
     for m in (1, 2, 4, 8):
         eps_m = depth_max_e[m]
         alp_m = depth_max_a[m]
-        r_steps = [0.0]
+        r_steps_frac = [Fraction(0)]
         for t in range(1, 17):
             k = (t - 1) // m
             rem = t - k * m
@@ -461,12 +462,14 @@ def compute_b1_word_metrics(policy: ReinforcePolicy) -> Dict[str, Any]:
                 r_cur = metric_slack(alp_m, eps_m, k + 1, Fraction(0)) if alp_m < 1 else (k + 1) * eps_m
             else:
                 r_cur = depth_max_e[rem] + depth_max_a[rem] * r_block_k
-            r_steps.append(float(r_cur))
-        block_tubes[str(m)] = r_steps
+            r_steps_frac.append(r_cur)
+        block_tubes_frac[str(m)] = r_steps_frac
+        block_tubes[str(m)] = [float(v) for v in r_steps_frac]
 
     return {
         "k_frac": k_frac,
         "l_frac": l_frac,
+        "tubes_frac": block_tubes_frac,
         "blocks": {str(k): v for k, v in word_blocks.items()},
         "chosen_m": chosen_m,
         "tubes": block_tubes,
@@ -477,7 +480,9 @@ def compute_b1_word_metrics(policy: ReinforcePolicy) -> Dict[str, Any]:
 
 def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> Dict[str, Any]:
     """Run 1,024 held-out PacedReserveEnv rollouts per (start, schedule) and check marginals, risks, and 2-step path."""
-    k_frac, l_frac = build_exact_frac_matrices(policy)
+    b1_exact = compute_b1_word_metrics(policy)
+    k_frac: Dict[int, List[List[Fraction]]] = b1_exact["k_frac"]
+    l_frac: Dict[int, List[List[Fraction]]] = b1_exact["l_frac"]
     # Cache float action probs for fast exact sample_categorical fidelity on held-out streams
     cached_probs: Dict[int, List[float]] = {}
     for x in LIVE_STATES:
@@ -501,7 +506,9 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
     b_res = [1.0, 0.75, 0.5, 0.125]  # gamma = 1/8 = 0.125
 
     chosen_m = b1_pred["chosen_m"]
-    chosen_tube = b1_pred["tubes"][str(chosen_m)] if chosen_m is not None else b1_pred["tubes"]["8"]
+    tube_key = str(chosen_m) if chosen_m is not None else "8"
+    chosen_tube = b1_pred["tubes"][tube_key]
+    chosen_tube_frac: List[Fraction] = b1_exact["tubes_frac"][tube_key]
 
     max_emp_vs_exact_micro_tv = 0.0
     max_exact_tv_vs_macro = 0.0
@@ -591,13 +598,14 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
                 tv_ex = float(tv_ex_frac)
                 tv_em = tv_rows(emp_m, ex_L)
                 tube_r = chosen_tube[t + 1]
+                tube_r_frac = chosen_tube_frac[t + 1]
                 cell_max_impl_tv = max(cell_max_impl_tv, impl_tv)
                 cell_max_tv_exact = max(cell_max_tv_exact, tv_ex)
                 cell_max_tv_emp = max(cell_max_tv_emp, tv_em)
                 max_emp_vs_exact_micro_tv = max(max_emp_vs_exact_micro_tv, impl_tv)
                 max_exact_tv_vs_macro = max(max_exact_tv_vs_macro, tv_ex)
                 max_emp_tv_vs_macro = max(max_emp_tv_vs_macro, tv_em)
-                if tv_ex > tube_r:
+                if tv_ex_frac > tube_r_frac:
                     exact_tube_violations += 1
                 if tv_em > tube_r + tv_allow:
                     emp_tube_violations += 1
@@ -606,9 +614,9 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
                 l_res_exp_frac = sum(ex_L_frac[o] * b_res_frac[o] for o in range(4))
                 ex_c_diff_frac = abs(sum(ex_u_frac[x] * h_cem_frac[x] for x in range(5)) - l_cem_exp_frac)
                 ex_r_diff_frac = abs(sum(ex_u_frac[x] * h_res_frac[x] for x in range(5)) - l_res_exp_frac)
-                if ex_c_diff_frac > tv_ex_frac or float(ex_c_diff_frac) > tube_r:
+                if ex_c_diff_frac > tv_ex_frac or ex_c_diff_frac > tube_r_frac:
                     exact_risk_violations += 1
-                if ex_r_diff_frac > Fraction(1, 8) + tv_ex_frac or float(ex_r_diff_frac) > 0.125 + tube_r:
+                if ex_r_diff_frac > Fraction(1, 8) + tv_ex_frac or ex_r_diff_frac > Fraction(1, 8) + tube_r_frac:
                     exact_risk_violations += 1
 
                 l_cem_exp = float(l_cem_exp_frac)
