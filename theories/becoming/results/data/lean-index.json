@@ -20,22 +20,22 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2383,
-    "distinct_byte_contents": 1974,
+    "lean_paths": 2385,
+    "distinct_byte_contents": 1976,
     "byte_identical_duplicate_groups": 140,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1305,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 1039
+      "working-source": 1041
     },
-    "working_named_theorem_lemma_occurrences": 34322,
-    "working_explicit_named_declaration_occurrences": 50969,
+    "working_named_theorem_lemma_occurrences": 34380,
+    "working_explicit_named_declaration_occurrences": 51061,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 421,
-      "becoming-periphery": 16,
+      "becoming-periphery": 18,
       "becoming-ring": 18,
       "concern": 15,
       "core": 149,
@@ -18974,6 +18974,17 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+      "sha256": "193918a7fa4ab01da6769b198b4333551ad056fe198493538f9877888ea04de0",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/ControlledRefinement.lean",
       "sha256": "ee438240d0ca70476152d337b83ffe6668d222625bdfb0d576d8ab883c8e10d7",
       "role": "working-source",
@@ -19241,6 +19252,17 @@
       "direct_documentation_links_from": [
         "experiments/integrated-correction/general-framework/generative-basis/lean/learning/stochastic-prediction/README.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean",
+      "sha256": "e30f0e55e85218fd786a0462a45b37478cbb7563ea42cb04b9300ba50043f923",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -84428,6 +84450,518 @@
         "def": 23,
         "inductive": 1,
         "theorem": 80
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "193918a7fa4ab01da6769b198b4333551ad056fe198493538f9877888ea04de0": {
+      "byte_size": 32832,
+      "line_count": 404,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Data.Fin.VecNotation",
+        "Mathlib.Tactic",
+        "Becoming.RelSpan"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Conf",
+          "qualified_name_hint": "Becoming.InterfaceBits.Conf",
+          "line": 19
+        },
+        {
+          "kind": "def",
+          "name": "confOfRaw",
+          "qualified_name_hint": "Becoming.InterfaceBits.confOfRaw",
+          "line": 24
+        },
+        {
+          "kind": "def",
+          "name": "strongProd",
+          "qualified_name_hint": "Becoming.InterfaceBits.strongProd",
+          "line": 26
+        },
+        {
+          "kind": "def",
+          "name": "strongPow",
+          "qualified_name_hint": "Becoming.InterfaceBits.strongPow",
+          "line": 28
+        },
+        {
+          "kind": "def",
+          "name": "IsIndepSet",
+          "qualified_name_hint": "Becoming.InterfaceBits.IsIndepSet",
+          "line": 31
+        },
+        {
+          "kind": "def",
+          "name": "IsClique",
+          "qualified_name_hint": "Becoming.InterfaceBits.IsClique",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "IsColoring",
+          "qualified_name_hint": "Becoming.InterfaceBits.IsColoring",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "IsCC2Partition",
+          "qualified_name_hint": "Becoming.InterfaceBits.IsCC2Partition",
+          "line": 34
+        },
+        {
+          "kind": "def",
+          "name": "IsK3FreePartition",
+          "qualified_name_hint": "Becoming.InterfaceBits.IsK3FreePartition",
+          "line": 36
+        },
+        {
+          "kind": "def",
+          "name": "K2",
+          "qualified_name_hint": "Becoming.InterfaceBits.K2",
+          "line": 39
+        },
+        {
+          "kind": "def",
+          "name": "c7Adj",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Adj",
+          "line": 40
+        },
+        {
+          "kind": "def",
+          "name": "C7",
+          "qualified_name_hint": "Becoming.InterfaceBits.C7",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "c7Diffs",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Diffs",
+          "line": 46
+        },
+        {
+          "kind": "def",
+          "name": "c7BitVal",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7BitVal",
+          "line": 47
+        },
+        {
+          "kind": "def",
+          "name": "c7Indep",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Indep",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "c7Color",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Color",
+          "line": 49
+        },
+        {
+          "kind": "def",
+          "name": "c7CC2",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7CC2",
+          "line": 50
+        },
+        {
+          "kind": "def",
+          "name": "c7SqPts",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqPts",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "c7SqColorVec",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqColorVec",
+          "line": 52
+        },
+        {
+          "kind": "def",
+          "name": "c7SqCC2Vec",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqCC2Vec",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_iff_diff",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_iff_diff",
+          "line": 57
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_step",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_step",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "c7BitVal_inj",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7BitVal_inj",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "c7BitVal_adj",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7BitVal_adj",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Indep_ok",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Indep_ok",
+          "line": 61
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Color_ok",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Color_ok",
+          "line": 62
+        },
+        {
+          "kind": "theorem",
+          "name": "c7CC2_ok",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7CC2_ok",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_triangleFree",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_triangleFree",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "c7SqPts_nodup",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqPts_nodup",
+          "line": 65
+        },
+        {
+          "kind": "theorem",
+          "name": "c7SqPts_ok",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqPts_ok",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "c7SqColor_offsets",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqColor_offsets",
+          "line": 67
+        },
+        {
+          "kind": "theorem",
+          "name": "c7SqCC2_offsets",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7SqCC2_offsets",
+          "line": 69
+        },
+        {
+          "kind": "def",
+          "name": "indepNum",
+          "qualified_name_hint": "Becoming.InterfaceBits.indepNum",
+          "line": 77
+        },
+        {
+          "kind": "def",
+          "name": "minColors",
+          "qualified_name_hint": "Becoming.InterfaceBits.minColors",
+          "line": 79
+        },
+        {
+          "kind": "abbrev",
+          "name": "chi",
+          "qualified_name_hint": "Becoming.InterfaceBits.chi",
+          "line": 80
+        },
+        {
+          "kind": "abbrev",
+          "name": "chiCC2",
+          "qualified_name_hint": "Becoming.InterfaceBits.chiCC2",
+          "line": 81
+        },
+        {
+          "kind": "abbrev",
+          "name": "chiK3Free",
+          "qualified_name_hint": "Becoming.InterfaceBits.chiK3Free",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "le_indepNum",
+          "qualified_name_hint": "Becoming.InterfaceBits.le_indepNum",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "indepNum_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.indepNum_le",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "exists_maxIndep",
+          "qualified_name_hint": "Becoming.InterfaceBits.exists_maxIndep",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "equivFin_isColoring",
+          "qualified_name_hint": "Becoming.InterfaceBits.equivFin_isColoring",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "coloring_isCC2",
+          "qualified_name_hint": "Becoming.InterfaceBits.coloring_isCC2",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "coloring_isK3Free",
+          "qualified_name_hint": "Becoming.InterfaceBits.coloring_isK3Free",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "chi_spec",
+          "qualified_name_hint": "Becoming.InterfaceBits.chi_spec",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "chiCC2_spec",
+          "qualified_name_hint": "Becoming.InterfaceBits.chiCC2_spec",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "chiK3Free_spec",
+          "qualified_name_hint": "Becoming.InterfaceBits.chiK3Free_spec",
+          "line": 104
+        },
+        {
+          "kind": "theorem",
+          "name": "card_le_mul_of_fiber",
+          "qualified_name_hint": "Becoming.InterfaceBits.card_le_mul_of_fiber",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "indep_strongProd",
+          "qualified_name_hint": "Becoming.InterfaceBits.indep_strongProd",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "clique_strongProd",
+          "qualified_name_hint": "Becoming.InterfaceBits.clique_strongProd",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "coloring_strongProd",
+          "qualified_name_hint": "Becoming.InterfaceBits.coloring_strongProd",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "chi_strongProd_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.chi_strongProd_le",
+          "line": 124
+        },
+        {
+          "kind": "theorem",
+          "name": "indep_times_triangleFree",
+          "qualified_name_hint": "Becoming.InterfaceBits.indep_times_triangleFree",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "k3free_strongProd",
+          "qualified_name_hint": "Becoming.InterfaceBits.k3free_strongProd",
+          "line": 136
+        },
+        {
+          "kind": "theorem",
+          "name": "cc2_is_two_colorable",
+          "qualified_name_hint": "Becoming.InterfaceBits.cc2_is_two_colorable",
+          "line": 147
+        },
+        {
+          "kind": "def",
+          "name": "log2",
+          "qualified_name_hint": "Becoming.InterfaceBits.log2",
+          "line": 163
+        },
+        {
+          "kind": "theorem",
+          "name": "cc_sandwich",
+          "qualified_name_hint": "Becoming.InterfaceBits.cc_sandwich",
+          "line": 165
+        },
+        {
+          "kind": "theorem",
+          "name": "cc_pow_log_gap",
+          "qualified_name_hint": "Becoming.InterfaceBits.cc_pow_log_gap",
+          "line": 169
+        },
+        {
+          "kind": "theorem",
+          "name": "indep_strongProd_K2",
+          "qualified_name_hint": "Becoming.InterfaceBits.indep_strongProd_K2",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "chi_le_of_equiv",
+          "qualified_name_hint": "Becoming.InterfaceBits.chi_le_of_equiv",
+          "line": 192
+        },
+        {
+          "kind": "theorem",
+          "name": "chiK3Free_le_of_equiv",
+          "qualified_name_hint": "Becoming.InterfaceBits.chiK3Free_le_of_equiv",
+          "line": 195
+        },
+        {
+          "kind": "def",
+          "name": "finAddEquiv",
+          "qualified_name_hint": "Becoming.InterfaceBits.finAddEquiv",
+          "line": 203
+        },
+        {
+          "kind": "def",
+          "name": "finOneEquiv",
+          "qualified_name_hint": "Becoming.InterfaceBits.finOneEquiv",
+          "line": 207
+        },
+        {
+          "kind": "def",
+          "name": "finTwoEquiv",
+          "qualified_name_hint": "Becoming.InterfaceBits.finTwoEquiv",
+          "line": 208
+        },
+        {
+          "kind": "theorem",
+          "name": "cyclic_translate_bound",
+          "qualified_name_hint": "Becoming.InterfaceBits.cyclic_translate_bound",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_indep_adjacent_bound",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_indep_adjacent_bound",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Pow_k3free_card_bound",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Pow_k3free_card_bound",
+          "line": 250
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_indepNum_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_indepNum_eq",
+          "line": 265
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_chi_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_chi_eq",
+          "line": 276
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_chiCC2_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_chiCC2_le",
+          "line": 281
+        },
+        {
+          "kind": "theorem",
+          "name": "c7_chiK3Free_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7_chiK3Free_eq",
+          "line": 282
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Sq_indepNum_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Sq_indepNum_eq",
+          "line": 285
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Sq_chi_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Sq_chi_eq",
+          "line": 297
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Sq_chiCC2_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Sq_chiCC2_le",
+          "line": 308
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Sq_chiK3Free_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Sq_chiK3Free_eq",
+          "line": 318
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Cube_indepNum_bounds",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Cube_indepNum_bounds",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Cube_chiK3Free_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Cube_chiK3Free_eq",
+          "line": 350
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Pow_chi_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Pow_chi_le",
+          "line": 366
+        },
+        {
+          "kind": "theorem",
+          "name": "c7Pow_log_rate_le",
+          "qualified_name_hint": "Becoming.InterfaceBits.c7Pow_log_rate_le",
+          "line": 378
+        },
+        {
+          "kind": "def",
+          "name": "rep",
+          "qualified_name_hint": "Becoming.InterfaceBits.rep",
+          "line": 395
+        },
+        {
+          "kind": "theorem",
+          "name": "powTwo_eq",
+          "qualified_name_hint": "Becoming.InterfaceBits.powTwo_eq",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "c2_collapse_clique",
+          "qualified_name_hint": "Becoming.InterfaceBits.c2_collapse_clique",
+          "line": 397
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 3,
+        "def": 26,
+        "structure": 1,
+        "theorem": 51
       },
       "textual_markers": {
         "sorry": [],
@@ -556238,6 +556772,95 @@
         "unsafe": []
       },
       "print_axioms_commands": 109
+    },
+    "e30f0e55e85218fd786a0462a45b37478cbb7563ea42cb04b9300ba50043f923": {
+      "byte_size": 6344,
+      "line_count": 124,
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Tactic",
+        "AlignmentReals"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "EP",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.EP",
+          "line": 18
+        },
+        {
+          "kind": "def",
+          "name": "FP",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.FP",
+          "line": 19
+        },
+        {
+          "kind": "def",
+          "name": "Early",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.Early",
+          "line": 20
+        },
+        {
+          "kind": "def",
+          "name": "Intra",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.Intra",
+          "line": 21
+        },
+        {
+          "kind": "theorem",
+          "name": "ep_implies_fp",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.ep_implies_fp",
+          "line": 23
+        },
+        {
+          "kind": "theorem",
+          "name": "top_cone_iff",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.top_cone_iff",
+          "line": 26
+        },
+        {
+          "kind": "theorem",
+          "name": "fp_sandwich",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.fp_sandwich",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "intra_boundary_or_osc",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.intra_boundary_or_osc",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "feature_delay_headroom",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.feature_delay_headroom",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "feature_delay_extra_headroom",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.feature_delay_extra_headroom",
+          "line": 106
+        },
+        {
+          "kind": "theorem",
+          "name": "feature_delay_linear_fa_collapse",
+          "qualified_name_hint": "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse",
+          "line": 111
+        }
+      ],
+      "declaration_counts": {
+        "def": 4,
+        "theorem": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "e30fda7638639ecdbc8e9679b8deadfdd33d91bde2b2c0420dcc94e80eefb895": {
       "byte_size": 4752,

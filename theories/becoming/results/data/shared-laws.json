@@ -58,9 +58,9 @@
   ]
  },
  "counts": {
-  "laws": 4556,
+  "laws": 4562,
   "no_declarations": 9,
-  "outside": 423,
+  "outside": 429,
   "grammar": 1180,
   "balance, represented": 642,
   "anchor, not reached": 99,
@@ -28146,6 +28146,119 @@
     ]
    }
   ],
+  "interface-bits-and-c2-confusability-clique": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.InterfaceBits.Conf",
+     "Becoming.InterfaceBits.confOfRaw",
+     "Becoming.InterfaceBits.strongProd",
+     "Becoming.InterfaceBits.strongPow",
+     "Becoming.InterfaceBits.IsIndepSet",
+     "Becoming.InterfaceBits.IsClique",
+     "Becoming.InterfaceBits.IsColoring",
+     "Becoming.InterfaceBits.IsCC2Partition",
+     "Becoming.InterfaceBits.IsK3FreePartition",
+     "Becoming.InterfaceBits.indepNum",
+     "Becoming.InterfaceBits.minColors",
+     "Becoming.InterfaceBits.chi",
+     "Becoming.InterfaceBits.chiCC2",
+     "Becoming.InterfaceBits.chiK3Free",
+     "Becoming.InterfaceBits.indep_strongProd",
+     "Becoming.InterfaceBits.clique_strongProd",
+     "Becoming.InterfaceBits.coloring_strongProd",
+     "Becoming.InterfaceBits.chi_strongProd_le",
+     "Becoming.InterfaceBits.indep_times_triangleFree",
+     "Becoming.InterfaceBits.k3free_strongProd",
+     "Becoming.InterfaceBits.cc2_is_two_colorable",
+     "Becoming.InterfaceBits.cc_sandwich",
+     "Becoming.InterfaceBits.cc_pow_log_gap",
+     "Becoming.InterfaceBits.indep_strongProd_K2"
+    ],
+    "outside": [
+     "Becoming.InterfaceBits.Conf",
+     "Becoming.InterfaceBits.confOfRaw",
+     "Becoming.InterfaceBits.strongProd",
+     "Becoming.InterfaceBits.strongPow",
+     "Becoming.InterfaceBits.IsIndepSet",
+     "Becoming.InterfaceBits.IsClique",
+     "Becoming.InterfaceBits.IsColoring",
+     "Becoming.InterfaceBits.IsCC2Partition",
+     "Becoming.InterfaceBits.IsK3FreePartition",
+     "Becoming.InterfaceBits.indepNum",
+     "Becoming.InterfaceBits.minColors",
+     "Becoming.InterfaceBits.chi",
+     "Becoming.InterfaceBits.chiCC2",
+     "Becoming.InterfaceBits.chiK3Free",
+     "Becoming.InterfaceBits.indep_strongProd",
+     "Becoming.InterfaceBits.clique_strongProd",
+     "Becoming.InterfaceBits.coloring_strongProd",
+     "Becoming.InterfaceBits.chi_strongProd_le",
+     "Becoming.InterfaceBits.indep_times_triangleFree",
+     "Becoming.InterfaceBits.k3free_strongProd",
+     "Becoming.InterfaceBits.cc2_is_two_colorable",
+     "Becoming.InterfaceBits.cc_sandwich",
+     "Becoming.InterfaceBits.cc_pow_log_gap",
+     "Becoming.InterfaceBits.indep_strongProd_K2"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.InterfaceBits.K2",
+     "Becoming.InterfaceBits.C7",
+     "Becoming.InterfaceBits.cyclic_translate_bound",
+     "Becoming.InterfaceBits.c7_indep_adjacent_bound",
+     "Becoming.InterfaceBits.c7Pow_k3free_card_bound",
+     "Becoming.InterfaceBits.c7_indepNum_eq",
+     "Becoming.InterfaceBits.c7_chi_eq",
+     "Becoming.InterfaceBits.c7_chiCC2_le",
+     "Becoming.InterfaceBits.c7_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Sq_indepNum_eq",
+     "Becoming.InterfaceBits.c7Sq_chi_eq",
+     "Becoming.InterfaceBits.c7Sq_chiCC2_le",
+     "Becoming.InterfaceBits.c7Sq_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Cube_indepNum_bounds",
+     "Becoming.InterfaceBits.c7Cube_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Pow_chi_le",
+     "Becoming.InterfaceBits.log2",
+     "Becoming.InterfaceBits.c7Pow_log_rate_le"
+    ],
+    "outside": [
+     "Becoming.InterfaceBits.K2",
+     "Becoming.InterfaceBits.C7",
+     "Becoming.InterfaceBits.cyclic_translate_bound",
+     "Becoming.InterfaceBits.c7_indep_adjacent_bound",
+     "Becoming.InterfaceBits.c7Pow_k3free_card_bound",
+     "Becoming.InterfaceBits.c7_indepNum_eq",
+     "Becoming.InterfaceBits.c7_chi_eq",
+     "Becoming.InterfaceBits.c7_chiCC2_le",
+     "Becoming.InterfaceBits.c7_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Sq_indepNum_eq",
+     "Becoming.InterfaceBits.c7Sq_chi_eq",
+     "Becoming.InterfaceBits.c7Sq_chiCC2_le",
+     "Becoming.InterfaceBits.c7Sq_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Cube_indepNum_bounds",
+     "Becoming.InterfaceBits.c7Cube_chiK3Free_eq",
+     "Becoming.InterfaceBits.c7Pow_chi_le",
+     "Becoming.InterfaceBits.log2",
+     "Becoming.InterfaceBits.c7Pow_log_rate_le"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.InterfaceBits.rep",
+     "Becoming.InterfaceBits.powTwo_eq",
+     "Becoming.InterfaceBits.c2_collapse_clique"
+    ],
+    "outside": [
+     "Becoming.InterfaceBits.rep",
+     "Becoming.InterfaceBits.powTwo_eq",
+     "Becoming.InterfaceBits.c2_collapse_clique"
+    ]
+   }
+  ],
   "interventional-causal-abstraction-and-goodhart": [
    {
     "law": 1,
@@ -34851,6 +34964,51 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   }
+  ],
+  "moving-feature-cone-and-delay-headroom": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.MovingFeatureCone.EP",
+     "Becoming.MovingFeatureCone.FP",
+     "Becoming.MovingFeatureCone.ep_implies_fp",
+     "Becoming.MovingFeatureCone.top_cone_iff"
+    ],
+    "outside": [
+     "Becoming.MovingFeatureCone.EP",
+     "Becoming.MovingFeatureCone.FP",
+     "Becoming.MovingFeatureCone.ep_implies_fp",
+     "Becoming.MovingFeatureCone.top_cone_iff"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.MovingFeatureCone.Early",
+     "Becoming.MovingFeatureCone.Intra",
+     "Becoming.MovingFeatureCone.fp_sandwich",
+     "Becoming.MovingFeatureCone.intra_boundary_or_osc"
+    ],
+    "outside": [
+     "Becoming.MovingFeatureCone.Early",
+     "Becoming.MovingFeatureCone.Intra",
+     "Becoming.MovingFeatureCone.fp_sandwich",
+     "Becoming.MovingFeatureCone.intra_boundary_or_osc"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.MovingFeatureCone.feature_delay_headroom",
+     "Becoming.MovingFeatureCone.feature_delay_extra_headroom",
+     "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse"
+    ],
+    "outside": [
+     "Becoming.MovingFeatureCone.feature_delay_headroom",
+     "Becoming.MovingFeatureCone.feature_delay_extra_headroom",
+     "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse"
+    ]
    }
   ],
   "multivalued-joining-common-structure": [

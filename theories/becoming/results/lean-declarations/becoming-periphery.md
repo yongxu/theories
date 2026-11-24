@@ -705,6 +705,136 @@ Definitions and types:
 
 </details>
 
+<a id="module-faea6a3ebb58"></a>
+
+<details>
+<summary>InterfaceBits.lean — 81 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean`
+
+Imports: `Mathlib.Analysis.SpecialFunctions.Log.Basic`, `Mathlib.Data.Fin.VecNotation`, `Mathlib.Tactic`, `Becoming.RelSpan`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.InterfaceBits.c7_iff_diff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L57) | 57 |
+| [Becoming.InterfaceBits.c7_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L58) | 58 |
+| [Becoming.InterfaceBits.c7BitVal_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L59) | 59 |
+| [Becoming.InterfaceBits.c7BitVal_adj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L60) | 60 |
+| [Becoming.InterfaceBits.c7Indep_ok](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L61) | 61 |
+| [Becoming.InterfaceBits.c7Color_ok](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L62) | 62 |
+| [Becoming.InterfaceBits.c7CC2_ok](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L63) | 63 |
+| [Becoming.InterfaceBits.c7_triangleFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L64) | 64 |
+| [Becoming.InterfaceBits.c7SqPts_nodup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L65) | 65 |
+| [Becoming.InterfaceBits.c7SqPts_ok](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L66) | 66 |
+| [Becoming.InterfaceBits.c7SqColor_offsets](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L67) | 67 |
+| [Becoming.InterfaceBits.c7SqCC2_offsets](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L69) | 69 |
+| [Becoming.InterfaceBits.le_indepNum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L84) | 84 |
+| [Becoming.InterfaceBits.indepNum_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L86) | 86 |
+| [Becoming.InterfaceBits.exists_maxIndep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L88) | 88 |
+| [Becoming.InterfaceBits.equivFin_isColoring](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L93) | 93 |
+| [Becoming.InterfaceBits.coloring_isCC2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L95) | 95 |
+| [Becoming.InterfaceBits.coloring_isK3Free](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L97) | 97 |
+| [Becoming.InterfaceBits.chi_spec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L100) | 100 |
+| [Becoming.InterfaceBits.chiCC2_spec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L102) | 102 |
+| [Becoming.InterfaceBits.chiK3Free_spec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L104) | 104 |
+| [Becoming.InterfaceBits.card_le_mul_of_fiber](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L107) | 107 |
+| [Becoming.InterfaceBits.indep_strongProd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L114) | 114 |
+| [Becoming.InterfaceBits.clique_strongProd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L118) | 118 |
+| [Becoming.InterfaceBits.coloring_strongProd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L121) | 121 |
+| [Becoming.InterfaceBits.chi_strongProd_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L124) | 124 |
+| [Becoming.InterfaceBits.indep_times_triangleFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L127) | 127 |
+| [Becoming.InterfaceBits.k3free_strongProd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L136) | 136 |
+| [Becoming.InterfaceBits.cc2_is_two_colorable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L147) | 147 |
+| [Becoming.InterfaceBits.cc_sandwich](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L165) | 165 |
+| [Becoming.InterfaceBits.cc_pow_log_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L169) | 169 |
+| [Becoming.InterfaceBits.indep_strongProd_K2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L183) | 183 |
+| [Becoming.InterfaceBits.chi_le_of_equiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L192) | 192 |
+| [Becoming.InterfaceBits.chiK3Free_le_of_equiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L195) | 195 |
+| [Becoming.InterfaceBits.cyclic_translate_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L210) | 210 |
+| [Becoming.InterfaceBits.c7_indep_adjacent_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L223) | 223 |
+| [Becoming.InterfaceBits.c7Pow_k3free_card_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L250) | 250 |
+| [Becoming.InterfaceBits.c7_indepNum_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L265) | 265 |
+| [Becoming.InterfaceBits.c7_chi_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L276) | 276 |
+| [Becoming.InterfaceBits.c7_chiCC2_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L281) | 281 |
+| [Becoming.InterfaceBits.c7_chiK3Free_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L282) | 282 |
+| [Becoming.InterfaceBits.c7Sq_indepNum_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L285) | 285 |
+| [Becoming.InterfaceBits.c7Sq_chi_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L297) | 297 |
+| [Becoming.InterfaceBits.c7Sq_chiCC2_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L308) | 308 |
+| [Becoming.InterfaceBits.c7Sq_chiK3Free_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L318) | 318 |
+| [Becoming.InterfaceBits.c7Cube_indepNum_bounds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L330) | 330 |
+| [Becoming.InterfaceBits.c7Cube_chiK3Free_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L350) | 350 |
+| [Becoming.InterfaceBits.c7Pow_chi_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L366) | 366 |
+| [Becoming.InterfaceBits.c7Pow_log_rate_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L378) | 378 |
+| [Becoming.InterfaceBits.powTwo_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L396) | 396 |
+| [Becoming.InterfaceBits.c2_collapse_clique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L397) | 397 |
+
+Definitions and types:
+
+- `structure` [Becoming.InterfaceBits.Conf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L19) (L19)
+- `def` [Becoming.InterfaceBits.confOfRaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L24) (L24)
+- `def` [Becoming.InterfaceBits.strongProd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L26) (L26)
+- `def` [Becoming.InterfaceBits.strongPow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L28) (L28)
+- `def` [Becoming.InterfaceBits.IsIndepSet](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L31) (L31)
+- `def` [Becoming.InterfaceBits.IsClique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L32) (L32)
+- `def` [Becoming.InterfaceBits.IsColoring](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L33) (L33)
+- `def` [Becoming.InterfaceBits.IsCC2Partition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L34) (L34)
+- `def` [Becoming.InterfaceBits.IsK3FreePartition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L36) (L36)
+- `def` [Becoming.InterfaceBits.K2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L39) (L39)
+- `def` [Becoming.InterfaceBits.c7Adj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L40) (L40)
+- `def` [Becoming.InterfaceBits.C7](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L41) (L41)
+- `def` [Becoming.InterfaceBits.c7Diffs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L46) (L46)
+- `def` [Becoming.InterfaceBits.c7BitVal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L47) (L47)
+- `def` [Becoming.InterfaceBits.c7Indep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L48) (L48)
+- `def` [Becoming.InterfaceBits.c7Color](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L49) (L49)
+- `def` [Becoming.InterfaceBits.c7CC2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L50) (L50)
+- `def` [Becoming.InterfaceBits.c7SqPts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L51) (L51)
+- `def` [Becoming.InterfaceBits.c7SqColorVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L52) (L52)
+- `def` [Becoming.InterfaceBits.c7SqCC2Vec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L54) (L54)
+- `def` [Becoming.InterfaceBits.indepNum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L77) (L77)
+- `def` [Becoming.InterfaceBits.minColors](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L79) (L79)
+- `abbrev` [Becoming.InterfaceBits.chi](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L80) (L80)
+- `abbrev` [Becoming.InterfaceBits.chiCC2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L81) (L81)
+- `abbrev` [Becoming.InterfaceBits.chiK3Free](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L82) (L82)
+- `def` [Becoming.InterfaceBits.log2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L163) (L163)
+- `def` [Becoming.InterfaceBits.finAddEquiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L203) (L203)
+- `def` [Becoming.InterfaceBits.finOneEquiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L207) (L207)
+- `def` [Becoming.InterfaceBits.finTwoEquiv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L208) (L208)
+- `def` [Becoming.InterfaceBits.rep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean#L395) (L395)
+
+</details>
+
+<a id="module-f2e1e24a1b6a"></a>
+
+<details>
+<summary>MovingFeatureCone.lean — 11 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean`
+
+Imports: `Mathlib.Data.Real.Sqrt`, `Mathlib.Tactic`, `AlignmentReals`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.MovingFeatureCone.ep_implies_fp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L23) | 23 |
+| [Becoming.MovingFeatureCone.top_cone_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L26) | 26 |
+| [Becoming.MovingFeatureCone.fp_sandwich](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L79) | 79 |
+| [Becoming.MovingFeatureCone.intra_boundary_or_osc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L91) | 91 |
+| [Becoming.MovingFeatureCone.feature_delay_headroom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L100) | 100 |
+| [Becoming.MovingFeatureCone.feature_delay_extra_headroom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L106) | 106 |
+| [Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L111) | 111 |
+
+Definitions and types:
+
+- `def` [Becoming.MovingFeatureCone.EP](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L18) (L18)
+- `def` [Becoming.MovingFeatureCone.FP](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L19) (L19)
+- `def` [Becoming.MovingFeatureCone.Early](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L20) (L20)
+- `def` [Becoming.MovingFeatureCone.Intra](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean#L21) (L21)
+
+</details>
+
 <a id="module-46c8172f5cac"></a>
 
 <details>

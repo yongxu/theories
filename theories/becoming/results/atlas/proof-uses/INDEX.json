@@ -4,7 +4,7 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "f9836f3a68d2970e0125d09ae64a2ef54d40a124",
+  "commit": "7e6ed413247963dd140c1d6782ccf52f3e440046",
   "core_run": "20261124T195858.526167Z"
  },
  "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",

@@ -63,7 +63,7 @@ Formalizes WenHeHua v9.0 S1-S5 & formal/67 D1 and bridges relational oplax span 
 - **formal-reuse**: [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md). Bridges ExactCausalAbs, CausalGoodhartWitness, and Viability.Kernel soundness/refutation via FiberViabilitySplit.
 - **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). Connects quotient lumping of single-step transition spans to Becoming.«像定后当且仅当同行».
 
-**Used by:** [finite-mode-survival-distinguishability](finite-mode-survival-distinguishability.md) · [guarded-double-category-certificate-kernel](guarded-double-category-certificate-kernel.md) · [observational-fidelity-and-multi-regime-error](observational-fidelity-and-multi-regime-error.md)
+**Used by:** [finite-mode-survival-distinguishability](finite-mode-survival-distinguishability.md) · [guarded-double-category-certificate-kernel](guarded-double-category-certificate-kernel.md) · [interface-bits-and-c2-confusability-clique](interface-bits-and-c2-confusability-clique.md) · [observational-fidelity-and-multi-regime-error](observational-fidelity-and-multi-regime-error.md)
 
 <a id="sources--来源"></a>
 ### Sources

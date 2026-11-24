@@ -362,6 +362,8 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",

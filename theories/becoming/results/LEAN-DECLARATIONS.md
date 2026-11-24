@@ -14,7 +14,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 |---|---:|---:|
 | [Becoming pure core](lean-declarations/becoming-core.md) | 421 | 21,162 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 16 | 639 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 18 | 697 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -527,6 +527,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Integers.lean](lean-declarations/becoming-core-part-3.md#module-6301489d5d60) | Becoming pure core |
 | [IntegratedPortContinuation.lean](lean-declarations/inquiry.md#module-9e3c69c03ebf) | Attainable inquiry, contact and process laws |
 | [Interdependence.lean](lean-declarations/becoming-core-part-3.md#module-9b2e13db3d20) | Becoming pure core |
+| [InterfaceBits.lean](lean-declarations/becoming-periphery.md#module-faea6a3ebb58) | Becoming active periphery |
 | [Interleavings.lean](lean-declarations/becoming-core-part-4.md#module-4429a1ae5e70) | Becoming pure core |
 | [Irreversibility.lean](lean-declarations/becoming-core-part-4.md#module-317f024855f2) | Becoming pure core |
 | [Joining.lean](lean-declarations/becoming-core-part-4.md#module-0e1027a8c9de) | Becoming pure core |
@@ -622,6 +623,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ModelStatements.lean](lean-declarations/becoming-core-part-5.md#module-3a2867fad40b) | Becoming pure core |
 | [MoveFormation.lean](lean-declarations/becoming-core-part-5.md#module-28e8b4c3f5e5) | Becoming pure core |
 | [MoveOutcomeProcesses.lean](lean-declarations/becoming-core-part-5.md#module-bf4b488e61c2) | Becoming pure core |
+| [MovingFeatureCone.lean](lean-declarations/becoming-periphery.md#module-f2e1e24a1b6a) | Becoming active periphery |
 | [MultiScaleViability.lean](lean-declarations/becoming-core-part-5.md#module-5bf34fcb4190) | Becoming pure core |
 | [MutualDependence.lean](lean-declarations/becoming-core-part-5.md#module-dc8123cb2cc1) | Becoming pure core |
 | [MutualGrounding.lean](lean-declarations/core.md#module-a9df0fda7b92) | Generative core and relational structure |

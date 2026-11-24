@@ -3237,6 +3237,18 @@
    "page": "theories/becoming/results/records/inherited-structural-copying.md"
   },
   {
+   "id": "record:interface-bits-and-c2-confusability-clique",
+   "type": "result",
+   "record": "interface-bits-and-c2-confusability-clique",
+   "title": "Confusability strong powers, C7 bounds, and the C2 collapse clique",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/interface-bits-and-c2-confusability-clique.md"
+  },
+  {
    "id": "record:interventional-causal-abstraction-and-goodhart",
    "type": "result",
    "record": "interventional-causal-abstraction-and-goodhart",
@@ -3859,6 +3871,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/more-needs-renewers.md"
+  },
+  {
+   "id": "record:moving-feature-cone-and-delay-headroom",
+   "type": "result",
+   "record": "moving-feature-cone-and-delay-headroom",
+   "title": "Moving-feature cone characterization, path sandwich, and delay headroom",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/moving-feature-cone-and-delay-headroom.md"
   },
   {
    "id": "record:multivalued-joining-common-structure",
@@ -49247,6 +49271,11 @@
    "interface": true
   },
   {
+   "from": "record:interface-bits-and-c2-confusability-clique",
+   "to": "record:oplax-history-comparison-and-relational-loss",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:interventional-causal-abstraction-and-goodhart",
    "to": "module:Becoming.CausalAbstraction",
    "type": "proved-in"
@@ -51725,6 +51754,11 @@
    "to": "record:unceasing-generation-needs-renewal",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:moving-feature-cone-and-delay-headroom",
+   "to": "record:continuous-stochastic-alignment-reals",
+   "type": "formal-reuse"
   },
   {
    "from": "record:multivalued-joining-common-structure",
