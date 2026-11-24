@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T112343.843972Z",
- "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
+ "core_receipt": "20261124T131113.069112Z",
+ "core_sources_sha256": "93fe4567732b78705a5252741b6cc6181865fe093e60a761c2193be107deaa03",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -2297,8 +2297,6 @@
     "law": 18,
     "declarations": [
      "Becoming.LineOnAStock.unending_iff_holds",
-     "Becoming.LineOnAStock.reaches_holds",
-     "Becoming.LineOnAStock.reaches_from",
      "Becoming.LineOnAStock.within_along",
      "Becoming.LineOnAStock.taken_allKids",
      "Becoming.LineOnAStock.taken_generation",
@@ -70068,7 +70066,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "8e3e187edeea3688a3ebe880120c342ec30d531c5d5965175ec06f8b8e130821",
+   "modules_sha256": "af68a36dcd106cb633cee738c5024f4dbf2263926b0852e1624d9bfacee3d537",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

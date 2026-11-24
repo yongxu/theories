@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-16T01:52:23+00:00",
+  "reviewed_at_utc": "2026-11-24T12:08:00+00:00",
   "statement": {
     "en": "A way reads the level only by needs met. Capped at hi, nothing from nothing, positive needs met at first, each unit with kids, none needing more: if they together take more, the level is below a start need by step hi + 1; if the same, under the regime, the net never ends just where its course holds.",
     "zh": "方式只凭哪些所需被满足来读取水位。水位以 hi 为上限、无中不生有、所需皆为正、起点皆满足、每个单元都有后代且后代所需不多于它时：其后代合起来所取更多，则 hi + 1 步内水位低于起点满足过的某个所需，此前只是传承的世代；合起来所取相等，则在沿途体制前提下，网永不终止当且仅当进程走到守得住处。"
@@ -214,8 +214,6 @@
       "zh": "unending_iff_holds：每个单元的后代合起来所取恰等于它（even），每个单元都有后代，后代所需不多于亲代，w 的每个后代所需为正，无中不生有，起点不高于 hi，且凡进程所到、此处及此前每步都有所需被满足的方式都满足 Regime giving use y hi：网永不终止，当且仅当进程（此前每步都有所需被满足）走到一个守得住的构形。",
       "declarations": [
         "Becoming.LineOnAStock.unending_iff_holds",
-        "Becoming.LineOnAStock.reaches_holds",
-        "Becoming.LineOnAStock.reaches_from",
         "Becoming.LineOnAStock.within_along",
         "Becoming.LineOnAStock.taken_allKids",
         "Becoming.LineOnAStock.taken_generation",
@@ -532,7 +530,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty in core run 20261116T014928.328589Z (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9); in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in four rounds, one join on paper refuted; then three readers of its texts and records, a reviewer of its first run, one reader of the map card and a sweep of its texts. Their searches on small worlds are not proofs. No person's review of it is recorded."
+    "en": "Pure core, axiom reports empty and prelude-only compilation verified in core run 20261124T131113.069112Z (LineOnAStock 186 declarations, 111 theorems; LineOnAStockCases 15, 9); in the Lean's second layer through WayUnderARule, imported by WayOfUnits, LineOnAStockCases, PacedStock, StockFlowBridge and EvolutionaryDrawdown. AI-written; read by AI agents set to refute it across multiple rounds on the Lean, texts, records and map card. Their searches on small worlds are not proofs. No person's review of it is recorded."
   },
   "next_delta": {
     "en": "An exact condition for a way whose units' kids together take more, or less, never ending; a way that comes to read the fall, its kids or needs changed by the course; the course as a Web with a Flow folded where Continuation is next open; ReadingsSpread's commons as a course of this model; a test on a trained system, held."
@@ -550,6 +548,25 @@
     "Becoming.LineOnAStock.ways_alike"
   ],
   "dependencies": [
+    {
+      "id": "a-way-of-units-under-a-rule-set-again",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the shared single-step way and level primitives (stepAfter, taken, stepLeft, stepGoes, allKids, generation, stepNeeding, Holds, Regime, Below) and proves unending_iff_holds as a call of WayUnderARule.unending_iff_tested and way_ends as a call of WayUnderARule.tested_or_ends at R := PUnit (via oneOrder, way_one_rule, goes_one_rule, tested_one_rule)."
+      },
+      "interface": {
+        "output": {
+          "en": "At R := PUnit, WayUnderARule.unending_iff_tested characterizes unending nets under an unfavoured rule by Holds, and WayUnderARule.tested_or_ends forces an unmet-need stop under a favouring rule."
+        },
+        "input": {
+          "en": "The single-rule course, net, Goes, Holds and Regime of LineOnAStock, definitionally equal to WayUnderARule's single-step primitives."
+        },
+        "conditions": {
+          "en": "even, some, down, Needing, FromNothing, start within hi and Regime along the course for unending_iff_holds; FromNothing, Keeps at 0, grows, positive needs, down and start within hi for way_ends."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
     {
       "id": "turning-in-time",
       "relation": "formal-reuse",
@@ -932,8 +949,6 @@
         "Becoming.LineOnAStock.none_shift",
         "Becoming.LineOnAStock.nothingGiven",
         "Becoming.LineOnAStock.one_need_ends",
-        "Becoming.LineOnAStock.reaches_from",
-        "Becoming.LineOnAStock.reaches_holds",
         "Becoming.LineOnAStock.rise",
         "Becoming.LineOnAStock.step",
         "Becoming.LineOnAStock.step_lowers",
@@ -962,7 +977,7 @@
         "Becoming.LineOnAStock.ways_alike",
         "Becoming.LineOnAStock.within_along"
       ],
-      "sha256": "5c7ce2c3e2c72f271b56900ca336a998abcba646714d5ce01df9c324ce8f4c40"
+      "sha256": "e9ebf78537fde98e2e115c607bb1f2947400dcdf7f0501be3f070bf01ba416d6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
@@ -1056,12 +1071,18 @@
       "role": "receipt",
       "sha256": "9dffe9a99119a9921018fb7a8b71e392c7ec2e1301a80130344c10b4f1db9ee3",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
+      "role": "receipt",
+      "sha256": "5f70887e6d990b520f09aa2d75b26c47a4d93882f62e9ba0cec99200503bac14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T223138.659438Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineOnAStock",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1077,6 +1098,9 @@
   "history": [
     {
       "en": "16 November 2026, board row DJ, the plan's steps 3 to 7 tried as laws of one model, on Ren's words of 16 November kept in sources (sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md): added, with TurningInTime extended and WayOfUnits made to rest on the new module. Six readers before any Lean found several candidate laws false or too weak as worded; a first module proved a dozen facts again and joined at definitions only; the course read as a Web with a Flow was refuted as a dictionary; a telling of the lock's law as an overdraw that comes about, a bound twice the true one and need_unmet told without down were found by readers and corrected. The study folder dj-a-line-on-a-stock keeps the readers' reports and the held versions. Before the core run, after three readers set to refute the texts read them against the Lean, the statement and the claim name the regime of unending_iff_holds and the premises of the first law; positive needs are said with down, not in place of it; line_ends asks a positive need of every unit of the line and that every kid of its units needs no more; the reading of falls_to_unmet rests on all its given premises; does_not_show keeps KidHigherNeed as witness for the level only, the ending said as not concluded; account's premise on the level is said; «迭» is credited to shared-laws-on-the-grammar; the built examples' record moved from related to a formal-reuse dependency; Chinese wording aligned with the existing records (守得住, 所需为正)."
+    },
+    {
+      "en": "24 November 2026 (Decision 3A, Stage 2 join): Becoming.LineOnAStock now imports Becoming.WayUnderARule, delegating the shared single-step primitives by rfl, deleting reaches_from and reaches_holds, and proving unending_iff_holds as a direct call of WayUnderARule.unending_iff_tested and way_ends as a direct call of WayUnderARule.tested_or_ends (retaining ends_all for line_ends over a closed sub-line S). AI-written."
     }
   ]
 }

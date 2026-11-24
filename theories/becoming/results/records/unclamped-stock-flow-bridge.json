@@ -109,7 +109,7 @@
       "kind": "scope"
     },
     {
-      "en": "Absorption of LineOnAStock.way_ends / WayUnderARule.tested_or_ends by Flow.family_excess_ends or Stage 2 deletion of ends_all.",
+      "en": "Absorption of LineOnAStock.line_ends (ends_all over a closed sub-line) or WayUnderARule.tested_or_ends by Flow.family_excess_ends.",
       "kind": "scope"
     }
   ],
@@ -123,10 +123,10 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 69 declarations (58 theorems, 0 private) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; adds clampedStep_balance_* and list_clampedStep_* overdraw helpers. No person has read it."
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261124T131113.069112Z): all 69 declarations (58 theorems, 0 private) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; imports both Becoming.WayUnderARule and Becoming.LineOnAStock after Stage 2; adds clampedStep_balance_* and list_clampedStep_* overdraw helpers. No person has read it."
   },
   "next_delta": {
-    "en": "Index WayUnderARule, PacedStock, AdaptiveLoops, and Milestone 1C pillars into atlas dynamics.json and author alignment situations (Phase 2)."
+    "en": "With WayUnderARule positioned below LineOnAStock (ends_all retained for closed sub-lines in line_ends) and conditional/renewal/ preserved as a read-only bridged archive alongside KeepableStep, index WayUnderARule, PacedStock, and AdaptiveLoops into atlas dynamics and extend unclamped multi-substrate stock–flow bridges."
   },
   "correspondence": {
     "en": "Reading (AI-written): October–November flow conservation and drawdown trapping govern single-stock unit processes strictly up to overdraw without inventing fake min-clamping conservation, while multi-substrate Coupled.Indexed strictly extends fixed-draw dynamics."
@@ -155,7 +155,7 @@
       "id": "a-way-of-units-under-a-rule-set-again",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Bridges WayUnderARule courses to Flow.BalancesOn and Coupled.Indexed.step while preserving Stage 2 rfl checks."
+        "en": "Bridges WayUnderARule courses (below LineOnAStock) to Flow.BalancesOn and Coupled.Indexed.step."
       }
     },
     {
@@ -240,7 +240,7 @@
         "Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw",
         "Becoming.StockFlowBridge.list_clampedStep_exact_balance_iff_all_covered"
       ],
-      "sha256": "b25c51c63307020a6601eb1f308531ce84b5d9cdd9d6e7624721458f2dd140f5"
+      "sha256": "094b18225b3a3772cd0ab992f7f670b13cfbf58cfca054995be871378261ae98"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
@@ -263,12 +263,18 @@
       "role": "receipt",
       "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
+      "role": "receipt",
+      "sha256": "5f70887e6d990b520f09aa2d75b26c47a4d93882f62e9ba0cec99200503bac14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.StockFlowBridge",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -280,6 +286,9 @@
     },
     {
       "en": "24 November 2026 (Wave U2): joined StockFlowBridge onto Becoming.Stock via StockUnification and StockUnificationRuns (deriving unit/line/way Flow balances from Stock.process_balanced, lifting Run.replenishes_of_draws / draws_iff_replenishes, and transferring never_returns_below_within back to Stock.Balanced runs). AI-written."
+    },
+    {
+      "en": "24 November 2026 (Decision 3A): added explicit import of Becoming.LineOnAStock after Stage 2 inverted Becoming.WayUnderARule below Becoming.LineOnAStock (retiring reaches_from and reaches_holds while keeping ends_all for line_ends), with October's conditional/renewal/ kept as a read-only bridged archive. AI-written."
     }
   ]
 }

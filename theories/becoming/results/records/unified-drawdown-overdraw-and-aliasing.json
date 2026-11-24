@@ -211,7 +211,7 @@
         "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
         "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
       ],
-      "sha256": "3ad3cc8374fbfe0cc3e0815d2380c6cd7a079687324c4648e5ffe6b083b694b2"
+      "sha256": "5b015c2cfe6e9ef517f0d4a098d04e731747e7cf1e5b35b22156f8d57a668c90"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
@@ -234,12 +234,18 @@
       "role": "receipt",
       "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
+      "role": "receipt",
+      "sha256": "5f70887e6d990b520f09aa2d75b26c47a4d93882f62e9ba0cec99200503bac14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.UnifiedDrawdown",
       "success_pointer": "/status",
       "success_value": "passed"

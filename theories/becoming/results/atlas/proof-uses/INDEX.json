@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "af1d8095ad8893b0b958a533130584d700eb1e18",
-  "core_run": "20261124T112343.843972Z"
+  "commit": "574f04c6d15c17a0d60585aa2d9015f60c2a23b9",
+  "core_run": "20261124T131113.069112Z"
  },
- "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
+ "core_sources_sha256": "93fe4567732b78705a5252741b6cc6181865fe093e60a761c2193be107deaa03",
  "modules": {
   "Becoming": {
-   "source_sha256": "cac1037c8d19726577de13f3c07aed857e3ea3e601e386ace17b5e6d523b3e25",
+   "source_sha256": "4088465f6bef4312fb7243edf9851e6e7759c721d4f3f2d7833d30629518c1a5",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -862,8 +862,8 @@
    "theorems": 60
   },
   "Becoming.LineOnAStock": {
-   "source_sha256": "5c7ce2c3e2c72f271b56900ca336a998abcba646714d5ce01df9c324ce8f4c40",
-   "theorems": 113
+   "source_sha256": "e9ebf78537fde98e2e115c607bb1f2947400dcdf7f0501be3f070bf01ba416d6",
+   "theorems": 111
   },
   "Becoming.LineOnAStockCases": {
    "source_sha256": "d1e4a27b93fe0783bd55e097d866e9786be26a7c01ae6e162190088feaa549db",
@@ -1542,7 +1542,7 @@
    "theorems": 45
   },
   "Becoming.StockFlowBridge": {
-   "source_sha256": "b25c51c63307020a6601eb1f308531ce84b5d9cdd9d6e7624721458f2dd140f5",
+   "source_sha256": "094b18225b3a3772cd0ab992f7f670b13cfbf58cfca054995be871378261ae98",
    "theorems": 59
   },
   "Becoming.StrengthFlows": {
@@ -1638,7 +1638,7 @@
    "theorems": 31
   },
   "Becoming.UnifiedDrawdown": {
-   "source_sha256": "3ad3cc8374fbfe0cc3e0815d2380c6cd7a079687324c4648e5ffe6b083b694b2",
+   "source_sha256": "5b015c2cfe6e9ef517f0d4a098d04e731747e7cf1e5b35b22156f8d57a668c90",
    "theorems": 123
   },
   "Becoming.UnitMatchings": {
@@ -1678,8 +1678,8 @@
    "theorems": 68
   },
   "Becoming.WayUnderARule": {
-   "source_sha256": "cf1292569ccb316cd1526ffec3dd1fcd39a59edf2cdad3b1b28a9267a8b1cfce",
-   "theorems": 63
+   "source_sha256": "3fe4ad41f30c346fe53b3b729dbc7e1df01c5eb735476657e80384ae4fe9abb1",
+   "theorems": 78
   },
   "Becoming.Weighted": {
    "source_sha256": "5e682f2cd58cc360f36b8c45e04469a49e4c0309de508afdf058632d7248b497",
@@ -1752,7 +1752,7 @@
  },
  "counts": {
   "modules": 435,
-  "theorems": 22615,
+  "theorems": 22628,
   "uses_without_row": 51
  }
 }

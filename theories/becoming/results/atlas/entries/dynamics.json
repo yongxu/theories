@@ -2720,8 +2720,6 @@
    "Becoming.LineOnAStock.taken_generation",
    "Becoming.LineOnAStock.course_generation",
    "Becoming.LineOnAStock.within_along",
-   "Becoming.LineOnAStock.reaches_from",
-   "Becoming.LineOnAStock.reaches_holds",
    "Becoming.LineOnAStock.unending_iff_holds",
    "Becoming.LineOnAStock.taken_below",
    "Becoming.LineOnAStock.unending_taken_below",
@@ -40905,7 +40903,7 @@
   "tests": [],
   "open": [
    {
-    "en": "A condition on the model numbers separating which outcome occurs, and whether post-collapse survival via eliminated counted units is turning in the idea sense.",
+    "en": "A closed-form numerical condition on model parameters separating which outcome occurs, and coupling with units that replenish what they rest on (NeedTwentySeven is classified as Tested ecological exhaustion rather than pre-exhaustion turning in time).",
     "source": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#does-not-show--未表明"
    }
   ],
