@@ -51,8 +51,10 @@ def input_snapshot():
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
-    paths.update(the_map.inputs())
-    paths.update(map_sheet.inputs())
+    if (ROOT / the_map.WEB).is_file():
+        paths.update(the_map.inputs())
+    if (ROOT / map_sheet.SHEET).is_file():
+        paths.update(map_sheet.inputs())
     paths.update(atlas_index.inputs())  # the tests table, COVERAGE, the session map's families and the core receipt
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
     paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
@@ -392,16 +394,18 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     errors += atlas_errors
     # The laws and tests behind the map (RW): the atlas's dynamics and the tests on one web of roles and ties, the laws and the cases kept apart, as a
     # page, its picture and the same map to operate; a card whose law is not a declaration of its dynamic, or a law's
-    # sentence in words that fit only a person, is an error.
-    map_pages, map_errors = the_map.render()
-    outputs.update(map_pages)
-    errors += map_errors
+    # sentence in words that fit only a person, is an error. Guarded so an archived results/map/ snapshot skips cleanly.
+    if (ROOT / the_map.WEB).is_file():
+        map_pages, map_errors = the_map.render()
+        outputs.update(map_pages)
+        errors += map_errors
     # The map itself (RW): rows that each ask one thing, boxes for the ways the answer can stand, arrows drawn by how they are
     # known, paths told on it and tests laid on it, in English and Chinese; an arrow whose law no reader has set against the
     # Lean, a step that stands on nothing, or a name in a word that fits only a person is an error.
-    sheet_pages, sheet_errors = map_sheet.render()
-    outputs.update(sheet_pages)
-    errors += sheet_errors
+    if (ROOT / map_sheet.SHEET).is_file():
+        sheet_pages, sheet_errors = map_sheet.render()
+        outputs.update(sheet_pages)
+        errors += sheet_errors
     # The connection map (CX): the atlas's correspondences, the graph and the shared laws on one page.
     if atlas_pages:
         outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH], atlas_pages.get(atlas.CROSSWALK)))

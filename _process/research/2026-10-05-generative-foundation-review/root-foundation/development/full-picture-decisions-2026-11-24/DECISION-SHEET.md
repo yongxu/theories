@@ -1,5 +1,7 @@
 # Full-Picture Decision Sheet for Ren / 全景决策单（待 Ren 拍板）
 
+> **Status (24 November 2026, 18:32 WIB):** **Approved (`1A 2B 3A 4A 5A`)** by Ren (`"Ren 都认可，请继续。"`, [verbatim record](../../../../../../sources/15-codex-theory-conversations/2026-11-24-approve-five-full-picture-decisions.md)); Rule 7 local-only hold remains in force.
+
 *AI-written 1-page decision menu (24 November 2026; held loosely under [AGENTS.md](../../../../../../AGENTS.md)). Distills the 5 open junctions in [CANONICAL-MAP.md §4.4](../../../../../../theories/becoming/CANONICAL-MAP.md#44-open-decisions-waiting-on-ren) (through Wave U6: `593` results, `435` closure / `414` core modules, `21,789` theorems, `13` periphery modules) so you can settle all five with a single short line (e.g., `1A 2B 3A 4A 5A`).*
 
 ---

@@ -282,16 +282,7 @@
       "theories/becoming/results/atlas/PREMISES.md",
       "theories/becoming/results/atlas/premises/*.md",
       "theories/becoming/results/atlas/TERRAIN.md",
-      "theories/becoming/results/map/THE-MAP.md",
-      "theories/becoming/results/map/THE-MAP.zh.md",
-      "theories/becoming/results/map/PLACES.md",
-      "theories/becoming/results/map/PLACES.zh.md",
-      "theories/becoming/results/map/PATHS.md",
-      "theories/becoming/results/map/PATHS.zh.md",
-      "theories/becoming/results/map/LEDGER.md",
-      "theories/becoming/results/map/LAWS.md",
-      "theories/becoming/results/map/DYNAMICS.md",
-      "theories/becoming/results/map/CASES.md",
+      "theories/becoming/CANONICAL-MAP.md",
       "GOALS.md",
       "theories/meta-attractor/README.md"
     ],
@@ -361,21 +352,6 @@
       "theories/becoming/results/atlas/connections.svg",
       "theories/becoming/results/atlas/connections.zh.svg",
       "theories/becoming/results/atlas/terrain.svg",
-      "theories/becoming/results/map/interactive.html",
-      "theories/becoming/results/map/the-map.svg",
-      "theories/becoming/results/map/the-map.zh.svg",
-      "theories/becoming/results/map/path-lock.svg",
-      "theories/becoming/results/map/path-lock.zh.svg",
-      "theories/becoming/results/map/path-stock.svg",
-      "theories/becoming/results/map/path-stock.zh.svg",
-      "theories/becoming/results/map/path-view.svg",
-      "theories/becoming/results/map/path-view.zh.svg",
-      "theories/becoming/results/map/path-giving.svg",
-      "theories/becoming/results/map/path-giving.zh.svg",
-      "theories/becoming/results/map/path-returns.svg",
-      "theories/becoming/results/map/path-returns.zh.svg",
-      "theories/becoming/results/map/the-web.html",
-      "theories/becoming/results/map/the-web.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
       "theories/becoming/results/standings.svg",
@@ -434,7 +410,7 @@
         "See"
       ],
       [
-        "theories/becoming/results/map/THE-MAP.md",
+        "theories/becoming/CANONICAL-MAP.md",
         "Map"
       ],
       [
@@ -538,13 +514,10 @@
         "group": "Check"
       },
       {
-        "path": "theories/becoming/results/map/THE-MAP.md",
-        "label": "The map",
+        "path": "theories/becoming/CANONICAL-MAP.md",
+        "label": "The canonical map",
         "group": "See",
-        "text": "What happens, drawn on one sheet: rows that each ask one thing, boxes for the ways the answer can stand, arrows drawn by how they are known, paths told step by step and tests laid on it.",
-        "time_until": "## The other paths",
-        "time": "the first path {time}; the page {whole}",
-        "zh": "theories/becoming/results/map/THE-MAP.zh.md"
+        "text": "One cold-read synthesis joining the 0-axiom formal spine, the 66 bound tests, checked situations, CPU stress tests, and wisdom/ethics boundaries."
       },
       {
         "path": "theories/becoming/results/atlas/ATLAS.md",
@@ -623,10 +596,6 @@
       [
         "theories/LINEAGE.zh.md",
         "怎样长成"
-      ],
-      [
-        "theories/becoming/results/map/THE-MAP.zh.md",
-        "地图"
       ],
       [
         "theories/becoming/results/atlas/ATLAS.md",
