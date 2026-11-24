@@ -1355,7 +1355,7 @@ Definitions and types:
 <details>
 <summary>ConsequenceDuality.lean — 50 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/ConsequenceDuality.lean`
 
@@ -1424,7 +1424,7 @@ Definitions and types:
 <details>
 <summary>DualityBridges.lean — 28 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean`
 
@@ -5494,7 +5494,7 @@ Contains 9 textual `#print axioms` commands; their results belong to the origina
 <details>
 <summary>EncounterEntry.lean — 91 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/EncounterEntry.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/EncounterEntry.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/EncounterEntry.lean`
 

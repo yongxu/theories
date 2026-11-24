@@ -10,7 +10,7 @@ Total expected wall time: **~60 minutes** on a clean checkout with Lean `v4.29.1
 
 1. Inspect the retained core receipt directly rather than reading markdown claims:
    - [`becoming-verification.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)
-   - Verify `"status": "passed"`, `"toolchain": "leanprover/lean4:v4.29.1"`, `core_closure` size (`435`), declaration count (`30,709`), theorem count (`21,802`), and check that every core module's `axiom_dependencies` maps to `[]`.
+   - Verify `"status": "passed"`, `"toolchain": "leanprover/lean4:v4.29.1"`, `"retained_run": "becoming-checks/20261124T131113.069112Z"`, `core_closure` size (`435`), declaration count (`30,739`), theorem count (`21,819`), and check that every core module's `axiom_dependencies` maps to `[]`.
 2. Re-run the core checker through the worktree lock wrapper (note: [`check_becoming.py`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py) takes **no CLI flags** and writes a fresh timestamped retained run; inspect or clean only what you create if keeping a clean tree):
 
 ```bash
@@ -25,20 +25,26 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
 
 ---
 
-## Step 2 (~10 min) — Mathlib Periphery Isolation & Staleness Audit
+## Step 2 (~10 min) — Mathlib Periphery Isolation & Standalone Tracks
 
-1. Verify that Mathlib-dependent continuous/probabilistic theorems (`ObservationalFidelity`, `AlignmentReals`, `BecomingReals`) stay separated from the `0`-axiom core and check SHA-256 freshness via [`check_periphery.py`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) and [`periphery-manifest.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json):
+1. Verify that all `14` Mathlib periphery checkers (`ObservationalFidelity`, `SurvivalDistinguishability`, `AlignmentReals`, `BecomingReals`, etc.) stay separated from the `0`-axiom core and check SHA-256 freshness via [`check_periphery.py`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) and [`periphery-manifest.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json):
 
 ```bash
 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --check-stale
 ```
 
-2. Optionally re-verify the three primary alignment periphery checkers directly:
+2. Optionally re-verify the four primary alignment periphery checkers directly (note: `--module` expects exact PascalCase `module` names from `periphery-manifest.json`):
 
 ```bash
 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py \
-  --module observational-fidelity --module alignment-reals --module becoming-reals
+  --module ObservationalFidelity --module SurvivalDistinguishability \
+  --module AlignmentReals --module BecomingReals
 ```
+
+3. Also inspect the standalone comparator, duality, and `0`-axiom open-entry receipts plus [`experiments/evidence-replay/`](../../../../../../experiments/evidence-replay/README.md):
+   - [`becoming-spec-verification.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/becoming-spec-verification.json) (`22` specification targets audited across `v4.29.1` & `v4.30.0-rc2`, `4/4` tamper self-tests rejected)
+   - [`consequence-duality-verification.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/consequence-duality-verification.json) and [`duality-bridges-verification.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/duality-bridges-verification.json)
+   - [`encounter-entry-verification.json`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/encounter-entry-verification.json) (`0`-axiom `Init`-only open entry, `35` theorems, `4/4` negative self-tests rejected)
 
 ---
 
@@ -56,7 +62,7 @@ Bypass all summaries and inspect statement hypotheses directly in Lean:
 
 ## Step 4 (~10 min) — Reproduce Runtime Grammar & Stress-Lab Failures
 
-1. Run the 5-test alignment proposal runtime tests and inspect `OBSTRUCTED` vs. `GUARDED` JSON reports in [`experiments/guarded-alignment-runtime/`](../../../../../../experiments/guarded-alignment-runtime/README.md):
+1. Run the 6-test alignment proposal runtime tests (`28` unit tests, `14` built-in examples) and inspect `OBSTRUCTED` vs. `GUARDED` JSON reports in [`experiments/guarded-alignment-runtime/`](../../../../../../experiments/guarded-alignment-runtime/README.md):
 
 ```bash
 cd experiments/guarded-alignment-runtime

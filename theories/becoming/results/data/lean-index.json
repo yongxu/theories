@@ -16610,7 +16610,9 @@
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
-      "direct_documentation_links_from": [],
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -16619,7 +16621,9 @@
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
-      "direct_documentation_links_from": [],
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -17808,6 +17812,7 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
         "experiments/evidence-replay/README.md",
         "experiments/evidence-replay/RESULTS.md"
       ],
@@ -19205,7 +19210,8 @@
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "RESULTS.md"
+        "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
