@@ -2937,6 +2937,18 @@
    "page": "theories/becoming/results/records/growth-constrained-fragmentation.md"
   },
   {
+   "id": "record:guarded-double-category-certificate-kernel",
+   "type": "result",
+   "record": "guarded-double-category-certificate-kernel",
+   "title": "Strict double-category certificate kernel, conservative 3D extension, and guarded oplax syntax",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/guarded-double-category-certificate-kernel.md"
+  },
+  {
    "id": "record:guarded-program-question-recovery",
    "type": "result",
    "record": "guarded-program-question-recovery",
@@ -3969,6 +3981,18 @@
    "page": "theories/becoming/results/records/observation-is-a-route.md"
   },
   {
+   "id": "record:observational-fidelity-and-multi-regime-error",
+   "type": "result",
+   "record": "observational-fidelity-and-multi-regime-error",
+   "title": "Query-image TV blindness floor, multi-query separation, and three-regime error contrast",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md"
+  },
+  {
    "id": "record:offspring-read-from-giving-that-waits",
    "type": "result",
    "record": "offspring-read-from-giving-that-waits",
@@ -4087,6 +4111,18 @@
    "region": "map",
    "base": "general",
    "page": "theories/becoming/results/records/open-interface-composition-and-replacement.md"
+  },
+  {
+   "id": "record:oplax-history-comparison-and-relational-loss",
+   "type": "result",
+   "record": "oplax-history-comparison-and-relational-loss",
+   "title": "Oplax Span(F) history comparison, Beck-Chevalley characterization, and relational loss obstructions",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md"
   },
   {
    "id": "record:optima-rebuild-a-depleted-base",
@@ -12141,6 +12177,28 @@
    "region": "map",
    "base": "general",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OplaxHistory",
+   "type": "module",
+   "name": "Becoming.OplaxHistory",
+   "level": "L1",
+   "theorems": 52,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.DoubleKernel",
+   "type": "module",
+   "name": "Becoming.DoubleKernel",
+   "level": "L1",
+   "theorems": 35,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -34178,6 +34236,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.DoubleKernel",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DoubleKernel",
+   "to": "module:Becoming.OplaxHistory",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.DrawHistory",
    "to": "module:Becoming.RegimeMargin",
    "type": "imports"
@@ -36050,6 +36118,31 @@
   {
    "from": "module:Becoming.Openness",
    "to": "module:Becoming.Premises",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.CausalAbstraction",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.PolyComposition",
    "type": "imports"
   },
   {
@@ -47438,6 +47531,16 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:guarded-double-category-certificate-kernel",
+   "to": "module:Becoming.DoubleKernel",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:guarded-double-category-certificate-kernel",
+   "to": "record:oplax-history-comparison-and-relational-loss",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:guarded-program-question-recovery",
    "to": "module:Becoming.Granularity",
    "type": "proved-in"
@@ -51946,6 +52049,21 @@
    "type": "related"
   },
   {
+   "from": "record:observational-fidelity-and-multi-regime-error",
+   "to": "record:continuous-stochastic-alignment-reals",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:observational-fidelity-and-multi-regime-error",
+   "to": "record:oplax-history-comparison-and-relational-loss",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:observational-fidelity-and-multi-regime-error",
+   "to": "record:unified-becoming-over-reals",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:offspring-read-from-giving-that-waits",
    "to": "module:Becoming.Flow",
    "type": "proved-in"
@@ -52226,6 +52344,31 @@
   {
    "from": "record:open-interface-composition-and-replacement",
    "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "module:Becoming.OplaxHistory",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "record:interventional-causal-abstraction-and-goodhart",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "record:shared-laws-on-the-grammar",
    "type": "formal-reuse"
   },
   {

@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "eec67dfc705e250ee3a3e0f70a027f299f2e6288",
-  "core_run": "20261124T061916.734612Z"
+  "commit": "b8111aa2fba1d33f08a2971301113eb72347ea12",
+  "core_run": "20261124T083850.553338Z"
  },
- "core_sources_sha256": "59bdd868da98877cc8538767783500fe43191c640986d60b4ab5155d44bb7d93",
+ "core_sources_sha256": "b8b20b82f0d76ca04856fcfd30f80f9b05e4671848614c9a7c94412ecdf5bc1b",
  "modules": {
   "Becoming": {
-   "source_sha256": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75",
+   "source_sha256": "cac1037c8d19726577de13f3c07aed857e3ea3e601e386ace17b5e6d523b3e25",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -368,6 +368,10 @@
   "Becoming.Distinguishing": {
    "source_sha256": "68d698f2eb47859f6ab1736c4031122514c4fd8c0d4e965505b2a4fd14252c4b",
    "theorems": 11
+  },
+  "Becoming.DoubleKernel": {
+   "source_sha256": "6b6d1a8e143454ba6612e4303a963f22cf806da10ed2469c34485afddef44c47",
+   "theorems": 127
   },
   "Becoming.DrawHistory": {
    "source_sha256": "3ddd0fed860d4d37d2bb81333b3e0a7454606c81db1d862310f70f0c5bf6506a",
@@ -1000,6 +1004,10 @@
   "Becoming.Openness": {
    "source_sha256": "ec4a8b29efb2d1dd30e59218e8e02f3dba09c5e71ff1b730ab38d4cc432553b6",
    "theorems": 78
+  },
+  "Becoming.OplaxHistory": {
+   "source_sha256": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6",
+   "theorems": 69
   },
   "Becoming.Optimum": {
    "source_sha256": "3a4917cc1dc7ac5b0a2787083f7dcd408fb48f722b97c19305ae70d45d0ece34",
@@ -1743,8 +1751,8 @@
   }
  },
  "counts": {
-  "modules": 433,
-  "theorems": 22405,
-  "uses_without_row": 48
+  "modules": 435,
+  "theorems": 22601,
+  "uses_without_row": 51
  }
 }

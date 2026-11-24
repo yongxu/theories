@@ -1,0 +1,127 @@
+{"name": "Becoming.DoubleKernel.Cell3Term.brecOn.eq", "uses": []}
+{"name": "Becoming.DoubleKernel.Double3Sig.c3SrcFrame", "uses": []}
+{"name": "Becoming.DoubleKernel.Double3Sig.c3TgtFrame", "uses": []}
+{"name": "Becoming.DoubleKernel.Eq3Cert.brecOn", "uses": []}
+{"name": "Becoming.DoubleKernel.EqCert.brecOn", "uses": []}
+{"name": "Becoming.DoubleKernel.FunctorialSqEval.eval_compH", "uses": []}
+{"name": "Becoming.DoubleKernel.FunctorialSqEval.eval_compV", "uses": []}
+{"name": "Becoming.DoubleKernel.FunctorialSqEval.eval_gen", "uses": []}
+{"name": "Becoming.DoubleKernel.FunctorialSqEval.eval_idH", "uses": []}
+{"name": "Becoming.DoubleKernel.FunctorialSqEval.eval_idV", "uses": []}
+{"name": "Becoming.DoubleKernel.GuardedExpr.brecOn.eq", "uses": []}
+{"name": "Becoming.DoubleKernel.GuardedProof.brecOn.eq", "uses": []}
+{"name": "Becoming.DoubleKernel.HasEndpoints3.brecOn", "uses": []}
+{"name": "Becoming.DoubleKernel.HasFrame.brecOn", "uses": []}
+{"name": "Becoming.DoubleKernel.Sig3Interp.cell3Src_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.Sig3Interp.cell3Tgt_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.hSrc_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.hTgt_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.sqBot_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.sqLeft_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.sqRight_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.sqTop_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.vSrc_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SigInterp.vTgt_eq", "uses": []}
+{"name": "Becoming.DoubleKernel.SqTerm.brecOn.eq", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hAssoc", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hComp_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hComp_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hId_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hId_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hId_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.hId_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqAssocH", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqAssocV", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_bot", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_left", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_right", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_top", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_bot", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_left", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_right", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_top", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_bot", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_compV", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_idV", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_left", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_right", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_top", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_bot", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_compH", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_left", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_right", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_top", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sqInterchange", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sq_bl", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sq_br", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sq_tl", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.sq_tr", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vAssoc", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vComp_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vComp_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vId_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vId_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vId_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictDoubleCat.vId_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3AssocH", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3AssocR", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3AssocV", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompH_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompH_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompR_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompR_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompV_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3CompV_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdH_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdH_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdR_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdR_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdV_l", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3IdV_r", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Id_compH", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Id_compV", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Id_src", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Id_tgt", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_hr", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_hv", "uses": []}
+{"name": "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_vr", "uses": []}
+{"name": "Becoming.DoubleKernel.TypedPath.brecOn.eq", "uses": []}
+{"name": "Becoming.DoubleKernel.cell3_eq_preserves_endpoints", "uses": ["Becoming.DoubleKernel.Eq3Cert.brecOn", "Becoming.DoubleKernel.eqCert_assocH_of_frame", "Becoming.DoubleKernel.eqCert_assocV_of_frame", "Becoming.DoubleKernel.eqCert_frame_eq", "Becoming.DoubleKernel.eqCert_preserves_frame", "Becoming.DoubleKernel.hasEndpoints3_common_frame", "Becoming.DoubleKernel.hasEndpoints3_unique_mod_2d", "Becoming.DoubleKernel.hasFrame_unique"]}
+{"name": "Becoming.DoubleKernel.congrArg2", "uses": []}
+{"name": "Becoming.DoubleKernel.conservative_over_base_2d", "uses": ["Becoming.DoubleKernel.cell3_eq_preserves_endpoints"]}
+{"name": "Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq", "uses": ["Becoming.DoubleKernel.eqCert_preserves_weight"]}
+{"name": "Becoming.DoubleKernel.eqCert_assocH_of_frame", "uses": []}
+{"name": "Becoming.DoubleKernel.eqCert_assocV_of_frame", "uses": []}
+{"name": "Becoming.DoubleKernel.eqCert_frame_eq", "uses": ["Becoming.DoubleKernel.eqCert_preserves_frame", "Becoming.DoubleKernel.hasFrame_unique"]}
+{"name": "Becoming.DoubleKernel.eqCert_preserves_frame", "uses": ["Becoming.DoubleKernel.EqCert.brecOn", "Becoming.DoubleKernel.hasFrame_unique", "Becoming.DoubleKernel.pathComp_assoc", "Becoming.DoubleKernel.pathComp_nil_r"]}
+{"name": "Becoming.DoubleKernel.eqCert_preserves_weight", "uses": ["Becoming.DoubleKernel.eqCert_sound", "Becoming.DoubleKernel.evalSqTerm_weight_eq"]}
+{"name": "Becoming.DoubleKernel.eqCert_sound", "uses": ["Becoming.DoubleKernel.EqCert.brecOn", "Becoming.DoubleKernel.StrictDoubleCat.sqAssocH", "Becoming.DoubleKernel.StrictDoubleCat.sqAssocV", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_compV", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_idV", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_l", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_r", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_compH", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_l", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_r", "Becoming.DoubleKernel.StrictDoubleCat.sqInterchange", "Becoming.DoubleKernel.congrArg2", "Becoming.DoubleKernel.evalHPath_comp", "Becoming.DoubleKernel.evalHPath_endpoints", "Becoming.DoubleKernel.evalSqTerm_frame", "Becoming.DoubleKernel.evalVPath_comp", "Becoming.DoubleKernel.evalVPath_endpoints"]}
+{"name": "Becoming.DoubleKernel.evalCell3Term_compH3_compat", "uses": ["Becoming.DoubleKernel.evalCell3Term_endpoints", "Becoming.DoubleKernel.evalSqTerm_frame"]}
+{"name": "Becoming.DoubleKernel.evalCell3Term_compR_compat", "uses": ["Becoming.DoubleKernel.eqCert_sound", "Becoming.DoubleKernel.evalCell3Term_endpoints"]}
+{"name": "Becoming.DoubleKernel.evalCell3Term_compV3_compat", "uses": ["Becoming.DoubleKernel.evalCell3Term_endpoints", "Becoming.DoubleKernel.evalSqTerm_frame"]}
+{"name": "Becoming.DoubleKernel.evalCell3Term_endpoints", "uses": ["Becoming.DoubleKernel.HasEndpoints3.brecOn", "Becoming.DoubleKernel.Sig3Interp.cell3Src_eq", "Becoming.DoubleKernel.Sig3Interp.cell3Tgt_eq", "Becoming.DoubleKernel.StrictTripleCat.c3CompH_src", "Becoming.DoubleKernel.StrictTripleCat.c3CompH_tgt", "Becoming.DoubleKernel.StrictTripleCat.c3CompR_src", "Becoming.DoubleKernel.StrictTripleCat.c3CompR_tgt", "Becoming.DoubleKernel.StrictTripleCat.c3CompV_src", "Becoming.DoubleKernel.StrictTripleCat.c3CompV_tgt", "Becoming.DoubleKernel.StrictTripleCat.c3Id_src", "Becoming.DoubleKernel.StrictTripleCat.c3Id_tgt", "Becoming.DoubleKernel.congrArg2", "Becoming.DoubleKernel.eqCert_sound", "Becoming.DoubleKernel.evalSqTerm_frame"]}
+{"name": "Becoming.DoubleKernel.evalHPath_comp", "uses": ["Becoming.DoubleKernel.SigInterp.hTgt_eq", "Becoming.DoubleKernel.StrictDoubleCat.hAssoc", "Becoming.DoubleKernel.StrictDoubleCat.hId_l", "Becoming.DoubleKernel.evalHPath_endpoints"]}
+{"name": "Becoming.DoubleKernel.evalHPath_endpoints", "uses": ["Becoming.DoubleKernel.SigInterp.hSrc_eq", "Becoming.DoubleKernel.SigInterp.hTgt_eq", "Becoming.DoubleKernel.StrictDoubleCat.hComp_src", "Becoming.DoubleKernel.StrictDoubleCat.hComp_tgt", "Becoming.DoubleKernel.StrictDoubleCat.hId_src", "Becoming.DoubleKernel.StrictDoubleCat.hId_tgt"]}
+{"name": "Becoming.DoubleKernel.evalSqTerm_frame", "uses": ["Becoming.DoubleKernel.SigInterp.sqBot_eq", "Becoming.DoubleKernel.SigInterp.sqLeft_eq", "Becoming.DoubleKernel.SigInterp.sqRight_eq", "Becoming.DoubleKernel.SigInterp.sqTop_eq", "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_bot", "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_left", "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_right", "Becoming.DoubleKernel.StrictDoubleCat.sqCompH_top", "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_bot", "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_left", "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_right", "Becoming.DoubleKernel.StrictDoubleCat.sqCompV_top", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_bot", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_left", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_right", "Becoming.DoubleKernel.StrictDoubleCat.sqIdH_top", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_bot", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_left", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_right", "Becoming.DoubleKernel.StrictDoubleCat.sqIdV_top", "Becoming.DoubleKernel.congrArg2", "Becoming.DoubleKernel.evalHPath_comp", "Becoming.DoubleKernel.evalHPath_endpoints", "Becoming.DoubleKernel.evalVPath_comp", "Becoming.DoubleKernel.evalVPath_endpoints"]}
+{"name": "Becoming.DoubleKernel.evalSqTerm_weight_eq", "uses": ["Becoming.DoubleKernel.congrArg2"]}
+{"name": "Becoming.DoubleKernel.evalVPath_comp", "uses": ["Becoming.DoubleKernel.SigInterp.vTgt_eq", "Becoming.DoubleKernel.StrictDoubleCat.vAssoc", "Becoming.DoubleKernel.StrictDoubleCat.vId_l", "Becoming.DoubleKernel.evalVPath_endpoints"]}
+{"name": "Becoming.DoubleKernel.evalVPath_endpoints", "uses": ["Becoming.DoubleKernel.SigInterp.vSrc_eq", "Becoming.DoubleKernel.SigInterp.vTgt_eq", "Becoming.DoubleKernel.StrictDoubleCat.vComp_src", "Becoming.DoubleKernel.StrictDoubleCat.vComp_tgt", "Becoming.DoubleKernel.StrictDoubleCat.vId_src", "Becoming.DoubleKernel.StrictDoubleCat.vId_tgt"]}
+{"name": "Becoming.DoubleKernel.frame_eq_components", "uses": []}
+{"name": "Becoming.DoubleKernel.frame_ext", "uses": []}
+{"name": "Becoming.DoubleKernel.free_3d_eval_sound", "uses": ["Becoming.DoubleKernel.Eq3Cert.brecOn", "Becoming.DoubleKernel.StrictTripleCat.c3AssocH", "Becoming.DoubleKernel.StrictTripleCat.c3AssocR", "Becoming.DoubleKernel.StrictTripleCat.c3AssocV", "Becoming.DoubleKernel.StrictTripleCat.c3IdH_l", "Becoming.DoubleKernel.StrictTripleCat.c3IdH_r", "Becoming.DoubleKernel.StrictTripleCat.c3IdR_l", "Becoming.DoubleKernel.StrictTripleCat.c3IdR_r", "Becoming.DoubleKernel.StrictTripleCat.c3IdV_l", "Becoming.DoubleKernel.StrictTripleCat.c3IdV_r", "Becoming.DoubleKernel.StrictTripleCat.c3Id_compH", "Becoming.DoubleKernel.StrictTripleCat.c3Id_compV", "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_hr", "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_hv", "Becoming.DoubleKernel.StrictTripleCat.c3Interchange_vr", "Becoming.DoubleKernel.congrArg2", "Becoming.DoubleKernel.evalCell3Term_compR_compat", "Becoming.DoubleKernel.evalCell3Term_endpoints", "Becoming.DoubleKernel.evalSqTerm_frame"]}
+{"name": "Becoming.DoubleKernel.free_double_eval_unique", "uses": ["Becoming.DoubleKernel.FunctorialSqEval.eval_compH", "Becoming.DoubleKernel.FunctorialSqEval.eval_compV", "Becoming.DoubleKernel.FunctorialSqEval.eval_gen", "Becoming.DoubleKernel.FunctorialSqEval.eval_idH", "Becoming.DoubleKernel.FunctorialSqEval.eval_idV", "Becoming.DoubleKernel.congrArg2"]}
+{"name": "Becoming.DoubleKernel.guarded_oplax_sound", "uses": ["Becoming.OplaxHistory.SpanHom.left_eq", "Becoming.OplaxHistory.SpanHom.right_eq", "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc", "Becoming.OplaxHistory.isBijective_of_bij"]}
+{"name": "Becoming.DoubleKernel.hasEndpoints3_common_frame", "uses": ["Becoming.DoubleKernel.Double3Sig.c3SrcFrame", "Becoming.DoubleKernel.Double3Sig.c3TgtFrame", "Becoming.DoubleKernel.HasEndpoints3.brecOn", "Becoming.DoubleKernel.eqCert_frame_eq", "Becoming.DoubleKernel.eqCert_preserves_frame", "Becoming.DoubleKernel.hasFrame_unique"]}
+{"name": "Becoming.DoubleKernel.hasEndpoints3_unique_mod_2d", "uses": ["Becoming.DoubleKernel.Double3Sig.c3SrcFrame", "Becoming.DoubleKernel.Double3Sig.c3TgtFrame", "Becoming.DoubleKernel.eqCert_preserves_frame", "Becoming.DoubleKernel.hasEndpoints3_common_frame", "Becoming.DoubleKernel.hasFrame_unique"]}
+{"name": "Becoming.DoubleKernel.hasEndpoints3_weight_mono", "uses": ["Becoming.DoubleKernel.HasEndpoints3.brecOn", "Becoming.DoubleKernel.eqCert_preserves_weight"]}
+{"name": "Becoming.DoubleKernel.hasFrame_unique", "uses": ["Becoming.DoubleKernel.frame_eq_components", "Becoming.DoubleKernel.frame_ext", "Becoming.DoubleKernel.pathComp_subst"]}
+{"name": "Becoming.DoubleKernel.pathComp_assoc", "uses": []}
+{"name": "Becoming.DoubleKernel.pathComp_nil_l", "uses": []}
+{"name": "Becoming.DoubleKernel.pathComp_nil_r", "uses": []}
+{"name": "Becoming.DoubleKernel.pathComp_subst", "uses": []}
+{"name": "Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness", "uses": ["Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq", "Becoming.DoubleKernel.hasEndpoints3_weight_mono"]}
+{"name": "Becoming.DoubleKernel.strict_vs_guarded_separation_witness", "uses": ["Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one", "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective", "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective", "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample", "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc"]}

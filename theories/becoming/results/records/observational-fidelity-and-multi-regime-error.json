@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "id": "observational-fidelity-and-multi-regime-error",
+  "title": {
+    "en": "Query-image TV blindness floor, multi-query separation, and three-regime error contrast"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T08:58:00+00:00",
+  "statement": {
+    "en": "Over Mathlib ℝ (standard axioms only), ObservationalFidelity proves the exact query TV blindness floor, empty-source infeasibility, coarsening and macro-refinement monotonicity, zero-TV coexistence with FiberViabilitySplit, three-way query separation, and three-regime error contrast."
+  },
+  "laws": [
+    {
+      "en": "Finite pushforward obeys total-variation data processing (tvDist_pushforward_le); for any chi : U -> V, query q : V -> O, and mu : FinDist V, every local distribution nu obeys massOutside (q o chi) (pushforward q mu) <= tvDist (pushforward (q o chi) nu) (pushforward q mu), with equality constructively attained when Nonempty U while IsEmpty U renders FinDist U empty (optimal_query_tv_floor, empty_source_infeasible).",
+      "declarations": [
+        "ObservationalFidelity.FinDist",
+        "ObservationalFidelity.pushforward",
+        "ObservationalFidelity.tvDist",
+        "ObservationalFidelity.tvDist_pushforward_le",
+        "ObservationalFidelity.massOutside",
+        "ObservationalFidelity.optimal_query_tv_floor",
+        "ObservationalFidelity.empty_source_infeasible"
+      ]
+    },
+    {
+      "en": "Post-composing observations with a coarsening map or factoring maps through a finer macro partition weakly lowers massOutside (coarsening_tv_mono, macro_refinement_tv_mono), while zero observable query TV on dirac distributions coexists with total FiberViabilitySplit and macro-kernel refutation on Becoming.OplaxHistory.C2CoupledAlignmentWitness.",
+      "declarations": [
+        "ObservationalFidelity.coarsening_tv_mono",
+        "ObservationalFidelity.macro_refinement_tv_mono",
+        "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split"
+      ]
+    },
+    {
+      "en": "On diagonal Bool x Bool supports, individual per-query zero TV does not imply simultaneous marginal feasibility (per_query_not_implies_joint_marginal, sum gap >= 3/5), and simultaneous zero-TV marginals over uniform Bool x Bool fail joint TV realizability (joint_marginal_not_implies_joint_dist, tvDist >= 1/2).",
+      "declarations": [
+        "ObservationalFidelity.diagSupport",
+        "ObservationalFidelity.per_query_not_implies_joint_marginal",
+        "ObservationalFidelity.joint_marginal_not_implies_joint_dist"
+      ]
+    },
+    {
+      "en": "Open-loop Markov kernels accumulate per-step TV error linearly (sequential_kernel_tv_bound) and subadditively across independent tensor sites (independent_tensor_tv_bound), unified in three_regime_error_contrast with contractive feedback tubes (Becoming.AlignmentReals.metricSlack, Becoming.Reals.iterVar_eq_metricSlack) and coupled C2/concurrent reserve breakdown (C2CoupledAlignmentWitness, ConcurrentSerialWitness).",
+      "declarations": [
+        "ObservationalFidelity.FinKernel",
+        "ObservationalFidelity.pushKernel_tv_step",
+        "ObservationalFidelity.sequential_kernel_tv_bound",
+        "ObservationalFidelity.tvDist_prodDist_le",
+        "ObservationalFidelity.independent_tensor_tv_bound",
+        "ObservationalFidelity.three_regime_error_contrast"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) through the Mathlib periphery workspace (#13); requires finite Fintype state/query spaces, Nonempty U for optimal TV attainment, time-homogeneous Markov steps, and contractive alpha in [0, 1) for regime-2 feedback tubes."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "correspondence",
+      "en": "Finite probability distribution TV bounds and discrete counterexamples never verify that empirical neural policy rollouts or real sensor pipelines are time-homogeneous, independent across sites, or contractive (Rule 2)."
+    },
+    {
+      "kind": "scope",
+      "en": "Does not prove finite-sample empirical convergence rates, continuous measurable-space Radon-Nikodym bounds, or continuous-time SDEs."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
+      "detail": {
+        "en": "empty_source_infeasible (IsEmpty U), zero_tv_does_not_prevent_fiber_viability_split (zero TV on C2CoupledAlignmentWitness with total Viability.Kernel failure), per_query_not_implies_joint_marginal (3/5 gap), joint_marginal_not_implies_joint_dist (1/2 gap), and three_regime_error_contrast part 3 (3-step ConcurrentSerialWitness depletion vs. serialized recovery)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T085020.963689Z): all 38 declarations (21 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; audited PASS in Wave U6 Commit A (b8111aa2f). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; sample-complexity / concentration inequalities or continuous measurable query spaces if required beyond finite laws."
+  },
+  "correspondence": {
+    "en": "Formalizes WenHeHua v7 Appendix G / v9 formal/61 observational TV theory in Mathlib and joins it directly onto AlignmentReals, BecomingReals, and 0-axiom Becoming.OplaxHistory / Becoming.PolyComposition."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
+  "aliases": [],
+  "dependencies": [
+    {
+      "id": "oplax-history-comparison-and-relational-loss",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Imports C2CoupledAlignmentWitness and reserve_disjoint_vs_serial_reconfig into zero_tv_does_not_prevent_fiber_viability_split and three_regime_error_contrast."
+      }
+    },
+    {
+      "id": "continuous-stochastic-alignment-reals",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.AlignmentReals.metricSlack_le and metricSlack_le_max in three_regime_error_contrast."
+      }
+    },
+    {
+      "id": "unified-becoming-over-reals",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.Reals.iterVar_eq_metricSlack in three_regime_error_contrast."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
+      "role": "proof",
+      "declarations": [
+        "ObservationalFidelity.FinDist",
+        "ObservationalFidelity.pushforward",
+        "ObservationalFidelity.tvDist",
+        "ObservationalFidelity.tvDist_pushforward_le",
+        "ObservationalFidelity.massOutside",
+        "ObservationalFidelity.optimal_query_tv_floor",
+        "ObservationalFidelity.empty_source_infeasible",
+        "ObservationalFidelity.coarsening_tv_mono",
+        "ObservationalFidelity.macro_refinement_tv_mono",
+        "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
+        "ObservationalFidelity.diagSupport",
+        "ObservationalFidelity.per_query_not_implies_joint_marginal",
+        "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
+        "ObservationalFidelity.FinKernel",
+        "ObservationalFidelity.pushKernel_tv_step",
+        "ObservationalFidelity.sequential_kernel_tv_bound",
+        "ObservationalFidelity.tvDist_prodDist_le",
+        "ObservationalFidelity.independent_tensor_tv_bound",
+        "ObservationalFidelity.three_regime_error_contrast"
+      ],
+      "sha256": "ef6ffc7ff3776e52e333470264df3ab231ad6edda87a58be03a0fd3b1f9c41fc"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/check_observational_fidelity.py",
+      "role": "integration",
+      "sha256": "550b8e802b98ff337c13a05e1f6b2802f5e85b7946697ca31c3e487f9c02b850"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T085020.963689Z/verification.json",
+      "role": "receipt",
+      "sha256": "bd5432d6c46fdc7b7173c6700b6671a3e622c2d1f97ea7dff28800eae92cacaf",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "b56d67b2a6f1391b0ab68e81b04b460d22545f6fb3e67ffba92a8e0dd979d4cb"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T085020.963689Z/verification.json",
+      "sha256_pointer": "/source_sha256/ObservationalFidelity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U6): added ObservationalFidelity (Mathlib periphery #13, v4.30.0-rc2) formalizing WenHeHua v7 Appendix G / v9 formal/61 TV query blindness floors, multi-query convex separations, and a three-regime error contrast joining AlignmentReals, BecomingReals, Becoming.OplaxHistory, and Becoming.PolyComposition. AI-written."
+    }
+  ]
+}

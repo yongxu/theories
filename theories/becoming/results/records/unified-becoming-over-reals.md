@@ -64,6 +64,8 @@ Reading (AI-written): shows the 9 real-valued periphery modules are mutually com
 - **formal-reuse**: [what-discrete-steps-and-whole-amounts-represent](what-discrete-steps-and-whole-amounts-represent.md). Uses Representation.expected_balance and Representation.rate convergence/unboundedness criteria.
 - **formal-reuse**: [slowing-down-before-an-own-end](slowing-down-before-an-own-end.md). Couples stationaryVariance, drawnMultiplier, drawnRest, drawn_level_read, and need_not_read.
 
+**Used by:** [observational-fidelity-and-multi-regime-error](observational-fidelity-and-multi-regime-error.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

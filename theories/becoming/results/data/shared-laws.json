@@ -1,12 +1,12 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T061916.734612Z",
- "core_sources_sha256": "59bdd868da98877cc8538767783500fe43191c640986d60b4ab5155d44bb7d93",
+ "core_receipt": "20261124T083850.553338Z",
+ "core_sources_sha256": "b8b20b82f0d76ca04856fcfd30f80f9b05e4671848614c9a7c94412ecdf5bc1b",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "6e7ad191e0cce8e35566875896ae99ee5dd2de5d95a5ed29dcbdea94d51d6e8a",
+  "theories/becoming/results/completion/COVERAGE.json": "b9bb06b8ac9e860bb827d820e8c9869113645543b520a8ba3f315515403fde34",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
@@ -58,18 +58,18 @@
   ]
  },
  "counts": {
-  "laws": 4515,
+  "laws": 4526,
   "no_declarations": 9,
-  "outside": 402,
-  "grammar": 1169,
+  "outside": 406,
+  "grammar": 1171,
   "balance, represented": 642,
   "anchor, not reached": 99,
-  "no shared law": 2194,
+  "no shared law": 2199,
   "vocabulary_only": 106,
-  "closure": 646,
+  "closure": 648,
   "balance": 935,
   "return": 260,
-  "lumping": 101,
+  "lumping": 102,
   "order": 118
  },
  "counts_at_model": {
@@ -24227,6 +24227,61 @@
     "dependence": "grammar"
    }
   ],
+  "guarded-double-category-certificate-kernel": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.DoubleKernel.DoubleSig",
+     "Becoming.DoubleKernel.TypedPath",
+     "Becoming.DoubleKernel.Frame",
+     "Becoming.DoubleKernel.SqTerm",
+     "Becoming.DoubleKernel.HasFrame",
+     "Becoming.DoubleKernel.hasFrame_unique",
+     "Becoming.DoubleKernel.EqCert",
+     "Becoming.DoubleKernel.eqCert_preserves_frame",
+     "Becoming.DoubleKernel.StrictDoubleCat",
+     "Becoming.DoubleKernel.eqCert_sound",
+     "Becoming.DoubleKernel.free_double_eval_unique",
+     "Becoming.DoubleKernel.natTallyDoubleCat",
+     "Becoming.DoubleKernel.eqCert_preserves_weight",
+     "Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.DoubleKernel.Double3Sig",
+     "Becoming.DoubleKernel.Cell3Term",
+     "Becoming.DoubleKernel.HasEndpoints3",
+     "Becoming.DoubleKernel.Eq3Cert",
+     "Becoming.DoubleKernel.cell3_eq_preserves_endpoints",
+     "Becoming.DoubleKernel.conservative_over_base_2d",
+     "Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness",
+     "Becoming.DoubleKernel.StrictTripleCat",
+     "Becoming.DoubleKernel.free_3d_eval_sound"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.DoubleKernel.GuardedExpr",
+     "Becoming.DoubleKernel.evalGuardedExpr",
+     "Becoming.DoubleKernel.GuardedProof",
+     "Becoming.DoubleKernel.evalGuardedProof",
+     "Becoming.DoubleKernel.guarded_oplax_sound",
+     "Becoming.DoubleKernel.strict_vs_guarded_separation_witness"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "guarded-program-question-recovery": [
    {
     "law": 1,
@@ -35616,6 +35671,74 @@
     "dependence": "grammar"
    }
   ],
+  "observational-fidelity-and-multi-regime-error": [
+   {
+    "law": 1,
+    "declarations": [
+     "ObservationalFidelity.FinDist",
+     "ObservationalFidelity.pushforward",
+     "ObservationalFidelity.tvDist",
+     "ObservationalFidelity.tvDist_pushforward_le",
+     "ObservationalFidelity.massOutside",
+     "ObservationalFidelity.optimal_query_tv_floor",
+     "ObservationalFidelity.empty_source_infeasible"
+    ],
+    "outside": [
+     "ObservationalFidelity.FinDist",
+     "ObservationalFidelity.pushforward",
+     "ObservationalFidelity.tvDist",
+     "ObservationalFidelity.tvDist_pushforward_le",
+     "ObservationalFidelity.massOutside",
+     "ObservationalFidelity.optimal_query_tv_floor",
+     "ObservationalFidelity.empty_source_infeasible"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "ObservationalFidelity.coarsening_tv_mono",
+     "ObservationalFidelity.macro_refinement_tv_mono",
+     "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split"
+    ],
+    "outside": [
+     "ObservationalFidelity.coarsening_tv_mono",
+     "ObservationalFidelity.macro_refinement_tv_mono",
+     "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "ObservationalFidelity.diagSupport",
+     "ObservationalFidelity.per_query_not_implies_joint_marginal",
+     "ObservationalFidelity.joint_marginal_not_implies_joint_dist"
+    ],
+    "outside": [
+     "ObservationalFidelity.diagSupport",
+     "ObservationalFidelity.per_query_not_implies_joint_marginal",
+     "ObservationalFidelity.joint_marginal_not_implies_joint_dist"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "ObservationalFidelity.FinKernel",
+     "ObservationalFidelity.pushKernel_tv_step",
+     "ObservationalFidelity.sequential_kernel_tv_bound",
+     "ObservationalFidelity.tvDist_prodDist_le",
+     "ObservationalFidelity.independent_tensor_tv_bound",
+     "ObservationalFidelity.three_regime_error_contrast"
+    ],
+    "outside": [
+     "ObservationalFidelity.FinKernel",
+     "ObservationalFidelity.pushKernel_tv_step",
+     "ObservationalFidelity.sequential_kernel_tv_bound",
+     "ObservationalFidelity.tvDist_prodDist_le",
+     "ObservationalFidelity.independent_tensor_tv_bound",
+     "ObservationalFidelity.three_regime_error_contrast"
+    ]
+   }
+  ],
   "offspring-read-from-giving-that-waits": [
    {
     "law": 1,
@@ -36583,6 +36706,86 @@
     ],
     "shared_laws": [
      "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "oplax-history-comparison-and-relational-loss": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.OplaxHistory.RelSpan",
+     "Becoming.OplaxHistory.SpanFunctor",
+     "Becoming.OplaxHistory.chi",
+     "Becoming.OplaxHistory.chi_left",
+     "Becoming.OplaxHistory.chi_right",
+     "Becoming.OplaxHistory.chi_natural",
+     "Becoming.OplaxHistory.chi_unit_left",
+     "Becoming.OplaxHistory.chi_unit_right",
+     "Becoming.OplaxHistory.chi_assoc_coherence",
+     "Becoming.OplaxHistory.chi_comp_functor",
+     "Becoming.OplaxHistory.flatSpan_proj_unique",
+     "Becoming.OplaxHistory.chiFlat_proj",
+     "Becoming.OplaxHistory.BracketTree",
+     "Becoming.OplaxHistory.bracketTree_coherence_all_n",
+     "Becoming.OplaxHistory.evalPartition_proj_unique",
+     "Becoming.OplaxHistory.macro_refinement_functorial"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.OplaxHistory.bcMap",
+     "Becoming.OplaxHistory.FImageIsPullback",
+     "Becoming.OplaxHistory.chi_bijective_iff_pullback",
+     "Becoming.OplaxHistory.chi_bijective_iff_bc_all",
+     "Becoming.OplaxHistory.bc_isBijective_of_chi_bij",
+     "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample",
+     "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective",
+     "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective",
+     "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal",
+     "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one",
+     "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.OplaxHistory.trace_equiv_flatChain",
+     "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
+     "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
+     "Becoming.OplaxHistory.FiberViabilitySplit",
+     "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness",
+     "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel",
+     "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel",
+     "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split",
+     "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.OplaxHistory.coprod_pullback_iso",
+     "Becoming.OplaxHistory.coprod_strong_vs_time_oplax",
+     "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc",
+     "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
+     "Becoming.OplaxHistory.span_step_grammar_lumping"
+    ],
+    "shared_laws": [
+     "closure",
+     "lumping"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -69833,7 +70036,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "f47fcc9c582c5b2787462fcbb5115fcefaea3f8c3c37a4b01680dd139a09dd3c",
+   "modules_sha256": "40bd5119c74f057dc9bb2d8fec9942079af86457bad46a4315dafc6088be1828",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

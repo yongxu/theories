@@ -653,6 +653,63 @@ Definitions and types:
 
 </details>
 
+<a id="module-46c8172f5cac"></a>
+
+<details>
+<summary>ObservationalFidelity.lean — 38 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean`
+
+Imports: `Mathlib.Algebra.BigOperators.Field`, `Mathlib.Tactic`, `AlignmentReals`, `BecomingReals`, `Becoming.OplaxHistory`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [ObservationalFidelity.FinDist.ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L54) | 54 |
+| [ObservationalFidelity.pushforward_comp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L80) | 80 |
+| [ObservationalFidelity.tvDist_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L103) | 103 |
+| [ObservationalFidelity.tvDist_self](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L107) | 107 |
+| [ObservationalFidelity.tvDist_symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L111) | 111 |
+| [ObservationalFidelity.tvDist_triangle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L116) | 116 |
+| [ObservationalFidelity.tvDist_pushforward_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L124) | 124 |
+| [ObservationalFidelity.massOutside_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L150) | 150 |
+| [ObservationalFidelity.optimal_query_tv_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L161) | 161 |
+| [ObservationalFidelity.empty_source_infeasible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L347) | 347 |
+| [ObservationalFidelity.coarsening_tv_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L357) | 357 |
+| [ObservationalFidelity.macro_refinement_tv_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L404) | 404 |
+| [ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L426) | 426 |
+| [ObservationalFidelity.diagSupport_fst_eq_snd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L464) | 464 |
+| [ObservationalFidelity.per_query_not_implies_joint_marginal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L500) | 500 |
+| [ObservationalFidelity.joint_marginal_not_implies_joint_dist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L548) | 548 |
+| [ObservationalFidelity.pushKernel_tv_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L631) | 631 |
+| [ObservationalFidelity.sequential_kernel_tv_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L688) | 688 |
+| [ObservationalFidelity.tvDist_prodDist_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L701) | 701 |
+| [ObservationalFidelity.independent_tensor_tv_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L733) | 733 |
+| [ObservationalFidelity.three_regime_error_contrast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L753) | 753 |
+
+Definitions and types:
+
+- `structure` [ObservationalFidelity.FinDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L49) (L49)
+- `def` [ObservationalFidelity.diracDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L61) (L61)
+- `def` [ObservationalFidelity.pushforward](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L67) (L67)
+- `def` [ObservationalFidelity.tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L100) (L100)
+- `def` [ObservationalFidelity.massOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L146) (L146)
+- `def` [ObservationalFidelity.diagSupport](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L460) (L460)
+- `def` [ObservationalFidelity.fourFifthsBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L473) (L473)
+- `def` [ObservationalFidelity.oneFifthBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L479) (L479)
+- `def` [ObservationalFidelity.diagLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L485) (L485)
+- `def` [ObservationalFidelity.uniformPairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L532) (L532)
+- `def` [ObservationalFidelity.fairBool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L538) (L538)
+- `def` [ObservationalFidelity.FinKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L592) (L592)
+- `def` [ObservationalFidelity.pushKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L596) (L596)
+- `def` [ObservationalFidelity.compKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L609) (L609)
+- `def` [ObservationalFidelity.prodDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L614) (L614)
+- `def` [ObservationalFidelity.tensorKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L626) (L626)
+- `def` [ObservationalFidelity.iterKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L681) (L681)
+
+</details>
+
 <a id="module-38befb7a7fdb"></a>
 
 <details>

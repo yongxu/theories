@@ -2950,6 +2950,21 @@
       "region": "map",
       "base": "periphery",
       "note": "RenewalBridge (Wave U5, periphery #12): 0-axiom definitional bridge from October conditional RenewalConfigurations histories to Becoming.KeepableStep runs without altering October receipts"
+    },
+    "oplax-history-comparison-and-relational-loss": {
+      "region": "knowing",
+      "base": "general",
+      "note": "Becoming.OplaxHistory L1 (Wave U6): oplax Span(F) chi coherence, Beck-Chevalley iff, emergent/C2 loss, FiberViabilitySplit, concurrent serialization, GrammarLaws lumping"
+    },
+    "guarded-double-category-certificate-kernel": {
+      "region": "map",
+      "base": "general",
+      "note": "Becoming.DoubleKernel L1 (Wave U6): strict 2D/3D double-category certificate kernel (T1-T5, Lem 6, T8-T9) and Guarded Oplax Double Syntax in OplaxHistory.RelSpan"
+    },
+    "observational-fidelity-and-multi-regime-error": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "ObservationalFidelity (Wave U6, Mathlib periphery #13): query TV floor, coarsening/macro monotonicity, 3-way convex separation, and 3-regime error contrast"
     }
   },
   "modules": {
@@ -5157,6 +5172,21 @@
       "region": "map",
       "base": "periphery",
       "note": "v4.29.1 periphery #12 (Wave U5): 0-axiom bridge from October RenewalConfigurations to Becoming.KeepableStep with standalone checker"
+    },
+    "Becoming.OplaxHistory": {
+      "region": "knowing",
+      "base": "general",
+      "note": "L1 (Wave U6): 0-axiom normal oplax Span(F) chi coherence, Beck-Chevalley iff, emergent/C2 obstructions, Trace/CausalAbstraction/PolyComposition/GrammarLaws bridges"
+    },
+    "Becoming.DoubleKernel": {
+      "region": "map",
+      "base": "general",
+      "note": "L1 (Wave U6): 0-axiom strict 2D/3D double-category certificate kernel (T1-T5, Lem 6, T8-T9) and Guarded Oplax Double Syntax evaluated into OplaxHistory"
+    },
+    "ObservationalFidelity": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "Mathlib v4.30.0-rc2 periphery #13 (Wave U6): exact query TV floor, coarsening/macro monotonicity, 3-way query separation, and 3-regime error contrast"
     }
   }
 }

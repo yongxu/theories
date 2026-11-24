@@ -75,7 +75,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 | `situated-recovery/` | — | 76 |  |
 | [tclab-benchmark/](tclab-benchmark/README.md) | TCLab physical benchmark sources | 30 |  |
 | [wang-yangming/](wang-yangming/README.md) | 王陽明: 《傳習錄》 and 《大學問》, Chinese Wikisource revisions | 6 |  |
-| [wenhehua-v7.0/](wenhehua-v7.0/README.md) | 文·合·化｜最小生成文法研究 v7.0 | 170 |  |
+| [wenhehua-v9.0/](wenhehua-v9.0/README.md) | 文·合·化｜严格高阶生成框架 v9.0 | 233 |  |
 | `wenli-shengsheng-v0.4/` | — | 99 |  |
 | [zhou-texts/](zhou-texts/README.md) | The Zhou books: Chinese Wikisource revisions | 21 |  |
 | [zhouyi-yizhuan/](zhouyi-yizhuan/README.md) | The 周易 and the 易传: Chinese Wikisource revisions | 81 |  |

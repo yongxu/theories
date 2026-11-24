@@ -11,58 +11,6 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 4 of 7
 
-<a id="module-9f33b42f8566"></a>
-
-<details>
-<summary>LearningRuns.lean — 33 explicit declarations</summary>
-
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
-
-`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean`
-
-Imports: `Becoming.LearnableRuns`, `Becoming.Parting`
-
-| Theorem or lemma | Line |
-|---|---:|
-| [Becoming.Learning.goAlike_iff_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L83) | 83 |
-| [Becoming.Learning.transfer_right_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L92) | 92 |
-| [Becoming.Learning.lumped_iff_fixed_image](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L101) | 101 |
-| [Becoming.Learning.goAlike_iff_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L113) | 113 |
-| [Becoming.LearningRuns.missed_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L143) | 143 |
-| [Becoming.LearningRuns.missedAt_of_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L148) | 148 |
-| [Becoming.LearningRuns.holdFrom_missed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L155) | 155 |
-| [Becoming.LearningRuns.missed_on_one_of_part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L173) | 173 |
-| [Becoming.LearningRuns.prefix_fixes_no_next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L184) | 184 |
-| [Becoming.LearningRuns.byElimination_through_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L200) | 200 |
-| [Becoming.LearningRuns.course_mem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L220) | 220 |
-| [Becoming.LearningRuns.loss_through_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L224) | 224 |
-| [Becoming.LearningRuns.unselected_beyond_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L234) | 234 |
-| [Becoming.LearningRuns.fit_right_iff_runs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L245) | 245 |
-| [Becoming.LearningRuns.free_prefix_fixes_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L264) | 264 |
-| [Becoming.LearningRuns.answer_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L286) | 286 |
-| [Becoming.LearningRuns.answer_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L293) | 293 |
-| [Becoming.LearningRuns.answer_open](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L300) | 300 |
-| [Becoming.LearningRuns.answer_misses](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L309) | 309 |
-| [Becoming.LearningRuns.merged_unrested](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L321) | 321 |
-| [Becoming.LearningRuns.held_byElimination_bounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L343) | 343 |
-| [Becoming.LearningRuns.held_rest_unrefuted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L361) | 361 |
-| [Becoming.LearningRuns.claim_not_right_on_both](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L371) | 371 |
-| [Becoming.LearningRuns.missed_on_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L388) | 388 |
-| [Becoming.LearningRuns.negation_never_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L415) | 415 |
-| [Becoming.LearningRuns.alternate_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L421) | 421 |
-| [Becoming.LearningRuns.pair_world](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L428) | 428 |
-| [Becoming.LearningRuns.pair_first_not_predicts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L437) | 437 |
-| [Becoming.LearningRuns.pair_not_learnable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L445) | 445 |
-| [Becoming.LearningRuns.pair_whole_predicts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L453) | 453 |
-
-Definitions and types:
-
-- `def` [Becoming.Learning.GoAlikeAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L79) (L79)
-- `def` [Becoming.LearningRuns.Courses](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L216) (L216)
-- `def` [Becoming.LearningRuns.answerReg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean#L281) (L281)
-
-</details>
-
 <a id="module-359473829457"></a>
 
 <details>
@@ -4359,6 +4307,160 @@ Definitions and types:
 - `def` [Becoming.Throughput.index](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean#L1121) (L1121)
 - `def` [Becoming.EmbodiedThroughput.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean#L1153) (L1153)
 - `def` [Becoming.World.embodiedThroughput](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean#L1166) (L1166)
+
+</details>
+
+<a id="module-49008c540b87"></a>
+
+<details>
+<summary>OplaxHistory.lean — 135 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean`
+
+Imports: `Becoming.CausalAbstraction`, `Becoming.OpenComposition`, `Becoming.PolyComposition`, `Becoming.CoreHelpers`, `Becoming.GrammarLaws`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.OplaxHistory.isBijective_of_bij](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L91) | 91 |
+| [Becoming.OplaxHistory.powTwo_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L100) | 100 |
+| [Becoming.OplaxHistory.eqRec_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L105) | 105 |
+| [Becoming.OplaxHistory.PullbackElem.ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L154) | 154 |
+| [Becoming.OplaxHistory.chi_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L254) | 254 |
+| [Becoming.OplaxHistory.chi_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L260) | 260 |
+| [Becoming.OplaxHistory.chi_natural](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L267) | 267 |
+| [Becoming.OplaxHistory.chi_unit_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L286) | 286 |
+| [Becoming.OplaxHistory.chi_unit_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L294) | 294 |
+| [Becoming.OplaxHistory.chi_assoc_coherence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L303) | 303 |
+| [Becoming.OplaxHistory.chi_comp_functor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L355) | 355 |
+| [Becoming.OplaxHistory.map_castRight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L373) | 373 |
+| [Becoming.OplaxHistory.stepCast_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L398) | 398 |
+| [Becoming.OplaxHistory.flatSpan_proj_unique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L407) | 407 |
+| [Becoming.OplaxHistory.chiFlat_proj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L456) | 456 |
+| [Becoming.OplaxHistory.bracketTree_coherence_all_n](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L557) | 557 |
+| [Becoming.OplaxHistory.evalPartition_proj_unique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L635) | 635 |
+| [Becoming.OplaxHistory.macro_refinement_functorial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L660) | 660 |
+| [Becoming.OplaxHistory.BCLeft.ext_sameU](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L696) | 696 |
+| [Becoming.OplaxHistory.bcRight_val_eq_of_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L707) | 707 |
+| [Becoming.OplaxHistory.bcLeft_mk_ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L718) | 718 |
+| [Becoming.OplaxHistory.bcRight_mk_ext](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L730) | 730 |
+| [Becoming.OplaxHistory.chi_bijective_iff_pullback](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L758) | 758 |
+| [Becoming.OplaxHistory.chi_bijective_iff_bc_all](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L780) | 780 |
+| [Becoming.OplaxHistory.eqRec_symm_cancel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L816) | 816 |
+| [Becoming.OplaxHistory.bc_isBijective_of_chi_bij](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L825) | 825 |
+| [Becoming.OplaxHistory.bc_empty_family_trivial_counterexample](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L843) | 843 |
+| [Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L919) | 919 |
+| [Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L929) | 929 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip_invol](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L945) | 945 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L953) | 953 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L958) | 958 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L974) | 974 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.sub_lt_of_ge_lt_double](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L977) | 977 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L992) | 992 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1005) | 1005 |
+| [Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1053) | 1053 |
+| [Becoming.OplaxHistory.flatSpanToTrace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1095) | 1095 |
+| [Becoming.OplaxHistory.traceToFlatSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1108) | 1108 |
+| [Becoming.OplaxHistory.trace_equiv_flatChain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1125) | 1125 |
+| [Becoming.OplaxHistory.exactAbsChainMap_endpoints](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1166) | 1166 |
+| [Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1181) | 1181 |
+| [Becoming.OplaxHistory.causalGoodhart_chi_non_surjective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1209) | 1209 |
+| [Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1255) | 1255 |
+| [Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1288) | 1288 |
+| [Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1297) | 1297 |
+| [Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1305) | 1305 |
+| [Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1309) | 1309 |
+| [Becoming.OplaxHistory.coprod_strong_vs_time_oplax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1365) | 1365 |
+| [Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1451) | 1451 |
+| [Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1465) | 1465 |
+| [Becoming.OplaxHistory.span_step_grammar_lumping](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1511) | 1511 |
+
+Definitions and types:
+
+- `structure` [Becoming.OplaxHistory.Bij](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L52) (L52)
+- `def` [Becoming.OplaxHistory.Bij.refl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L59) (L59)
+- `def` [Becoming.OplaxHistory.Bij.trans](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L66) (L66)
+- `def` [Becoming.OplaxHistory.Bij.symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L73) (L73)
+- `def` [Becoming.OplaxHistory.Inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L80) (L80)
+- `def` [Becoming.OplaxHistory.Surj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L84) (L84)
+- `def` [Becoming.OplaxHistory.IsBijective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L88) (L88)
+- `def` [Becoming.OplaxHistory.powTwo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L96) (L96)
+- `structure` [Becoming.OplaxHistory.RelSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L113) (L113)
+- `structure` [Becoming.OplaxHistory.SpanHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L119) (L119)
+- `def` [Becoming.OplaxHistory.SpanHom.id](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L125) (L125)
+- `def` [Becoming.OplaxHistory.SpanHom.comp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L131) (L131)
+- `def` [Becoming.OplaxHistory.SpanHomEq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L138) (L138)
+- `def` [Becoming.OplaxHistory.idSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L142) (L142)
+- `structure` [Becoming.OplaxHistory.PullbackElem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L148) (L148)
+- `def` [Becoming.OplaxHistory.compSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L167) (L167)
+- `def` [Becoming.OplaxHistory.compSpanHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L173) (L173)
+- `def` [Becoming.OplaxHistory.unitLeftHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L183) (L183)
+- `def` [Becoming.OplaxHistory.unitRightHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L189) (L189)
+- `def` [Becoming.OplaxHistory.assocHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L195) (L195)
+- `structure` [Becoming.OplaxHistory.SpanFunctor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L202) (L202)
+- `def` [Becoming.OplaxHistory.SpanFunctor.id](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L211) (L211)
+- `def` [Becoming.OplaxHistory.SpanFunctor.comp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L219) (L219)
+- `def` [Becoming.OplaxHistory.SpanFunctor.onSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L228) (L228)
+- `def` [Becoming.OplaxHistory.SpanFunctor.onHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L235) (L235)
+- `def` [Becoming.OplaxHistory.chi](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L244) (L244)
+- `def` [Becoming.OplaxHistory.idLiftHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L280) (L280)
+- `def` [Becoming.OplaxHistory.RelSpan.castRight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L367) (L367)
+- `def` [Becoming.OplaxHistory.flatSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L381) (L381)
+- `def` [Becoming.OplaxHistory.flatProj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L389) (L389)
+- `def` [Becoming.OplaxHistory.chiFlat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L426) (L426)
+- `inductive` [Becoming.OplaxHistory.BracketTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L484) (L484)
+- `def` [Becoming.OplaxHistory.BracketTree.eval](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L493) (L493)
+- `def` [Becoming.OplaxHistory.BracketTree.mapF](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L501) (L501)
+- `def` [Becoming.OplaxHistory.BracketTree.chiEval](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L509) (L509)
+- `def` [Becoming.OplaxHistory.BracketTree.proj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L538) (L538)
+- `def` [Becoming.OplaxHistory.sumBlockLens](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L594) (L594)
+- `def` [Becoming.OplaxHistory.blockStart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L599) (L599)
+- `def` [Becoming.OplaxHistory.blockLenAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L605) (L605)
+- `def` [Becoming.OplaxHistory.evalPartition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L611) (L611)
+- `def` [Becoming.OplaxHistory.partBlockProj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L620) (L620)
+- `structure` [Becoming.OplaxHistory.BCLeft](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L683) (L683)
+- `structure` [Becoming.OplaxHistory.BCRight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L690) (L690)
+- `def` [Becoming.OplaxHistory.bcMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L742) (L742)
+- `def` [Becoming.OplaxHistory.FImageIsPullback](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L751) (L751)
+- `structure` [Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamObj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L852) (L852)
+- `structure` [Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L860) (L860)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.seamPullback](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L868) (L868)
+- `structure` [Becoming.OplaxHistory.EmergentCrossSeamWitness.PushoutSpec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L880) (L880)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.midD](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L886) (L886)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.stepW](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L890) (L890)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.stepV](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L894) (L894)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.rW](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L897) (L897)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.lV](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L902) (L902)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.qMid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L908) (L908)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.qW](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L909) (L909)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.qV](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L910) (L910)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.qLoc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L911) (L911)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L915) (L915)
+- `def` [Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L925) (L925)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L942) (L942)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L950) (L950)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.singleOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L967) (L967)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.c2ChiTwoToOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L970) (L970)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.nthBits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L984) (L984)
+- `def` [Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1048) (L1048)
+- `structure` [Becoming.OplaxHistory.ProcessStepWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1064) (L1064)
+- `def` [Becoming.OplaxHistory.processStepSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1071) (L1071)
+- `def` [Becoming.OplaxHistory.constFlatSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1078) (L1078)
+- `def` [Becoming.OplaxHistory.chiConstFlat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1083) (L1083)
+- `def` [Becoming.OplaxHistory.exactAbsChainWithEnds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1139) (L1139)
+- `def` [Becoming.OplaxHistory.exactAbsChainMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1158) (L1158)
+- `def` [Becoming.OplaxHistory.FiberViabilitySplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1250) (L1250)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.CoupledState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1270) (L1270)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.stepFn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1272) (L1272)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1275) (L1275)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1278) (L1278)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1282) (L1282)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1285) (L1285)
+- `def` [Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1286) (L1286)
+- `def` [Becoming.OplaxHistory.coprodSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1319) (L1319)
+- `def` [Becoming.OplaxHistory.coprod_pullback_iso](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1327) (L1327)
+- `structure` [Becoming.OplaxHistory.SumPreservingFunctor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean#L1354) (L1354)
 
 </details>
 

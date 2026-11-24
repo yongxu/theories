@@ -82,7 +82,8 @@
         "laws-of-one-step",
         "identity-across-steps",
         "how-fast-a-rule-may-change",
-        "transformative-viability-order"
+        "transformative-viability-order",
+        "guarded-double-category-certificate-kernel"
       ],
       "declarations": [
         "Becoming.Law.drawn_iff_not_returns",
@@ -276,7 +277,9 @@
         "what-dependence-alone-carries-of-a-level",
         "lax-multi-scale-viability",
         "interventional-causal-abstraction-and-goodhart",
-        "active-inquiry-deadline-cascade-and-blankets"
+        "active-inquiry-deadline-cascade-and-blankets",
+        "oplax-history-comparison-and-relational-loss",
+        "observational-fidelity-and-multi-regime-error"
       ],
       "declarations": [
         "Becoming.Flow.unexcluded_beyond_coupling",
@@ -639,7 +642,10 @@
         "endogenous-turning-and-clearing-margin",
         "master-alignment-spine-and-sharpness",
         "whole-becoming-master-spine",
-        "unified-becoming-over-reals"
+        "unified-becoming-over-reals",
+        "oplax-history-comparison-and-relational-loss",
+        "guarded-double-category-certificate-kernel",
+        "observational-fidelity-and-multi-regime-error"
       ],
       "declarations": [
         "Becoming.Flow.unselected_beyond_coupling",

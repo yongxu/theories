@@ -1,0 +1,225 @@
+{
+  "schema_version": 2,
+  "id": "oplax-history-comparison-and-relational-loss",
+  "title": {
+    "en": "Oplax Span(F) history comparison, Beck-Chevalley characterization, and relational loss obstructions"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T08:58:00+00:00",
+  "statement": {
+    "en": "With 0 axioms, Becoming.OplaxHistory proves all-n bracketing coherence and macro refinement for Span(F) chi, equates chi bijectivity with pullback preservation and universal Beck-Chevalley families, constructs emergent/C2 obstructions, and bridges Trace, CausalAbstraction, and GrammarLaws."
+  },
+  "laws": [
+    {
+      "en": "For any span functor F, the canonical comparison chi preserves outer endpoints, commutes naturally with span homomorphisms, satisfies unit, pentagon associativity, and functor composition laws, extends to unique flat projections across arbitrary n-step chains and all BracketTree associations (bracketTree_coherence_all_n), and makes continuous-block macro refinement functorial (macro_refinement_functorial).",
+      "declarations": [
+        "Becoming.OplaxHistory.RelSpan",
+        "Becoming.OplaxHistory.SpanFunctor",
+        "Becoming.OplaxHistory.chi",
+        "Becoming.OplaxHistory.chi_left",
+        "Becoming.OplaxHistory.chi_right",
+        "Becoming.OplaxHistory.chi_natural",
+        "Becoming.OplaxHistory.chi_unit_left",
+        "Becoming.OplaxHistory.chi_unit_right",
+        "Becoming.OplaxHistory.chi_assoc_coherence",
+        "Becoming.OplaxHistory.chi_comp_functor",
+        "Becoming.OplaxHistory.flatSpan_proj_unique",
+        "Becoming.OplaxHistory.chiFlat_proj",
+        "Becoming.OplaxHistory.BracketTree",
+        "Becoming.OplaxHistory.bracketTree_coherence_all_n",
+        "Becoming.OplaxHistory.evalPartition_proj_unique",
+        "Becoming.OplaxHistory.macro_refinement_functorial"
+      ]
+    },
+    {
+      "en": "chi is bijective iff F maps the composition pullback square to a pullback (chi_bijective_iff_pullback) and iff bcMap is bijective for every observer family E -> D (chi_bijective_iff_bc_all, with empty-family trap bc_empty_family_trivial_counterexample), separated by constructive emergent cross-seam spans (0 -> 1 and 2 -> 4) and C2 equivariant loss spans (2 -> 1 and 2^n -> 1).",
+      "declarations": [
+        "Becoming.OplaxHistory.bcMap",
+        "Becoming.OplaxHistory.FImageIsPullback",
+        "Becoming.OplaxHistory.chi_bijective_iff_pullback",
+        "Becoming.OplaxHistory.chi_bijective_iff_bc_all",
+        "Becoming.OplaxHistory.bc_isBijective_of_chi_bij",
+        "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample",
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective",
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse"
+      ]
+    },
+    {
+      "en": "Finite Process traces coincide with flatSpan pullbacks (trace_equiv_flatChain), ExactCausalAbs lifts force chi surjectivity while CausalGoodhartWitness breaks surjectivity, and C2CoupledAlignmentWitness realizes FiberViabilitySplit on C2 microstates sharing macro trajectories (refuting any macro kernel soundness).",
+      "declarations": [
+        "Becoming.OplaxHistory.trace_equiv_flatChain",
+        "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
+        "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
+        "Becoming.OplaxHistory.FiberViabilitySplit",
+        "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness"
+      ]
+    },
+    {
+      "en": "Disjoint coproducts preserve pullbacks strictly while time stays oplax (coprod_strong_vs_time_oplax), guarded interchange requires Beck-Chevalley (guarded_interchange_upgrades_iff_bc), reserve serialization joins ConcurrentSerialWitness, and quotient spans reduce to GrammarLaws lumping (span_step_grammar_lumping).",
+      "declarations": [
+        "Becoming.OplaxHistory.coprod_pullback_iso",
+        "Becoming.OplaxHistory.coprod_strong_vs_time_oplax",
+        "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc",
+        "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
+        "Becoming.OplaxHistory.span_step_grammar_lumping"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Constructive Type-level spans and Lean 4 Init logic with 0 axioms and 0 private declarations; strong inverse interchange and macro soundness explicitly require FImageIsPullback or universal bcMap bijectivity across all D-indexed families (E, v)."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "correspondence",
+      "en": "Abstract finite-span pullback theorems and C2 parity witnesses never verify that an actual distributed software system, social institution, or learned representation realizes a given SpanFunctor or Beck-Chevalley condition (Rule 2)."
+    },
+    {
+      "kind": "scope",
+      "en": "Formalizes discrete Type spans and finite-step traces; weak infinite bicategories, continuous-time flows, and probabilistic TV distance floors belong outside (the TV bounds live separately in periphery ObservationalFidelity)."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+      "detail": {
+        "en": "EmergentCrossSeamWitness (chiZeroToOne_not_surjective, chiTwoToFour_not_surjective), C2RelativeLossWitness (c2_chi_two_to_one, c2_n_step_collapse), bc_empty_family_trivial_counterexample, causalGoodhart_chi_non_surjective, and C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T083850.553338Z): all 135 declarations (52 theorems, 0 private) in Becoming.OplaxHistory compile from prelude with non-empty axiom dependencies {} and 0 forbidden market words; audited PASS in Wave U6 Commit A (b8111aa2f). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; category-level weak bicategorical coherence or continuous stochastic trace lifts if needed."
+  },
+  "correspondence": {
+    "en": "Formalizes WenHeHua v9.0 S1-S5 & formal/67 D1 and bridges relational oplax span composition directly onto Becoming Trace, CausalAbstraction, PolyComposition, and GrammarLaws."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+  "aliases": [],
+  "dependencies": [
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Relates open-interface hiding and interchange failures to RelSpan oplax comparisons."
+      }
+    },
+    {
+      "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Integrates ConcurrentSerialWitness (serial vs. unguarded concurrent depletion) inside reserve_disjoint_vs_serial_reconfig."
+      }
+    },
+    {
+      "id": "interventional-causal-abstraction-and-goodhart",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Bridges ExactCausalAbs, CausalGoodhartWitness, and Viability.Kernel soundness/refutation via FiberViabilitySplit."
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects quotient lumping of single-step transition spans to Becoming.«像定后当且仅当同行»."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.OplaxHistory.RelSpan",
+        "Becoming.OplaxHistory.SpanFunctor",
+        "Becoming.OplaxHistory.chi",
+        "Becoming.OplaxHistory.chi_left",
+        "Becoming.OplaxHistory.chi_right",
+        "Becoming.OplaxHistory.chi_natural",
+        "Becoming.OplaxHistory.chi_unit_left",
+        "Becoming.OplaxHistory.chi_unit_right",
+        "Becoming.OplaxHistory.chi_assoc_coherence",
+        "Becoming.OplaxHistory.chi_comp_functor",
+        "Becoming.OplaxHistory.flatSpan_proj_unique",
+        "Becoming.OplaxHistory.chiFlat_proj",
+        "Becoming.OplaxHistory.BracketTree",
+        "Becoming.OplaxHistory.bracketTree_coherence_all_n",
+        "Becoming.OplaxHistory.evalPartition_proj_unique",
+        "Becoming.OplaxHistory.macro_refinement_functorial",
+        "Becoming.OplaxHistory.bcMap",
+        "Becoming.OplaxHistory.FImageIsPullback",
+        "Becoming.OplaxHistory.chi_bijective_iff_pullback",
+        "Becoming.OplaxHistory.chi_bijective_iff_bc_all",
+        "Becoming.OplaxHistory.bc_isBijective_of_chi_bij",
+        "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample",
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective",
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one",
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse",
+        "Becoming.OplaxHistory.trace_equiv_flatChain",
+        "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
+        "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
+        "Becoming.OplaxHistory.FiberViabilitySplit",
+        "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split",
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness",
+        "Becoming.OplaxHistory.coprod_pullback_iso",
+        "Becoming.OplaxHistory.coprod_strong_vs_time_oplax",
+        "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc",
+        "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
+        "Becoming.OplaxHistory.span_step_grammar_lumping"
+      ],
+      "sha256": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T083850.553338Z/verification.json",
+      "role": "receipt",
+      "sha256": "bf2c9fcb6527b50e5cd030f191e74fd01d304167127693f06eb8317ca5fd320b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "b56d67b2a6f1391b0ab68e81b04b460d22545f6fb3e67ffba92a8e0dd979d4cb"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T083850.553338Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OplaxHistory",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U6): added Becoming.OplaxHistory (L1, 0 axioms) formalizing WenHeHua v9.0 normal oplax Span(F) chi coherence, Beck-Chevalley characterization, emergent/C2 obstructions, and bridges to Trace, CausalAbstraction, PolyComposition, and GrammarLaws. AI-written."
+    }
+  ]
+}
