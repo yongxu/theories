@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 417 | 20,912 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 417 | 20,925 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [Becoming active periphery](lean-declarations/becoming-periphery.md) | 13 | 517 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |

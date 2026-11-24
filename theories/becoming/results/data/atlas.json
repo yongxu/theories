@@ -2947,13 +2947,6 @@
      },
      {
       "used": "Becoming.RegimeMargin.holds",
-      "dynamic": "a-line-on-a-stock",
-      "in": [
-       "Becoming.LineOnAStock.unending_iff_holds"
-      ]
-     },
-     {
-      "used": "Becoming.RegimeMargin.holds",
       "dynamic": "threshold-in-the-state-plane",
       "in": [
        "Becoming.RegimeMargin.threshold_regime"
@@ -4247,18 +4240,12 @@
       ]
      },
      {
-      "used": "Becoming.TurningInTime.held_above",
-      "dynamic": "a-line-on-a-stock",
-      "in": [
-       "Becoming.LineOnAStock.step_lowers"
-      ]
-     },
-     {
       "used": "Becoming.TurningInTime.kept_within",
       "dynamic": "a-line-on-a-stock",
       "in": [
        "Becoming.LineOnAStock.ends_low",
-       "Becoming.LineOnAStock.ends_high"
+       "Becoming.LineOnAStock.ends_high",
+       "Becoming.LineOnAStock.way_ends"
       ]
      },
      {
@@ -4443,8 +4430,6 @@
     "Becoming.LineOnAStock.taken_generation",
     "Becoming.LineOnAStock.course_generation",
     "Becoming.LineOnAStock.within_along",
-    "Becoming.LineOnAStock.reaches_from",
-    "Becoming.LineOnAStock.reaches_holds",
     "Becoming.LineOnAStock.unending_iff_holds",
     "Becoming.LineOnAStock.taken_below",
     "Becoming.LineOnAStock.unending_taken_below",
@@ -4853,15 +4838,8 @@
     }
    ],
    "uses_between_proofs": {
-    "read": 122,
+    "read": 120,
     "uses": [
-     {
-      "dynamic": "margin-of-a-regime",
-      "used": "Becoming.RegimeMargin.holds",
-      "in": [
-       "Becoming.LineOnAStock.unending_iff_holds"
-      ]
-     },
      {
       "dynamic": "turning-in-time",
       "used": "Becoming.Law.stepWhile_steps_iff",
@@ -4900,17 +4878,11 @@
      },
      {
       "dynamic": "turning-in-time",
-      "used": "Becoming.TurningInTime.held_above",
-      "in": [
-       "Becoming.LineOnAStock.step_lowers"
-      ]
-     },
-     {
-      "dynamic": "turning-in-time",
       "used": "Becoming.TurningInTime.kept_within",
       "in": [
        "Becoming.LineOnAStock.ends_low",
-       "Becoming.LineOnAStock.ends_high"
+       "Becoming.LineOnAStock.ends_high",
+       "Becoming.LineOnAStock.way_ends"
       ]
      },
      {
@@ -4919,9 +4891,40 @@
       "in": [
        "Becoming.LineOnAStock.need_unmet"
       ]
+     },
+     {
+      "dynamic": "a-way-of-units-under-a-rule-set-again",
+      "used": "Becoming.WayUnderARule.tested_or_ends",
+      "in": [
+       "Becoming.LineOnAStock.way_ends"
+      ]
+     },
+     {
+      "dynamic": "a-way-of-units-under-a-rule-set-again",
+      "used": "Becoming.WayUnderARule.unending_iff_tested",
+      "in": [
+       "Becoming.LineOnAStock.unending_iff_holds"
+      ]
+     },
+     {
+      "dynamic": "a-way-of-units-under-a-rule-set-again",
+      "used": "Becoming.WayUnderARule.way_one_rule",
+      "in": [
+       "Becoming.LineOnAStock.unending_iff_holds"
+      ]
      }
     ],
     "chains": [
+     {
+      "dynamics": [
+       "turning-in-time"
+      ],
+      "chain": [
+       "Becoming.LineOnAStock.step_lowers",
+       "Becoming.WayUnderARule.step_lowers",
+       "Becoming.TurningInTime.held_above"
+      ]
+     },
      {
       "dynamics": [
        "readings-revised-spread-and-locked"
@@ -4931,37 +4934,35 @@
        "Becoming.SelectionTerm.Generations.kept_of_descent",
        "Becoming.SelectionTerm.Generations.kept_iff"
       ]
+     },
+     {
+      "dynamics": [
+       "a-way-of-units-under-a-rule-set-again"
+      ],
+      "chain": [
+       "Becoming.LineOnAStock.way_ends",
+       "Becoming.WayUnderARule.goes_one_rule",
+       "Becoming.WayUnderARule.course_one_rule"
+      ]
+     },
+     {
+      "dynamics": [
+       "a-way-of-units-under-a-rule-set-again"
+      ],
+      "chain": [
+       "Becoming.LineOnAStock.unending_iff_holds",
+       "Becoming.WayUnderARule.goes_one_rule",
+       "Becoming.WayUnderARule.course_one_rule"
+      ]
      }
     ],
     "used_by": [
-     {
-      "used": "Becoming.LineOnAStock.met_or_unmet",
-      "dynamic": "a-way-of-units-under-a-rule-set-again",
-      "in": [
-       "Becoming.WayUnderARule.unmet_before_unfavoured"
-      ]
-     },
-     {
-      "used": "Becoming.LineOnAStock.mem_of_ne_nil",
-      "dynamic": "a-way-of-units-under-a-rule-set-again",
-      "in": [
-       "Becoming.WayUnderARule.tested_lasts",
-       "Becoming.WayUnderARule.lasts_from"
-      ]
-     },
      {
       "used": "Becoming.LineOnAStock.mem_of_ne_nil",
       "dynamic": "paced-stock-and-cadence-margin-sandwich",
       "in": [
        "Becoming.PacedStock.pace_margin_feasibility_window",
        "Becoming.PacedStock.pace_margin_feasibility_window_exact"
-      ]
-     },
-     {
-      "used": "Becoming.LineOnAStock.after_of_met",
-      "dynamic": "a-way-of-units-under-a-rule-set-again",
-      "in": [
-       "Becoming.WayUnderARule.lasts_from"
       ]
      },
      {
@@ -58243,7 +58244,7 @@
    "tests": [],
    "open": [
     {
-     "en": "A condition on the model numbers separating which outcome occurs, and whether post-collapse survival via eliminated counted units is turning in the idea sense.",
+     "en": "A closed-form numerical condition on model parameters separating which outcome occurs, and coupling with units that replenish what they rest on (NeedTwentySeven is classified as Tested ecological exhaustion rather than pre-exhaustion turning in time).",
      "source": "theories/becoming/results/records/a-way-of-units-under-a-rule-set-again.md#does-not-show--未表明"
     }
    ],
@@ -58267,28 +58268,6 @@
        "Becoming.WayUnderARule.unending_iff_tested",
        "Becoming.WayUnderARule.ends_iff_unmet",
        "Becoming.WayUnderARule.BothOutcomes.not_read_from_a_share"
-      ]
-     },
-     {
-      "dynamic": "a-line-on-a-stock",
-      "used": "Becoming.LineOnAStock.met_or_unmet",
-      "in": [
-       "Becoming.WayUnderARule.unmet_before_unfavoured"
-      ]
-     },
-     {
-      "dynamic": "a-line-on-a-stock",
-      "used": "Becoming.LineOnAStock.mem_of_ne_nil",
-      "in": [
-       "Becoming.WayUnderARule.tested_lasts",
-       "Becoming.WayUnderARule.lasts_from"
-      ]
-     },
-     {
-      "dynamic": "a-line-on-a-stock",
-      "used": "Becoming.LineOnAStock.after_of_met",
-      "in": [
-       "Becoming.WayUnderARule.lasts_from"
       ]
      }
     ],
@@ -58322,6 +58301,20 @@
        "turning-in-time"
       ],
       "chain": [
+       "Becoming.WayUnderARule.tested_or_ends",
+       "Becoming.WayUnderARule.or_all",
+       "Becoming.WayUnderARule.or_from_room",
+       "Becoming.WayUnderARule.or_from_level",
+       "Becoming.WayUnderARule.level_lowers",
+       "Becoming.WayUnderARule.step_lowers",
+       "Becoming.TurningInTime.held_above"
+      ]
+     },
+     {
+      "dynamics": [
+       "turning-in-time"
+      ],
+      "chain": [
        "Becoming.WayUnderARule.TwoKinds.premises",
        "Becoming.WayUnderARule.TwoKinds.keeps",
        "Becoming.TurningInTime.kept_within"
@@ -58347,129 +58340,31 @@
        "Becoming.WayUnderARule.TwoKinds.keeps",
        "Becoming.TurningInTime.kept_within"
       ]
-     },
+     }
+    ],
+    "used_by": [
      {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.LineOnAStock.strong_below"
+      "used": "Becoming.WayUnderARule.tested_or_ends",
+      "dynamic": "a-line-on-a-stock",
+      "in": [
+       "Becoming.LineOnAStock.way_ends"
       ]
      },
      {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.lasts_from",
-       "Becoming.WayUnderARule.held_step",
-       "Becoming.WayUnderARule.mem_after",
-       "Becoming.LineOnAStock.mem_after_iff"
+      "used": "Becoming.WayUnderARule.unending_iff_tested",
+      "dynamic": "a-line-on-a-stock",
+      "in": [
+       "Becoming.LineOnAStock.unending_iff_holds"
       ]
      },
      {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.outcome_or_met",
-       "Becoming.LineOnAStock.step_zero"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.or_from_level",
-       "Becoming.WayUnderARule.level_lowers",
-       "Becoming.LineOnAStock.step_lowers"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.or_from_level",
-       "Becoming.WayUnderARule.below_level",
-       "Becoming.LineOnAStock.below_after"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.or_from_level",
-       "Becoming.WayUnderARule.below_kept",
-       "Becoming.LineOnAStock.below_keeps"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.lasts_from",
-       "Becoming.WayUnderARule.held_step",
-       "Becoming.WayUnderARule.below_kept",
-       "Becoming.LineOnAStock.below_keeps"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.or_from_level",
-       "Becoming.WayUnderARule.taken_rises",
-       "Becoming.LineOnAStock.allKids_rises"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.tested_or_ends",
-       "Becoming.WayUnderARule.or_all",
-       "Becoming.WayUnderARule.or_from_room",
-       "Becoming.WayUnderARule.or_from_level",
-       "Becoming.WayUnderARule.taken_kept",
-       "Becoming.LineOnAStock.taken_allKids"
-      ]
-     },
-     {
-      "dynamics": [
-       "a-line-on-a-stock"
-      ],
-      "chain": [
-       "Becoming.WayUnderARule.lasts_from",
-       "Becoming.WayUnderARule.held_step",
-       "Becoming.WayUnderARule.taken_kept",
-       "Becoming.LineOnAStock.taken_allKids"
+      "used": "Becoming.WayUnderARule.way_one_rule",
+      "dynamic": "a-line-on-a-stock",
+      "in": [
+       "Becoming.LineOnAStock.unending_iff_holds"
       ]
      }
     ],
-    "used_by": [],
     "shared": [],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
@@ -202103,18 +201998,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "af1d8095ad8893b0b958a533130584d700eb1e18",
-   "core_run": "20261124T112343.843972Z"
+   "commit": "574f04c6d15c17a0d60585aa2d9015f60c2a23b9",
+   "core_run": "20261124T131113.069112Z"
   },
-  "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
+  "core_sources_sha256": "93fe4567732b78705a5252741b6cc6181865fe093e60a761c2193be107deaa03",
   "counts": {
    "modules": 435,
-   "theorems": 22615,
+   "theorems": 22628,
    "uses_without_row": 51
   },
   "counted": {
    "modules": 435,
-   "theorems": 22615,
+   "theorems": 22628,
    "uses_without_row": 51
   },
   "binds_receipt": true,

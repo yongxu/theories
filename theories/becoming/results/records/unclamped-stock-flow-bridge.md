@@ -30,21 +30,21 @@
 ## Does not show
 
 - Overdrawing steps where x < taken (Nat subtraction truncates, so Flow conservation breaks at failure rather than being salvaged by min-clamping).
-- Absorption of LineOnAStock.way_ends / WayUnderARule.tested_or_ends by Flow.family_excess_ends or Stage 2 deletion of ends_all.
+- Absorption of LineOnAStock.line_ends (ends_all over a closed sub-line) or WayUnderARule.tested_or_ends by Flow.family_excess_ends.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 69 declarations (58 theorems, 0 private) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; adds clampedStep_balance_* and list_clampedStep_* overdraw helpers. No person has read it.
+Machine-checked by Lean 4.29.1 checker (receipt 20261124T131113.069112Z): all 69 declarations (58 theorems, 0 private) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; imports both Becoming.WayUnderARule and Becoming.LineOnAStock after Stage 2; adds clampedStep_balance_* and list_clampedStep_* overdraw helpers. No person has read it.
 
 Canonical source: [StockFlowBridge.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-Index WayUnderARule, PacedStock, AdaptiveLoops, and Milestone 1C pillars into atlas dynamics.json and author alignment situations (Phase 2).
+With WayUnderARule positioned below LineOnAStock (ends_all retained for closed sub-lines in line_ends) and conditional/renewal/ preserved as a read-only bridged archive alongside KeepableStep, index WayUnderARule, PacedStock, and AdaptiveLoops into atlas dynamics and extend unclamped multi-substrate stock–flow bridges.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -57,7 +57,7 @@ Reading (AI-written): October–November flow conservation and drawdown trapping
 ### Dependencies
 
 - **formal-reuse**: [a-line-on-a-stock](a-line-on-a-stock.md). Bridges LineOnAStock (taken_below, unending_taken_below, account) without clamping.
-- **formal-reuse**: [a-way-of-units-under-a-rule-set-again](a-way-of-units-under-a-rule-set-again.md). Bridges WayUnderARule courses to Flow.BalancesOn and Coupled.Indexed.step while preserving Stage 2 rfl checks.
+- **formal-reuse**: [a-way-of-units-under-a-rule-set-again](a-way-of-units-under-a-rule-set-again.md). Bridges WayUnderARule courses (below LineOnAStock) to Flow.BalancesOn and Coupled.Indexed.step.
 - **formal-reuse**: [continuing-self-fed-from-beyond](continuing-self-fed-from-beyond.md). Adapts Continuation Flow balance and drawdown trap to finite pre-overdraw intervals.
 - **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). Establishes exact single-substrate agreement with RegimeMargin.Coupled.Indexed.step Drawn.whole.
 
@@ -73,6 +73,7 @@ Reading (AI-written): October–November flow conservation and drawdown trapping
 | review | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/p1c-multiscale-transformative-2026-11-23/NOTE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T131113.069112Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.never_returns_below_within`, `Becoming.WayUnderARule.taken_below`, `Becoming.WayUnderARule.unending_taken_below`, `Becoming.StockFlowBridge.line_balancesOn_of_goes`, `Becoming.StockFlowBridge.line_never_returns_below_within`, `Becoming.StockFlowBridge.way_balancesOn_of_goes`, `Becoming.StockFlowBridge.way_never_returns_below_within`, `Becoming.StockFlowBridge.line_coupled_indexed_correspondence`, `Becoming.StockFlowBridge.way_coupled_indexed_correspondence`
 
@@ -81,6 +82,7 @@ Aliases: `Becoming.Flow.never_returns_below_within`, `Becoming.WayUnderARule.tak
 
 - 23 November 2026: added for Milestone 1C (Becoming.StockFlowBridge) on the Alignment Theory of Coupled Adaptive Systems roadmap. AI-written.
 - 24 November 2026 (Wave U2): joined StockFlowBridge onto Becoming.Stock via StockUnification and StockUnificationRuns (deriving unit/line/way Flow balances from Stock.process_balanced, lifting Run.replenishes_of_draws / draws_iff_replenishes, and transferring never_returns_below_within back to Stock.Balanced runs). AI-written.
+- 24 November 2026 (Decision 3A): added explicit import of Becoming.LineOnAStock after Stage 2 inverted Becoming.WayUnderARule below Becoming.LineOnAStock (retiring reaches_from and reaches_holds while keeping ends_all for line_ends), with October's conditional/renewal/ kept as a read-only bridged archive. AI-written.
 
 </details>
 

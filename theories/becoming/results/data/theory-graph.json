@@ -11938,11 +11938,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.WayUnderARule",
+   "type": "module",
+   "name": "Becoming.WayUnderARule",
+   "level": "L2",
+   "theorems": 78,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.LineOnAStock",
    "type": "module",
    "name": "Becoming.LineOnAStock",
    "level": "L2",
-   "theorems": 113,
+   "theorems": 111,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -11965,17 +11976,6 @@
    "name": "Becoming.LineOnAStockCases",
    "level": "L2",
    "theorems": 9,
-   "region": "map",
-   "base": "general",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.WayUnderARule",
-   "type": "module",
-   "name": "Becoming.WayUnderARule",
-   "level": "L2",
-   "theorems": 59,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -35607,17 +35607,7 @@
   },
   {
    "from": "module:Becoming.LineOnAStock",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.LineOnAStock",
-   "to": "module:Becoming.SelectionTerm",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.LineOnAStock",
-   "to": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.WayUnderARule",
    "type": "imports"
   },
   {
@@ -37767,6 +37757,11 @@
   },
   {
    "from": "module:Becoming.StockFlowBridge",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.StockFlowBridge",
    "to": "module:Becoming.Stock",
    "type": "imports"
   },
@@ -38142,12 +38137,22 @@
   },
   {
    "from": "module:Becoming.WayUnderARule",
-   "to": "module:Becoming.LineOnAStock",
+   "to": "module:Becoming.ReadingsPersist",
    "type": "imports"
   },
   {
    "from": "module:Becoming.WayUnderARule",
    "to": "module:Becoming.RuleCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WayUnderARule",
+   "to": "module:Becoming.SelectionTerm",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WayUnderARule",
+   "to": "module:Becoming.TurningInTime",
    "type": "imports"
   },
   {
@@ -38899,6 +38904,12 @@
    "from": "record:a-line-on-a-stock",
    "to": "record:a-way-of-units",
    "type": "related"
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:a-way-of-units-under-a-rule-set-again",
+   "type": "formal-reuse",
+   "interface": true
   },
   {
    "from": "record:a-line-on-a-stock",
@@ -39790,11 +39801,6 @@
   },
   {
    "from": "record:a-way-of-units-under-a-rule-set-again",
-   "to": "record:a-line-on-a-stock",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:a-way-of-units-under-a-rule-set-again",
    "to": "record:capture-through-the-rule",
    "type": "formal-reuse"
   },
@@ -39805,7 +39811,17 @@
   },
   {
    "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
    "to": "record:turning-in-time",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-way-of-units-under-a-rule-set-again",
+   "to": "record:when-a-selection-read-off-continuation-reads",
    "type": "formal-reuse"
   },
   {
