@@ -52,8 +52,9 @@ two.
   consensus keeps the selection locked across every tag (`split_silenced_trapped`), whereas open
   exchange turns it cleanly (`split_exchange_turns`, instantiated on `wEndo` in `split_witness_endo`).
   Part B.9 extends tag sums to weighted distributions (`weightedTags`, `weighted_view_invariant`,
-  `weighted_split_marginal_eq`) and proves retag-invariance is necessary via a skew countermodel
-  (`wSkew`, `weighted_skew_breaks_blindness`). Part B.10 couples `stockSignal` and live stock into
+  `weighted_split_marginal_eq`) and gives a concrete skewed-weight countermodel
+  (`wSkew`, `weighted_skew_breaks_blindness`, `3 ≠ 1`) showing retag-invariance cannot simply be
+  dropped. Part B.10 couples `stockSignal` and live stock into
   `closedSplitStep` inside `markCourse`, proving silenced collapse (`closedSplit_silenced_collapses`),
   exchange survival (`closedSplit_exchange_saves_stock`), and unstrained control
   (`closedSplit_unstrained_no_false_turn`).
@@ -2430,9 +2431,10 @@ def wSkew : List Bool → Nat
   | b :: [] => cond b 1 3
   | _ :: _ :: _ => 0
 
-/-- **B9c (`weighted_skew_breaks_blindness`):** retag-invariance of the tag weight is necessary for
-local marginal blindness: at `T = 1` under `wSkew`, a 1-bit identity agent `L_B` sees weighted sum
-`3` when `dD 0 = true` and `1` when `dS 0 = false` (`3 ≠ 1`). -/
+/-- **B9c (`weighted_skew_breaks_blindness`):** concrete skewed-weight countermodel showing
+retag-invariance of the tag weight cannot simply be dropped: at `T = 1` under `wSkew`, a 1-bit
+identity agent `L_B` sees weighted sum `3` when `dD 0 = true` and `1` when `dS 0 = false`
+(`3 ≠ 1`). -/
 theorem weighted_skew_breaks_blindness (dD dS : Nat → Bool) (hdD : dD 0 = true) (hdS : dS 0 = false) :
     let L_B : UnguidedLoop Bool Bool EmergenceAct :=
       { init := false, act := fun _ => .extract, update := fun _ o => o }
