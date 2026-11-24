@@ -71,6 +71,8 @@ Now read a balanced World run so. The formation's own level is the internal part
 
 **Reading** [AI reading, D45]. What the theory states of agents through the blanket, a determined policy a selection through the sensory course, a reading through the blanket lumping, the break unseen, needs only the coupling form, so it holds whether or not the steady weights are independent given the blanket. The principle's reading of internal states as beliefs about external ones needs the statistical form, which holds under conditions each of which is known; under its own term-by-term definition, in the linear case, the zero is one of the definition's terms, and the losses are where sparse coupling is read as a zero drift entry, and in the theory's synchronous steps, where with circulation the four-part blanket can be lost even under footnote 13 ([design](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md)).
 
+For exact and lax interventional causal abstraction and Causal Goodhart under missing interventional couplings, see [interventional-causal-abstraction-and-goodhart](../results/records/interventional-causal-abstraction-and-goodhart.md), together with its Wave U6 characterization `causalGoodhart_chi_non_surjective` in [oplax-history-comparison-and-relational-loss](../results/records/oplax-history-comparison-and-relational-loss.md).
+
 <a id="observation"></a>
 ## 2. Observation is a route
 
@@ -101,6 +103,8 @@ Where a level couples is [01](01-ROOT.md#r-where-a-level-couples)'s; how much di
 A source before a juncture is [02](02-MAP.md#r-a-source-before-a-juncture)'s.
 
 **Reading** [AI reading, D20, D26, D45]. 明 (*míng*, clearness) is a relation, as wide as the couplings joined to a selection, growing as measurement (a route), a model ([§3](#r-testing-within-couplings)) and pools ([05](05-COLLECTIVES.md#r-what-pooled-coupling-reaches); reading another's couplings is pooling, [05](05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling)) are joined. 识 (*shí*), 理 and 明 are one structure: 识 a formation's own course through its couplings' lumping, 理 a lumping the world goes alike across, 明 the joining of couplings to a selection; situational awareness is 明 of one's own reach. Holding 明 for others keeps the three routes open (checkable models, measurement bringing far consequences back, pools reaching where one's own couplings do not), admission being itself a selection through one's own couplings; a lasting change has to reach the rule ([§4](#r-projection-carrying-a-law)), and a law used beyond its scope is a wrong model.
+
+For the Wave U6 quantitative query-image total-variation blindness floor and the zero-TV fiber viability split (`ObservationalFidelity`, Mathlib periphery #13), see [observational-fidelity-and-multi-regime-error](../results/records/observational-fidelity-and-multi-regime-error.md) ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).
 
 <a id="testing"></a>
 ## 3. Testing within the net
@@ -299,6 +303,8 @@ The merge of a part kept by the rest is [02](02-MAP.md#r-merge-of-a-part-kept-by
 
 **Reading** [AI reading, D26, D33, D34, D40, D43, D52]. The uniformity of nature is the local hypothesis `Lumped`, named where used. A network generalizes through the lumping its architecture and updates impose, not through the loss; the meta level is learning again, with no top. A finite prefix is a projection, which a bound makes lossless; wave and particle are projections onto context-free values. What is read through the map is derived situationally as far as runs do not part; at a parting the situation fixes the way.
 
+When exact commuting lumping fails, lax multi-scale `SlackDist` kernel transfer is formalized in [lax-multi-scale-viability](../results/records/lax-multi-scale-viability.md), and the Beck–Chevalley characterization of exact vs. oplax history comparison (`chi_bijective_iff_bc_all` and `span_step_grammar_lumping`) is recorded in [oplax-history-comparison-and-relational-loss](../results/records/oplax-history-comparison-and-relational-loss.md).
+
 <a id="wen"></a>
 ## 7. 文: the course through a map
 
@@ -385,7 +391,7 @@ A seeking locked onto a target that cannot be met at rest never comes to rest wi
 
 **Conditional** (the practical commitments, with correspondence, authority and responsiveness, explicit in the protocol). Under these, acquired revision reaches the pending task exactly where it is warranted (periphery, `propext`, `Classical.choice`, `Quot.sound`: `VersionedTaskInstances.continuation_eq`); relabelling without rewriting the encoding fails (`CommonTaskRevision.declaration_only_fails`).
 
-Learning within capture: [02](02-MAP.md#r-target-capture), [02](02-MAP.md#r-closed-capture).
+Learning within capture: [02](02-MAP.md#r-target-capture), [02](02-MAP.md#r-closed-capture). For online `OrderUpdater` convergence and substrate-coupled scope-order co-evolution (`Becoming.EndogenousOrder`), see [endogenous-order-scope-coevolution-and-nash](../results/records/endogenous-order-scope-coevolution-and-nash.md).
 
 <a id="inquiry"></a>
 ## 9. Inquiry
@@ -483,6 +489,8 @@ Joining trees and footprints: [01](01-ROOT.md#r-finite-joining-tree-lifting), [0
 <a id="r-scientific-inquiry-foundation"></a>
 **Open** (scoped conjecture). That the pure core's full set of relations is indispensable across the stated scientific scope is a target under test; the outcome may be the whole set, a part, or a commitment to revise. Its form, for an inquiry contract D with actual law and interface assumptions A_D and an independently established necessary condition C_D of its claimed capability: A_D ∧ Realizes(I, D) ⇒ C_D(I). It is revised if a realization violates a purported necessary condition with meanings and premises unchanged, a proof uses an unavailable oracle, a translation erases a rival's disagreement, or the common root adds nothing beyond redescription. No demarcation criterion is given. [record](../results/records/scientific-inquiry-foundation.md)
 
+For exploration-margin sandwiches, finite-horizon deadline impossibilities, cascade alarm capture, and blanket screening in active inquiry (`Becoming.ActiveInquiryLoop`), see [active-inquiry-deadline-cascade-and-blankets](../results/records/active-inquiry-deadline-cascade-and-blankets.md).
+
 <a id="break-seen-coming"></a>
 ## 10. A break seen coming
 
@@ -561,6 +569,8 @@ A formation that senses, predicts, chooses, acts and revises is one law within t
 
 **Reading** [AI reading, new]. The theorem says what a reading must carry for a requirement to be met by one response; which requirement is right it does not say. A reading too coarse for the requirement is the covering's failure, requisite variety (Ashby 1956) read on relations; a finer reading keeps every common response.
 
+Subsequent reading-loop results formalize exploration-margin sandwiches, deadline impossibilities, cascade alarm capture, and blanket screening ([active-inquiry-deadline-cascade-and-blankets](../results/records/active-inquiry-deadline-cascade-and-blankets.md)), online `OrderUpdater` convergence ([endogenous-order-scope-coevolution-and-nash](../results/records/endogenous-order-scope-coevolution-and-nash.md)), and the `three_regime_error_contrast` separating projection blindness, fiber viability splits, and estimation error ([observational-fidelity-and-multi-regime-error](../results/records/observational-fidelity-and-multi-regime-error.md)).
+
 <a id="does-not-show"></a>
 ## What this chapter does not show
 
@@ -582,3 +592,4 @@ A formation that senses, predicts, chooses, acts and revises is one law within t
 - The two targets of §9 ([wisdom](#r-wisdom-root), [science](#r-scientific-inquiry-foundation)).
 - T6 on a coupled case, where the dependent feeds back onto the stock; a measured, not argued, share for the uncoupled side.
 - Cognition beyond composition: perception and attention; motivation and affect (salience, wanting what is misrepresented, recognizing a reason without acting); consciousness, for which neither widening what can form nor task performance is assumed sufficient; language and social understanding. Formation, retention and use of access can develop apart, and similar performance cannot tell conserved, convergent and differently trained solutions apart; a matched developmental test is proposed, not performed.
+- Lax multi-scale lumping ([lax-multi-scale-viability](../results/records/lax-multi-scale-viability.md)), exact/lax interventional causal abstraction ([interventional-causal-abstraction-and-goodhart](../results/records/interventional-causal-abstraction-and-goodhart.md)), and finite-horizon inquiry deadlines ([active-inquiry-deadline-cascade-and-blankets](../results/records/active-inquiry-deadline-cascade-and-blankets.md)) are now formalized in the core; infinite-state measurable spaces and empirical generalization leakage across shared features remain open ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).

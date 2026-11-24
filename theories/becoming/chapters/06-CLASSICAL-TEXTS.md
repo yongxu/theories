@@ -556,6 +556,8 @@
 
 文同与文之理（值之类之理）在根之文法中同为一个结构（值之类沿律之步的核），其定理与前提见[第三章](03-KNOWING.md#r-wen-in-the-grammar)；上面所引系辞与「读书百遍」诸句，是它的古典之读。
 
+文和化 v9.0 之出处见 [PROVENANCE.json](../../../sources/wenhehua-v9.0/PROVENANCE.json)；其 `formal/59`、`formal/61`、`formal/67` 之结构内容已在 Wave U6 中由 `OplaxHistory`（[记录](../results/records/oplax-history-comparison-and-relational-loss.md)）、`DoubleKernel`（[记录](../results/records/guarded-double-category-certificate-kernel.md)）与 `ObservationalFidelity`（[记录](../results/records/observational-fidelity-and-multi-regime-error.md)）形式化，干预抽象见 `CausalAbstraction` 之 `«因像定当且仅当因同行»`（[记录](../results/records/interventional-causal-abstraction-and-goodhart.md)）；上述对照仍属 AI 读法，待文献学与人工审读（总览见 [CANONICAL-MAP.md](../CANONICAL-MAP.md)）。
+
 ---
 
 <a id="residue"></a>
@@ -611,6 +613,8 @@
 <a id="glossary-senses"></a>
 **读法** [AI reading, D1, D5]。语料词表中有几个词与本理论之词同字而不同义，不可合并。语料之“生生不息”分为生、生生（进入亦保持、恢复或创造下一轮之条件与生成者）与不息（经代谢、死亡与传递而样式再实现）；形式之 `Web.Unceasing`（某一形成在任意晚之步生起）远弱于它，复返而成既有形式之抄本不及之；文法之 `«息»` 以归纳正面定义（一事所复生至者皆息，则此事息，[§三](#tong-and-xi)），说的是复生之串有尽，与语料之“息”也不同。语料之“开”是四标并立，本理论之“开放”只是其中之“未”。“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。“道”在语料中有指南、形式谓词与代数三种用法，本理论不立形式之道。善、恶、智没有形式谓词；“足”最近于寻求之静（`Law.rests_iff`，[第三章](03-KNOWING.md#r-seeking-boundary)）。
 
+Wave U6 将闭、粗化失真与带守卫之多步组合接入 `OplaxHistory`（[记录](../results/records/oplax-history-comparison-and-relational-loss.md)）、`DoubleKernel`（[记录](../results/records/guarded-double-category-certificate-kernel.md)）、`ObservationalFidelity`（[记录](../results/records/observational-fidelity-and-multi-regime-error.md)）及 `CausalAbstraction` 之 `«因像定当且仅当因同行»`（[记录](../results/records/interventional-causal-abstraction-and-goodhart.md)），文和化 v9.0 出处系于 [PROVENANCE.json](../../../sources/wenhehua-v9.0/PROVENANCE.json)；皆仍为待文献学与人审之 AI 读法。
+
 ---
 
 <a id="divergences"></a>
@@ -658,3 +662,4 @@
 - **汉字之较强假说。** 某些字词及其组合，能否在明确的范围内稳定地保留概念之间的关系与操作（产生、保留、反复、识别、选择、修订、扣留怎样依赖、怎样失败），而不只是逐个对应名称；按四级验收，须在未参与设计的样本上检验。
 - **文理生生。** 阅读试验（H2）未运行；文理生生的语法 G1 作为脊柱上系辞一层的查询语言，须在判定之下证明两边相等，尚未做。
 - **中华本之根基。** 它陈述在 World 模型上，已移入 history/；以根为基重写一本古名之论，未做。
+- **文和化 v9.0 之结构形式化与待审边界。** [PROVENANCE.json](../../../sources/wenhehua-v9.0/PROVENANCE.json) 所录 `formal/59`、`formal/61`、`formal/67` 之结构主张与干预抽象 `«因像定当且仅当因同行»`，已在 `OplaxHistory`（[记录](../results/records/oplax-history-comparison-and-relational-loss.md)）、`DoubleKernel`（[记录](../results/records/guarded-double-category-certificate-kernel.md)）、`ObservationalFidelity`（[记录](../results/records/observational-fidelity-and-multi-regime-error.md)）与 `CausalAbstraction`（[记录](../results/records/interventional-causal-abstraction-and-goodhart.md)）中经 Lean 检查；其文本对应仍属 AI 读法，待学者审读，上列诸条文献学与人审未决项悉数保留。
