@@ -67427,7 +67427,7 @@
      "record": "quantitative-transfer-of-four-guard-failure-regimes",
      "index": 1,
      "text": {
-      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity and Gaussian.Real; residuals in [0, 1]; bounded or nonzero-variance Gaussian noise; continuous drawdown on [0, L]; alpha-Lipschitz guard (0 <= alpha < 1)."
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity and Gaussian.Real; residuals in [0, 1]; bounded or Gaussian noise (v = 0 or v != 0); continuous drawdown; unit-rate iid samples (T <= t); alpha-Lipschitz guard."
      }
     }
    ],
@@ -208366,18 +208366,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "7e6ed413247963dd140c1d6782ccf52f3e440046",
-   "core_run": "20261124T195858.526167Z"
+   "commit": "a1693bcf2e6d170be76fdf25528e60a6a8dc5f44",
+   "core_run": "20261124T233040.232087Z"
   },
-  "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",
+  "core_sources_sha256": "a4e0358853506a5d181ebab13edc0dd8ca2bafba0a2ddd93aca7ce171602ca9b",
   "counts": {
    "modules": 439,
-   "theorems": 22890,
+   "theorems": 22927,
    "uses_without_row": 60
   },
   "counted": {
    "modules": 439,
-   "theorems": 22890,
+   "theorems": 22927,
    "uses_without_row": 60
   },
   "binds_receipt": true,

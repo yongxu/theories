@@ -30,8 +30,8 @@
       "imported-archive": 23,
       "working-source": 1041
     },
-    "working_named_theorem_lemma_occurrences": 34380,
-    "working_explicit_named_declaration_occurrences": 51061,
+    "working_named_theorem_lemma_occurrences": 34421,
+    "working_explicit_named_declaration_occurrences": 51131,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 421,
@@ -10804,7 +10804,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
-      "sha256": "a183ce82d649f7637aef78d52de83900b04560c8718ac0423b97d10670a6078b",
+      "sha256": "da9bcd7cf64f83122e461351e108b4c9363a4ed9925a4904e89acb7dafe3ab77",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -13390,7 +13390,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
-      "sha256": "6ae622db6e2d8d06bfd37226e7c4015d9a2905eb2d275556d5e364ee7032c991",
+      "sha256": "78c2b514ba949c9af570f25f9405c2a9fbc7dc8984d355f58838d2ab3adebc8d",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -19385,7 +19385,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "sha256": "48e9e11790cddbb268872537a6295b4e91dd091cde3794ab2550641708889150",
+      "sha256": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -192778,541 +192778,6 @@
       },
       "print_axioms_commands": 0
     },
-    "48e9e11790cddbb268872537a6295b4e91dd091cde3794ab2550641708889150": {
-      "byte_size": 90588,
-      "line_count": 1510,
-      "imports": [
-        "Mathlib.Analysis.Calculus.MeanValue",
-        "Mathlib.Topology.Order.IntermediateValue",
-        "Mathlib.Probability.Distributions.Gaussian.Real",
-        "Mathlib.Tactic",
-        "ObservationalFidelity"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "judgeScore",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
-          "line": 61
-        },
-        {
-          "kind": "def",
-          "name": "residualMean",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean",
-          "line": 66
-        },
-        {
-          "kind": "def",
-          "name": "poolMean",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean",
-          "line": 70
-        },
-        {
-          "kind": "theorem",
-          "name": "poolMean_eq",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
-          "line": 73
-        },
-        {
-          "kind": "theorem",
-          "name": "residualMean_mem",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
-          "line": 81
-        },
-        {
-          "kind": "theorem",
-          "name": "judgeScore_sub",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
-          "line": 91
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_sub_le_one_of_unit",
-          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
-          "line": 96
-        },
-        {
-          "kind": "theorem",
-          "name": "shared_score_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
-          "line": 101
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_disagreement_ceiling",
-          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
-          "line": 117
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_shared_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
-          "line": 139
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_ceiling_attained",
-          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
-          "line": 156
-        },
-        {
-          "kind": "theorem",
-          "name": "anchor_detects_shared_drift",
-          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
-          "line": 168
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_blindness_vs_anchor",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
-          "line": 187
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
-          "line": 203
-        },
-        {
-          "kind": "def",
-          "name": "aliasedProbe",
-          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
-          "line": 230
-        },
-        {
-          "kind": "def",
-          "name": "SeparatesUnderNoise",
-          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
-          "line": 235
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_fiber_gap",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
-          "line": 240
-        },
-        {
-          "kind": "theorem",
-          "name": "midpoint_admissible",
-          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
-          "line": 248
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
-          "line": 259
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_separates",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
-          "line": 274
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_separable_iff",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
-          "line": 300
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
-          "line": 315
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
-          "line": 326
-        },
-        {
-          "kind": "def",
-          "name": "mixDist",
-          "qualified_name_hint": "QuantitativeTransfer.mixDist",
-          "line": 336
-        },
-        {
-          "kind": "def",
-          "name": "testMass",
-          "qualified_name_hint": "QuantitativeTransfer.testMass",
-          "line": 344
-        },
-        {
-          "kind": "theorem",
-          "name": "testMass_add_not",
-          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
-          "line": 348
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_le_one",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
-          "line": 354
-        },
-        {
-          "kind": "theorem",
-          "name": "two_point_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
-          "line": 364
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_mixDist_same",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
-          "line": 388
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_aliasing_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
-          "line": 403
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_floor_attained",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
-          "line": 420
-        },
-        {
-          "kind": "theorem",
-          "name": "le_of_deriv_le_on_Icc",
-          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
-          "line": 433
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_horizon_wall",
-          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
-          "line": 457
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_iff_linear",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
-          "line": 477
-        },
-        {
-          "kind": "theorem",
-          "name": "linear_trajectory_premises",
-          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
-          "line": 487
-        },
-        {
-          "kind": "def",
-          "name": "switchLag",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag",
-          "line": 497
-        },
-        {
-          "kind": "theorem",
-          "name": "switching_score_persists",
-          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
-          "line": 502
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_strictMono_rho",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
-          "line": 518
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_nonpos_tabular",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
-          "line": 528
-        },
-        {
-          "kind": "theorem",
-          "name": "leakage_lag_wall",
-          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
-          "line": 537
-        },
-        {
-          "kind": "theorem",
-          "name": "b1_headroom_witness",
-          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
-          "line": 558
-        },
-        {
-          "kind": "def",
-          "name": "guardRef",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef",
-          "line": 567
-        },
-        {
-          "kind": "theorem",
-          "name": "guardRef_trace",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
-          "line": 570
-        },
-        {
-          "kind": "theorem",
-          "name": "dist_add_le_of_norm",
-          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
-          "line": 577
-        },
-        {
-          "kind": "def",
-          "name": "trustProj",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj",
-          "line": 586
-        },
-        {
-          "kind": "theorem",
-          "name": "norm_trustProj_le",
-          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
-          "line": 589
-        },
-        {
-          "kind": "theorem",
-          "name": "trustProj_of_norm_le",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
-          "line": 596
-        },
-        {
-          "kind": "def",
-          "name": "trustStep",
-          "qualified_name_hint": "QuantitativeTransfer.trustStep",
-          "line": 599
-        },
-        {
-          "kind": "def",
-          "name": "rawStep",
-          "qualified_name_hint": "QuantitativeTransfer.rawStep",
-          "line": 603
-        },
-        {
-          "kind": "def",
-          "name": "trustRegionMetricLaxSim",
-          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
-          "line": 609
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
-          "line": 644
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_viability",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
-          "line": 666
-        },
-        {
-          "kind": "theorem",
-          "name": "unprojected_step_overshoots",
-          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
-          "line": 686
-        },
-        {
-          "kind": "def",
-          "name": "trustRun",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun",
-          "line": 705
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_eq",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
-          "line": 709
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_trace",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
-          "line": 717
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_iterate",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
-          "line": 728
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube_attained",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
-          "line": 735
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
-          "line": 749
-        },
-        {
-          "kind": "def",
-          "name": "youdenJ",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ",
-          "line": 762
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_eq_one_sub_errorSum",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
-          "line": 767
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_const_zero",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_const_zero",
-          "line": 774
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_le_tvDist",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_le_tvDist",
-          "line": 785
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_youdenJ_le_tvDist",
-          "qualified_name_hint": "QuantitativeTransfer.abs_youdenJ_le_tvDist",
-          "line": 791
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_tvDist_attained",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_tvDist_attained",
-          "line": 801
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_mixture_aliasing_ceiling",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
-          "line": 831
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_mixture_attained",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_attained",
-          "line": 849
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_youdenJ_zero",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_youdenJ_zero",
-          "line": 858
-        },
-        {
-          "kind": "def",
-          "name": "measYoudenJ",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ",
-          "line": 874
-        },
-        {
-          "kind": "def",
-          "name": "measErrorSum",
-          "qualified_name_hint": "QuantitativeTransfer.measErrorSum",
-          "line": 878
-        },
-        {
-          "kind": "theorem",
-          "name": "measYoudenJ_eq_one_sub_errorSum",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
-          "line": 882
-        },
-        {
-          "kind": "theorem",
-          "name": "measYoudenJ_const_zero",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_const_zero",
-          "line": 895
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_measYoudenJ_zero",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
-          "line": 903
-        },
-        {
-          "kind": "def",
-          "name": "gaussianAliasedLaw",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianAliasedLaw",
-          "line": 917
-        },
-        {
-          "kind": "theorem",
-          "name": "integral_cauchy_schwarz",
-          "qualified_name_hint": "QuantitativeTransfer.integral_cauchy_schwarz",
-          "line": 922
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussianPDFReal_sqrt_mul_eq",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq",
-          "line": 965
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_bhattacharyya_integral",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_bhattacharyya_integral",
-          "line": 1002
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_tv_le_hellinger",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_le_hellinger",
-          "line": 1016
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_tv_ge_hellinger",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_ge_hellinger",
-          "line": 1105
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_measYoudenJ_le_tv_one",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one",
-          "line": 1150
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_measYoudenJ_le_tv",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
-          "line": 1203
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_midpoint_attains_tv",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_midpoint_attains_tv",
-          "line": 1222
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_youdenJ_wall",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
-          "line": 1290
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_midpoint_sharp",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
-          "line": 1364
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_lab_witness",
-          "line": 1420
-        }
-      ],
-      "declaration_counts": {
-        "def": 18,
-        "theorem": 67
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "48fc5e7c776c2527bea315688b4f3934e713f7fa35e6e26e29b66fe39cdfccb5": {
       "byte_size": 4558,
       "line_count": 120,
@@ -269781,1189 +269246,6 @@
       },
       "print_axioms_commands": 0
     },
-    "6ae622db6e2d8d06bfd37226e7c4015d9a2905eb2d275556d5e364ee7032c991": {
-      "byte_size": 104238,
-      "line_count": 2123,
-      "imports": [
-        "Becoming.TransformativeViability",
-        "Becoming.PolyComposition"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "altBool",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool",
-          "line": 88
-        },
-        {
-          "kind": "theorem",
-          "name": "altBool_succ_of_false",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool_succ_of_false",
-          "line": 92
-        },
-        {
-          "kind": "theorem",
-          "name": "altBool_succ_of_true",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool_succ_of_true",
-          "line": 95
-        },
-        {
-          "kind": "theorem",
-          "name": "bool_or_of_left",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.bool_or_of_left",
-          "line": 98
-        },
-        {
-          "kind": "theorem",
-          "name": "bool_or_of_right",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.bool_or_of_right",
-          "line": 102
-        },
-        {
-          "kind": "def",
-          "name": "effCrit",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "effCrit_of_true",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_of_true",
-          "line": 110
-        },
-        {
-          "kind": "theorem",
-          "name": "effCrit_of_false",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_of_false",
-          "line": 114
-        },
-        {
-          "kind": "theorem",
-          "name": "effCrit_le_of_pullback",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_le_of_pullback",
-          "line": 119
-        },
-        {
-          "kind": "theorem",
-          "name": "effCrit_le_of_margin",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_le_of_margin",
-          "line": 130
-        },
-        {
-          "kind": "def",
-          "name": "selfGain",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.selfGain",
-          "line": 140
-        },
-        {
-          "kind": "theorem",
-          "name": "selfGain_rises",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.selfGain_rises",
-          "line": 142
-        },
-        {
-          "kind": "def",
-          "name": "TransformsAcrossEpochs",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
-          "line": 162
-        },
-        {
-          "kind": "theorem",
-          "name": "constantEpoch_iff_transformsViably",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
-          "line": 174
-        },
-        {
-          "kind": "theorem",
-          "name": "transformsViably_forbids_retirement",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.transformsViably_forbids_retirement",
-          "line": 188
-        },
-        {
-          "kind": "def",
-          "name": "SafeAnchored",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SafeAnchored",
-          "line": 195
-        },
-        {
-          "kind": "theorem",
-          "name": "anchored_reserveSafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.anchored_reserveSafe",
-          "line": 199
-        },
-        {
-          "kind": "theorem",
-          "name": "anchored_rejects_unsafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
-          "line": 208
-        },
-        {
-          "kind": "inductive",
-          "name": "Cond",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cond",
-          "line": 221
-        },
-        {
-          "kind": "inductive",
-          "name": "Form",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Form",
-          "line": 224
-        },
-        {
-          "kind": "inductive",
-          "name": "Cap0",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cap0",
-          "line": 228
-        },
-        {
-          "kind": "inductive",
-          "name": "Cap1",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cap1",
-          "line": 232
-        },
-        {
-          "kind": "def",
-          "name": "CapAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.CapAt",
-          "line": 235
-        },
-        {
-          "kind": "def",
-          "name": "cap0",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.cap0",
-          "line": 240
-        },
-        {
-          "kind": "def",
-          "name": "cap1",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.cap1",
-          "line": 247
-        },
-        {
-          "kind": "def",
-          "name": "capAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.capAt",
-          "line": 254
-        },
-        {
-          "kind": "def",
-          "name": "Preserves",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Preserves",
-          "line": 259
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.level",
-          "line": 273
-        },
-        {
-          "kind": "def",
-          "name": "ownCond",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.ownCond",
-          "line": 281
-        },
-        {
-          "kind": "def",
-          "name": "reqCond",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.reqCond",
-          "line": 308
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.web",
-          "line": 310
-        },
-        {
-          "kind": "def",
-          "name": "epoch",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.epoch",
-          "line": 317
-        },
-        {
-          "kind": "def",
-          "name": "Safe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Safe",
-          "line": 321
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_sub",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_sub",
-          "line": 323
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_leg_zero",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_leg_zero",
-          "line": 329
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_leg_succ",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_leg_succ",
-          "line": 335
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_modA",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_modA",
-          "line": 338
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_modA",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modA",
-          "line": 349
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_modB",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_modB",
-          "line": 356
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_modB",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modB",
-          "line": 367
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_emerg",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_emerg",
-          "line": 374
-        },
-        {
-          "kind": "theorem",
-          "name": "micro_turnover",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.micro_turnover",
-          "line": 380
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_mod_some",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_mod_some",
-          "line": 390
-        },
-        {
-          "kind": "theorem",
-          "name": "emergent_not_replacement",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.emergent_not_replacement",
-          "line": 397
-        },
-        {
-          "kind": "theorem",
-          "name": "rigidLockIn_transformsAcrossEpochs",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
-          "line": 403
-        },
-        {
-          "kind": "theorem",
-          "name": "rigidLockIn_fails_all_separating_caps",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
-          "line": 431
-        },
-        {
-          "kind": "theorem",
-          "name": "epoch0_reading_frozen_fails",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.epoch0_reading_frozen_fails",
-          "line": 445
-        },
-        {
-          "kind": "theorem",
-          "name": "coarsened_reading_passes",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
-          "line": 452
-        },
-        {
-          "kind": "def",
-          "name": "GoodUntil",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.GoodUntil",
-          "line": 477
-        },
-        {
-          "kind": "def",
-          "name": "ZeroLevelTurnover",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.ZeroLevelTurnover",
-          "line": 485
-        },
-        {
-          "kind": "def",
-          "name": "collapseEpoch",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.collapseEpoch",
-          "line": 492
-        },
-        {
-          "kind": "def",
-          "name": "revisedSafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.revisedSafe",
-          "line": 495
-        },
-        {
-          "kind": "theorem",
-          "name": "unanchored_selfRevision_certifies_any_collapse",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
-          "line": 502
-        },
-        {
-          "kind": "theorem",
-          "name": "revisedSafe_not_anchored",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.revisedSafe_not_anchored",
-          "line": 524
-        },
-        {
-          "kind": "inductive",
-          "name": "Cond",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Cond",
-          "line": 534
-        },
-        {
-          "kind": "inductive",
-          "name": "Form",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Form",
-          "line": 535
-        },
-        {
-          "kind": "inductive",
-          "name": "Cap",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Cap",
-          "line": 536
-        },
-        {
-          "kind": "def",
-          "name": "cap",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.cap",
-          "line": 538
-        },
-        {
-          "kind": "def",
-          "name": "level",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.level",
-          "line": 540
-        },
-        {
-          "kind": "def",
-          "name": "reqCond",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.reqCond",
-          "line": 544
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.web",
-          "line": 549
-        },
-        {
-          "kind": "def",
-          "name": "origSafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.origSafe",
-          "line": 556
-        },
-        {
-          "kind": "theorem",
-          "name": "collapses",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.collapses",
-          "line": 558
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_work",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_work",
-          "line": 563
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_work",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_work",
-          "line": 569
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_stubA",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubA",
-          "line": 572
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_stubA",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubA",
-          "line": 578
-        },
-        {
-          "kind": "theorem",
-          "name": "admits_stubB",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubB",
-          "line": 582
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_stubB",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubB",
-          "line": 588
-        },
-        {
-          "kind": "theorem",
-          "name": "turnover",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.turnover",
-          "line": 592
-        },
-        {
-          "kind": "theorem",
-          "name": "stub_realizes",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.stub_realizes",
-          "line": 601
-        },
-        {
-          "kind": "theorem",
-          "name": "goodUntil",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.goodUntil",
-          "line": 606
-        },
-        {
-          "kind": "theorem",
-          "name": "zeroLevelTurnover",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.zeroLevelTurnover",
-          "line": 614
-        },
-        {
-          "kind": "theorem",
-          "name": "unanchored_passes",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
-          "line": 618
-        },
-        {
-          "kind": "theorem",
-          "name": "anchored_rejects",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects",
-          "line": 624
-        },
-        {
-          "kind": "theorem",
-          "name": "scoped_substrate_margin_step",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
-          "line": 639
-        },
-        {
-          "kind": "theorem",
-          "name": "unscoped_recovers_substrate_margin_step",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
-          "line": 701
-        },
-        {
-          "kind": "structure",
-          "name": "EpochTotal",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochTotal",
-          "line": 719
-        },
-        {
-          "kind": "structure",
-          "name": "EpochCert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochCert",
-          "line": 727
-        },
-        {
-          "kind": "structure",
-          "name": "EpochFamily",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily",
-          "line": 752
-        },
-        {
-          "kind": "abbrev",
-          "name": "State",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.State",
-          "line": 783
-        },
-        {
-          "kind": "def",
-          "name": "Cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Cert",
-          "line": 786
-        },
-        {
-          "kind": "def",
-          "name": "Total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Total",
-          "line": 792
-        },
-        {
-          "kind": "def",
-          "name": "crit",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.crit",
-          "line": 795
-        },
-        {
-          "kind": "def",
-          "name": "Headroom",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Headroom",
-          "line": 798
-        },
-        {
-          "kind": "structure",
-          "name": "AnchorStep",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep",
-          "line": 804
-        },
-        {
-          "kind": "theorem",
-          "name": "AnchorStep.refl",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.refl",
-          "line": 809
-        },
-        {
-          "kind": "theorem",
-          "name": "AnchorStep.trans",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.trans",
-          "line": 812
-        },
-        {
-          "kind": "theorem",
-          "name": "AnchorStep.crit_le",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.crit_le",
-          "line": 821
-        },
-        {
-          "kind": "structure",
-          "name": "EpochHandoffGate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochHandoffGate",
-          "line": 832
-        },
-        {
-          "kind": "inductive",
-          "name": "EpochAct",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochAct",
-          "line": 842
-        },
-        {
-          "kind": "inductive",
-          "name": "EpochStep",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochStep",
-          "line": 847
-        },
-        {
-          "kind": "def",
-          "name": "epochProcess",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochProcess",
-          "line": 861
-        },
-        {
-          "kind": "abbrev",
-          "name": "epochClosedProcess",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochClosedProcess",
-          "line": 866
-        },
-        {
-          "kind": "def",
-          "name": "epochCurrentGuard",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochCurrentGuard",
-          "line": 870
-        },
-        {
-          "kind": "def",
-          "name": "epochClosedGuard",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochClosedGuard",
-          "line": 874
-        },
-        {
-          "kind": "def",
-          "name": "epochInv",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochInv",
-          "line": 878
-        },
-        {
-          "kind": "theorem",
-          "name": "epochInv_certificate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochInv_certificate",
-          "line": 882
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_certificate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_certificate",
-          "line": 940
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_viability_kernel_on_K",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
-          "line": 957
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_viability_kernel",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_viability_kernel",
-          "line": 966
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_anchor_never_weakened",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
-          "line": 978
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_nonDeadlock",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
-          "line": 989
-        },
-        {
-          "kind": "theorem",
-          "name": "gate_rejects_infeasible_entry",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry",
-          "line": 1009
-        },
-        {
-          "kind": "def",
-          "name": "unitEpochFamily",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.unitEpochFamily",
-          "line": 1023
-        },
-        {
-          "kind": "theorem",
-          "name": "reach_polyClosed_to_unitEpoch",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.reach_polyClosed_to_unitEpoch",
-          "line": 1057
-        },
-        {
-          "kind": "theorem",
-          "name": "singleEpoch_recovers_anchored_selfMod",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
-          "line": 1090
-        },
-        {
-          "kind": "theorem",
-          "name": "singleEpoch_recovers_monotone_selfWidening",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
-          "line": 1151
-        },
-        {
-          "kind": "def",
-          "name": "lagAgent",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.lagAgent",
-          "line": 1217
-        },
-        {
-          "kind": "def",
-          "name": "lagContract",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.lagContract",
-          "line": 1230
-        },
-        {
-          "kind": "theorem",
-          "name": "recovers_three",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.recovers_three",
-          "line": 1267
-        },
-        {
-          "kind": "def",
-          "name": "pre",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.pre",
-          "line": 1274
-        },
-        {
-          "kind": "def",
-          "name": "warn",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.warn",
-          "line": 1278
-        },
-        {
-          "kind": "def",
-          "name": "sensor",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.sensor",
-          "line": 1283
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family",
-          "line": 1285
-        },
-        {
-          "kind": "theorem",
-          "name": "cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.cert",
-          "line": 1311
-        },
-        {
-          "kind": "theorem",
-          "name": "total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.total",
-          "line": 1323
-        },
-        {
-          "kind": "def",
-          "name": "base",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base",
-          "line": 1327
-        },
-        {
-          "kind": "theorem",
-          "name": "not_modeRefines",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.not_modeRefines",
-          "line": 1359
-        },
-        {
-          "kind": "theorem",
-          "name": "no_static_anchoredSelfMod_envelope",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
-          "line": 1367
-        },
-        {
-          "kind": "theorem",
-          "name": "epochChain_certifies_upgrade",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
-          "line": 1387
-        },
-        {
-          "kind": "def",
-          "name": "warn",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.warn",
-          "line": 1408
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family",
-          "line": 1410
-        },
-        {
-          "kind": "theorem",
-          "name": "no_finite_draw_bound",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
-          "line": 1437
-        },
-        {
-          "kind": "theorem",
-          "name": "cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.cert",
-          "line": 1440
-        },
-        {
-          "kind": "theorem",
-          "name": "total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.total",
-          "line": 1452
-        },
-        {
-          "kind": "theorem",
-          "name": "epoch_viable_at_headroom",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.epoch_viable_at_headroom",
-          "line": 1457
-        },
-        {
-          "kind": "theorem",
-          "name": "upgrade_up",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_up",
-          "line": 1464
-        },
-        {
-          "kind": "theorem",
-          "name": "upgrade_down",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down",
-          "line": 1476
-        },
-        {
-          "kind": "inductive",
-          "name": "Site2",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2",
-          "line": 1493
-        },
-        {
-          "kind": "def",
-          "name": "scopeAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.scopeAt",
-          "line": 1496
-        },
-        {
-          "kind": "def",
-          "name": "critAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.critAt",
-          "line": 1501
-        },
-        {
-          "kind": "def",
-          "name": "preAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.preAt",
-          "line": 1506
-        },
-        {
-          "kind": "def",
-          "name": "postAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.postAt",
-          "line": 1511
-        },
-        {
-          "kind": "def",
-          "name": "warnAt",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.warnAt",
-          "line": 1516
-        },
-        {
-          "kind": "def",
-          "name": "sensor",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.sensor",
-          "line": 1522
-        },
-        {
-          "kind": "theorem",
-          "name": "post_le_pre",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.post_le_pre",
-          "line": 1526
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family",
-          "line": 1530
-        },
-        {
-          "kind": "theorem",
-          "name": "cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.cert",
-          "line": 1556
-        },
-        {
-          "kind": "theorem",
-          "name": "total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.total",
-          "line": 1589
-        },
-        {
-          "kind": "def",
-          "name": "xInit",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit",
-          "line": 1592
-        },
-        {
-          "kind": "abbrev",
-          "name": "allow",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow",
-          "line": 1596
-        },
-        {
-          "kind": "theorem",
-          "name": "margin_false",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.margin_false",
-          "line": 1598
-        },
-        {
-          "kind": "theorem",
-          "name": "closedScope_allows_sNew_collapse",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
-          "line": 1605
-        },
-        {
-          "kind": "theorem",
-          "name": "timelyOpenEntry_protects_both",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
-          "line": 1615
-        },
-        {
-          "kind": "theorem",
-          "name": "lateOpenEntry_rejected",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
-          "line": 1636
-        },
-        {
-          "kind": "def",
-          "name": "crit",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.crit",
-          "line": 1648
-        },
-        {
-          "kind": "def",
-          "name": "pre",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.pre",
-          "line": 1652
-        },
-        {
-          "kind": "def",
-          "name": "post",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.post",
-          "line": 1656
-        },
-        {
-          "kind": "def",
-          "name": "warn",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.warn",
-          "line": 1660
-        },
-        {
-          "kind": "def",
-          "name": "hsafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.hsafe",
-          "line": 1664
-        },
-        {
-          "kind": "def",
-          "name": "family",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family",
-          "line": 1668
-        },
-        {
-          "kind": "theorem",
-          "name": "cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.cert",
-          "line": 1694
-        },
-        {
-          "kind": "theorem",
-          "name": "total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.total",
-          "line": 1706
-        },
-        {
-          "kind": "abbrev",
-          "name": "allow",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow",
-          "line": 1709
-        },
-        {
-          "kind": "def",
-          "name": "x₀",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀",
-          "line": 1711
-        },
-        {
-          "kind": "theorem",
-          "name": "lowering_gate_unanchored",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.lowering_gate_unanchored",
-          "line": 1714
-        },
-        {
-          "kind": "theorem",
-          "name": "unanchored_drains_inside_own_kernel",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
-          "line": 1721
-        },
-        {
-          "kind": "theorem",
-          "name": "anchored_refuses_lowering",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering",
-          "line": 1736
-        },
-        {
-          "kind": "def",
-          "name": "agent",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agent",
-          "line": 1753
-        },
-        {
-          "kind": "def",
-          "name": "agentContract",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agentContract",
-          "line": 1755
-        },
-        {
-          "kind": "def",
-          "name": "pairComp",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairComp",
-          "line": 1758
-        },
-        {
-          "kind": "def",
-          "name": "pairContract",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairContract",
-          "line": 1760
-        },
-        {
-          "kind": "def",
-          "name": "pairRoute",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairRoute",
-          "line": 1762
-        },
-        {
-          "kind": "def",
-          "name": "pairObs",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairObs",
-          "line": 1766
-        },
-        {
-          "kind": "def",
-          "name": "pairChannel",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairChannel",
-          "line": 1769
-        },
-        {
-          "kind": "def",
-          "name": "pairProcess",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess",
-          "line": 1771
-        },
-        {
-          "kind": "def",
-          "name": "pairGuard",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard",
-          "line": 1775
-        },
-        {
-          "kind": "def",
-          "name": "pairStart",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart",
-          "line": 1779
-        },
-        {
-          "kind": "theorem",
-          "name": "pair_viable_of_headroom",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pair_viable_of_headroom",
-          "line": 1783
-        },
-        {
-          "kind": "theorem",
-          "name": "solo_A_evolve_viable",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
-          "line": 1810
-        },
-        {
-          "kind": "theorem",
-          "name": "solo_B_evolve_viable",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_B_evolve_viable",
-          "line": 1816
-        },
-        {
-          "kind": "theorem",
-          "name": "concurrent_evolve_collapses",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
-          "line": 1823
-        },
-        {
-          "kind": "theorem",
-          "name": "no_local_gate_soloComplete_and_concurrentSafe",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
-          "line": 1832
-        },
-        {
-          "kind": "theorem",
-          "name": "bounded_supremum_local_gate_composes",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
-          "line": 1845
-        },
-        {
-          "kind": "def",
-          "name": "ReciprocalGate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.ReciprocalGate",
-          "line": 1860
-        },
-        {
-          "kind": "theorem",
-          "name": "reciprocalGate_sound",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocalGate_sound",
-          "line": 1863
-        },
-        {
-          "kind": "theorem",
-          "name": "reciprocal_evolve_rejects_8_and_certifies_11",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11",
-          "line": 1871
-        },
-        {
-          "kind": "def",
-          "name": "jointEpochFamily",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily",
-          "line": 1887
-        },
-        {
-          "kind": "abbrev",
-          "name": "jointInit",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointInit",
-          "line": 1914
-        },
-        {
-          "kind": "theorem",
-          "name": "jointEpochFamily_cert",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_cert",
-          "line": 1916
-        },
-        {
-          "kind": "theorem",
-          "name": "jointEpochFamily_total",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_total",
-          "line": 1931
-        },
-        {
-          "kind": "theorem",
-          "name": "jointEpochFamily_anchor",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_anchor",
-          "line": 1935
-        },
-        {
-          "kind": "theorem",
-          "name": "jointEpochFamily_headroom_iff",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_headroom_iff",
-          "line": 1939
-        },
-        {
-          "kind": "theorem",
-          "name": "jointEpochFamily_gate_iff_reciprocalGate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_gate_iff_reciprocalGate",
-          "line": 1951
-        },
-        {
-          "kind": "def",
-          "name": "upgradeDraw",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.upgradeDraw",
-          "line": 1965
-        },
-        {
-          "kind": "def",
-          "name": "jointBoolFamily",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBoolFamily",
-          "line": 1970
-        },
-        {
-          "kind": "abbrev",
-          "name": "jointBoolAllow",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBoolAllow",
-          "line": 1974
-        },
-        {
-          "kind": "theorem",
-          "name": "jointBool_solo_A_upgrade_and_viable",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_A_upgrade_and_viable",
-          "line": 1979
-        },
-        {
-          "kind": "theorem",
-          "name": "jointBool_solo_B_upgrade_and_viable",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_B_upgrade_and_viable",
-          "line": 2007
-        },
-        {
-          "kind": "theorem",
-          "name": "jointBool_simultaneous_refused_at_8",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_refused_at_8",
-          "line": 2036
-        },
-        {
-          "kind": "theorem",
-          "name": "jointBool_simultaneous_certified_at_11",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_certified_at_11",
-          "line": 2050
-        },
-        {
-          "kind": "theorem",
-          "name": "jointBool_no_local_gate_admits_solo_and_matches_joint_gate",
-          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_no_local_gate_admits_solo_and_matches_joint_gate",
-          "line": 2099
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 6,
-        "def": 72,
-        "inductive": 10,
-        "structure": 5,
-        "theorem": 100
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "6b2baa27e5f6fe712712eb435c5eea4c91036cf66c470445ab20e2ef4f30c066": {
       "byte_size": 143532,
       "line_count": 2527,
@@ -307955,6 +306237,1453 @@
         "inductive": 2,
         "structure": 2,
         "theorem": 34
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "78c2b514ba949c9af570f25f9405c2a9fbc7dc8984d355f58838d2ab3adebc8d": {
+      "byte_size": 132592,
+      "line_count": 2661,
+      "imports": [
+        "Becoming.TransformativeViability",
+        "Becoming.PolyComposition"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "altBool",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "altBool_succ_of_false",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool_succ_of_false",
+          "line": 113
+        },
+        {
+          "kind": "theorem",
+          "name": "altBool_succ_of_true",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.altBool_succ_of_true",
+          "line": 116
+        },
+        {
+          "kind": "theorem",
+          "name": "bool_or_of_left",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.bool_or_of_left",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "bool_or_of_right",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.bool_or_of_right",
+          "line": 123
+        },
+        {
+          "kind": "def",
+          "name": "effCrit",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit",
+          "line": 128
+        },
+        {
+          "kind": "theorem",
+          "name": "effCrit_of_true",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_of_true",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "effCrit_of_false",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_of_false",
+          "line": 135
+        },
+        {
+          "kind": "theorem",
+          "name": "effCrit_le_of_pullback",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_le_of_pullback",
+          "line": 140
+        },
+        {
+          "kind": "theorem",
+          "name": "effCrit_le_of_margin",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.effCrit_le_of_margin",
+          "line": 151
+        },
+        {
+          "kind": "def",
+          "name": "selfGain",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.selfGain",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "selfGain_rises",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.selfGain_rises",
+          "line": 163
+        },
+        {
+          "kind": "def",
+          "name": "TransformsAcrossEpochs",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "constantEpoch_iff_transformsViably",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+          "line": 195
+        },
+        {
+          "kind": "theorem",
+          "name": "transformsViably_forbids_retirement",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.transformsViably_forbids_retirement",
+          "line": 209
+        },
+        {
+          "kind": "def",
+          "name": "SafeAnchored",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SafeAnchored",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "anchored_reserveSafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.anchored_reserveSafe",
+          "line": 220
+        },
+        {
+          "kind": "theorem",
+          "name": "anchored_rejects_unsafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
+          "line": 229
+        },
+        {
+          "kind": "inductive",
+          "name": "Cond",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cond",
+          "line": 242
+        },
+        {
+          "kind": "inductive",
+          "name": "Form",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Form",
+          "line": 245
+        },
+        {
+          "kind": "inductive",
+          "name": "Cap0",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cap0",
+          "line": 249
+        },
+        {
+          "kind": "inductive",
+          "name": "Cap1",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Cap1",
+          "line": 253
+        },
+        {
+          "kind": "def",
+          "name": "CapAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.CapAt",
+          "line": 256
+        },
+        {
+          "kind": "def",
+          "name": "cap0",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.cap0",
+          "line": 261
+        },
+        {
+          "kind": "def",
+          "name": "cap1",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.cap1",
+          "line": 268
+        },
+        {
+          "kind": "def",
+          "name": "capAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.capAt",
+          "line": 275
+        },
+        {
+          "kind": "def",
+          "name": "Preserves",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Preserves",
+          "line": 280
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.level",
+          "line": 294
+        },
+        {
+          "kind": "def",
+          "name": "ownCond",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.ownCond",
+          "line": 302
+        },
+        {
+          "kind": "def",
+          "name": "reqCond",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.reqCond",
+          "line": 329
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.web",
+          "line": 331
+        },
+        {
+          "kind": "def",
+          "name": "epoch",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.epoch",
+          "line": 338
+        },
+        {
+          "kind": "def",
+          "name": "Safe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.Safe",
+          "line": 342
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_sub",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_sub",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_leg_zero",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_leg_zero",
+          "line": 350
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_leg_succ",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_leg_succ",
+          "line": 356
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_modA",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_modA",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_modA",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modA",
+          "line": 370
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_modB",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_modB",
+          "line": 377
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_modB",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.not_admits_modB",
+          "line": 388
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_emerg",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_emerg",
+          "line": 395
+        },
+        {
+          "kind": "theorem",
+          "name": "micro_turnover",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.micro_turnover",
+          "line": 401
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_mod_some",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.admits_mod_some",
+          "line": 411
+        },
+        {
+          "kind": "theorem",
+          "name": "emergent_not_replacement",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.emergent_not_replacement",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "rigidLockIn_transformsAcrossEpochs",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
+          "line": 424
+        },
+        {
+          "kind": "theorem",
+          "name": "rigidLockIn_fails_all_separating_caps",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
+          "line": 452
+        },
+        {
+          "kind": "theorem",
+          "name": "epoch0_reading_frozen_fails",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.epoch0_reading_frozen_fails",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "coarsened_reading_passes",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
+          "line": 473
+        },
+        {
+          "kind": "def",
+          "name": "GoodUntil",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.GoodUntil",
+          "line": 498
+        },
+        {
+          "kind": "def",
+          "name": "ZeroLevelTurnover",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.ZeroLevelTurnover",
+          "line": 506
+        },
+        {
+          "kind": "def",
+          "name": "collapseEpoch",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.collapseEpoch",
+          "line": 513
+        },
+        {
+          "kind": "def",
+          "name": "revisedSafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.revisedSafe",
+          "line": 516
+        },
+        {
+          "kind": "theorem",
+          "name": "unanchored_selfRevision_certifies_any_collapse",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
+          "line": 523
+        },
+        {
+          "kind": "theorem",
+          "name": "revisedSafe_not_anchored",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.revisedSafe_not_anchored",
+          "line": 545
+        },
+        {
+          "kind": "inductive",
+          "name": "Cond",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Cond",
+          "line": 555
+        },
+        {
+          "kind": "inductive",
+          "name": "Form",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Form",
+          "line": 556
+        },
+        {
+          "kind": "inductive",
+          "name": "Cap",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.Cap",
+          "line": 557
+        },
+        {
+          "kind": "def",
+          "name": "cap",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.cap",
+          "line": 559
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.level",
+          "line": 561
+        },
+        {
+          "kind": "def",
+          "name": "reqCond",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.reqCond",
+          "line": 565
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.web",
+          "line": 570
+        },
+        {
+          "kind": "def",
+          "name": "origSafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.origSafe",
+          "line": 577
+        },
+        {
+          "kind": "theorem",
+          "name": "collapses",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.collapses",
+          "line": 579
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_work",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_work",
+          "line": 584
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_work",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_work",
+          "line": 590
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_stubA",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubA",
+          "line": 593
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_stubA",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubA",
+          "line": 599
+        },
+        {
+          "kind": "theorem",
+          "name": "admits_stubB",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.admits_stubB",
+          "line": 603
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_stubB",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.not_admits_stubB",
+          "line": 609
+        },
+        {
+          "kind": "theorem",
+          "name": "turnover",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.turnover",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "stub_realizes",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.stub_realizes",
+          "line": 622
+        },
+        {
+          "kind": "theorem",
+          "name": "goodUntil",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.goodUntil",
+          "line": 627
+        },
+        {
+          "kind": "theorem",
+          "name": "zeroLevelTurnover",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.zeroLevelTurnover",
+          "line": 635
+        },
+        {
+          "kind": "theorem",
+          "name": "unanchored_passes",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
+          "line": 639
+        },
+        {
+          "kind": "theorem",
+          "name": "anchored_rejects",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects",
+          "line": 645
+        },
+        {
+          "kind": "theorem",
+          "name": "scoped_substrate_margin_step",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
+          "line": 660
+        },
+        {
+          "kind": "theorem",
+          "name": "unscoped_recovers_substrate_margin_step",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
+          "line": 722
+        },
+        {
+          "kind": "structure",
+          "name": "EpochTotal",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochTotal",
+          "line": 740
+        },
+        {
+          "kind": "structure",
+          "name": "EpochCert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochCert",
+          "line": 748
+        },
+        {
+          "kind": "structure",
+          "name": "EpochFamily",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily",
+          "line": 773
+        },
+        {
+          "kind": "abbrev",
+          "name": "State",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.State",
+          "line": 804
+        },
+        {
+          "kind": "def",
+          "name": "Cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Cert",
+          "line": 807
+        },
+        {
+          "kind": "def",
+          "name": "Total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Total",
+          "line": 813
+        },
+        {
+          "kind": "def",
+          "name": "crit",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.crit",
+          "line": 816
+        },
+        {
+          "kind": "def",
+          "name": "Headroom",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.Headroom",
+          "line": 819
+        },
+        {
+          "kind": "structure",
+          "name": "AnchorStep",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep",
+          "line": 825
+        },
+        {
+          "kind": "theorem",
+          "name": "AnchorStep.refl",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.refl",
+          "line": 830
+        },
+        {
+          "kind": "theorem",
+          "name": "AnchorStep.trans",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.trans",
+          "line": 833
+        },
+        {
+          "kind": "theorem",
+          "name": "AnchorStep.crit_le",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochFamily.AnchorStep.crit_le",
+          "line": 842
+        },
+        {
+          "kind": "structure",
+          "name": "EpochHandoffGate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochHandoffGate",
+          "line": 853
+        },
+        {
+          "kind": "inductive",
+          "name": "EpochAct",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochAct",
+          "line": 863
+        },
+        {
+          "kind": "inductive",
+          "name": "EpochStep",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EpochStep",
+          "line": 868
+        },
+        {
+          "kind": "def",
+          "name": "epochProcess",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochProcess",
+          "line": 882
+        },
+        {
+          "kind": "abbrev",
+          "name": "epochClosedProcess",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochClosedProcess",
+          "line": 887
+        },
+        {
+          "kind": "def",
+          "name": "epochCurrentGuard",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochCurrentGuard",
+          "line": 891
+        },
+        {
+          "kind": "def",
+          "name": "epochClosedGuard",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochClosedGuard",
+          "line": 895
+        },
+        {
+          "kind": "def",
+          "name": "epochInv",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochInv",
+          "line": 899
+        },
+        {
+          "kind": "theorem",
+          "name": "epochInv_certificate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochInv_certificate",
+          "line": 903
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_certificate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_certificate",
+          "line": 961
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_viability_kernel_on_K",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+          "line": 978
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_viability_kernel",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_viability_kernel",
+          "line": 987
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_anchor_never_weakened",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
+          "line": 999
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_nonDeadlock",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
+          "line": 1010
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_rejects_infeasible_entry",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry",
+          "line": 1030
+        },
+        {
+          "kind": "def",
+          "name": "unitEpochFamily",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.unitEpochFamily",
+          "line": 1044
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_polyClosed_to_unitEpoch",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.reach_polyClosed_to_unitEpoch",
+          "line": 1078
+        },
+        {
+          "kind": "theorem",
+          "name": "singleEpoch_recovers_anchored_selfMod",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
+          "line": 1111
+        },
+        {
+          "kind": "theorem",
+          "name": "singleEpoch_recovers_monotone_selfWidening",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+          "line": 1172
+        },
+        {
+          "kind": "def",
+          "name": "lagAgent",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.lagAgent",
+          "line": 1238
+        },
+        {
+          "kind": "def",
+          "name": "lagContract",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.lagContract",
+          "line": 1251
+        },
+        {
+          "kind": "theorem",
+          "name": "recovers_three",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.recovers_three",
+          "line": 1288
+        },
+        {
+          "kind": "def",
+          "name": "pre",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.pre",
+          "line": 1295
+        },
+        {
+          "kind": "def",
+          "name": "warn",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.warn",
+          "line": 1299
+        },
+        {
+          "kind": "def",
+          "name": "sensor",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.sensor",
+          "line": 1304
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.family",
+          "line": 1306
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.cert",
+          "line": 1332
+        },
+        {
+          "kind": "theorem",
+          "name": "total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.total",
+          "line": 1344
+        },
+        {
+          "kind": "def",
+          "name": "base",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.base",
+          "line": 1348
+        },
+        {
+          "kind": "theorem",
+          "name": "not_modeRefines",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.not_modeRefines",
+          "line": 1380
+        },
+        {
+          "kind": "theorem",
+          "name": "no_static_anchoredSelfMod_envelope",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+          "line": 1388
+        },
+        {
+          "kind": "theorem",
+          "name": "epochChain_certifies_upgrade",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
+          "line": 1408
+        },
+        {
+          "kind": "def",
+          "name": "warn",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.warn",
+          "line": 1429
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.family",
+          "line": 1431
+        },
+        {
+          "kind": "theorem",
+          "name": "no_finite_draw_bound",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
+          "line": 1458
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.cert",
+          "line": 1461
+        },
+        {
+          "kind": "theorem",
+          "name": "total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.total",
+          "line": 1473
+        },
+        {
+          "kind": "theorem",
+          "name": "epoch_viable_at_headroom",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.epoch_viable_at_headroom",
+          "line": 1478
+        },
+        {
+          "kind": "theorem",
+          "name": "upgrade_up",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_up",
+          "line": 1485
+        },
+        {
+          "kind": "theorem",
+          "name": "upgrade_down",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down",
+          "line": 1497
+        },
+        {
+          "kind": "inductive",
+          "name": "Site2",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.Site2",
+          "line": 1514
+        },
+        {
+          "kind": "def",
+          "name": "scopeAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.scopeAt",
+          "line": 1517
+        },
+        {
+          "kind": "def",
+          "name": "critAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.critAt",
+          "line": 1522
+        },
+        {
+          "kind": "def",
+          "name": "preAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.preAt",
+          "line": 1527
+        },
+        {
+          "kind": "def",
+          "name": "postAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.postAt",
+          "line": 1532
+        },
+        {
+          "kind": "def",
+          "name": "warnAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.warnAt",
+          "line": 1537
+        },
+        {
+          "kind": "def",
+          "name": "sensor",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.sensor",
+          "line": 1543
+        },
+        {
+          "kind": "theorem",
+          "name": "post_le_pre",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.post_le_pre",
+          "line": 1547
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.family",
+          "line": 1551
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.cert",
+          "line": 1577
+        },
+        {
+          "kind": "theorem",
+          "name": "total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.total",
+          "line": 1610
+        },
+        {
+          "kind": "def",
+          "name": "xInit",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.xInit",
+          "line": 1613
+        },
+        {
+          "kind": "abbrev",
+          "name": "allow",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.allow",
+          "line": 1617
+        },
+        {
+          "kind": "theorem",
+          "name": "margin_false",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.margin_false",
+          "line": 1619
+        },
+        {
+          "kind": "theorem",
+          "name": "closedScope_allows_sNew_collapse",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
+          "line": 1626
+        },
+        {
+          "kind": "theorem",
+          "name": "timelyOpenEntry_protects_both",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+          "line": 1636
+        },
+        {
+          "kind": "theorem",
+          "name": "lateOpenEntry_rejected",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
+          "line": 1657
+        },
+        {
+          "kind": "def",
+          "name": "crit",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.crit",
+          "line": 1669
+        },
+        {
+          "kind": "def",
+          "name": "pre",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.pre",
+          "line": 1673
+        },
+        {
+          "kind": "def",
+          "name": "post",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.post",
+          "line": 1677
+        },
+        {
+          "kind": "def",
+          "name": "warn",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.warn",
+          "line": 1681
+        },
+        {
+          "kind": "def",
+          "name": "hsafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.hsafe",
+          "line": 1685
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.family",
+          "line": 1689
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.cert",
+          "line": 1715
+        },
+        {
+          "kind": "theorem",
+          "name": "total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.total",
+          "line": 1727
+        },
+        {
+          "kind": "abbrev",
+          "name": "allow",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.allow",
+          "line": 1730
+        },
+        {
+          "kind": "def",
+          "name": "x₀",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.x₀",
+          "line": 1732
+        },
+        {
+          "kind": "theorem",
+          "name": "lowering_gate_unanchored",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.lowering_gate_unanchored",
+          "line": 1735
+        },
+        {
+          "kind": "theorem",
+          "name": "unanchored_drains_inside_own_kernel",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+          "line": 1742
+        },
+        {
+          "kind": "theorem",
+          "name": "anchored_refuses_lowering",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering",
+          "line": 1757
+        },
+        {
+          "kind": "def",
+          "name": "agent",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agent",
+          "line": 1774
+        },
+        {
+          "kind": "def",
+          "name": "agentContract",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.agentContract",
+          "line": 1776
+        },
+        {
+          "kind": "def",
+          "name": "pairComp",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairComp",
+          "line": 1779
+        },
+        {
+          "kind": "def",
+          "name": "pairContract",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairContract",
+          "line": 1781
+        },
+        {
+          "kind": "def",
+          "name": "pairRoute",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairRoute",
+          "line": 1783
+        },
+        {
+          "kind": "def",
+          "name": "pairObs",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairObs",
+          "line": 1787
+        },
+        {
+          "kind": "def",
+          "name": "pairChannel",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairChannel",
+          "line": 1790
+        },
+        {
+          "kind": "def",
+          "name": "pairProcess",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairProcess",
+          "line": 1792
+        },
+        {
+          "kind": "def",
+          "name": "pairGuard",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairGuard",
+          "line": 1796
+        },
+        {
+          "kind": "def",
+          "name": "pairStart",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pairStart",
+          "line": 1800
+        },
+        {
+          "kind": "theorem",
+          "name": "pair_viable_of_headroom",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.pair_viable_of_headroom",
+          "line": 1804
+        },
+        {
+          "kind": "theorem",
+          "name": "solo_A_evolve_viable",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
+          "line": 1831
+        },
+        {
+          "kind": "theorem",
+          "name": "solo_B_evolve_viable",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_B_evolve_viable",
+          "line": 1837
+        },
+        {
+          "kind": "theorem",
+          "name": "concurrent_evolve_collapses",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
+          "line": 1844
+        },
+        {
+          "kind": "theorem",
+          "name": "no_local_gate_soloComplete_and_concurrentSafe",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
+          "line": 1853
+        },
+        {
+          "kind": "theorem",
+          "name": "bounded_supremum_local_gate_composes",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
+          "line": 1866
+        },
+        {
+          "kind": "def",
+          "name": "ReciprocalGate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.ReciprocalGate",
+          "line": 1881
+        },
+        {
+          "kind": "theorem",
+          "name": "reciprocalGate_sound",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocalGate_sound",
+          "line": 1884
+        },
+        {
+          "kind": "theorem",
+          "name": "reciprocal_evolve_rejects_8_and_certifies_11",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11",
+          "line": 1892
+        },
+        {
+          "kind": "def",
+          "name": "jointEpochFamily",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily",
+          "line": 1908
+        },
+        {
+          "kind": "abbrev",
+          "name": "jointInit",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointInit",
+          "line": 1935
+        },
+        {
+          "kind": "theorem",
+          "name": "jointEpochFamily_cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_cert",
+          "line": 1937
+        },
+        {
+          "kind": "theorem",
+          "name": "jointEpochFamily_total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_total",
+          "line": 1952
+        },
+        {
+          "kind": "theorem",
+          "name": "jointEpochFamily_anchor",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_anchor",
+          "line": 1956
+        },
+        {
+          "kind": "theorem",
+          "name": "jointEpochFamily_headroom_iff",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_headroom_iff",
+          "line": 1960
+        },
+        {
+          "kind": "theorem",
+          "name": "jointEpochFamily_gate_iff_reciprocalGate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_gate_iff_reciprocalGate",
+          "line": 1972
+        },
+        {
+          "kind": "def",
+          "name": "upgradeDraw",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.upgradeDraw",
+          "line": 1986
+        },
+        {
+          "kind": "def",
+          "name": "jointBoolFamily",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBoolFamily",
+          "line": 1991
+        },
+        {
+          "kind": "abbrev",
+          "name": "jointBoolAllow",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBoolAllow",
+          "line": 1995
+        },
+        {
+          "kind": "theorem",
+          "name": "jointBool_solo_A_upgrade_and_viable",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_A_upgrade_and_viable",
+          "line": 2000
+        },
+        {
+          "kind": "theorem",
+          "name": "jointBool_solo_B_upgrade_and_viable",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_B_upgrade_and_viable",
+          "line": 2028
+        },
+        {
+          "kind": "theorem",
+          "name": "jointBool_simultaneous_refused_at_8",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_refused_at_8",
+          "line": 2057
+        },
+        {
+          "kind": "theorem",
+          "name": "jointBool_simultaneous_certified_at_11",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_certified_at_11",
+          "line": 2071
+        },
+        {
+          "kind": "theorem",
+          "name": "jointBool_no_local_gate_admits_solo_and_matches_joint_gate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_no_local_gate_admits_solo_and_matches_joint_gate",
+          "line": 2120
+        },
+        {
+          "kind": "def",
+          "name": "switchoverReserve",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverReserve",
+          "line": 2149
+        },
+        {
+          "kind": "structure",
+          "name": "SwitchoverHandoffGate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverHandoffGate",
+          "line": 2157
+        },
+        {
+          "kind": "inductive",
+          "name": "SwitchoverEpochStep",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverEpochStep",
+          "line": 2168
+        },
+        {
+          "kind": "def",
+          "name": "switchoverEpochProcess",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverEpochProcess",
+          "line": 2184
+        },
+        {
+          "kind": "abbrev",
+          "name": "switchoverClosedProcess",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverClosedProcess",
+          "line": 2190
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverInv_certificate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverInv_certificate",
+          "line": 2195
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverChain_certificate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverChain_certificate",
+          "line": 2209
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverChain_viability_kernel_on_K",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverChain_viability_kernel_on_K",
+          "line": 2225
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverChain_viability_kernel",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverChain_viability_kernel",
+          "line": 2236
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverChain_anchor_never_weakened",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverChain_anchor_never_weakened",
+          "line": 2247
+        },
+        {
+          "kind": "theorem",
+          "name": "switchoverChain_nonDeadlock",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchoverChain_nonDeadlock",
+          "line": 2259
+        },
+        {
+          "kind": "theorem",
+          "name": "switchover_gate_rejects_insufficient_margin",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.switchover_gate_rejects_insufficient_margin",
+          "line": 2280
+        },
+        {
+          "kind": "theorem",
+          "name": "zeroSwitchDraw_gate_iff_epochHandoffGate",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.zeroSwitchDraw_gate_iff_epochHandoffGate",
+          "line": 2295
+        },
+        {
+          "kind": "theorem",
+          "name": "zeroSwitchDraw_step_iff_epochStep",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.zeroSwitchDraw_step_iff_epochStep",
+          "line": 2316
+        },
+        {
+          "kind": "abbrev",
+          "name": "allow",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverDrawWitness.allow",
+          "line": 2335
+        },
+        {
+          "kind": "def",
+          "name": "switchDraw",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverDrawWitness.switchDraw",
+          "line": 2337
+        },
+        {
+          "kind": "theorem",
+          "name": "zeroDraw_accepts_7_but_switchover_breaches_floor",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverDrawWitness.zeroDraw_accepts_7_but_switchover_breaches_floor",
+          "line": 2341
+        },
+        {
+          "kind": "theorem",
+          "name": "switchover_certifies_12",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.SwitchoverDrawWitness.switchover_certifies_12",
+          "line": 2367
+        },
+        {
+          "kind": "abbrev",
+          "name": "Site2",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.Site2",
+          "line": 2403
+        },
+        {
+          "kind": "def",
+          "name": "scopeAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.scopeAt",
+          "line": 2405
+        },
+        {
+          "kind": "def",
+          "name": "critAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.critAt",
+          "line": 2410
+        },
+        {
+          "kind": "def",
+          "name": "preAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.preAt",
+          "line": 2415
+        },
+        {
+          "kind": "def",
+          "name": "postAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.postAt",
+          "line": 2420
+        },
+        {
+          "kind": "def",
+          "name": "warnAt",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.warnAt",
+          "line": 2425
+        },
+        {
+          "kind": "def",
+          "name": "sensor",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.sensor",
+          "line": 2431
+        },
+        {
+          "kind": "theorem",
+          "name": "post_le_pre",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.post_le_pre",
+          "line": 2435
+        },
+        {
+          "kind": "def",
+          "name": "family",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.family",
+          "line": 2439
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.cert",
+          "line": 2465
+        },
+        {
+          "kind": "theorem",
+          "name": "total",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.total",
+          "line": 2498
+        },
+        {
+          "kind": "theorem",
+          "name": "anchor_false_true",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.anchor_false_true",
+          "line": 2501
+        },
+        {
+          "kind": "abbrev",
+          "name": "allow",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.allow",
+          "line": 2508
+        },
+        {
+          "kind": "def",
+          "name": "x₀",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.x₀",
+          "line": 2510
+        },
+        {
+          "kind": "def",
+          "name": "xIntact",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xIntact",
+          "line": 2516
+        },
+        {
+          "kind": "def",
+          "name": "xDrain",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xDrain",
+          "line": 2519
+        },
+        {
+          "kind": "theorem",
+          "name": "xDrain_sOld",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xDrain_sOld",
+          "line": 2526
+        },
+        {
+          "kind": "theorem",
+          "name": "xDrain_step",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xDrain_step",
+          "line": 2534
+        },
+        {
+          "kind": "theorem",
+          "name": "xDrain_reach",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xDrain_reach",
+          "line": 2553
+        },
+        {
+          "kind": "theorem",
+          "name": "xDrain_orbit_values",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.xDrain_orbit_values",
+          "line": 2559
+        },
+        {
+          "kind": "def",
+          "name": "obsResidual",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsResidual",
+          "line": 2572
+        },
+        {
+          "kind": "def",
+          "name": "obsSilent",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsSilent",
+          "line": 2576
+        },
+        {
+          "kind": "def",
+          "name": "residualDrop",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.residualDrop",
+          "line": 2579
+        },
+        {
+          "kind": "theorem",
+          "name": "endogenous_site_discovery_protects_both",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.endogenous_site_discovery_protects_both",
+          "line": 2585
+        },
+        {
+          "kind": "theorem",
+          "name": "obsSilent_agree_le_6",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsSilent_agree_le_6",
+          "line": 2620
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_unmodelled_site_impossibility",
+          "qualified_name_hint": "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.silent_unmodelled_site_impossibility",
+          "line": 2634
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 10,
+        "def": 88,
+        "inductive": 11,
+        "structure": 6,
+        "theorem": 122
       },
       "textual_markers": {
         "sorry": [],
@@ -399111,852 +398840,6 @@
       },
       "print_axioms_commands": 11
     },
-    "a183ce82d649f7637aef78d52de83900b04560c8718ac0423b97d10670a6078b": {
-      "byte_size": 143071,
-      "line_count": 2333,
-      "imports": [
-        "Becoming.EndogenousEmergence",
-        "Becoming.ClosedCapture",
-        "Becoming.PacedStock"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "gate",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate",
-          "line": 76
-        },
-        {
-          "kind": "def",
-          "name": "gatedStep",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedStep",
-          "line": 82
-        },
-        {
-          "kind": "def",
-          "name": "gatedOrbit",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedOrbit",
-          "line": 88
-        },
-        {
-          "kind": "theorem",
-          "name": "gate_extract",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate_extract",
-          "line": 93
-        },
-        {
-          "kind": "theorem",
-          "name": "gate_of_admitted",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate_of_admitted",
-          "line": 96
-        },
-        {
-          "kind": "theorem",
-          "name": "gatedStep_eq_closed",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedStep_eq_closed",
-          "line": 101
-        },
-        {
-          "kind": "theorem",
-          "name": "gated_eq_closed",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gated_eq_closed",
-          "line": 112
-        },
-        {
-          "kind": "theorem",
-          "name": "lockout_pure_extract",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.lockout_pure_extract",
-          "line": 126
-        },
-        {
-          "kind": "theorem",
-          "name": "lockout_learner_irrelevant",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant",
-          "line": 142
-        },
-        {
-          "kind": "def",
-          "name": "admits",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.admits",
-          "line": 154
-        },
-        {
-          "kind": "def",
-          "name": "registers",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers",
-          "line": 157
-        },
-        {
-          "kind": "theorem",
-          "name": "turn_fst",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_fst",
-          "line": 159
-        },
-        {
-          "kind": "theorem",
-          "name": "turn_sim",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_sim",
-          "line": 166
-        },
-        {
-          "kind": "theorem",
-          "name": "turn_sim_plain",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_sim_plain",
-          "line": 175
-        },
-        {
-          "kind": "theorem",
-          "name": "select_keeps_admitted",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.select_keeps_admitted",
-          "line": 184
-        },
-        {
-          "kind": "theorem",
-          "name": "not_admits_of_le",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.not_admits_of_le",
-          "line": 189
-        },
-        {
-          "kind": "theorem",
-          "name": "region_stays",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.region_stays",
-          "line": 201
-        },
-        {
-          "kind": "theorem",
-          "name": "rule_kept_span",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.rule_kept_span",
-          "line": 208
-        },
-        {
-          "kind": "def",
-          "name": "markRead",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markRead",
-          "line": 229
-        },
-        {
-          "kind": "abbrev",
-          "name": "markCourse",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markCourse",
-          "line": 235
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_beyond_succ",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_beyond_succ",
-          "line": 244
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_reads_beyond",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_reads_beyond",
-          "line": 253
-        },
-        {
-          "kind": "theorem",
-          "name": "markRead_eq_lossPool",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markRead_eq_lossPool",
-          "line": 261
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_eq_thinned",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_eq_thinned",
-          "line": 275
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_never_eq_pre",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_never_eq_pre",
-          "line": 318
-        },
-        {
-          "kind": "theorem",
-          "name": "closed_trap_outlives_loss",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss",
-          "line": 348
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_kept_iff",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_kept_iff",
-          "line": 405
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_kept_locks_out",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
-          "line": 431
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_turned_iff",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_turned_iff",
-          "line": 459
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_turned_admits_iff",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
-          "line": 518
-        },
-        {
-          "kind": "theorem",
-          "name": "mirror_strict_disfavours_iff",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mirror_strict_disfavours_iff",
-          "line": 572
-        },
-        {
-          "kind": "theorem",
-          "name": "mirror_strict_favours_iff",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mirror_strict_favours_iff",
-          "line": 593
-        },
-        {
-          "kind": "def",
-          "name": "MiddleMinus",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.MiddleMinus",
-          "line": 614
-        },
-        {
-          "kind": "def",
-          "name": "MiddlePlus",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.MiddlePlus",
-          "line": 619
-        },
-        {
-          "kind": "theorem",
-          "name": "reading_state_four_way",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.reading_state_four_way",
-          "line": 624
-        },
-        {
-          "kind": "theorem",
-          "name": "middle_disjoint_locked",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.middle_disjoint_locked",
-          "line": 643
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_rule_at_next_read",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_rule_at_next_read",
-          "line": 655
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_middle_minus_span",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_minus_span",
-          "line": 683
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_middle_plus_span",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_plus_span",
-          "line": 743
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_even_or_odd",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_even_or_odd",
-          "line": 787
-        },
-        {
-          "kind": "theorem",
-          "name": "seq_ge_zero",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.seq_ge_zero",
-          "line": 793
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_le_of_two_mul_le_two_mul_succ",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul_succ",
-          "line": 798
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_le_of_two_mul_succ_le_two_mul_succ_succ",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_succ_le_two_mul_succ_succ",
-          "line": 807
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_le_of_two_mul_le_two_mul",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul",
-          "line": 817
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_middle_band_trichotomy",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_band_trichotomy",
-          "line": 825
-        },
-        {
-          "kind": "theorem",
-          "name": "select_order_mono",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.select_order_mono",
-          "line": 917
-        },
-        {
-          "kind": "theorem",
-          "name": "paced_post_order_mono",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.paced_post_order_mono",
-          "line": 922
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_post_order_mono",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_post_order_mono",
-          "line": 932
-        },
-        {
-          "kind": "theorem",
-          "name": "mark_middle_band_monotone_partition",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_band_monotone_partition",
-          "line": 994
-        },
-        {
-          "kind": "def",
-          "name": "raceStep",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.raceStep",
-          "line": 1039
-        },
-        {
-          "kind": "abbrev",
-          "name": "raceCourse",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.raceCourse",
-          "line": 1045
-        },
-        {
-          "kind": "theorem",
-          "name": "race_reads_beyond",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_reads_beyond",
-          "line": 1055
-        },
-        {
-          "kind": "theorem",
-          "name": "race_stock_is_gated",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_stock_is_gated",
-          "line": 1062
-        },
-        {
-          "kind": "theorem",
-          "name": "closed_race_registration_irrelevant",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant",
-          "line": 1074
-        },
-        {
-          "kind": "theorem",
-          "name": "registers_stays",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers_stays",
-          "line": 1086
-        },
-        {
-          "kind": "theorem",
-          "name": "resolved_unregistered_stays",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.resolved_unregistered_stays",
-          "line": 1094
-        },
-        {
-          "kind": "theorem",
-          "name": "registers_from_of_resolved",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers_from_of_resolved",
-          "line": 1105
-        },
-        {
-          "kind": "theorem",
-          "name": "unregistered_forever_of_resolved",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved",
-          "line": 1125
-        },
-        {
-          "kind": "abbrev",
-          "name": "emergentRace",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace",
-          "line": 1148
-        },
-        {
-          "kind": "def",
-          "name": "wMasked",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMasked",
-          "line": 1155
-        },
-        {
-          "kind": "def",
-          "name": "cadence3",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3",
-          "line": 1164
-        },
-        {
-          "kind": "theorem",
-          "name": "cadence3_mod",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3_mod",
-          "line": 1170
-        },
-        {
-          "kind": "theorem",
-          "name": "cadence3_readAtSpanEnd",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
-          "line": 1183
-        },
-        {
-          "kind": "theorem",
-          "name": "hi_lo_hc",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_lo_hc",
-          "line": 1203
-        },
-        {
-          "kind": "theorem",
-          "name": "hi_lo_ho",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_lo_ho",
-          "line": 1204
-        },
-        {
-          "kind": "theorem",
-          "name": "hi_strict",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_strict",
-          "line": 1205
-        },
-        {
-          "kind": "theorem",
-          "name": "emergentRace_eq_closedOrbit_before",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before",
-          "line": 1207
-        },
-        {
-          "kind": "theorem",
-          "name": "reg4_of_race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.reg4_of_race",
-          "line": 1214
-        },
-        {
-          "kind": "theorem",
-          "name": "unreg_of_race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.unreg_of_race",
-          "line": 1234
-        },
-        {
-          "kind": "def",
-          "name": "w1Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w1Race",
-          "line": 1256
-        },
-        {
-          "kind": "def",
-          "name": "w2Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w2Race",
-          "line": 1257
-        },
-        {
-          "kind": "def",
-          "name": "w3Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w3Race",
-          "line": 1258
-        },
-        {
-          "kind": "def",
-          "name": "w4Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w4Race",
-          "line": 1259
-        },
-        {
-          "kind": "def",
-          "name": "w5SlowRace",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w5SlowRace",
-          "line": 1260
-        },
-        {
-          "kind": "def",
-          "name": "w5FastRace",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w5FastRace",
-          "line": 1261
-        },
-        {
-          "kind": "def",
-          "name": "w6Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w6Race",
-          "line": 1262
-        },
-        {
-          "kind": "theorem",
-          "name": "race_in_time",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_in_time",
-          "line": 1269
-        },
-        {
-          "kind": "theorem",
-          "name": "race_late_after_registration",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_late_after_registration",
-          "line": 1301
-        },
-        {
-          "kind": "theorem",
-          "name": "race_probe_blocked",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_probe_blocked",
-          "line": 1341
-        },
-        {
-          "kind": "theorem",
-          "name": "race_masked_strain",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_masked_strain",
-          "line": 1378
-        },
-        {
-          "kind": "theorem",
-          "name": "race_slow_cadence",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_slow_cadence",
-          "line": 1434
-        },
-        {
-          "kind": "theorem",
-          "name": "race_fast_cadence",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_fast_cadence",
-          "line": 1477
-        },
-        {
-          "kind": "theorem",
-          "name": "race_exo_no_false_turn",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_exo_no_false_turn",
-          "line": 1506
-        },
-        {
-          "kind": "def",
-          "name": "cadence2",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2",
-          "line": 1532
-        },
-        {
-          "kind": "theorem",
-          "name": "cadence2_mod",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2_mod",
-          "line": 1537
-        },
-        {
-          "kind": "theorem",
-          "name": "cadence2_readAtSpanEnd",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd",
-          "line": 1548
-        },
-        {
-          "kind": "theorem",
-          "name": "wEndo_stepStock_safe_ge",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wEndo_stepStock_safe_ge",
-          "line": 1561
-        },
-        {
-          "kind": "theorem",
-          "name": "emergentRace_stabilizes_from",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace_stabilizes_from",
-          "line": 1577
-        },
-        {
-          "kind": "def",
-          "name": "wMiddleLockRace",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleLockRace",
-          "line": 1647
-        },
-        {
-          "kind": "def",
-          "name": "wMiddleAlt5Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleAlt5Race",
-          "line": 1648
-        },
-        {
-          "kind": "def",
-          "name": "wMiddleAlt3Race",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleAlt3Race",
-          "line": 1649
-        },
-        {
-          "kind": "def",
-          "name": "wMiddleSpanRecoveryRace",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleSpanRecoveryRace",
-          "line": 1650
-        },
-        {
-          "kind": "theorem",
-          "name": "race_middle_exits_to_lock",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_exits_to_lock",
-          "line": 1656
-        },
-        {
-          "kind": "theorem",
-          "name": "race_middle_alternates_and_turns",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_alternates_and_turns",
-          "line": 1713
-        },
-        {
-          "kind": "theorem",
-          "name": "race_middle_short_oscillation_turns",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_short_oscillation_turns",
-          "line": 1801
-        },
-        {
-          "kind": "theorem",
-          "name": "race_middle_span_recovery_turns",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_span_recovery_turns",
-          "line": 1865
-        },
-        {
-          "kind": "def",
-          "name": "mask",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask",
-          "line": 1922
-        },
-        {
-          "kind": "theorem",
-          "name": "mask_involutive",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_involutive",
-          "line": 1926
-        },
-        {
-          "kind": "theorem",
-          "name": "mask_comm",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_comm",
-          "line": 1929
-        },
-        {
-          "kind": "theorem",
-          "name": "mask_assoc",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_assoc",
-          "line": 1932
-        },
-        {
-          "kind": "theorem",
-          "name": "mask_cancel_left",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_cancel_left",
-          "line": 1935
-        },
-        {
-          "kind": "def",
-          "name": "viewA",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewA",
-          "line": 1938
-        },
-        {
-          "kind": "def",
-          "name": "viewB",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewB",
-          "line": 1941
-        },
-        {
-          "kind": "def",
-          "name": "retag",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.retag",
-          "line": 1944
-        },
-        {
-          "kind": "def",
-          "name": "exchange",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchange",
-          "line": 1947
-        },
-        {
-          "kind": "def",
-          "name": "feed",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed",
-          "line": 1950
-        },
-        {
-          "kind": "def",
-          "name": "feedList",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList",
-          "line": 1955
-        },
-        {
-          "kind": "def",
-          "name": "streamPrefix",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.streamPrefix",
-          "line": 1960
-        },
-        {
-          "kind": "theorem",
-          "name": "feedList_snoc",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList_snoc",
-          "line": 1964
-        },
-        {
-          "kind": "theorem",
-          "name": "streamPrefix_succ",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.streamPrefix_succ",
-          "line": 1970
-        },
-        {
-          "kind": "theorem",
-          "name": "feedList_prefix",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList_prefix",
-          "line": 1975
-        },
-        {
-          "kind": "def",
-          "name": "viewBList",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewBList",
-          "line": 1983
-        },
-        {
-          "kind": "theorem",
-          "name": "viewBList_prefix",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewBList_prefix",
-          "line": 1987
-        },
-        {
-          "kind": "def",
-          "name": "countTags",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.countTags",
-          "line": 1994
-        },
-        {
-          "kind": "theorem",
-          "name": "feed_lockstep",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed_lockstep",
-          "line": 1999
-        },
-        {
-          "kind": "theorem",
-          "name": "retag_symmetry",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.retag_symmetry",
-          "line": 2009
-        },
-        {
-          "kind": "theorem",
-          "name": "split_two_of_two",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_two_of_two",
-          "line": 2020
-        },
-        {
-          "kind": "theorem",
-          "name": "count_view_invariant",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.count_view_invariant",
-          "line": 2028
-        },
-        {
-          "kind": "theorem",
-          "name": "split_marginal_count_eq",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
-          "line": 2052
-        },
-        {
-          "kind": "theorem",
-          "name": "split_marginal_impossibility",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_marginal_impossibility",
-          "line": 2062
-        },
-        {
-          "kind": "theorem",
-          "name": "silencing_consensus",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.silencing_consensus",
-          "line": 2084
-        },
-        {
-          "kind": "theorem",
-          "name": "verdict_leak",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.verdict_leak",
-          "line": 2100
-        },
-        {
-          "kind": "theorem",
-          "name": "exchange_detects",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchange_detects",
-          "line": 2111
-        },
-        {
-          "kind": "def",
-          "name": "feedStep",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedStep",
-          "line": 2118
-        },
-        {
-          "kind": "theorem",
-          "name": "markCourse_feedStep_eq",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markCourse_feedStep_eq",
-          "line": 2122
-        },
-        {
-          "kind": "def",
-          "name": "pairLoop",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.pairLoop",
-          "line": 2136
-        },
-        {
-          "kind": "theorem",
-          "name": "feed_pairLoop",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed_pairLoop",
-          "line": 2142
-        },
-        {
-          "kind": "def",
-          "name": "exchangeLoop",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop",
-          "line": 2153
-        },
-        {
-          "kind": "theorem",
-          "name": "exchangeLoop_eq_of_d01",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01",
-          "line": 2158
-        },
-        {
-          "kind": "theorem",
-          "name": "exchangeLoop_never_of_safe",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe",
-          "line": 2187
-        },
-        {
-          "kind": "theorem",
-          "name": "split_silenced_trapped",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_silenced_trapped",
-          "line": 2198
-        },
-        {
-          "kind": "def",
-          "name": "s20",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.s20",
-          "line": 2230
-        },
-        {
-          "kind": "def",
-          "name": "thinnedExchange",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.thinnedExchange",
-          "line": 2232
-        },
-        {
-          "kind": "theorem",
-          "name": "split_exchange_turns",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_exchange_turns",
-          "line": 2239
-        },
-        {
-          "kind": "def",
-          "name": "dEndo",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.dEndo",
-          "line": 2294
-        },
-        {
-          "kind": "def",
-          "name": "dSafe",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.dSafe",
-          "line": 2297
-        },
-        {
-          "kind": "theorem",
-          "name": "split_witness_endo",
-          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_witness_endo",
-          "line": 2302
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 3,
-        "def": 40,
-        "theorem": 94
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "a1be372add35151d7e8024152151037a0fab1a9c4c0db8d0ea7235da5ac4dd85": {
       "byte_size": 76404,
       "line_count": 1615,
@@ -425743,6 +424626,613 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a": {
+      "byte_size": 118768,
+      "line_count": 1978,
+      "imports": [
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Probability.Distributions.Gaussian.Real",
+        "Mathlib.Tactic",
+        "ObservationalFidelity"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "judgeScore",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
+          "line": 76
+        },
+        {
+          "kind": "def",
+          "name": "residualMean",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean",
+          "line": 81
+        },
+        {
+          "kind": "def",
+          "name": "poolMean",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean",
+          "line": 85
+        },
+        {
+          "kind": "theorem",
+          "name": "poolMean_eq",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "residualMean_mem",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "judgeScore_sub",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
+          "line": 106
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_sub_le_one_of_unit",
+          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "shared_score_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
+          "line": 116
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_disagreement_ceiling",
+          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_shared_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_ceiling_attained",
+          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
+          "line": 171
+        },
+        {
+          "kind": "theorem",
+          "name": "anchor_detects_shared_drift",
+          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_blindness_vs_anchor",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+          "line": 202
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
+          "line": 218
+        },
+        {
+          "kind": "def",
+          "name": "aliasedProbe",
+          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
+          "line": 245
+        },
+        {
+          "kind": "def",
+          "name": "SeparatesUnderNoise",
+          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
+          "line": 250
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_fiber_gap",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
+          "line": 255
+        },
+        {
+          "kind": "theorem",
+          "name": "midpoint_admissible",
+          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
+          "line": 263
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_separates",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
+          "line": 289
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_separable_iff",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
+          "line": 315
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
+          "line": 330
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
+          "line": 341
+        },
+        {
+          "kind": "def",
+          "name": "mixDist",
+          "qualified_name_hint": "QuantitativeTransfer.mixDist",
+          "line": 351
+        },
+        {
+          "kind": "def",
+          "name": "testMass",
+          "qualified_name_hint": "QuantitativeTransfer.testMass",
+          "line": 359
+        },
+        {
+          "kind": "theorem",
+          "name": "testMass_add_not",
+          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
+          "line": 363
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_le_one",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
+          "line": 369
+        },
+        {
+          "kind": "theorem",
+          "name": "two_point_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
+          "line": 379
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_mixDist_same",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
+          "line": 403
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_aliasing_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_floor_attained",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
+          "line": 435
+        },
+        {
+          "kind": "theorem",
+          "name": "le_of_deriv_le_on_Icc",
+          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
+          "line": 448
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_horizon_wall",
+          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
+          "line": 472
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_iff_linear",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_trajectory_premises",
+          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
+          "line": 502
+        },
+        {
+          "kind": "def",
+          "name": "switchLag",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag",
+          "line": 512
+        },
+        {
+          "kind": "theorem",
+          "name": "switching_score_persists",
+          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
+          "line": 517
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_strictMono_rho",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
+          "line": 533
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_nonpos_tabular",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
+          "line": 543
+        },
+        {
+          "kind": "theorem",
+          "name": "leakage_lag_wall",
+          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
+          "line": 552
+        },
+        {
+          "kind": "theorem",
+          "name": "b1_headroom_witness",
+          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
+          "line": 573
+        },
+        {
+          "kind": "def",
+          "name": "guardRef",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef",
+          "line": 582
+        },
+        {
+          "kind": "theorem",
+          "name": "guardRef_trace",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
+          "line": 585
+        },
+        {
+          "kind": "theorem",
+          "name": "dist_add_le_of_norm",
+          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
+          "line": 592
+        },
+        {
+          "kind": "def",
+          "name": "trustProj",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj",
+          "line": 601
+        },
+        {
+          "kind": "theorem",
+          "name": "norm_trustProj_le",
+          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
+          "line": 604
+        },
+        {
+          "kind": "theorem",
+          "name": "trustProj_of_norm_le",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
+          "line": 611
+        },
+        {
+          "kind": "def",
+          "name": "trustStep",
+          "qualified_name_hint": "QuantitativeTransfer.trustStep",
+          "line": 614
+        },
+        {
+          "kind": "def",
+          "name": "rawStep",
+          "qualified_name_hint": "QuantitativeTransfer.rawStep",
+          "line": 618
+        },
+        {
+          "kind": "def",
+          "name": "trustRegionMetricLaxSim",
+          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
+          "line": 659
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_viability",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
+          "line": 681
+        },
+        {
+          "kind": "theorem",
+          "name": "unprojected_step_overshoots",
+          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
+          "line": 701
+        },
+        {
+          "kind": "def",
+          "name": "trustRun",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun",
+          "line": 720
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_eq",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
+          "line": 724
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_trace",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
+          "line": 732
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_iterate",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
+          "line": 743
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube_attained",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
+          "line": 750
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
+          "line": 764
+        },
+        {
+          "kind": "def",
+          "name": "youdenJ",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ",
+          "line": 777
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_eq_one_sub_errorSum",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
+          "line": 782
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_const_zero",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_const_zero",
+          "line": 789
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_le_tvDist",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_le_tvDist",
+          "line": 800
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_youdenJ_le_tvDist",
+          "qualified_name_hint": "QuantitativeTransfer.abs_youdenJ_le_tvDist",
+          "line": 806
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_tvDist_attained",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_tvDist_attained",
+          "line": 816
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_mixture_aliasing_ceiling",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+          "line": 846
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_mixture_attained",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_attained",
+          "line": 864
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_youdenJ_zero",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_youdenJ_zero",
+          "line": 873
+        },
+        {
+          "kind": "def",
+          "name": "measYoudenJ",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ",
+          "line": 889
+        },
+        {
+          "kind": "def",
+          "name": "measErrorSum",
+          "qualified_name_hint": "QuantitativeTransfer.measErrorSum",
+          "line": 893
+        },
+        {
+          "kind": "theorem",
+          "name": "measYoudenJ_eq_one_sub_errorSum",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
+          "line": 897
+        },
+        {
+          "kind": "theorem",
+          "name": "measYoudenJ_const_zero",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_const_zero",
+          "line": 910
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_measYoudenJ_zero",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+          "line": 918
+        },
+        {
+          "kind": "def",
+          "name": "gaussianAliasedLaw",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianAliasedLaw",
+          "line": 932
+        },
+        {
+          "kind": "theorem",
+          "name": "integral_cauchy_schwarz",
+          "qualified_name_hint": "QuantitativeTransfer.integral_cauchy_schwarz",
+          "line": 937
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianPDFReal_sqrt_mul_eq",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq",
+          "line": 980
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_bhattacharyya_integral",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+          "line": 1017
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_tv_le_hellinger",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_le_hellinger",
+          "line": 1031
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_tv_ge_hellinger",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_ge_hellinger",
+          "line": 1120
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_measYoudenJ_le_tv_one",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one",
+          "line": 1165
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_measYoudenJ_le_tv",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
+          "line": 1218
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_midpoint_attains_tv",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_midpoint_attains_tv",
+          "line": 1237
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_youdenJ_wall",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+          "line": 1305
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_midpoint_sharp",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+          "line": 1379
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_lab_witness",
+          "line": 1435
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_zero_var_eq_dirac",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
+          "line": 1529
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_zero_var_dichotomy",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+          "line": 1539
+        },
+        {
+          "kind": "def",
+          "name": "convPow",
+          "qualified_name_hint": "QuantitativeTransfer.convPow",
+          "line": 1613
+        },
+        {
+          "kind": "theorem",
+          "name": "convPow_gaussianReal",
+          "qualified_name_hint": "QuantitativeTransfer.convPow_gaussianReal",
+          "line": 1618
+        },
+        {
+          "kind": "def",
+          "name": "gaussianSeqLaw",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw",
+          "line": 1629
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianSeqLaw_eq_gaussianReal",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+          "line": 1634
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianSeqMean_map_eq",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqMean_map_eq",
+          "line": 1642
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_youdenJ_wall",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
+          "line": 1660
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_sample_complexity_lower_bound",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+          "line": 1761
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_midpoint_sharp",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+          "line": 1794
+        },
+        {
+          "kind": "theorem",
+          "name": "sequential_gaussian_lag_sample_wall",
+          "qualified_name_hint": "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
+          "line": 1851
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_lab_witness",
+          "line": 1875
+        }
+      ],
+      "declaration_counts": {
+        "def": 20,
+        "theorem": 77
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -537733,6 +537223,936 @@
         "unsafe": []
       },
       "print_axioms_commands": 17
+    },
+    "da9bcd7cf64f83122e461351e108b4c9363a4ed9925a4904e89acb7dafe3ab77": {
+      "byte_size": 164845,
+      "line_count": 2719,
+      "imports": [
+        "Becoming.EndogenousEmergence",
+        "Becoming.ClosedCapture",
+        "Becoming.PacedStock"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "gate",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate",
+          "line": 83
+        },
+        {
+          "kind": "def",
+          "name": "gatedStep",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedStep",
+          "line": 89
+        },
+        {
+          "kind": "def",
+          "name": "gatedOrbit",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedOrbit",
+          "line": 95
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_extract",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate_extract",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_of_admitted",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gate_of_admitted",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "gatedStep_eq_closed",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gatedStep_eq_closed",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "gated_eq_closed",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.gated_eq_closed",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "lockout_pure_extract",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.lockout_pure_extract",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "lockout_learner_irrelevant",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant",
+          "line": 149
+        },
+        {
+          "kind": "def",
+          "name": "admits",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.admits",
+          "line": 161
+        },
+        {
+          "kind": "def",
+          "name": "registers",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers",
+          "line": 164
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_fst",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_fst",
+          "line": 166
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_sim",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_sim",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "turn_sim_plain",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.turn_sim_plain",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "select_keeps_admitted",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.select_keeps_admitted",
+          "line": 191
+        },
+        {
+          "kind": "theorem",
+          "name": "not_admits_of_le",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.not_admits_of_le",
+          "line": 196
+        },
+        {
+          "kind": "theorem",
+          "name": "region_stays",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.region_stays",
+          "line": 208
+        },
+        {
+          "kind": "theorem",
+          "name": "rule_kept_span",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.rule_kept_span",
+          "line": 215
+        },
+        {
+          "kind": "def",
+          "name": "markRead",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markRead",
+          "line": 236
+        },
+        {
+          "kind": "abbrev",
+          "name": "markCourse",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markCourse",
+          "line": 242
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_beyond_succ",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_beyond_succ",
+          "line": 251
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_reads_beyond",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_reads_beyond",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "markRead_eq_lossPool",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markRead_eq_lossPool",
+          "line": 268
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_eq_thinned",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_eq_thinned",
+          "line": 282
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_never_eq_pre",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_never_eq_pre",
+          "line": 325
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_trap_outlives_loss",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss",
+          "line": 355
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_kept_iff",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_kept_iff",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_kept_locks_out",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+          "line": 438
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_turned_iff",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_turned_iff",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_turned_admits_iff",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "mirror_strict_disfavours_iff",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mirror_strict_disfavours_iff",
+          "line": 579
+        },
+        {
+          "kind": "theorem",
+          "name": "mirror_strict_favours_iff",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mirror_strict_favours_iff",
+          "line": 600
+        },
+        {
+          "kind": "def",
+          "name": "MiddleMinus",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.MiddleMinus",
+          "line": 621
+        },
+        {
+          "kind": "def",
+          "name": "MiddlePlus",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.MiddlePlus",
+          "line": 626
+        },
+        {
+          "kind": "theorem",
+          "name": "reading_state_four_way",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.reading_state_four_way",
+          "line": 631
+        },
+        {
+          "kind": "theorem",
+          "name": "middle_disjoint_locked",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.middle_disjoint_locked",
+          "line": 650
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_rule_at_next_read",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_rule_at_next_read",
+          "line": 662
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_middle_minus_span",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_minus_span",
+          "line": 690
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_middle_plus_span",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_plus_span",
+          "line": 750
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_even_or_odd",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_even_or_odd",
+          "line": 794
+        },
+        {
+          "kind": "theorem",
+          "name": "seq_ge_zero",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.seq_ge_zero",
+          "line": 800
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_le_of_two_mul_le_two_mul_succ",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul_succ",
+          "line": 805
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_le_of_two_mul_succ_le_two_mul_succ_succ",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_succ_le_two_mul_succ_succ",
+          "line": 814
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_le_of_two_mul_le_two_mul",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul",
+          "line": 824
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_middle_band_trichotomy",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_band_trichotomy",
+          "line": 832
+        },
+        {
+          "kind": "theorem",
+          "name": "select_order_mono",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.select_order_mono",
+          "line": 924
+        },
+        {
+          "kind": "theorem",
+          "name": "paced_post_order_mono",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.paced_post_order_mono",
+          "line": 929
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_post_order_mono",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_post_order_mono",
+          "line": 939
+        },
+        {
+          "kind": "theorem",
+          "name": "mark_middle_band_monotone_partition",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mark_middle_band_monotone_partition",
+          "line": 1001
+        },
+        {
+          "kind": "def",
+          "name": "raceStep",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.raceStep",
+          "line": 1046
+        },
+        {
+          "kind": "abbrev",
+          "name": "raceCourse",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.raceCourse",
+          "line": 1052
+        },
+        {
+          "kind": "theorem",
+          "name": "race_reads_beyond",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_reads_beyond",
+          "line": 1062
+        },
+        {
+          "kind": "theorem",
+          "name": "race_stock_is_gated",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_stock_is_gated",
+          "line": 1069
+        },
+        {
+          "kind": "theorem",
+          "name": "closed_race_registration_irrelevant",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant",
+          "line": 1081
+        },
+        {
+          "kind": "theorem",
+          "name": "registers_stays",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers_stays",
+          "line": 1093
+        },
+        {
+          "kind": "theorem",
+          "name": "resolved_unregistered_stays",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.resolved_unregistered_stays",
+          "line": 1101
+        },
+        {
+          "kind": "theorem",
+          "name": "registers_from_of_resolved",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.registers_from_of_resolved",
+          "line": 1112
+        },
+        {
+          "kind": "theorem",
+          "name": "unregistered_forever_of_resolved",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved",
+          "line": 1132
+        },
+        {
+          "kind": "abbrev",
+          "name": "emergentRace",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace",
+          "line": 1155
+        },
+        {
+          "kind": "def",
+          "name": "wMasked",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMasked",
+          "line": 1162
+        },
+        {
+          "kind": "def",
+          "name": "cadence3",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3",
+          "line": 1171
+        },
+        {
+          "kind": "theorem",
+          "name": "cadence3_mod",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3_mod",
+          "line": 1177
+        },
+        {
+          "kind": "theorem",
+          "name": "cadence3_readAtSpanEnd",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+          "line": 1190
+        },
+        {
+          "kind": "theorem",
+          "name": "hi_lo_hc",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_lo_hc",
+          "line": 1210
+        },
+        {
+          "kind": "theorem",
+          "name": "hi_lo_ho",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_lo_ho",
+          "line": 1211
+        },
+        {
+          "kind": "theorem",
+          "name": "hi_strict",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.hi_strict",
+          "line": 1212
+        },
+        {
+          "kind": "theorem",
+          "name": "emergentRace_eq_closedOrbit_before",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before",
+          "line": 1214
+        },
+        {
+          "kind": "theorem",
+          "name": "reg4_of_race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.reg4_of_race",
+          "line": 1221
+        },
+        {
+          "kind": "theorem",
+          "name": "unreg_of_race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.unreg_of_race",
+          "line": 1241
+        },
+        {
+          "kind": "def",
+          "name": "w1Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w1Race",
+          "line": 1263
+        },
+        {
+          "kind": "def",
+          "name": "w2Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w2Race",
+          "line": 1264
+        },
+        {
+          "kind": "def",
+          "name": "w3Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w3Race",
+          "line": 1265
+        },
+        {
+          "kind": "def",
+          "name": "w4Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w4Race",
+          "line": 1266
+        },
+        {
+          "kind": "def",
+          "name": "w5SlowRace",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w5SlowRace",
+          "line": 1267
+        },
+        {
+          "kind": "def",
+          "name": "w5FastRace",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w5FastRace",
+          "line": 1268
+        },
+        {
+          "kind": "def",
+          "name": "w6Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.w6Race",
+          "line": 1269
+        },
+        {
+          "kind": "theorem",
+          "name": "race_in_time",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_in_time",
+          "line": 1276
+        },
+        {
+          "kind": "theorem",
+          "name": "race_late_after_registration",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_late_after_registration",
+          "line": 1308
+        },
+        {
+          "kind": "theorem",
+          "name": "race_probe_blocked",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_probe_blocked",
+          "line": 1348
+        },
+        {
+          "kind": "theorem",
+          "name": "race_masked_strain",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_masked_strain",
+          "line": 1385
+        },
+        {
+          "kind": "theorem",
+          "name": "race_slow_cadence",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_slow_cadence",
+          "line": 1441
+        },
+        {
+          "kind": "theorem",
+          "name": "race_fast_cadence",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_fast_cadence",
+          "line": 1484
+        },
+        {
+          "kind": "theorem",
+          "name": "race_exo_no_false_turn",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_exo_no_false_turn",
+          "line": 1513
+        },
+        {
+          "kind": "def",
+          "name": "cadence2",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2",
+          "line": 1539
+        },
+        {
+          "kind": "theorem",
+          "name": "cadence2_mod",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2_mod",
+          "line": 1544
+        },
+        {
+          "kind": "theorem",
+          "name": "cadence2_readAtSpanEnd",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd",
+          "line": 1555
+        },
+        {
+          "kind": "theorem",
+          "name": "wEndo_stepStock_safe_ge",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wEndo_stepStock_safe_ge",
+          "line": 1568
+        },
+        {
+          "kind": "theorem",
+          "name": "emergentRace_stabilizes_from",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.emergentRace_stabilizes_from",
+          "line": 1584
+        },
+        {
+          "kind": "def",
+          "name": "wMiddleLockRace",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleLockRace",
+          "line": 1654
+        },
+        {
+          "kind": "def",
+          "name": "wMiddleAlt5Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleAlt5Race",
+          "line": 1655
+        },
+        {
+          "kind": "def",
+          "name": "wMiddleAlt3Race",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleAlt3Race",
+          "line": 1656
+        },
+        {
+          "kind": "def",
+          "name": "wMiddleSpanRecoveryRace",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wMiddleSpanRecoveryRace",
+          "line": 1657
+        },
+        {
+          "kind": "theorem",
+          "name": "race_middle_exits_to_lock",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_exits_to_lock",
+          "line": 1663
+        },
+        {
+          "kind": "theorem",
+          "name": "race_middle_alternates_and_turns",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_alternates_and_turns",
+          "line": 1720
+        },
+        {
+          "kind": "theorem",
+          "name": "race_middle_short_oscillation_turns",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_short_oscillation_turns",
+          "line": 1808
+        },
+        {
+          "kind": "theorem",
+          "name": "race_middle_span_recovery_turns",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.race_middle_span_recovery_turns",
+          "line": 1872
+        },
+        {
+          "kind": "def",
+          "name": "mask",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask",
+          "line": 1929
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_involutive",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_involutive",
+          "line": 1933
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_comm",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_comm",
+          "line": 1936
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_assoc",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_assoc",
+          "line": 1939
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_cancel_left",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.mask_cancel_left",
+          "line": 1942
+        },
+        {
+          "kind": "def",
+          "name": "viewA",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewA",
+          "line": 1945
+        },
+        {
+          "kind": "def",
+          "name": "viewB",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewB",
+          "line": 1948
+        },
+        {
+          "kind": "def",
+          "name": "retag",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.retag",
+          "line": 1951
+        },
+        {
+          "kind": "def",
+          "name": "exchange",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchange",
+          "line": 1954
+        },
+        {
+          "kind": "def",
+          "name": "feed",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed",
+          "line": 1957
+        },
+        {
+          "kind": "def",
+          "name": "feedList",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList",
+          "line": 1962
+        },
+        {
+          "kind": "def",
+          "name": "streamPrefix",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.streamPrefix",
+          "line": 1967
+        },
+        {
+          "kind": "theorem",
+          "name": "feedList_snoc",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList_snoc",
+          "line": 1971
+        },
+        {
+          "kind": "theorem",
+          "name": "streamPrefix_succ",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.streamPrefix_succ",
+          "line": 1977
+        },
+        {
+          "kind": "theorem",
+          "name": "feedList_prefix",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedList_prefix",
+          "line": 1982
+        },
+        {
+          "kind": "def",
+          "name": "viewBList",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewBList",
+          "line": 1990
+        },
+        {
+          "kind": "theorem",
+          "name": "viewBList_prefix",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.viewBList_prefix",
+          "line": 1994
+        },
+        {
+          "kind": "def",
+          "name": "countTags",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.countTags",
+          "line": 2001
+        },
+        {
+          "kind": "theorem",
+          "name": "feed_lockstep",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed_lockstep",
+          "line": 2006
+        },
+        {
+          "kind": "theorem",
+          "name": "retag_symmetry",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.retag_symmetry",
+          "line": 2016
+        },
+        {
+          "kind": "theorem",
+          "name": "split_two_of_two",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_two_of_two",
+          "line": 2027
+        },
+        {
+          "kind": "theorem",
+          "name": "count_view_invariant",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.count_view_invariant",
+          "line": 2035
+        },
+        {
+          "kind": "theorem",
+          "name": "split_marginal_count_eq",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
+          "line": 2059
+        },
+        {
+          "kind": "theorem",
+          "name": "split_marginal_impossibility",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_marginal_impossibility",
+          "line": 2069
+        },
+        {
+          "kind": "theorem",
+          "name": "silencing_consensus",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.silencing_consensus",
+          "line": 2091
+        },
+        {
+          "kind": "theorem",
+          "name": "verdict_leak",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.verdict_leak",
+          "line": 2107
+        },
+        {
+          "kind": "theorem",
+          "name": "exchange_detects",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchange_detects",
+          "line": 2118
+        },
+        {
+          "kind": "def",
+          "name": "feedStep",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feedStep",
+          "line": 2125
+        },
+        {
+          "kind": "theorem",
+          "name": "markCourse_feedStep_eq",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.markCourse_feedStep_eq",
+          "line": 2129
+        },
+        {
+          "kind": "def",
+          "name": "pairLoop",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.pairLoop",
+          "line": 2143
+        },
+        {
+          "kind": "theorem",
+          "name": "feed_pairLoop",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.feed_pairLoop",
+          "line": 2149
+        },
+        {
+          "kind": "def",
+          "name": "exchangeLoop",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop",
+          "line": 2160
+        },
+        {
+          "kind": "theorem",
+          "name": "exchangeLoop_eq_of_d01",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01",
+          "line": 2165
+        },
+        {
+          "kind": "theorem",
+          "name": "exchangeLoop_never_of_safe",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe",
+          "line": 2194
+        },
+        {
+          "kind": "theorem",
+          "name": "split_silenced_trapped",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_silenced_trapped",
+          "line": 2205
+        },
+        {
+          "kind": "def",
+          "name": "s20",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.s20",
+          "line": 2237
+        },
+        {
+          "kind": "def",
+          "name": "thinnedExchange",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.thinnedExchange",
+          "line": 2239
+        },
+        {
+          "kind": "theorem",
+          "name": "split_exchange_turns",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_exchange_turns",
+          "line": 2246
+        },
+        {
+          "kind": "def",
+          "name": "dEndo",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.dEndo",
+          "line": 2301
+        },
+        {
+          "kind": "def",
+          "name": "dSafe",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.dSafe",
+          "line": 2304
+        },
+        {
+          "kind": "theorem",
+          "name": "split_witness_endo",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.split_witness_endo",
+          "line": 2309
+        },
+        {
+          "kind": "def",
+          "name": "weightedTags",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weightedTags",
+          "line": 2341
+        },
+        {
+          "kind": "theorem",
+          "name": "weightedTags_unit_eq_countTags",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weightedTags_unit_eq_countTags",
+          "line": 2348
+        },
+        {
+          "kind": "theorem",
+          "name": "weightedTags_congr",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weightedTags_congr",
+          "line": 2358
+        },
+        {
+          "kind": "theorem",
+          "name": "weightedTags_viewBList",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weightedTags_viewBList",
+          "line": 2375
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_view_invariant",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weighted_view_invariant",
+          "line": 2411
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_split_marginal_eq",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weighted_split_marginal_eq",
+          "line": 2420
+        },
+        {
+          "kind": "def",
+          "name": "wSkew",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wSkew",
+          "line": 2429
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_skew_breaks_blindness",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.weighted_skew_breaks_blindness",
+          "line": 2438
+        },
+        {
+          "kind": "def",
+          "name": "stockSignal",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.stockSignal",
+          "line": 2453
+        },
+        {
+          "kind": "def",
+          "name": "closedSplitStep",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closedSplitStep",
+          "line": 2457
+        },
+        {
+          "kind": "def",
+          "name": "wUnstrained",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.wUnstrained",
+          "line": 2469
+        },
+        {
+          "kind": "theorem",
+          "name": "closedSplit_silenced_collapses",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closedSplit_silenced_collapses",
+          "line": 2481
+        },
+        {
+          "kind": "theorem",
+          "name": "closedSplit_exchange_saves_stock",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closedSplit_exchange_saves_stock",
+          "line": 2565
+        },
+        {
+          "kind": "theorem",
+          "name": "closedSplit_unstrained_no_false_turn",
+          "qualified_name_hint": "Becoming.EndogenousDetectionRace.closedSplit_unstrained_no_false_turn",
+          "line": 2675
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 3,
+        "def": 45,
+        "theorem": 103
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "daba946b4908d975196edd781e4e0b46a3bef4a497cfcf40478359a69c924e59": {
       "byte_size": 7690,

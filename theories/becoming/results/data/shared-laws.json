@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T195858.526167Z",
- "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",
+ "core_receipt": "20261124T233040.232087Z",
+ "core_sources_sha256": "a4e0358853506a5d181ebab13edc0dd8ca2bafba0a2ddd93aca7ce171602ca9b",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,15 +58,15 @@
   ]
  },
  "counts": {
-  "laws": 4562,
+  "laws": 4565,
   "no_declarations": 9,
-  "outside": 429,
-  "grammar": 1180,
+  "outside": 430,
+  "grammar": 1182,
   "balance, represented": 642,
   "anchor, not reached": 99,
   "no shared law": 2203,
   "vocabulary_only": 106,
-  "closure": 657,
+  "closure": 659,
   "balance": 936,
   "return": 260,
   "lumping": 103,
@@ -18071,6 +18071,30 @@
      "balance",
      "lumping",
      "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.EndogenousDetectionRace.weightedTags",
+     "Becoming.EndogenousDetectionRace.weightedTags_unit_eq_countTags",
+     "Becoming.EndogenousDetectionRace.weightedTags_congr",
+     "Becoming.EndogenousDetectionRace.weightedTags_viewBList",
+     "Becoming.EndogenousDetectionRace.weighted_view_invariant",
+     "Becoming.EndogenousDetectionRace.weighted_split_marginal_eq",
+     "Becoming.EndogenousDetectionRace.wSkew",
+     "Becoming.EndogenousDetectionRace.weighted_skew_breaks_blindness",
+     "Becoming.EndogenousDetectionRace.stockSignal",
+     "Becoming.EndogenousDetectionRace.closedSplitStep",
+     "Becoming.EndogenousDetectionRace.wUnstrained",
+     "Becoming.EndogenousDetectionRace.closedSplit_silenced_collapses",
+     "Becoming.EndogenousDetectionRace.closedSplit_exchange_saves_stock",
+     "Becoming.EndogenousDetectionRace.closedSplit_unstrained_no_false_turn"
+    ],
+    "shared_laws": [
+     "closure"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -37059,6 +37083,35 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.OpenEndedComposition.switchoverReserve",
+     "Becoming.OpenEndedComposition.SwitchoverHandoffGate",
+     "Becoming.OpenEndedComposition.SwitchoverEpochStep",
+     "Becoming.OpenEndedComposition.switchoverEpochProcess",
+     "Becoming.OpenEndedComposition.switchoverClosedProcess",
+     "Becoming.OpenEndedComposition.switchoverInv_certificate",
+     "Becoming.OpenEndedComposition.switchoverChain_certificate",
+     "Becoming.OpenEndedComposition.switchoverChain_viability_kernel_on_K",
+     "Becoming.OpenEndedComposition.switchoverChain_viability_kernel",
+     "Becoming.OpenEndedComposition.switchoverChain_anchor_never_weakened",
+     "Becoming.OpenEndedComposition.switchoverChain_nonDeadlock",
+     "Becoming.OpenEndedComposition.switchover_gate_rejects_insufficient_margin",
+     "Becoming.OpenEndedComposition.zeroSwitchDraw_gate_iff_epochHandoffGate",
+     "Becoming.OpenEndedComposition.zeroSwitchDraw_step_iff_epochStep",
+     "Becoming.OpenEndedComposition.SwitchoverDrawWitness.zeroDraw_accepts_7_but_switchover_breaches_floor",
+     "Becoming.OpenEndedComposition.SwitchoverDrawWitness.switchover_certifies_12",
+     "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.endogenous_site_discovery_protects_both",
+     "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsSilent_agree_le_6",
+     "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.silent_unmodelled_site_impossibility"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "open-form-realization-under-revision": [
@@ -41099,6 +41152,37 @@
      "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
      "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
      "QuantitativeTransfer.gaussian_aliased_lab_witness"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
+     "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+     "QuantitativeTransfer.convPow",
+     "QuantitativeTransfer.convPow_gaussianReal",
+     "QuantitativeTransfer.gaussianSeqLaw",
+     "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+     "QuantitativeTransfer.gaussianSeqMean_map_eq",
+     "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
+     "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+     "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+     "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
+     "QuantitativeTransfer.gaussian_seq_lab_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
+     "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+     "QuantitativeTransfer.convPow",
+     "QuantitativeTransfer.convPow_gaussianReal",
+     "QuantitativeTransfer.gaussianSeqLaw",
+     "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+     "QuantitativeTransfer.gaussianSeqMean_map_eq",
+     "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
+     "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+     "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+     "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
+     "QuantitativeTransfer.gaussian_seq_lab_witness"
     ]
    }
   ],
@@ -70789,7 +70873,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "9f44c31d21f770e2e2b79fc92228dd0fea4a2b25a14eba4520927c4c5c3800f9",
+   "modules_sha256": "951ff41eee699bec5850597b8988b76a1db1001711584341f274836305e7fd76",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

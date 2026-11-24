@@ -9,8 +9,8 @@
   "status": "recorded-checked",
   "family": "F04",
   "statement": {
-    "en": "An observation-only learner switching a pool hits ClosedCapture's window: locked if outnumbered when read, turning permanently if not outnumbered next step, or alternating/exiting across the middle band by order. Under one-time-mask split evidence, sound local filters stall while exchange turns.",
-    "zh": "仅读回报之学习者切换他者池读，恰落封闭捕获窗口：读时载体已不少即锁，次步不占优则永转，中段依序交替或出离为两锁。一次掩码分裂证据下，局部可靠警报归零，交换一位则转。"
+    "en": "An observation-only learner switching a pool hits ClosedCapture's window and alternates across the middle band. Under prior-fixed or closed-loop mask-split evidence, sound local filters lock under capture for retag-invariant weights, skewed weights break blindness, and 1-bit exchange saves stock.",
+    "zh": "仅读回报之学习者切换他者池读，落封闭捕获窗口并依序在中段交替或出离。无论先定或底物闭环分裂证据，重标不变标签权重下局部可靠共识皆锁于封闭池，偏斜先验可打破盲区，交换一位则于闭环救回底物。"
   },
   "hypotheses": [
     {
@@ -102,13 +102,33 @@
         "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse",
         "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge"
       ]
+    },
+    {
+      "en": "Weighted tag sums and closed-loop split coupling: weighted_view_invariant and weighted_split_marginal_eq hold under retag-invariant weights (unit weight gives countTags), skewed wSkew lifts locally (weighted_skew_breaks_blindness), and closedSplitStep separates silenced collapse (closedSplit_silenced_collapses) from exchange survival (closedSplit_exchange_saves_stock, closedSplit_unstrained_no_false_turn).",
+      "zh": "加权标签与闭环分裂耦合：单位权还原计数，重标不变权守恒加权边际（weighted_view_invariant、weighted_split_marginal_eq），偏斜权 wSkew 打破局部盲区，闭环底物反馈分离沉默崩溃与一位交换稳态。",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.weightedTags",
+        "Becoming.EndogenousDetectionRace.weightedTags_unit_eq_countTags",
+        "Becoming.EndogenousDetectionRace.weightedTags_congr",
+        "Becoming.EndogenousDetectionRace.weightedTags_viewBList",
+        "Becoming.EndogenousDetectionRace.weighted_view_invariant",
+        "Becoming.EndogenousDetectionRace.weighted_split_marginal_eq",
+        "Becoming.EndogenousDetectionRace.wSkew",
+        "Becoming.EndogenousDetectionRace.weighted_skew_breaks_blindness",
+        "Becoming.EndogenousDetectionRace.stockSignal",
+        "Becoming.EndogenousDetectionRace.closedSplitStep",
+        "Becoming.EndogenousDetectionRace.wUnstrained",
+        "Becoming.EndogenousDetectionRace.closedSplit_silenced_collapses",
+        "Becoming.EndogenousDetectionRace.closedSplit_exchange_saves_stock",
+        "Becoming.EndogenousDetectionRace.closedSplit_unstrained_no_false_turn"
+      ]
     }
   ],
   "does_not_show": [
     {
       "kind": "scope",
-      "en": "CarrierCounts turning does not ensure stock survival on coarser cadences if intermediate lockouts drain stock first (replay R5 L=3,4); Part B fixes the depletion stream beforehand over uniform 2^T tags.",
-      "zh": "粗阅读节奏下，即便载体计数最终转向，若此前受锁跨度已耗尽存量，仍不保底物存活（见回放 R5 L=3,4）；乙部仍假定耗竭流先定且均匀计 2^T 标签。"
+      "en": "CarrierCounts turning does not guarantee stock survival on coarser cadences if lockouts drain stock first (replay R5 L=3,4); B.9 leaves arbitrary non-invariant multi-step tag priors open beyond the wSkew countermodel.",
+      "zh": "粗节奏下即便最终转向，若此前受锁已耗尽存量仍不保底物存活（见 R5 L=3,4）；乙九除偏斜反例外尚未刻画一般非重标不变多步先验。"
     },
     {
       "kind": "non-implication",
@@ -132,12 +152,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; lean-check verified Becoming.EndogenousEmergence (42 theorems, 100 declarations) and Becoming.EndogenousDetectionRace (94 theorems, 137 declarations) with 0 core axioms (becoming-checks/20261124T184422.177368Z); pure stdlib replay test_split_evidence_capture_race.py (including R5 middle-band trichotomy) passes within 15/15 evidence-replay tests.",
-    "zh": "AI-written；lean-check 验明 Becoming.EndogenousEmergence（42 定理、100 声明）与 Becoming.EndogenousDetectionRace（94 定理、137 声明）空公理（becoming-checks/20261124T184422.177368Z）；纯标准库回放随 evidence-replay 通过 15/15（含 R5 中段三分与单调性）。"
+    "en": "AI-written; lean-check verified Becoming.EndogenousEmergence (42 theorems, 100 declarations) and Becoming.EndogenousDetectionRace (103 theorems, 151 declarations) with 0 core axioms (becoming-checks/20261124T233040.232087Z); horizon-critic PASS; stdlib evidence-replay (R1-R6) passes 16/16.",
+    "zh": "AI-written；lean-check 验明 Becoming.EndogenousEmergence（42 定理、100 声明）与 Becoming.EndogenousDetectionRace（103 定理、151 声明）空公理（becoming-checks/20261124T233040.232087Z）；跨模型复核通过；evidence-replay 16/16 通过。"
   },
   "next_delta": {
-    "en": "Human read by Ren; extend Part B to closed-loop mask-substrate coupling and non-uniform tag distributions.",
-    "zh": "由 Ren 审读；将乙部推至掩码与底物闭环耦合及非均匀标签分布。"
+    "en": "Human read by Ren; test closed-loop split-evidence mechanisms on learned stochastic policies beyond deterministic Moore loops.",
+    "zh": "由 Ren 审读；将闭环分裂证据机制推至超越确定性摩尔机之随机学习策略。"
   },
   "related": [
     {
@@ -148,17 +168,21 @@
       }
     }
   ],
-  "reviewed_at_utc": "2026-11-24T18:50:00+00:00",
+  "reviewed_at_utc": "2026-11-24T23:34:00+00:00",
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
       "role": "proof",
-      "sha256": "a183ce82d649f7637aef78d52de83900b04560c8718ac0423b97d10670a6078b",
+      "sha256": "da9bcd7cf64f83122e461351e108b4c9363a4ed9925a4904e89acb7dafe3ab77",
       "declarations": [
         "Becoming.EndogenousDetectionRace.MiddleMinus",
         "Becoming.EndogenousDetectionRace.MiddlePlus",
         "Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd",
         "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+        "Becoming.EndogenousDetectionRace.closedSplitStep",
+        "Becoming.EndogenousDetectionRace.closedSplit_exchange_saves_stock",
+        "Becoming.EndogenousDetectionRace.closedSplit_silenced_collapses",
+        "Becoming.EndogenousDetectionRace.closedSplit_unstrained_no_false_turn",
         "Becoming.EndogenousDetectionRace.count_view_invariant",
         "Becoming.EndogenousDetectionRace.exchange_detects",
         "Becoming.EndogenousDetectionRace.gated_eq_closed",
@@ -197,7 +221,17 @@
         "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
         "Becoming.EndogenousDetectionRace.split_silenced_trapped",
         "Becoming.EndogenousDetectionRace.split_witness_endo",
-        "Becoming.EndogenousDetectionRace.verdict_leak"
+        "Becoming.EndogenousDetectionRace.stockSignal",
+        "Becoming.EndogenousDetectionRace.verdict_leak",
+        "Becoming.EndogenousDetectionRace.wSkew",
+        "Becoming.EndogenousDetectionRace.wUnstrained",
+        "Becoming.EndogenousDetectionRace.weightedTags",
+        "Becoming.EndogenousDetectionRace.weightedTags_congr",
+        "Becoming.EndogenousDetectionRace.weightedTags_unit_eq_countTags",
+        "Becoming.EndogenousDetectionRace.weightedTags_viewBList",
+        "Becoming.EndogenousDetectionRace.weighted_skew_breaks_blindness",
+        "Becoming.EndogenousDetectionRace.weighted_split_marginal_eq",
+        "Becoming.EndogenousDetectionRace.weighted_view_invariant"
       ]
     },
     {
@@ -214,33 +248,33 @@
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T184422.177368Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T233040.232087Z/verification.json",
       "role": "receipt",
-      "sha256": "d7a1767fe482ff17190dfbe58b5944f20b1dba01d0f16aeb6a99b469b1ab88a1",
+      "sha256": "ee4ec9dc393c29a6f73f9bb75c881c8d795dcd700f25db6d4a969a47eb18fffb",
       "declarations": []
     },
     {
       "path": "experiments/evidence-replay/test_split_evidence_capture_race.py",
       "role": "integration",
-      "sha256": "1fc634cd0b03f84d75335a15a47f77cf249b979be43e89432c23575d386dd050"
+      "sha256": "affb8787ead22652b71be339930474b1a90ef132191c7b2dad21d85c1e6c53aa"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier1-endogenous-capture-2026-11-24/NOTE.md",
       "role": "review",
-      "sha256": "76f4f253567b84d6544486f12748d22340d1b8b57614bf33582857072cb74d2a"
+      "sha256": "8595c486345859d273a1f5bb8ac624001219d37eeeac1b2a0ffcd151d3b0e7e9"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T184422.177368Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T233040.232087Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EndogenousDetectionRace",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousEmergence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T184422.177368Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T233040.232087Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EndogenousEmergence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -277,6 +311,9 @@
     },
     {
       "en": "24 November 2026 UTC: characterized the alternating middle band (Parts A.2b & A.4b, 94 theorems / 137 declarations, core receipt becoming-checks/20261124T184422.177368Z) and extended R5 replay (15/15 evidence-replay OK). AI-written."
+    },
+    {
+      "en": "24 November 2026 UTC (Frontier 1 horizon): added Part B.9 weighted/skewed tag distributions and Part B.10 closed-loop mask-substrate coupling (103 theorems / 151 declarations, core receipt becoming-checks/20261124T233040.232087Z, R6 16/16 evidence-replay OK, horizon-critic PASS). AI-written."
     }
   ],
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",

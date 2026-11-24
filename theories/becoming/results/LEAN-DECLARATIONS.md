@@ -12,9 +12,9 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 421 | 21,162 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 421 | 21,193 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 18 | 697 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 18 | 707 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -193,7 +193,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ContinuationRenewalAudit.lean](lean-declarations/ethics-part-1.md#module-38d6a8892340) | The ethics and the generative direction |
 | [ContinuationScope.lean](lean-declarations/abstraction.md#module-62dd1356dc98) | Abstraction, applicability and constitution |
 | [ContinuedClasses.lean](lean-declarations/becoming-core-part-1.md#module-53de74507d5e) | Becoming pure core |
-| [ContinuingRevision.lean](lean-declarations/becoming-core-part-2.md#module-b2c1eb7014c1) | Becoming pure core |
+| [ContinuingRevision.lean](lean-declarations/becoming-core-part-1.md#module-b2c1eb7014c1) | Becoming pure core |
 | [ContinuingRuns.lean](lean-declarations/becoming-core-part-2.md#module-5510ec68dc18) | Becoming pure core |
 | [Continuity.lean](lean-declarations/becoming-core-part-2.md#module-7ce4c839d2c7) | Becoming pure core |
 | [ContractionMechanisms.lean](lean-declarations/core.md#module-94b24f64f928) | Generative core and relational structure |
@@ -610,7 +610,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [MarketDiagnosis.lean](lean-declarations/other.md#module-e2732406feff) | Other formal studies |
 | [MarketGenerativity.lean](lean-declarations/other.md#module-e2e5c347dc5a) | Other formal studies |
 | [MarketInstances.lean](lean-declarations/other.md#module-96b312116575) | Other formal studies |
-| [MasterSpine.lean](lean-declarations/becoming-core-part-5.md#module-77367a71bc04) | Becoming pure core |
+| [MasterSpine.lean](lean-declarations/becoming-core-part-4.md#module-77367a71bc04) | Becoming pure core |
 | [MatchedCourses.lean](lean-declarations/becoming-core-part-5.md#module-7e62abf919a9) | Becoming pure core |
 | [MaterialMaturation.lean](lean-declarations/ethics-part-1.md#module-e4e9dd7ab622) | The ethics and the generative direction |
 | [MeasuredFeedback.lean](lean-declarations/learning.md#module-99c139232337) | Learning, prediction and dynamics |
@@ -713,7 +713,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PlasticityPreparation.lean](lean-declarations/shared.md#module-c527ff17c751) | Organizational formation through revisable evaluation |
 | [PlasticityWitness.lean](lean-declarations/shared.md#module-ac933f076498) | Organizational formation through revisable evaluation |
 | [PluralRecords.lean](lean-declarations/abstraction.md#module-2a54e07465df) | Abstraction, applicability and constitution |
-| [PolyComposition.lean](lean-declarations/becoming-core-part-5.md#module-9cd6aa6411e2) | Becoming pure core |
+| [PolyComposition.lean](lean-declarations/becoming-core-part-6.md#module-9cd6aa6411e2) | Becoming pure core |
 | [PoolCourse.lean](lean-declarations/becoming-core-part-6.md#module-034ebac54637) | Becoming pure core |
 | [PoolFromCourse.lean](lean-declarations/becoming-core-part-6.md#module-16b05c29881a) | Becoming pure core |
 | [PoolResponse.lean](lean-declarations/becoming-core-part-6.md#module-618dbf62e7d3) | Becoming pure core |

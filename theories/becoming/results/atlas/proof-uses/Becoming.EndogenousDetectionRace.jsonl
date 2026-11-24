@@ -2,6 +2,9 @@
 {"name": "Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd", "uses": ["Becoming.EndogenousDetectionRace.cadence2_mod", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.le_dest"]}
 {"name": "Becoming.EndogenousDetectionRace.cadence3_mod", "uses": []}
 {"name": "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd", "uses": ["Becoming.EndogenousDetectionRace.cadence3_mod", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.closedSplit_exchange_saves_stock", "uses": ["Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.mark_beyond_succ", "Becoming.EndogenousDetectionRace.mark_eq_thinned", "Becoming.EndogenousDetectionRace.mark_turned_admits_iff", "Becoming.EndogenousDetectionRace.mask_involutive", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.closedSplit_silenced_collapses", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss", "Becoming.EndogenousDetectionRace.gate_extract", "Becoming.EndogenousDetectionRace.mark_beyond_succ", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.not_admits_of_le", "Becoming.EndogenousDetectionRace.silencing_consensus"]}
+{"name": "Becoming.EndogenousDetectionRace.closedSplit_unstrained_no_false_turn", "uses": ["Becoming.ClosedCapture.Drawn.pool_favours", "Becoming.EndogenousDetectionRace.mark_beyond_succ", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.mask_involutive", "Becoming.EndogenousDetectionRace.region_stays"]}
 {"name": "Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant", "uses": ["Becoming.ClosedCapture.join_alike"]}
 {"name": "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.ClosedCapture.Drawn.through_locks", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.join_course", "Becoming.ClosedCapture.lock_outlives_loss", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.Pace.paced_shift", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
 {"name": "Becoming.EndogenousDetectionRace.count_view_invariant", "uses": []}
@@ -92,3 +95,9 @@
 {"name": "Becoming.EndogenousDetectionRace.verdict_leak", "uses": ["Becoming.EndogenousDetectionRace.mask_involutive"]}
 {"name": "Becoming.EndogenousDetectionRace.viewBList_prefix", "uses": []}
 {"name": "Becoming.EndogenousDetectionRace.wEndo_stepStock_safe_ge", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.ListTests.false_iff_not", "Becoming.Naturals.add_sub_cancel", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.weightedTags_congr", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.weightedTags_unit_eq_countTags", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.weightedTags_viewBList", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.weighted_skew_breaks_blindness", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.weighted_split_marginal_eq", "uses": ["Becoming.EndogenousDetectionRace.weighted_view_invariant"]}
+{"name": "Becoming.EndogenousDetectionRace.weighted_view_invariant", "uses": ["Becoming.EndogenousDetectionRace.weightedTags_congr", "Becoming.EndogenousDetectionRace.weightedTags_viewBList"]}

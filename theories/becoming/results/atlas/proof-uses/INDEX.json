@@ -4,10 +4,10 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "7e6ed413247963dd140c1d6782ccf52f3e440046",
-  "core_run": "20261124T195858.526167Z"
+  "commit": "a1693bcf2e6d170be76fdf25528e60a6a8dc5f44",
+  "core_run": "20261124T233040.232087Z"
  },
- "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",
+ "core_sources_sha256": "a4e0358853506a5d181ebab13edc0dd8ca2bafba0a2ddd93aca7ce171602ca9b",
  "modules": {
   "Becoming": {
    "source_sha256": "643fb58923a7bf5d94eebfe86a8989f0baed0b2a5c264f2efa25d2088812e687",
@@ -398,8 +398,8 @@
    "theorems": 4
   },
   "Becoming.EndogenousDetectionRace": {
-   "source_sha256": "a183ce82d649f7637aef78d52de83900b04560c8718ac0423b97d10670a6078b",
-   "theorems": 94
+   "source_sha256": "da9bcd7cf64f83122e461351e108b4c9363a4ed9925a4904e89acb7dafe3ab77",
+   "theorems": 103
   },
   "Becoming.EndogenousEmergence": {
    "source_sha256": "88ba811aec4a20dc7da4a14861a907a87956cced206982cfcb67d8464b0b9ae8",
@@ -1006,8 +1006,8 @@
    "theorems": 86
   },
   "Becoming.OpenEndedComposition": {
-   "source_sha256": "6ae622db6e2d8d06bfd37226e7c4015d9a2905eb2d275556d5e364ee7032c991",
-   "theorems": 121
+   "source_sha256": "78c2b514ba949c9af570f25f9405c2a9fbc7dc8984d355f58838d2ab3adebc8d",
+   "theorems": 149
   },
   "Becoming.OpenedCorrection": {
    "source_sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d",
@@ -1768,7 +1768,7 @@
  },
  "counts": {
   "modules": 439,
-  "theorems": 22890,
+  "theorems": 22927,
   "uses_without_row": 60
  }
 }

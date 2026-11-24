@@ -8,7 +8,7 @@
   "status": "recorded-checked",
   "family": "F01",
   "statement": {
-    "en": "Rank-1 drift caps pool disagreement at 1 - gamma while an external anchor detects it; aliased readout gives |Youden J| <= (1 - alpha) tvDist <= 1 - alpha (and <= sqrt(1 - exp(-Delta^2/(4v))) for Gaussian noise); drawdown crosses x_crit at lag J = 0; trust-region steps stay in a contraction tube."
+    "en": "Rank-1 drift caps disagreement at 1 - gamma while an anchor detects it; Gaussian aliasing bounds |J| <= sqrt(1 - exp(-T*Delta^2/(4v))) across T iid steps (Dirac dichotomy at v = 0) and fails when lag beats sample complexity; trust-region steps hold a contraction tube."
   },
   "laws": [
     {
@@ -90,17 +90,34 @@
         "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
         "QuantitativeTransfer.gaussian_aliased_lab_witness"
       ]
+    },
+    {
+      "en": "Zero-variance Dirac limit (v = 0) gives exact dichotomy (0 when alpha = 1 or p u1 = p u2; singleton separation J = 1 otherwise); T-fold iid convolution gaussianSeqLaw scales SNR by sqrt(T), requiring T >= 4 v J^2 / ((1-alpha)|p u1 - p u2|)^2 and joining with lag_horizon_wall against B5 (T = 4 <= 15/17 vs T = 100 >= 9/10).",
+      "declarations": [
+        "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
+        "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+        "QuantitativeTransfer.convPow",
+        "QuantitativeTransfer.convPow_gaussianReal",
+        "QuantitativeTransfer.gaussianSeqLaw",
+        "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+        "QuantitativeTransfer.gaussianSeqMean_map_eq",
+        "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
+        "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+        "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+        "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
+        "QuantitativeTransfer.gaussian_seq_lab_witness"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity and Gaussian.Real; residuals in [0, 1]; bounded or nonzero-variance Gaussian noise; continuous drawdown on [0, L]; alpha-Lipschitz guard (0 <= alpha < 1)."
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity and Gaussian.Real; residuals in [0, 1]; bounded or Gaussian noise (v = 0 or v != 0); continuous drawdown; unit-rate iid samples (T <= t); alpha-Lipschitz guard."
     }
   ],
   "does_not_show": [
     {
       "kind": "scope",
-      "en": "Gaussian aliasing bounds cover single-sample measurable events with nonzero variance (v != 0), not multi-step closed-loop threshold adaptation or zero-variance Dirac laws."
+      "en": "Sequential walls bound measurable events on the T-sample sum gaussianSeqLaw (no general sufficiency proof over R^T statistics) under unit-rate iid sampling (T <= t), leaving adaptive closed-loop thresholding open."
     },
     {
       "kind": "correspondence",
@@ -119,10 +136,10 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T184556.666960Z): 85 declarations (67 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1-P7 held, P8-P11 failed, kept)."
+    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T233143.454949Z): 97 declarations (77 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words; horizon-critic PASS. Compared against B5 (20 seeds; P1-P7 held, P8-P11 failed, kept)."
   },
   "next_delta": {
-    "en": "Human read by Ren; investigate closed-loop multi-step guard thresholding beyond single-sample Gaussian Youden bounds."
+    "en": "Human read by Ren; investigate closed-loop adaptive sequential thresholding and non-iid or non-Gaussian channels."
   },
   "correspondence": {
     "en": "Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_long_lag and FAIL_high_lr onto ObservationalFidelity.fiber_split_readout_floor, tvDist, AlignmentReals.MetricLaxSim, metric_laxSim_contraction_tube, and ProbabilityTheory.gaussianReal."
@@ -147,7 +164,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T184556.666960Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T233143.454949Z/verification.json",
       "sha256_pointer": "/source_sha256/QuantitativeTransfer",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -162,14 +179,17 @@
     },
     {
       "en": "24 November 2026 UTC (Frontier 3 delta): added Parts 5-6 finite/lag Youden J bounds and Gaussian-additive aliasing floor over Measure R (85 declarations, 67 theorems, receipt 20261124T184556.666960Z). AI-written."
+    },
+    {
+      "en": "24 November 2026 UTC (Frontier 3 horizon): added Part 7 zero-variance Dirac dichotomy and Part 8 multi-step iid Gaussian convolution wall + sample complexity vs lag horizon (97 declarations, 77 theorems, receipt 20261124T233143.454949Z, horizon-critic PASS). AI-written."
     }
   ],
-  "reviewed_at_utc": "2026-11-24T18:50:00+00:00",
+  "reviewed_at_utc": "2026-11-24T23:34:00+00:00",
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
       "role": "proof",
-      "sha256": "48e9e11790cddbb268872537a6295b4e91dd091cde3794ab2550641708889150",
+      "sha256": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a",
       "declarations": [
         "QuantitativeTransfer.abs_youdenJ_le_tvDist",
         "QuantitativeTransfer.aliased_fiber_gap",
@@ -178,17 +198,28 @@
         "QuantitativeTransfer.aliased_separable_iff",
         "QuantitativeTransfer.anchor_detects_shared_drift",
         "QuantitativeTransfer.b1_headroom_witness",
+        "QuantitativeTransfer.convPow",
+        "QuantitativeTransfer.convPow_gaussianReal",
         "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
         "QuantitativeTransfer.correlated_pool_lab_witness",
         "QuantitativeTransfer.gaussianAliasedLaw",
+        "QuantitativeTransfer.gaussianSeqLaw",
+        "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+        "QuantitativeTransfer.gaussianSeqMean_map_eq",
         "QuantitativeTransfer.gaussian_aliased_lab_witness",
         "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
         "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
         "QuantitativeTransfer.gaussian_bhattacharyya_integral",
         "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
         "QuantitativeTransfer.gaussian_midpoint_attains_tv",
+        "QuantitativeTransfer.gaussian_seq_lab_witness",
+        "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+        "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+        "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
         "QuantitativeTransfer.gaussian_tv_ge_hellinger",
         "QuantitativeTransfer.gaussian_tv_le_hellinger",
+        "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+        "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
         "QuantitativeTransfer.integral_cauchy_schwarz",
         "QuantitativeTransfer.lag_horizon_wall",
         "QuantitativeTransfer.lag_wall_iff_linear",
@@ -204,6 +235,7 @@
         "QuantitativeTransfer.pool_ceiling_attained",
         "QuantitativeTransfer.pool_disagreement_ceiling",
         "QuantitativeTransfer.pool_shared_bias_floor",
+        "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
         "QuantitativeTransfer.switchLag_nonpos_tabular",
         "QuantitativeTransfer.switchLag_strictMono_rho",
         "QuantitativeTransfer.switching_score_persists",
@@ -224,9 +256,9 @@
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T184556.666960Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T233143.454949Z/verification.json",
       "role": "receipt",
-      "sha256": "f82f7979b464acf9a997a3872bc98f188b881b48469ff5e6ddb912edc9f03cfc",
+      "sha256": "f803e32685fe7903eef1287ec9add222e4dc99d5f64100cb8c2908fa390545cc",
       "declarations": []
     },
     {
@@ -237,7 +269,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier3-quantitative-transfer-2026-11-24/NOTE.md",
       "role": "review",
-      "sha256": "f3440d7ed8ffadf9c359811ee70b4e44ef50d2f35809b3240f8a4c271f44e0ce"
+      "sha256": "de89fe121f83ecfd0d622629fa29ffb50cbaabac629645f81e30c982f32dfde9"
     }
   ],
   "aliases": [],

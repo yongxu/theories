@@ -7,7 +7,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "statement": {
-    "en": "Upgrades passing an EpochHandoffGate (anchored, target certified and total, live headroom) keep the original floor and current guard over every run; one epoch gives anchored_selfMod_viable exactly; dropping only the anchor lets a floor-lowering run drain to 0 inside its own kernel."
+    "en": "Upgrades passing SwitchoverHandoffGate (or zero-draw EpochHandoffGate) keep the original floor and current guard over every run, even under nonzero switchover draw when post-switchover margin holds; timely pre-breach residual readouts admit unmodelled sites before floor breach refuses late entry."
   },
   "hypotheses": [
     {
@@ -84,20 +84,44 @@
         "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_certified_at_11",
         "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_no_local_gate_admits_solo_and_matches_joint_gate"
       ]
+    },
+    {
+      "en": "Switchover-time reserve draw and pre-breach unmodelled-site discovery: SwitchoverHandoffGate reduces identically to EpochHandoffGate at zero draw, certifies viability and non-deadlock under nonzero switchDraw when post-switchover margin holds, and separates a draining unmodelled site's pre-breach residual drop (obsResidual) from silent collapse before floor breach (obsSilent).",
+      "declarations": [
+        "Becoming.OpenEndedComposition.switchoverReserve",
+        "Becoming.OpenEndedComposition.SwitchoverHandoffGate",
+        "Becoming.OpenEndedComposition.SwitchoverEpochStep",
+        "Becoming.OpenEndedComposition.switchoverEpochProcess",
+        "Becoming.OpenEndedComposition.switchoverClosedProcess",
+        "Becoming.OpenEndedComposition.switchoverInv_certificate",
+        "Becoming.OpenEndedComposition.switchoverChain_certificate",
+        "Becoming.OpenEndedComposition.switchoverChain_viability_kernel_on_K",
+        "Becoming.OpenEndedComposition.switchoverChain_viability_kernel",
+        "Becoming.OpenEndedComposition.switchoverChain_anchor_never_weakened",
+        "Becoming.OpenEndedComposition.switchoverChain_nonDeadlock",
+        "Becoming.OpenEndedComposition.switchover_gate_rejects_insufficient_margin",
+        "Becoming.OpenEndedComposition.zeroSwitchDraw_gate_iff_epochHandoffGate",
+        "Becoming.OpenEndedComposition.zeroSwitchDraw_step_iff_epochStep",
+        "Becoming.OpenEndedComposition.SwitchoverDrawWitness.zeroDraw_accepts_7_but_switchover_breaches_floor",
+        "Becoming.OpenEndedComposition.SwitchoverDrawWitness.switchover_certifies_12",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.endogenous_site_discovery_protects_both",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsSilent_agree_le_6",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.silent_unmodelled_site_impossibility"
+      ]
     }
   ],
   "does_not_show": [
     {
-      "en": "That any actual system meets EpochCert, AnchorStep or the gate (recognition, Rule 2).",
-      "kind": "scope"
+      "kind": "scope",
+      "en": "That any actual system meets EpochCert, AnchorStep, SwitchoverHandoffGate, or pre-breach residual observability (recognition, Rule 2)."
     },
     {
-      "en": "Substrate draw during a real switchover; a substrate law or environment draw that changes across epochs.",
-      "kind": "scope"
+      "kind": "scope",
+      "en": "A substrate law G or environment draw envDraw that itself changes across epochs, or continuous-time switchover dynamics."
     },
     {
-      "en": "Which unmodelled sites should enter scope, or when.",
-      "kind": "scope"
+      "kind": "scope",
+      "en": "An embedded upgrade controller: obsResidual sits outside family.obs and pairs drop signals with gated upgrades; obsSilent blocks separation vs counterfactual xIntact."
     }
   ],
   "standard_boundaries": [
@@ -109,7 +133,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; verified inside the 0-axiom Init-only core closure with Lean 4.29.1 (becoming-checks/20261124T184422.177368Z): 100 theorems, 193 declarations, 0 nonempty axioms, 0 warnings. Adversarial review by f2-critic and deltas-critic (PASS)."
+    "en": "AI-written; verified inside the 0-axiom Init-only core closure with Lean 4.29.1 (becoming-checks/20261124T233040.232087Z): 122 theorems, 237 declarations, 0 nonempty axioms, 0 warnings. Adversarial review by f2-critic, deltas-critic, and horizon-critic (PASS)."
   },
   "correspondence": {
     "en": "Reading (AI-written): what is evolvable (modes, sensors, capabilities, envelopes) and what is anchored (substrate law, floors in scope, environment bounds) must be separated, and the anchored side may only tighten; moving a floor to the evolvable side is the wireheading route, and freezing capabilities on the anchored side is lock-in."
@@ -144,18 +168,24 @@
     },
     {
       "en": "24 November 2026 UTC: added Part 5b jointEpochFamily and Bool x Bool EpochHandoffGate specialization (100 theorems / 193 declarations, core receipt becoming-checks/20261124T184422.177368Z). AI-written."
+    },
+    {
+      "en": "24 November 2026 UTC (Frontier 2 horizon): added Part 6a SwitchoverHandoffGate / SwitchoverDrawWitness and Part 6b EndogenousSiteDiscoveryWitness (122 theorems / 237 declarations, core receipt becoming-checks/20261124T233040.232087Z, horizon-critic PASS). AI-written."
     }
   ],
   "family": "F01",
-  "reviewed_at_utc": "2026-11-24T18:50:00+00:00",
+  "reviewed_at_utc": "2026-11-24T23:34:00+00:00",
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
       "role": "proof",
-      "sha256": "6ae622db6e2d8d06bfd37226e7c4015d9a2905eb2d275556d5e364ee7032c991",
+      "sha256": "78c2b514ba949c9af570f25f9405c2a9fbc7dc8984d355f58838d2ab3adebc8d",
       "declarations": [
         "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
         "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.endogenous_site_discovery_protects_both",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.obsSilent_agree_le_6",
+        "Becoming.OpenEndedComposition.EndogenousSiteDiscoveryWitness.silent_unmodelled_site_impossibility",
         "Becoming.OpenEndedComposition.EpochHandoffGate",
         "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects",
         "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
@@ -182,6 +212,10 @@
         "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
         "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
         "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+        "Becoming.OpenEndedComposition.SwitchoverDrawWitness.switchover_certifies_12",
+        "Becoming.OpenEndedComposition.SwitchoverDrawWitness.zeroDraw_accepts_7_but_switchover_breaches_floor",
+        "Becoming.OpenEndedComposition.SwitchoverEpochStep",
+        "Becoming.OpenEndedComposition.SwitchoverHandoffGate",
         "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
         "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering",
         "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
@@ -197,26 +231,38 @@
         "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
         "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
         "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+        "Becoming.OpenEndedComposition.switchoverChain_anchor_never_weakened",
+        "Becoming.OpenEndedComposition.switchoverChain_certificate",
+        "Becoming.OpenEndedComposition.switchoverChain_nonDeadlock",
+        "Becoming.OpenEndedComposition.switchoverChain_viability_kernel",
+        "Becoming.OpenEndedComposition.switchoverChain_viability_kernel_on_K",
+        "Becoming.OpenEndedComposition.switchoverClosedProcess",
+        "Becoming.OpenEndedComposition.switchoverEpochProcess",
+        "Becoming.OpenEndedComposition.switchoverInv_certificate",
+        "Becoming.OpenEndedComposition.switchoverReserve",
+        "Becoming.OpenEndedComposition.switchover_gate_rejects_insufficient_margin",
         "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
-        "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step"
+        "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
+        "Becoming.OpenEndedComposition.zeroSwitchDraw_gate_iff_epochHandoffGate",
+        "Becoming.OpenEndedComposition.zeroSwitchDraw_step_iff_epochStep"
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T184422.177368Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T233040.232087Z/verification.json",
       "role": "receipt",
-      "sha256": "d7a1767fe482ff17190dfbe58b5944f20b1dba01d0f16aeb6a99b469b1ab88a1",
+      "sha256": "ee4ec9dc393c29a6f73f9bb75c881c8d795dcd700f25db6d4a969a47eb18fffb",
       "declarations": []
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier2-open-ended-composition-2026-11-24/NOTE.md",
       "role": "review",
-      "sha256": "82fe531ba7049e3c83052b4ff64d08cdbd4f423ba60daffcb5ef5076e647164d"
+      "sha256": "f7c7ce5ec58799475c8c86a586c1a591606309bf7fd4e07ad3fa4b503a73cd73"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T184422.177368Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T233040.232087Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OpenEndedComposition",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -226,6 +272,6 @@
   "related": [],
   "counterexamples": [],
   "next_delta": {
-    "en": "Human read by Ren; model switchover-time substrate draw and unmodelled site discovery beyond gate refusal."
+    "en": "Human read by Ren; couple EpochFamily upgrades to stochastic pre-breach discovery policies and time-varying G."
   }
 }
