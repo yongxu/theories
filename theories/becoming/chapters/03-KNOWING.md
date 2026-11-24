@@ -104,7 +104,7 @@ A source before a juncture is [02](02-MAP.md#r-a-source-before-a-juncture)'s.
 
 **Reading** [AI reading, D20, D26, D45]. 明 (*míng*, clearness) is a relation, as wide as the couplings joined to a selection, growing as measurement (a route), a model ([§3](#r-testing-within-couplings)) and pools ([05](05-COLLECTIVES.md#r-what-pooled-coupling-reaches); reading another's couplings is pooling, [05](05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling)) are joined. 识 (*shí*), 理 and 明 are one structure: 识 a formation's own course through its couplings' lumping, 理 a lumping the world goes alike across, 明 the joining of couplings to a selection; situational awareness is 明 of one's own reach. Holding 明 for others keeps the three routes open (checkable models, measurement bringing far consequences back, pools reaching where one's own couplings do not), admission being itself a selection through one's own couplings; a lasting change has to reach the rule ([§4](#r-projection-carrying-a-law)), and a law used beyond its scope is a wrong model.
 
-For the Wave U6 quantitative query-image total-variation blindness floor and the zero-TV fiber viability split (`Becoming.ObservationalFidelity`), see [observational-fidelity-and-multi-regime-error](../results/records/observational-fidelity-and-multi-regime-error.md) ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).
+For the Wave U6 quantitative query-image total-variation blindness floor and the zero-TV fiber viability split (`ObservationalFidelity`, Mathlib periphery #13), see [observational-fidelity-and-multi-regime-error](../results/records/observational-fidelity-and-multi-regime-error.md) ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).
 
 <a id="testing"></a>
 ## 3. Testing within the net
