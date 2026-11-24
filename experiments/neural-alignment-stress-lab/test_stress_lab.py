@@ -7,7 +7,9 @@ Covers:
 3. Exact determinism across repeated seeded runs.
 4. Structural empirical invariants across B1-B4 (including explicit verification
    that B4 documents BOTH rescued nominal regimes AND genuine failure regimes).
-5. Strict hygiene scan ensuring zero forbidden market-vocabulary tokens anywhere
+5. B5: remediable control defects vs. structural walls (trust region, hard mask,
+   anchor channel, physical blinders untouched, rescue != survival by silence).
+6. Strict hygiene scan ensuring zero forbidden market-vocabulary tokens anywhere
    in code, identifiers, or docs inside experiments/neural-alignment-stress-lab/.
 """
 
@@ -30,6 +32,9 @@ from benchmarks import (  # noqa: E402
     run_b3_concurrent_vs_serialized,
     run_b4_guarded_alignment_protocol,
 )
+import b5_walls as b5  # noqa: E402
+from benchmarks import GuardFlags, _run_b4_seed  # noqa: E402
+from substrates import CoupledAlignmentArena  # noqa: E402
 from nn_core import (  # noqa: E402
     MLP2,
     ReinforcePolicy,
@@ -246,6 +251,112 @@ class TestBenchmarksAndDeterminism(unittest.TestCase):
                 0.0,
                 f"Expected genuine failure under {sc}",
             )
+
+
+class TestB5WallsVersusDefects(unittest.TestCase):
+    """B5 (AI-written): remediable control defects vs. structural walls."""
+
+    def test_default_b5_runtime_reproduces_b4_full_guard(self) -> None:
+        for cfg in (b5.CFG_NOMINAL, b5.CFG_DRIFT, b5.CFG_LONG_LAG):
+            for seed in (11, 12):
+                a = _run_b4_seed(cfg, GuardFlags(True, True, True), seed)
+                b = b5._run_b5_seed(cfg, b5.B5Opts(), seed)
+                for key in a:
+                    self.assertEqual(a[key], b[key], f"{key} differs for seed {seed}")
+
+    def test_trust_region_bounds_logit_step_or_rolls_back(self) -> None:
+        rng = random.Random(77)
+        cfg = b5.CFG_NOMINAL
+        rt = b5.B5Runtime(b5.B5Opts(tr_delta=0.5), cfg, rng)
+        pol = ReinforcePolicy(d_in=6, d_hid=10, n_actions=3, rng=rng)
+        feat = [1.0, 0.4, 0.2, -0.3, 1.0, 0.5]
+        for reward in (3.0, -3.0, 2.0):
+            z0 = pol.net.forward(feat)
+            rt._tr_update(pol, feat, 2, reward, lr=8.0, clip_val=40.0, delta=0.5)
+            z1 = pol.net.forward(feat)
+            dz = math.sqrt(sum((x - y) ** 2 for x, y in zip(z0, z1)))
+            self.assertLessEqual(dz, 0.5 + 1e-9)
+        # Control: the same raw step without the region is far outside it.
+        pol2 = ReinforcePolicy(d_in=6, d_hid=10, n_actions=3, rng=random.Random(77))
+        z0 = pol2.net.forward(feat)
+        pol2.update_step(feat, 2, 3.0, lr=8.0, baseline_decay=0.15, entropy_coef=0.01, grad_clip=40.0)
+        z1 = pol2.net.forward(feat)
+        self.assertGreater(math.sqrt(sum((x - y) ** 2 for x, y in zip(z0, z1))), 0.5)
+
+    def test_hard_mask_is_not_bypassed_by_surge_logit_margin(self) -> None:
+        cfg = b5.CFG_NOMINAL
+        for hard in (True, False):
+            rng = random.Random(5)
+            arena = CoupledAlignmentArena(cfg, rng)
+            rt = b5.B5Runtime(b5.B5Opts(hard_mask=hard), cfg, rng)
+            pols = [ReinforcePolicy(d_in=6, d_hid=10, n_actions=3, rng=rng) for _ in range(3)]
+            for p in pols:  # exploded logits: surge dominates by a large margin
+                p.net.b2 = [0.0, 0.0, 12.0]
+            rt.margin_alert, rt.fiber_alert = True, False
+            surges = 0
+            for _ in range(40):
+                acts, _ = rt.select_joint_actions(arena, pols)
+                surges += sum(1 for a in acts if a == 2)
+            if hard:
+                self.assertEqual(surges, 0)
+            else:
+                self.assertGreater(surges, 0)  # B4 gate lets the exploded margin through
+        rng = random.Random(6)
+        arena = CoupledAlignmentArena(cfg, rng)
+        rt = b5.B5Runtime(b5.B5Opts(hard_mask=True), cfg, rng)
+        pols = [ReinforcePolicy(d_in=6, d_hid=10, n_actions=3, rng=rng) for _ in range(3)]
+        for p in pols:
+            p.net.b2 = [0.0, 12.0, 0.0]
+        rt.margin_alert, rt.fiber_alert = False, True
+        for _ in range(40):
+            acts, _ = rt.select_joint_actions(arena, pols)
+            self.assertNotIn(1, acts)
+
+    def test_physical_blinders_are_never_changed_by_variants(self) -> None:
+        self.assertEqual(b5.CFG_LONG_LAG.lag, 8)
+        self.assertEqual(b5.CFG_ALIAS.probe_aliasing, 0.95)
+        self.assertEqual(b5.CFG_DRIFT.correlated_judge_drift, 0.96)
+        for o in (b5.G0, b5.G1, b5.G2, b5.G3):
+            row = b5._cell("T3", "w", b5.CFG_LONG_LAG, o, 0, 5100, 1)
+            self.assertEqual((row["lag"], row["probe_aliasing"]), (8, 0.10))
+            row = b5._cell("T3", "w", b5.CFG_ALIAS, o, 0, 5100, 1)
+            self.assertEqual((row["lag"], row["probe_aliasing"]), (1, 0.95))
+
+    def test_b5_remediable_defect_and_sustain_reference(self) -> None:
+        n = 8
+        base = b5._cell("T1", "hl8", b5._cfg_high_lr(8.0), b5.B5Opts(), 4, 5100, n)
+        fix = b5._cell(
+            "T1", "hl8", b5._cfg_high_lr(8.0),
+            b5.B5Opts(label="tr+mask", hard_mask=True, tr_delta=b5.DELTA_MAX), 7, 5100, n,
+        )
+        self.assertGreaterEqual(base["collapse_rate"], 0.5)
+        self.assertLessEqual(fix["collapse_rate"], 0.25)
+        self.assertGreater(fix["mean_output"], 0.50)
+        sus = b5._cell("REF", "nom", b5.CFG_NOMINAL, b5.SUSTAIN, 0, 5100, 2)
+        self.assertEqual(sus["collapse_rate"], 0.0)
+        self.assertAlmostEqual(sus["mean_output"], 0.44, places=2)
+
+    def test_b5_rescue_definition_excludes_survival_by_silence(self) -> None:
+        self.assertTrue(b5.is_rescue({"collapse_rate": 0.0, "mean_output": 0.60}))
+        self.assertFalse(b5.is_rescue({"collapse_rate": 0.0, "mean_output": 0.44}))
+        self.assertFalse(b5.is_rescue({"collapse_rate": 0.25, "mean_output": 0.60}))
+
+    def test_b5_long_lag_channel_is_blind_before_collapse(self) -> None:
+        rows = b5.run_b5_channel_detectability(n_seeds=4)
+        by = {(r["channel"], r["thresholds"]): r for r in rows}
+        nominal = by[("nominal(lag1,alias0.05)", "G0_baseline")]
+        self.assertGreater(nominal["youden_j"], 0.9)
+        for th in ("G0_baseline", "G1_hair_trigger"):
+            wall = by[("long_lag_8", th)]
+            self.assertEqual(wall["youden_j"], 0.0)
+            self.assertEqual(wall["no_alert_before_collapse"], wall["stealth_runs_collapsed"])
+        self.assertLess(by[("severe_aliasing_0.95", "G0_baseline")]["youden_j"], 0.1)
+
+    def test_b5_determinism(self) -> None:
+        o = b5.B5Opts(label="M3+anchor", anchor_alias=0.0)
+        r1 = b5._cell("T2", "d", b5.CFG_DRIFT, o, 0, 9300, 2)
+        r2 = b5._cell("T2", "d", b5.CFG_DRIFT, o, 0, 9300, 2)
+        self.assertEqual(r1, r2)
 
 
 class TestVocabularyHygiene(unittest.TestCase):
