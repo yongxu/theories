@@ -54,7 +54,7 @@ A light cone counted in coupling links: information propagates at most one link 
 
 - **interpretive**: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Answers part of its Next ('a model of how a center forms and represents its boundary'): the region represented is drawn along coupling links.
 
-**Used by:** [where-a-formations-acts-return](where-a-formations-acts-return.md)
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md) · [where-a-formations-acts-return](where-a-formations-acts-return.md)
 
 <a id="sources--来源"></a>
 ### Sources

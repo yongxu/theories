@@ -84,7 +84,7 @@ P118's third reading as Ren took it on 16 October 2026, and P122, left open “w
 - related, not a proved adapter: [every-origin-passes-the-gate](every-origin-passes-the-gate.md). There the gate of coupling and testing; here what couples in bounds a law's couplings, and loops lie within what is read.
 - related, not a proved adapter: [observation-is-a-route](observation-is-a-route.md). Observation is a route of readings from what is observed: a difference goes only downstream, and a stock couples into a formation only through a level it reads downstream of the stock; a route forms by closing.
 
-**Used by:** [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md) · [where-a-level-couples](where-a-level-couples.md)
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md) · [observation-is-a-route](observation-is-a-route.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md) · [where-a-level-couples](where-a-level-couples.md)
 
 <a id="sources--来源"></a>
 ### Sources

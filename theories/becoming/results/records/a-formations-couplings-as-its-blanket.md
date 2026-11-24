@@ -103,6 +103,8 @@ The principle defines a thing by its Markov blanket (Friston 2013, 2019; Kirchho
 - related, not a proved adapter: [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md). The blanket's statistical form; this record states the coupling form's existence and when it constrains.
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). The existence claim's weighting form, which forbids only with a weighting fixed apart from the course; the coupling form is refuted under a sparse partition fixed apart from the family, a degenerate reading refuting no family whose law is determined.
 
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

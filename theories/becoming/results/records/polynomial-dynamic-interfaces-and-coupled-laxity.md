@@ -71,6 +71,8 @@ Reading (AI-written): extends AlignmentSpine sharpness barriers CE05b (concurren
 - **formal-reuse**: [lax-multi-scale-viability](lax-multi-scale-viability.md). Constructs LaxSim directly on coupled closedProcess via coupled_closed_laxSim and transfers Viability.Kernel via lax_kernel_of_certificate.
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Viability.Certificate and Viability.Kernel across dynamic modes, anchored self-modification, and serialized reconfiguration.
 
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md) · [endogenous-order-scope-coevolution-and-nash](endogenous-order-scope-coevolution-and-nash.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

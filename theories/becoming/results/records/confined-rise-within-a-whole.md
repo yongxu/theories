@@ -78,6 +78,8 @@ Buss 1987 and Michod 1999 (with Michod and Roze 2001) read the transitions in in
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups on one family of conditions ending together; here a lineage within a whole read on its family.
 - related, not a proved adapter: [whole-persists-through-generation](whole-persists-through-generation.md). A whole goes on only as parts keep arising; here what its parts' lineages can carry past it.
 
+**Used by:** [derived-evolutionary-drawdown-and-transitions](derived-evolutionary-drawdown-and-transitions.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

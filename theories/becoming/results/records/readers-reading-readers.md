@@ -64,7 +64,7 @@ The deterministic form of an information cascade (Bikhchandani, Hirshleifer and 
 - related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). A pool reaches no further than the union of its members' closures; where, from some member on, every member reads only the acts before it, a selection through the acts reaches only what couples into the members before that one.
 - related, not a proved adapter: [a-cascade-at-the-histories-reached](a-cascade-at-the-histories-reached.md). This record's cascade laws (acts, act, selection through the acts) with the premise asked only at the histories a world reaches, for the two couplings compared at one of the two worlds, and for the selection at every world; this record's premise gives it; weaker by a witness, member 0 reading its coupling only after a non-empty list of earlier acts, which no world gives it.
 
-**Used by:** [a-cascade-at-the-histories-reached](a-cascade-at-the-histories-reached.md)
+**Used by:** [a-cascade-at-the-histories-reached](a-cascade-at-the-histories-reached.md) · [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md)
 
 <a id="sources--来源"></a>
 ### Sources

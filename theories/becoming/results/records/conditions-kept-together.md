@@ -72,7 +72,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
   - Preserved conditions: Finitely many configurations. [Onward.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean)
 - related, not a proved adapter: [finite-continuation-plans](finite-continuation-plans.md). Keeping for n steps through moves taken; here kept jointly versus kept each.
 
-**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md) · [lax-multi-scale-viability](lax-multi-scale-viability.md) · [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md) · [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md) · [polynomial-dynamic-interfaces-and-coupled-laxity](polynomial-dynamic-interfaces-and-coupled-laxity.md)
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md) · [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [derived-evolutionary-drawdown-and-transitions](derived-evolutionary-drawdown-and-transitions.md) · [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md) · [lax-multi-scale-viability](lax-multi-scale-viability.md) · [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md) · [paced-stock-and-cadence-margin-sandwich](paced-stock-and-cadence-margin-sandwich.md) · [polynomial-dynamic-interfaces-and-coupled-laxity](polynomial-dynamic-interfaces-and-coupled-laxity.md)
 
 <a id="sources--来源"></a>
 ### Sources

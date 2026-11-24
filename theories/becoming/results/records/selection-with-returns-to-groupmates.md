@@ -81,7 +81,7 @@ Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-g
 - related, not a proved adapter: [shaping-selected-among-groups](shaping-selected-among-groups.md). The capacity to shape a rule, a group's shared part what its shapers give, is a case of returns kept.
 - related, not a proved adapter: [unequal-groups-not-decided-by-the-spread-among-groups](unequal-groups-not-decided-by-the-spread-among-groups.md). The form the verdict at unequal sizes does not go through, beside the form it goes through.
 
-**Used by:** [shaping-selected-among-groups](shaping-selected-among-groups.md) · [unequal-groups-not-decided-by-the-spread-among-groups](unequal-groups-not-decided-by-the-spread-among-groups.md)
+**Used by:** [derived-evolutionary-drawdown-and-transitions](derived-evolutionary-drawdown-and-transitions.md) · [endogenous-order-scope-coevolution-and-nash](endogenous-order-scope-coevolution-and-nash.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md) · [unequal-groups-not-decided-by-the-spread-among-groups](unequal-groups-not-decided-by-the-spread-among-groups.md)
 
 <a id="sources--来源"></a>
 ### Sources

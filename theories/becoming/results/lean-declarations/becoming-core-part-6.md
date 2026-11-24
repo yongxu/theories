@@ -11,6 +11,79 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 6 of 7
 
+<a id="module-764115c55a45"></a>
+
+<details>
+<summary>Refinement.lean — 11 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean`
+
+Imports: `Becoming.Decidedness`, `Becoming.PredicateIteration`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.DistinctUnder.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L44) | 44 |
+| [Becoming.DistinctUnder.unique](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L51) | 51 |
+| [Becoming.DistinctUnder.length_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L65) | 65 |
+| [Becoming.not_not_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L77) | 77 |
+| [Becoming.Refining.grow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L97) | 97 |
+| [Becoming.Refining.steady_or_grown](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L122) | 122 |
+| [Becoming.Refining.steady_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L148) | 148 |
+| [Becoming.DistinctUnder.single](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L159) | 159 |
+| [Becoming.le_pred_of_succ_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L163) | 163 |
+
+Definitions and types:
+
+- `structure` [Becoming.Refining](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L82) (L82)
+- `def` [Becoming.SteadyAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean#L89) (L89)
+
+</details>
+
+<a id="module-423338402f58"></a>
+
+<details>
+<summary>ReflexivePrediction.lean — 24 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean`
+
+Imports: `Becoming.Keeping`, `Becoming.Recurrence`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ReflexivePrediction.none_right_of_moves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L68) | 68 |
+| [Becoming.ReflexivePrediction.no_predictor_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L73) | 73 |
+| [Becoming.ReflexivePrediction.predictor_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L80) | 80 |
+| [Becoming.ReflexivePrediction.rests_iff_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L90) | 90 |
+| [Becoming.ReflexivePrediction.right_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L95) | 95 |
+| [Becoming.ReflexivePrediction.reached_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L100) | 100 |
+| [Becoming.ReflexivePrediction.on_chain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L112) | 112 |
+| [Becoming.ReflexivePrediction.rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L118) | 118 |
+| [Becoming.ReflexivePrediction.below_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L125) | 125 |
+| [Becoming.ReflexivePrediction.stays_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L131) | 131 |
+| [Becoming.ReflexivePrediction.again_or_risen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L138) | 138 |
+| [Becoming.ReflexivePrediction.bottom_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L154) | 154 |
+| [Becoming.ReflexivePrediction.ThresholdResponse.within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L178) | 178 |
+| [Becoming.ReflexivePrediction.ThresholdResponse.keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L183) | 183 |
+| [Becoming.ReflexivePrediction.ThresholdResponse.both_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L189) | 189 |
+| [Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L193) | 193 |
+| [Becoming.ReflexivePrediction.Negating.none_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L206) | 206 |
+| [Becoming.ReflexivePrediction.Negating.alternates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L210) | 210 |
+| [Becoming.ReflexivePrediction.Reflecting.reverses](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L223) | 223 |
+| [Becoming.ReflexivePrediction.Reflecting.middle_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L227) | 227 |
+
+Definitions and types:
+
+- `def` [Becoming.ReflexivePrediction.Right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L65) (L65)
+- `def` [Becoming.ReflexivePrediction.ThresholdResponse.threshold](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L175) (L175)
+- `def` [Becoming.ReflexivePrediction.Negating.negate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L203) (L203)
+- `def` [Becoming.ReflexivePrediction.Reflecting.reflect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean#L220) (L220)
+
+</details>
+
 <a id="module-77e7b36ae401"></a>
 
 <details>

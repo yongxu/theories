@@ -111,6 +111,8 @@ Choosers: Foster's effective freedom (1993; 2011) with every preference admitted
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several choosers at a mutual best response on a flow: restraint is no mutual best response, with no comparison of courses by C and no fall in what each gets shown; whether the menu witness's shape is a case of it is not shown.
 - related, not a proved adapter: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). The same pattern for the condition: what reads only the dynamics entails nothing about significance.
 
+**Used by:** [endogenous-order-scope-coevolution-and-nash](endogenous-order-scope-coevolution-and-nash.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

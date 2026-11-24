@@ -909,6 +909,18 @@
    "page": "theories/becoming/results/records/acquired-revision-of-pending-task.md"
   },
   {
+   "id": "record:active-inquiry-deadline-cascade-and-blankets",
+   "type": "result",
+   "record": "active-inquiry-deadline-cascade-and-blankets",
+   "title": "Active inquiry margin sandwich, cascade alarm capture, delay obstructions, and blanket screening",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/active-inquiry-deadline-cascade-and-blankets.md"
+  },
+  {
    "id": "record:acts-alike-from-a-model-or-from-an-order",
    "type": "result",
    "record": "acts-alike-from-a-model-or-from-an-order",
@@ -2025,6 +2037,18 @@
    "page": "theories/becoming/results/records/derivation-soundness.md"
   },
   {
+   "id": "record:derived-evolutionary-drawdown-and-transitions",
+   "type": "result",
+   "record": "derived-evolutionary-drawdown-and-transitions",
+   "title": "Derived selection-to-drawdown collapse, multi-site exchange bridges, and compositional transitions",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/derived-evolutionary-drawdown-and-transitions.md"
+  },
+  {
    "id": "record:derived-extent-limits",
    "type": "result",
    "record": "derived-extent-limits",
@@ -2239,6 +2263,18 @@
    "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md"
+  },
+  {
+   "id": "record:endogenous-order-scope-coevolution-and-nash",
+   "type": "result",
+   "record": "endogenous-order-scope-coevolution-and-nash",
+   "title": "Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/endogenous-order-scope-coevolution-and-nash.md"
   },
   {
    "id": "record:endogenous-turning-and-clearing-margin",
@@ -11962,6 +11998,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ActiveInquiryLoop",
+   "type": "module",
+   "name": "Becoming.ActiveInquiryLoop",
+   "level": "L1",
+   "theorems": 62,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.TransformativeViability",
    "type": "module",
    "name": "Becoming.TransformativeViability",
@@ -12006,6 +12053,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.EvolutionaryDrawdown",
+   "type": "module",
+   "name": "Becoming.EvolutionaryDrawdown",
+   "level": "L2",
+   "theorems": 64,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.ScopeDynamics",
    "type": "module",
    "name": "Becoming.ScopeDynamics",
@@ -12014,6 +12072,17 @@
    "region": "map",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EndogenousOrder",
+   "type": "module",
+   "name": "Becoming.EndogenousOrder",
+   "level": "L2",
+   "theorems": 122,
+   "region": "significance",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -32867,6 +32936,81 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.BlanketCouplings",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.Cascade",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.CausalAbstraction",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.Latency",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.Learnable",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.LearnableRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.LevelCoupling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.LimitVerification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.PolyComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.ReachedCascade",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.Thresholds",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ActiveInquiryLoop",
+   "to": "module:Becoming.TimedResponse",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ActiveReading",
    "to": "module:Becoming.Extension",
    "type": "imports"
@@ -34047,6 +34191,31 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.EndogenousOrder",
+   "to": "module:Becoming.PersistingChoices",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousOrder",
+   "to": "module:Becoming.PolyComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousOrder",
+   "to": "module:Becoming.RoutesToC",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousOrder",
+   "to": "module:Becoming.ScopeDynamics",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousOrder",
+   "to": "module:Becoming.Standpoints",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.EndogenousTurning",
    "to": "module:Becoming.AdaptiveLoops",
    "type": "imports"
@@ -34139,6 +34308,46 @@
   {
    "from": "module:Becoming.Evolution",
    "to": "module:Becoming.Change",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.Founding",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.OverExchange",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.StockFlowBridge",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.TurningInTime",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EvolutionaryDrawdown",
+   "to": "module:Becoming.UnifiedDrawdown",
    "type": "imports"
   },
   {
@@ -39587,6 +39796,61 @@
    "interface": true
   },
   {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "module:Becoming.ActiveInquiryLoop",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:a-formations-couplings-as-its-blanket",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:interventional-causal-abstraction-and-goodhart",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:learnable-through-a-map",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:loops-within-what-a-law-reads",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:readers-reading-readers",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:timely-response-necessity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:active-inquiry-deadline-cascade-and-blankets",
+   "to": "record:what-a-center-can-know-by-a-step",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:acts-alike-from-a-model-or-from-an-order",
    "to": "module:Becoming.Blanket",
    "type": "proved-in"
@@ -44419,6 +44683,56 @@
    "type": "proved-in"
   },
   {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "module:Becoming.EvolutionaryDrawdown",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:a-line-on-a-stock",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:central-laws-over-every-exchange",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:confined-rise-within-a-whole",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:selection-with-returns-to-groupmates",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:unclamped-stock-flow-bridge",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:derived-evolutionary-drawdown-and-transitions",
+   "to": "record:unified-drawdown-overdraw-and-aliasing",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:derived-extent-limits",
    "to": "module:Becoming.Clearing",
    "type": "proved-in"
@@ -45027,6 +45341,56 @@
    "from": "record:ending-laws-as-regimes-on-a-lineage",
    "to": "record:whole-drawing-beyond-renewal-ends",
    "type": "related"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "module:Becoming.EndogenousOrder",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:a-narrowing-above-its-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:dynamical-scope-and-reciprocal-stability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:groups-whose-conditions-are-coupled",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:selection-with-returns-to-groupmates",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:transformative-viability-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:what-persisting-shows-of-an-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-order-scope-coevolution-and-nash",
+   "to": "record:what-would-give-c",
+   "type": "formal-reuse"
   },
   {
    "from": "record:endogenous-turning-and-clearing-margin",

@@ -70,7 +70,7 @@ Chapter §8.1 item 1, the formal part of the first target as restated on 20 Octo
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). The formal part of the first target, for the coverage of K1.
 - related, not a proved adapter: [map-of-premises](map-of-premises.md). There the World premises are independent as separately chosen fields; here the laws under them hold of every world read off an exchange.
 
-**Used by:** [laws-with-noise](laws-with-noise.md)
+**Used by:** [derived-evolutionary-drawdown-and-transitions](derived-evolutionary-drawdown-and-transitions.md) · [laws-with-noise](laws-with-noise.md)
 
 <a id="sources--来源"></a>
 ### Sources
