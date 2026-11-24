@@ -4120,7 +4120,7 @@
    "title_zh": "",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "capacity",
+   "region": "map",
    "base": "general",
    "page": "theories/becoming/results/records/open-ended-epoch-handoff.md"
   },
@@ -12277,7 +12277,7 @@
    "name": "Becoming.OpenEndedComposition",
    "level": "L2",
    "theorems": 90,
-   "region": "capacity",
+   "region": "map",
    "base": "general",
    "on_grammar": false,
    "reaches_grammar": true

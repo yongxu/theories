@@ -2977,7 +2977,7 @@
       "note": "Becoming.EndogenousDetectionRace + EndogenousEmergence (Frontier 1): pre-capture turning window under any cadence and split-evidence exchange vs closed silencing"
     },
     "open-ended-epoch-handoff": {
-      "region": "capacity",
+      "region": "map",
       "base": "general",
       "note": "Becoming.OpenEndedComposition (Frontier 2): EpochHandoffGate with contravariant AnchorStep, exact Rule 9 reductions, Horn 1a/1b/2, and evolve-vs-compose separation"
     },
@@ -5224,7 +5224,7 @@
       "note": "L2 (Frontier 1): 0-axiom EndogenousEmergence-ClosedCapture-PacedStock pre-capture window dichotomy and 2^T tag-invariant split-evidence exchange"
     },
     "Becoming.OpenEndedComposition": {
-      "region": "capacity",
+      "region": "map",
       "base": "general",
       "note": "L2 (Frontier 2): 0-axiom TransformsAcrossEpochs, Horn 1a/1b/2 bounds, Dual-Variance AnchorStep EpochHandoffGate, Poly reductions, and evolve-vs-compose separation"
     },
