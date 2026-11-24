@@ -353,3 +353,70 @@ OK
 - Also note for `wMiddleLockRace` (`others = 17`, `L = 1`): lockout starts at `t = 5` (`stock 5 = 10`), so three `.extract` steps breach `stock 8 = 3 < 6` and four steps reach `stock 9 = 0 < 6`.
 - Hygiene: `MARKET_EN` / `MARKET_ZH` (`tools/research/style.py`) → `0` hits across all 3 files; `/Users/ren/tmp/d1-scratch` removed; `0` `__pycache__` / `.pyc` in `experiments/evidence-replay`.
 
+---
+
+## 7. Addendum — Weighted Tags & Closed-Loop Split Coupling (AI-written, `f1-closed-split`, 2026-11-25)
+
+*AI-written (`f1-closed-split`, Frontier 1 Horizon, 25 November 2026). Closes the two remaining Part B open items (§4 item 3 above) in `Becoming.EndogenousDetectionRace` and `experiments/evidence-replay/test_split_evidence_capture_race.py`.*
+
+### New Lean Formalization (`Becoming.EndogenousDetectionRace`, Parts B.9 & B.10)
+
+All 94 prior theorems / 137 declarations remain intact; `Becoming.EndogenousDetectionRace` now comprises **`103` theorems / `151` declarations** (+9 theorems, +5 defs: `weightedTags`, `wSkew`, `stockSignal`, `closedSplitStep`, `wUnstrained`), strictly 0-axiom `Init`-only (`with_axioms: {}`), `0` warnings, `0` `sorry`, `0` `private` / `lemma` / `class` / unnamed `instance`.
+
+1. **Part B.9 — Weighted / non-uniform tag distributions:**
+   - `weightedTags` generalizes `countTags` over arbitrary `w : List Bool → Nat`, with `weightedTags_unit_eq_countTags` recovering `countTags`, `weightedTags_congr` for pointwise equality, and `weightedTags_viewBList` proving joint reindexing invariance for arbitrary `w`.
+   - `weighted_view_invariant` and `weighted_split_marginal_eq` prove that any tag weight invariant under `viewBList dD` and `viewBList dS` leaves every Moore agent's weighted alarm mass identical across `dD` and `dS` at every horizon `T`.
+   - `wSkew` (`[false] ↦ 3`, `[true] ↦ 1`, `0` otherwise) and `weighted_skew_breaks_blindness` give a sharp `T = 1` countermodel (`3 ≠ 1` for a 1-bit identity agent when `dD 0 = true`, `dS 0 = false`), proving retag-invariance of the tag weight is necessary for local marginal blindness.
+2. **Part B.10 — Closed-loop mask-substrate split coupling:**
+   - `stockSignal plateau x := Nat.blt x plateau` and `closedSplitStep` couple live stock, the majority gate (`admits`), and split observations `(viewA θ t, mask (θ t) (stockSignal plateau x'))` inside `markCourse`.
+   - `closedSplit_silenced_collapses`: on `wEndo`, `plateau = 12`, `x₀ = 14`, `s20`, `hi`, for any locally sound `L_A, L_B` with silencing `c` (`c false false = false`) and `alarmA s = false → L_A.act s = .extract`, for every tag `θ`, live stock equals `pureExtractStock wEndo 14 t`, learner states match `(feed L_A (viewA θ) t, feed L_B (viewB dEndo θ) t)`, `mark = false`, share and rule follow the closed pool (`Locked` from `t = 2`, `admits = false` permanently from `t = 6`), and stock breaches `stock 5 = 3 < 6` and `stock 6 = 0 < 6`.
+   - `closedSplit_exchange_saves_stock`: on the same setup with `exchangeLoop`, stock steps `14 → 12 → 10` (`d_0 = false`, `d_1 = true`), `mark = true ↔ 2 ≤ t` independently of `θ`, share and rule match `thinnedExchange t`, selection turns permanently from `t = 3`, and live stock stays at `10` for all `2 ≤ t` (`wEndo.xCrit ≤ stock t` for all `t`).
+   - `closedSplit_unstrained_no_false_turn`: on `wUnstrained`, `exchangeLoop` keeps `stock t = 14`, `mark t = false`, and `favours (M t).2` for all `t` and all `θ`.
+
+### Verbatim Verification Outputs (2026-11-25 Addendum)
+
+#### Lean (`scratch_build.py`)
+
+```json
+{
+  "tree": "/Users/ren/tmp/f1-closed-split-scratch",
+  "modules": 241,
+  "ran": [
+    "Becoming.EndogenousDetectionRace",
+    "BecomingEndogenousDetectionRaceAxiomAudit",
+    "BecomingEndogenousDetectionRaceSignatures",
+    "Becoming.EndogenousDetectionRace.PreludeOnly"
+  ],
+  "reused": 480,
+  "unclean": [],
+  "audits": {
+    "Becoming.EndogenousDetectionRace": {
+      "theorems": 103,
+      "declarations": 151,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.EndogenousDetectionRace": 1.955,
+    "BecomingEndogenousDetectionRaceAxiomAudit": 0.73,
+    "BecomingEndogenousDetectionRaceSignatures": 0.716,
+    "Becoming.EndogenousDetectionRace.PreludeOnly": 1.813
+  }
+}
+```
+
+#### Empirical Replay (`PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/evidence-replay -p 'test_*.py' -v`)
+
+```text
+test_r6_closed_loop_split_and_weighted_tags (test_split_evidence_capture_race.TestSplitEvidenceExhaustive.test_r6_closed_loop_split_and_weighted_tags) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 21.820s
+
+OK
+```
+
+- **Rule 2 note:** In `closedSplit_silenced_collapses`, `admits` stays `true` during `t = 0..5` (so the collapse at `t = 5` is driven by the silencing alarm keeping `L_A.act = .extract`) before `admits` turns `false` permanently from `t = 6` onward. Non-retag-invariant tag weights (`wSkew`) and multi-bit masks remain outside the marginal-invariance boundary.
+- **Hygiene:** `MARKET_EN` / `MARKET_ZH` (`tools/research/style.py`) → `0` hits across all 3 edited files; `/Users/ren/tmp/f1-closed-split-scratch` removed; `0` `__pycache__` / `.pyc` in `experiments/evidence-replay`.
+
+

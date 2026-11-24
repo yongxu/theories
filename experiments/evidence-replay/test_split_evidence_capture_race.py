@@ -13,6 +13,7 @@ import random
 import sys
 import unittest
 from dataclasses import dataclass
+from fractions import Fraction
 from typing import Callable
 
 sys.dont_write_bytecode = True
@@ -591,6 +592,222 @@ class TestSplitEvidenceExhaustive(unittest.TestCase):
                     share = select_share(share, g)
                     g = pool(HI, LO if reg else ONE_TO_ONE, share)
                     reg = reg or mask_bit(vA[t], vB[t])
+
+    def test_r6_closed_loop_split_and_weighted_tags(self) -> None:
+        def weighted_tags(
+            T: int,
+            weight_fn: Callable[[tuple[bool, ...]], int],
+            pred_fn: Callable[[tuple[bool, ...]], bool],
+        ) -> int:
+            total = 0
+            for theta in itertools.product((False, True), repeat=T):
+                if pred_fn(theta):
+                    total += weight_fn(theta)
+            return total
+
+        T = 6
+        d_D = tuple(pure_extract_stock(W_ENDO, 14, t + 1) < 12 for t in range(T))
+        d_S = (False,) * T
+        all_tags = list(itertools.product((False, True), repeat=T))
+
+        # 1. Weighted tag invariance under weights invariant to both viewBList d_D and viewBList d_S
+        # (e.g., weight depending on theta[0] and theta[1]^theta[2], since d_D[0]=False and d_D[1]=d_D[2]=True)
+        invariant_weights: list[Callable[[tuple[bool, ...]], int]] = [
+            lambda _th: 1,
+            lambda th: 3 if not th[0] else 1,
+            lambda th: 5 if (th[1] != th[2]) else 2,
+        ]
+        for w_fn in invariant_weights:
+            for th in all_tags:
+                vb_D = tuple(mask_bit(th[t], d_D[t]) for t in range(T))
+                vb_S = tuple(mask_bit(th[t], d_S[t]) for t in range(T))
+                self.assertEqual(w_fn(vb_D), w_fn(th))
+                self.assertEqual(w_fn(vb_S), w_fn(th))
+
+        rng = random.Random(20261125)
+        agents: list[MooreAgent] = [
+            MooreAgent(1, 0, ((0, 0),), (False,)),
+            MooreAgent(2, 0, ((0, 1), (1, 0)), (False, True)),
+            MooreAgent(2, 0, ((0, 1), (0, 1)), (False, True)),
+            MooreAgent(3, 0, ((0, 1), (1, 2), (2, 2)), (False, False, True)),
+        ]
+        for _ in range(50):
+            n = rng.choice((2, 3, 4))
+            trans = tuple((rng.randrange(n), rng.randrange(n)) for _ in range(n))
+            alarm = tuple(rng.choice((False, True)) for _ in range(n))
+            agents.append(MooreAgent(n_states=n, init=0, trans=trans, alarm=alarm))
+
+        for w_fn in invariant_weights:
+            for agent in agents:
+                w_D = weighted_tags(
+                    T,
+                    w_fn,
+                    lambda th, ag=agent: ag.run(tuple(mask_bit(th[t], d_D[t]) for t in range(T))),
+                )
+                w_S = weighted_tags(
+                    T,
+                    w_fn,
+                    lambda th, ag=agent: ag.run(tuple(mask_bit(th[t], d_S[t]) for t in range(T))),
+                )
+                self.assertEqual(w_D, w_S)
+
+        # 2. Sharp skew countermodel at T = 1 (3/4 vs 1/4)
+        def w_skew(th: tuple[bool, ...]) -> int:
+            if th == (False,):
+                return 3
+            if th == (True,):
+                return 1
+            return 0
+
+        id_agent = MooreAgent(2, 0, ((0, 1), (0, 1)), (False, True))
+        total_mass = weighted_tags(1, w_skew, lambda _th: True)
+        self.assertEqual(total_mass, 4)
+        mass_D = weighted_tags(1, w_skew, lambda th: id_agent.run((mask_bit(th[0], True),)))
+        mass_S = weighted_tags(1, w_skew, lambda th: id_agent.run((mask_bit(th[0], False),)))
+        self.assertEqual(mass_D, 3)
+        self.assertEqual(mass_S, 1)
+        self.assertEqual(Fraction(mass_D, total_mass), Fraction(3, 4))
+        self.assertEqual(Fraction(mass_S, total_mass), Fraction(1, 4))
+        self.assertNotEqual(mass_D, mass_S)
+
+        # 3. Closed-loop mask-substrate split coupling across all 2^6 = 64 tag prefixes
+        def run_closed_exchange(
+            step_stock_fn: Callable[[int, str], int],
+            theta: tuple[bool, ...],
+            plateau: int = 12,
+        ) -> list[dict[str, object]]:
+            share = (1, 20)
+            g = HI
+            stock = 14
+            reg = False
+            rows: list[dict[str, object]] = []
+            for t in range(len(theta)):
+                adm = admits(share[0], share[1])
+                rows.append(
+                    {
+                        "t": t,
+                        "share": share,
+                        "g": g,
+                        "stock": stock,
+                        "admit": adm,
+                        "reg": reg,
+                    }
+                )
+                act = gate(adm, "safe" if reg else "extract")
+                next_stock = step_stock_fn(stock, act)
+                d_emit = next_stock < plateau
+                obs_a = theta[t]
+                obs_b = mask_bit(theta[t], d_emit)
+                next_reg = reg or mask_bit(obs_a, obs_b)
+                next_share = select_share(share, g)
+                next_g = pool(HI, LO if reg else ONE_TO_ONE, share)
+                share, g, stock, reg = next_share, next_g, next_stock, next_reg
+            rows.append(
+                {
+                    "t": len(theta),
+                    "share": share,
+                    "g": g,
+                    "stock": stock,
+                    "admit": admits(share[0], share[1]),
+                    "reg": reg,
+                }
+            )
+            return rows
+
+        def run_closed_silenced(
+            agent_a: MooreAgent,
+            agent_b: MooreAgent,
+            theta: tuple[bool, ...],
+            plateau: int = 12,
+        ) -> list[dict[str, object]]:
+            share = (1, 20)
+            g = HI
+            stock = 14
+            s_a = agent_a.init
+            s_b = agent_b.init
+            rows: list[dict[str, object]] = []
+            for t in range(len(theta)):
+                adm = admits(share[0], share[1])
+                mark = agent_a.alarm[s_a] or agent_b.alarm[s_b]
+                rows.append(
+                    {
+                        "t": t,
+                        "share": share,
+                        "g": g,
+                        "stock": stock,
+                        "admit": adm,
+                        "reg": mark,
+                    }
+                )
+                intended = "safe" if agent_a.alarm[s_a] else "extract"
+                act = gate(adm, intended)
+                next_stock = W_ENDO.step_stock(stock, act)
+                d_emit = next_stock < plateau
+                obs_a = theta[t]
+                obs_b = mask_bit(theta[t], d_emit)
+                s_a = agent_a.trans[s_a][1 if obs_a else 0]
+                s_b = agent_b.trans[s_b][1 if obs_b else 0]
+                next_share = select_share(share, g)
+                next_g = pool(HI, LO if mark else ONE_TO_ONE, share)
+                share, g, stock = next_share, next_g, next_stock
+            rows.append(
+                {
+                    "t": len(theta),
+                    "share": share,
+                    "g": g,
+                    "stock": stock,
+                    "admit": admits(share[0], share[1]),
+                    "reg": agent_a.alarm[s_a] or agent_b.alarm[s_b],
+                }
+            )
+            return rows
+
+        # Baseline closed-pool share/g sequence
+        closed_pool_shares: list[tuple[int, int]] = []
+        closed_pool_gs: list[tuple[int, int]] = []
+        sh_p, g_p = (1, 20), HI
+        for _ in range(T + 1):
+            closed_pool_shares.append(sh_p)
+            closed_pool_gs.append(g_p)
+            sh_p, g_p = select_share(sh_p, g_p), pool(HI, ONE_TO_ONE, sh_p)
+
+        sound_agent = MooreAgent(1, 0, ((0, 0),), (False,))
+        for theta in all_tags:
+            # Silenced collapse
+            tr_sil = run_closed_silenced(sound_agent, sound_agent, theta)
+            for t in range(T + 1):
+                self.assertEqual(tr_sil[t]["stock"], pure_extract_stock(W_ENDO, 14, t))
+                self.assertFalse(tr_sil[t]["reg"])
+                self.assertEqual(tr_sil[t]["share"], closed_pool_shares[t])
+                self.assertEqual(tr_sil[t]["g"], closed_pool_gs[t])
+                if t >= 2:
+                    self.assertTrue(favours(tr_sil[t]["g"]))  # type: ignore[arg-type]
+            self.assertEqual(tr_sil[5]["stock"], 3)
+            self.assertLess(int(tr_sil[5]["stock"]), W_ENDO.x_crit)  # type: ignore[arg-type]
+            self.assertEqual(tr_sil[6]["stock"], 0)
+            self.assertLess(int(tr_sil[6]["stock"]), W_ENDO.x_crit)  # type: ignore[arg-type]
+            self.assertFalse(tr_sil[6]["admit"])
+
+            # Open exchange survival
+            tr_ex = run_closed_exchange(W_ENDO.step_stock, theta)
+            self.assertEqual(tr_ex[0]["stock"], 14)
+            self.assertEqual(tr_ex[1]["stock"], 12)
+            self.assertEqual(tr_ex[2]["stock"], 10)
+            for t in range(T + 1):
+                self.assertEqual(tr_ex[t]["reg"], t >= 2)
+                self.assertGreaterEqual(int(tr_ex[t]["stock"]), W_ENDO.x_crit)  # type: ignore[arg-type]
+                if t >= 2:
+                    self.assertEqual(tr_ex[t]["stock"], 10)
+                if t >= 3:
+                    self.assertTrue(disfavours(tr_ex[t]["g"]))  # type: ignore[arg-type]
+                    self.assertTrue(tr_ex[t]["admit"])
+
+            # Unstrained control
+            tr_un = run_closed_exchange(lambda x, _act: x, theta)
+            for t in range(T + 1):
+                self.assertEqual(tr_un[t]["stock"], 14)
+                self.assertFalse(tr_un[t]["reg"])
+                self.assertTrue(favours(tr_un[t]["g"]))  # type: ignore[arg-type]
 
 
 if __name__ == "__main__":

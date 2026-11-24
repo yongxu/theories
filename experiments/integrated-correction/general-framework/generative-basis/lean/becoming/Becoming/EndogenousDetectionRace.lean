@@ -51,10 +51,16 @@ two.
   and one-bit-per-step exchange detects exactly (`exchange_detects`). Through `markCourse`, silenced
   consensus keeps the selection locked across every tag (`split_silenced_trapped`), whereas open
   exchange turns it cleanly (`split_exchange_turns`, instantiated on `wEndo` in `split_witness_endo`).
+  Part B.9 extends tag sums to weighted distributions (`weightedTags`, `weighted_view_invariant`,
+  `weighted_split_marginal_eq`) and proves retag-invariance is necessary via a skew countermodel
+  (`wSkew`, `weighted_skew_breaks_blindness`). Part B.10 couples `stockSignal` and live stock into
+  `closedSplitStep` inside `markCourse`, proving silenced collapse (`closedSplit_silenced_collapses`),
+  exchange survival (`closedSplit_exchange_saves_stock`), and unstrained control
+  (`closedSplit_unstrained_no_false_turn`).
 
-What is not shown is said in the paper attack (§4): which learners register in time; a closed-loop
-split world; distributions on tags beyond counting over all `2^T` tags; and that any actual selection
-or population meets these premises.
+What is not shown is said in the paper attack (§4): which learners register in time; non-retag-invariant
+tag distributions beyond `wSkew` or multi-bit masks; and that any actual selection or population meets
+these premises.
 
 Every declaration compiles from Lean's prelude with an empty axiom report.
 -/
@@ -2327,6 +2333,384 @@ theorem split_witness_endo :
     hi Second.oneToOne lo s20 hi (fun _ => true)
     (by decide : 1 * 1 ≤ 4 * 1) (by decide : 1 ≤ 4) (by decide : 1 ≤ 1)
     (r := 0) (r' := 1) rfl rfl (by decide) 0 θ).2.2.1 k
+
+/-! ## Part B.9: weighted and non-uniform tag distributions -/
+
+/-- Exact weight sum over all `2^T` binary tag prefixes of length `T` (position 0 first). -/
+def weightedTags : Nat → (List Bool → Nat) → (List Bool → Bool) → Nat
+  | 0, w, F => cond (F []) (w []) 0
+  | T + 1, w, F =>
+    weightedTags T (fun θ => w (false :: θ)) (fun θ => F (false :: θ)) +
+      weightedTags T (fun θ => w (true :: θ)) (fun θ => F (true :: θ))
+
+/-- Unit weight `fun _ => 1` recovers `countTags` identically. -/
+theorem weightedTags_unit_eq_countTags :
+    ∀ (T : Nat) (F : List Bool → Bool), weightedTags T (fun _ => 1) F = countTags T F
+  | 0, _ => rfl
+  | T + 1, F => by
+    show weightedTags T (fun _ => 1) (fun θ => F (false :: θ)) +
+        weightedTags T (fun _ => 1) (fun θ => F (true :: θ)) =
+      countTags T (fun θ => F (false :: θ)) + countTags T (fun θ => F (true :: θ))
+    rw [weightedTags_unit_eq_countTags T, weightedTags_unit_eq_countTags T]
+
+/-- Pointwise-equal weights and predicates yield equal `weightedTags` sums. -/
+theorem weightedTags_congr :
+    ∀ (T : Nat) {w₁ w₂ : List Bool → Nat} {F₁ F₂ : List Bool → Bool},
+      (∀ θ, w₁ θ = w₂ θ) → (∀ θ, F₁ θ = F₂ θ) →
+      weightedTags T w₁ F₁ = weightedTags T w₂ F₂
+  | 0, w₁, w₂, F₁, F₂, hw, hF => by
+    show cond (F₁ []) (w₁ []) 0 = cond (F₂ []) (w₂ []) 0
+    rw [hF [], hw []]
+  | T + 1, w₁, w₂, F₁, F₂, hw, hF => by
+    show weightedTags T (fun θ => w₁ (false :: θ)) (fun θ => F₁ (false :: θ)) +
+        weightedTags T (fun θ => w₁ (true :: θ)) (fun θ => F₁ (true :: θ)) =
+      weightedTags T (fun θ => w₂ (false :: θ)) (fun θ => F₂ (false :: θ)) +
+        weightedTags T (fun θ => w₂ (true :: θ)) (fun θ => F₂ (true :: θ))
+    rw [weightedTags_congr T (fun θ => hw (false :: θ)) (fun θ => hF (false :: θ)),
+      weightedTags_congr T (fun θ => hw (true :: θ)) (fun θ => hF (true :: θ))]
+
+/-- Joint reindexing of both weight and predicate by `viewBList d` preserves `weightedTags` for
+arbitrary `w`. -/
+theorem weightedTags_viewBList :
+    ∀ (T : Nat) (w : List Bool → Nat) (F : List Bool → Bool) (d : Nat → Bool),
+      weightedTags T (fun θ => w (viewBList d θ)) (fun θ => F (viewBList d θ)) =
+        weightedTags T w F
+  | 0, _, _, _ => rfl
+  | T + 1, w, F, d => by
+    show weightedTags T (fun θ => w (mask false (d 0) :: viewBList (fun t => d (t + 1)) θ))
+          (fun θ => F (mask false (d 0) :: viewBList (fun t => d (t + 1)) θ)) +
+        weightedTags T (fun θ => w (mask true (d 0) :: viewBList (fun t => d (t + 1)) θ))
+          (fun θ => F (mask true (d 0) :: viewBList (fun t => d (t + 1)) θ)) =
+      weightedTags T (fun θ => w (false :: θ)) (fun θ => F (false :: θ)) +
+        weightedTags T (fun θ => w (true :: θ)) (fun θ => F (true :: θ))
+    have ihF := weightedTags_viewBList T (fun θ => w (false :: θ)) (fun θ => F (false :: θ))
+      (fun t => d (t + 1))
+    have ihT := weightedTags_viewBList T (fun θ => w (true :: θ)) (fun θ => F (true :: θ))
+      (fun t => d (t + 1))
+    cases hd : d 0 with
+    | false =>
+      show weightedTags T (fun θ => w (false :: viewBList (fun t => d (t + 1)) θ))
+            (fun θ => F (false :: viewBList (fun t => d (t + 1)) θ)) +
+          weightedTags T (fun θ => w (true :: viewBList (fun t => d (t + 1)) θ))
+            (fun θ => F (true :: viewBList (fun t => d (t + 1)) θ)) =
+        weightedTags T (fun θ => w (false :: θ)) (fun θ => F (false :: θ)) +
+          weightedTags T (fun θ => w (true :: θ)) (fun θ => F (true :: θ))
+      rw [ihF, ihT]
+    | true =>
+      show weightedTags T (fun θ => w (true :: viewBList (fun t => d (t + 1)) θ))
+            (fun θ => F (true :: viewBList (fun t => d (t + 1)) θ)) +
+          weightedTags T (fun θ => w (false :: viewBList (fun t => d (t + 1)) θ))
+            (fun θ => F (false :: viewBList (fun t => d (t + 1)) θ)) =
+        weightedTags T (fun θ => w (false :: θ)) (fun θ => F (false :: θ)) +
+          weightedTags T (fun θ => w (true :: θ)) (fun θ => F (true :: θ))
+      rw [ihT, ihF, Nat.add_comm]
+
+/-- **B9a (`weighted_view_invariant`):** any tag weight `w` invariant under `viewBList d`
+(`∀ θ, w (viewBList d θ) = w θ`) leaves every predicate's weighted sum unchanged under `viewBList d`. -/
+theorem weighted_view_invariant (T : Nat) (w : List Bool → Nat) (F : List Bool → Bool) (d : Nat → Bool)
+    (hInv : ∀ θ, w (viewBList d θ) = w θ) :
+    weightedTags T w (fun θ => F (viewBList d θ)) = weightedTags T w F :=
+  (weightedTags_congr T (fun θ => (hInv θ).symm) (fun _ => rfl)).trans
+    (weightedTags_viewBList T w F d)
+
+/-- **B9b (`weighted_split_marginal_eq`):** if `w` is invariant under both `viewBList dD` and
+`viewBList dS`, every Moore agent `L` has equal weighted alarm sum under `dD` and `dS` at every
+horizon `T`. -/
+theorem weighted_split_marginal_eq {S : Type} (L : UnguidedLoop S Bool EmergenceAct) (s : S)
+    (alarm : S → Bool) (w : List Bool → Nat) (dD dS : Nat → Bool) (T : Nat)
+    (hD : ∀ θ, w (viewBList dD θ) = w θ) (hS : ∀ θ, w (viewBList dS θ) = w θ) :
+    weightedTags T w (fun θ => alarm (feedList L s (viewBList dD θ))) =
+      weightedTags T w (fun θ => alarm (feedList L s (viewBList dS θ))) :=
+  (weighted_view_invariant T w (fun xs => alarm (feedList L s xs)) dD hD).trans
+    (weighted_view_invariant T w (fun xs => alarm (feedList L s xs)) dS hS).symm
+
+/-- Non-invariant tag weight at `T = 1` (`[false] ↦ 3`, `[true] ↦ 1`, `0` otherwise). -/
+def wSkew : List Bool → Nat
+  | [] => 0
+  | b :: [] => cond b 1 3
+  | _ :: _ :: _ => 0
+
+/-- **B9c (`weighted_skew_breaks_blindness`):** retag-invariance of the tag weight is necessary for
+local marginal blindness: at `T = 1` under `wSkew`, a 1-bit identity agent `L_B` sees weighted sum
+`3` when `dD 0 = true` and `1` when `dS 0 = false` (`3 ≠ 1`). -/
+theorem weighted_skew_breaks_blindness (dD dS : Nat → Bool) (hdD : dD 0 = true) (hdS : dS 0 = false) :
+    let L_B : UnguidedLoop Bool Bool EmergenceAct :=
+      { init := false, act := fun _ => .extract, update := fun _ o => o }
+    weightedTags 1 wSkew (fun θ => feedList L_B false (viewBList dD θ)) = 3 ∧
+    weightedTags 1 wSkew (fun θ => feedList L_B false (viewBList dS θ)) = 1 ∧
+    (3 : Nat) ≠ 1 := by
+  refine ⟨?_, ?_, by decide⟩
+  · show cond (mask false (dD 0)) (wSkew [false]) 0 + cond (mask true (dD 0)) (wSkew [true]) 0 = 3
+    rw [hdD]; rfl
+  · show cond (mask false (dS 0)) (wSkew [false]) 0 + cond (mask true (dS 0)) (wSkew [true]) 0 = 1
+    rw [hdS]; rfl
+
+/-! ## Part B.10: closed-loop mask-substrate split coupling -/
+
+/-- Depletion emission signal from live stock (`true` when `x < plateau`). -/
+def stockSignal (plateau x : Nat) : Bool := Nat.blt x plateau
+
+/-- Closed-loop stepper coupling substrate stock, majority admission gate, and two-agent split
+observation `(viewA θ t, mask (θ t) (stockSignal plateau x'))` inside `markCourse`. -/
+def closedSplitStep {S : Type} (W : StrainWorld) (plateau : Nat)
+    (L : UnguidedLoop S (Bool × Bool) EmergenceAct) (θ : Nat → Bool)
+    (p : CarrierCounts × (Nat × (Nat × S))) (_ : CarrierCounts) : Nat × (Nat × S) :=
+  let t := p.2.1
+  let x := p.2.2.1
+  let s := p.2.2.2
+  let a := gate (admits p.1) (L.act s)
+  let x' := W.stepStock x a
+  let d := stockSignal plateau x'
+  (t + 1, (x', L.update s (viewA θ t, mask (θ t) d)))
+
+/-- Unstrained control world (`xCrit = 6`, invariant stock `stepStock x _ := x`, `sense := wEndo.sense`). -/
+def wUnstrained : StrainWorld where
+  xCrit := 6
+  stepStock x _ := x
+  sense := wEndo.sense
+
+/-- **B10a (`closedSplit_silenced_collapses`):** in a closed-loop split world (`wEndo`, `plateau = 12`,
+`x₀ = 14`, `s20`, `hi`), any pair of locally sound agents under a silencing combination `c`
+(`c false false = false`, with `L_A` extracting whenever `alarmA = false`) keeps `mark = false`
+across every tag `θ`: live stock tracks `pureExtractStock wEndo 14 t`, learner states match
+`(feed L_A (viewA θ) t, feed L_B (viewB dEndo θ) t)`, share and rule follow the closed pool and lock
+from `t = 2` (with `admits = false` from `t = 6`), and live stock collapses below `wEndo.xCrit = 6`
+(`stock 5 = 3 < 6` and `stock 6 = 0 < 6`). -/
+theorem closedSplit_silenced_collapses {S_A S_B : Type}
+    (L_A : UnguidedLoop S_A Bool EmergenceAct) (L_B : UnguidedLoop S_B Bool EmergenceAct)
+    (alarmA : S_A → Bool) (alarmB : S_B → Bool) (c : Bool → Bool → Bool) (hc : c false false = false)
+    (hExtract : ∀ s, alarmA s = false → L_A.act s = .extract)
+    (soundA : ∀ t θ, alarmA (feed L_A (viewA θ) t) = false)
+    (soundB : ∀ t θ, alarmB (feed L_B (viewB dSafe θ) t) = false)
+    (θ : Nat → Bool) :
+    let pair := pairLoop L_A L_B
+    let mark : S_A × S_B → Bool := fun s => c (alarmA s.1) (alarmB s.2)
+    let M := markCourse (closedSplitStep wEndo 12 pair θ)
+      (fun b : Nat × (Nat × (S_A × S_B)) => mark b.2.2) hi Second.oneToOne lo (fun _ => true)
+      ((s20, (0, (14, pair.init))), hi)
+    (∀ t, (M t).1.2.2.1 = pureExtractStock wEndo 14 t ∧
+      (M t).1.2.2.2 = (feed L_A (viewA θ) t, feed L_B (viewB dEndo θ) t) ∧
+      mark (M t).1.2.2.2 = false) ∧
+    (∀ t, (M t).1.1 = (paced select (poolRead hi Second.oneToOne) (fun _ => true) (s20, hi) t).1 ∧
+      (M t).2 = (paced select (poolRead hi Second.oneToOne) (fun _ => true) (s20, hi) t).2) ∧
+    (∀ k, Locked order favours (poolRead hi Second.oneToOne) ((M (2 + k)).1.1, (M (2 + k)).2)) ∧
+    (∀ k, admits (M (6 + k)).1.1 = false) ∧
+    (M 5).1.2.2.1 = 3 ∧ (M 5).1.2.2.1 < wEndo.xCrit ∧
+    (M 6).1.2.2.1 = 0 ∧ (M 6).1.2.2.1 < wEndo.xCrit := by
+  intro pair mark M
+  have hTrace : ∀ t,
+      (M t).1.2.1 = t ∧
+      (M t).1.2.2.1 = pureExtractStock wEndo 14 t ∧
+      (M t).1.2.2.2 = (feed L_A (viewA θ) t, feed L_B (viewB dEndo θ) t) := by
+    intro t
+    induction t with
+    | zero => exact ⟨rfl, rfl, rfl⟩
+    | succ t ih =>
+      obtain ⟨ht, hx, hs⟩ := ih
+      have hSoundA : alarmA (M t).1.2.2.2.1 = false := by
+        rw [hs]; exact soundA t θ
+      have hActPair : pair.act (M t).1.2.2.2 = .extract := hExtract _ hSoundA
+      have hGate : gate (admits (M t).1.1) (pair.act (M t).1.2.2.2) = .extract := by
+        rw [hActPair]; exact gate_extract _
+      have hNext := mark_beyond_succ (closedSplitStep wEndo 12 pair θ)
+        (fun b : Nat × (Nat × (S_A × S_B)) => mark b.2.2) hi Second.oneToOne lo (fun _ => true)
+        ((s20, (0, (14, pair.init))), hi) t
+      have hStep : closedSplitStep wEndo 12 pair θ (M t).1 (M t).2 =
+          (t + 1, (pureExtractStock wEndo 14 (t + 1),
+            (feed L_A (viewA θ) (t + 1), feed L_B (viewB dEndo θ) (t + 1)))) := by
+        dsimp only [closedSplitStep]
+        rw [ht, hx, hGate]
+        have hSig : stockSignal 12 (wEndo.stepStock (pureExtractStock wEndo 14 t) .extract) = dEndo t := rfl
+        rw [hSig]
+        change (t + 1, (pureExtractStock wEndo 14 (t + 1),
+            (L_A.update (M t).1.2.2.2.1 (viewA θ t), L_B.update (M t).1.2.2.2.2 (viewB dEndo θ t)))) = _
+        rw [hs]
+        rfl
+      have hEq := hNext.trans hStep
+      exact ⟨congrArg Prod.fst hEq, congrArg (fun q => q.2.1) hEq, congrArg (fun q => q.2.2) hEq⟩
+  have hMark : ∀ t, mark (M t).1.2.2.2 = false := by
+    intro t
+    rw [(hTrace t).2.2]
+    exact silencing_consensus L_A L_B alarmA alarmB c hc dEndo dSafe t (soundA t) (soundB t) θ
+  have hPre := mark_never_eq_pre (closedSplitStep wEndo 12 pair θ)
+    (fun b : Nat × (Nat × (S_A × S_B)) => mark b.2.2) hi Second.oneToOne lo (fun _ => true)
+    s20 hi (0, (14, pair.init)) hMark
+  have hReaders : order.le Second.oneToOne hi := show 1 * 1 ≤ 4 * 1 by decide
+  have hFu : favours hi := show 1 ≤ 4 by decide
+  have hFv : favours Second.oneToOne := show 1 ≤ 1 by decide
+  have hLock2 : ∀ k, Locked order favours (poolRead hi Second.oneToOne) ((M (2 + k)).1.1, (M (2 + k)).2) :=
+    fun k => (closed_trap_outlives_loss hMark hReaders hFu hFv (r := 0) (r' := 1) rfl rfl (by decide) 0 k).2.1
+  have hLt6Pre :
+      (paced select (poolRead hi Second.oneToOne) (fun _ => true) (s20, hi) 6).1.other <
+      (paced select (poolRead hi Second.oneToOne) (fun _ => true) (s20, hi) 6).1.carrier :=
+    CoreHelpers.natBlt_true_iff.mp rfl
+  have hLt6 : (M 6).1.1.other < (M 6).1.1.carrier := by
+    rw [(hPre 6).1]; exact hLt6Pre
+  have hOut6 : ∀ k, admits (M (6 + k)).1.1 = false := fun k =>
+    not_admits_of_le
+      (closed_trap_outlives_loss hMark hReaders hFu hFv (r := 4) (r' := 5) rfl rfl (by decide) 0 k).2.2.1
+      hLt6
+  have hX5 : (M 5).1.2.2.1 = 3 := (hTrace 5).2.1
+  have hX6 : (M 6).1.2.2.1 = 0 := (hTrace 6).2.1
+  exact ⟨fun t => ⟨(hTrace t).2.1, (hTrace t).2.2, hMark t⟩, hPre, hLock2, hOut6,
+    hX5, hX5 ▸ (by decide : 3 < 6), hX6, hX6 ▸ (by decide : 0 < 6)⟩
+
+/-- **B10b (`closedSplit_exchange_saves_stock`):** on `wEndo` (`plateau = 12`, `x₀ = 14`, `s20`, `hi`),
+open one-bit exchange (`exchangeLoop`) inside `closedSplitStep` drops stock `14 → 12 → 10`, emits
+`d_0 = false` and `d_1 = true`, registers permanently from `t = 2` (`mark = true ↔ 2 ≤ t` for
+every tag `θ`), equals `thinnedExchange t` in share and rule, turns permanently from `t = 3`, and
+holds live stock at `10` for all `2 ≤ t` (`wEndo.xCrit ≤ stock t` for every `t`). -/
+theorem closedSplit_exchange_saves_stock (θ : Nat → Bool) :
+    let M := markCourse (closedSplitStep wEndo 12 exchangeLoop θ)
+      (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+      ((s20, (0, (14, false))), hi)
+    (M 0).1.2.2.1 = 14 ∧ (M 1).1.2.2.1 = 12 ∧ (M 2).1.2.2.1 = 10 ∧
+    (∀ t, (M t).1.2.2.2 = true ↔ 2 ≤ t) ∧
+    (∀ t, (M t).1.1 = (thinnedExchange t).1.1 ∧ (M t).2 = (thinnedExchange t).2) ∧
+    (∀ k, disfavours (M (3 + k)).2 ∧ admits (M (3 + k)).1.1 = true) ∧
+    (∀ k, (M (2 + k)).1.2.2.1 = 10) ∧
+    (∀ t, wEndo.xCrit ≤ (M t).1.2.2.1) := by
+  intro M
+  have hM1 : (M 1).1.2.2.1 = 12 ∧ (M 1).1.2.2.2 = false ∧
+      (M 1).1.1 = select s20 hi ∧ (M 1).2 = pool hi Second.oneToOne s20 := by
+    have hNext0 := mark_beyond_succ (closedSplitStep wEndo 12 exchangeLoop θ)
+      (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+      ((s20, (0, (14, false))), hi) 0
+    have hStep0 : closedSplitStep wEndo 12 exchangeLoop θ (M 0).1 (M 0).2 = (1, (12, false)) := by
+      dsimp only [closedSplitStep]
+      change (1, (12, false || mask (θ 0) (mask (θ 0) false))) = (1, (12, false))
+      rw [mask_involutive (θ 0) false]
+      rfl
+    have hEq1 := hNext0.trans hStep0
+    exact ⟨congrArg (fun q => q.2.1) hEq1, congrArg (fun q => q.2.2) hEq1, rfl, rfl⟩
+  have hM2 : (M 2).1.2.2.1 = 10 ∧ (M 2).1.2.2.2 = true := by
+    have hNext1 := mark_beyond_succ (closedSplitStep wEndo 12 exchangeLoop θ)
+      (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+      ((s20, (0, (14, false))), hi) 1
+    have hStep1 : closedSplitStep wEndo 12 exchangeLoop θ (M 1).1 (M 1).2 = (2, (10, true)) := by
+      dsimp only [closedSplitStep]
+      rw [hM1.1, hM1.2.1, hM1.2.2.1]
+      change (2, (10, false || mask (θ (M 1).1.2.1) (mask (θ (M 1).1.2.1) true))) = (2, (10, true))
+      rw [mask_involutive (θ (M 1).1.2.1) true]
+      rfl
+    have hEq2 := hNext1.trans hStep1
+    exact ⟨congrArg (fun q => q.2.1) hEq2, congrArg (fun q => q.2.2) hEq2⟩
+  have hStay : ∀ k, (M (2 + k)).1.2.2.2 = true := by
+    intro k
+    induction k with
+    | zero => exact hM2.2
+    | succ k ih =>
+      have hNext := mark_beyond_succ (closedSplitStep wEndo 12 exchangeLoop θ)
+        (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+        ((s20, (0, (14, false))), hi) (2 + k)
+      have hS : (M (2 + (k + 1))).1.2.2.2 =
+          ((M (2 + k)).1.2.2.2 ||
+            exchange (viewA θ (M (2 + k)).1.2.1)
+              (mask (θ (M (2 + k)).1.2.1)
+                (stockSignal 12 (wEndo.stepStock (M (2 + k)).1.2.2.1
+                  (gate (admits (M (2 + k)).1.1) (exchangeLoop.act (M (2 + k)).1.2.2.2)))))) :=
+        congrArg (fun q => q.2.2) hNext
+      rw [hS, ih]
+      rfl
+  have hReg : ∀ t, (M t).1.2.2.2 = true ↔ 2 ≤ t := by
+    intro t
+    constructor
+    · intro ht
+      match t with
+      | 0 => exact absurd ht (fun e => Bool.noConfusion e)
+      | 1 => exact absurd (hM1.2.1.symm.trans ht) (fun e => Bool.noConfusion e)
+      | k + 2 => exact Nat.le_add_left 2 k
+    · intro le
+      obtain ⟨k, hk⟩ := le_dest le
+      rw [hk]; exact hStay k
+  have hThin := mark_eq_thinned (closedSplitStep wEndo 12 exchangeLoop θ)
+    (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+    s20 hi (0, (14, false)) 2 hReg
+  have hFewer2 : (M 2).1.1.carrier ≤ (M 2).1.1.other := by
+    rw [(hThin 2).1]
+    exact Nat.le_of_ble_eq_true (rfl : Nat.ble (thinnedExchange 2).1.1.carrier (thinnedExchange 2).1.1.other = true)
+  have hFewer3 : (M 3).1.1.carrier ≤ (M 3).1.1.other := by
+    rw [(hThin 3).1]
+    exact Nat.le_of_ble_eq_true (rfl : Nat.ble (thinnedExchange 3).1.1.carrier (thinnedExchange 3).1.1.other = true)
+  have hTurn := (mark_turned_admits_iff (fB := closedSplitStep wEndo 12 exchangeLoop θ)
+    (mark := fun b : Nat × (Nat × Bool) => b.2.2) (u := hi) (v := Second.oneToOne) (w := lo)
+    (reads := fun _ => true) (r := 2) hReg hi_lo_hc hi_lo_ho hi_strict rfl (Nat.le_refl 2)
+    hFewer2).mpr hFewer3
+  have hAdm2Plus : ∀ k, admits (M (2 + k)).1.1 = true
+    | 0 => Nat.ble_eq_true_of_le hFewer2
+    | k + 1 => by
+      have hArith : 2 + (k + 1) = 3 + k := by
+        rw [← Nat.add_assoc, Nat.add_comm 2 k, Nat.add_assoc k 2 1, Nat.add_comm k 3]
+      rw [hArith]
+      exact (hTurn k).2
+  have hStock2Plus : ∀ k, (M (2 + k)).1.2.2.1 = 10 := by
+    intro k
+    induction k with
+    | zero => exact hM2.1
+    | succ k ih =>
+      have hNext := mark_beyond_succ (closedSplitStep wEndo 12 exchangeLoop θ)
+        (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+        ((s20, (0, (14, false))), hi) (2 + k)
+      have hX : (M (2 + (k + 1))).1.2.2.1 =
+          wEndo.stepStock (M (2 + k)).1.2.2.1
+            (gate (admits (M (2 + k)).1.1) (exchangeLoop.act (M (2 + k)).1.2.2.2)) :=
+        congrArg (fun q => q.2.1) hNext
+      rw [hX, ih, hAdm2Plus k, hStay k]
+      rfl
+  have hAllCrit : ∀ t, wEndo.xCrit ≤ (M t).1.2.2.1 := by
+    intro t
+    match t with
+    | 0 => change 6 ≤ 14; decide
+    | 1 => rw [hM1.1]; change 6 ≤ 12; decide
+    | k + 2 =>
+      rw [Nat.add_comm k 2, hStock2Plus k]
+      change 6 ≤ 10; decide
+  exact ⟨rfl, hM1.1, hM2.1, hReg, fun t => ⟨(hThin t).1, (hThin t).2.1⟩, hTurn, hStock2Plus, hAllCrit⟩
+
+/-- **B10c (`closedSplit_unstrained_no_false_turn`):** on the unstrained control `wUnstrained`,
+`closedSplitStep` with `exchangeLoop` keeps `stock t = 14`, `mark t = false`, and `favours (M t).2`
+at every step `t` and every tag `θ`. -/
+theorem closedSplit_unstrained_no_false_turn (θ : Nat → Bool) :
+    let M := markCourse (closedSplitStep wUnstrained 12 exchangeLoop θ)
+      (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+      ((s20, (0, (14, false))), hi)
+    ∀ t, (M t).1.2.2.1 = 14 ∧ (M t).1.2.2.2 = false ∧ favours (M t).2 := by
+  intro M
+  have hInv : ∀ t, (M t).1.2.2.1 = 14 ∧ (M t).1.2.2.2 = false := by
+    intro t
+    induction t with
+    | zero => exact ⟨rfl, rfl⟩
+    | succ t ih =>
+      obtain ⟨hx, hs⟩ := ih
+      have hNext := mark_beyond_succ (closedSplitStep wUnstrained 12 exchangeLoop θ)
+        (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+        ((s20, (0, (14, false))), hi) t
+      have hStep : closedSplitStep wUnstrained 12 exchangeLoop θ (M t).1 (M t).2 =
+          ((M t).1.2.1 + 1, (14, false)) := by
+        dsimp only [closedSplitStep]
+        rw [hx, hs]
+        change ((M t).1.2.1 + 1,
+          (14, false || mask (θ (M t).1.2.1) (mask (θ (M t).1.2.1) false))) = _
+        rw [mask_involutive (θ (M t).1.2.1) false]
+        rfl
+      have hEq := hNext.trans hStep
+      exact ⟨congrArg (fun q => q.2.1) hEq, congrArg (fun q => q.2.2) hEq⟩
+  have hNever : ∀ t, (M t).1.2.2.2 = false := fun t => (hInv t).2
+  have hPre := mark_never_eq_pre (closedSplitStep wUnstrained 12 exchangeLoop θ)
+    (fun b : Nat × (Nat × Bool) => b.2.2) hi Second.oneToOne lo (fun _ => true)
+    s20 hi (0, (14, false)) hNever
+  have hFavPre : ∀ t, favours
+      (paced select (poolRead hi Second.oneToOne) (fun _ => true) (s20, hi) t).2 := by
+    have region : ∀ (b : Bool) (p : CarrierCounts × CarrierCounts),
+        favours p.2 → favours (Pace.turn select (poolRead hi Second.oneToOne) b p).2
+      | true, p, _ => pool_favours (show hi.other ≤ hi.carrier from by decide)
+          (show Second.oneToOne.other ≤ Second.oneToOne.carrier from by decide) p.1
+      | false, _, fav => fav
+    exact region_stays region (show hi.other ≤ hi.carrier from by decide)
+  intro t
+  refine ⟨(hInv t).1, hNever t, ?_⟩
+  rw [(hPre t).2]
+  exact hFavPre t
 
 end EndogenousDetectionRace
 
