@@ -57,7 +57,15 @@ SCOPE = (
     "(6) measure-theoretic measYoudenJ and Gaussian-additive aliasing floor over Measure ℝ via ProbabilityTheory.gaussianReal: "
     "Bhattacharyya + Cauchy-Schwarz + Hellinger bounds 1 - exp(-Δ^2/(8v)) <= TV <= sqrt(1 - exp(-Δ^2/(4v))), "
     "|measYoudenJ| <= TV attained at the midpoint, positive error floor and linear J ceiling for gaussianAliasedLaw, "
-    "midpoint sharpness and α = 1 complete blindness, and the B5 Gaussian lab witness."
+    "midpoint sharpness and α = 1 complete blindness, and the B5 Gaussian lab witness; "
+    "(7) zero-variance Dirac limit (v = 0): gaussianAliasedLaw collapses to Measure.dirac (aliasedProbe), "
+    "giving an exact same-fiber dichotomy (measYoudenJ = 0 and measErrorSum = 1 when α = 1 or p u₁ = p u₂; "
+    "singleton separation measYoudenJ = 1 and measErrorSum = 0 when α ≠ 1 and p u₁ ≠ p u₂); "
+    "(8) multi-step (T-sample) sequential Gaussian aliasing via T-fold convolution convPow: "
+    "gaussianSeqLaw equals gaussianReal (T * aliasedProbe) (T * v) with sample-mean pushforward variance v / T, "
+    "giving the sqrt(T) Youden ceiling, sample-complexity lower bound 4 v J_target^2 / ((1 - α)|p u₁ - p u₂|)^2 <= T, "
+    "T-sample midpoint sharpness, the joint lag-horizon vs. sample-complexity wall sequential_gaussian_lag_sample_wall, "
+    "and the B5 sequential witness (T = 4 capped at 15/17 < 9/10 vs T = 100 achieving >= 9/10)."
 )
 
 

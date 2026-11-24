@@ -45,6 +45,16 @@ a remedy):
    `1 - exp (-Δ^2 / (8 v)) ≤ TV ≤ √(1 - exp (-Δ^2 / (4 v)))` with `|measYoudenJ| ≤ TV` (attained
    at the midpoint), positive error floor and `J` ceiling for `gaussianAliasedLaw`, sharpness at
    the midpoint, zero separation at `α = 1`, and the `B5` Gaussian lab witness.
+7. **Zero-variance Dirac limit (`v = 0`).** At `v = 0`, `gaussianAliasedLaw` collapses to
+   `Measure.dirac (aliasedProbe α p m f u)`, yielding an exact dichotomy on same-fiber states:
+   zero advantage (`measYoudenJ = 0`, `measErrorSum = 1`) when `α = 1 ∨ p u₁ = p u₂`, and exact
+   singleton separation (`measYoudenJ = 1`, `measErrorSum = 0`) when `α ≠ 1 ∧ p u₁ ≠ p u₂`.
+8. **Multi-step (`T`-sample) sequential Gaussian aliasing & sample-complexity vs. lag-horizon wall.**
+   Via `T`-fold convolution `convPow`, `gaussianSeqLaw` equals
+   `gaussianReal (T * aliasedProbe ...) (T * v)` (with sample-mean pushforward `v / T`), yielding
+   the `√T` Youden ceiling, sample-complexity lower bound `4 v J_target^2 / Δ^2 ≤ T`, `T`-sample
+   midpoint sharpness, the joint lag-horizon vs. sample-complexity wall
+   `sequential_gaussian_lag_sample_wall`, and the `B5` sequential witness (`T = 4` vs `T = 100`).
 
 Applying any of these to the stress lab is a recognition, not a proof (Rule 2); see
 `frontier3-quantitative-transfer-2026-11-24/PAPER-ATTACK.md`.
@@ -1506,5 +1516,456 @@ theorem gaussian_aliased_lab_witness {U O : Type*} (p : U → ℝ) (m : O → �
       (Set.Ioi ((aliasedProbe (1 / 20) p m f u₁ + aliasedProbe (1 / 20) p m f u₂) / 2))
       measurableSet_Ioi
     exact ⟨hj, by linarith⟩
+
+/-! ## Part 7: Zero-Variance Dirac Limit (`v = 0`) -/
+
+/-- At zero variance (`v = 0`), `gaussianAliasedLaw` collapses to the Dirac measure at
+`aliasedProbe α p m f u`. -/
+theorem gaussian_zero_var_eq_dirac {U O : Type*} (α : ℝ) (p : U → ℝ) (m : O → ℝ) (f : U → O)
+    (u : U) :
+    gaussianAliasedLaw α p m f 0 u = MeasureTheory.Measure.dirac (aliasedProbe α p m f u) :=
+  ProbabilityTheory.gaussianReal_zero_var _
+
+/-- **Zero-Variance Dichotomy (`gaussian_zero_var_dichotomy`):** for same-fiber states `f u₁ = f u₂`
+at variance `v = 0`:
+- (a) if `α = 1 ∨ p u₁ = p u₂`, every measurable event has `measYoudenJ = 0` and `measErrorSum = 1`;
+- (b) if `α ≠ 1 ∧ p u₁ ≠ p u₂`, the singleton `{aliasedProbe α p m f u₂}` is measurable and
+  achieves exact separation (`measYoudenJ = 1`, `measErrorSum = 0`). -/
+theorem gaussian_zero_var_dichotomy {U O : Type*} (α : ℝ) (p : U → ℝ) (m : O → ℝ) (f : U → O)
+    {u₁ u₂ : U} (hf : f u₁ = f u₂) :
+    ((α = 1 ∨ p u₁ = p u₂) →
+      ∀ A : Set ℝ, MeasurableSet A →
+        measYoudenJ (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂) A = 0 ∧
+        measErrorSum (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂) A = 1) ∧
+    ((α ≠ 1 ∧ p u₁ ≠ p u₂) →
+      MeasurableSet ({aliasedProbe α p m f u₂} : Set ℝ) ∧
+      measYoudenJ (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        ({aliasedProbe α p m f u₂} : Set ℝ) = 1 ∧
+      measErrorSum (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        ({aliasedProbe α p m f u₂} : Set ℝ) = 0) := by
+  constructor
+  · intro h A hA
+    have hprobe : aliasedProbe α p m f u₁ = aliasedProbe α p m f u₂ := by
+      unfold aliasedProbe
+      rcases h with rfl | hp
+      · rw [hf]; ring
+      · rw [hf, hp]
+    have hlaw : gaussianAliasedLaw α p m f 0 u₁ = gaussianAliasedLaw α p m f 0 u₂ := by
+      simp [gaussianAliasedLaw, hprobe]
+    have hj : measYoudenJ (gaussianAliasedLaw α p m f 0 u₁)
+        (gaussianAliasedLaw α p m f 0 u₂) A = 0 := by
+      rw [hlaw]
+      unfold measYoudenJ
+      exact sub_self _
+    have he : measErrorSum (gaussianAliasedLaw α p m f 0 u₁)
+        (gaussianAliasedLaw α p m f 0 u₂) A = 1 := by
+      have hsum := @measYoudenJ_eq_one_sub_errorSum
+        (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+      linarith
+    exact ⟨hj, he⟩
+  · rintro ⟨hα, hp⟩
+    have hA : MeasurableSet ({aliasedProbe α p m f u₂} : Set ℝ) := measurableSet_singleton _
+    have hneq : aliasedProbe α p m f u₁ ≠ aliasedProbe α p m f u₂ := by
+      intro heq
+      have hdiff : (1 - α) * (p u₁ - p u₂) = 0 := by
+        have h1 : aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂ = 0 := sub_eq_zero.mpr heq
+        unfold aliasedProbe at h1
+        rw [hf] at h1
+        linarith
+      rcases mul_eq_zero.mp hdiff with h1α | hpu
+      · exact hα (by linarith)
+      · exact hp (sub_eq_zero.mp hpu)
+    have hm₁ : gaussianAliasedLaw α p m f 0 u₁ ({aliasedProbe α p m f u₂} : Set ℝ) = 0 := by
+      rw [gaussian_zero_var_eq_dirac, MeasureTheory.Measure.dirac_apply' _ hA,
+        Set.indicator_of_notMem (Set.mem_singleton_iff.not.mpr hneq)]
+    have hm₂ : gaussianAliasedLaw α p m f 0 u₂ ({aliasedProbe α p m f u₂} : Set ℝ) = 1 := by
+      rw [gaussian_zero_var_eq_dirac, MeasureTheory.Measure.dirac_apply' _ hA,
+        Set.indicator_of_mem (Set.mem_singleton _), Pi.one_apply]
+    have hj : measYoudenJ (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        ({aliasedProbe α p m f u₂} : Set ℝ) = 1 := by
+      unfold measYoudenJ
+      rw [hm₁, hm₂]
+      norm_num
+    have he : measErrorSum (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        ({aliasedProbe α p m f u₂} : Set ℝ) = 0 := by
+      have hsum := @measYoudenJ_eq_one_sub_errorSum
+        (gaussianAliasedLaw α p m f 0 u₁) (gaussianAliasedLaw α p m f 0 u₂)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) _ hA
+      linarith
+    exact ⟨hA, hj, he⟩
+
+/-! ## Part 8: Multi-Step (`T`-Sample) Sequential Gaussian Aliasing & Lag-Sample Wall -/
+
+section SequentialGaussian
+
+open scoped MeasureTheory
+
+/-- `T`-fold convolution power of a real measure (`convPow μ 0 = dirac 0`,
+`convPow μ (n + 1) = (convPow μ n) ∗ μ`). -/
+noncomputable def convPow (μ : MeasureTheory.Measure ℝ) : ℕ → MeasureTheory.Measure ℝ
+  | 0 => MeasureTheory.Measure.dirac 0
+  | n + 1 => MeasureTheory.Measure.conv (convPow μ n) μ
+
+/-- The `T`-fold convolution power of `gaussianReal μ v` is `gaussianReal (T * μ) (T * v)`. -/
+theorem convPow_gaussianReal (μ : ℝ) (v : NNReal) (T : ℕ) :
+    convPow (ProbabilityTheory.gaussianReal μ v) T =
+      ProbabilityTheory.gaussianReal ((T : ℝ) * μ) ((T : NNReal) * v) := by
+  induction T with
+  | zero =>
+    simp [convPow, ProbabilityTheory.gaussianReal_zero_var]
+  | succ n ih =>
+    rw [convPow, ih, ProbabilityTheory.gaussianReal_conv_gaussianReal]
+    congr 1 <;> push_cast <;> ring
+
+/-- `T`-step cumulative-sum observation law for `gaussianAliasedLaw`. -/
+noncomputable def gaussianSeqLaw {U O : Type*} (T : ℕ) (α : ℝ) (p : U → ℝ) (m : O → ℝ)
+    (f : U → O) (v : NNReal) (u : U) : MeasureTheory.Measure ℝ :=
+  convPow (gaussianAliasedLaw α p m f v u) T
+
+/-- Closed form of the `T`-step cumulative Gaussian aliased law. -/
+theorem gaussianSeqLaw_eq_gaussianReal {U O : Type*} (T : ℕ) (α : ℝ) (p : U → ℝ) (m : O → ℝ)
+    (f : U → O) (v : NNReal) (u : U) :
+    gaussianSeqLaw T α p m f v u =
+      ProbabilityTheory.gaussianReal ((T : ℝ) * aliasedProbe α p m f u) ((T : NNReal) * v) :=
+  convPow_gaussianReal (aliasedProbe α p m f u) v T
+
+/-- For `0 < T`, pushing forward `gaussianSeqLaw T` by `(· / T)` gives the sample-mean Gaussian
+with mean `aliasedProbe α p m f u` and variance `v / T`. -/
+theorem gaussianSeqMean_map_eq {U O : Type*} {T : ℕ} (hT : 0 < T) (α : ℝ) (p : U → ℝ)
+    (m : O → ℝ) (f : U → O) (v : NNReal) (u : U) :
+    (gaussianSeqLaw T α p m f v u).map (· / (T : ℝ)) =
+      ProbabilityTheory.gaussianReal (aliasedProbe α p m f u)
+        (v / ⟨(T : ℝ), Nat.cast_nonneg T⟩) := by
+  have hTne : (T : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr hT.ne'
+  rw [gaussianSeqLaw_eq_gaussianReal, ProbabilityTheory.gaussianReal_map_div_const]
+  congr 1
+  · field_simp
+  · ext
+    change ((T : ℝ) * (v : ℝ)) / (T : ℝ) ^ 2 = (v : ℝ) / (T : ℝ)
+    field_simp
+
+/-- **Sequential Gaussian Aliased Youden Wall (`gaussian_seq_youdenJ_wall`):** for `0 < T`,
+`α ≤ 1`, same-fiber states `f u₁ = f u₂`, `v ≠ 0`, and every measurable event `A`:
+- `|measYoudenJ| ≤ √(1 - exp (-(T * ((1 - α) |p u₁ - p u₂|)^2) / (4 v)))`
+- `√(1 - exp (-(T * ((1 - α) |p u₁ - p u₂|)^2) / (4 v))) ≤ √T * ((1 - α) |p u₁ - p u₂|) / (2 √v)`
+- `0 < 1 - √(1 - exp (...)) ≤ measErrorSum`. -/
+theorem gaussian_seq_youdenJ_wall {U O : Type*} {T : ℕ} (hT : 0 < T) {α : ℝ} (hα1 : α ≤ 1)
+    (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂)
+    {v : NNReal} (hv : v ≠ 0) {A : Set ℝ} (hA : MeasurableSet A) :
+    |measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A| ≤
+        Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ∧
+      Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ≤
+        Real.sqrt (T : ℝ) * ((1 - α) * |p u₁ - p u₂|) / (2 * Real.sqrt (v : ℝ)) ∧
+      0 < 1 - Real.sqrt (1 - Real.exp
+        (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ∧
+      1 - Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ≤
+        measErrorSum (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A := by
+  have hTpos : (0 : ℝ) < T := Nat.cast_pos.mpr hT
+  have hTne : (T : NNReal) ≠ 0 := Nat.cast_ne_zero.mpr hT.ne'
+  have hvT : (T : NNReal) * v ≠ 0 := mul_ne_zero hTne hv
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have hgap :
+      ((T : ℝ) * aliasedProbe α p m f u₁ - (T : ℝ) * aliasedProbe α p m f u₂) ^ 2 /
+          (4 * (((T : NNReal) * v : NNReal) : ℝ)) =
+        ((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)) := by
+    have hsub :
+        ((T : ℝ) * aliasedProbe α p m f u₁ - (T : ℝ) * aliasedProbe α p m f u₂) ^ 2 =
+          (T : ℝ) ^ 2 * ((1 - α) * |p u₁ - p u₂|) ^ 2 := by
+      rw [← mul_sub, mul_pow, ← sq_abs (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂),
+        aliased_fiber_gap hα1 p m f hf]
+    rw [hsub, NNReal.coe_mul, NNReal.coe_natCast]
+    field_simp [hTpos.ne', hvpos.ne']
+  have h1 :
+      |measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A| ≤
+        Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) := by
+    rw [gaussianSeqLaw_eq_gaussianReal, gaussianSeqLaw_eq_gaussianReal]
+    calc |measYoudenJ (ProbabilityTheory.gaussianReal ((T : ℝ) * aliasedProbe α p m f u₁) ((T : NNReal) * v))
+            (ProbabilityTheory.gaussianReal ((T : ℝ) * aliasedProbe α p m f u₂) ((T : NNReal) * v)) A|
+        ≤ (1 / 2 : ℝ) * ∫ x : ℝ,
+            |ProbabilityTheory.gaussianPDFReal ((T : ℝ) * aliasedProbe α p m f u₂) ((T : NNReal) * v) x -
+              ProbabilityTheory.gaussianPDFReal ((T : ℝ) * aliasedProbe α p m f u₁) ((T : NNReal) * v) x| :=
+          gaussian_measYoudenJ_le_tv _ _ hvT hA
+      _ ≤ Real.sqrt (1 - Real.exp
+            (-((T : ℝ) * aliasedProbe α p m f u₁ - (T : ℝ) * aliasedProbe α p m f u₂) ^ 2 /
+              (4 * (((T : NNReal) * v : NNReal) : ℝ)))) :=
+          gaussian_tv_le_hellinger _ _ hvT
+      _ = Real.sqrt (1 - Real.exp
+            (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) := by
+          rw [neg_div, neg_div, hgap]
+  have h2 :
+      Real.sqrt (1 - Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ≤
+        Real.sqrt (T : ℝ) * ((1 - α) * |p u₁ - p u₂|) / (2 * Real.sqrt (v : ℝ)) := by
+    set Δ : ℝ := (1 - α) * |p u₁ - p u₂|
+    have hΔ0 : 0 ≤ Δ := mul_nonneg (by linarith) (abs_nonneg _)
+    have hexp :
+        1 - Real.exp (-((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ)))) ≤ (T : ℝ) * Δ ^ 2 / (4 * (v : ℝ)) := by
+      linarith [Real.add_one_le_exp (-((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ))))]
+    have hneg_div :
+        -((T : ℝ) * Δ ^ 2) / (4 * (v : ℝ)) = -((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ))) := by ring
+    have hsqrt_rhs :
+        Real.sqrt ((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ))) =
+          Real.sqrt (T : ℝ) * Δ / (2 * Real.sqrt (v : ℝ)) := by
+      have hrew :
+          (T : ℝ) * Δ ^ 2 / (4 * (v : ℝ)) =
+            (Real.sqrt (T : ℝ) * Δ / (2 * Real.sqrt (v : ℝ))) ^ 2 := by
+        calc (T : ℝ) * Δ ^ 2 / (4 * (v : ℝ))
+            = (Real.sqrt (T : ℝ) ^ 2 * Δ ^ 2) / (2 ^ 2 * Real.sqrt (v : ℝ) ^ 2) := by
+              rw [Real.sq_sqrt hTpos.le, Real.sq_sqrt hvpos.le]; ring
+          _ = (Real.sqrt (T : ℝ) * Δ / (2 * Real.sqrt (v : ℝ))) ^ 2 := by ring
+      rw [hrew]
+      exact Real.sqrt_sq (div_nonneg (mul_nonneg (Real.sqrt_nonneg _) hΔ0) (by positivity))
+    rw [hneg_div]
+    calc Real.sqrt (1 - Real.exp (-((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ)))))
+        ≤ Real.sqrt ((T : ℝ) * Δ ^ 2 / (4 * (v : ℝ))) := Real.sqrt_le_sqrt hexp
+      _ = Real.sqrt (T : ℝ) * Δ / (2 * Real.sqrt (v : ℝ)) := hsqrt_rhs
+  have h3 :
+      0 < 1 - Real.sqrt (1 - Real.exp
+        (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) := by
+    have hsqrt_lt :
+        Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) < 1 :=
+      (Real.sqrt_lt' one_pos).mpr (by norm_num; exact Real.exp_pos _)
+    linarith
+  have h4 :
+      1 - Real.sqrt (1 - Real.exp
+          (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (4 * (v : ℝ)))) ≤
+        measErrorSum (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A := by
+    have hsum :
+        measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A =
+          1 - measErrorSum (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A := by
+      rw [gaussianSeqLaw_eq_gaussianReal, gaussianSeqLaw_eq_gaussianReal]
+      exact @measYoudenJ_eq_one_sub_errorSum
+        (ProbabilityTheory.gaussianReal ((T : ℝ) * aliasedProbe α p m f u₁) ((T : NNReal) * v))
+        (ProbabilityTheory.gaussianReal ((T : ℝ) * aliasedProbe α p m f u₂) ((T : NNReal) * v))
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+    have hle := (abs_le.mp h1).2
+    linarith
+  exact ⟨h1, h2, h3, h4⟩
+
+/-- **Sequential Gaussian Sample-Complexity Lower Bound (`gaussian_seq_sample_complexity_lower_bound`):**
+attaining advantage `J_target > 0` under `α < 1`, `f u₁ = f u₂`, `p u₁ ≠ p u₂`, `v ≠ 0` requires at
+least `4 v J_target^2 / ((1 - α) |p u₁ - p u₂|)^2 ≤ T` steps. -/
+theorem gaussian_seq_sample_complexity_lower_bound {U O : Type*} {T : ℕ} (hT : 0 < T)
+    {α : ℝ} (hα1 : α < 1) (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂)
+    (hp : p u₁ ≠ p u₂) {v : NNReal} (hv : v ≠ 0) {A : Set ℝ} (hA : MeasurableSet A)
+    {J_target : ℝ} (hJ0 : 0 < J_target)
+    (hJ : J_target ≤ |measYoudenJ (gaussianSeqLaw T α p m f v u₁)
+      (gaussianSeqLaw T α p m f v u₂) A|) :
+    4 * (v : ℝ) * J_target ^ 2 / ((1 - α) * |p u₁ - p u₂|) ^ 2 ≤ (T : ℝ) := by
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have hTpos : (0 : ℝ) < T := Nat.cast_pos.mpr hT
+  set Δ : ℝ := (1 - α) * |p u₁ - p u₂|
+  have hΔpos : 0 < Δ := mul_pos (sub_pos.mpr hα1) (abs_pos.mpr (sub_ne_zero.mpr hp))
+  obtain ⟨h1, h2, -, -⟩ := gaussian_seq_youdenJ_wall hT hα1.le p m f hf hv hA
+  have hlin : J_target ≤ Real.sqrt (T : ℝ) * Δ / (2 * Real.sqrt (v : ℝ)) := by linarith
+  have hsqrt_v_pos : 0 < 2 * Real.sqrt (v : ℝ) := by positivity
+  have hmul : 2 * Real.sqrt (v : ℝ) * J_target ≤ Real.sqrt (T : ℝ) * Δ := by
+    have := (le_div_iff₀ hsqrt_v_pos).mp hlin
+    linarith
+  have hsq : (2 * Real.sqrt (v : ℝ) * J_target) ^ 2 ≤ (Real.sqrt (T : ℝ) * Δ) ^ 2 :=
+    pow_le_pow_left₀ (by positivity) hmul 2
+  have hsq_lhs : (2 * Real.sqrt (v : ℝ) * J_target) ^ 2 = 4 * (v : ℝ) * J_target ^ 2 := by
+    calc (2 * Real.sqrt (v : ℝ) * J_target) ^ 2
+        = 4 * Real.sqrt (v : ℝ) ^ 2 * J_target ^ 2 := by ring
+      _ = 4 * (v : ℝ) * J_target ^ 2 := by rw [Real.sq_sqrt hvpos.le]
+  have hsq_rhs : (Real.sqrt (T : ℝ) * Δ) ^ 2 = (T : ℝ) * Δ ^ 2 := by
+    calc (Real.sqrt (T : ℝ) * Δ) ^ 2
+        = Real.sqrt (T : ℝ) ^ 2 * Δ ^ 2 := by ring
+      _ = (T : ℝ) * Δ ^ 2 := by rw [Real.sq_sqrt hTpos.le]
+  rw [hsq_lhs, hsq_rhs] at hsq
+  exact (div_le_iff₀ (sq_pos_of_pos hΔpos)).mpr hsq
+
+/-- **Sequential Gaussian Midpoint Sharpness (`gaussian_seq_midpoint_sharp`):** for `0 < T`,
+`α < 1`, `f u₁ = f u₂`, `p u₁ < p u₂`, `v ≠ 0`, the `T`-sample midpoint threshold attains at least
+`1 - exp (-(T * ((1 - α) |p u₁ - p u₂|)^2) / (8 v)) > 0`. -/
+theorem gaussian_seq_midpoint_sharp {U O : Type*} {T : ℕ} (hT : 0 < T) {α : ℝ} (hα1 : α < 1)
+    (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂) (hp : p u₁ < p u₂)
+    {v : NNReal} (hv : v ≠ 0) :
+    0 < 1 - Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ))) ∧
+    1 - Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ))) ≤
+      measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂)
+        (Set.Ioi (((T : ℝ) * aliasedProbe α p m f u₁ +
+          (T : ℝ) * aliasedProbe α p m f u₂) / 2)) := by
+  have hTpos : (0 : ℝ) < T := Nat.cast_pos.mpr hT
+  have hTne : (T : NNReal) ≠ 0 := Nat.cast_ne_zero.mpr hT.ne'
+  have hvT : (T : NNReal) * v ≠ 0 := mul_ne_zero hTne hv
+  have hvpos : (0 : ℝ) < v := NNReal.coe_pos.mpr (pos_iff_ne_zero.mpr hv)
+  have h1α : 0 < 1 - α := sub_pos.mpr hα1
+  have hp_pos : 0 < |p u₁ - p u₂| := abs_pos.mpr (sub_ne_zero.mpr hp.ne)
+  have hpos_num : 0 < ((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ)) := by positivity
+  have h1 :
+      0 < 1 - Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ))) := by
+    have hlt : Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ))) < 1 :=
+      Real.exp_lt_one_iff.mpr (by rw [neg_div]; exact neg_lt_zero.mpr hpos_num)
+    linarith
+  have hμ12 : aliasedProbe α p m f u₁ < aliasedProbe α p m f u₂ := by
+    unfold aliasedProbe
+    rw [hf]
+    nlinarith
+  have hμ : (T : ℝ) * aliasedProbe α p m f u₁ < (T : ℝ) * aliasedProbe α p m f u₂ :=
+    mul_lt_mul_of_pos_left hμ12 hTpos
+  have hgap :
+      ((T : ℝ) * aliasedProbe α p m f u₁ - (T : ℝ) * aliasedProbe α p m f u₂) ^ 2 /
+          (8 * (((T : NNReal) * v : NNReal) : ℝ)) =
+        ((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ)) := by
+    have hsub :
+        ((T : ℝ) * aliasedProbe α p m f u₁ - (T : ℝ) * aliasedProbe α p m f u₂) ^ 2 =
+          (T : ℝ) ^ 2 * ((1 - α) * |p u₁ - p u₂|) ^ 2 := by
+      rw [← mul_sub, mul_pow, ← sq_abs (aliasedProbe α p m f u₁ - aliasedProbe α p m f u₂),
+        aliased_fiber_gap hα1.le p m f hf]
+    rw [hsub, NNReal.coe_mul, NNReal.coe_natCast]
+    field_simp [hTpos.ne', hvpos.ne']
+  have h2 :
+      1 - Real.exp (-((T : ℝ) * ((1 - α) * |p u₁ - p u₂|) ^ 2) / (8 * (v : ℝ))) ≤
+        measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂)
+          (Set.Ioi (((T : ℝ) * aliasedProbe α p m f u₁ +
+            (T : ℝ) * aliasedProbe α p m f u₂) / 2)) := by
+    rw [gaussianSeqLaw_eq_gaussianReal, gaussianSeqLaw_eq_gaussianReal,
+      gaussian_midpoint_attains_tv hμ hvT]
+    have hge := gaussian_tv_ge_hellinger
+      ((T : ℝ) * aliasedProbe α p m f u₁) ((T : ℝ) * aliasedProbe α p m f u₂) hvT
+    rw [neg_div, hgap, ← neg_div] at hge
+    exact hge
+  exact ⟨h1, h2⟩
+
+/-- **Joint Lag + Sequential Aliasing Wall (`sequential_gaussian_lag_sample_wall`):** whenever the
+lag-bounded horizon `(x 0 - x_crit) / H₁ < L` is strictly shorter than the required sample
+complexity `4 v J_target^2 / ((1 - α) |p u₁ - p u₂|)^2`, the reserve hits `x_crit` at some
+`t ≤ (x 0 - x_crit) / H₁ < L` and every detector using `0 < T ≤ t` samples has
+`|measYoudenJ| < J_target` on every measurable event `A`. -/
+theorem sequential_gaussian_lag_sample_wall {U O : Type*} {x : ℝ → ℝ} {H₁ L x_crit : ℝ}
+    (hH : 0 < H₁) (hx0 : x_crit ≤ x 0) (hL : (x 0 - x_crit) / H₁ < L)
+    (hcont : ContinuousOn x (Icc 0 L)) (hdiff : DifferentiableOn ℝ x (Ioo 0 L))
+    (hder : ∀ t ∈ Ioo 0 L, deriv x t ≤ -H₁)
+    {α : ℝ} (hα1 : α < 1) (p : U → ℝ) (m : O → ℝ) (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂)
+    (hp : p u₁ ≠ p u₂) {v : NNReal} (hv : v ≠ 0) {J_target : ℝ} (hJ0 : 0 < J_target)
+    (hwall : (x 0 - x_crit) / H₁ < 4 * (v : ℝ) * J_target ^ 2 / ((1 - α) * |p u₁ - p u₂|) ^ 2) :
+    ∃ t ∈ Icc 0 ((x 0 - x_crit) / H₁), t < L ∧ x t = x_crit ∧
+      ∀ T : ℕ, 0 < T → (T : ℝ) ≤ t → ∀ A : Set ℝ, MeasurableSet A →
+        |measYoudenJ (gaussianSeqLaw T α p m f v u₁) (gaussianSeqLaw T α p m f v u₂) A| <
+          J_target := by
+  obtain ⟨⟨t, ht, htl, hxt⟩, -⟩ := lag_horizon_wall hH hx0 hL hcont hdiff hder
+  refine ⟨t, ht, htl, hxt, fun T hT hTt A hA => ?_⟩
+  by_contra hnot
+  have hle : J_target ≤ |measYoudenJ (gaussianSeqLaw T α p m f v u₁)
+      (gaussianSeqLaw T α p m f v u₂) A| := not_lt.mp hnot
+  have hcomp := gaussian_seq_sample_complexity_lower_bound hT hα1 p m f hf hp hv hA hJ0 hle
+  linarith [ht.2]
+
+/-- **Sequential Gaussian Lab Witness (`gaussian_seq_lab_witness`):** under B5 (`α = 19/20`,
+`p u₂ - p u₁ = 6/5`, `f u₁ = f u₂`, `v₁₉ = (17/250)^2`):
+- at `T = 4`: every measurable event has `|measYoudenJ| ≤ 15/17 < 9/10` and `measErrorSum ≥ 2/17`;
+- at `T = 100`: the `100`-sample midpoint threshold achieves `measYoudenJ ≥ 9/10` and
+  `measErrorSum ≤ 1/10`. -/
+theorem gaussian_seq_lab_witness {U O : Type*} (p : U → ℝ) (m : O → ℝ) (f : U → O)
+    {u₁ u₂ : U} (hf : f u₁ = f u₂) (hp : p u₂ - p u₁ = 6 / 5) :
+    let v₁₉ : NNReal := ⟨(17 / 250) ^ 2, by positivity⟩
+    (∀ A : Set ℝ, MeasurableSet A →
+      |measYoudenJ (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₁)
+          (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₂) A| ≤ 15 / 17 ∧
+      (15 / 17 : ℝ) < 9 / 10 ∧
+      (2 / 17 : ℝ) ≤ measErrorSum (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₁)
+          (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₂) A) ∧
+    ((9 / 10 : ℝ) ≤ measYoudenJ (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₁)
+        (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₂)
+        (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+          (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2)) ∧
+      measErrorSum (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₁)
+        (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₂)
+        (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+          (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2)) ≤ 1 / 10) := by
+  intro v₁₉
+  have hgap : |p u₁ - p u₂| = 6 / 5 := by
+    rw [abs_sub_comm, hp, abs_of_pos (by norm_num)]
+  have hplt : p u₁ < p u₂ := by linarith
+  have hv19_coe : (v₁₉ : ℝ) = (17 / 250) ^ 2 := rfl
+  have hv19_ne : v₁₉ ≠ 0 := by
+    intro h
+    have hval : (v₁₉ : ℝ) = 0 := by rw [h]; rfl
+    rw [hv19_coe] at hval
+    norm_num at hval
+  refine ⟨fun A hA => ?_, ?_⟩
+  · obtain ⟨hJ, hlin, -, -⟩ := gaussian_seq_youdenJ_wall (by norm_num : 0 < 4)
+      (by norm_num : (19 / 20 : ℝ) ≤ 1) p m f hf hv19_ne hA
+    have hval :
+        Real.sqrt (4 : ℝ) * ((1 - (19 / 20 : ℝ)) * |p u₁ - p u₂|) / (2 * Real.sqrt (v₁₉ : ℝ)) =
+          15 / 17 := by
+      have hsq4 : Real.sqrt (4 : ℝ) = 2 := by
+        rw [show (4 : ℝ) = 2 ^ 2 by norm_num]
+        exact Real.sqrt_sq (by norm_num)
+      have hsqv : Real.sqrt (v₁₉ : ℝ) = 17 / 250 := by
+        change Real.sqrt ((17 / 250 : ℝ) ^ 2) = 17 / 250
+        exact Real.sqrt_sq (by norm_num)
+      rw [hgap, hsq4, hsqv]
+      norm_num
+    have hJle : |measYoudenJ (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₁)
+        (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₂) A| ≤ 15 / 17 := by
+      linarith
+    have hsum :
+        measYoudenJ (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₁)
+            (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₂) A =
+          1 - measErrorSum (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₁)
+            (gaussianSeqLaw 4 (19 / 20) p m f v₁₉ u₂) A := by
+      rw [gaussianSeqLaw_eq_gaussianReal, gaussianSeqLaw_eq_gaussianReal]
+      exact @measYoudenJ_eq_one_sub_errorSum
+        (ProbabilityTheory.gaussianReal ((4 : ℝ) * aliasedProbe (19 / 20) p m f u₁)
+          ((4 : NNReal) * v₁₉))
+        (ProbabilityTheory.gaussianReal ((4 : ℝ) * aliasedProbe (19 / 20) p m f u₂)
+          ((4 : NNReal) * v₁₉))
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _) A hA
+    have hle := (abs_le.mp hJle).2
+    exact ⟨hJle, by norm_num, by linarith⟩
+  · have hsharp := (gaussian_seq_midpoint_sharp (by norm_num : 0 < 100)
+      (by norm_num : (19 / 20 : ℝ) < 1) p m f hf hplt hv19_ne).2
+    push_cast at hsharp
+    have hexp_val :
+        -((100 : ℝ) * ((1 - (19 / 20 : ℝ)) * |p u₁ - p u₂|) ^ 2) / (8 * (v₁₉ : ℝ)) =
+          -(5625 / 578) := by
+      rw [hgap, hv19_coe]
+      norm_num
+    have hexp_le : Real.exp (-(5625 / 578 : ℝ)) ≤ 1 / 10 := by
+      have hadd := Real.add_one_le_exp (5625 / 578 : ℝ)
+      have h10 : (10 : ℝ) ≤ Real.exp (5625 / 578) := by linarith
+      rw [Real.exp_neg]
+      exact (inv_le_comm₀ (Real.exp_pos _) (by norm_num)).mpr (by norm_num; exact h10)
+    rw [hexp_val] at hsharp
+    have hj :
+        (9 / 10 : ℝ) ≤ measYoudenJ (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₁)
+          (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₂)
+          (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+            (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2)) := by
+      linarith
+    have hsum :
+        measYoudenJ (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₁)
+            (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₂)
+            (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+              (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2)) =
+          1 - measErrorSum (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₁)
+            (gaussianSeqLaw 100 (19 / 20) p m f v₁₉ u₂)
+            (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+              (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2)) := by
+      rw [gaussianSeqLaw_eq_gaussianReal, gaussianSeqLaw_eq_gaussianReal]
+      exact @measYoudenJ_eq_one_sub_errorSum
+        (ProbabilityTheory.gaussianReal ((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁)
+          ((100 : NNReal) * v₁₉))
+        (ProbabilityTheory.gaussianReal ((100 : ℝ) * aliasedProbe (19 / 20) p m f u₂)
+          ((100 : NNReal) * v₁₉))
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (ProbabilityTheory.instIsProbabilityMeasureGaussianReal _ _)
+        (Set.Ioi (((100 : ℝ) * aliasedProbe (19 / 20) p m f u₁ +
+          (100 : ℝ) * aliasedProbe (19 / 20) p m f u₂) / 2))
+        measurableSet_Ioi
+    exact ⟨hj, by linarith⟩
+
+end SequentialGaussian
 
 end QuantitativeTransfer
