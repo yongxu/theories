@@ -1920,6 +1920,68 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md": {
+      "title": "Becoming as a Structural Foundation for AI Alignment",
+      "local_links": [
+        "AGENTS.md",
+        "OPEN-QUESTIONS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/kd-known-results-debts/DEBTS.md",
+        "experiments/guarded-alignment-runtime/README.md",
+        "experiments/guarded-alignment-runtime/guarded_alignment/proposal_audit.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/alignment-reals/AlignmentReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalAbstraction.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DoubleKernel.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenComposition.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PolyComposition.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json",
+        "experiments/neural-alignment-stress-lab/RESULTS.md",
+        "sources/15-codex-theory-conversations/2026-11-24-aim-three-honest-alignment-claims.md",
+        "theories/becoming/chapters/08-METHOD.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md": {
+      "title": "Independent 1-Hour External Audit Guide (Becoming & Alignment Pack)",
+      "local_links": [
+        "AGENTS.md",
+        "TESTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/kd-known-results-debts/DEBTS.md",
+        "experiments/guarded-alignment-runtime/README.md",
+        "experiments/guarded-alignment-runtime/guarded_alignment/proposal_audit.py",
+        "experiments/guarded-alignment-runtime/tests/test_cli_and_hygiene.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AdaptiveLoops.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PacedStock.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PolyComposition.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScopeDynamics.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/scratch_build.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json",
+        "experiments/neural-alignment-stress-lab/RESULTS.md",
+        "theories/becoming/chapters/08-METHOD.md",
+        "tools/research/style.py"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/READER.md": {
       "title": "CW: what its readers reported",
       "local_links": [
@@ -2575,6 +2637,37 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/review/ALIGNMENT.md"
+      ]
+    },
+    "experiments/evidence-replay/README.md": {
+      "title": "Evidence Replay & Verification Suite (`experiments/evidence-replay/`)",
+      "local_links": [
+        "experiments/direction-installation/lake.py",
+        "experiments/evidence-replay/RESULTS.md",
+        "experiments/evidence-replay/fixtures/duality_handshake.json",
+        "experiments/evidence-replay/fixtures/in1_replay_table.json",
+        "experiments/evidence-replay/fixtures/phase2_disentangled.json",
+        "experiments/evidence-replay/fixtures/protocol_8slot.json",
+        "experiments/evidence-replay/phase2_disentangled_stress.py",
+        "experiments/evidence-replay/protocol_8slot_benchmark.py",
+        "experiments/evidence-replay/replay_in1_handshake.py",
+        "experiments/evidence-replay/test_replay_suite.py",
+        "experiments/evidence-replay/verify_duality_handshake.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/EncounterEntry.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/check_encounter_entry.py",
+        "experiments/neural-alignment-stress-lab/substrates.py"
+      ]
+    },
+    "experiments/evidence-replay/RESULTS.md": {
+      "title": "Track S3 Verified Results",
+      "local_links": [
+        "experiments/evidence-replay/fixtures/duality_handshake.json",
+        "experiments/evidence-replay/fixtures/in1_replay_table.json",
+        "experiments/evidence-replay/fixtures/phase2_disentangled.json",
+        "experiments/evidence-replay/fixtures/protocol_8slot.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/EncounterEntry.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/check_encounter_entry.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/encounter-entry-verification.json"
       ]
     },
     "experiments/formations-that-read/DESIGN.md": {
