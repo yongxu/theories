@@ -29,8 +29,8 @@ Report file: [encounter-entry-verification.json](../integrated-correction/genera
   - Exact `[10, 10, 10]` executed catches: `109`
   - Lower-catch survivals: `2` (Seed 7 Month 3: `[10, 10, 0] -> left=80, next_stock=100`; Seed 7 Month 5: `[0, 10, 0] -> left=90, next_stock=100`)
   - Fatal overtakes despite `[10, 10, 10]` announcement: `2` (Seed 4 Month 8: `[30, 10, 10] -> left=50, bed_alive_after=false, next_stock=100`; Seed 9 Month 9: `[10, 20, 10] -> left=60, bed_alive_after=false, next_stock=100`)
-- **`View1` vs `View2` separation (`gpt-5.4-mini` Seed 0 vs Seed 4):**
-  - Months 1–8 `View1` prefixes are identical (`opening_stock=100, announcements=[10, 10, 10], next_stock=100`, `view1_prefix8_equal: true`) while `View2` separates at Month 8 (`bed_alive_throughout: true` vs `false`).
+- **`View1` vs `View2` separation (`gpt-5.4-mini` Seed 0 vs Seed 4) & endpoint-vs-monthly audit:**
+  - Months 1–8 endpoint `View1` (`opening_stock=100`, 8 `[10, 10, 10]` `announcements`, endpoint `next_stock=100`, `view1_prefix8_equal: true`) and `monthly_trace_prefix8` match while `View2` separates at Month 8 (`bed_alive_throughout: true` vs `false`). Across all `229` non-empty saved prefixes (`test_replay_suite.py`), endpoint `Pass1` diverges from monthly `all_next_stocks_ge_need` on `18` prefixes while `Pass2` matches on all `229` (plus empty-prefix `opening_stock` and oversubscribed `Lake.step` rationing checks).
 - **`gpt-4.1-mini` revisions:**
   - Seed 3 Month 1 (faithful harmful): catches `[20, 20, 20] -> left=40`, bed dies, `next_stock=80`.
   - Seed 7 double revision: Month 1 `[10, 20, 10] -> [10, 10, 10]` (`left=70` vs counterfactual `60`); Month 2 `[10, 10, 20] -> [10, 10, 10]` (`left=70` vs counterfactual `60`); `bed_kept=true`, `lake_kept=true`.
