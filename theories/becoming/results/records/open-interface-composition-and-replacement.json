@@ -13,7 +13,7 @@
   },
   "laws": [
     {
-      "en": "Port split and standalone loop foundations: OpenLoop and LoopCertificate reside natively in Becoming.OpenComposition (imported by AdaptiveLoops) alongside indexedStep monotonicity bounds; OpenComponent separates internal Int from exposed Ext ports with assume-guarantee InterfaceContract (tol, warnObs, preCapInt/Ext, postBudgetInt/Ext, maxSilence, maxLag, eta) via ofOpenLoop, toOpenLoop, and InterfaceContract.ofLoopCertificate.",
+      "en": "Port split and standalone loop foundations: OpenLoop and LoopCertificate reside natively in Becoming.OpenComposition (imported by AdaptiveLoops) alongside indexedStep monotonicity bounds; OpenComponent separates internal Int from exposed Ext ports with assume-guarantee InterfaceContract (tol, warnObs, preCapInt/Ext, post-draw allowance Int/Ext, maxSilence, maxLag, eta) via ofOpenLoop, toOpenLoop, and InterfaceContract.ofLoopCertificate.",
       "declarations": [
         "Becoming.OpenComposition.indexedStep_mono",
         "Becoming.OpenComposition.indexedStep_antitone_H",
@@ -79,9 +79,10 @@
       ]
     },
     {
-      "en": "Heterogeneous replacement and interface widening: replace_left_viable, replace_right_viable, and contractRefines_compose_{left,right} swap heterogeneous S ≠ S' and Int ≠ Int' under ContractRefines without re-checking the partner; rewrite_step_viable preserves viability across live ReconfigProcess transitions (reconfig s'). Witness widen_interface_heals_blindness contrasts 6-step blind crash against widened Viability.Kernel.",
+      "en": "Heterogeneous replacement and interface widening: replace_contract_viable, replace_left_viable, replace_right_viable, and contractRefines_compose_{left,right} swap heterogeneous S ≠ S' and Int ≠ Int' under ContractRefines without re-checking partners; rewrite_step_viable preserves viability across live ReconfigProcess transitions (reconfig s'), while widen_interface_heals_blindness restores Viability.Kernel.",
       "declarations": [
         "Becoming.OpenComposition.ContractRefines",
+        "Becoming.OpenComposition.replace_contract_viable",
         "Becoming.OpenComposition.replace_left_viable",
         "Becoming.OpenComposition.replace_right_viable",
         "Becoming.OpenComposition.contractRefines_compose_left",
@@ -156,7 +157,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T234229.023849Z): all 98 declarations (38 theorems) in Becoming.OpenComposition compile from prelude with core_axioms: []; inverted below Becoming.AdaptiveLoops and audited in Wave U2 (00113d4b: PASS). No person has read it."
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 99 declarations (39 theorems, 0 private) in Becoming.OpenComposition compile from prelude with core_axioms: []; refactored below callers with replace_contract_viable. No person has read it."
   },
   "next_delta": {
     "en": "Instantiate OpenComponent, InterfaceContract, and ReconfigProcess across endogenous turning, parametric local-accuracy drawdown, scope invasion guards, and an end-to-end composed alignment spine."
@@ -255,6 +256,7 @@
         "Becoming.OpenComposition.HiddenCouplingFailure.witness",
         "Becoming.OpenComposition.hidden_coupling_interchange_failure",
         "Becoming.OpenComposition.ContractRefines",
+        "Becoming.OpenComposition.replace_contract_viable",
         "Becoming.OpenComposition.replace_left_viable",
         "Becoming.OpenComposition.replace_right_viable",
         "Becoming.OpenComposition.contractRefines_compose_left",
@@ -278,7 +280,7 @@
         "Becoming.OpenComposition.ComposedNonLumpingWitness.no_reduced_law_prod",
         "Becoming.OpenComposition.ComposedNonLumpingWitness.prod_viability_kernel"
       ],
-      "sha256": "331dfb065cd3a202c05c33331b163c589c8007fcb5c9d877bff3ac9663ef1a3c"
+      "sha256": "caaf7a55cbea778ef58cc2275d3143d043ab3852bdf68393177f38390f5b2899"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T170322.365233Z/verification.json",
@@ -295,12 +297,18 @@
       "role": "receipt",
       "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "role": "receipt",
+      "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenComposition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OpenComposition",
       "success_pointer": "/status",
       "success_value": "passed"

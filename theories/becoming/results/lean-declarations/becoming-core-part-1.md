@@ -9,7 +9,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 2](../lean-declarations/becoming-core-part-2.md)
 
-## Becoming pure core, part 1 of 7
+## Becoming pure core, part 1 of 8
 
 <a id="module-2037f4728c54"></a>
 

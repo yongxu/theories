@@ -87,6 +87,15 @@
         "Becoming.StockFlowBridge.way_draws_iff_replenishes",
         "Becoming.StockFlowBridge.stockRun_never_returns_below_within"
       ]
+    },
+    {
+      "en": "Pointwise and finite-list clamped-step overdraw discrepancy: given step_eq : x' = (x - d) + u, clampedStep_balance_discrepancy proves x' + d = (x + u) + (d - x), yielding clampedStep_balance_iff_le, list_clampedStep_imbalance_eq_sum_overdraw (even under coupled replenishment u), and list_clampedStep_exact_balance_iff_all_covered.",
+      "declarations": [
+        "Becoming.StockFlowBridge.clampedStep_balance_discrepancy",
+        "Becoming.StockFlowBridge.clampedStep_balance_iff_le",
+        "Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw",
+        "Becoming.StockFlowBridge.list_clampedStep_exact_balance_iff_all_covered"
+      ]
     }
   ],
   "hypotheses": [
@@ -114,7 +123,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T234229.023849Z): all 65 declarations (54 theorems) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; joined onto Becoming.Stock and audited in Wave U2 (00113d4b: PASS). No person has read it."
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 69 declarations (58 theorems, 0 private) in Becoming.StockFlowBridge compile from prelude with core_axioms: []; adds clampedStep_balance_* and list_clampedStep_* overdraw helpers. No person has read it."
   },
   "next_delta": {
     "en": "Index WayUnderARule, PacedStock, AdaptiveLoops, and Milestone 1C pillars into atlas dynamics.json and author alignment situations (Phase 2)."
@@ -225,9 +234,13 @@
         "Becoming.StockFlowBridge.line_draws_iff_replenishes",
         "Becoming.StockFlowBridge.way_replenishes_of_draws",
         "Becoming.StockFlowBridge.way_draws_iff_replenishes",
-        "Becoming.StockFlowBridge.stockRun_never_returns_below_within"
+        "Becoming.StockFlowBridge.stockRun_never_returns_below_within",
+        "Becoming.StockFlowBridge.clampedStep_balance_discrepancy",
+        "Becoming.StockFlowBridge.clampedStep_balance_iff_le",
+        "Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw",
+        "Becoming.StockFlowBridge.list_clampedStep_exact_balance_iff_all_covered"
       ],
-      "sha256": "4db0e7aaf26c7253124c38ea7c34d419b69b8618860adcd9819f7b788df16636"
+      "sha256": "b25c51c63307020a6601eb1f308531ce84b5d9cdd9d6e7624721458f2dd140f5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T131636.294555Z/verification.json",
@@ -244,12 +257,18 @@
       "role": "receipt",
       "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "role": "receipt",
+      "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/StockFlowBridge.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.StockFlowBridge",
       "success_pointer": "/status",
       "success_value": "passed"

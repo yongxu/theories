@@ -50,9 +50,11 @@
       ]
     },
     {
-      "en": "Finite Process traces coincide with flatSpan pullbacks (trace_equiv_flatChain), ExactCausalAbs lifts force chi surjectivity while CausalGoodhartWitness breaks surjectivity, and C2CoupledAlignmentWitness realizes FiberViabilitySplit on C2 microstates sharing macro trajectories (refuting any macro kernel soundness).",
+      "en": "Finite Process traces match flatChain pullbacks (trace_equiv_flatChain); ExactCausalAbs lifts force full-chain lifting (exactCausal_lifts_implies_chain_lift, giving exactCausal_lifts_implies_chi_surjective) while CausalGoodhartWitness breaks it; C2CoupledAlignmentWitness realizes FiberViabilitySplit, refuting any sound and complete macro predicate.",
       "declarations": [
+        "Becoming.OplaxHistory.ProcessStepWitness.ext",
         "Becoming.OplaxHistory.trace_equiv_flatChain",
+        "Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift",
         "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
         "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
         "Becoming.OplaxHistory.FiberViabilitySplit",
@@ -72,11 +74,24 @@
         "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
         "Becoming.OplaxHistory.span_step_grammar_lumping"
       ]
+    },
+    {
+      "en": "Every SumPreservingFunctor is canonically isomorphic to (- × F Unit) on finite FinPres types (prodUnitToF_isBijective), forcing finite-span chi bijectivity (sumPreserving_finPres_chi_bijective); outside sum preservation, inhabitedOptionFunctor breaks chi surjectivity at 0 axioms (inhabitedOptionFunctor_chi_not_surjective).",
+      "declarations": [
+        "Becoming.OplaxHistory.FinPres",
+        "Becoming.OplaxHistory.sumPreserving_empty_isEmpty",
+        "Becoming.OplaxHistory.prodUnitToF",
+        "Becoming.OplaxHistory.prodUnitToF_natural",
+        "Becoming.OplaxHistory.prodUnitToF_isBijective",
+        "Becoming.OplaxHistory.sumPreserving_finPres_chi_bijective",
+        "Becoming.OplaxHistory.inhabitedOptionFunctor",
+        "Becoming.OplaxHistory.inhabitedOptionFunctor_chi_not_surjective"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "Constructive Type-level spans and Lean 4 Init logic with 0 axioms and 0 private declarations; strong inverse interchange and macro soundness explicitly require FImageIsPullback or universal bcMap bijectivity across all D-indexed families (E, v)."
+      "en": "Constructive Lean 4 Init spans with 0 axioms and 0 private declarations; strong inverse interchange chiInv requires FImageIsPullback or universal bcMap bijectivity across observer families (E : F.obj H.W -> Type, v : F.obj K.W), while FiberViabilitySplit rules out sound and complete macro predicates."
     }
   ],
   "does_not_show": [
@@ -93,7 +108,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
       "detail": {
-        "en": "EmergentCrossSeamWitness (chiZeroToOne_not_surjective, chiTwoToFour_not_surjective), C2RelativeLossWitness (c2_chi_two_to_one, c2_n_step_collapse), bc_empty_family_trivial_counterexample, causalGoodhart_chi_non_surjective, and C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness."
+        "en": "EmergentCrossSeamWitness (chiZeroToOne_not_surjective, chiTwoToFour_not_surjective), C2RelativeLossWitness (c2_chi_two_to_one, c2_n_step_collapse), inhabitedOptionFunctor_chi_not_surjective, bc_empty_family_trivial_counterexample, causalGoodhart_chi_non_surjective, and C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness."
       }
     }
   ],
@@ -106,7 +121,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T083850.553338Z): all 135 declarations (52 theorems, 0 private) in Becoming.OplaxHistory compile from prelude with non-empty axiom dependencies {} and 0 forbidden market words; audited PASS in Wave U6 Commit A (b8111aa2f). No person has read it."
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 148 declarations (59 theorems, 0 private) in Becoming.OplaxHistory compile from prelude with non-empty axiom dependencies {} and 0 forbidden market words. No person has read it."
   },
   "next_delta": {
     "en": "Human read by Ren; category-level weak bicategorical coherence or continuous stochastic trace lifts if needed."
@@ -179,7 +194,9 @@
         "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal",
         "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one",
         "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse",
+        "Becoming.OplaxHistory.ProcessStepWitness.ext",
         "Becoming.OplaxHistory.trace_equiv_flatChain",
+        "Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift",
         "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
         "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
         "Becoming.OplaxHistory.FiberViabilitySplit",
@@ -192,9 +209,17 @@
         "Becoming.OplaxHistory.coprod_strong_vs_time_oplax",
         "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc",
         "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig",
-        "Becoming.OplaxHistory.span_step_grammar_lumping"
+        "Becoming.OplaxHistory.span_step_grammar_lumping",
+        "Becoming.OplaxHistory.FinPres",
+        "Becoming.OplaxHistory.sumPreserving_empty_isEmpty",
+        "Becoming.OplaxHistory.prodUnitToF",
+        "Becoming.OplaxHistory.prodUnitToF_natural",
+        "Becoming.OplaxHistory.prodUnitToF_isBijective",
+        "Becoming.OplaxHistory.sumPreserving_finPres_chi_bijective",
+        "Becoming.OplaxHistory.inhabitedOptionFunctor",
+        "Becoming.OplaxHistory.inhabitedOptionFunctor_chi_not_surjective"
       ],
-      "sha256": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6"
+      "sha256": "8e26ee8ada10934444ca5c4b8fa8108136c718317bf785d718c42777e08092a2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T083850.553338Z/verification.json",
@@ -206,12 +231,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
       "role": "review",
       "sha256": "b56d67b2a6f1391b0ab68e81b04b460d22545f6fb3e67ffba92a8e0dd979d4cb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "role": "receipt",
+      "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OplaxHistory.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T083850.553338Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OplaxHistory",
       "success_pointer": "/status",
       "success_value": "passed"

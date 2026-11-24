@@ -9,7 +9,7 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-23T19:52:23+00:00",
   "statement": {
-    "en": "Horizontal OpenComposition of EndogenousTurning, UnifiedDrawdown, and ScopeDynamics preserves exposed and hidden viability, modular replacement, and synchronous multiscale transfer, alongside ReadsOnlyDynamics non-entailment and eleven CE01-CE15 sharpness witnesses plus WaterTank."
+    "en": "Horizontal OpenComposition of EndogenousTurning, UnifiedDrawdown, and ScopeDynamics preserves exposed and hidden viability, modular replacement, and synchronous multiscale transfer, alongside ReadsOnlyDynamics non-entailment and eleven CE01-CE10, CE14 sharpness witnesses plus WaterTank."
   },
   "laws": [
     {
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "en": "Sharpness suite (CE01-CE10, CE14): eleven zero-axiom constructive finite counter-models isolate each dropped safeguard — countdown jump, blind hide, hide side-channel leakage, type mismatch, sum silencing, non-monotone wiring, concurrent reconfig, lax overflow/non-decoupling, validator capture, and victim externalization.",
+      "en": "Sharpness suite (CE01-CE10, CE14): eleven zero-axiom constructive counter-models exhibit concrete failures of individual safeguards — countdown jump, blind hide, hide side-channel leakage, type mismatch, sum silencing, non-monotone wiring, concurrent reconfig, lax overflow/non-decoupling, validator capture, and victim externalization.",
       "declarations": [
         "Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness",
         "Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness",
@@ -79,7 +79,7 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning budget >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
+      "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning headroom >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
     }
   ],
   "does_not_show": [
@@ -96,7 +96,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
       "detail": {
-        "en": "MasterSpineWitness.witness_viable holds exposed substrate 46 >= 10 and hidden (46, 11) -> (34, 9) forever with active Int draw 2, 2, 1; CE01-CE10 and CE14 exhibit explicit finite failures whenever one contract or coupling safeguard is dropped."
+        "en": "MasterSpineWitness.witness_viable reaches hidden (34, 9) at steps 2-3 while keeping all-time bounds 10 <= exposed and 5 <= hidden with active Int draw 2, 2, 1; CE01-CE10 and CE14 exhibit explicit concrete failures for individual contract or coupling failures (witnesses of separate failure modes rather than formal premise-by-premise necessity on one fixed implication)."
       }
     },
     {
@@ -115,13 +115,13 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T195223.591569Z): all 175 audited declarations (71 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 777d5efb, 696b7b9b, and 2457e370 PASS."
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T234229.023849Z): all 172 audited declarations (68 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 777d5efb, 696b7b9b, and 2457e370 PASS."
   },
   "next_delta": {
     "en": "Connect future empirical evaluations and continuous stress tests to explicit Rule 2 recognition checks against the L0-L5 core suite."
   },
   "correspondence": {
-    "en": "Reading (AI-written): unites L0-L3 into one checkable core spine showing when coupled adaptive systems persist across compositions and where each dropped safeguard breaks."
+    "en": "Reading (AI-written): unites L0-L3 into one checkable core spine showing when coupled adaptive systems persist across compositions and where concrete failure modes break individual safeguards."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean",
   "aliases": [

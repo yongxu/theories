@@ -5,7 +5,7 @@
 
 `master-alignment-spine-and-sharpness` · **recorded-checked** · theorem · F01 · [record](master-alignment-spine-and-sharpness.json) · [register](../../../../RESULTS.md)
 
-> Horizontal OpenComposition of EndogenousTurning, UnifiedDrawdown, and ScopeDynamics preserves exposed and hidden viability, modular replacement, and synchronous multiscale transfer, alongside ReadsOnlyDynamics non-entailment and eleven CE01-CE15 sharpness witnesses plus WaterTank.
+> Horizontal OpenComposition of EndogenousTurning, UnifiedDrawdown, and ScopeDynamics preserves exposed and hidden viability, modular replacement, and synchronous multiscale transfer, alongside ReadsOnlyDynamics non-entailment and eleven CE01-CE10, CE14 sharpness witnesses plus WaterTank.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Failure atlas and metaethical boundary: AlignmentDichotomy re-exports L0-L3 structural boundaries (l0_l3_persistence_boundary through master_alignment_dichotomy) and proves alignmentSpine_cannot_entail_unrestricted via ReadsOnlyDynamics.not_entails and ReadsNoOrder.not_entails. (`Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_readsOnlyDynamics`, `Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_admits_rival`, `Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_not_entails`, `Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted`, `Becoming.AlignmentSpine.AlignmentDichotomy.l0_l3_persistence_boundary`, `Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas`, `Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries`, `Becoming.AlignmentSpine.AlignmentDichotomy.epistemic_scope_metaethical_boundary`, `Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy`)
    - *Shared laws, by Lean dependency:* closure, balance, finite runs, lumping and widening; its declarations reach the grammar.
-3. Sharpness suite (CE01-CE10, CE14): eleven zero-axiom constructive finite counter-models isolate each dropped safeguard — countdown jump, blind hide, hide side-channel leakage, type mismatch, sum silencing, non-monotone wiring, concurrent reconfig, lax overflow/non-decoupling, validator capture, and victim externalization. (`Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness`, `Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness`, `Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage`, `Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness`, `Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness`, `Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness`, `Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness`, `Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness`)
+3. Sharpness suite (CE01-CE10, CE14): eleven zero-axiom constructive counter-models exhibit concrete failures of individual safeguards — countdown jump, blind hide, hide side-channel leakage, type mismatch, sum silencing, non-monotone wiring, concurrent reconfig, lax overflow/non-decoupling, validator capture, and victim externalization. (`Becoming.AlignmentSpine.SharpnessSuite.ReconfigCountdownJumpFails.witness`, `Becoming.AlignmentSpine.SharpnessSuite.BlindHideCollapse.witness`, `Becoming.AlignmentSpine.SharpnessSuite.hide_side_channel_leakage`, `Becoming.AlignmentSpine.SharpnessSuite.TypeSameSemanticsMismatch.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SilencingSumBreaksComposition.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SameWiringNonMonotoneSubstrate.witness`, `Becoming.AlignmentSpine.SharpnessSuite.ConcurrentReconfigConflict.witness`, `Becoming.AlignmentSpine.SharpnessSuite.LaxTubeOverflowWitness.witness`, `Becoming.AlignmentSpine.SharpnessSuite.CoupledLaxNonDecouplingWitness.witness`, `Becoming.AlignmentSpine.SharpnessSuite.SelfModifyingValidatorCapture.witness`, `Becoming.AlignmentSpine.SharpnessSuite.ViableSelfExternalizesVictim.witness`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Laxity asymmetry, WaterTank pair, and end-to-end spine: slackDist_nat_not_transitive vs. exact_equivalence_is_class, delayed-4-5 vs. predictive/delayed-4-6 WaterTankCouplingWitness, master_sharpness_suite_complete, and alignment_spine_end_to_end. (`Becoming.AlignmentSpine.SharpnessSuite.slackDist_nat_not_transitive`, `Becoming.AlignmentSpine.SharpnessSuite.exact_equivalence_is_class`, `Becoming.AlignmentSpine.SharpnessSuite.WaterTankCouplingWitness.witness`, `Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete`, `Becoming.AlignmentSpine.alignment_spine_end_to_end`)
    - *Shared laws, by Lean dependency:* closure, balance, finite runs, lumping and widening; its declarations reach the grammar.
@@ -22,14 +22,14 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. Spine theorems assume finite nonempty partner/agent slices, turning budget >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures.
+- No axiom. Spine theorems assume finite nonempty partner/agent slices, turning headroom >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - Empirical applicability to any real system without an explicit Rule 2 recognition check, or any external moral 'ought' (alignmentSpine_cannot_entail_unrestricted).
 - Quantitative continuous/stochastic real bounds (inertia lag, delay-shock probability, metric contraction, linear FA hysteresis), which live in Mathlib periphery AlignmentReals.
-- **Counterexample:** MasterSpineWitness.witness_viable holds exposed substrate 46 >= 10 and hidden (46, 11) -> (34, 9) forever with active Int draw 2, 2, 1; CE01-CE10 and CE14 exhibit explicit finite failures whenever one contract or coupling safeguard is dropped. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean)
+- **Counterexample:** MasterSpineWitness.witness_viable reaches hidden (34, 9) at steps 2-3 while keeping all-time bounds 10 <= exposed and 5 <= hidden with active Int draw 2, 2, 1; CE01-CE10 and CE14 exhibit explicit concrete failures for individual contract or coupling failures (witnesses of separate failure modes rather than formal premise-by-premise necessity on one fixed implication). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean)
 - **Counterexample:** WaterTankCouplingWitness.witness contrasts 22-state tank physics where delayed (4, 6) and predictive (4, 6) hold forever while delayed (4, 5) empties at step 5. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 checker (receipt 20261123T195223.591569Z): all 175 audited declarations (71 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 777d5efb, 696b7b9b, and 2457e370 PASS.
+Machine-checked by Lean 4.29.1 checker (receipt 20261123T234229.023849Z): all 172 audited declarations (68 theorems, 0 private) compile from prelude with core_axioms: []; read-only audits by 777d5efb, 696b7b9b, and 2457e370 PASS.
 
 Canonical source: [AlignmentSpine.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AlignmentSpine.lean)
 
@@ -51,7 +51,7 @@ Connect future empirical evaluations and continuous stress tests to explicit Rul
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Reading (AI-written): unites L0-L3 into one checkable core spine showing when coupled adaptive systems persist across compositions and where each dropped safeguard breaks.
+Reading (AI-written): unites L0-L3 into one checkable core spine showing when coupled adaptive systems persist across compositions and where concrete failure modes break individual safeguards.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies

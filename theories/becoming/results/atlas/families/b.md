@@ -1455,7 +1455,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
     - `Becoming.StockFlowBridge.way_balancesOn_of_goes` → `Becoming.StockFlowBridge.way_taken_lt_of_goes` → `Becoming.WayUnderARule.taken_below` → `Becoming.LineOnAStock.step_zero`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
     - `Becoming.StockFlowBridge.line_coupled_indexed_correspondence` → `Becoming.StockFlowBridge.line_taken_const_of_even_met` → `Becoming.LineOnAStock.taken_allKids`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
     - `Becoming.StockFlowBridge.line_balancesOn_of_goes` → `Becoming.StockFlowBridge.line_taken_lt_of_goes` → `Becoming.LineOnAStock.taken_below`, listed under [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](a.md#a-line-on-a-stock).
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
-    - `Becoming.StockFlowBridge.unitBalancesOn_of_le`: in `Becoming.UnifiedDrawdown.unit_balancesOn_iff_le`, listed under [Unified drawdown, parametric open fleet restraint, overdraw separation, and temporal aliasing (统一下行、参数化开放舰队约束、超取分离与时间混叠)](h.md#unified-drawdown-overdraw-and-aliasing).
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), **B**, [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

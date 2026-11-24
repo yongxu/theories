@@ -109,9 +109,9 @@
 {"name": "Becoming.UnifiedDrawdown.total_only_eq", "uses": ["Becoming.Optimum.total_le_of_only", "Becoming.le_total_of_mem"]}
 {"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails", "uses": ["Becoming.dynamicsLaw_not_entails"]}
 {"name": "Becoming.UnifiedDrawdown.unifiedDrawdown_readsOnlyDynamics", "uses": ["Becoming.readsOnlyDynamics_of"]}
-{"name": "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "uses": ["Becoming.StockFlowBridge.unitBalancesOn_of_le", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.add_right_cancel"]}
+{"name": "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "uses": ["Becoming.StockFlowBridge.clampedStep_balance_iff_le", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken"]}
 {"name": "Becoming.UnifiedDrawdown.unit_giversSupported_of_gated", "uses": []}
-{"name": "Becoming.UnifiedDrawdown.unit_overdraw_separation", "uses": ["Becoming.Flow.Balances.on", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.UnifiedDrawdown.unit_overdraw_separation", "uses": ["Becoming.Flow.Balances.on", "Becoming.StockFlowBridge.clampedStep_balance_discrepancy", "Becoming.StockFlowBridge.unitFlow_given", "Becoming.StockFlowBridge.unitFlow_taken", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le", "Becoming.sub_eq_zero_of_le"]}
 {"name": "Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge", "uses": ["Becoming.NoReturnAt.recoverable_iff", "Becoming.PacedStock.unrecoverable_cadence_impossibility", "Becoming.Web.too_late_of_alike"]}
 {"name": "Becoming.UnifiedDrawdown.wayActiveWeb_dependent", "uses": ["Becoming.UnifiedDrawdown.activeUnitWeb_dependent"]}
 {"name": "Becoming.UnifiedDrawdown.way_below_of_excess_of_goes", "uses": ["Becoming.StockFlowBridge.way_taken_lt_of_goes", "Becoming.UnifiedDrawdown.way_below_of_excess_of_within"]}

@@ -39,7 +39,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 163 audited declarations (107 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS.
+Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 160 audited declarations (105 theorems, 0 private) compile from prelude with core_axioms: []. No person has read it.
 
 Canonical source: [UnifiedDrawdown.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean)
 
@@ -74,6 +74,7 @@ Reading (AI-written): unifies tragedy-of-the-commons with zero prediction error,
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json) | — |
 | review | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-wave2-l1-l4-2026-11-24/NOTE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json) | — |
 
 Aliases: `Becoming.UnifiedDrawdown.parametric_local_accounts_depletion`, `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable`, `Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable`, `Becoming.UnifiedDrawdown.OverdrawSeparationWitness.witness_bundle`, `Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle`, `Becoming.UnifiedDrawdown.unrecoverable_cadence_bridge`, `Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails`
 

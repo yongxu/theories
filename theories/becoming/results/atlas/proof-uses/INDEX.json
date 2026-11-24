@@ -4,10 +4,10 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "b8111aa2fba1d33f08a2971301113eb72347ea12",
-  "core_run": "20261124T083850.553338Z"
+  "commit": "af1d8095ad8893b0b958a533130584d700eb1e18",
+  "core_run": "20261124T112343.843972Z"
  },
- "core_sources_sha256": "b8b20b82f0d76ca04856fcfd30f80f9b05e4671848614c9a7c94412ecdf5bc1b",
+ "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
  "modules": {
   "Becoming": {
    "source_sha256": "cac1037c8d19726577de13f3c07aed857e3ea3e601e386ace17b5e6d523b3e25",
@@ -370,8 +370,8 @@
    "theorems": 11
   },
   "Becoming.DoubleKernel": {
-   "source_sha256": "6b6d1a8e143454ba6612e4303a963f22cf806da10ed2469c34485afddef44c47",
-   "theorems": 127
+   "source_sha256": "59676eec1c593d76d993ecb1a2d6dd92f259b32b17ced615b69eea132242f01d",
+   "theorems": 128
   },
   "Becoming.DrawHistory": {
    "source_sha256": "3ddd0fed860d4d37d2bb81333b3e0a7454606c81db1d862310f70f0c5bf6506a",
@@ -426,7 +426,7 @@
    "theorems": 35
   },
   "Becoming.EvolutionaryDrawdown": {
-   "source_sha256": "6e8cd6d9f93938acd0880b2fb2c20a0382f683983f2facd0e1b13397299a059b",
+   "source_sha256": "cd9a377cbf601883e67963a1e411bccb14c39fb8ea380e8748b3a4c64a91d263",
    "theorems": 69
   },
   "Becoming.ExchangePremises": {
@@ -994,8 +994,8 @@
    "theorems": 28
   },
   "Becoming.OpenComposition": {
-   "source_sha256": "331dfb065cd3a202c05c33331b163c589c8007fcb5c9d877bff3ac9663ef1a3c",
-   "theorems": 85
+   "source_sha256": "caaf7a55cbea778ef58cc2275d3143d043ab3852bdf68393177f38390f5b2899",
+   "theorems": 86
   },
   "Becoming.OpenedCorrection": {
    "source_sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d",
@@ -1006,8 +1006,8 @@
    "theorems": 78
   },
   "Becoming.OplaxHistory": {
-   "source_sha256": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6",
-   "theorems": 69
+   "source_sha256": "8e26ee8ada10934444ca5c4b8fa8108136c718317bf785d718c42777e08092a2",
+   "theorems": 77
   },
   "Becoming.Optimum": {
    "source_sha256": "3a4917cc1dc7ac5b0a2787083f7dcd408fb48f722b97c19305ae70d45d0ece34",
@@ -1542,8 +1542,8 @@
    "theorems": 45
   },
   "Becoming.StockFlowBridge": {
-   "source_sha256": "4db0e7aaf26c7253124c38ea7c34d419b69b8618860adcd9819f7b788df16636",
-   "theorems": 55
+   "source_sha256": "b25c51c63307020a6601eb1f308531ce84b5d9cdd9d6e7624721458f2dd140f5",
+   "theorems": 59
   },
   "Becoming.StrengthFlows": {
    "source_sha256": "72ab9f0e24157297f662ba73c9a3a3968d32d203880c24f3fcf2c16ee6772d5d",
@@ -1638,7 +1638,7 @@
    "theorems": 31
   },
   "Becoming.UnifiedDrawdown": {
-   "source_sha256": "4d57d23d65edf367a5e427f6a61b07905ae09e5bae79c06696de7582e750219c",
+   "source_sha256": "3ad3cc8374fbfe0cc3e0815d2380c6cd7a079687324c4648e5ffe6b083b694b2",
    "theorems": 123
   },
   "Becoming.UnitMatchings": {
@@ -1752,7 +1752,7 @@
  },
  "counts": {
   "modules": 435,
-  "theorems": 22601,
+  "theorems": 22615,
   "uses_without_row": 51
  }
 }

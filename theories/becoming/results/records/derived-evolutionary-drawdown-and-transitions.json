@@ -101,7 +101,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T040228.916780Z): all 123 declarations (64 theorems, 0 private) in Becoming.EvolutionaryDrawdown compile from prelude with non-empty core_axioms: {}, classified L2 through UnifiedDrawdown by layers.py, and audited PASS in Wave U4 (72501bec). No person has read it."
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 123 declarations (64 theorems, 0 private) in Becoming.EvolutionaryDrawdown compile from prelude with non-empty core_axioms: {}. No person has read it."
   },
   "next_delta": {
     "en": "Compose EvolutionaryDrawdown into the Wave U5 whole-Becoming MasterSpine."
@@ -226,7 +226,7 @@
         "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check",
         "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift"
       ],
-      "sha256": "6e8cd6d9f93938acd0880b2fb2c20a0382f683983f2facd0e1b13397299a059b"
+      "sha256": "cd9a377cbf601883e67963a1e411bccb14c39fb8ea380e8748b3a4c64a91d263"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
@@ -238,12 +238,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u4-2026-11-24/NOTE.md",
       "role": "review",
       "sha256": "7803192d4bfa5d14f9f02f47e42a8848a241403749cf69a4e218638ee244c724"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "role": "receipt",
+      "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EvolutionaryDrawdown",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -21,6 +21,8 @@
 {"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom.commR", "uses": []}
 {"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective", "uses": []}
 {"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective", "uses": []}
+{"name": "Becoming.OplaxHistory.FinPres.brecOn.eq", "uses": []}
+{"name": "Becoming.OplaxHistory.ProcessStepWitness.ext", "uses": []}
 {"name": "Becoming.OplaxHistory.ProcessStepWitness.step", "uses": []}
 {"name": "Becoming.OplaxHistory.PullbackElem.ext", "uses": []}
 {"name": "Becoming.OplaxHistory.PullbackElem.mid", "uses": []}
@@ -53,17 +55,23 @@
 {"name": "Becoming.OplaxHistory.eqRec_symm_cancel", "uses": []}
 {"name": "Becoming.OplaxHistory.evalPartition_proj_unique", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
 {"name": "Becoming.OplaxHistory.exactAbsChainMap_endpoints", "uses": []}
-{"name": "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective", "uses": ["Becoming.OplaxHistory.ProcessStepWitness.step", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift", "uses": ["Becoming.OplaxHistory.ProcessStepWitness.ext", "Becoming.OplaxHistory.ProcessStepWitness.step", "Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective", "uses": ["Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift"]}
 {"name": "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness", "uses": []}
 {"name": "Becoming.OplaxHistory.flatSpanToTrace", "uses": ["Becoming.OplaxHistory.ProcessStepWitness.step", "Becoming.OplaxHistory.PullbackElem.mid"]}
 {"name": "Becoming.OplaxHistory.flatSpan_proj_unique", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid", "Becoming.OplaxHistory.stepCast_inj"]}
 {"name": "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc", "uses": ["Becoming.OplaxHistory.chi_bijective_iff_bc_all", "Becoming.OplaxHistory.chi_bijective_iff_pullback"]}
+{"name": "Becoming.OplaxHistory.inhabitedOptionFunctor_chi_not_surjective", "uses": ["Becoming.OplaxHistory.PullbackElem.mid"]}
 {"name": "Becoming.OplaxHistory.isBijective_of_bij", "uses": ["Becoming.OplaxHistory.Bij.left_inv", "Becoming.OplaxHistory.Bij.right_inv"]}
 {"name": "Becoming.OplaxHistory.macro_refinement_functorial", "uses": ["Becoming.OplaxHistory.SpanHom.left_eq", "Becoming.OplaxHistory.evalPartition_proj_unique"]}
 {"name": "Becoming.OplaxHistory.map_castRight", "uses": []}
 {"name": "Becoming.OplaxHistory.powTwo_pos", "uses": []}
+{"name": "Becoming.OplaxHistory.prodUnitToF_isBijective", "uses": ["Becoming.OplaxHistory.isBijective_of_bij"]}
+{"name": "Becoming.OplaxHistory.prodUnitToF_natural", "uses": ["Becoming.OplaxHistory.SpanFunctor.map_comp"]}
 {"name": "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig", "uses": ["Becoming.OplaxHistory.isBijective_of_bij", "Becoming.PolyComposition.ConcurrentSerialWitness.concurrent_serial_dichotomy"]}
 {"name": "Becoming.OplaxHistory.span_step_grammar_lumping", "uses": ["Becoming.«像定后当且仅当同行»"]}
 {"name": "Becoming.OplaxHistory.stepCast_inj", "uses": []}
+{"name": "Becoming.OplaxHistory.sumPreserving_empty_isEmpty", "uses": ["Becoming.OplaxHistory.SpanFunctor.map_congr", "Becoming.OplaxHistory.SumPreservingFunctor.sum_inl", "Becoming.OplaxHistory.SumPreservingFunctor.sum_inr"]}
+{"name": "Becoming.OplaxHistory.sumPreserving_finPres_chi_bijective", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid", "Becoming.OplaxHistory.prodUnitToF_isBijective", "Becoming.OplaxHistory.prodUnitToF_natural"]}
 {"name": "Becoming.OplaxHistory.traceToFlatSpan", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
 {"name": "Becoming.OplaxHistory.trace_equiv_flatChain", "uses": ["Becoming.OplaxHistory.flatSpanToTrace", "Becoming.OplaxHistory.traceToFlatSpan"]}

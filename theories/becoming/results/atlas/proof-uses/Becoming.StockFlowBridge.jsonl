@@ -1,5 +1,7 @@
 {"name": "Becoming.Flow.held_below_within", "uses": ["Becoming.le_of_add_le_add_right"]}
 {"name": "Becoming.Flow.never_returns_below_within", "uses": ["Becoming.Flow.held_below_within"]}
+{"name": "Becoming.StockFlowBridge.clampedStep_balance_discrepancy", "uses": ["Becoming.add_sub_turn_add"]}
+{"name": "Becoming.StockFlowBridge.clampedStep_balance_iff_le", "uses": ["Becoming.StockFlowBridge.clampedStep_balance_discrepancy", "Becoming.add_right_cancel", "Becoming.le_of_sub_eq_zero", "Becoming.sub_eq_zero_of_le"]}
 {"name": "Becoming.StockFlowBridge.coupled_indexed_step_whole_eq", "uses": []}
 {"name": "Becoming.StockFlowBridge.line_account_of_goes", "uses": ["Becoming.StockFlowBridge.line_accumulates_of_goes"]}
 {"name": "Becoming.StockFlowBridge.line_account_unending_via_flow", "uses": ["Becoming.StockFlowBridge.line_balances_of_unending", "Becoming.StockFlowBridge.unitAccumulates_of_global_balances"]}
@@ -15,6 +17,8 @@
 {"name": "Becoming.StockFlowBridge.line_replenishes_of_draws", "uses": ["Becoming.Run.replenishes_of_draws", "Becoming.Stock.process_balanced"]}
 {"name": "Becoming.StockFlowBridge.line_taken_const_of_even_met", "uses": ["Becoming.LineOnAStock.after_of_met", "Becoming.LineOnAStock.taken_allKids"]}
 {"name": "Becoming.StockFlowBridge.line_taken_lt_of_goes", "uses": ["Becoming.LineOnAStock.taken_below"]}
+{"name": "Becoming.StockFlowBridge.list_clampedStep_exact_balance_iff_all_covered", "uses": ["Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw", "Becoming.add_right_cancel", "Becoming.le_of_sub_eq_zero", "Becoming.le_total_of_mem", "Becoming.sub_eq_zero_of_le", "Becoming.total_eq_zero"]}
+{"name": "Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw", "uses": ["Becoming.StockFlowBridge.clampedStep_balance_discrepancy", "Becoming.total_add", "Becoming.total_congr"]}
 {"name": "Becoming.StockFlowBridge.not_stockProcess_step_of_overdraw", "uses": []}
 {"name": "Becoming.StockFlowBridge.stockCovered_of_within", "uses": ["Becoming.Stock.feasible_iff_covered", "Becoming.StockFlowBridge.stockProcess_trace_of_within"]}
 {"name": "Becoming.StockFlowBridge.stockFlow_balances_iff_unitFlow_balances", "uses": []}

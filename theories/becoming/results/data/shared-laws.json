@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T083850.553338Z",
- "core_sources_sha256": "b8b20b82f0d76ca04856fcfd30f80f9b05e4671848614c9a7c94412ecdf5bc1b",
+ "core_receipt": "20261124T112343.843972Z",
+ "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4526,
+  "laws": 4528,
   "no_declarations": 9,
   "outside": 406,
   "grammar": 1171,
   "balance, represented": 642,
   "anchor, not reached": 99,
-  "no shared law": 2199,
+  "no shared law": 2201,
   "vocabulary_only": 106,
   "closure": 648,
   "balance": 935,
@@ -24275,6 +24275,7 @@
      "Becoming.DoubleKernel.GuardedProof",
      "Becoming.DoubleKernel.evalGuardedProof",
      "Becoming.DoubleKernel.guarded_oplax_sound",
+     "Becoming.DoubleKernel.finite_non_invertible_chiStep_witness",
      "Becoming.DoubleKernel.strict_vs_guarded_separation_witness"
     ],
     "shared_laws": [],
@@ -36671,6 +36672,7 @@
     "law": 4,
     "declarations": [
      "Becoming.OpenComposition.ContractRefines",
+     "Becoming.OpenComposition.replace_contract_viable",
      "Becoming.OpenComposition.replace_left_viable",
      "Becoming.OpenComposition.replace_right_viable",
      "Becoming.OpenComposition.contractRefines_compose_left",
@@ -36758,7 +36760,9 @@
    {
     "law": 3,
     "declarations": [
+     "Becoming.OplaxHistory.ProcessStepWitness.ext",
      "Becoming.OplaxHistory.trace_equiv_flatChain",
+     "Becoming.OplaxHistory.exactCausal_lifts_implies_chain_lift",
      "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective",
      "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective",
      "Becoming.OplaxHistory.FiberViabilitySplit",
@@ -36789,6 +36793,22 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.OplaxHistory.FinPres",
+     "Becoming.OplaxHistory.sumPreserving_empty_isEmpty",
+     "Becoming.OplaxHistory.prodUnitToF",
+     "Becoming.OplaxHistory.prodUnitToF_natural",
+     "Becoming.OplaxHistory.prodUnitToF_isBijective",
+     "Becoming.OplaxHistory.sumPreserving_finPres_chi_bijective",
+     "Becoming.OplaxHistory.inhabitedOptionFunctor",
+     "Becoming.OplaxHistory.inhabitedOptionFunctor_chi_not_surjective"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "optima-rebuild-a-depleted-base": [
@@ -58705,6 +58725,18 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.StockFlowBridge.clampedStep_balance_discrepancy",
+     "Becoming.StockFlowBridge.clampedStep_balance_iff_le",
+     "Becoming.StockFlowBridge.list_clampedStep_imbalance_eq_sum_overdraw",
+     "Becoming.StockFlowBridge.list_clampedStep_exact_balance_iff_all_covered"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "unequal-groups-not-decided-by-the-spread-among-groups": [
@@ -70036,7 +70068,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "40bd5119c74f057dc9bb2d8fec9942079af86457bad46a4315dafc6088be1828",
+   "modules_sha256": "8e3e187edeea3688a3ebe880120c342ec30d531c5d5965175ec06f8b8e130821",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

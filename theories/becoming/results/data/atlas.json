@@ -59573,15 +59573,7 @@
       ]
      }
     ],
-    "used_by": [
-     {
-      "used": "Becoming.StockFlowBridge.unitBalancesOn_of_le",
-      "dynamic": "unified-drawdown-overdraw-and-aliasing",
-      "in": [
-       "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le"
-      ]
-     }
-    ],
+    "used_by": [],
     "shared": [],
     "not_read": {
      "theorems_of_the_receipt_without_row": [],
@@ -60240,13 +60232,6 @@
       "in": [
        "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability"
       ]
-     },
-     {
-      "dynamic": "unclamped-stock-flow-bridge",
-      "used": "Becoming.StockFlowBridge.unitBalancesOn_of_le",
-      "in": [
-       "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le"
-      ]
      }
     ],
     "chains": [
@@ -60296,6 +60281,20 @@
      },
      {
       "dynamics": [
+       "unclamped-stock-flow-bridge"
+      ],
+      "chain": [
+       "Becoming.UnifiedDrawdown.CadenceErasureWitness.witness_bundle",
+       "Becoming.UnifiedDrawdown.cadence_erases_timely_recovery",
+       "Becoming.UnifiedDrawdown.line_excess_terminates_goes",
+       "Becoming.UnifiedDrawdown.line_below_of_excess_of_goes",
+       "Becoming.UnifiedDrawdown.line_below_of_excess_of_within",
+       "Becoming.StockFlowBridge.line_balancesOn_of_within",
+       "Becoming.StockFlowBridge.unitBalancesOn_of_le"
+      ]
+     },
+     {
+      "dynamics": [
        "open-interface-composition-and-replacement"
       ],
       "chain": [
@@ -60311,6 +60310,7 @@
       "chain": [
        "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
        "Becoming.OpenComposition.composeList_replace_head_viable",
+       "Becoming.OpenComposition.replace_contract_viable",
        "Becoming.OpenComposition.close_contract_kernel"
       ]
      },
@@ -60704,7 +60704,7 @@
      "record": "master-alignment-spine-and-sharpness",
      "index": 1,
      "text": {
-      "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning budget >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
+      "en": "No axiom. Spine theorems assume finite nonempty partner/agent slices, turning headroom >= B_task, reciprocal gate iff Withholding.waitsAll, valid compose/hide tolerance bindings, and synchronous LaxSim; dichotomy and sharpness theorems need only the cited witness structures."
      }
     }
    ],
@@ -61050,17 +61050,6 @@
        "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries",
        "Becoming.EndogenousTurning.clamped_balances_trap",
        "Becoming.StockFlowBridge.unitBalancesOn_of_le"
-      ]
-     },
-     {
-      "dynamics": [
-       "open-interface-composition-and-replacement"
-      ],
-      "chain": [
-       "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
-       "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable",
-       "Becoming.OpenComposition.replace_right_viable",
-       "Becoming.OpenComposition.compose_close_interchange"
       ]
      },
      {
@@ -202114,18 +202103,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "b8111aa2fba1d33f08a2971301113eb72347ea12",
-   "core_run": "20261124T083850.553338Z"
+   "commit": "af1d8095ad8893b0b958a533130584d700eb1e18",
+   "core_run": "20261124T112343.843972Z"
   },
-  "core_sources_sha256": "b8b20b82f0d76ca04856fcfd30f80f9b05e4671848614c9a7c94412ecdf5bc1b",
+  "core_sources_sha256": "41979f0400dc5d6c72673c9d7feb5e96301f3e8f39e977d610cf10d3dacd9be5",
   "counts": {
    "modules": 435,
-   "theorems": 22601,
+   "theorems": 22615,
    "uses_without_row": 51
   },
   "counted": {
    "modules": 435,
-   "theorems": 22601,
+   "theorems": 22615,
    "uses_without_row": 51
   },
   "binds_receipt": true,

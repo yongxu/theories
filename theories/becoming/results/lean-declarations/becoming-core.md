@@ -11,17 +11,18 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 417 modules are listed on 7 parts of about equal size, the largest 796,689 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 417 modules are listed on 8 parts of about equal size, the largest 796,689 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
-| [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 70, from GenerativeCore.lean to Counterfactual.lean | 2,758 |
-| [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 60, from CounterfactualRuns.lean to Grammar.lean | 3,003 |
-| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 68, from GrammarCandidates.lean to LearningRuns.lean | 3,178 |
-| [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 44, from LeastLoss.lean to Optimum.lean | 3,042 |
-| [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 53, from OptimumSeason.lean to ReferencePlan.lean | 2,907 |
-| [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 61, from ReferencePlanTraces.lean to Settling.lean | 3,035 |
-| [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 61, from SharedCodes.lean to InquirySufficiency.lean | 2,976 |
+| [Part 1 of 8](../lean-declarations/becoming-core-part-1.md) | 70, from GenerativeCore.lean to Counterfactual.lean | 2,758 |
+| [Part 2 of 8](../lean-declarations/becoming-core-part-2.md) | 60, from CounterfactualRuns.lean to Grammar.lean | 3,004 |
+| [Part 3 of 8](../lean-declarations/becoming-core-part-3.md) | 68, from GrammarCandidates.lean to LearningRuns.lean | 3,178 |
+| [Part 4 of 8](../lean-declarations/becoming-core-part-4.md) | 43, from LeastLoss.lean to OplaxHistory.lean | 2,541 |
+| [Part 5 of 8](../lean-declarations/becoming-core-part-5.md) | 46, from Optimum.lean to ReadingLoop.lean | 2,986 |
+| [Part 6 of 8](../lean-declarations/becoming-core-part-6.md) | 59, from ReadingSchedule.lean to SelectionLevels.lean | 2,990 |
+| [Part 7 of 8](../lean-declarations/becoming-core-part-7.md) | 60, from SelectionPace.lean to WholeAmounts.lean | 2,990 |
+| [Part 8 of 8](../lean-declarations/becoming-core-part-8.md) | 11, from Wholes.lean to InquirySufficiency.lean | 465 |
 
 | Module | Page | theorem/lemma |
 |---|---|---:|
@@ -114,7 +115,7 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-0609adcd317a"></a>[Direction.lean](../lean-declarations/becoming-core-part-2.md#module-0609adcd317a) | part 2 | 14 |
 | <a id="module-adfdfa242506"></a>[Dissipation.lean](../lean-declarations/becoming-core-part-2.md#module-adfdfa242506) | part 2 | 110 |
 | <a id="module-f12a895479c7"></a>[Distinguishing.lean](../lean-declarations/becoming-core-part-2.md#module-f12a895479c7) | part 2 | 11 |
-| <a id="module-d2f9f81cd6e6"></a>[DoubleKernel.lean](../lean-declarations/becoming-core-part-2.md#module-d2f9f81cd6e6) | part 2 | 35 |
+| <a id="module-d2f9f81cd6e6"></a>[DoubleKernel.lean](../lean-declarations/becoming-core-part-2.md#module-d2f9f81cd6e6) | part 2 | 36 |
 | <a id="module-a099500b6b5a"></a>[DrawHistory.lean](../lean-declarations/becoming-core-part-2.md#module-a099500b6b5a) | part 2 | 18 |
 | <a id="module-49214955ec3d"></a>[DrawnBeyond.lean](../lean-declarations/becoming-core-part-2.md#module-49214955ec3d) | part 2 | 42 |
 | <a id="module-4e436b09c0c4"></a>[DrawnReplacement.lean](../lean-declarations/becoming-core-part-2.md#module-4e436b09c0c4) | part 2 | 19 |
@@ -263,10 +264,10 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-13d3b7e74c6a"></a>[Observation.lean](../lean-declarations/becoming-core-part-4.md#module-13d3b7e74c6a) | part 4 | 27 |
 | <a id="module-181010f81637"></a>[OneStep.lean](../lean-declarations/becoming-core-part-4.md#module-181010f81637) | part 4 | 301 |
 | <a id="module-d8b9f7e31a6f"></a>[Onward.lean](../lean-declarations/becoming-core-part-4.md#module-d8b9f7e31a6f) | part 4 | 28 |
-| <a id="module-a396ec7984ea"></a>[OpenComposition.lean](../lean-declarations/becoming-core-part-4.md#module-a396ec7984ea) | part 4 | 39 |
+| <a id="module-a396ec7984ea"></a>[OpenComposition.lean](../lean-declarations/becoming-core-part-4.md#module-a396ec7984ea) | part 4 | 40 |
 | <a id="module-5be60c839fbf"></a>[Openness.lean](../lean-declarations/becoming-core-part-4.md#module-5be60c839fbf) | part 4 | 78 |
-| <a id="module-49008c540b87"></a>[OplaxHistory.lean](../lean-declarations/becoming-core-part-4.md#module-49008c540b87) | part 4 | 52 |
-| <a id="module-86be84561604"></a>[Optimum.lean](../lean-declarations/becoming-core-part-4.md#module-86be84561604) | part 4 | 509 |
+| <a id="module-49008c540b87"></a>[OplaxHistory.lean](../lean-declarations/becoming-core-part-4.md#module-49008c540b87) | part 4 | 59 |
+| <a id="module-86be84561604"></a>[Optimum.lean](../lean-declarations/becoming-core-part-5.md#module-86be84561604) | part 5 | 509 |
 | <a id="module-0116411bbe45"></a>[OptimumSeason.lean](../lean-declarations/becoming-core-part-5.md#module-0116411bbe45) | part 5 | 63 |
 | <a id="module-7412c6ab20ba"></a>[OrderNormal.lean](../lean-declarations/becoming-core-part-5.md#module-7412c6ab20ba) | part 5 | 101 |
 | <a id="module-958bcd7f9971"></a>[OverExchange.lean](../lean-declarations/becoming-core-part-5.md#module-958bcd7f9971) | part 5 | 50 |
@@ -312,14 +313,14 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-a7e31c4a8f40"></a>[ReadStages.lean](../lean-declarations/becoming-core-part-5.md#module-a7e31c4a8f40) | part 5 | 57 |
 | <a id="module-99e970c01029"></a>[Reading.lean](../lean-declarations/becoming-core-part-5.md#module-99e970c01029) | part 5 | 27 |
 | <a id="module-556b9c23cf58"></a>[ReadingLoop.lean](../lean-declarations/becoming-core-part-5.md#module-556b9c23cf58) | part 5 | 51 |
-| <a id="module-16e3283cf0a7"></a>[ReadingSchedule.lean](../lean-declarations/becoming-core-part-5.md#module-16e3283cf0a7) | part 5 | 64 |
-| <a id="module-fed2c4df4559"></a>[Readings.lean](../lean-declarations/becoming-core-part-5.md#module-fed2c4df4559) | part 5 | 11 |
-| <a id="module-71731e539e9a"></a>[ReadingsPersist.lean](../lean-declarations/becoming-core-part-5.md#module-71731e539e9a) | part 5 | 86 |
-| <a id="module-9600a3670185"></a>[ReadingsSpread.lean](../lean-declarations/becoming-core-part-5.md#module-9600a3670185) | part 5 | 60 |
-| <a id="module-0049adde4457"></a>[Readout.lean](../lean-declarations/becoming-core-part-5.md#module-0049adde4457) | part 5 | 21 |
-| <a id="module-5a29db5d7c22"></a>[Reconfiguration.lean](../lean-declarations/becoming-core-part-5.md#module-5a29db5d7c22) | part 5 | 59 |
-| <a id="module-6dd925531afa"></a>[Recurrence.lean](../lean-declarations/becoming-core-part-5.md#module-6dd925531afa) | part 5 | 74 |
-| <a id="module-ecc38510a9c9"></a>[ReferencePlan.lean](../lean-declarations/becoming-core-part-5.md#module-ecc38510a9c9) | part 5 | 55 |
+| <a id="module-16e3283cf0a7"></a>[ReadingSchedule.lean](../lean-declarations/becoming-core-part-6.md#module-16e3283cf0a7) | part 6 | 64 |
+| <a id="module-fed2c4df4559"></a>[Readings.lean](../lean-declarations/becoming-core-part-6.md#module-fed2c4df4559) | part 6 | 11 |
+| <a id="module-71731e539e9a"></a>[ReadingsPersist.lean](../lean-declarations/becoming-core-part-6.md#module-71731e539e9a) | part 6 | 86 |
+| <a id="module-9600a3670185"></a>[ReadingsSpread.lean](../lean-declarations/becoming-core-part-6.md#module-9600a3670185) | part 6 | 60 |
+| <a id="module-0049adde4457"></a>[Readout.lean](../lean-declarations/becoming-core-part-6.md#module-0049adde4457) | part 6 | 21 |
+| <a id="module-5a29db5d7c22"></a>[Reconfiguration.lean](../lean-declarations/becoming-core-part-6.md#module-5a29db5d7c22) | part 6 | 59 |
+| <a id="module-6dd925531afa"></a>[Recurrence.lean](../lean-declarations/becoming-core-part-6.md#module-6dd925531afa) | part 6 | 74 |
+| <a id="module-ecc38510a9c9"></a>[ReferencePlan.lean](../lean-declarations/becoming-core-part-6.md#module-ecc38510a9c9) | part 6 | 55 |
 | <a id="module-79a1789abc49"></a>[ReferencePlanTraces.lean](../lean-declarations/becoming-core-part-6.md#module-79a1789abc49) | part 6 | 55 |
 | <a id="module-764115c55a45"></a>[Refinement.lean](../lean-declarations/becoming-core-part-6.md#module-764115c55a45) | part 6 | 9 |
 | <a id="module-423338402f58"></a>[ReflexivePrediction.lean](../lean-declarations/becoming-core-part-6.md#module-423338402f58) | part 6 | 20 |
@@ -371,16 +372,16 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-8b0687844bea"></a>[Selection.lean](../lean-declarations/becoming-core-part-6.md#module-8b0687844bea) | part 6 | 70 |
 | <a id="module-bff05f8dbe13"></a>[SelectionGap.lean](../lean-declarations/becoming-core-part-6.md#module-bff05f8dbe13) | part 6 | 7 |
 | <a id="module-0babad5be0a3"></a>[SelectionLevels.lean](../lean-declarations/becoming-core-part-6.md#module-0babad5be0a3) | part 6 | 93 |
-| <a id="module-4798dff64094"></a>[SelectionPace.lean](../lean-declarations/becoming-core-part-6.md#module-4798dff64094) | part 6 | 103 |
-| <a id="module-2ab3fe374991"></a>[SelectionPool.lean](../lean-declarations/becoming-core-part-6.md#module-2ab3fe374991) | part 6 | 48 |
-| <a id="module-fbecd7401f01"></a>[SelectionReach.lean](../lean-declarations/becoming-core-part-6.md#module-fbecd7401f01) | part 6 | 18 |
-| <a id="module-2670a1458719"></a>[SelectionRuns.lean](../lean-declarations/becoming-core-part-6.md#module-2670a1458719) | part 6 | 7 |
-| <a id="module-08132097baa5"></a>[SelectionShift.lean](../lean-declarations/becoming-core-part-6.md#module-08132097baa5) | part 6 | 80 |
-| <a id="module-f3d60309aa92"></a>[SelectionTerm.lean](../lean-declarations/becoming-core-part-6.md#module-f3d60309aa92) | part 6 | 62 |
-| <a id="module-4db5dac62437"></a>[Sensitivity.lean](../lean-declarations/becoming-core-part-6.md#module-4db5dac62437) | part 6 | 45 |
-| <a id="module-99ea0db6a80e"></a>[SensitivityWebs.lean](../lean-declarations/becoming-core-part-6.md#module-99ea0db6a80e) | part 6 | 4 |
-| <a id="module-2ab2a78d34aa"></a>[SetPointOptimum.lean](../lean-declarations/becoming-core-part-6.md#module-2ab2a78d34aa) | part 6 | 82 |
-| <a id="module-5a9e57e6d142"></a>[Settling.lean](../lean-declarations/becoming-core-part-6.md#module-5a9e57e6d142) | part 6 | 26 |
+| <a id="module-4798dff64094"></a>[SelectionPace.lean](../lean-declarations/becoming-core-part-7.md#module-4798dff64094) | part 7 | 103 |
+| <a id="module-2ab3fe374991"></a>[SelectionPool.lean](../lean-declarations/becoming-core-part-7.md#module-2ab3fe374991) | part 7 | 48 |
+| <a id="module-fbecd7401f01"></a>[SelectionReach.lean](../lean-declarations/becoming-core-part-7.md#module-fbecd7401f01) | part 7 | 18 |
+| <a id="module-2670a1458719"></a>[SelectionRuns.lean](../lean-declarations/becoming-core-part-7.md#module-2670a1458719) | part 7 | 7 |
+| <a id="module-08132097baa5"></a>[SelectionShift.lean](../lean-declarations/becoming-core-part-7.md#module-08132097baa5) | part 7 | 80 |
+| <a id="module-f3d60309aa92"></a>[SelectionTerm.lean](../lean-declarations/becoming-core-part-7.md#module-f3d60309aa92) | part 7 | 62 |
+| <a id="module-4db5dac62437"></a>[Sensitivity.lean](../lean-declarations/becoming-core-part-7.md#module-4db5dac62437) | part 7 | 45 |
+| <a id="module-99ea0db6a80e"></a>[SensitivityWebs.lean](../lean-declarations/becoming-core-part-7.md#module-99ea0db6a80e) | part 7 | 4 |
+| <a id="module-2ab2a78d34aa"></a>[SetPointOptimum.lean](../lean-declarations/becoming-core-part-7.md#module-2ab2a78d34aa) | part 7 | 82 |
+| <a id="module-5a9e57e6d142"></a>[Settling.lean](../lean-declarations/becoming-core-part-7.md#module-5a9e57e6d142) | part 7 | 26 |
 | <a id="module-c45c59b5d126"></a>[SharedCodes.lean](../lean-declarations/becoming-core-part-7.md#module-c45c59b5d126) | part 7 | 125 |
 | <a id="module-480052fbf3c0"></a>[ShownOrder.lean](../lean-declarations/becoming-core-part-7.md#module-480052fbf3c0) | part 7 | 28 |
 | <a id="module-892ef63d2e69"></a>[Significance.lean](../lean-declarations/becoming-core-part-7.md#module-892ef63d2e69) | part 7 | 33 |
@@ -391,7 +392,7 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-029067cb4dac"></a>[Standing.lean](../lean-declarations/becoming-core-part-7.md#module-029067cb4dac) | part 7 | 44 |
 | <a id="module-79f046756d3a"></a>[Standpoints.lean](../lean-declarations/becoming-core-part-7.md#module-79f046756d3a) | part 7 | 21 |
 | <a id="module-3ccc0c61851a"></a>[Stock.lean](../lean-declarations/becoming-core-part-7.md#module-3ccc0c61851a) | part 7 | 45 |
-| <a id="module-eda8c337a1aa"></a>[StockFlowBridge.lean](../lean-declarations/becoming-core-part-7.md#module-eda8c337a1aa) | part 7 | 54 |
+| <a id="module-eda8c337a1aa"></a>[StockFlowBridge.lean](../lean-declarations/becoming-core-part-7.md#module-eda8c337a1aa) | part 7 | 58 |
 | <a id="module-de00326fb98d"></a>[StrengthFlows.lean](../lean-declarations/becoming-core-part-7.md#module-de00326fb98d) | part 7 | 12 |
 | <a id="module-a425881357d5"></a>[StrictTransport.lean](../lean-declarations/becoming-core-part-7.md#module-a425881357d5) | part 7 | 18 |
 | <a id="module-a41ba2134736"></a>[Stuttering.lean](../lean-declarations/becoming-core-part-7.md#module-a41ba2134736) | part 7 | 75 |
@@ -431,14 +432,14 @@ This group's 417 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-1855e5878d07"></a>[WeightedTraces.lean](../lean-declarations/becoming-core-part-7.md#module-1855e5878d07) | part 7 | 6 |
 | <a id="module-f069f36cfea6"></a>[Weightings.lean](../lean-declarations/becoming-core-part-7.md#module-f069f36cfea6) | part 7 | 387 |
 | <a id="module-a68f505bcda8"></a>[WholeAmounts.lean](../lean-declarations/becoming-core-part-7.md#module-a68f505bcda8) | part 7 | 7 |
-| <a id="module-708cbc7816ed"></a>[Wholes.lean](../lean-declarations/becoming-core-part-7.md#module-708cbc7816ed) | part 7 | 98 |
-| <a id="module-4c62d912982c"></a>[WideningOnTheMap.lean](../lean-declarations/becoming-core-part-7.md#module-4c62d912982c) | part 7 | 43 |
-| <a id="module-a4e5251ffe09"></a>[WindowedWaiting.lean](../lean-declarations/becoming-core-part-7.md#module-a4e5251ffe09) | part 7 | 128 |
-| <a id="module-f047a0ccf338"></a>[Withholding.lean](../lean-declarations/becoming-core-part-7.md#module-f047a0ccf338) | part 7 | 40 |
-| <a id="module-0717096c6252"></a>[WitnessRefinement.lean](../lean-declarations/becoming-core-part-7.md#module-0717096c6252) | part 7 | 44 |
-| <a id="module-14e9a16c1bc9"></a>[WitnessRefinementRuns.lean](../lean-declarations/becoming-core-part-7.md#module-14e9a16c1bc9) | part 7 | 25 |
-| <a id="module-a2a40d448b25"></a>[Witnesses.lean](../lean-declarations/becoming-core-part-7.md#module-a2a40d448b25) | part 7 | 0 |
-| <a id="module-7d8b73829c63"></a>[World.lean](../lean-declarations/becoming-core-part-7.md#module-7d8b73829c63) | part 7 | 2 |
-| <a id="module-9ee3e643d082"></a>[WorldRepresentation.lean](../lean-declarations/becoming-core-part-7.md#module-9ee3e643d082) | part 7 | 34 |
-| <a id="module-bc794121a016"></a>[RelationalRenewal.lean](../lean-declarations/becoming-core-part-7.md#module-bc794121a016) | part 7 | 35 |
-| <a id="module-8f3efb8aecfe"></a>[InquirySufficiency.lean](../lean-declarations/becoming-core-part-7.md#module-8f3efb8aecfe) | part 7 | 16 |
+| <a id="module-708cbc7816ed"></a>[Wholes.lean](../lean-declarations/becoming-core-part-8.md#module-708cbc7816ed) | part 8 | 98 |
+| <a id="module-4c62d912982c"></a>[WideningOnTheMap.lean](../lean-declarations/becoming-core-part-8.md#module-4c62d912982c) | part 8 | 43 |
+| <a id="module-a4e5251ffe09"></a>[WindowedWaiting.lean](../lean-declarations/becoming-core-part-8.md#module-a4e5251ffe09) | part 8 | 128 |
+| <a id="module-f047a0ccf338"></a>[Withholding.lean](../lean-declarations/becoming-core-part-8.md#module-f047a0ccf338) | part 8 | 40 |
+| <a id="module-0717096c6252"></a>[WitnessRefinement.lean](../lean-declarations/becoming-core-part-8.md#module-0717096c6252) | part 8 | 44 |
+| <a id="module-14e9a16c1bc9"></a>[WitnessRefinementRuns.lean](../lean-declarations/becoming-core-part-8.md#module-14e9a16c1bc9) | part 8 | 25 |
+| <a id="module-a2a40d448b25"></a>[Witnesses.lean](../lean-declarations/becoming-core-part-8.md#module-a2a40d448b25) | part 8 | 0 |
+| <a id="module-7d8b73829c63"></a>[World.lean](../lean-declarations/becoming-core-part-8.md#module-7d8b73829c63) | part 8 | 2 |
+| <a id="module-9ee3e643d082"></a>[WorldRepresentation.lean](../lean-declarations/becoming-core-part-8.md#module-9ee3e643d082) | part 8 | 34 |
+| <a id="module-bc794121a016"></a>[RelationalRenewal.lean](../lean-declarations/becoming-core-part-8.md#module-bc794121a016) | part 8 | 35 |
+| <a id="module-8f3efb8aecfe"></a>[InquirySufficiency.lean](../lean-declarations/becoming-core-part-8.md#module-8f3efb8aecfe) | part 8 | 16 |

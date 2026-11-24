@@ -116,7 +116,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261123T181227.411285Z): all 163 audited declarations (107 theorems, 0 private) compile from prelude with core_axioms: []; read-only audit by Verifier A (85624316) PASS."
+    "en": "Machine-checked by Lean 4.29.1 checker (receipt 20261124T112343.843972Z): all 160 audited declarations (105 theorems, 0 private) compile from prelude with core_axioms: []. No person has read it."
   },
   "next_delta": {
     "en": "Bind UnifiedDrawdown SpineHooks directly into L5 AlignmentSpine and its hypothesis-dropping sharpness suite."
@@ -211,7 +211,7 @@
         "Becoming.UnifiedDrawdown.unifiedDrawdown_not_entails",
         "Becoming.UnifiedDrawdown.witnessed_dynamics_not_entails"
       ],
-      "sha256": "4d57d23d65edf367a5e427f6a61b07905ae09e5bae79c06696de7582e750219c"
+      "sha256": "3ad3cc8374fbfe0cc3e0815d2380c6cd7a079687324c4648e5ffe6b083b694b2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T181227.411285Z/verification.json",
@@ -228,12 +228,18 @@
       "role": "receipt",
       "sha256": "edc4bd28767ae27f9f295e5bb8cf0dcfe3c35e3a1f7ec04781814d68ac5c2883",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
+      "role": "receipt",
+      "sha256": "24c3e26a0a0747e31ab6c12d92d46db732c206399146148bfb2fb9ec616d6e1c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnifiedDrawdown.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T112343.843972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.UnifiedDrawdown",
       "success_pointer": "/status",
       "success_value": "passed"
