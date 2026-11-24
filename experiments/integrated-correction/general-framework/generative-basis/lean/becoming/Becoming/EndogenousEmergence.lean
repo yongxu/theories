@@ -1,0 +1,1647 @@
+/-
+AI-written (item12, 2026-11-24).
+`Becoming.EndogenousEmergence` — Constructive 0-axiom `Init`-only prototype resolving the dynamical
+self-concern & perceptual emergence core of `08-METHOD.md` §12 item 12 (with 3-way universal
+impossibility sharpness and explicit `not_entails` firewall) and bridging `Becoming.MasterSpine`
+(`WholeArchitecture` / `WholeBecomingWitness`) to `Becoming.OplaxHistory` and
+`Becoming.DoubleKernel.GuardedProof`.
+
+Promoted from `_process/research/.../item12-endogenous-emergence-2026-11-24/scratch/` (Frontier 1,
+f1-lean-builder, 2026-11-24). On promotion the `assemble` chains (`chiChainProof`,
+`chiChainInvProof`, `chiChainProof_commutes_chiConstFlat`) take a general `OplaxHistory.SpanFunctor`,
+following `DoubleKernel.GuardedExpr.assemble` on `main`; a `SumPreservingFunctor` `S` enters as
+`S.toFunctor`.
+
+Zero incomplete proofs, zero axioms (0 `propext`, 0 `Classical.choice`, 0 `Quot.sound`),
+zero `private` declarations, zero `lemma`s, zero `class`es, zero unnamed `instance`s,
+and zero forbidden economic vocabulary.
+-/
+
+import Becoming.MasterSpine
+import Becoming.EndogenousOrder
+import Becoming.OplaxHistory
+import Becoming.DoubleKernel
+
+namespace Becoming
+
+namespace EndogenousEmergence
+
+open Generative Assurance
+
+/-! ## Section 1: Moore-Machine Unguided Loops & Universal Observational Lockstep (Gate F1) -/
+
+/-- Binary extraction vs. restraint action on a shared substrate. -/
+inductive EmergenceAct : Type where
+  | extract
+  | safe
+
+/-- Coupled substrate and primary-task sensory return world (`xCrit` collapse boundary,
+`stepStock` substrate evolution, and `sense` primary task return). -/
+structure StrainWorld : Type where
+  xCrit : Nat
+  stepStock : Nat → EmergenceAct → Nat
+  sense : Nat → EmergenceAct → Nat
+
+/-- Strict Moore-machine unguided loop reading ONLY its internal state `S` and primary task
+observation `Obs` (zero `t = 0` observation leak, zero raw substrate `x` port, zero `xCrit`
+constant, and zero regime oracle). -/
+structure UnguidedLoop (S Obs Act : Type) : Type where
+  init : S
+  act : S → Act
+  update : S → Obs → S
+
+/-- Closed-loop deterministic step of `(stock, internalState)` under `W` and `L`. -/
+def closedLoopStep {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (st : Nat × S) : Nat × S :=
+  let a := L.act st.2
+  let x' := W.stepStock st.1 a
+  let y := W.sense x' a
+  (x', L.update st.2 y)
+
+/-- Closed-loop trajectory from initial substrate stock `x₀` and `L.init`. -/
+def closedOrbit {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ : Nat) : Nat → Nat × S
+  | 0 => (x₀, L.init)
+  | t + 1 => closedLoopStep W L (closedOrbit W L x₀ t)
+
+/-- Primary task sensory return emitted at step `t` along `closedOrbit`. -/
+def obsAt {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ t : Nat) : Nat :=
+  let st := closedOrbit W L x₀ t
+  let a := L.act st.2
+  W.sense (W.stepStock st.1 a) a
+
+theorem closedOrbit_succ_snd {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ t : Nat) :
+    (closedOrbit W L x₀ (t + 1)).2 = L.update (closedOrbit W L x₀ t).2 (obsAt W L x₀ t) :=
+  rfl
+
+theorem closedOrbit_succ_fst {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ t : Nat) :
+    (closedOrbit W L x₀ (t + 1)).1 =
+      W.stepStock (closedOrbit W L x₀ t).1 (L.act (closedOrbit W L x₀ t).2) :=
+  rfl
+
+/-- `Process` wrapper for `closedLoopStep` to interface directly with `Viability.Kernel` and `OplaxHistory`. -/
+def loopProcess {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct) :
+    Process (Nat × S) Unit :=
+  Assurance.ofMap (fun st _ => closedLoopStep W L st)
+
+/-- Canonical `Run` of `loopProcess W L` starting from `(x₀, L.init)`. -/
+def loopRun {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct) (x₀ : Nat) :
+    Run (loopProcess W L) where
+  state t := closedOrbit W L x₀ t
+  act _ := ()
+  step _ := rfl
+
+/-- Substrate viability guard requiring `W.xCrit ≤ x`. -/
+def viableStockGuard {S : Type} (W : StrainWorld) (st : Nat × S) : Prop :=
+  W.xCrit ≤ st.1
+
+theorem trace_of_orbit_steps {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ : Nat) :
+    ∀ k n : Nat,
+      Trace (loopProcess W L) (closedOrbit W L x₀ k) (List.replicate n ())
+        (closedOrbit W L x₀ (k + n))
+  | k, 0 => by
+    have hz : k + 0 = k := Nat.add_zero k
+    rw [hz]
+    exact .nil _
+  | k, n + 1 => by
+    have hEq : k + (n + 1) = (k + 1) + n :=
+      (congrArg (k + ·) (Nat.add_comm n 1)).trans (Nat.add_assoc k 1 n).symm
+    rw [hEq]
+    exact .cons rfl (trace_of_orbit_steps W L x₀ (k + 1) n)
+
+theorem reach_closedOrbit {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct)
+    (x₀ n : Nat) :
+    Reach (loopProcess W L) (x₀, L.init) (closedOrbit W L x₀ n) := by
+  have hTr := trace_of_orbit_steps W L x₀ 0 n
+  rw [Nat.zero_add] at hTr
+  exact ⟨List.replicate n (), hTr⟩
+
+/-- **Gate F1 — Universal Observational Lockstep (`unguided_obs_lockstep`):**
+For EVERY internal carrier `S` and EVERY `L : UnguidedLoop S Nat EmergenceAct`, if two worlds emit
+equal observations prior to step `T`, `L` occupies the exact same internal state and takes the exact
+same action at step `T`. -/
+theorem unguided_obs_lockstep {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W₁ W₂ : StrainWorld) (x₁ x₂ : Nat) :
+    ∀ T : Nat,
+      (∀ t, t < T → obsAt W₁ L x₁ t = obsAt W₂ L x₂ t) →
+      (closedOrbit W₁ L x₁ T).2 = (closedOrbit W₂ L x₂ T).2 ∧
+      L.act (closedOrbit W₁ L x₁ T).2 = L.act (closedOrbit W₂ L x₂ T).2
+  | 0, _ => ⟨rfl, rfl⟩
+  | T + 1, hObs => by
+    have ih := unguided_obs_lockstep L W₁ W₂ x₁ x₂ T
+      (fun t ht => hObs t (Nat.lt_succ_of_lt ht))
+    have hy : obsAt W₁ L x₁ T = obsAt W₂ L x₂ T := hObs T (Nat.lt_succ_self T)
+    have hs : (closedOrbit W₁ L x₁ (T + 1)).2 = (closedOrbit W₂ L x₂ (T + 1)).2 := by
+      show L.update (closedOrbit W₁ L x₁ T).2 (obsAt W₁ L x₁ T) =
+        L.update (closedOrbit W₂ L x₂ T).2 (obsAt W₂ L x₂ T)
+      rw [ih.1, hy]
+    exact ⟨hs, congrArg L.act hs⟩
+
+/-! ## Section 2: Three-Way Universal Impossibility Theorems Over All `UnguidedLoop`s (Gate F4) -/
+
+/-- Infinite-abundance reference world whose sensory return `plateau a` never varies with stock. -/
+def plateauWorld (plateau : EmergenceAct → Nat) : StrainWorld where
+  xCrit := 0
+  stepStock x _ := x
+  sense _ a := plateau a
+
+/-- **Impossibility 1a — Silent Cliff Universal Lockstep (Drop P1):**
+If `W` has zero pre-collapse sensory strain (`∀ x a, W.xCrit ≤ x → W.sense x a = plateau a`), then
+for EVERY `S` and EVERY `L : UnguidedLoop S Nat EmergenceAct`, as long as post-step stocks up to
+step `T` stay at or above `W.xCrit`, `L`'s internal state, observation, and action match its
+infinite-plateau run step-for-step. -/
+theorem silent_cliff_universal_lockstep {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W : StrainWorld) (plateau : EmergenceAct → Nat) (x₀ : Nat)
+    (hNoStrain : ∀ x a, W.xCrit ≤ x → W.sense x a = plateau a) :
+    ∀ T : Nat,
+      (∀ t, t < T → W.xCrit ≤ (closedOrbit W L x₀ (t + 1)).1) →
+      (closedOrbit W L x₀ T).2 = (closedOrbit (plateauWorld plateau) L x₀ T).2 ∧
+      L.act (closedOrbit W L x₀ T).2 = L.act (closedOrbit (plateauWorld plateau) L x₀ T).2
+  | 0, _ => ⟨rfl, rfl⟩
+  | T + 1, hAbove => by
+    have ih := silent_cliff_universal_lockstep L W plateau x₀ hNoStrain T
+      (fun t ht => hAbove t (Nat.lt_succ_of_lt ht))
+    have hX : W.xCrit ≤ (closedOrbit W L x₀ (T + 1)).1 := hAbove T (Nat.lt_succ_self T)
+    have hObsEq : obsAt W L x₀ T = obsAt (plateauWorld plateau) L x₀ T := by
+      show W.sense (closedOrbit W L x₀ (T + 1)).1 (L.act (closedOrbit W L x₀ T).2) =
+        plateau (L.act (closedOrbit (plateauWorld plateau) L x₀ T).2)
+      rw [hNoStrain _ _ hX, ih.2]
+    have hs : (closedOrbit W L x₀ (T + 1)).2 =
+        (closedOrbit (plateauWorld plateau) L x₀ (T + 1)).2 := by
+      show L.update (closedOrbit W L x₀ T).2 (obsAt W L x₀ T) =
+        L.update (closedOrbit (plateauWorld plateau) L x₀ T).2
+          (obsAt (plateauWorld plateau) L x₀ T)
+      rw [ih.1, hObsEq]
+    exact ⟨hs, congrArg L.act hs⟩
+
+/-- Pure `.extract` stock iteration under `W`. -/
+def pureExtractStock (W : StrainWorld) (x₀ : Nat) : Nat → Nat
+  | 0 => x₀
+  | t + 1 => W.stepStock (pureExtractStock W x₀ t) .extract
+
+theorem closedOrbit_eq_pureExtract_upto {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W : StrainWorld) (plateau : EmergenceAct → Nat) (x₀ : Nat)
+    (hNoStrain : ∀ x a, W.xCrit ≤ x → W.sense x a = plateau a) :
+    ∀ T : Nat,
+      (∀ t, t < T → L.act (closedOrbit (plateauWorld plateau) L x₀ t).2 = .extract) →
+      (∀ t, t + 1 < T → W.xCrit ≤ pureExtractStock W x₀ (t + 1)) →
+      ∀ k, k ≤ T → (closedOrbit W L x₀ k).1 = pureExtractStock W x₀ k
+  | 0, _, _, k, hk => by
+    cases Nat.eq_zero_of_le_zero hk
+    rfl
+  | T + 1, hAct, hSafePrior, k, hk => by
+    have ih := closedOrbit_eq_pureExtract_upto L W plateau x₀ hNoStrain T
+      (fun t ht => hAct t (Nat.lt_succ_of_lt ht))
+      (fun t ht => hSafePrior t (Nat.lt_succ_of_lt ht))
+    cases Nat.lt_or_eq_of_le hk with
+    | inl hlt => exact ih k (Nat.le_of_lt_succ hlt)
+    | inr heq =>
+      subst heq
+      have hSafeT : ∀ t, t < T → W.xCrit ≤ (closedOrbit W L x₀ (t + 1)).1 := by
+        intro t ht
+        rw [ih (t + 1) (Nat.succ_le_of_lt ht)]
+        exact hSafePrior t (Nat.succ_lt_succ ht)
+      have hLockT := silent_cliff_universal_lockstep L W plateau x₀ hNoStrain T hSafeT
+      have hActT : L.act (closedOrbit W L x₀ T).2 = .extract :=
+        hLockT.2.trans (hAct T (Nat.lt_succ_self T))
+      show W.stepStock (closedOrbit W L x₀ T).1 (L.act (closedOrbit W L x₀ T).2) =
+        W.stepStock (pureExtractStock W x₀ T) .extract
+      rw [ih T (Nat.le_refl T), hActT]
+
+theorem closedOrbit_eq_pureExtract_of_plateau {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W : StrainWorld) (plateau : EmergenceAct → Nat) (x₀ : Nat)
+    (hNoStrain : ∀ x a, W.xCrit ≤ x → W.sense x a = plateau a)
+    (T : Nat)
+    (hAct : ∀ t, t < T → L.act (closedOrbit (plateauWorld plateau) L x₀ t).2 = .extract)
+    (hSafePrior : ∀ t, t + 1 < T → W.xCrit ≤ pureExtractStock W x₀ (t + 1)) :
+    (closedOrbit W L x₀ T).1 = pureExtractStock W x₀ T ∧
+    ((∀ t, t < T → W.xCrit ≤ pureExtractStock W x₀ (t + 1)) →
+      (closedOrbit W L x₀ T).2 = (closedOrbit (plateauWorld plateau) L x₀ T).2) := by
+  have hUpto := closedOrbit_eq_pureExtract_upto L W plateau x₀ hNoStrain T hAct hSafePrior
+  refine ⟨hUpto T (Nat.le_refl T), fun hAll => ?_⟩
+  have hSafeAll : ∀ t, t < T → W.xCrit ≤ (closedOrbit W L x₀ (t + 1)).1 := by
+    intro t ht
+    rw [hUpto (t + 1) (Nat.succ_le_of_lt ht)]
+    exact hAll t ht
+  exact (silent_cliff_universal_lockstep L W plateau x₀ hNoStrain T hSafeAll).1
+
+/-- **Impossibility 1b — Silent Cliff Universal Collapse (Drop P1):**
+In any world `W` without pre-collapse sensory strain, EVERY `UnguidedLoop` whose abundant-plateau
+run plays `.extract` through step `T` reaches the exact breached stock `pureExtractStock W x₀ (T + 1) < W.xCrit`,
+refuting `Viability.Kernel` with zero prior sensory warning. -/
+theorem silent_cliff_universal_collapse {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W : StrainWorld) (plateau : EmergenceAct → Nat) (x₀ T : Nat)
+    (hNoStrain : ∀ x a, W.xCrit ≤ x → W.sense x a = plateau a)
+    (hAct : ∀ t, t < T + 1 → L.act (closedOrbit (plateauWorld plateau) L x₀ t).2 = .extract)
+    (hSafeBefore : ∀ t, t < T → W.xCrit ≤ pureExtractStock W x₀ (t + 1))
+    (hCrash : pureExtractStock W x₀ (T + 1) < W.xCrit) :
+    (closedOrbit W L x₀ (T + 1)).1 < W.xCrit ∧
+    (closedOrbit W L x₀ T).2 = (closedOrbit (plateauWorld plateau) L x₀ T).2 ∧
+    ¬ Viability.Kernel (loopProcess W L) (viableStockGuard W) (x₀, L.init) := by
+  have hMain := closedOrbit_eq_pureExtract_of_plateau L W plateau x₀ hNoStrain (T + 1)
+    hAct (fun t ht => hSafeBefore t (Nat.lt_of_succ_lt_succ ht))
+  have hLockT : (closedOrbit W L x₀ T).2 = (closedOrbit (plateauWorld plateau) L x₀ T).2 := by
+    have hSub := closedOrbit_eq_pureExtract_of_plateau L W plateau x₀ hNoStrain T
+      (fun t ht => hAct t (Nat.lt_succ_of_lt ht))
+      (fun t ht => hSafeBefore t (Nat.lt_trans (Nat.lt_succ_self t) ht))
+    exact hSub.2 hSafeBefore
+  have hLt : (closedOrbit W L x₀ (T + 1)).1 < W.xCrit := hMain.1 ▸ hCrash
+  refine ⟨hLt, hLockT, fun hKern => ?_⟩
+  have hGuard := hKern (closedOrbit W L x₀ (T + 1)) (reach_closedOrbit W L x₀ (T + 1))
+  exact Nat.not_le_of_gt hLt hGuard
+
+/-- **Impossibility 2a — Zero-Probe Universal Two-World Indistinguishability (Drop P2):**
+Suppose `W_endo` (action-recoverable substrate) and `W_exo` (action-invariant exogenous decay)
+agree on `.extract` transitions and `.extract` sensory returns (including nonzero strain residuals!).
+Then for EVERY `S` and EVERY `L : UnguidedLoop S Nat EmergenceAct`, as long as `L` has not executed
+a counterfactual `.safe` perturbation (`∀ t < T, act = .extract`), `W_endo` and `W_exo` induce the
+EXACT SAME stock, internal state, and action at step `T`. -/
+theorem zero_probe_endo_exo_indistinguishable {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W_endo W_exo : StrainWorld) (x₀ : Nat)
+    (hExtStep : ∀ x, W_endo.stepStock x .extract = W_exo.stepStock x .extract)
+    (hExtSense : ∀ x, W_endo.sense x .extract = W_exo.sense x .extract) :
+    ∀ T : Nat,
+      (∀ t, t < T → L.act (closedOrbit W_endo L x₀ t).2 = .extract) →
+      closedOrbit W_endo L x₀ T = closedOrbit W_exo L x₀ T ∧
+      L.act (closedOrbit W_endo L x₀ T).2 = L.act (closedOrbit W_exo L x₀ T).2
+  | 0, _ => ⟨rfl, rfl⟩
+  | T + 1, hOnlyExt => by
+    have ih := zero_probe_endo_exo_indistinguishable L W_endo W_exo x₀ hExtStep hExtSense T
+      (fun t ht => hOnlyExt t (Nat.lt_succ_of_lt ht))
+    have hActE : L.act (closedOrbit W_endo L x₀ T).2 = .extract :=
+      hOnlyExt T (Nat.lt_succ_self T)
+    have hStEq : closedOrbit W_endo L x₀ (T + 1) = closedOrbit W_exo L x₀ (T + 1) := by
+      show closedLoopStep W_endo L (closedOrbit W_endo L x₀ T) =
+        closedLoopStep W_exo L (closedOrbit W_exo L x₀ T)
+      dsimp only [closedLoopStep]
+      rw [← ih.1, hActE, hExtStep, hExtSense]
+    exact ⟨hStEq, congrArg (fun p => L.act p.2) hStEq⟩
+
+/-- **Impossibility 2b — Separation Strictly Requires Counterfactual Perturbation (Drop P2):**
+NO `UnguidedLoop` can choose `.safe` at step `T` in `W_endo` while keeping `.extract` at step `T`
+in `W_exo` unless it has ALREADY executed `.safe` at some earlier step `k < T`. -/
+theorem separation_requires_safe_perturbation {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (W_endo W_exo : StrainWorld) (x₀ T : Nat)
+    (hExtStep : ∀ x, W_endo.stepStock x .extract = W_exo.stepStock x .extract)
+    (hExtSense : ∀ x, W_endo.sense x .extract = W_exo.sense x .extract)
+    (hSafeEndo : L.act (closedOrbit W_endo L x₀ T).2 = .safe)
+    (hExtExo : L.act (closedOrbit W_exo L x₀ T).2 = .extract) :
+    ¬ (∀ k, k < T → L.act (closedOrbit W_endo L x₀ k).2 = .extract) := by
+  intro hAllExt
+  have hSame := (zero_probe_endo_exo_indistinguishable L W_endo W_exo x₀
+    hExtStep hExtSense T hAllExt).2
+  have hContra : EmergenceAct.safe = EmergenceAct.extract :=
+    hSafeEndo.symm.trans (hSame.trans hExtExo)
+  exact EmergenceAct.noConfusion hContra
+
+/-! ## Section 3: Concrete Strain Worlds, 1-Probe Insufficiency, & Drop P3 Universal Overshoot -/
+
+def drawOfAct : EmergenceAct → Nat
+  | .extract => 3
+  | .safe => 1
+
+def endoRenew (z : Nat) : Nat :=
+  if 5 ≤ z then 1 else 0
+
+def minNat (a b : Nat) : Nat :=
+  cond (Nat.ble a b) a b
+
+theorem minNat_eq_right_of_ge {a b : Nat} (hge : b ≤ a) : minNat a b = b := by
+  dsimp only [minNat]
+  cases hb : Nat.ble a b with
+  | false => rfl
+  | true => exact Nat.le_antisymm (Nat.le_of_ble_eq_true hb) hge
+
+/-- Calibrated endogenous renewable strain world `wEndo`:
+`xCrit = 6`, `x_plateau = 12`, greedy 1-step return everywhere (`min x 12 + 1 < min x 12 + 4`),
+steady renewal under `.safe` (`x ≥ 6 → stepStock x .safe = x`), and net drain `2`/step under
+`.extract` while `x ≥ 8`. -/
+def wEndo : StrainWorld where
+  xCrit := 6
+  stepStock x a :=
+    if Nat.blt x 6 then 0
+    else
+      let rem := x - drawOfAct a
+      rem + endoRenew rem
+  sense x a :=
+    match a with
+    | .extract => minNat x 12 + 4
+    | .safe => minNat x 12 + 1
+
+/-- Exogenous autonomous-decay world `wExo`: identical `xCrit`, identical `.extract` dynamics, and
+identical `sense` to `wEndo`, except `stepStock x .safe` ALSO drops by `2` (`x - 2`) regardless of
+restraint! -/
+def wExo : StrainWorld where
+  xCrit := 6
+  stepStock x a :=
+    if Nat.blt x 6 then 0
+    else
+      match a with
+      | .extract =>
+        let rem := x - 3
+        rem + endoRenew rem
+      | .safe => x - 2
+  sense := wEndo.sense
+
+/-- Shifted exogenous world `wExoShift`: matches `wEndo` on `.extract` AND emits `11` on the first
+`.safe` probe step at `x = 8` (`min 8 12 + 3 = 11`), while still strictly greedy everywhere
+(`min x 12 + 3 < min x 12 + 4`)! -/
+def wExoShift : StrainWorld where
+  xCrit := 6
+  stepStock := wExo.stepStock
+  sense x a :=
+    match a with
+    | .extract => minNat x 12 + 4
+    | .safe => minNat x 12 + 3
+
+/-- Silent-cliff world `wCliff` (Drop P1 witness): identical `stepStock` and `xCrit = 6` to `wEndo`,
+but constant plateau sensory return `16` / `13` for all `x ≥ 6`. -/
+def wCliff : StrainWorld where
+  xCrit := 6
+  stepStock := wEndo.stepStock
+  sense x a :=
+    if Nat.blt x 6 then 0
+    else
+      match a with
+      | .extract => 16
+      | .safe => 13
+
+/-- Thin-strain-band world `wThinStrain` (Drop P3 witness): `xCrit = 6`, `x_plateau = 7`.
+Pre-collapse strain (P1) holds strictly at `x = 6` (`sense 6 .extract = 10 < 11 = sense 7 .extract`),
+yet from `x₀ = 13` `.extract` steps `13 → 11 → 9 → 7 → 4 < 6`, overshooting `[6, 7)` in one step! -/
+def wThinStrain : StrainWorld where
+  xCrit := 6
+  stepStock := wEndo.stepStock
+  sense x a :=
+    match a with
+    | .extract => minNat x 7 + 4
+    | .safe => minNat x 7 + 1
+
+/-- **Gate F2 Verification (`wEndo_strictly_greedy_everywhere`):**
+At EVERY stock level `x : Nat` (both above and inside the strain band!), immediate 1-step sensory
+return strictly favours `.extract` over `.safe` across `wEndo`, `wExo`, `wExoShift`, and `wThinStrain`. -/
+theorem worlds_strictly_greedy_everywhere (x : Nat) :
+    wEndo.sense x .safe < wEndo.sense x .extract ∧
+    wExo.sense x .safe < wExo.sense x .extract ∧
+    wExoShift.sense x .safe < wExoShift.sense x .extract ∧
+    wThinStrain.sense x .safe < wThinStrain.sense x .extract := by
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · show minNat x 12 + 1 < minNat x 12 + 4
+    exact Nat.add_lt_add_left (by decide : 1 < 4) _
+  · show minNat x 12 + 1 < minNat x 12 + 4
+    exact Nat.add_lt_add_left (by decide : 1 < 4) _
+  · show minNat x 12 + 3 < minNat x 12 + 4
+    exact Nat.add_lt_add_left (by decide : 3 < 4) _
+  · show minNat x 7 + 1 < minNat x 7 + 4
+    exact Nat.add_lt_add_left (by decide : 1 < 4) _
+
+theorem wEndo_wExo_agree_on_extract (x : Nat) :
+    wEndo.stepStock x .extract = wExo.stepStock x .extract ∧
+    wEndo.sense x .extract = wExo.sense x .extract ∧
+    wEndo.stepStock x .extract = wExoShift.stepStock x .extract ∧
+    wEndo.sense x .extract = wExoShift.sense x .extract :=
+  ⟨rfl, rfl, rfl, rfl⟩
+
+theorem wEndo_safe_preserves_stock {x : Nat} (hge : 6 ≤ x) :
+    wEndo.stepStock x .safe = x := by
+  dsimp only [wEndo, drawOfAct, endoRenew]
+  have hNotLt : Nat.blt x 6 = false :=
+    ListTests.false_iff_not.mpr (fun h => Nat.not_le_of_gt (CoreHelpers.natBlt_true_iff.mp h) hge)
+  rw [hNotLt]
+  show (if false = true then 0 else (x - 1) + (if 5 ≤ x - 1 then 1 else 0)) = x
+  rw [if_neg Bool.false_ne_true]
+  have h5 : 5 ≤ x - 1 := Naturals.le_sub_of_add_le hge
+  rw [if_pos h5]
+  exact Naturals.sub_add_cancel (Nat.le_trans (by decide : 1 ≤ 6) hge)
+
+/-- **1-Step Probe Universal Insufficiency (`one_probe_universal_insufficiency`):**
+For EVERY `S` and EVERY `L : UnguidedLoop S Nat EmergenceAct` that plays `.extract` at `t = 0, 1`
+(observing residual `14 ≠ 16`) and probes `.safe` for ONE step at `t = 2`, `wEndo` and `wExoShift`
+emit the EXACT SAME 3-step observation trace `[16, 14, 11]`, leaving `L` in the exact same internal
+state and action at `t = 3`! Hence the 2-step trend probe (`y_safe2 ≥ y_safe1`) is minimal. -/
+theorem one_probe_universal_insufficiency {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (h0 : L.act (closedOrbit wEndo L 14 0).2 = .extract)
+    (h1 : L.act (closedOrbit wEndo L 14 1).2 = .extract)
+    (h2 : L.act (closedOrbit wEndo L 14 2).2 = .safe) :
+    obsAt wEndo L 14 0 = 16 ∧ obsAt wExoShift L 14 0 = 16 ∧
+    obsAt wEndo L 14 1 = 14 ∧ obsAt wExoShift L 14 1 = 14 ∧
+    obsAt wEndo L 14 2 = 11 ∧ obsAt wExoShift L 14 2 = 11 ∧
+    (closedOrbit wEndo L 14 3).2 = (closedOrbit wExoShift L 14 3).2 ∧
+    L.act (closedOrbit wEndo L 14 3).2 = L.act (closedOrbit wExoShift L 14 3).2 := by
+  have hLock2 := zero_probe_endo_exo_indistinguishable L wEndo wExoShift 14
+    (fun _ => rfl) (fun _ => rfl) 2 (fun t ht => by
+      match t with
+      | 0 => exact h0
+      | 1 => exact h1
+      | n + 2 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 2 n)))
+  have hLock1 := zero_probe_endo_exo_indistinguishable L wEndo wExoShift 14
+    (fun _ => rfl) (fun _ => rfl) 1 (fun t ht => by
+      match t with
+      | 0 => exact h0
+      | n + 1 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 1 n)))
+  have h0_init : L.act L.init = .extract := h0
+  have hx1_e : (closedOrbit wEndo L 14 1).1 = 12 := by
+    show wEndo.stepStock 14 (L.act L.init) = 12
+    rw [h0_init]; rfl
+  have hx2_e : (closedOrbit wEndo L 14 2).1 = 10 := by
+    show wEndo.stepStock (closedOrbit wEndo L 14 1).1 (L.act (closedOrbit wEndo L 14 1).2) = 10
+    rw [hx1_e, h1]; rfl
+  have hx1_x : (closedOrbit wExoShift L 14 1).1 = 12 := (congrArg Prod.fst hLock1.1).symm.trans hx1_e
+  have hx2_x : (closedOrbit wExoShift L 14 2).1 = 10 := (congrArg Prod.fst hLock2.1).symm.trans hx2_e
+  have h2_x : L.act (closedOrbit wExoShift L 14 2).2 = .safe := hLock2.2.symm.trans h2
+  have hy0_e : obsAt wEndo L 14 0 = 16 := by dsimp only [obsAt]; rw [h0]; rfl
+  have hy0_x : obsAt wExoShift L 14 0 = 16 := by
+    show wExoShift.sense (wExoShift.stepStock 14 (L.act L.init)) (L.act L.init) = 16
+    rw [h0_init]; rfl
+  have hy1_e : obsAt wEndo L 14 1 = 14 := by dsimp only [obsAt]; rw [hx1_e, h1]; rfl
+  have hy1_x : obsAt wExoShift L 14 1 = 14 := by
+    have h1_x : L.act (closedOrbit wExoShift L 14 1).2 = .extract := hLock1.2.symm.trans h1
+    dsimp only [obsAt]; rw [hx1_x, h1_x]; rfl
+  have hy2_e : obsAt wEndo L 14 2 = 11 := by dsimp only [obsAt]; rw [hx2_e, h2]; rfl
+  have hy2_x : obsAt wExoShift L 14 2 = 11 := by dsimp only [obsAt]; rw [hx2_x, h2_x]; rfl
+  have hLock3 := unguided_obs_lockstep L wEndo wExoShift 14 14 3 (fun t ht => by
+    match t with
+    | 0 => exact hy0_e.trans hy0_x.symm
+    | 1 => exact hy1_e.trans hy1_x.symm
+    | 2 => exact hy2_e.trans hy2_x.symm
+    | n + 3 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 3 n)))
+  exact ⟨hy0_e, hy0_x, hy1_e, hy1_x, hy2_e, hy2_x, hLock3.1, hLock3.2⟩
+
+/-- **Impossibility 3 — Universal Thin-Strain-Band Overshoot (Drop P3):**
+In `wThinStrain`, pre-collapse strain P1 holds strictly at `x = 6` (`sense 6 .extract = 10 < 11`),
+yet from `x₀ = 13`, EVERY `UnguidedLoop` that extracts on the constant-`11` plateau steps
+`13 → 11 → 9 → 7 → 4 < 6`, overshooting the entire strain band in 1 step and refuting `Viability.Kernel`. -/
+theorem thin_strain_band_universal_collapse {S : Type} (L : UnguidedLoop S Nat EmergenceAct)
+    (hAct : ∀ t, t < 4 → L.act
+      (closedOrbit (plateauWorld (fun a => match a with | .extract => 11 | .safe => 8)) L 13 t).2 = .extract) :
+    (wThinStrain.xCrit ≤ 6 ∧ wThinStrain.sense 6 .extract < wThinStrain.sense 7 .extract) ∧
+    (closedOrbit wThinStrain L 13 4).1 = 4 ∧
+    (closedOrbit wThinStrain L 13 3).2 =
+      (closedOrbit (plateauWorld (fun a => match a with | .extract => 11 | .safe => 8)) L 13 3).2 ∧
+    ¬ Viability.Kernel (loopProcess wThinStrain L) (viableStockGuard wThinStrain) (13, L.init) := by
+  let plat : EmergenceAct → Nat := fun a => match a with | .extract => 11 | .safe => 8
+  have hNoStrainAbove7 : ∀ x a, 7 ≤ x → wThinStrain.sense x a = plat a := by
+    intro x a h7
+    cases a with
+    | extract =>
+      show minNat x 7 + 4 = 11
+      rw [minNat_eq_right_of_ge h7]
+    | safe =>
+      show minNat x 7 + 1 = 8
+      rw [minNat_eq_right_of_ge h7]
+  let wAux : StrainWorld := ⟨7, wThinStrain.stepStock, wThinStrain.sense⟩
+  have hMain := closedOrbit_eq_pureExtract_of_plateau L wAux plat 13 hNoStrainAbove7 4 hAct
+    (fun t ht => by
+      match t with
+      | 0 => exact by decide
+      | 1 => exact by decide
+      | 2 => exact by decide
+      | n + 3 => exact absurd ht (Nat.not_lt_of_ge (Nat.succ_le_succ (Nat.le_add_left 3 n))))
+  have hSub3 := closedOrbit_eq_pureExtract_of_plateau L wAux plat 13 hNoStrainAbove7 3
+    (fun t ht => hAct t (Nat.lt_succ_of_lt ht))
+    (fun t ht => by
+      match t with
+      | 0 => exact by decide
+      | 1 => exact by decide
+      | n + 2 => exact absurd ht (Nat.not_lt_of_ge (Nat.succ_le_succ (Nat.le_add_left 2 n))))
+  have hSafe3 : ∀ t, t < 3 → 7 ≤ pureExtractStock wAux 13 (t + 1) := by
+    intro t ht
+    match t with
+    | 0 => exact by decide
+    | 1 => exact by decide
+    | 2 => exact by decide
+    | n + 3 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 3 n))
+  have hOrbEq : ∀ n, closedOrbit wThinStrain L 13 n = closedOrbit wAux L 13 n := by
+    intro n
+    induction n with
+    | zero => rfl
+    | succ m ih => exact congrArg (closedLoopStep wThinStrain L) ih
+  have hFst4 : (closedOrbit wThinStrain L 13 4).1 = 4 := by
+    rw [hOrbEq 4, hMain.1]; rfl
+  have hSnd3 : (closedOrbit wThinStrain L 13 3).2 = (closedOrbit (plateauWorld plat) L 13 3).2 := by
+    rw [hOrbEq 3]; exact hSub3.2 hSafe3
+  refine ⟨⟨Nat.le_refl 6, by decide⟩, hFst4, hSnd3, fun hKern => ?_⟩
+  have hGuard := hKern (closedOrbit wThinStrain L 13 4) (reach_closedOrbit wThinStrain L 13 4)
+  change 6 ≤ (closedOrbit wThinStrain L 13 4).1 at hGuard
+  rw [hFst4] at hGuard
+  exact absurd hGuard (by decide)
+
+/-! ## Section 4: Unguided Residual-Splitting + Live `OrderUpdater` Sufficiency & Firewall (Gates F2, F3, F5) -/
+
+/-- Course-evaluation items: immediate task output, latent substrate-sustained continuation, and an
+uncoupled one-way downstream dependent whose loss never returns to the agent's sensory channel. -/
+inductive EmergenceItem : Type where
+  | immYield
+  | sustainedContinuation
+  | downstreamDependent
+
+def emergenceItems : List EmergenceItem :=
+  [.immYield, .sustainedContinuation, .downstreamDependent]
+
+def mem_emergenceItems : ∀ x : EmergenceItem, x ∈ emergenceItems
+  | .immYield => .head _
+  | .sustainedContinuation => .tail _ (.head _)
+  | .downstreamDependent => .tail _ (.tail _ (.head _))
+
+/-- Extractive course profile: keeps immediate output, forfeits sustained continuation and downstream. -/
+def cExt : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => false
+  | .downstreamDependent => false
+
+/-- Restrained course profile: keeps immediate baseline output AND sustained continuation (`WidensBy`
+over `cExt`), while leaving one-way downstream dependent unaddressed. -/
+def cSafe : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => true
+  | .downstreamDependent => false
+
+/-- Full-restraint course profile also preserving the one-way downstream dependent (`WidensBy` over `cSafe`). -/
+def cFull : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => true
+  | .downstreamDependent => true
+
+theorem cSafe_widensBy_cExt :
+    Weighting.WidensBy emergenceItems .sustainedContinuation cSafe cExt := by
+  refine ⟨fun x _ hx => ?_, .tail _ (.head _), rfl, rfl, fun y _ hy1 hy2 => ?_⟩
+  · cases x with
+    | immYield => rfl
+    | sustainedContinuation => exact Bool.noConfusion hx
+    | downstreamDependent => exact Bool.noConfusion hx
+  · cases y with
+    | immYield => exact Bool.noConfusion hy2
+    | sustainedContinuation => rfl
+    | downstreamDependent => exact Bool.noConfusion hy1
+
+theorem cFull_widensBy_cSafe :
+    Weighting.WidensBy emergenceItems .downstreamDependent cFull cSafe := by
+  refine ⟨fun x _ hx => ?_, .tail _ (.tail _ (.head _)), rfl, rfl, fun y _ hy1 hy2 => ?_⟩
+  · cases x with
+    | immYield => rfl
+    | sustainedContinuation => rfl
+    | downstreamDependent => exact Bool.noConfusion hx
+  · cases y with
+    | immYield => exact Bool.noConfusion hy2
+    | sustainedContinuation => exact Bool.noConfusion hy2
+    | downstreamDependent => rfl
+
+/-- Initial positive weights: ONLY `.immYield` has initial weight `2`; both `.sustainedContinuation`
+and `.downstreamDependent` begin at `0`. -/
+def emergenceInitPos : EmergenceItem → Nat
+  | .immYield => 2
+  | .sustainedContinuation => 0
+  | .downstreamDependent => 0
+
+/-- Opposing short-term sacrifice baseline: sustaining substrate requires giving up short-term
+extraction advantage (`base = 1`), so at `t = 0`, `0 < 1` strictly ranks `cExt` above `cSafe`! -/
+def emergenceBase : EmergenceItem → Nat
+  | .immYield => 0
+  | .sustainedContinuation => 1
+  | .downstreamDependent => 0
+
+/-- Initial internal scope marking `ownHat₀`: counts ONLY `.immYield` (`ownHat₀ .sustainedContinuation = false`). -/
+def emergenceInitOwnHat : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => false
+  | .downstreamDependent => false
+
+/-- Objective causal-return coupling of `wEndo` vs `wExo` (NEVER passed to `emergentLoop`!). -/
+def worldOwnEndo : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => true
+  | .downstreamDependent => false
+
+def worldOwnExo : EmergenceItem → Bool
+  | .immYield => true
+  | .sustainedContinuation => false
+  | .downstreamDependent => false
+
+/-- Canonical `EndogenousOrder.OrderUpdater` parameterized by the world's objective causal-return set. -/
+def emergenceUpdater (worldOwn : EmergenceItem → Bool) :
+    EndogenousOrder.OrderUpdater EmergenceItem where
+  items := emergenceItems
+  own := worldOwn
+  initPos := emergenceInitPos
+  base := emergenceBase
+  stepGain := 2
+
+/-- Internal perceptual equivalence-class phase (ZERO `recovered : Bool` flag — action choice in both
+`.coarse` and `.resolved` is governed exclusively by `selectByOrder s.pos`!). -/
+inductive LearnerPhase : Type where
+  | coarse (baselineExt : Option Nat)
+  | probingSafe (yStrain : Nat)
+  | probingVerify (yStrain ySafe1 : Nat)
+  | resolved
+
+/-- Full `Obs`-driven internal state of `emergentLoop`. -/
+structure LearnerState : Type where
+  phase : LearnerPhase
+  pos : EmergenceItem → Nat
+  ownHat : EmergenceItem → Bool
+
+/-- Decidable action selection directly from `Weighting.ranksNet` (`OrderUpdater` comparison of
+`cSafe` vs `cExt`, with zero sidecar flags). -/
+def selectByOrder (pos : EmergenceItem → Nat) : EmergenceAct :=
+  if Nat.blt
+      (Weighting.weighed emergenceItems pos cExt + Weighting.weighed emergenceItems emergenceBase cSafe)
+      (Weighting.weighed emergenceItems pos cSafe + Weighting.weighed emergenceItems emergenceBase cExt)
+  then .safe else .extract
+
+theorem selectByOrder_safe_iff (pos : EmergenceItem → Nat) :
+    selectByOrder pos = .safe ↔
+      Weighting.ranksNet emergenceItems pos emergenceBase cExt cSafe := by
+  dsimp only [selectByOrder, Weighting.ranksNet]
+  cases h : Nat.blt
+      (Weighting.weighed emergenceItems pos cExt + Weighting.weighed emergenceItems emergenceBase cSafe)
+      (Weighting.weighed emergenceItems pos cSafe + Weighting.weighed emergenceItems emergenceBase cExt) with
+  | true =>
+    exact ⟨fun _ => CoreHelpers.natBlt_true_iff.mp h, fun _ => rfl⟩
+  | false =>
+    exact ⟨fun hEq => EmergenceAct.noConfusion hEq,
+      fun hLt => Bool.noConfusion (h.symm.trans (CoreHelpers.natBlt_true_iff.mpr hLt))⟩
+
+/-- Endogenous temporal-attribution pulse computed purely from `(s.phase, y)`: fires onto
+`.sustainedContinuation` iff the 2-step counterfactual `.safe` perturbation halts downward sensory
+drift (`ySafe1 ≤ y`). -/
+def emergentPulse (s : LearnerState) (y : Nat) : EmergenceItem → Bool
+  | .sustainedContinuation =>
+    match s.phase with
+    | .probingVerify _ ySafe1 => Nat.ble ySafe1 y
+    | .coarse _ | .probingSafe _ | .resolved => false
+  | .immYield => false
+  | .downstreamDependent => false
+
+/-- Phase update triggered strictly by stationary right-determinism residual `y ≠ baseY`. -/
+def nextPhase (ph : LearnerPhase) (actTaken : EmergenceAct) (y : Nat) : LearnerPhase :=
+  match ph with
+  | .coarse none =>
+    match actTaken with
+    | .extract => .coarse (some y)
+    | .safe => .coarse none
+  | .coarse (some baseY) =>
+    match actTaken with
+    | .extract => if Nat.beq y baseY then .coarse (some baseY) else .probingSafe y
+    | .safe => .coarse (some baseY)
+  | .probingSafe yStrain => .probingVerify yStrain y
+  | .probingVerify _ _ => .resolved
+  | .resolved => .resolved
+
+def emergentAct (s : LearnerState) : EmergenceAct :=
+  match s.phase with
+  | .probingSafe _ | .probingVerify _ _ => .safe
+  | .coarse _ | .resolved => selectByOrder s.pos
+
+/-- The unguided Moore-machine learner: reads ONLY `y : Nat`, stores NO thresholds or world parameters,
+and selects actions in `.coarse` and `.resolved` strictly via `selectByOrder s.pos`. -/
+def emergentLoop : UnguidedLoop LearnerState Nat EmergenceAct where
+  init :=
+    { phase := .coarse none
+      pos := emergenceInitPos
+      ownHat := emergenceInitOwnHat }
+  act := emergentAct
+  update s y :=
+    { phase := nextPhase s.phase (emergentAct s) y
+      pos := fun i => s.pos i + cond (emergentPulse s y i) 2 0
+      ownHat := fun i => s.ownHat i || emergentPulse s y i }
+
+/-- Endogenous pulse trace induced along `closedOrbit W emergentLoop x₀`. -/
+def endogFeedback (W : StrainWorld) (x₀ t : Nat) (i : EmergenceItem) : Bool :=
+  emergentPulse (closedOrbit W emergentLoop x₀ t).2 (obsAt W emergentLoop x₀ t) i
+
+/-- **Exact Internal-to-`OrderUpdater` Lockstep (`emergent_pos_eq_orderUpdater`):**
+At every step `t : Nat` in ANY `StrainWorld`, `emergentLoop`'s live internal weight `s.pos` equals
+`(emergenceUpdater worldOwn).posAt (endogFeedback W x₀) t` identically! -/
+theorem emergent_pos_eq_orderUpdater (W : StrainWorld) (x₀ : Nat)
+    (worldOwn : EmergenceItem → Bool) :
+    ∀ (t : Nat) (i : EmergenceItem),
+      (closedOrbit W emergentLoop x₀ t).2.pos i =
+        (emergenceUpdater worldOwn).posAt (endogFeedback W x₀) t i
+  | 0, _ => rfl
+  | t + 1, i => by
+    show (closedOrbit W emergentLoop x₀ t).2.pos i + cond (endogFeedback W x₀ t i) 2 0 =
+      (emergenceUpdater worldOwn).posAt (endogFeedback W x₀) t i +
+        cond (endogFeedback W x₀ t i) 2 0
+    rw [emergent_pos_eq_orderUpdater W x₀ worldOwn t i]
+
+/-- In `.coarse` and `.resolved`, `emergentLoop` chooses `.safe` IF AND ONLY IF `OrderUpdater.ranksAt`
+strictly ranks `cSafe` above `cExt`! -/
+theorem emergent_act_governed_by_orderUpdater (W : StrainWorld) (x₀ t : Nat)
+    (worldOwn : EmergenceItem → Bool)
+    (hNonProbe : (∃ b, (closedOrbit W emergentLoop x₀ t).2.phase = .coarse b) ∨
+      (closedOrbit W emergentLoop x₀ t).2.phase = .resolved) :
+    emergentLoop.act (closedOrbit W emergentLoop x₀ t).2 = .safe ↔
+      (emergenceUpdater worldOwn).ranksAt (endogFeedback W x₀) t cExt cSafe := by
+  have hPosFun : ∀ c : EmergenceItem → Bool,
+      Weighting.weighed emergenceItems (closedOrbit W emergentLoop x₀ t).2.pos c =
+        Weighting.weighed emergenceItems ((emergenceUpdater worldOwn).posAt (endogFeedback W x₀) t) c :=
+    fun c => total_congr (fun i => by
+      show cond (c i) ((closedOrbit W emergentLoop x₀ t).2.pos i) 0 =
+        cond (c i) ((emergenceUpdater worldOwn).posAt (endogFeedback W x₀) t i) 0
+      rw [emergent_pos_eq_orderUpdater W x₀ worldOwn t i]) emergenceItems
+  have hActEq : emergentLoop.act (closedOrbit W emergentLoop x₀ t).2 =
+      selectByOrder (closedOrbit W emergentLoop x₀ t).2.pos := by
+    show emergentAct (closedOrbit W emergentLoop x₀ t).2 =
+      selectByOrder (closedOrbit W emergentLoop x₀ t).2.pos
+    cases hNonProbe with
+    | inl hc => obtain ⟨b, hb⟩ := hc; dsimp only [emergentAct]; rw [hb]
+    | inr hr => dsimp only [emergentAct]; rw [hr]
+  rw [hActEq]
+  refine (selectByOrder_safe_iff _).trans ?_
+  dsimp only [EndogenousOrder.OrderUpdater.ranksAt, emergenceUpdater, Weighting.ranksNet]
+  rw [hPosFun cExt, hPosFun cSafe]
+  exact ⟨fun h => h, fun h => h⟩
+
+/-- Concrete post-turn weight profile reached at `t = 4` in `wEndo`. -/
+def endoPostPos : EmergenceItem → Nat
+  | .immYield => 2
+  | .sustainedContinuation => 2
+  | .downstreamDependent => 0
+
+def endoResolvedState : LearnerState where
+  phase := .resolved
+  pos := endoPostPos
+  ownHat := worldOwnEndo
+
+theorem endoResolved_pos_eq : ∀ i, (closedOrbit wEndo emergentLoop 14 4).2.pos i = endoPostPos i
+  | .immYield => rfl
+  | .sustainedContinuation => rfl
+  | .downstreamDependent => rfl
+
+theorem endoResolved_ownHat_eq :
+    ∀ i, (closedOrbit wEndo emergentLoop 14 4).2.ownHat i = worldOwnEndo i
+  | .immYield => rfl
+  | .sustainedContinuation => rfl
+  | .downstreamDependent => rfl
+
+theorem selectByOrder_endoPost : selectByOrder endoPostPos = .safe := rfl
+
+theorem selectByOrder_initPos : selectByOrder emergenceInitPos = .extract := rfl
+
+theorem wEndo_orbit_stabilizes :
+    ∀ k : Nat,
+      (closedOrbit wEndo emergentLoop 14 (4 + k)).1 = 10 ∧
+      (closedOrbit wEndo emergentLoop 14 (4 + k)).2.phase = .resolved ∧
+      (∀ i, (closedOrbit wEndo emergentLoop 14 (4 + k)).2.pos i = endoPostPos i) ∧
+      (∀ i, (closedOrbit wEndo emergentLoop 14 (4 + k)).2.ownHat i = worldOwnEndo i)
+  | 0 => ⟨rfl, rfl, endoResolved_pos_eq, endoResolved_ownHat_eq⟩
+  | k + 1 => by
+    obtain ⟨hx, hph, hpos, hown⟩ := wEndo_orbit_stabilizes k
+    have hWeighedExt : Weighting.weighed emergenceItems
+        (closedOrbit wEndo emergentLoop 14 (4 + k)).2.pos cExt =
+        Weighting.weighed emergenceItems endoPostPos cExt :=
+      total_congr (fun i => by
+        show cond (cExt i) _ 0 = cond (cExt i) _ 0
+        rw [hpos i]) emergenceItems
+    have hWeighedSafe : Weighting.weighed emergenceItems
+        (closedOrbit wEndo emergentLoop 14 (4 + k)).2.pos cSafe =
+        Weighting.weighed emergenceItems endoPostPos cSafe :=
+      total_congr (fun i => by
+        show cond (cSafe i) _ 0 = cond (cSafe i) _ 0
+        rw [hpos i]) emergenceItems
+    have hSel : selectByOrder (closedOrbit wEndo emergentLoop 14 (4 + k)).2.pos = .safe := by
+      dsimp only [selectByOrder]
+      rw [hWeighedExt, hWeighedSafe]
+      rfl
+    have hAct : emergentLoop.act (closedOrbit wEndo emergentLoop 14 (4 + k)).2 = .safe := by
+      show emergentAct (closedOrbit wEndo emergentLoop 14 (4 + k)).2 = .safe
+      dsimp only [emergentAct]; rw [hph, hSel]
+    have hx' : (closedOrbit wEndo emergentLoop 14 ((4 + k) + 1)).1 = 10 := by
+      show wEndo.stepStock (closedOrbit wEndo emergentLoop 14 (4 + k)).1
+        (emergentLoop.act (closedOrbit wEndo emergentLoop 14 (4 + k)).2) = 10
+      rw [hx, hAct]; rfl
+    have hPulseFalse : ∀ i, emergentPulse (closedOrbit wEndo emergentLoop 14 (4 + k)).2
+        (obsAt wEndo emergentLoop 14 (4 + k)) i = false := by
+      intro i; cases i <;> dsimp only [emergentPulse]
+      rw [hph]
+    have hph' : (closedOrbit wEndo emergentLoop 14 ((4 + k) + 1)).2.phase = .resolved := by
+      show nextPhase (closedOrbit wEndo emergentLoop 14 (4 + k)).2.phase _ _ = .resolved
+      rw [hph]; rfl
+    have hpos' : ∀ i, (closedOrbit wEndo emergentLoop 14 ((4 + k) + 1)).2.pos i = endoPostPos i := by
+      intro i
+      show (closedOrbit wEndo emergentLoop 14 (4 + k)).2.pos i +
+        cond (emergentPulse (closedOrbit wEndo emergentLoop 14 (4 + k)).2
+          (obsAt wEndo emergentLoop 14 (4 + k)) i) 2 0 = endoPostPos i
+      rw [hPulseFalse i, hpos i]; rfl
+    have hown' : ∀ i, (closedOrbit wEndo emergentLoop 14 ((4 + k) + 1)).2.ownHat i = worldOwnEndo i := by
+      intro i
+      show ((closedOrbit wEndo emergentLoop 14 (4 + k)).2.ownHat i ||
+        emergentPulse (closedOrbit wEndo emergentLoop 14 (4 + k)).2
+          (obsAt wEndo emergentLoop 14 (4 + k)) i) = worldOwnEndo i
+      rw [hPulseFalse i, Bool.or_false, hown i]
+    exact ⟨hx', hph', hpos', hown'⟩
+
+theorem wEndo_orbit_above_crit :
+    ∀ t : Nat, 6 ≤ (closedOrbit wEndo emergentLoop 14 t).1
+  | 0 => by decide
+  | 1 => by decide
+  | 2 => by decide
+  | 3 => by decide
+  | k + 4 => by
+    have heq : k + 4 = 4 + k := Nat.add_comm k 4
+    rw [heq, (wEndo_orbit_stabilizes k).1]
+    exact by decide
+
+theorem reach_eq_orbit {S : Type} (W : StrainWorld) (L : UnguidedLoop S Nat EmergenceAct) :
+    ∀ (w : List Unit) {st₀ st' : Nat × S},
+      Trace (loopProcess W L) st₀ w st' →
+      ∀ k x₀, st₀ = closedOrbit W L x₀ k →
+      st' = closedOrbit W L x₀ (k + w.length)
+  | [], _, _, hNil, k, x₀, hEq => by
+    have h0 := (trace_nil_iff.mp hNil).symm
+    rw [List.length_nil, Nat.add_zero]
+    exact h0.trans hEq
+  | _ :: ws, st₀, st', hCons, k, x₀, hEq => by
+    obtain ⟨stMid, hStep, hTail⟩ := trace_cons_iff.mp hCons
+    have hStep' : stMid = closedOrbit W L x₀ (k + 1) := by
+      have hs : stMid = closedLoopStep W L st₀ := hStep
+      rw [hEq] at hs
+      exact hs
+    have ih := reach_eq_orbit W L ws hTail (k + 1) x₀ hStep'
+    have hArith : (k + 1) + ws.length = k + (ws.length + 1) :=
+      (Nat.add_assoc k 1 ws.length).trans (congrArg (k + ·) (Nat.add_comm 1 ws.length))
+    exact ih.trans (congrArg (closedOrbit W L x₀) hArith)
+
+/-- **Constructive Endogenous Emergence Sufficiency (`endogenous_emergence_sufficiency`):**
+Starting from `x₀ = 14` with ZERO oracle alarm, ZERO `xCrit` constant, ZERO initial weight on
+`.sustainedContinuation` (`initPos = 0 < 1 = base`), `ownHat₀ .sustainedContinuation = false`,
+and a strictly greedy 1-step sensory landscape everywhere:
+1. At `t = 0`, `OrderUpdater` strictly ranks `cExt` above `cSafe` (`ranksAt 0 cSafe cExt`), selecting `.extract`;
+2. At `t = 1`, stationary right-determinism breaks (`14 ≠ 16`), splitting `.coarse (some 16) → .probingSafe 14`;
+3. At `t = 2, 3`, the 2-step counterfactual `.safe` perturbation observes `11 ≤ 11`, emitting an endogenous pulse;
+4. For ALL `t ≥ 4`, `ownHat = worldOwnEndo`, `OrderUpdater` satisfies `Weighting.IncreasingInOwn` and
+   strictly ranks `cSafe` above `cExt` (`ranksAt t cExt cSafe`), `emergentLoop` chooses `.safe` via
+   `selectByOrder`, and `(14, emergentLoop.init)` stays eternally in `Viability.Kernel`! -/
+theorem endogenous_emergence_sufficiency :
+    -- (1) Initial greedy order & action at t = 0
+    ((emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) 0 cSafe cExt ∧
+     emergentLoop.act (closedOrbit wEndo emergentLoop 14 0).2 = .extract ∧
+     (closedOrbit wEndo emergentLoop 14 0).2.ownHat .sustainedContinuation = false) ∧
+    -- (2) Endogenous residual state split at t = 1..2
+    (obsAt wEndo emergentLoop 14 0 = 16 ∧
+     obsAt wEndo emergentLoop 14 1 = 14 ∧
+     (closedOrbit wEndo emergentLoop 14 1).2.phase = .coarse (some 16) ∧
+     (closedOrbit wEndo emergentLoop 14 2).2.phase = .probingSafe 14) ∧
+    -- (3) Post-probe learned scope `ownHat`, `IncreasingInOwn`, flipped `ranksAt`, & `.safe` policy
+    (∀ t, 4 ≤ t →
+      (∀ i, (closedOrbit wEndo emergentLoop 14 t).2.ownHat i = worldOwnEndo i) ∧
+      Weighting.IncreasingInOwn emergenceItems worldOwnEndo
+        ((emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) t) ∧
+      (emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) t cExt cSafe ∧
+      emergentLoop.act (closedOrbit wEndo emergentLoop 14 t).2 = .safe ∧
+      (closedOrbit wEndo emergentLoop 14 t).1 = 10) ∧
+    -- (4) Eternal closed-loop `Viability.Kernel`
+    Viability.Kernel (loopProcess wEndo emergentLoop) (viableStockGuard wEndo)
+      (14, emergentLoop.init) := by
+  refine ⟨⟨?_, rfl, rfl⟩, ⟨rfl, rfl, rfl, rfl⟩, fun t ht => ?_, ?_⟩
+  · show Weighting.weighed emergenceItems emergenceInitPos cSafe +
+        Weighting.weighed emergenceItems emergenceBase cExt <
+      Weighting.weighed emergenceItems emergenceInitPos cExt +
+        Weighting.weighed emergenceItems emergenceBase cSafe
+    exact by decide
+  · obtain ⟨k, hk⟩ := le_dest ht
+    rw [hk]
+    obtain ⟨hx, hph, hpos, hown⟩ := wEndo_orbit_stabilizes k
+    have hPosEq : ∀ i, (emergenceUpdater worldOwnEndo).posAt (endogFeedback wEndo 14) (4 + k) i =
+        endoPostPos i :=
+      fun i => (emergent_pos_eq_orderUpdater wEndo 14 worldOwnEndo (4 + k) i).symm.trans (hpos i)
+    have hInc : Weighting.IncreasingInOwn emergenceItems worldOwnEndo
+        ((emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) (4 + k)) := by
+      refine EndogenousOrder.ranksNet_increasingInOwn_of_bounds (fun x _ hxown => ?_)
+        (fun y _ hyown => ?_)
+      · rw [hPosEq x]
+        cases x with
+        | immYield => exact by decide
+        | sustainedContinuation => exact by decide
+        | downstreamDependent => exact Bool.noConfusion hxown
+      · rw [hPosEq y]
+        cases y with
+        | immYield => exact Bool.noConfusion hyown
+        | sustainedContinuation => exact Bool.noConfusion hyown
+        | downstreamDependent => exact Nat.le_refl 0
+    have hRank : (emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) (4 + k) cExt cSafe :=
+      hInc cSafe cExt (Weighting.widensOn_of_widensBy cSafe_widensBy_cExt)
+        ⟨.sustainedContinuation, .tail _ (.head _), rfl, rfl, rfl⟩
+    have hAct : emergentLoop.act (closedOrbit wEndo emergentLoop 14 (4 + k)).2 = .safe :=
+      (emergent_act_governed_by_orderUpdater wEndo 14 (4 + k) worldOwnEndo (.inr hph)).mpr hRank
+    exact ⟨hown, hInc, hRank, hAct, hx⟩
+  · intro st ⟨w, htr⟩
+    have hEq := reach_eq_orbit wEndo emergentLoop w htr 0 14 rfl
+    rw [hEq, Nat.zero_add]
+    exact wEndo_orbit_above_crit w.length
+
+/-- Helper characterizing `Weighting.IncreasingInOwn` on `emergenceItems` under `worldOwnExo`
+(`pos = (2, 0, 0)`, `base = (0, 1, 0)`): every widening adding `.immYield` gains `+2` and loses
+at most `-1` on `.sustainedContinuation`, strictly ranking `a` above `b`. -/
+theorem increasingInOwn_exo_init :
+    Weighting.IncreasingInOwn emergenceItems worldOwnExo
+      (Weighting.ranksNet emergenceItems emergenceInitPos emergenceBase) := by
+  intro a b hWid ⟨x, _, hxown, hax, hbx⟩
+  have hxImm : x = .immYield := by
+    cases x with
+    | immYield => rfl
+    | sustainedContinuation => exact Bool.noConfusion hxown
+    | downstreamDependent => exact Bool.noConfusion hxown
+  subst hxImm
+  show Weighting.weighed emergenceItems emergenceInitPos b +
+      Weighting.weighed emergenceItems emergenceBase a <
+    Weighting.weighed emergenceItems emergenceInitPos a +
+      Weighting.weighed emergenceItems emergenceBase b
+  dsimp only [Weighting.weighed, emergenceItems, total, emergenceInitPos, emergenceBase]
+  rw [hax, hbx]
+  cases a .sustainedContinuation <;> cases b .sustainedContinuation <;>
+    cases a .downstreamDependent <;> cases b .downstreamDependent <;> exact by decide
+
+/-- **Exogenous Decay Separation (`emergentLoop_separates_exo`):**
+In `wExo` from `x₀ = 14`, `emergentLoop` splits `.coarse (some 16) → .probingSafe 14` at `t = 1`,
+probes `.safe` at `t = 2, 3`, observes continuing decay `9 → 7` (`9 ≤ 7` is false!), emits ZERO
+false-positive pulses, learns `ownHat = worldOwnExo`, maintains `Weighting.IncreasingInOwn` with
+respect to `worldOwnExo` at `t = 4`, and resumes dominating `.extract` at `t = 4`! -/
+theorem emergentLoop_separates_exo :
+    (closedOrbit wExo emergentLoop 14 2).2.phase = .probingSafe 14 ∧
+    obsAt wExo emergentLoop 14 2 = 9 ∧
+    obsAt wExo emergentLoop 14 3 = 7 ∧
+    (closedOrbit wExo emergentLoop 14 4).2.phase = .resolved ∧
+    (∀ i, (closedOrbit wExo emergentLoop 14 4).2.ownHat i = worldOwnExo i) ∧
+    (∀ i, (closedOrbit wExo emergentLoop 14 4).2.pos i = emergenceInitPos i) ∧
+    Weighting.IncreasingInOwn emergenceItems worldOwnExo
+      ((emergenceUpdater worldOwnExo).ranksAt (endogFeedback wExo 14) 4) ∧
+    emergentLoop.act (closedOrbit wExo emergentLoop 14 4).2 = .extract := by
+  have hPos4 : ∀ i, (emergenceUpdater worldOwnExo).posAt (endogFeedback wExo 14) 4 i =
+      emergenceInitPos i := by
+    intro i
+    rw [← emergent_pos_eq_orderUpdater wExo 14 worldOwnExo 4 i]
+    cases i <;> rfl
+  have hInc : Weighting.IncreasingInOwn emergenceItems worldOwnExo
+      ((emergenceUpdater worldOwnExo).ranksAt (endogFeedback wExo 14) 4) := by
+    intro a b hWid hAdds
+    have hBase := increasingInOwn_exo_init a b hWid hAdds
+    have hEqA : Weighting.weighed emergenceItems
+        ((emergenceUpdater worldOwnExo).posAt (endogFeedback wExo 14) 4) a =
+        Weighting.weighed emergenceItems emergenceInitPos a :=
+      total_congr (fun i => by
+        show cond (a i) _ 0 = cond (a i) _ 0
+        rw [hPos4 i]) emergenceItems
+    have hEqB : Weighting.weighed emergenceItems
+        ((emergenceUpdater worldOwnExo).posAt (endogFeedback wExo 14) 4) b =
+        Weighting.weighed emergenceItems emergenceInitPos b :=
+      total_congr (fun i => by
+        show cond (b i) _ 0 = cond (b i) _ 0
+        rw [hPos4 i]) emergenceItems
+    show Weighting.weighed emergenceItems
+          ((emergenceUpdater worldOwnExo).posAt (endogFeedback wExo 14) 4) b +
+        Weighting.weighed emergenceItems emergenceBase a <
+      Weighting.weighed emergenceItems
+          ((emergenceUpdater worldOwnExo).posAt (endogFeedback wExo 14) 4) a +
+        Weighting.weighed emergenceItems emergenceBase b
+    rw [hEqA, hEqB]
+    exact hBase
+  refine ⟨rfl, rfl, rfl, rfl, fun i => by cases i <;> rfl, fun i => by cases i <;> rfl, hInc, rfl⟩
+
+/-! ## Section 5: Grammar Lumping (`«像定后当且仅当同行»`), Pre-Split `FiberViabilitySplit`, & Metaethical Firewall -/
+
+/-- Coarse substrate-blind projection keeping ONLY `LearnerState`. -/
+def projInternal (st : Nat × LearnerState) : LearnerState :=
+  st.2
+
+def phaseIsProbingSafe : LearnerPhase → Bool
+  | .probingSafe _ => true
+  | .coarse _ | .probingVerify _ _ | .resolved => false
+
+/-- **Gate F3 — Grammar Lumping Refutation (`emergent_internal_refutes_grammar_lumping`) &
+Dynamic Pre-Split `FiberViabilitySplit` (`emergent_preSplit_fiberViabilitySplit`):**
+1. On `loopProcess wEndo emergentLoop`, two states `(14, s_coarse16)` and `(12, s_coarse16)` share
+   the exact same `LearnerState` (`projInternal`), yet step to `.coarse (some 16)` vs `.probingSafe 14`,
+   refuting right-determinism `«定后» («像» projInternal R)` and hence `«同行»` via
+   `OplaxHistory.span_step_grammar_lumping`!
+2. Moreover, `uViable = (12, s_coarse16)` and `uDoomed = (7, s_coarse16)` BOTH satisfy
+   `viableStockGuard wEndo` (`6 ≤ 12` and `6 ≤ 7`) at `t = 0` and have `projInternal uViable = projInternal uDoomed`
+   by `rfl`, yet `uViable` stays eternally in `Viability.Kernel` while `uDoomed` drops `7 → 4 < 6`
+   in 1 step (`¬ Viability.Kernel`), establishing `OplaxHistory.FiberViabilitySplit` and refuting
+   soundness of any substrate-blind macro viability predicate! -/
+theorem emergent_grammar_lumping_and_fiber_split :
+    let P := loopProcess wEndo emergentLoop
+    let R := fun st st' : Nat × LearnerState => ∃ a, P.step st a st'
+    (¬ «定后» («像» projInternal R) ∧
+     ¬ «同行» R (fun a b => projInternal a = projInternal b)) ∧
+    (viableStockGuard wEndo (closedOrbit wEndo emergentLoop 14 1) ∧
+     viableStockGuard wEndo (7, (closedOrbit wEndo emergentLoop 14 1).2) ∧
+     OplaxHistory.FiberViabilitySplit projInternal
+       (Viability.Kernel P (viableStockGuard wEndo)) ∧
+     ∀ Kq : LearnerState → Prop,
+       ¬ ((∀ st, Viability.Kernel P (viableStockGuard wEndo) st → Kq (projInternal st)) ∧
+          (∀ st, Kq (projInternal st) → Viability.Kernel P (viableStockGuard wEndo) st))) := by
+  intro P R
+  let u1 := closedOrbit wEndo emergentLoop 14 1
+  let u2 := closedOrbit wEndo emergentLoop 14 2
+  let u14Next := closedLoopStep wEndo emergentLoop (14, u1.2)
+  have hStepA : R (14, u1.2) u14Next := ⟨(), rfl⟩
+  have hStepB : R u1 u2 := ⟨(), rfl⟩
+  have hDiffNext : projInternal u14Next ≠ projInternal u2 := by
+    intro hEq
+    have hTag : phaseIsProbingSafe (projInternal u14Next).phase =
+        phaseIsProbingSafe (projInternal u2).phase :=
+      congrArg (fun s => phaseIsProbingSafe s.phase) hEq
+    exact Bool.noConfusion hTag
+  have hNotDet : ¬ «定后» («像» projInternal R) := by
+    intro hDet
+    have hImgA : «像» projInternal R (projInternal u1) (projInternal u14Next) :=
+      ⟨(14, u1.2), u14Next, rfl, hStepA, rfl⟩
+    have hImgB : «像» projInternal R (projInternal u1) (projInternal u2) :=
+      ⟨u1, u2, rfl, hStepB, rfl⟩
+    exact hDiffNext (hDet (projInternal u14Next) (projInternal u2) ⟨projInternal u1, hImgA, hImgB⟩)
+  have hNotGoAlike : ¬ «同行» R (fun a b => projInternal a = projInternal b) :=
+    fun hGo => hNotDet ((OplaxHistory.span_step_grammar_lumping P projInternal).mpr hGo)
+  have hKern1 : Viability.Kernel P (viableStockGuard wEndo) u1 := by
+    intro st ⟨w, htr⟩
+    have hEq := reach_eq_orbit wEndo emergentLoop w htr 1 14 rfl
+    rw [hEq]
+    exact wEndo_orbit_above_crit (1 + w.length)
+  let uDoomed : Nat × LearnerState := (7, u1.2)
+  have hNotKernDoomed : ¬ Viability.Kernel P (viableStockGuard wEndo) uDoomed := by
+    intro hK
+    let uCrash := closedLoopStep wEndo emergentLoop uDoomed
+    have hR : Reach P uDoomed uCrash := ⟨[()], .cons rfl (.nil _)⟩
+    have hG : 6 ≤ uCrash.1 := hK uCrash hR
+    exact absurd hG (by decide)
+  have hSplit : OplaxHistory.FiberViabilitySplit projInternal
+      (Viability.Kernel P (viableStockGuard wEndo)) :=
+    ⟨u1, uDoomed, rfl, hKern1, hNotKernDoomed⟩
+  exact ⟨⟨hNotDet, hNotGoAlike⟩,
+    ⟨(by decide : 6 ≤ 12), (by decide : 6 ≤ 7), hSplit,
+     fun Kq => OplaxHistory.fiberSplit_refutes_macro_viability_soundness hSplit Kq⟩⟩
+
+/-- Every step in ANY `StrainWorld` leaves `.downstreamDependent` with zero pulse, zero weight, and
+`ownHat = false`. -/
+theorem downstream_zero_and_unowned_forever (W : StrainWorld) (x₀ : Nat) :
+    (∀ t, endogFeedback W x₀ t .downstreamDependent = false) ∧
+    (∀ t, (closedOrbit W emergentLoop x₀ t).2.pos .downstreamDependent = 0) ∧
+    (∀ t, (closedOrbit W emergentLoop x₀ t).2.ownHat .downstreamDependent = false) := by
+  refine ⟨fun _ => rfl, ?_, ?_⟩
+  · intro t
+    rw [emergent_pos_eq_orderUpdater W x₀ worldOwnEndo t .downstreamDependent]
+    exact EndogenousOrder.uncoupled_zero_weight_forever
+      (emergenceUpdater worldOwnEndo) (endogFeedback W x₀) (fun _ => rfl) rfl t
+  · intro t
+    induction t with
+    | zero => rfl
+    | succ k ih =>
+      show ((closedOrbit W emergentLoop x₀ k).2.ownHat .downstreamDependent ||
+        endogFeedback W x₀ k .downstreamDependent) = false
+      rw [ih]; rfl
+
+/-- `Type 0` packaging of the complete unguided emergent-order dynamical system (contains ZERO
+`Type 1` fields, enabling direct composition with `ScopeDynamics.scopeLaw_cannot_entail_unrestricted`). -/
+structure EmergentOrderSystem : Type where
+  world : StrainWorld
+  x₀ : Nat
+  turnHorizon : Nat
+  worldOwn : EmergenceItem → Bool
+  greedyEverywhere : ∀ x, world.sense x .safe < world.sense x .extract
+  initPrefersExtract :
+    (emergenceUpdater worldOwn).ranksAt (endogFeedback world x₀) 0 cSafe cExt
+  convergedOwn : ∀ t, turnHorizon ≤ t →
+    (∀ i, (closedOrbit world emergentLoop x₀ t).2.ownHat i = worldOwn i) ∧
+    Weighting.IncreasingInOwn emergenceItems worldOwn
+      ((emergenceUpdater worldOwn).ranksAt (endogFeedback world x₀) t) ∧
+    (emergenceUpdater worldOwn).ranksAt (endogFeedback world x₀) t cExt cSafe
+  viableKernel :
+    Viability.Kernel (loopProcess world emergentLoop) (viableStockGuard world)
+      (x₀, emergentLoop.init)
+
+def witnessEmergentSystem : EmergentOrderSystem where
+  world := wEndo
+  x₀ := 14
+  turnHorizon := 4
+  worldOwn := worldOwnEndo
+  greedyEverywhere x := (worlds_strictly_greedy_everywhere x).1
+  initPrefersExtract := endogenous_emergence_sufficiency.1.1
+  convergedOwn t ht :=
+    let h := endogenous_emergence_sufficiency.2.2.1 t ht
+    ⟨h.1, h.2.1, h.2.2.1⟩
+  viableKernel := endogenous_emergence_sufficiency.2.2.2
+
+def emergentFirewallRegion (_ : Clearing.Formation) : EmergenceItem → Prop
+  | .downstreamDependent => False
+  | .immYield => True
+  | .sustainedContinuation => True
+
+/-- **Gate F5 — Metaethical Firewall Across Endogenous Order Emergence (`emergent_order_firewall`):**
+Even as `emergentLoop` endogenously refines perception, discovers `ownHat = worldOwnEndo`, flips its
+order to `Weighting.IncreasingInOwn`, and secures eternal `Viability.Kernel`:
+1. `.downstreamDependent` keeps `pos = 0` and `ownHat = false` at EVERY step `t : Nat`, leaving
+   every widening `cFull` over `cSafe` strictly unranked forever (`uncoupled_blindness_firewall`);
+2. Any dynamical law `Law : EmergentOrderSystem → Prop` satisfied by `witnessEmergentSystem` admits
+   rival bounded significance (`Rival (bounded emergentFirewallRegion)`), pairs with
+   `Clearing.center_not_derived`, and NEVER entails `Unrestricted sig`! -/
+theorem emergent_order_firewall {Pos F : Type} (p : Pos) (f : F)
+    (Law : EmergentOrderSystem → Prop) (hHolds : Law witnessEmergentSystem) :
+    (∀ t, (emergenceUpdater worldOwnEndo).posAt (endogFeedback wEndo 14) t .downstreamDependent = 0) ∧
+    (∀ t, (closedOrbit wEndo emergentLoop 14 t).2.ownHat .downstreamDependent = false) ∧
+    (∀ t, ¬ (emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) t cSafe cFull ∧
+          ¬ (emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) t cFull cSafe) ∧
+    (Clearing.valuation.Held ∧ ¬ Clearing.valuation.Significant) ∧
+    (Rival (bounded emergentFirewallRegion) ∧ ¬ Unrestricted (bounded emergentFirewallRegion)) ∧
+    ¬ (∀ (sys' : EmergentOrderSystem) (sig : Pos → Nat → F → Prop),
+        Law sys' → Unrestricted sig) := by
+  have hDown := EndogenousOrder.uncoupled_blindness_firewall
+    (emergenceUpdater worldOwnEndo) (endogFeedback wEndo 14)
+    (v := .downstreamDependent) (fun _ => rfl) rfl cFull_widensBy_cSafe p f
+  have hOwnFalse := (downstream_zero_and_unowned_forever wEndo 14).2.2
+  have hAdm := ScopeDynamics.scopeLaw_admits_rival Law hHolds (fun _ _ _ => True)
+    (region := emergentFirewallRegion) ⟨.clearer, .downstreamDependent, fun h => h⟩
+  have hNotEntails := ScopeDynamics.scopeLaw_cannot_entail_unrestricted Law p f hHolds
+  exact ⟨hDown.1, hOwnFalse, hDown.2.1 rfl, hDown.2.2.2.1, ⟨hAdm.2.1, hAdm.2.2⟩, hNotEntails⟩
+
+/-! ## Section 6: Top-Level Guarded-Oplax Bridge (`MasterSpine.WholeArchitecture` ↔ `OplaxHistory` / `DoubleKernel`) -/
+
+/-- Offset-indexed constructive trajectory-to-pullback lifting (`runToFlatSpanFrom`): maps steps
+`[k, k + n]` of ANY `r : Run P` directly into `(OplaxHistory.constFlatSpan (OplaxHistory.processStepSpan P) n).W`
+with zero `Classical.choice` and zero `Run.shift` overhead. -/
+def runToFlatSpanFrom {S A : Type} {P : Process S A} (r : Run P) :
+    ∀ (k n : Nat),
+      { w : (OplaxHistory.constFlatSpan (OplaxHistory.processStepSpan P) n).W //
+        (OplaxHistory.constFlatSpan (OplaxHistory.processStepSpan P) n).left w = r.state k ∧
+        (OplaxHistory.constFlatSpan (OplaxHistory.processStepSpan P) n).right w = r.state (k + n) }
+  | k, 0 =>
+    ⟨r.state k, rfl, (congrArg r.state (Nat.add_zero k)).symm⟩
+  | k, n + 1 =>
+    let tail := runToFlatSpanFrom r (k + 1) n
+    have hArith : (k + 1) + n = k + (n + 1) :=
+      (Nat.add_assoc k 1 n).trans (congrArg (k + ·) (Nat.add_comm 1 n))
+    ⟨⟨⟨r.state k, r.act k, r.state (k + 1), r.step k⟩, tail.1, tail.2.1.symm⟩,
+     rfl, tail.2.2.trans (congrArg r.state hArith)⟩
+
+/-- Positive-length (`n + 1`-step) sequential `GuardedExpr` chain avoiding uninhabited `n = 0`
+`.idExpr` constructors in `DoubleKernel.GuardedProof`. -/
+def seqChainPos {S : Type} (e : DoubleKernel.GuardedExpr S S) :
+    Nat → DoubleKernel.GuardedExpr S S
+  | 0 => e
+  | n + 1 => .seq e (seqChainPos e n)
+
+/-- Constructive right-unit `SpanHom` embedding `evalGuardedExpr (seqChainPos e n)` into
+`OplaxHistory.constFlatSpan (evalGuardedExpr e) (n + 1)`. -/
+def posChainToFlatSpan {S : Type} (e : DoubleKernel.GuardedExpr S S) :
+    ∀ n : Nat,
+      OplaxHistory.SpanHom
+        (DoubleKernel.evalGuardedExpr (seqChainPos e n))
+        (OplaxHistory.constFlatSpan (DoubleKernel.evalGuardedExpr e) (n + 1))
+  | 0 =>
+    { map := fun w => ⟨w, (DoubleKernel.evalGuardedExpr e).right w, rfl⟩
+      left_eq := fun _ => rfl
+      right_eq := fun _ => rfl }
+  | n + 1 =>
+    OplaxHistory.compSpanHom
+      (OplaxHistory.SpanHom.id (DoubleKernel.evalGuardedExpr e))
+      (posChainToFlatSpan e n)
+
+/-- Constructive inverse `SpanHom` stripping the trailing `idSpan S` from
+`constFlatSpan (evalGuardedExpr e) (n + 1)` back to `evalGuardedExpr (seqChainPos e n)`. -/
+def flatSpanToPosChain {S : Type} (e : DoubleKernel.GuardedExpr S S) :
+    ∀ n : Nat,
+      OplaxHistory.SpanHom
+        (OplaxHistory.constFlatSpan (DoubleKernel.evalGuardedExpr e) (n + 1))
+        (DoubleKernel.evalGuardedExpr (seqChainPos e n))
+  | 0 =>
+    { map := fun p => p.fst
+      left_eq := fun _ => rfl
+      right_eq := fun p => p.mid }
+  | n + 1 =>
+    OplaxHistory.compSpanHom
+      (OplaxHistory.SpanHom.id (DoubleKernel.evalGuardedExpr e))
+      (flatSpanToPosChain e n)
+
+theorem posChain_flatSpan_left_inv {S : Type} (e : DoubleKernel.GuardedExpr S S) :
+    ∀ (n : Nat) (w : (DoubleKernel.evalGuardedExpr (seqChainPos e n)).W),
+      (flatSpanToPosChain e n).map ((posChainToFlatSpan e n).map w) = w
+  | 0, _ => rfl
+  | n + 1, p =>
+    OplaxHistory.PullbackElem.ext rfl (posChain_flatSpan_left_inv e n p.snd)
+
+theorem posChain_flatSpan_right_inv {S : Type} (e : DoubleKernel.GuardedExpr S S) :
+    ∀ (n : Nat) (p : (OplaxHistory.constFlatSpan (DoubleKernel.evalGuardedExpr e) (n + 1)).W),
+      (posChainToFlatSpan e n).map ((flatSpanToPosChain e n).map p) = p
+  | 0, p => OplaxHistory.PullbackElem.ext rfl p.mid
+  | n + 1, p =>
+    OplaxHistory.PullbackElem.ext rfl (posChain_flatSpan_right_inv e n p.snd)
+
+/-- Constructive `Bij` between `evalGuardedExpr (seqChainPos e n).W` and
+`(OplaxHistory.constFlatSpan (evalGuardedExpr e) (n + 1)).W` across all `n : Nat`. -/
+def posChainFlatSpanBij {S : Type} (e : DoubleKernel.GuardedExpr S S) (n : Nat) :
+    OplaxHistory.Bij
+      (DoubleKernel.evalGuardedExpr (seqChainPos e n)).W
+      (OplaxHistory.constFlatSpan (DoubleKernel.evalGuardedExpr e) (n + 1)).W where
+  toFun := (posChainToFlatSpan e n).map
+  invFun := (flatSpanToPosChain e n).map
+  left_inv := posChain_flatSpan_left_inv e n
+  right_inv := posChain_flatSpan_right_inv e n
+
+/-- Inductive `(n + 1)`-step directed oplax assembly proof in `DoubleKernel.GuardedProof`:
+`Q(e^{\star (n+1)}) ⇒ Q(e)^{\star (n+1)}`. -/
+def chiChainProof (S : OplaxHistory.SpanFunctor) {X : Type}
+    (e : DoubleKernel.GuardedExpr X X) :
+    ∀ n : Nat,
+      DoubleKernel.GuardedProof (.assemble S (seqChainPos e n)) (seqChainPos (.assemble S e) n)
+  | 0 => .refl (.assemble S e)
+  | n + 1 =>
+    .trans (.chiStep S e (seqChainPos e n))
+      (.seqCong (.refl (.assemble S e)) (chiChainProof S e n))
+
+/-- Guarded `(n + 1)`-step inverse oplax proof in `DoubleKernel.GuardedProof`, constructible ONLY
+when explicit `Bij` + `hb` pullback/BC guards are supplied at every seam `k < n + 1`. -/
+def chiChainInvProof (S : OplaxHistory.SpanFunctor) {X : Type}
+    (e : DoubleKernel.GuardedExpr X X) :
+    ∀ (n : Nat)
+      (bAt : ∀ k, k < n →
+        OplaxHistory.Bij
+          (S.obj
+            (OplaxHistory.PullbackElem
+              (DoubleKernel.evalGuardedExpr e).right
+              (DoubleKernel.evalGuardedExpr (seqChainPos e k)).left))
+          (OplaxHistory.PullbackElem
+            (S.map (DoubleKernel.evalGuardedExpr e).right)
+            (S.map (DoubleKernel.evalGuardedExpr (seqChainPos e k)).left))),
+      (∀ k (hk : k < n) u,
+        (bAt k hk).toFun u =
+          (OplaxHistory.chi S
+            (DoubleKernel.evalGuardedExpr e)
+            (DoubleKernel.evalGuardedExpr (seqChainPos e k))).map u) →
+      DoubleKernel.GuardedProof (seqChainPos (.assemble S e) n) (.assemble S (seqChainPos e n))
+  | 0, _, _ => .refl (.assemble S e)
+  | n + 1, bAt, hbAt =>
+    .trans
+      (.seqCong (.refl (.assemble S e))
+        (chiChainInvProof S e n
+          (fun k hk => bAt k (Nat.lt_succ_of_lt hk))
+          (fun k hk => hbAt k (Nat.lt_succ_of_lt hk))))
+      (.chiInv S e (seqChainPos e n)
+        (bAt n (Nat.lt_succ_self n))
+        (hbAt n (Nat.lt_succ_self n)))
+
+/-- Inductive `(n + 1)`-step disjoint parallel-vs-time distributivity LR in `DoubleKernel.GuardedProof`. -/
+def parSeqChainLR {A A' : Type}
+    (e₁ : DoubleKernel.GuardedExpr A A) (e₂ : DoubleKernel.GuardedExpr A' A') :
+    ∀ n : Nat,
+      DoubleKernel.GuardedProof
+        (.par (seqChainPos e₁ n) (seqChainPos e₂ n))
+        (seqChainPos (.par e₁ e₂) n)
+  | 0 => .refl (.par e₁ e₂)
+  | n + 1 =>
+    .trans (.parSeqDistLR e₁ (seqChainPos e₁ n) e₂ (seqChainPos e₂ n))
+      (.seqCong (.refl (.par e₁ e₂)) (parSeqChainLR e₁ e₂ n))
+
+/-- Inductive `(n + 1)`-step disjoint parallel-vs-time distributivity RL in `DoubleKernel.GuardedProof`. -/
+def parSeqChainRL {A A' : Type}
+    (e₁ : DoubleKernel.GuardedExpr A A) (e₂ : DoubleKernel.GuardedExpr A' A') :
+    ∀ n : Nat,
+      DoubleKernel.GuardedProof
+        (seqChainPos (.par e₁ e₂) n)
+        (.par (seqChainPos e₁ n) (seqChainPos e₂ n))
+  | 0 => .refl (.par e₁ e₂)
+  | n + 1 =>
+    .trans (.seqCong (.refl (.par e₁ e₂)) (parSeqChainRL e₁ e₂ n))
+      (.parSeqDistRL e₁ (seqChainPos e₁ n) e₂ (seqChainPos e₂ n))
+
+/-- Pointwise two-sided invertibility of `evalGuardedProof (parSeqChainLR ...)` and
+`evalGuardedProof (parSeqChainRL ...)` across ALL horizons `n : Nat`. -/
+theorem parSeqChain_left_inv {A A' : Type}
+    (e₁ : DoubleKernel.GuardedExpr A A) (e₂ : DoubleKernel.GuardedExpr A' A') :
+    ∀ (n : Nat)
+      (w : (DoubleKernel.evalGuardedExpr (.par (seqChainPos e₁ n) (seqChainPos e₂ n))).W),
+      (DoubleKernel.evalGuardedProof (parSeqChainRL e₁ e₂ n)).map
+        ((DoubleKernel.evalGuardedProof (parSeqChainLR e₁ e₂ n)).map w) = w
+  | 0, _ => rfl
+  | n + 1, .inl p => by
+    let zMid :=
+      (OplaxHistory.compSpanHom
+        (OplaxHistory.SpanHom.id
+          (OplaxHistory.coprodSpan (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr e₂)))
+        (DoubleKernel.evalGuardedProof (parSeqChainRL e₁ e₂ n))).map
+      ((OplaxHistory.compSpanHom
+        (OplaxHistory.SpanHom.id
+          (OplaxHistory.coprodSpan (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr e₂)))
+        (DoubleKernel.evalGuardedProof (parSeqChainLR e₁ e₂ n))).map
+        ⟨.inl p.fst, .inl p.snd, congrArg Sum.inl p.mid⟩)
+    have hz : zMid = ⟨.inl p.fst, .inl p.snd, congrArg Sum.inl p.mid⟩ :=
+      OplaxHistory.PullbackElem.ext rfl (parSeqChain_left_inv e₁ e₂ n (.inl p.snd))
+    exact congrArg
+      (DoubleKernel.parSeqDistHomRL
+        (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr (seqChainPos e₁ n))
+        (DoubleKernel.evalGuardedExpr e₂) (DoubleKernel.evalGuardedExpr (seqChainPos e₂ n))).map
+      hz
+  | n + 1, .inr q => by
+    let zMid :=
+      (OplaxHistory.compSpanHom
+        (OplaxHistory.SpanHom.id
+          (OplaxHistory.coprodSpan (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr e₂)))
+        (DoubleKernel.evalGuardedProof (parSeqChainRL e₁ e₂ n))).map
+      ((OplaxHistory.compSpanHom
+        (OplaxHistory.SpanHom.id
+          (OplaxHistory.coprodSpan (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr e₂)))
+        (DoubleKernel.evalGuardedProof (parSeqChainLR e₁ e₂ n))).map
+        ⟨.inr q.fst, .inr q.snd, congrArg Sum.inr q.mid⟩)
+    have hz : zMid = ⟨.inr q.fst, .inr q.snd, congrArg Sum.inr q.mid⟩ :=
+      OplaxHistory.PullbackElem.ext rfl (parSeqChain_left_inv e₁ e₂ n (.inr q.snd))
+    exact congrArg
+      (DoubleKernel.parSeqDistHomRL
+        (DoubleKernel.evalGuardedExpr e₁) (DoubleKernel.evalGuardedExpr (seqChainPos e₁ n))
+        (DoubleKernel.evalGuardedExpr e₂) (DoubleKernel.evalGuardedExpr (seqChainPos e₂ n))).map
+      hz
+
+/-- `chiChainProof` commutes elementwise with `OplaxHistory.chiConstFlat` across the right-unit
+bijection `posChainToFlatSpan` for all `n : Nat`. -/
+theorem chiChainProof_commutes_chiConstFlat (S : OplaxHistory.SpanFunctor)
+    {X : Type} (H : OplaxHistory.RelSpan X X) :
+    ∀ (n : Nat)
+      (u : S.obj (DoubleKernel.evalGuardedExpr (seqChainPos (.atom H) n)).W),
+      (posChainToFlatSpan (.assemble S (.atom H)) n).map
+        ((DoubleKernel.evalGuardedProof (chiChainProof S (.atom H) n)).map u) =
+      (OplaxHistory.chiConstFlat S H (n + 1)).map
+        (S.map (posChainToFlatSpan (.atom H) n).map u)
+  | 0, u => by
+    apply OplaxHistory.PullbackElem.ext
+    · change u = S.map
+          (fun z : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left => z.fst)
+          (S.map (fun w => ⟨w, H.right w, rfl⟩) u)
+      have hComp := (S.map_comp
+        (fun z : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left => z.fst)
+        (fun w : H.W => (⟨w, H.right w, rfl⟩ : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left))
+        u).symm
+      exact ((S.map_id u).symm.trans
+        (S.map_congr (fun _ => rfl) u)).trans hComp.symm
+    · change S.map H.right u =
+        S.map (fun z : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left => z.snd)
+          (S.map (fun w => ⟨w, H.right w, rfl⟩) u)
+      have hComp := (S.map_comp
+        (fun z : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left => z.snd)
+        (fun w : H.W => (⟨w, H.right w, rfl⟩ : OplaxHistory.PullbackElem H.right (OplaxHistory.idSpan X).left))
+        u).symm
+      exact (S.map_congr (fun _ => rfl) u).trans hComp.symm
+  | n + 1, u => by
+    apply OplaxHistory.PullbackElem.ext
+    · change S.map OplaxHistory.PullbackElem.fst u =
+        S.map OplaxHistory.PullbackElem.fst
+          (S.map (posChainToFlatSpan (.atom H) (n + 1)).map u)
+      have hComp := S.map_comp OplaxHistory.PullbackElem.fst
+        (posChainToFlatSpan (.atom H) (n + 1)).map u
+      exact (S.map_congr (fun _ => rfl) u).trans hComp
+    · have ih := chiChainProof_commutes_chiConstFlat S H n
+        (S.map OplaxHistory.PullbackElem.snd u)
+      change (posChainToFlatSpan (.assemble S (.atom H)) n).map
+          ((DoubleKernel.evalGuardedProof (chiChainProof S (.atom H) n)).map
+            (S.map OplaxHistory.PullbackElem.snd u)) =
+        (OplaxHistory.chiConstFlat S H (n + 1)).map
+          (S.map OplaxHistory.PullbackElem.snd
+            (S.map (posChainToFlatSpan (.atom H) (n + 1)).map u))
+      have hSnd : S.map OplaxHistory.PullbackElem.snd
+          (S.map (posChainToFlatSpan (.atom H) (n + 1)).map u) =
+        S.map (posChainToFlatSpan (.atom H) n).map
+          (S.map OplaxHistory.PullbackElem.snd u) := by
+        have h1 := (S.map_comp OplaxHistory.PullbackElem.snd
+          (posChainToFlatSpan (.atom H) (n + 1)).map u).symm
+        have h2 := S.map_comp (posChainToFlatSpan (.atom H) n).map
+          OplaxHistory.PullbackElem.snd u
+        exact h1.trans ((S.map_congr (fun _ => rfl) u).trans h2)
+      exact ih.trans (congrArg (OplaxHistory.chiConstFlat S H (n + 1)).map hSnd.symm)
+
+/-- Operational closed-loop process of any `A : MasterSpine.WholeArchitecture`. -/
+def wholeOpClosedProcess
+    {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+     ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+    (A : MasterSpine.WholeArchitecture Θ Probe Outcome Env
+      I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+      ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr) :=
+  OpenComposition.closedProcess A.compOp A.cOp
+    (A.W.opObs A.θ_true) A.channel (A.W.G A.θ_true) (A.W.envDraw A.θ_true) A.W.jointAdm
+
+/-- Constructive `ExactCausalAbs` extracted directly from `A.causal_goAlike` onto `CausalImage`
+(zero `Classical.choice` extraction from `∃ D`!). -/
+def wholeArchitectureExactAbs
+    {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+     ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+    (A : MasterSpine.WholeArchitecture Θ Probe Outcome Env
+      I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+      ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr) :
+    ExactCausalAbs
+      (CausalSystem.ofOpenComponent A.compOp A.cOp.tol)
+      (CausalImage (CausalSystem.ofOpenComponent A.compOp A.cOp.tol) A.π_causal A.ω_causal)
+      A.π_causal id A.ω_causal :=
+  ⟨rfl, fun i s _ s' step => ⟨i, s, s', rfl, rfl, step, rfl⟩⟩
+
+/-- **Top-Level Unification Bridge Part 1 (`wholeArchitecture_oplax_guarded_bridge`):**
+For EVERY `A : MasterSpine.WholeArchitecture` and EVERY horizon `n : Nat`:
+1. `A.rOp` constructively inhabits `(OplaxHistory.constFlatSpan (processStepSpan (wholeOpClosedProcess A)) n).W`
+   via `runToFlatSpanFrom A.rOp 0 n`, with EVERY trajectory endpoint certified inside `Viability.Kernel`
+   and multi-site `ReadOffExchange`;
+2. `posChainFlatSpanBij` identifies `(n + 1)`-step `DoubleKernel.GuardedExpr` chains on `A` with
+   `OplaxHistory.constFlatSpan`, and for every `SpanFunctor` `S`, `chiChainProof` yields a
+   sound `GuardedProof` commuting with `OplaxHistory.chiConstFlat`, while any `chiInv` seam guard
+   certifies `FImageIsPullback` and universal Beck–Chevalley (`guarded_oplax_sound`);
+3. `wholeArchitectureExactAbs A` projects `n`-step open-component pullback chains cleanly via
+   `OplaxHistory.exactAbsChainMap` while satisfying `«像定后当且仅当同行»` (`span_step_grammar_lumping`)
+   on every input `i`! -/
+theorem wholeArchitecture_oplax_guarded_bridge
+    {Θ Probe Outcome Env I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+     ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr : Type}
+    (A : MasterSpine.WholeArchitecture Θ Probe Outcome Env
+      I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ ObsL Site ExtHide
+      ModeR S_r Obs_r Dist_r Int_r QX BX QA BA QB BB QCausal X_evo X_bad Pos_ord Act F_cr C_cr)
+    (n : Nat) :
+    let P := wholeOpClosedProcess A
+    let H := OplaxHistory.processStepSpan P
+    let wTraj := runToFlatSpanFrom A.rOp 0 n
+    -- (1) Constructive pullback-chain witness with Kernel & ReadOffExchange
+    ((OplaxHistory.constFlatSpan H n).left wTraj.1 = A.rOp.state 0 ∧
+     (OplaxHistory.constFlatSpan H n).right wTraj.1 = A.rOp.state n ∧
+     Viability.Kernel P (OpenComposition.closedGuard A.compOp A.cOp A.x_crit) (A.rOp.state 0) ∧
+     OpenComposition.closedGuard A.compOp A.cOp A.x_crit (A.rOp.state n) ∧
+     (EvolutionaryDrawdown.multiSiteWorld A.compOp (A.W.G A.θ_true) (A.W.envDraw A.θ_true)
+        A.rOp.state (fun t => (A.rOp.act t).1)).ReadOffExchange) ∧
+    -- (2) GuardedProof `chiChainProof` + `chiConstFlat` agreement + `guarded_oplax_sound` BC certification
+    (OplaxHistory.IsBijective (posChainFlatSpanBij (.atom H) n).toFun ∧
+     ∀ (S : OplaxHistory.SpanFunctor)
+       (u : S.obj (DoubleKernel.evalGuardedExpr (seqChainPos (.atom H) n)).W),
+       (posChainToFlatSpan (.assemble S (.atom H)) n).map
+         ((DoubleKernel.evalGuardedProof (chiChainProof S (.atom H) n)).map u) =
+       (OplaxHistory.chiConstFlat S H (n + 1)).map
+         (S.map (posChainToFlatSpan (.atom H) n).map u)) ∧
+    -- (3) Constructive ExactCausalAbs pullback-chain projection & Grammar lumping equivalence
+    (∀ (i : Option (ObsL × Obs_r) × Option Bool)
+       (x : (OplaxHistory.constFlatSpan
+         (OplaxHistory.processStepSpan ((CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i)) n).W),
+       (OplaxHistory.constFlatSpan
+         (OplaxHistory.processStepSpan
+           ((CausalImage (CausalSystem.ofOpenComponent A.compOp A.cOp.tol) A.π_causal A.ω_causal).proc
+             (A.ω_causal i))) n).right
+         (OplaxHistory.exactAbsChainMap (wholeArchitectureExactAbs A) i n x) =
+       A.π_causal ((OplaxHistory.constFlatSpan
+         (OplaxHistory.processStepSpan ((CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i)) n).right x)) ∧
+    (∀ (i : Option (ObsL × Obs_r) × Option Bool),
+       «定后» («像» A.π_causal
+         (fun s s' => ∃ a, ((CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i).step s a s')) ↔
+       «同行» (fun s s' => ∃ a, ((CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i).step s a s')
+         (fun s s' => A.π_causal s = A.π_causal s')) := by
+  intro P H wTraj
+  have hWhole := MasterSpine.whole_architecture_viable_and_coupled A
+  have hZeroAdd : 0 + n = n := Nat.zero_add n
+  have hRight : (OplaxHistory.constFlatSpan H n).right wTraj.1 = A.rOp.state n :=
+    wTraj.2.2.trans (congrArg A.rOp.state hZeroAdd)
+  have hGuardN : OpenComposition.closedGuard A.compOp A.cOp A.x_crit (A.rOp.state n) :=
+    Viability.Kernel.run A.rOp A.rOp_kernel n
+  exact ⟨⟨wTraj.2.1, hRight, A.rOp_kernel, hGuardN, hWhole.2.2.1.2.1⟩,
+    ⟨OplaxHistory.isBijective_of_bij (posChainFlatSpanBij (.atom H) n),
+     fun S u => chiChainProof_commutes_chiConstFlat S H n u⟩,
+    fun i x => (OplaxHistory.exactAbsChainMap_endpoints (wholeArchitectureExactAbs A) i n x).2,
+    fun i => OplaxHistory.span_step_grammar_lumping
+      ((CausalSystem.ofOpenComponent A.compOp A.cOp.tol).proc i) A.π_causal⟩
+
+/-- Coarse projection on `wholeOpClosedProcess witnessArchitecture` keeping BOTH the full sensory
+observation `(obsL, obsR)` AND the entire composite internal/hidden/scope state `st.2`! -/
+def witnessSensoryInternalProj
+    (st : (Unit → Nat) × MasterSpine.WholeBecomingWitness.WOpS) :
+    (Bool × Bool) × MasterSpine.WholeBecomingWitness.WOpS :=
+  (MasterSpine.WholeBecomingWitness.witnessArchitecture.W.opObs true st.1, st.2)
+
+/-- **Top-Level Unification Bridge Part 2 (`witnessArchitecture_sensory_fiber_split`):**
+Directly on `MasterSpine.WholeBecomingWitness.witnessArchitecture`:
+Let `u₁ = witnessArchitecture.rOp.state 0` (`x = 21`) and `u₂ = (fun _ => 8, u₁.2)` (`x = 8`).
+1. BOTH `u₁` and `u₂` satisfy `OpenComposition.closedGuard` at `t = 0` (`8 ≤ 21` and `8 ≤ 8`, with
+   identical internal state `u₁.2`);
+2. `witnessSensoryInternalProj u₁ = witnessSensoryInternalProj u₂` holds definitionally (`rfl`:
+   both emit warning `(true, true)` under binary threshold `< 22` and share exact state `u₁.2`!);
+3. `u₁` stays in `Viability.Kernel` forever (`witnessArchitecture.rOp_kernel`), whereas `u₂` drops
+   `8 → 3 < 8` in 1 valid step `((), (((), ()), ()))` (`¬ Viability.Kernel`), establishing
+   `OplaxHistory.FiberViabilitySplit` and refuting macro soundness of any threshold-observation +
+   internal-state safety predicate via `OplaxHistory.fiberSplit_refutes_macro_viability_soundness`! -/
+theorem witnessArchitecture_sensory_fiber_split :
+    let A := MasterSpine.WholeBecomingWitness.witnessArchitecture
+    let P := wholeOpClosedProcess A
+    let G := OpenComposition.closedGuard A.compOp A.cOp A.x_crit
+    let u₁ := A.rOp.state 0
+    let u₂ : (Unit → Nat) × MasterSpine.WholeBecomingWitness.WOpS := (fun _ => 8, u₁.2)
+    G u₁ ∧ G u₂ ∧
+    witnessSensoryInternalProj u₁ = witnessSensoryInternalProj u₂ ∧
+    OplaxHistory.FiberViabilitySplit witnessSensoryInternalProj (Viability.Kernel P G) ∧
+    (∀ Kq : ((Bool × Bool) × MasterSpine.WholeBecomingWitness.WOpS) → Prop,
+      ¬ ((∀ st, Viability.Kernel P G st → Kq (witnessSensoryInternalProj st)) ∧
+         (∀ st, Kq (witnessSensoryInternalProj st) → Viability.Kernel P G st))) := by
+  intro A P G u₁ u₂
+  have hKern1 : Viability.Kernel P G u₁ := A.rOp_kernel
+  have hG1 : G u₁ := hKern1 u₁ ⟨[], .nil u₁⟩
+  have hG2 : G u₂ := ⟨fun _ => Nat.le_refl 8, hG1.2⟩
+  have hOpInv := MasterSpine.postProbeRun_opInvariants A.W A.spec A.θ_true A.channel
+    A.initOp A.fallbackDistOp A.x_crit A.r_full A.phaseInv A.invAll A.postIsOpTheta
+  have hInitEq : u₁.2 = MasterSpine.WholeBecomingWitness.wInitOp := hOpInv.1
+  have hNotKern2 : ¬ Viability.Kernel P G u₂ := by
+    intro hK2
+    let act0 : Unit × ((Unit × Unit) × Unit) := ((), (((), ()), ()))
+    let u₂Next := OpenComposition.closedStep A.compOp (A.W.opObs A.θ_true)
+      A.channel (A.W.G A.θ_true) (A.W.envDraw A.θ_true) u₂ act0
+    have hAdm : OpenComposition.closedAdm A.cOp A.W.jointAdm act0 :=
+      ⟨trivial, fun _ => ⟨trivial, trivial⟩⟩
+    have hStep : P.step u₂ act0 u₂Next := ⟨hAdm, rfl⟩
+    have hR : Reach P u₂ u₂Next := ⟨[act0], .cons hStep (.nil _)⟩
+    have hGN : G u₂Next := hK2 u₂Next hR
+    have hGe8 : 8 ≤ u₂Next.1 () := hGN.1 ()
+    have hDrawEq : A.compOp.drawExt u₂.2 () = 4 := by
+      show A.compOp.drawExt u₁.2 () = 4
+      rw [hInitEq]
+      rfl
+    have hCalc : ∀ d : Nat, d = 4 → (8 - (d + 1)) + (if 4 ≤ 8 - (d + 1) then 3 else 0) = 3 :=
+      fun d hd => by subst hd; rfl
+    have hNext3 : u₂Next.1 () = 3 := hCalc (A.compOp.drawExt u₂.2 ()) hDrawEq
+    rw [hNext3] at hGe8
+    exact absurd hGe8 (by decide)
+  have hSplit : OplaxHistory.FiberViabilitySplit witnessSensoryInternalProj
+      (Viability.Kernel P G) :=
+    ⟨u₁, u₂, rfl, hKern1, hNotKern2⟩
+  exact ⟨hG1, hG2, rfl, hSplit,
+    fun Kq => OplaxHistory.fiberSplit_refutes_macro_viability_soundness hSplit Kq⟩
+
+/-- **Master Synthesis (`item12_endogenous_emergence_and_oplax_master_bridge`):**
+Combines:
+1. Constructive Endogenous Emergence Sufficiency (`endogenous_emergence_sufficiency` + `emergentLoop_separates_exo`),
+2. Universal 3-Way Premise Sharpness over ALL `UnguidedLoop`s (`silent_cliff_universal_collapse`,
+   `separation_requires_safe_perturbation`, `one_probe_universal_insufficiency`, `thin_strain_band_universal_collapse`),
+3. Grammar Lumping & Dynamic `FiberViabilitySplit` on BOTH pre-split perception and
+   `MasterSpine.WholeBecomingWitness.witnessArchitecture`,
+4. Full `WholeArchitecture` ↔ `OplaxHistory` / `DoubleKernel.GuardedProof` Bridge (`n`-horizon),
+5. Dual Metaethical Firewalls (`emergent_order_firewall` & `MasterSpine.masterSpine_cannot_entail_unrestricted`). -/
+theorem item12_endogenous_emergence_and_oplax_master_bridge {Pos F : Type} (p : Pos) (f : F)
+    ( n : Nat ) :
+    -- (1) Sufficiency & exogenous separation
+    (Viability.Kernel (loopProcess wEndo emergentLoop) (viableStockGuard wEndo) (14, emergentLoop.init) ∧
+     (∀ t, 4 ≤ t →
+       Weighting.IncreasingInOwn emergenceItems worldOwnEndo
+         ((emergenceUpdater worldOwnEndo).ranksAt (endogFeedback wEndo 14) t) ∧
+       emergentLoop.act (closedOrbit wEndo emergentLoop 14 t).2 = .safe) ∧
+     emergentLoop.act (closedOrbit wExo emergentLoop 14 4).2 = .extract) ∧
+    -- (2) Universal Drop P1 & Drop P3 instantiated on `emergentLoop` + Universal 1-Probe Insufficiency
+    (¬ Viability.Kernel (loopProcess wCliff emergentLoop) (viableStockGuard wCliff) (14, emergentLoop.init) ∧
+     ¬ Viability.Kernel (loopProcess wThinStrain emergentLoop) (viableStockGuard wThinStrain) (13, emergentLoop.init) ∧
+     (closedOrbit wEndo emergentLoop 14 3).2 = (closedOrbit wExoShift emergentLoop 14 3).2) ∧
+    -- (3) Pre-split & WholeArchitecture dynamic FiberViabilitySplits
+    (OplaxHistory.FiberViabilitySplit projInternal
+       (Viability.Kernel (loopProcess wEndo emergentLoop) (viableStockGuard wEndo)) ∧
+     OplaxHistory.FiberViabilitySplit witnessSensoryInternalProj
+       (Viability.Kernel
+         (wholeOpClosedProcess MasterSpine.WholeBecomingWitness.witnessArchitecture)
+         (OpenComposition.closedGuard
+           MasterSpine.WholeBecomingWitness.witnessArchitecture.compOp
+           MasterSpine.WholeBecomingWitness.witnessArchitecture.cOp
+           MasterSpine.WholeBecomingWitness.witnessArchitecture.x_crit))) ∧
+    -- (4) Guarded-Oplax chain bijection on `witnessArchitecture`
+    OplaxHistory.IsBijective
+      (posChainFlatSpanBij
+        (.atom (OplaxHistory.processStepSpan
+          (wholeOpClosedProcess MasterSpine.WholeBecomingWitness.witnessArchitecture))) n).toFun ∧
+    -- (5) Unconditional `not_entails` firewalls on BOTH EmergentOrderSystem and MasterSpine
+    ((∀ t, (emergenceUpdater worldOwnEndo).posAt (endogFeedback wEndo 14) t .downstreamDependent = 0) ∧
+     ¬ (∀ (sys' : EmergentOrderSystem) (sig : Pos → Nat → F → Prop),
+         (fun _ => True) sys' → Unrestricted sig) ∧
+     ¬ (∀ (d' : Unit) (sig : Pos → Nat → F → Prop),
+         (fun _ => True) d' → Unrestricted sig)) := by
+  have hSuff := endogenous_emergence_sufficiency
+  have hExo := emergentLoop_separates_exo
+  have hCliff := silent_cliff_universal_collapse emergentLoop wCliff
+    (fun a => match a with | .extract => 16 | .safe => 13) 14 4
+    (fun x a hx => by
+      dsimp only [wCliff]
+      have hFalse : Nat.blt x 6 = false :=
+        ListTests.false_iff_not.mpr (fun h => Nat.not_le_of_gt (CoreHelpers.natBlt_true_iff.mp h) hx)
+      rw [hFalse]; cases a <;> rfl)
+    (fun t ht => by
+      match t with
+      | 0 | 1 | 2 | 3 | 4 => rfl
+      | m + 5 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 5 m)))
+    (fun t ht => by
+      match t with
+      | 0 | 1 | 2 | 3 => exact by decide
+      | m + 4 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 4 m)))
+    (by decide)
+  have hThin := thin_strain_band_universal_collapse emergentLoop
+    (fun t ht => by
+      match t with
+      | 0 | 1 | 2 | 3 => rfl
+      | m + 4 => exact absurd ht (Nat.not_lt_of_ge (Nat.le_add_left 4 m)))
+  have hOneProbe := one_probe_universal_insufficiency emergentLoop rfl rfl rfl
+  have hGram := emergent_grammar_lumping_and_fiber_split
+  have hWitSplit := witnessArchitecture_sensory_fiber_split
+  have hBridge := wholeArchitecture_oplax_guarded_bridge
+    MasterSpine.WholeBecomingWitness.witnessArchitecture n
+  have hFire := emergent_order_firewall p f (fun _ => True) trivial
+  exact ⟨⟨hSuff.2.2.2, fun t ht => ⟨(hSuff.2.2.1 t ht).2.1, (hSuff.2.2.1 t ht).2.2.2.1⟩, hExo.2.2.2.2.2.2.2⟩,
+    ⟨hCliff.2.2, hThin.2.2.2, hOneProbe.2.2.2.2.2.2.1⟩,
+    ⟨hGram.2.2.2.1, hWitSplit.2.2.2.1⟩,
+    hBridge.2.1.1,
+    ⟨hFire.1, hFire.2.2.2.2.2,
+     MasterSpine.masterSpine_cannot_entail_unrestricted (fun _ : Unit => True) p f (d := ()) trivial⟩⟩
+
+end EndogenousEmergence
+
+end Becoming
+
