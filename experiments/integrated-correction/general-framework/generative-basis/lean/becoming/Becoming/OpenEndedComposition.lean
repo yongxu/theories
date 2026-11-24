@@ -8,8 +8,9 @@ AI-written (Frontier 2, 24 November 2026; rebuilt from the Pillar A draft of the
 did not compile: about a hundred errors, its build only looking stalled once its output pipe had
 closed). Working
 names (`TransformsAcrossEpochs`, `EpochFamily`, `EpochCert`, `EpochTotal`, `EpochHandoffGate`,
-`epochProcess`) are this module's. Every declaration has an empty axiom report (scratch build,
-24–25 November 2026: 100 theorems, 193 declarations, no axioms, no warnings).
+`epochProcess`, `SwitchoverHandoffGate`, `switchoverEpochProcess`) are this module's. Every
+declaration has an empty axiom report (scratch build, 24–25 November 2026: 122 theorems,
+237 declarations, no axioms, no warnings).
 
 `Becoming.TransformsViably` fixes one capability reading `cap` and one safety predicate `Safe` for
 all time, and `Becoming.PolyComposition.anchored_selfMod_viable` fixes one envelope
@@ -67,14 +68,27 @@ change across epochs and what must not.
    (`jointBoolFamily`) with solo upgrades viable at `8`, simultaneous upgrades refused at `8` for
    all `anchored` / `e` / `p`, simultaneous upgrades certified and non-deadlocking at `11`, and no
    local gate matching both solo and joint `EpochHandoffGate`s.
+6. **Switchover-time reserve draw and endogenous unmodelled-site discovery.** Part 6a
+   (`SwitchoverHandoffGate`, `switchoverEpochProcess`) deducts `switchDraw e e' site` at upgrade
+   handoff via `switchoverReserve`, proves full viability/anchor/non-deadlock/rejection theorems,
+   reduces identically to `EpochHandoffGate` / `EpochStep` at zero draw, and exhibits
+   `SwitchoverDrawWitness` (at reserve `7` zero-draw accepts while switchover draw `5` leaves
+   `2 < 3` and is refused; reserve `12` certifies and stays `≥ 3`). Part 6b
+   (`EndogenousSiteDiscoveryWitness`) contrasts two scalar `Obs` readouts of an initially
+   unmodelled site `.sNew`: `obsResidual` triggers `residualDrop` before breach so `.upgrade true`
+   enters `Viability.Kernel` protecting both sites, whereas `obsSilent` is indistinguishable from an
+   intact trajectory for every prefix detector up to `t ≤ 6` and `.upgrade true` is refused once
+   `.sNew < 3` at `t = 7`.
 
 ## What stays fixed, and what this does not show (`AGENTS.md` Rule 2)
 
 Fixed for all epochs: the site type and substrate law `G`, the environment draw `envDraw`, the
 shape of `AnchorStep` (a floor once set too high cannot be lowered by the system itself), and the
-gate's checks. An upgrade takes no substrate time: any draw during a real switchover is outside
-the model. Pullback protects sites once entered; which unmodelled sites ought to enter, and when,
-is not decided here.
+gate's checks. `epochProcess` models atomic zero-draw upgrades; `switchoverEpochProcess` models a
+known per-transition draw `switchDraw e e' site` (unknown or stochastic switchover draws remain
+outside the model). Pullback protects sites once entered; `obsResidual` shows endogenous discovery
+when the `Obs` stream reflects pre-breach drift, while `obsSilent` shows no prefix-only detector
+can trigger timely discovery when `Obs` stays silent until breach.
 -/
 
 namespace Becoming.OpenEndedComposition
@@ -2119,5 +2133,517 @@ theorem jointBool_no_local_gate_admits_solo_and_matches_joint_gate
     (by show ¬ 3 + (4 + 4) ≤ 8; decide)
 
 end SimultaneousUpgradeObstruction
+
+/-! ## Part 6: Switchover-time reserve draw and endogenous unmodelled-site discovery -/
+
+/-! ### Part 6a: Non-atomic switchover-time substrate draw (`SwitchoverHandoffGate`) -/
+
+/-- Remaining substrate reserve after an upgrade's switchover draw `switchDraw e e' site`. -/
+def switchoverReserve {Epoch Site : Type} (switchDraw : Epoch → Epoch → Site → Nat)
+    (e e' : Epoch) (x : Site → Nat) (site : Site) : Nat :=
+  x site - switchDraw e e' site
+
+/-- **The switchover handoff gate** for a non-atomic upgrade `(x, e, p) → (x', e', p')` where
+`x' = switchoverReserve switchDraw e e' x`: permitted, anchored when `anchored = true`, the target
+epoch certified and total, `p'` inside `K e'`, and live lag margin for `p'` at the post-switchover
+reserve `switchoverReserve switchDraw e e' x`. -/
+structure SwitchoverHandoffGate (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool) (x : Site → Nat) (e e' : Epoch) (p' : Σ m, F.S e' m) : Prop where
+  allow : AllowUpgrade e e'
+  anchor : anchored = true → F.AnchorStep e e'
+  cert : F.Cert e'
+  total : F.Total e'
+  in_K : (F.c e').K p'
+  headroom_after : F.Headroom e' p' (switchoverReserve switchDraw e e' x)
+
+/-- Steps of the epoch process with non-atomic switchover reserve draw. -/
+inductive SwitchoverEpochStep (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool) : F.State → EpochAct F → F.State → Prop where
+  | intra (x : Site → Nat) (e : Epoch) (m : F.Mode e) (s : F.S e m) (env : Env) (d : F.Dist e m)
+      (adm : F.jointAdm e env) (tol : ∀ ob, (F.c e).tol m ob d) :
+      SwitchoverEpochStep F AllowUpgrade switchDraw anchored (x, ⟨e, ⟨m, s⟩⟩) (.intra env e m d)
+        ((polyClosedStep (F.C e) (F.route e) (F.obs e) (F.channel e) F.G F.envDraw
+            (x, ⟨m, s⟩) (env, d)).1,
+         ⟨e, (polyClosedStep (F.C e) (F.route e) (F.obs e) (F.channel e) F.G F.envDraw
+            (x, ⟨m, s⟩) (env, d)).2⟩)
+  | upgrade (x : Site → Nat) (e : Epoch) (p : Σ m, F.S e m) (e' : Epoch) (p' : Σ m, F.S e' m)
+      (gate : SwitchoverHandoffGate F AllowUpgrade switchDraw anchored x e e' p') :
+      SwitchoverEpochStep F AllowUpgrade switchDraw anchored (x, ⟨e, p⟩) (.upgrade e' p')
+        (switchoverReserve switchDraw e e' x, ⟨e', p'⟩)
+
+/-- The switchover epoch process; `anchored = false` drops only the gate's anchor clause. -/
+def switchoverEpochProcess (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool) : Process F.State (EpochAct F) where
+  step := SwitchoverEpochStep F AllowUpgrade switchDraw anchored
+
+/-- The anchored switchover epoch process. -/
+abbrev switchoverClosedProcess (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat) :=
+  switchoverEpochProcess F AllowUpgrade switchDraw true
+
+/-- **Certificate of the current-floor guard under switchover draw**, with or without anchor. -/
+theorem switchoverInv_certificate (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool)
+    (G_rises : ∀ site, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (F.G site)) :
+    Viability.Certificate (switchoverEpochProcess F AllowUpgrade switchDraw anchored)
+      (epochCurrentGuard F) (epochInv F) := by
+  have core := epochInv_certificate F AllowUpgrade anchored G_rises
+  refine ⟨core.within, fun st act st' hstep hInv => ?_⟩
+  cases hstep with
+  | upgrade x e p e' p' gate => exact ⟨gate.cert, gate.in_K, gate.headroom_after⟩
+  | intra x e m s env d envOk tolOk =>
+    exact core.closed _ _ _ (EpochStep.intra x e m s env d envOk tolOk) hInv
+
+/-- **Anchored switchover certificate.** Keeps `epochClosedGuard F e₀` and `AnchorStep e₀ e`. -/
+theorem switchoverChain_certificate (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (e₀ : Epoch)
+    (G_rises : ∀ site, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (F.G site)) :
+    Viability.Certificate (switchoverClosedProcess F AllowUpgrade switchDraw)
+      (epochClosedGuard F e₀) (fun st => epochInv F st ∧ F.AnchorStep e₀ st.2.1) := by
+  have core := switchoverInv_certificate F AllowUpgrade switchDraw true G_rises
+  refine ⟨fun st ⟨hInv, hAnch⟩ => ?_, fun st act st' hstep ⟨hInv, hAnch⟩ => ?_⟩
+  · have hCur := core.within st hInv
+    exact ⟨fun site => Nat.le_trans (hAnch.crit_le site) (hCur.1 site), hCur⟩
+  · refine ⟨core.closed st act st' hstep hInv, ?_⟩
+    cases hstep with
+    | intra => exact hAnch
+    | upgrade x e p e' p' gate => exact EpochFamily.AnchorStep.trans hAnch (gate.anchor rfl)
+
+/-- **Switchover epoch-chain viability (`_on_K`).** -/
+theorem switchoverChain_viability_kernel_on_K (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (e₀ : Epoch) (p₀ : Σ m, F.S e₀ m) (x₀ : Site → Nat)
+    (G_rises : ∀ site, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (F.G site))
+    (cert₀ : F.Cert e₀) (in_K₀ : (F.c e₀).K p₀) (margin₀ : F.Headroom e₀ p₀ x₀) :
+    Viability.Kernel (switchoverClosedProcess F AllowUpgrade switchDraw)
+      (epochClosedGuard F e₀) (x₀, ⟨e₀, p₀⟩) :=
+  (switchoverChain_certificate F AllowUpgrade switchDraw e₀ G_rises).kernel
+    ⟨⟨cert₀, in_K₀, margin₀⟩, EpochFamily.AnchorStep.refl F e₀⟩
+
+/-- **Switchover epoch-chain viability** from the initial state of `e₀`. -/
+theorem switchoverChain_viability_kernel (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (e₀ : Epoch) (x₀ : Site → Nat)
+    (G_rises : ∀ site, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (F.G site))
+    (cert₀ : F.Cert e₀) (margin₀ : F.Headroom e₀ (F.init e₀) x₀) :
+    Viability.Kernel (switchoverClosedProcess F AllowUpgrade switchDraw)
+      (epochClosedGuard F e₀) (x₀, ⟨e₀, F.init e₀⟩) :=
+  switchoverChain_viability_kernel_on_K F AllowUpgrade switchDraw e₀ (F.init e₀) x₀ G_rises
+    cert₀ (F.c e₀).init_in margin₀
+
+/-- **The anchor is never weakened** under switchover reserve draws. -/
+theorem switchoverChain_anchor_never_weakened (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (e₀ : Epoch) (p₀ : Σ m, F.S e₀ m) (x₀ : Site → Nat)
+    (G_rises : ∀ site, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (F.G site))
+    (cert₀ : F.Cert e₀) (in_K₀ : (F.c e₀).K p₀) (margin₀ : F.Headroom e₀ p₀ x₀)
+    (st : F.State)
+    (reach : Reach (switchoverClosedProcess F AllowUpgrade switchDraw) (x₀, ⟨e₀, p₀⟩) st) :
+    F.AnchorStep e₀ st.2.1 :=
+  ((switchoverChain_certificate F AllowUpgrade switchDraw e₀ G_rises).closed.reach reach
+    ⟨⟨cert₀, in_K₀, margin₀⟩, EpochFamily.AnchorStep.refl F e₀⟩).2
+
+/-- **No deadlock** under switchover reserve draws, with or without the anchor clause. -/
+theorem switchoverChain_nonDeadlock (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool) (e₀ : Epoch) (p₀ : Σ m, F.S e₀ m) (x₀ : Site → Nat)
+    (total₀ : F.Total e₀) (in_K₀ : (F.c e₀).K p₀) (st : F.State)
+    (reach : Reach (switchoverEpochProcess F AllowUpgrade switchDraw anchored) (x₀, ⟨e₀, p₀⟩) st) :
+    ∃ a st', (switchoverEpochProcess F AllowUpgrade switchDraw anchored).step st a st' := by
+  have inv : Invariant (switchoverEpochProcess F AllowUpgrade switchDraw anchored)
+      (fun st : F.State => (F.c st.2.1).K st.2.2 ∧ F.Total st.2.1) := by
+    intro st act st' hstep ⟨hK, hT⟩
+    cases hstep with
+    | upgrade x e p e' p' gate => exact ⟨gate.in_K, gate.total⟩
+    | intra x e m s env d _ tolOk =>
+      exact ⟨(F.c e).cert.closed ⟨m, s⟩ ⟨m, ((F.obs e m x, _), d)⟩ _ ⟨rfl, tolOk _, rfl⟩ hK, hT⟩
+  obtain ⟨hK, hT⟩ := inv.reach reach ⟨in_K₀, total₀⟩
+  obtain ⟨x, ⟨e, ⟨m, s⟩⟩⟩ := st
+  obtain ⟨env, hAdm⟩ := hT.env_nonempty
+  obtain ⟨d, hd⟩ := hT.dist_total ⟨m, s⟩ hK
+  exact ⟨_, _, SwitchoverEpochStep.intra x e m s env d hAdm hd⟩
+
+/-- **Post-switchover margin refusal.** No upgrade to `e'` is a step when the post-switchover
+reserve at some in-scope site falls short of `e'`'s floor plus lag margin. -/
+theorem switchover_gate_rejects_insufficient_margin (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (switchDraw : Epoch → Epoch → Site → Nat)
+    (anchored : Bool) {x : Site → Nat} {e e' : Epoch}
+    {p : Σ m, F.S e m} {p' : Σ m, F.S e' m} {st' : F.State} {site : Site}
+    (inScope : F.scope e' site = true)
+    (below : switchoverReserve switchDraw e e' x site <
+      F.x_crit e' site + (F.c e').eta p' * (F.sitePreCap e' site + F.envCap e' site)) :
+    ¬ (switchoverEpochProcess F AllowUpgrade switchDraw anchored).step
+      (x, ⟨e, p⟩) (.upgrade e' p') st' := by
+  intro hstep
+  cases hstep with
+  | upgrade _ _ _ _ _ gate =>
+    exact Nat.not_le_of_gt below (gate.headroom_after site inScope)
+
+/-- **Exact gate reduction at zero switchover draw.** -/
+theorem zeroSwitchDraw_gate_iff_epochHandoffGate (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (anchored : Bool) (x : Site → Nat)
+    (e e' : Epoch) (p' : Σ m, F.S e' m) :
+    SwitchoverHandoffGate F AllowUpgrade (fun _ _ _ => 0) anchored x e e' p' ↔
+      EpochHandoffGate F AllowUpgrade anchored x e e' p' :=
+  ⟨fun g =>
+    { allow := g.allow
+      anchor := g.anchor
+      cert := g.cert
+      total := g.total
+      in_K := g.in_K
+      headroom := g.headroom_after },
+   fun g =>
+    { allow := g.allow
+      anchor := g.anchor
+      cert := g.cert
+      total := g.total
+      in_K := g.in_K
+      headroom_after := g.headroom }⟩
+
+/-- **Exact step reduction at zero switchover draw.** -/
+theorem zeroSwitchDraw_step_iff_epochStep (F : EpochFamily Epoch Site Env)
+    (AllowUpgrade : Epoch → Epoch → Prop) (anchored : Bool)
+    (st : F.State) (act : EpochAct F) (st' : F.State) :
+    (switchoverEpochProcess F AllowUpgrade (fun _ _ _ => 0) anchored).step st act st' ↔
+      (epochProcess F AllowUpgrade anchored).step st act st' := by
+  refine ⟨fun hstep => ?_, fun hstep => ?_⟩
+  · cases hstep with
+    | intra x e m s env d adm tol => exact EpochStep.intra x e m s env d adm tol
+    | upgrade x e p e' p' gate =>
+      exact EpochStep.upgrade x e p e' p'
+        ((zeroSwitchDraw_gate_iff_epochHandoffGate F AllowUpgrade anchored x e e' p').mp gate)
+  · cases hstep with
+    | intra x e m s env d adm tol => exact SwitchoverEpochStep.intra x e m s env d adm tol
+    | upgrade x e p e' p' gate =>
+      exact SwitchoverEpochStep.upgrade x e p e' p'
+        ((zeroSwitchDraw_gate_iff_epochHandoffGate F AllowUpgrade anchored x e e' p').mpr gate)
+
+namespace SwitchoverDrawWitness
+
+abbrev allow (e e' : Bool) : Prop := e = false ∧ e' = true
+
+def switchDraw : Bool → Bool → Unit → Nat := fun _ _ _ => 5
+
+/-- At reserve `7`, the zero-draw gate accepts `false → true`, whereas a switchover draw of `5`
+leaves `2 < 3` (below the floor) and `SwitchoverHandoffGate` refuses the upgrade. -/
+theorem zeroDraw_accepts_7_but_switchover_breaches_floor :
+    EpochHandoffGate BlindSensorUpgradeWitness.family allow true (fun _ => 7)
+      false true ⟨(), (1 : Nat)⟩ ∧
+    switchoverReserve switchDraw false true (fun _ => 7) () = 2 ∧
+    switchoverReserve switchDraw false true (fun _ => 7) () <
+      BlindSensorUpgradeWitness.family.x_crit true () ∧
+    ∀ (p p' : Σ _ : Unit, Nat) (st' : BlindSensorUpgradeWitness.family.State),
+      ¬ (switchoverClosedProcess BlindSensorUpgradeWitness.family allow switchDraw).step
+        (fun _ => 7, ⟨false, p⟩) (.upgrade true p') st' := by
+  have anchor : BlindSensorUpgradeWitness.family.AnchorStep false true :=
+    ⟨fun _ h => ⟨h, Nat.le_refl 3⟩, fun _ => Nat.le_refl 0, fun _ h => h⟩
+  have gate0 : EpochHandoffGate BlindSensorUpgradeWitness.family allow true (fun _ => 7)
+      false true ⟨(), (1 : Nat)⟩ :=
+    { allow := ⟨rfl, rfl⟩
+      anchor := fun _ => anchor
+      cert := BlindSensorUpgradeWitness.cert true
+      total := BlindSensorUpgradeWitness.total true
+      in_K := Nat.le_refl 1
+      headroom := fun () _ => by decide }
+  refine ⟨gate0, rfl, by decide, fun p p' st' => ?_⟩
+  exact switchover_gate_rejects_insufficient_margin BlindSensorUpgradeWitness.family allow
+    switchDraw true (site := ()) rfl
+    (Nat.lt_of_lt_of_le (by decide : 2 < 3) (Nat.le_add_right 3 _))
+
+/-- At reserve `12`, `switchoverClosedProcess` executes `.upgrade true ⟨(), 1⟩` stepping to
+`(fun _ => 7, ⟨true, ⟨(), 1⟩⟩)`, and lies in `Viability.Kernel` keeping `3 ≤ st.1 ()` forever. -/
+theorem switchover_certifies_12 :
+    (switchoverClosedProcess BlindSensorUpgradeWitness.family allow switchDraw).step
+      (fun _ => 12, ⟨false, ⟨(), (1 : Nat)⟩⟩) (.upgrade true ⟨(), (1 : Nat)⟩)
+      (fun _ => 7, ⟨true, ⟨(), (1 : Nat)⟩⟩) ∧
+    Viability.Kernel (switchoverClosedProcess BlindSensorUpgradeWitness.family allow switchDraw)
+      (epochClosedGuard BlindSensorUpgradeWitness.family false)
+      (fun _ => 12, ⟨false, ⟨(), (1 : Nat)⟩⟩) ∧
+    ∀ st, Reach (switchoverClosedProcess BlindSensorUpgradeWitness.family allow switchDraw)
+      (fun _ => 12, ⟨false, ⟨(), (1 : Nat)⟩⟩) st → 3 ≤ st.1 () := by
+  have anchor : BlindSensorUpgradeWitness.family.AnchorStep false true :=
+    ⟨fun _ h => ⟨h, Nat.le_refl 3⟩, fun _ => Nat.le_refl 0, fun _ h => h⟩
+  have gate12 : SwitchoverHandoffGate BlindSensorUpgradeWitness.family allow switchDraw true
+      (fun _ => 12) false true ⟨(), (1 : Nat)⟩ :=
+    { allow := ⟨rfl, rfl⟩
+      anchor := fun _ => anchor
+      cert := BlindSensorUpgradeWitness.cert true
+      total := BlindSensorUpgradeWitness.total true
+      in_K := Nat.le_refl 1
+      headroom_after := fun () _ => by decide }
+  have up : (switchoverClosedProcess BlindSensorUpgradeWitness.family allow switchDraw).step
+      (fun _ => 12, ⟨false, ⟨(), (1 : Nat)⟩⟩) (.upgrade true ⟨(), (1 : Nat)⟩)
+      (fun _ => 7, ⟨true, ⟨(), (1 : Nat)⟩⟩) :=
+    SwitchoverEpochStep.upgrade (F := BlindSensorUpgradeWitness.family) (AllowUpgrade := allow)
+      (switchDraw := switchDraw) (anchored := true) (fun _ => 12) false ⟨(), (1 : Nat)⟩
+      true ⟨(), (1 : Nat)⟩ gate12
+  have kern := switchoverChain_viability_kernel BlindSensorUpgradeWitness.family allow switchDraw
+    false (fun _ => 12) selfGain_rises (BlindSensorUpgradeWitness.cert false)
+    (fun () _ => by decide)
+  exact ⟨up, kern, fun st hreach => (kern st hreach).1 ()⟩
+
+end SwitchoverDrawWitness
+
+/-! ### Part 6b: Endogenous discovery of an unmodelled site before floor breach -/
+
+namespace EndogenousSiteDiscoveryWitness
+
+abbrev Site2 := SiteExpansionBlindnessWitness.Site2
+
+def scopeAt : Bool → Site2 → Bool
+  | false, .sOld => true
+  | false, .sNew => false
+  | true, _ => true
+
+def critAt : Bool → Site2 → Nat
+  | _, .sOld => 3
+  | false, .sNew => 0
+  | true, .sNew => 3
+
+def preAt : Bool → Site2 → Nat
+  | _, .sOld => 1
+  | false, .sNew => 2
+  | true, .sNew => 1
+
+def postAt : Bool → Site2 → Nat
+  | _, .sOld => 1
+  | false, .sNew => 2
+  | true, .sNew => 0
+
+def warnAt : Bool → Site2 → Nat
+  | _, .sOld => 5
+  | false, .sNew => 0
+  | true, .sNew => 5
+
+/-- Epoch `false` watches only `.sOld`; epoch `true` watches both `.sOld` and `.sNew`. -/
+def sensor : Bool → Unit → (Site2 → Nat) → Bool
+  | false, _, x => Nat.blt (x .sOld) 5
+  | true, _, x => Nat.blt (x .sOld) 5 || Nat.blt (x .sNew) 5
+
+theorem post_le_pre : ∀ e s, postAt e s ≤ preAt e s
+  | false, .sOld | true, .sOld | false, .sNew => Nat.le_refl _
+  | true, .sNew => Nat.zero_le _
+
+def family : EpochFamily Bool Site2 Unit where
+  Mode _ := Unit
+  S _ _ := Nat
+  Obs _ _ := Bool
+  Dist _ _ := Unit
+  Int _ _ := Empty
+  Ext _ _ := Site2
+  C e := lagAgent (preAt e) (postAt e)
+  init _ := ⟨(), 1⟩
+  c e := lagContract (preAt e) (postAt e) (post_le_pre e)
+  route _ _ s := [s]
+  obs := sensor
+  channel _ em _ _ := em
+  G := selfGain
+  envDraw _ _ := 0
+  envCap _ _ := 0
+  jointAdm _ _ := True
+  scope := scopeAt
+  x_crit := critAt
+  warnLevel := warnAt
+  H_safe := postAt
+  sitePreCap := preAt
+  sitePostCap := postAt
+  maxLagEnv _ := 1
+  maxSilenceEnv _ := 0
+
+theorem cert : ∀ e : Bool, family.Cert e
+  | false =>
+    { env_within := fun _ _ _ => Nat.le_refl 0
+      pre_cap_bound := fun _ _ _ _ _ => Nat.le_refl _
+      post_cap_bound := fun _ _ _ _ => Nat.le_refl _
+      lag_bound := fun _ _ _ => Nat.le_refl 1
+      silence_bound := fun _ _ _ => Nat.le_refl 0
+      obs_detects := fun _ _ x s _ hs hlt => by
+        cases s with
+        | sOld => exact CoreHelpers.natBlt_true_iff.mpr hlt
+        | sNew => exact absurd hs (fun h => Bool.noConfusion h)
+      channel_fires := fun _ _ _ _ => rfl
+      post_viable := fun s => by cases s <;> decide
+      post_allowance := fun _ => Nat.le_refl _
+      warn_margin := fun s hs => by
+        cases s with
+        | sOld => decide
+        | sNew => exact absurd hs (fun h => Bool.noConfusion h) }
+  | true =>
+    { env_within := fun _ _ _ => Nat.le_refl 0
+      pre_cap_bound := fun _ _ _ _ _ => Nat.le_refl _
+      post_cap_bound := fun _ _ _ _ => Nat.le_refl _
+      lag_bound := fun _ _ _ => Nat.le_refl 1
+      silence_bound := fun _ _ _ => Nat.le_refl 0
+      obs_detects := fun _ _ x s _ _ hlt => by
+        cases s with
+        | sOld => exact bool_or_of_left _ (CoreHelpers.natBlt_true_iff.mpr hlt)
+        | sNew => exact bool_or_of_right _ (CoreHelpers.natBlt_true_iff.mpr hlt)
+      channel_fires := fun _ _ _ _ => rfl
+      post_viable := fun s => by cases s <;> decide
+      post_allowance := fun _ => Nat.le_refl _
+      warn_margin := fun s _ => by cases s <;> decide }
+
+theorem total (e : Bool) : family.Total e :=
+  ⟨⟨(), trivial⟩, fun _ _ => ⟨(), fun _ => trivial⟩⟩
+
+theorem anchor_false_true : family.AnchorStep false true :=
+  ⟨fun s hs => by
+     cases s with
+     | sOld => exact ⟨rfl, Nat.le_refl 3⟩
+     | sNew => exact absurd hs (fun h => Bool.noConfusion h),
+   fun _ => Nat.le_refl 0, fun _ h => h⟩
+
+abbrev allow (e e' : Bool) : Prop := e = false ∧ e' = true
+
+def x₀ : Site2 → Nat
+  | .sOld => 7
+  | .sNew => 9
+
+def xIntact (_ : Nat) : Site2 → Nat := x₀
+
+/-- Exact epoch-`false` intra orbit starting from `(x₀, ⟨(), 1⟩)`. -/
+def xDrain : Nat → Site2 → Nat
+  | 0 => x₀
+  | t + 1 =>
+    (polyClosedStep (family.C false) (family.route false) (family.obs false)
+      (family.channel false) family.G family.envDraw (xDrain t, ⟨(), (1 : Nat)⟩) ((), ())).1
+
+/-- Every step along `xDrain` keeps `.sOld = 7`. -/
+theorem xDrain_sOld : ∀ t, xDrain t .sOld = 7
+  | 0 => rfl
+  | t + 1 => by
+    have ih := xDrain_sOld t
+    show (xDrain t .sOld - 1) + (if 2 ≤ xDrain t .sOld - 1 then 1 else 0) = 7
+    rw [ih]
+    decide
+
+theorem xDrain_step (t : Nat) :
+    (epochClosedProcess family allow).step (xDrain t, ⟨false, ⟨(), (1 : Nat)⟩⟩)
+      (.intra () false () ()) (xDrain (t + 1), ⟨false, ⟨(), (1 : Nat)⟩⟩) := by
+  have hObs : sensor false () (xDrain t) = false := by
+    show Nat.blt (xDrain t .sOld) 5 = false
+    rw [xDrain_sOld t]
+    rfl
+  have hNext : (polyClosedStep (family.C false) (family.route false) (family.obs false)
+      (family.channel false) family.G family.envDraw (xDrain t, ⟨(), (1 : Nat)⟩) ((), ())).2 =
+      ⟨(), (1 : Nat)⟩ := by
+    show (⟨(), if sensor false () (xDrain t) then 0 else (1 : Nat)⟩ : Σ _ : Unit, Nat) =
+      ⟨(), (1 : Nat)⟩
+    rw [hObs]
+    rfl
+  have hIntra := EpochStep.intra (F := family) (AllowUpgrade := allow) (anchored := true)
+    (xDrain t) false () (1 : Nat) () () trivial (fun _ => trivial)
+  rw [hNext] at hIntra
+  exact hIntra
+
+theorem xDrain_reach : ∀ t,
+    Reach (epochClosedProcess family allow)
+      (x₀, ⟨false, ⟨(), (1 : Nat)⟩⟩) (xDrain t, ⟨false, ⟨(), (1 : Nat)⟩⟩)
+  | 0 => Reach.refl _ _
+  | t + 1 => Reach.trans (xDrain_reach t) (Reach.of_step (xDrain_step t))
+
+theorem xDrain_orbit_values :
+    xDrain 0 .sOld = 7 ∧ xDrain 0 .sNew = 9 ∧
+    xDrain 1 .sOld = 7 ∧ xDrain 1 .sNew = 8 ∧
+    xDrain 2 .sOld = 7 ∧ xDrain 2 .sNew = 7 ∧
+    xDrain 3 .sOld = 7 ∧ xDrain 3 .sNew = 6 ∧
+    xDrain 4 .sOld = 7 ∧ xDrain 4 .sNew = 5 ∧
+    xDrain 5 .sOld = 7 ∧ xDrain 5 .sNew = 4 ∧
+    xDrain 6 .sOld = 7 ∧ xDrain 6 .sNew = 3 ∧
+    xDrain 7 .sOld = 7 ∧ xDrain 7 .sNew = 1 :=
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
+
+/-- Scalar `Obs` stream with saturation plateau `8`, dropping before `crit = 3`. -/
+def obsResidual (x : Site2 → Nat) : Nat := CoreHelpers.natMin (x .sNew) 8
+
+/-- Scalar `Obs` stream constant at `8` until `x .sNew < 3`. -/
+def obsSilent (x : Site2 → Nat) : Nat := if Nat.blt (x .sNew) 3 then 0 else 8
+
+/-- Blind residual detector reading only successive scalar `Obs` values. -/
+def residualDrop (prev cur : Nat) : Bool := Nat.blt cur prev
+
+/-- **Positive endogenous discovery:** under `obsResidual`, two certified intra steps drop
+`.sNew` `9 → 8 → 7`, shifting `obsResidual` `8 → 7` (`residualDrop 8 7 = true`), triggering a
+gated `.upgrade true ⟨(), 1⟩` that passes `EpochHandoffGate` and enters `Viability.Kernel` so
+every subsequent reachable state keeps `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`. -/
+theorem endogenous_site_discovery_protects_both :
+    x₀ .sNew = 9 ∧
+    obsResidual x₀ = 8 ∧
+    Reach (epochClosedProcess family allow)
+      (x₀, ⟨false, ⟨(), (1 : Nat)⟩⟩) (xDrain 1, ⟨false, ⟨(), (1 : Nat)⟩⟩) ∧
+    xDrain 1 .sNew = 8 ∧
+    obsResidual (xDrain 1) = 8 ∧
+    Reach (epochClosedProcess family allow)
+      (xDrain 1, ⟨false, ⟨(), (1 : Nat)⟩⟩) (xDrain 2, ⟨false, ⟨(), (1 : Nat)⟩⟩) ∧
+    xDrain 2 .sNew = 7 ∧
+    obsResidual (xDrain 2) = 7 ∧
+    residualDrop (obsResidual (xDrain 1)) (obsResidual (xDrain 2)) = true ∧
+    (epochClosedProcess family allow).step
+      (xDrain 2, ⟨false, ⟨(), (1 : Nat)⟩⟩) (.upgrade true ⟨(), (1 : Nat)⟩)
+      (xDrain 2, ⟨true, ⟨(), (1 : Nat)⟩⟩) ∧
+    Viability.Kernel (epochClosedProcess family allow) (epochClosedGuard family true)
+      (xDrain 2, ⟨true, ⟨(), (1 : Nat)⟩⟩) ∧
+    ∀ st, Reach (epochClosedProcess family allow) (xDrain 2, ⟨true, ⟨(), (1 : Nat)⟩⟩) st →
+      3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew := by
+  have margin_true : family.Headroom true ⟨(), (1 : Nat)⟩ (xDrain 2) := fun s _ => by
+    cases s <;> decide
+  have gate : EpochHandoffGate family allow true (xDrain 2) false true ⟨(), (1 : Nat)⟩ :=
+    { allow := ⟨rfl, rfl⟩
+      anchor := fun _ => anchor_false_true
+      cert := cert true
+      total := total true
+      in_K := Nat.le_refl 1
+      headroom := margin_true }
+  have kern := epochChain_viability_kernel family allow true (xDrain 2) selfGain_rises
+    (cert true) margin_true
+  refine ⟨rfl, rfl, Reach.of_step (xDrain_step 0), rfl, rfl, Reach.of_step (xDrain_step 1),
+    rfl, rfl, rfl, EpochStep.upgrade (xDrain 2) false _ true _ gate, kern, fun st hreach => ?_⟩
+  have g := kern st hreach
+  exact ⟨g.1 .sOld, g.1 .sNew⟩
+
+theorem obsSilent_agree_le_6 :
+    ∀ t, t ≤ 6 → obsSilent (xDrain t) = 8 ∧ obsSilent (xIntact t) = 8 := by
+  intro t ht
+  match t with
+  | 0 | 1 | 2 | 3 | 4 | 5 | 6 => exact ⟨rfl, rfl⟩
+  | n + 7 =>
+    exact absurd ht
+      (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (by decide : 6 < 7) (Nat.le_add_left 7 n)))
+
+/-- **Negative impossibility under silent `Obs`:** under `obsSilent`, `xDrain` and `xIntact` give
+identical `obsSilent` value `8` for every `t ≤ 6`, so every `Obs`-only detector reading prefix
+`0..t` (`t ≤ 6`) returns identical output on both trajectories; and once `xDrain` crosses `< 3`
+at `t = 7`, `gate_rejects_infeasible_entry` refuses `.upgrade true`. -/
+theorem silent_unmodelled_site_impossibility :
+    (∀ t, xIntact t .sOld = 7 ∧ xIntact t .sNew = 9) ∧
+    Reach (epochClosedProcess family allow)
+      (x₀, ⟨false, ⟨(), (1 : Nat)⟩⟩) (xDrain 7, ⟨false, ⟨(), (1 : Nat)⟩⟩) ∧
+    xDrain 7 .sNew = 1 ∧
+    xDrain 7 .sNew < critAt true .sNew ∧
+    (∀ t, t ≤ 6 → obsSilent (xDrain t) = 8 ∧ obsSilent (xIntact t) = 8) ∧
+    (∀ (t : Nat) (_ : t ≤ 6) (D : (Nat → Nat) → Bool),
+      (∀ f g : Nat → Nat, (∀ i, i ≤ t → f i = g i) → D f = D g) →
+      D (fun i => obsSilent (xDrain i)) = D (fun i => obsSilent (xIntact i)) ∧
+      ¬ (D (fun i => obsSilent (xDrain i)) = true ∧
+         D (fun i => obsSilent (xIntact i)) = false)) ∧
+    (∀ (anchored : Bool) (p p' : Σ _ : Unit, Nat) (st' : family.State),
+      ¬ (epochProcess family allow anchored).step
+        (xDrain 7, ⟨false, p⟩) (.upgrade true p') st') := by
+  refine ⟨fun _ => ⟨rfl, rfl⟩, xDrain_reach 7, rfl, by decide, obsSilent_agree_le_6, ?_, ?_⟩
+  · intro t ht D readsPrefix
+    have eqOut : D (fun i => obsSilent (xDrain i)) = D (fun i => obsSilent (xIntact i)) :=
+      readsPrefix _ _ fun i hi =>
+        have h := obsSilent_agree_le_6 i (Nat.le_trans hi ht)
+        h.1.trans h.2.symm
+    exact ⟨eqOut, fun ⟨hT, hF⟩ => Bool.noConfusion (hT.symm.trans (eqOut.trans hF))⟩
+  · intro anchored p p' st'
+    exact gate_rejects_infeasible_entry family allow anchored (site := .sNew) rfl (by decide)
+
+end EndogenousSiteDiscoveryWitness
 
 end Becoming.OpenEndedComposition

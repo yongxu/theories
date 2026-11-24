@@ -216,3 +216,60 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-f
   }
 }
 ```
+
+## 8. Addendum: Part 6 switchover reserve draw and endogenous unmodelled-site discovery (AI-written)
+
+*AI-written addendum (swarm worker `f2-switchover-discovery`, 25 November 2026). Extends `Becoming.OpenEndedComposition` with Part 6a (`SwitchoverHandoffGate` and `SwitchoverDrawWitness`) and Part 6b (`EndogenousSiteDiscoveryWitness`), closing the two open Frontier 2 horizon boundaries noted in §4 above.*
+
+### 8.1 What was added (`Part 6`)
+
+1. **Part 6a — Non-atomic switchover-time substrate draw (`SwitchoverHandoffGate`):**
+   - `switchoverReserve`, `SwitchoverHandoffGate` (checking `headroom_after` at `switchoverReserve switchDraw e e' x`), `SwitchoverEpochStep` (`.intra` matching `EpochStep.intra`; `.upgrade` transitioning reserve to `switchoverReserve switchDraw e e' x`), `switchoverEpochProcess`, and `switchoverClosedProcess`.
+   - Core theorems: `switchoverInv_certificate`, `switchoverChain_certificate`, `switchoverChain_viability_kernel_on_K`, `switchoverChain_viability_kernel`, `switchoverChain_anchor_never_weakened`, `switchoverChain_nonDeadlock`, `switchover_gate_rejects_insufficient_margin`, `zeroSwitchDraw_gate_iff_epochHandoffGate`, and `zeroSwitchDraw_step_iff_epochStep` (exact reduction to `EpochHandoffGate` and `EpochStep` when `switchDraw := fun _ _ _ => 0`).
+   - Sharp witness (`SwitchoverDrawWitness`, using `BlindSensorUpgradeWitness.family` and `switchDraw _ _ () := 5`):
+     - `zeroDraw_accepts_7_but_switchover_breaches_floor`: at reserve `7`, `EpochHandoffGate` accepts `false → true`, while `switchoverReserve switchDraw false true (fun _ => 7) () = 2 < 3` and `switchoverClosedProcess` refuses `.upgrade true p'` from `(fun _ => 7, ⟨false, p⟩)` for every `p, p', st'`.
+     - `switchover_certifies_12`: at reserve `12`, `switchoverClosedProcess` steps via `.upgrade true ⟨(), 1⟩` to `(fun _ => 7, ⟨true, ⟨(), 1⟩⟩)`, lies in `Viability.Kernel` for `epochClosedGuard BlindSensorUpgradeWitness.family false`, and keeps `3 ≤ st.1 ()` for every reachable state.
+2. **Part 6b — Endogenous discovery of an unmodelled site before floor breach (`EndogenousSiteDiscoveryWitness`):**
+   - Over `Site2 := SiteExpansionBlindnessWitness.Site2`, defines `family : EpochFamily Bool Site2 Unit` where epoch `false` tracks only `.sOld` (`pre .sNew = 2`, `post .sNew = 2`, `crit .sNew = 0`) and epoch `true` tracks both `.sOld` and `.sNew` (`crit = 3`, `pre = 1`, `warn = 5`), with `cert`, `total`, `anchor_false_true`, and the exact intra orbit `xDrain` (`xDrain_sOld`, `xDrain_step`, `xDrain_reach`, `xDrain_orbit_values`: `.sNew` goes `9 → 8 → 7 → 6 → 5 → 4 → 3 → 1` while `.sOld` remains `7`).
+   - `endogenous_site_discovery_protects_both`: under `obsResidual x := CoreHelpers.natMin (x .sNew) 8` and `residualDrop prev cur := Nat.blt cur prev`, two certified intra steps drop `.sNew` `9 → 8 → 7` (`obsResidual` drops `8 → 7`, `residualDrop 8 7 = true`), triggering `.upgrade true ⟨(), 1⟩` through `EpochHandoffGate` and entering `Viability.Kernel` for `epochClosedGuard family true` so every subsequent reachable state satisfies `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`.
+   - `silent_unmodelled_site_impossibility`: under `obsSilent x := if Nat.blt (x .sNew) 3 then 0 else 8`, `xDrain` and the intact counterfactual `xIntact` (`7, 9`) produce `obsSilent = 8` at every `t ≤ 6` (`obsSilent_agree_le_6`), so every `Obs`-only detector `D : (Nat → Nat) → Bool` reading prefix `0..t` (`t ≤ 6`) gives identical output on both runs (`¬ (D ... = true ∧ D ... = false)`), and once `.sNew` drops to `1 < 3` at `t = 7`, `gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`.
+
+### 8.2 What Part 6 does not show (Rule 2)
+
+- `SwitchoverHandoffGate` assumes a known deterministic bound `switchDraw e e' site`; unknown or stochastic switchover draws are outside the model.
+- `endogenous_site_discovery_protects_both` relies on the scalar `Obs` stream (`obsResidual`) already reflecting pre-breach drift in `.sNew`; as `silent_unmodelled_site_impossibility` proves, when `Obs` stays flat until floor breach (`obsSilent`), no prefix-only detector can separate draining from intact runs in time.
+
+### 8.3 Updated counts and verification
+
+- **Counts:** `122` theorems, `237` declarations (up from `100` theorems, `193` declarations; `+22` theorems, `+22` defs/abbrevs/structures/inductives), `with_axioms: {}`, `unclean: []`, `0` warnings, `0` `sorry`, `0` `private` / `lemma` / `class` / unnamed `instance`, `0` `MARKET_EN` / `MARKET_ZH` hits.
+- **Verbatim scratch-build output:**
+
+```text
+PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/scratch_build.py /Users/ren/tmp/f2-switchover-scratch Becoming.OpenEndedComposition
+{
+  "tree": "/Users/ren/tmp/f2-switchover-scratch",
+  "modules": 161,
+  "ran": [
+    "Becoming.OpenEndedComposition",
+    "BecomingOpenEndedCompositionAxiomAudit",
+    "BecomingOpenEndedCompositionSignatures",
+    "Becoming.OpenEndedComposition.PreludeOnly"
+  ],
+  "reused": 320,
+  "unclean": [],
+  "audits": {
+    "Becoming.OpenEndedComposition": {
+      "theorems": 122,
+      "declarations": 237,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.OpenEndedComposition": 1.828,
+    "BecomingOpenEndedCompositionAxiomAudit": 0.976,
+    "BecomingOpenEndedCompositionSignatures": 0.714,
+    "Becoming.OpenEndedComposition.PreludeOnly": 1.679
+  }
+}
+```
+```
