@@ -1,6 +1,6 @@
 # Whole-Theory Lean Unification — Wave U5 Note
 
-*AI-written synthesis note (`24 November 2026`, Claude / Antigravity session `18d6300c`, Wave U5). Held loosely under [AGENTS.md](../../../../../AGENTS.md) and [DIRECTION.md](../../../../../_process/DIRECTION.md).*
+*AI-written synthesis note (`24 November 2026`, Claude / Antigravity session `18d6300c`, Wave U5). Held loosely under [AGENTS.md](../../../../../../AGENTS.md) and [DIRECTION.md](../../../../../DIRECTION.md).*
 
 ## 1. Scope & Commit A Artifacts
 
