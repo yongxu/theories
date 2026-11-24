@@ -28,13 +28,20 @@ two.
   `τ`, share and rule are `Thinned.course` with `N = τ` (`mark_eq_thinned`); where `mark` never holds,
   the course is the closed pool's and outlives the loss (`mark_never_eq_pre`,
   `closed_trap_outlives_loss`); for any reading cadence `reads`, `mark_kept_iff`, `mark_kept_locks_out`,
-  `mark_turned_iff`, and `mark_turned_admits_iff` state the pre-capture turning window. Witnesses
+  `mark_turned_iff`, and `mark_turned_admits_iff` state the pre-capture turning window. Part A.2b
+  closes the alternating middle band (`MiddleMinus`, `MiddlePlus`, `reading_state_four_way`,
+  `middle_disjoint_locked`, `mirror_strict_disfavours_iff`, `mirror_strict_favours_iff`, one-span
+  laws `mark_middle_minus_span`, `mark_middle_plus_span`, multi-reading trichotomy
+  `mark_middle_band_trichotomy`, and order monotonicity `select_order_mono`, `paced_post_order_mono`,
+  `mark_post_order_mono`, `mark_middle_band_monotone_partition`). Witnesses
   (`emergentLoop`, carriers' reading `hi`, others' `oneToOne` then `lo`, rule `hi`, one carrier):
   in time from twenty others (`race_in_time`); registration in full but late from twelve
   (`race_late_after_registration`); the probe blocked from four (`race_probe_blocked`); strain masked
   one step longer (`race_masked_strain`); cadence alone deciding on sixty-four (`race_slow_cadence`,
-  `race_fast_cadence`, with `PacedStock.ReadAtSpanEnd` proved for `cadence3`); and the exogenous
-  control, which never registers and never turns (`race_exo_no_false_turn`).
+  `race_fast_cadence`, with `PacedStock.ReadAtSpanEnd` proved for `cadence3`); the exogenous
+  control, which never registers and never turns (`race_exo_no_false_turn`); and four middle-band
+  separating witnesses (`race_middle_exits_to_lock`, `race_middle_alternates_and_turns`,
+  `race_middle_short_oscillation_turns`, and `race_middle_span_recovery_turns` on `cadence2`).
 * **Part B — split evidence.** The depletion signal is split as a one-time mask between two isolated
   agents. Each agent's stream is the same in both worlds up to a permutation of the private tag
   (`retag_symmetry`, `split_two_of_two`), with exact count equality over all `2^T` binary tags
@@ -45,10 +52,9 @@ two.
   consensus keeps the selection locked across every tag (`split_silenced_trapped`), whereas open
   exchange turns it cleanly (`split_exchange_turns`, instantiated on `wEndo` in `split_witness_endo`).
 
-What is not shown is said in the paper attack (§4): the middle band between `mark_kept_iff` and
-`mark_turned_admits_iff`; which learners register in time; a closed-loop split world; distributions on
-tags beyond counting over all `2^T` tags; and that any actual selection or population meets these
-premises.
+What is not shown is said in the paper attack (§4): which learners register in time; a closed-loop
+split world; distributions on tags beyond counting over all `2^T` tags; and that any actual selection
+or population meets these premises.
 
 Every declaration compiles from Lean's prelude with an empty axiom report.
 -/
@@ -556,6 +562,473 @@ theorem mark_turned_admits_iff {s₀ g₀ : CarrierCounts} {b₀ : B} {τ : Nat}
 
 end Mark
 
+/-! ## Part A.2b: the alternating middle band -/
+
+section MiddleBand
+
+/-- **Strict mirror sign (disfavouring):** against a mirrored reading (`w` is `u` swapped, with
+`u.other < u.carrier`), the pool strictly favours the others exactly where the others strictly
+outnumber the carriers. -/
+theorem mirror_strict_disfavours_iff {u w x : CarrierCounts} (hc : w.carrier = u.other)
+    (ho : w.other = u.carrier) (strict : u.other < u.carrier) :
+    (pool u w x).carrier < (pool u w x).other ↔ x.carrier < x.other := by
+  obtain ⟨d, hd⟩ := le_dest (Nat.succ_le_of_lt strict)
+  have huc : u.carrier = u.other + (d + 1) :=
+    hd.trans (Nat.add_assoc u.other 1 d |>.trans (congrArg (u.other + ·) (Nat.add_comm 1 d)))
+  show x.carrier * u.carrier + x.other * w.carrier < x.carrier * u.other + x.other * w.other ↔ _
+  rw [hc, ho, huc, Nat.mul_add x.carrier u.other (d + 1), Nat.mul_add x.other u.other (d + 1)]
+  have hL : x.carrier * u.other + x.carrier * (d + 1) + x.other * u.other =
+      (x.carrier * u.other + x.other * u.other) + x.carrier * (d + 1) := by
+    rw [Nat.add_assoc, Nat.add_comm (x.carrier * (d + 1)) (x.other * u.other), ← Nat.add_assoc]
+  have hR : x.carrier * u.other + (x.other * u.other + x.other * (d + 1)) =
+      (x.carrier * u.other + x.other * u.other) + x.other * (d + 1) :=
+    (Nat.add_assoc _ _ _).symm
+  rw [hL, hR]
+  exact ⟨fun hlt => Nat.lt_of_not_le fun ge =>
+      Nat.not_le_of_gt hlt (Nat.add_le_add_left (Nat.mul_le_mul_right (d + 1) ge) _),
+    fun hlt => Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_right hlt (Nat.zero_lt_succ d)) _⟩
+
+/-- **Strict mirror sign (favouring):** against the same mirrored reading, the pool strictly favours
+the carriers exactly where the carriers strictly outnumber the others. -/
+theorem mirror_strict_favours_iff {u w x : CarrierCounts} (hc : w.carrier = u.other)
+    (ho : w.other = u.carrier) (strict : u.other < u.carrier) :
+    (pool u w x).other < (pool u w x).carrier ↔ x.other < x.carrier := by
+  obtain ⟨d, hd⟩ := le_dest (Nat.succ_le_of_lt strict)
+  have huc : u.carrier = u.other + (d + 1) :=
+    hd.trans (Nat.add_assoc u.other 1 d |>.trans (congrArg (u.other + ·) (Nat.add_comm 1 d)))
+  show x.carrier * u.other + x.other * w.other < x.carrier * u.carrier + x.other * w.carrier ↔ _
+  rw [hc, ho, huc, Nat.mul_add x.other u.other (d + 1), Nat.mul_add x.carrier u.other (d + 1)]
+  have hL : x.carrier * u.other + (x.other * u.other + x.other * (d + 1)) =
+      (x.carrier * u.other + x.other * u.other) + x.other * (d + 1) :=
+    (Nat.add_assoc _ _ _).symm
+  have hR : x.carrier * u.other + x.carrier * (d + 1) + x.other * u.other =
+      (x.carrier * u.other + x.other * u.other) + x.carrier * (d + 1) := by
+    rw [Nat.add_assoc, Nat.add_comm (x.carrier * (d + 1)) (x.other * u.other), ← Nat.add_assoc]
+  rw [hL, hR]
+  exact ⟨fun hlt => Nat.lt_of_not_le fun ge =>
+      Nat.not_le_of_gt hlt (Nat.add_le_add_left (Nat.mul_le_mul_right (d + 1) ge) _),
+    fun hlt => Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_right hlt (Nat.zero_lt_succ d)) _⟩
+
+/-- Alternating middle-band state `MiddleMinus`: carriers are strictly outnumbered while the rule
+in force strictly favours the carriers. -/
+def MiddleMinus (p : CarrierCounts × CarrierCounts) : Prop :=
+  p.1.carrier < p.1.other ∧ p.2.other < p.2.carrier
+
+/-- Alternating middle-band state `MiddlePlus`: carriers strictly outnumber others while the rule
+in force strictly favours the others. -/
+def MiddlePlus (p : CarrierCounts × CarrierCounts) : Prop :=
+  p.1.other < p.1.carrier ∧ p.2.carrier < p.2.other
+
+/-- **Four-regime classification of every `(share, rule)` reading state:** Capture Lock (`other ≤ carrier ∧
+favours`), Turned Lock (`carrier ≤ other ∧ disfavours`), `MiddleMinus`, or `MiddlePlus`. -/
+theorem reading_state_four_way (p : CarrierCounts × CarrierCounts) :
+    (p.1.other ≤ p.1.carrier ∧ favours p.2) ∨
+    (p.1.carrier ≤ p.1.other ∧ disfavours p.2) ∨
+    MiddleMinus p ∨
+    MiddlePlus p := by
+  match Nat.lt_or_ge p.1.carrier p.1.other, Nat.lt_or_ge p.2.carrier p.2.other with
+  | .inl hco, .inl hgc => exact Or.inr (Or.inl ⟨Nat.le_of_lt hco, Nat.le_of_lt hgc⟩)
+  | .inl hco, .inr hge =>
+    match Nat.lt_or_ge p.2.other p.2.carrier with
+    | .inl hgo => exact Or.inr (Or.inr (Or.inl ⟨hco, hgo⟩))
+    | .inr hgc => exact Or.inr (Or.inl ⟨Nat.le_of_lt hco, hgc⟩)
+  | .inr hoc, .inr hge => exact Or.inl ⟨hoc, hge⟩
+  | .inr hoc, .inl hgc =>
+    match Nat.lt_or_ge p.1.other p.1.carrier with
+    | .inl hlt => exact Or.inr (Or.inr (Or.inr ⟨hlt, hgc⟩))
+    | .inr hle => exact Or.inr (Or.inl ⟨hle, Nat.le_of_lt hgc⟩)
+
+/-- **Disjointness of the middle states:** `MiddleMinus` and `MiddlePlus` are mutually disjoint and
+disjoint from both locked regimes. -/
+theorem middle_disjoint_locked (p : CarrierCounts × CarrierCounts) :
+    ¬ (MiddleMinus p ∧ MiddlePlus p) ∧
+    ¬ (MiddleMinus p ∧ (p.1.other ≤ p.1.carrier ∧ favours p.2)) ∧
+    ¬ (MiddleMinus p ∧ (p.1.carrier ≤ p.1.other ∧ disfavours p.2)) ∧
+    ¬ (MiddlePlus p ∧ (p.1.other ≤ p.1.carrier ∧ favours p.2)) ∧
+    ¬ (MiddlePlus p ∧ (p.1.carrier ≤ p.1.other ∧ disfavours p.2)) :=
+  ⟨fun h => Nat.not_le_of_gt h.1.1 (Nat.le_of_lt h.2.1),
+   fun h => Nat.not_le_of_gt h.1.1 h.2.1,
+   fun h => Nat.not_le_of_gt h.1.2 h.2.2,
+   fun h => Nat.not_le_of_gt h.1.2 h.2.2,
+   fun h => Nat.not_le_of_gt h.1.1 h.2.1⟩
+
+theorem mark_rule_at_next_read {B : Type} {fB : CarrierCounts × B → CarrierCounts → B}
+    {mark : B → Bool} {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀ g₀ : CarrierCounts} {b₀ : B} {τ : Nat}
+    (reg : ∀ t, mark (markCourse fB mark u v w reads ((s₀, b₀), g₀) t).1.2 = true ↔ τ ≤ t)
+    {r r' : Nat} (at_r : reads r = true) (past : τ ≤ r)
+    (lt : r < r') (quiet : ∀ j, r < j → j < r' → reads j = false) :
+    (markCourse fB mark u v w reads ((s₀, b₀), g₀) r').2 =
+      pool u w (markCourse fB mark u v w reads ((s₀, b₀), g₀) r).1.1 := by
+  have E := mark_eq_thinned fB mark u v w reads s₀ g₀ b₀ τ reg
+  have past' : τ ≤ (Thinned.course Beyond.lossStep u v w τ reads ((s₀, 0), g₀) r).1.2 :=
+    Eq.subst (motive := fun n => τ ≤ n) (E r).2.2.symm past
+  have rule1 : (markCourse fB mark u v w reads ((s₀, b₀), g₀) (r + 1)).2 =
+      pool u w (markCourse fB mark u v w reads ((s₀, b₀), g₀) r).1.1 :=
+    (E (r + 1)).2.1.trans ((Thinned.rule_read Thinned.lossStep_accrues at_r past').trans
+      (congrArg (pool u w) (E r).1.symm))
+  obtain ⟨d, hd⟩ := le_dest (Nat.succ_le_of_lt lt)
+  have quiet' : ∀ m, m < d → reads (r + 1 + m) = false := fun m hm =>
+    quiet (r + 1 + m) (Nat.lt_of_lt_of_le (Nat.lt_succ_self r) (Nat.le_add_right (r + 1) m))
+      (Nat.lt_of_lt_of_le (Nat.add_lt_add_left hm (r + 1)) (hd ▸ Nat.le_refl r'))
+  have kept := rule_kept_span (f := join select fB) (h := markRead mark u v w) (reads := reads)
+    ((s₀, b₀), g₀) (r + 1) d quiet'
+  exact ((congrArg (fun n => (markCourse fB mark u v w reads ((s₀, b₀), g₀) n).2) hd).trans kept).trans rule1
+
+/-- **One-span transition from `MiddleMinus`:** for any reading schedule `reads`, starting from
+`MiddleMinus` at reading step `r ≥ τ`, at the next reading step `r' > r`, the rule in force is
+`pool u w s_r` with `g_{r'}.carrier < g_{r'}.other`. If `s_{r'}.carrier ≤ s_{r'}.other`, the course is
+permanently turned-locked and admitted from `r' + 1`; if `s_{r'}.other < s_{r'}.carrier`, it enters
+`MiddlePlus` at `r'`. -/
+theorem mark_middle_minus_span {B : Type} {fB : CarrierCounts × B → CarrierCounts → B}
+    {mark : B → Bool} {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀ g₀ : CarrierCounts} {b₀ : B} {τ : Nat}
+    (reg : ∀ t, mark (markCourse fB mark u v w reads ((s₀, b₀), g₀) t).1.2 = true ↔ τ ≤ t)
+    (hc : w.carrier = u.other) (ho : w.other = u.carrier) (strict : u.other < u.carrier)
+    {r r' : Nat} (at_r : reads r = true) (past : τ ≤ r)
+    (lt : r < r') (quiet : ∀ j, r < j → j < r' → reads j = false) (at_r' : reads r' = true)
+    (mm : MiddleMinus ((markCourse fB mark u v w reads ((s₀, b₀), g₀) r).1.1,
+      (markCourse fB mark u v w reads ((s₀, b₀), g₀) r).2)) :
+    let M := markCourse fB mark u v w reads ((s₀, b₀), g₀)
+    ((M r').2 = pool u w (M r).1.1 ∧ (M r').2.carrier < (M r').2.other) ∧
+    (((M r').1.1.carrier ≤ (M r').1.1.other →
+        ∀ k, Locked (reverse order) disfavours (poolRead u w)
+            ((M (r' + 1 + k)).1.1, (M (r' + 1 + k)).2) ∧
+          disfavours (M (r' + 1 + k)).2 ∧ admits (M (r' + 1 + k)).1.1 = true) ∧
+     ((M r').1.1.other < (M r').1.1.carrier → MiddlePlus ((M r').1.1, (M r').2))) := by
+  intro M
+  have hRule : (M r').2 = pool u w (M r).1.1 :=
+    mark_rule_at_next_read reg at_r past lt quiet
+  have hStrict : (M r').2.carrier < (M r').2.other :=
+    Eq.subst (motive := fun g : CarrierCounts => g.carrier < g.other) hRule.symm
+      ((mirror_strict_disfavours_iff hc ho strict).mpr mm.1)
+  refine ⟨⟨hRule, hStrict⟩, fun fewer' => ?_, fun more' => ⟨more', hStrict⟩⟩
+  have E := mark_eq_thinned fB mark u v w reads s₀ g₀ b₀ τ reg
+  have past' : τ ≤ (Thinned.course Beyond.lossStep u v w τ reads ((s₀, 0), g₀) r').1.2 :=
+    Eq.subst (motive := fun n => τ ≤ n) (E r').2.2.symm (Nat.le_trans past (Nat.le_of_lt lt))
+  have dis_r' : disfavours (Thinned.course Beyond.lossStep u v w τ reads ((s₀, 0), g₀) r').2 :=
+    Eq.subst (motive := disfavours) (E r').2.1 (Nat.le_of_lt hStrict)
+  have fewer_r' : (Thinned.course Beyond.lossStep u v w τ reads ((s₀, 0), g₀) r').1.1.carrier ≤
+      (Thinned.course Beyond.lossStep u v w τ reads ((s₀, 0), g₀) r').1.1.other :=
+    Eq.subst (motive := fun x : CarrierCounts => x.carrier ≤ x.other) (E r').1 fewer'
+  have hTurn := (Thinned.turned_iff Thinned.lossStep_accrues hc ho strict at_r' past' dis_r').mpr fewer_r'
+  have hDis_r' : disfavours (M r').2 := Nat.le_of_lt hStrict
+  have hNext_le : (M (r' + 1)).1.1.carrier ≤ (M (r' + 1)).1.1.other := by
+    have hs1 : (M (r' + 1)).1.1 = select (M r').1.1 (M r').2 := by
+      have hP := paced_succ (f := join select fB) (h := markRead mark u v w) (reads := reads)
+        ((s₀, b₀), g₀) r'
+      exact (congrArg (fun q : (CarrierCounts × B) × CarrierCounts => q.1.1) hP).trans
+        (congrArg Prod.fst (turn_fst (join select fB) (markRead mark u v w) (reads r') _))
+    rw [hs1]
+    exact select_keeps_admitted fewer' hDis_r'
+  have hAdm := (mark_turned_admits_iff reg hc ho strict at_r' (Nat.le_trans past (Nat.le_of_lt lt))
+    fewer').mpr hNext_le
+  intro k
+  have hk : Locked (reverse order) disfavours (poolRead u w)
+      ((M (r' + (1 + k))).1.1, (M (r' + (1 + k))).2) := by
+    rw [(E (r' + (1 + k))).1, (E (r' + (1 + k))).2.1]
+    exact hTurn k
+  have hArith : r' + (1 + k) = r' + 1 + k := (Nat.add_assoc r' 1 k).symm
+  have hk' : Locked (reverse order) disfavours (poolRead u w)
+      ((M (r' + 1 + k)).1.1, (M (r' + 1 + k)).2) :=
+    Eq.subst (motive := fun n => Locked (reverse order) disfavours (poolRead u w)
+      ((M n).1.1, (M n).2)) hArith hk
+  exact ⟨hk', (hAdm k).1, (hAdm k).2⟩
+
+/-- **One-span transition from `MiddlePlus` (exact dual):** starting from `MiddlePlus` at reading
+step `r ≥ τ`, at the next reading step `r' > r`, the rule in force is `pool u w s_r` with
+`g_{r'}.other < g_{r'}.carrier`. If `s_{r'}.other ≤ s_{r'}.carrier`, strictness of `g_{r'}` forces
+`s_{r'+1}.other < s_{r'+1}.carrier` automatically, locking the course in capture with `admits = false`
+from `r' + 1`; if `s_{r'}.carrier < s_{r'}.other`, it flips back into `MiddleMinus` at `r'`. -/
+theorem mark_middle_plus_span {B : Type} {fB : CarrierCounts × B → CarrierCounts → B}
+    {mark : B → Bool} {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀ g₀ : CarrierCounts} {b₀ : B} {τ : Nat}
+    (reg : ∀ t, mark (markCourse fB mark u v w reads ((s₀, b₀), g₀) t).1.2 = true ↔ τ ≤ t)
+    (hc : w.carrier = u.other) (ho : w.other = u.carrier) (strict : u.other < u.carrier)
+    {r r' : Nat} (at_r : reads r = true) (past : τ ≤ r)
+    (lt : r < r') (quiet : ∀ j, r < j → j < r' → reads j = false) (at_r' : reads r' = true)
+    (mp : MiddlePlus ((markCourse fB mark u v w reads ((s₀, b₀), g₀) r).1.1,
+      (markCourse fB mark u v w reads ((s₀, b₀), g₀) r).2)) :
+    let M := markCourse fB mark u v w reads ((s₀, b₀), g₀)
+    ((M r').2 = pool u w (M r).1.1 ∧ (M r').2.other < (M r').2.carrier) ∧
+    (((M r').1.1.other ≤ (M r').1.1.carrier →
+        ∀ k, Locked order favours (poolRead u w)
+            ((M (r' + 1 + k)).1.1, (M (r' + 1 + k)).2) ∧
+          admits (M (r' + 1 + k)).1.1 = false) ∧
+     ((M r').1.1.carrier < (M r').1.1.other → MiddleMinus ((M r').1.1, (M r').2))) := by
+  intro M
+  have hRule : (M r').2 = pool u w (M r).1.1 :=
+    mark_rule_at_next_read reg at_r past lt quiet
+  have hStrict : (M r').2.other < (M r').2.carrier :=
+    Eq.subst (motive := fun g : CarrierCounts => g.other < g.carrier) hRule.symm
+      ((mirror_strict_favours_iff hc ho strict).mpr mp.1)
+  refine ⟨⟨hRule, hStrict⟩, fun more' => ?_, fun fewer' => ⟨fewer', hStrict⟩⟩
+  have past' : τ ≤ r' := Nat.le_trans past (Nat.le_of_lt lt)
+  have fav' : favours (M r').2 := Nat.le_of_lt hStrict
+  have hKept := (mark_kept_iff reg hc ho strict at_r' past' fav').mpr more'
+  have hStrictNext : (M (r' + 1)).1.1.other < (M (r' + 1)).1.1.carrier := by
+    have hs1 : (M (r' + 1)).1.1 = select (M r').1.1 (M r').2 := by
+      have hP := paced_succ (f := join select fB) (h := markRead mark u v w) (reads := reads)
+        ((s₀, b₀), g₀) r'
+      exact (congrArg (fun q : (CarrierCounts × B) × CarrierCounts => q.1.1) hP).trans
+        (congrArg Prod.fst (turn_fst (join select fB) (markRead mark u v w) (reads r') _))
+    rw [hs1]
+    show (M r').1.1.other * (M r').2.other < (M r').1.1.carrier * (M r').2.carrier
+    exact Nat.lt_of_lt_of_le
+      (Nat.mul_lt_mul_of_pos_left hStrict (M r').1.1.other_pos)
+      (Nat.mul_le_mul_right (M r').2.carrier more')
+  have hLockOut := mark_kept_locks_out reg hc ho strict at_r' past' fav' more' hStrictNext
+  intro k
+  have hArith : r' + (1 + k) = r' + 1 + k := (Nat.add_assoc r' 1 k).symm
+  exact ⟨Eq.subst (motive := fun n => Locked order favours (poolRead u w) ((M n).1.1, (M n).2))
+      hArith (hKept k),
+    Eq.subst (motive := fun n => admits (M n).1.1 = false) hArith (hLockOut k)⟩
+
+theorem nat_even_or_odd : ∀ n : Nat, (∃ m, n = 2 * m) ∨ (∃ m, n = 2 * m + 1)
+  | 0 => Or.inl ⟨0, rfl⟩
+  | n + 1 => match nat_even_or_odd n with
+    | Or.inl ⟨m, h⟩ => Or.inr ⟨m, congrArg (· + 1) h⟩
+    | Or.inr ⟨m, h⟩ => Or.inl ⟨m + 1, by rw [h]; rfl⟩
+
+theorem seq_ge_zero {seq : Nat → Nat} (hInc : ∀ n, seq n < seq (n + 1)) :
+    ∀ n, seq 0 ≤ seq n
+  | 0 => Nat.le_refl _
+  | n + 1 => Nat.le_trans (seq_ge_zero hInc n) (Nat.le_of_lt (hInc n))
+
+theorem nat_le_of_two_mul_le_two_mul_succ {a b : Nat} (h : 2 * a ≤ 2 * b + 1) : a ≤ b :=
+  match Nat.lt_or_ge b a with
+  | .inl lt =>
+    have h1 : 2 * b + 2 ≤ 2 * a := by
+      have h2 := Nat.mul_le_mul_left 2 (Nat.succ_le_of_lt lt)
+      exact Eq.subst (motive := fun n => n ≤ 2 * a) (rfl : 2 * (b + 1) = 2 * b + 2) h2
+    absurd (Nat.le_trans h1 h) (Nat.not_le_of_gt (Nat.lt_succ_self (2 * b + 1)))
+  | .inr le => le
+
+theorem nat_le_of_two_mul_succ_le_two_mul_succ_succ {a b : Nat} (h : 2 * a + 1 ≤ 2 * b + 2) : a ≤ b :=
+  match Nat.lt_or_ge b a with
+  | .inl lt =>
+    have h1 : 2 * b + 3 ≤ 2 * a + 1 := by
+      have h2 := Nat.add_le_add_right (Nat.mul_le_mul_left 2 (Nat.succ_le_of_lt lt)) 1
+      exact Eq.subst (motive := fun n => n ≤ 2 * a + 1)
+        (rfl : 2 * (b + 1) + 1 = 2 * b + 3) h2
+    absurd (Nat.le_trans h1 h) (Nat.not_le_of_gt (Nat.lt_succ_self (2 * b + 2)))
+  | .inr le => le
+
+theorem nat_le_of_two_mul_le_two_mul {a b : Nat} (h : 2 * a ≤ 2 * b) : a ≤ b :=
+  nat_le_of_two_mul_le_two_mul_succ (Nat.le_trans h (Nat.le_succ (2 * b)))
+
+/-- **Multi-reading alternation trichotomy:** starting from `MiddleMinus` at the first reading step
+`seq 0 ≥ τ` of a reading sequence `seq`, for every `n : Nat` the course has either:
+1. absorbed into permanent Turned Lock at some odd reading index `2 * m + 1 ≤ n`, or
+2. absorbed into permanent Capture Lock at some even reading index `2 * m + 2 ≤ n`, or
+3. strictly alternated between `MiddleMinus` (even `2 * m ≤ n`) and `MiddlePlus` (odd `2 * m + 1 ≤ n`). -/
+theorem mark_middle_band_trichotomy {B : Type} {fB : CarrierCounts × B → CarrierCounts → B}
+    {mark : B → Bool} {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀ g₀ : CarrierCounts} {b₀ : B} {τ : Nat}
+    (reg : ∀ t, mark (markCourse fB mark u v w reads ((s₀, b₀), g₀) t).1.2 = true ↔ τ ≤ t)
+    (hc : w.carrier = u.other) (ho : w.other = u.carrier) (strict : u.other < u.carrier)
+    (seq : Nat → Nat) (hStart : τ ≤ seq 0) (hInc : ∀ n, seq n < seq (n + 1))
+    (hReads : ∀ n, reads (seq n) = true)
+    (hQuiet : ∀ n j, seq n < j → j < seq (n + 1) → reads j = false)
+    (mm0 : MiddleMinus ((markCourse fB mark u v w reads ((s₀, b₀), g₀) (seq 0)).1.1,
+      (markCourse fB mark u v w reads ((s₀, b₀), g₀) (seq 0)).2)) :
+    let M := markCourse fB mark u v w reads ((s₀, b₀), g₀)
+    ∀ n : Nat,
+      (∃ m, 2 * m + 1 ≤ n ∧
+          ∀ k, Locked (reverse order) disfavours (poolRead u w)
+              ((M (seq (2 * m + 1) + 1 + k)).1.1, (M (seq (2 * m + 1) + 1 + k)).2) ∧
+            disfavours (M (seq (2 * m + 1) + 1 + k)).2 ∧
+            admits (M (seq (2 * m + 1) + 1 + k)).1.1 = true) ∨
+      (∃ m, 2 * m + 2 ≤ n ∧
+          ∀ k, Locked order favours (poolRead u w)
+              ((M (seq (2 * m + 2) + 1 + k)).1.1, (M (seq (2 * m + 2) + 1 + k)).2) ∧
+            admits (M (seq (2 * m + 2) + 1 + k)).1.1 = false) ∨
+      ((∀ m, 2 * m ≤ n → MiddleMinus ((M (seq (2 * m))).1.1, (M (seq (2 * m))).2)) ∧
+       (∀ m, 2 * m + 1 ≤ n → MiddlePlus ((M (seq (2 * m + 1))).1.1, (M (seq (2 * m + 1))).2))) := by
+  intro M n
+  induction n with
+  | zero =>
+    refine Or.inr (Or.inr ⟨fun m hm => ?_, fun m hm => ?_⟩)
+    · match m with
+      | 0 => exact mm0
+      | m + 1 => exact absurd hm (Nat.not_le_of_gt (Nat.zero_lt_succ (2 * m + 1)))
+    · exact absurd hm (Nat.not_le_of_gt (Nat.zero_lt_succ (2 * m)))
+  | succ n ih =>
+    match ih with
+    | Or.inl ⟨m, hle, hLock⟩ => exact Or.inl ⟨m, Nat.le_succ_of_le hle, hLock⟩
+    | Or.inr (Or.inl ⟨m, hle, hLock⟩) => exact Or.inr (Or.inl ⟨m, Nat.le_succ_of_le hle, hLock⟩)
+    | Or.inr (Or.inr ⟨hEven, hOdd⟩) =>
+      match nat_even_or_odd n with
+      | Or.inl ⟨m, hn⟩ =>
+        have hle_n : 2 * m ≤ n := Nat.le_of_eq hn.symm
+        have mm : MiddleMinus ((M (seq (2 * m))).1.1, (M (seq (2 * m))).2) := hEven m hle_n
+        have hSpan := mark_middle_minus_span reg hc ho strict
+          (hReads (2 * m)) (Nat.le_trans hStart (seq_ge_zero hInc (2 * m)))
+          (hInc (2 * m)) (hQuiet (2 * m)) (hReads (2 * m + 1)) mm
+        match Nat.lt_or_ge (M (seq (2 * m + 1))).1.1.other (M (seq (2 * m + 1))).1.1.carrier with
+        | .inl hMore =>
+          have mpNext : MiddlePlus ((M (seq (2 * m + 1))).1.1, (M (seq (2 * m + 1))).2) :=
+            hSpan.2.2 hMore
+          refine Or.inr (Or.inr ⟨fun m' hm' => ?_, fun m' hm' => ?_⟩)
+          · have hle' : 2 * m' ≤ 2 * m + 1 := hn ▸ hm'
+            exact hEven m' (hn ▸ Nat.mul_le_mul_left 2 (nat_le_of_two_mul_le_two_mul_succ hle'))
+          · have hle' : 2 * m' + 1 ≤ 2 * m + 1 := hn ▸ hm'
+            have hmle : m' ≤ m := nat_le_of_two_mul_le_two_mul_succ (Nat.le_trans (Nat.le_succ (2 * m')) hle')
+            match Nat.eq_or_lt_of_le hmle with
+            | .inl heq => exact heq ▸ mpNext
+            | .inr hlt =>
+              have hle_prev : 2 * m' + 1 ≤ n := by
+                rw [hn]
+                have h2 := Nat.mul_le_mul_left 2 (Nat.succ_le_of_lt hlt)
+                exact Nat.le_trans (Nat.le_succ _) (Eq.subst (motive := fun k => k ≤ 2 * m)
+                  (rfl : 2 * (m' + 1) = 2 * m' + 2) h2)
+              exact hOdd m' hle_prev
+        | .inr hFewer =>
+          exact Or.inl ⟨m, hn ▸ Nat.le_refl (2 * m + 1), hSpan.2.1 hFewer⟩
+      | Or.inr ⟨m, hn⟩ =>
+        have hle_n : 2 * m + 1 ≤ n := Nat.le_of_eq hn.symm
+        have mp : MiddlePlus ((M (seq (2 * m + 1))).1.1, (M (seq (2 * m + 1))).2) := hOdd m hle_n
+        have hSpan := mark_middle_plus_span reg hc ho strict
+          (hReads (2 * m + 1)) (Nat.le_trans hStart (seq_ge_zero hInc (2 * m + 1)))
+          (hInc (2 * m + 1)) (hQuiet (2 * m + 1)) (hReads (2 * m + 2)) mp
+        match Nat.lt_or_ge (M (seq (2 * m + 2))).1.1.carrier (M (seq (2 * m + 2))).1.1.other with
+        | .inl hFewer =>
+          have mmNext : MiddleMinus ((M (seq (2 * m + 2))).1.1, (M (seq (2 * m + 2))).2) :=
+            hSpan.2.2 hFewer
+          refine Or.inr (Or.inr ⟨fun m' hm' => ?_, fun m' hm' => ?_⟩)
+          · have hle' : 2 * m' ≤ 2 * m + 2 := Eq.subst (motive := fun k => 2 * m' ≤ k + 1) hn hm'
+            have hmle : m' ≤ m + 1 := nat_le_of_two_mul_le_two_mul
+              (Eq.subst (motive := fun k => 2 * m' ≤ k) (rfl : 2 * m + 2 = 2 * (m + 1)) hle')
+            match Nat.eq_or_lt_of_le hmle with
+            | .inl heq => exact heq ▸ mmNext
+            | .inr hlt =>
+              have hle_prev : 2 * m' ≤ n := by
+                rw [hn]
+                exact Nat.le_trans (Nat.mul_le_mul_left 2 (Nat.le_of_lt_succ hlt)) (Nat.le_succ (2 * m))
+              exact hEven m' hle_prev
+          · have hle' : 2 * m' + 1 ≤ 2 * m + 2 := Eq.subst (motive := fun k => 2 * m' + 1 ≤ k + 1) hn hm'
+            have hmle : m' ≤ m := nat_le_of_two_mul_succ_le_two_mul_succ_succ hle'
+            exact hOdd m' (Eq.subst (motive := fun k => 2 * m' + 1 ≤ k) hn.symm
+              (Nat.add_le_add_right (Nat.mul_le_mul_left 2 hmle) 1))
+        | .inr hMore =>
+          exact Or.inr (Or.inl ⟨m, hn ▸ Nat.le_refl (2 * m + 2), hSpan.2.1 hMore⟩)
+
+/-- **Order monotonicity of one selection step.** -/
+theorem select_order_mono {s₁ s₂ g₁ g₂ : CarrierCounts} (hs : order.le s₁ s₂) (hg : order.le g₁ g₂) :
+    order.le (select s₁ g₁) (select s₂ g₂) :=
+  select_mono hs hg
+
+/-- **Order preservation along the post-registration paced pool.** -/
+theorem paced_post_order_mono {u w : CarrierCounts} (hc : w.carrier = u.other)
+    (ho : w.other = u.carrier) (strict : u.other < u.carrier) (reads : Nat → Bool)
+    {s₁ s₂ g₁ g₂ : CarrierCounts} (hs : order.le s₁ s₂) (hg : order.le g₁ g₂) (k : Nat) :
+    order.le (paced select (poolRead u w) reads (s₁, g₁) k).1
+        (paced select (poolRead u w) reads (s₂, g₂) k).1 ∧
+      order.le (paced select (poolRead u w) reads (s₁, g₁) k).2
+        (paced select (poolRead u w) reads (s₂, g₂) k).2 :=
+  order_kept (fun _ _ _ _ => select_order_mono) (pool_reads (mirror_le hc ho strict)) hs hg k
+
+/-- **Order preservation across two post-registration `markCourse` runs.** -/
+theorem mark_post_order_mono {B₁ B₂ : Type}
+    {fB₁ : CarrierCounts × B₁ → CarrierCounts → B₁}
+    {fB₂ : CarrierCounts × B₂ → CarrierCounts → B₂}
+    {mark₁ : B₁ → Bool} {mark₂ : B₂ → Bool}
+    {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀₁ g₀₁ s₀₂ g₀₂ : CarrierCounts} {b₀₁ : B₁} {b₀₂ : B₂} {τ r₀ : Nat}
+    (reg₁ : ∀ t, mark₁ (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) t).1.2 = true ↔ τ ≤ t)
+    (reg₂ : ∀ t, mark₂ (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) t).1.2 = true ↔ τ ≤ t)
+    (hc : w.carrier = u.other) (ho : w.other = u.carrier) (strict : u.other < u.carrier)
+    (past : τ ≤ r₀)
+    (hs : order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).1.1
+      (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).1.1)
+    (hg : order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).2
+      (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).2)
+    {r' : Nat} (hle : r₀ ≤ r') :
+    order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r').1.1
+        (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r').1.1 ∧
+      order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r').2
+        (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r').2 := by
+  obtain ⟨k, hk⟩ := le_dest hle
+  rw [hk]
+  have E₁ := mark_eq_thinned fB₁ mark₁ u v w reads s₀₁ g₀₁ b₀₁ τ reg₁
+  have E₂ := mark_eq_thinned fB₂ mark₂ u v w reads s₀₂ g₀₂ b₀₂ τ reg₂
+  have past₁ : τ ≤ (Thinned.course Beyond.lossStep u v w τ reads ((s₀₁, 0), g₀₁) r₀).1.2 :=
+    Eq.subst (motive := fun n => τ ≤ n) (E₁ r₀).2.2.symm past
+  have past₂ : τ ≤ (Thinned.course Beyond.lossStep u v w τ reads ((s₀₂, 0), g₀₂) r₀).1.2 :=
+    Eq.subst (motive := fun n => τ ≤ n) (E₂ r₀).2.2.symm past
+  have P₁ := Thinned.past_course (u := u) (v := v) (w := w) (reads := reads)
+    Thinned.lossStep_accrues past₁ k
+  have P₂ := Thinned.past_course (u := u) (v := v) (w := w) (reads := reads)
+    Thinned.lossStep_accrues past₂ k
+  have eq₁ : ((markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) (r₀ + k)).1.1,
+        (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) (r₀ + k)).2) =
+      paced select (poolRead u w) (fun j => reads (r₀ + j))
+        ((markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).1.1,
+         (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).2) k := by
+    rw [(E₁ (r₀ + k)).1, (E₁ (r₀ + k)).2.1, (E₁ r₀).1, (E₁ r₀).2.1]
+    exact P₁
+  have eq₂ : ((markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) (r₀ + k)).1.1,
+        (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) (r₀ + k)).2) =
+      paced select (poolRead u w) (fun j => reads (r₀ + j))
+        ((markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).1.1,
+         (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).2) k := by
+    rw [(E₂ (r₀ + k)).1, (E₂ (r₀ + k)).2.1, (E₂ r₀).1, (E₂ r₀).2.1]
+    exact P₂
+  have hMono := paced_post_order_mono hc ho strict (fun j => reads (r₀ + j)) hs hg k
+  exact ⟨Eq.subst (motive := fun p : CarrierCounts × CarrierCounts =>
+      order.le p.1 (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) (r₀ + k)).1.1) eq₁.symm
+      (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts =>
+        order.le (paced select (poolRead u w) (fun j => reads (r₀ + j))
+          ((markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).1.1,
+           (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).2) k).1 q.1) eq₂.symm hMono.1),
+    Eq.subst (motive := fun p : CarrierCounts × CarrierCounts =>
+      order.le p.2 (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) (r₀ + k)).2) eq₁.symm
+      (Eq.subst (motive := fun q : CarrierCounts × CarrierCounts =>
+        order.le (paced select (poolRead u w) (fun j => reads (r₀ + j))
+          ((markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).1.1,
+           (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).2) k).2 q.2) eq₂.symm hMono.2)⟩
+
+/-- **Monotone partition across ordered post-registration courses:** where course 1 is not above
+course 2 in share and rule at `r₀ ≥ τ`, at every later step `r' ≥ r₀`, turned lock of course 2
+implies turned lock of course 1, and capture lock of course 1 implies capture lock of course 2. -/
+theorem mark_middle_band_monotone_partition {B₁ B₂ : Type}
+    {fB₁ : CarrierCounts × B₁ → CarrierCounts → B₁}
+    {fB₂ : CarrierCounts × B₂ → CarrierCounts → B₂}
+    {mark₁ : B₁ → Bool} {mark₂ : B₂ → Bool}
+    {u v w : CarrierCounts} {reads : Nat → Bool}
+    {s₀₁ g₀₁ s₀₂ g₀₂ : CarrierCounts} {b₀₁ : B₁} {b₀₂ : B₂} {τ r₀ : Nat}
+    (reg₁ : ∀ t, mark₁ (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) t).1.2 = true ↔ τ ≤ t)
+    (reg₂ : ∀ t, mark₂ (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) t).1.2 = true ↔ τ ≤ t)
+    (hc : w.carrier = u.other) (ho : w.other = u.carrier) (strict : u.other < u.carrier)
+    (past : τ ≤ r₀)
+    (hs : order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).1.1
+      (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).1.1)
+    (hg : order.le (markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁) r₀).2
+      (markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂) r₀).2)
+    {r' : Nat} (hle : r₀ ≤ r') :
+    let M₁ := markCourse fB₁ mark₁ u v w reads ((s₀₁, b₀₁), g₀₁)
+    let M₂ := markCourse fB₂ mark₂ u v w reads ((s₀₂, b₀₂), g₀₂)
+    (((M₂ r').1.1.carrier ≤ (M₂ r').1.1.other ∧ disfavours (M₂ r').2) →
+      ((M₁ r').1.1.carrier ≤ (M₁ r').1.1.other ∧ disfavours (M₁ r').2)) ∧
+    (((M₁ r').1.1.other ≤ (M₁ r').1.1.carrier ∧ favours (M₁ r').2) →
+      ((M₂ r').1.1.other ≤ (M₂ r').1.1.carrier ∧ favours (M₂ r').2)) := by
+  intro M₁ M₂
+  obtain ⟨hs', hg'⟩ := mark_post_order_mono reg₁ reg₂ hc ho strict past hs hg hle
+  constructor
+  · intro ⟨hTurn₂, hDis₂⟩
+    have hChain : (M₁ r').1.1.carrier * (M₂ r').1.1.other ≤ (M₁ r').1.1.other * (M₂ r').1.1.other :=
+      Nat.le_trans hs'
+        (Nat.le_trans (Nat.mul_le_mul_right (M₁ r').1.1.other hTurn₂)
+          (Nat.le_of_eq (Nat.mul_comm (M₂ r').1.1.other (M₁ r').1.1.other)))
+    exact ⟨Nat.le_of_mul_le_mul_right hChain (M₂ r').1.1.other_pos, lower hg' hDis₂⟩
+  · intro ⟨hCap₁, hFav₁⟩
+    have hChain : (M₂ r').1.1.other * (M₁ r').1.1.other ≤ (M₂ r').1.1.carrier * (M₁ r').1.1.other :=
+      Nat.le_trans (Nat.le_trans (Nat.mul_le_mul_left (M₂ r').1.1.other hCap₁)
+        (Nat.le_of_eq (Nat.mul_comm (M₂ r').1.1.other (M₁ r').1.1.carrier))) hs'
+    exact ⟨Nat.le_of_mul_le_mul_right hChain (M₁ r').1.1.other_pos, upper hg' hFav₁⟩
+
+end MiddleBand
+
 /-! ## Part A.3: the race -/
 
 section Race
@@ -1052,6 +1525,396 @@ theorem race_exo_no_false_turn :
     hi Second.oneToOne lo (fun _ => true) ((⟨1, 20, Nat.zero_lt_succ 19⟩, (14, emergentLoop.init)), hi) t).2
   rw [(hPre t).2]
   exact hFavPre t
+
+/-! ## Part A.4b: four separating witnesses in the middle band -/
+
+/-- Periodic two-step reading cadence `false, true, false, true, ...`. -/
+def cadence2 : Nat → Bool
+  | 0 => false
+  | 1 => true
+  | n + 2 => cadence2 n
+
+theorem cadence2_mod (j : Nat) : cadence2 (2 * j) = false ∧ cadence2 (2 * j + 1) = true := by
+  induction j with
+  | zero => exact ⟨rfl, rfl⟩
+  | succ j ih =>
+    have h0 : 2 * (j + 1) = 2 * j + 2 := rfl
+    have h1 : 2 * j + 2 + 1 = (2 * j + 1) + 2 := Nat.add_right_comm (2 * j) 2 1
+    rw [h0, h1]
+    exact ⟨ih.1, ih.2⟩
+
+/-- `cadence2` aligns with the end of every two-step span `2 * j ≤ t < 2 * (j + 1)`
+(`Becoming.PacedStock.ReadAtSpanEnd`). -/
+theorem cadence2_readAtSpanEnd : PacedStock.ReadAtSpanEnd (fun j => 2 * j) cadence2 := by
+  intro j t hle hlt
+  obtain ⟨m, hm⟩ := le_dest hle
+  rw [hm]
+  match m with
+  | 0 =>
+    refine ⟨fun h => absurd h (fun e => Bool.noConfusion ((cadence2_mod j).1.symm.trans e)),
+      fun h => absurd h (Nat.ne_of_lt (Nat.add_lt_add_left (by decide : 0 + 1 < 2) (2 * j)))⟩
+  | 1 => exact ⟨fun _ => rfl, fun _ => (cadence2_mod j).2⟩
+  | m + 2 =>
+    have hlt' : 2 * j + (m + 2) < 2 * j + 2 := hm ▸ hlt
+    exact absurd (Naturals.lt_of_add_lt_add_left hlt') (Nat.not_lt_of_ge (Nat.le_add_left 2 m))
+
+theorem wEndo_stepStock_safe_ge {x : Nat} (hx : 6 ≤ x) : wEndo.stepStock x .safe = x := by
+  obtain ⟨d, hd⟩ := le_dest hx
+  rw [hd]
+  have hblt : Nat.blt (6 + d) 6 = false :=
+    ListTests.false_iff_not.mpr (fun h => Nat.not_le_of_gt (CoreHelpers.natBlt_true_iff.mp h) (Nat.le_add_right 6 d))
+  show (if Nat.blt (6 + d) 6 = true then 0 else (6 + d - 1) + endoRenew (6 + d - 1)) = 6 + d
+  rw [if_neg (fun h => Bool.noConfusion (hblt.symm.trans h))]
+  have hsub : 6 + d - 1 = 5 + d := by
+    show 6 + d - 1 = 5 + d
+    rw [Nat.add_comm 6 d]
+    show d + (5 + 1) - 1 = 5 + d
+    rw [← Nat.add_assoc, Naturals.add_sub_cancel, Nat.add_comm]
+  rw [hsub]
+  have hren : endoRenew (5 + d) = 1 := if_pos (Nat.le_add_right 5 d)
+  rw [hren, Nat.add_assoc, Nat.add_comm d 1, ← Nat.add_assoc]
+
+theorem emergentRace_stabilizes_from (others : Nat) (hpos : 0 < others) (reads : Nat → Bool) (T : Nat)
+    (hRes : (emergentRace wEndo others hpos reads T).1.2.2.phase = .resolved)
+    (hPos : ∀ i, (emergentRace wEndo others hpos reads T).1.2.2.pos i = endoPostPos i)
+    (hCrit : wEndo.xCrit ≤ (emergentRace wEndo others hpos reads T).1.2.1)
+    (hAdm : ∀ k, admits (emergentRace wEndo others hpos reads (T + k)).1.1 = true) :
+    ∀ k, (emergentRace wEndo others hpos reads (T + k)).1.2.1 =
+        (emergentRace wEndo others hpos reads T).1.2.1 ∧
+      (emergentRace wEndo others hpos reads (T + k)).1.2.2.phase = .resolved ∧
+      (∀ i, (emergentRace wEndo others hpos reads (T + k)).1.2.2.pos i = endoPostPos i) ∧
+      emergentLoop.act (emergentRace wEndo others hpos reads (T + k)).1.2.2 = .safe
+  | 0 => by
+    have hWeighedExt : Weighting.weighed emergenceItems
+        (emergentRace wEndo others hpos reads T).1.2.2.pos cExt =
+        Weighting.weighed emergenceItems endoPostPos cExt :=
+      total_congr (fun i => by show cond (cExt i) _ 0 = cond (cExt i) _ 0; rw [hPos i]) emergenceItems
+    have hWeighedSafe : Weighting.weighed emergenceItems
+        (emergentRace wEndo others hpos reads T).1.2.2.pos cSafe =
+        Weighting.weighed emergenceItems endoPostPos cSafe :=
+      total_congr (fun i => by show cond (cSafe i) _ 0 = cond (cSafe i) _ 0; rw [hPos i]) emergenceItems
+    have hSel : selectByOrder (emergentRace wEndo others hpos reads T).1.2.2.pos = .safe := by
+      dsimp only [selectByOrder]; rw [hWeighedExt, hWeighedSafe]; rfl
+    have hAct : emergentLoop.act (emergentRace wEndo others hpos reads T).1.2.2 = .safe := by
+      show emergentAct (emergentRace wEndo others hpos reads T).1.2.2 = .safe
+      dsimp only [emergentAct]; rw [hRes, hSel]
+    exact ⟨rfl, hRes, hPos, hAct⟩
+  | k + 1 => by
+    obtain ⟨hx, hph, hpos', hact⟩ := emergentRace_stabilizes_from others hpos reads T hRes hPos hCrit hAdm k
+    have hStepEq : (emergentRace wEndo others hpos reads (T + (k + 1))).1.2 =
+        gatedStep wEndo emergentLoop (admits (emergentRace wEndo others hpos reads (T + k)).1.1)
+          (emergentRace wEndo others hpos reads (T + k)).1.2 := by
+      have hG := race_stock_is_gated wEndo emergentLoop registers hi Second.oneToOne lo reads
+        ⟨1, others, hpos⟩ hi 14
+      rw [hG (T + (k + 1)), hG (T + k)]
+      rfl
+    have hxStep : (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.1 =
+        (emergentRace wEndo others hpos reads T).1.2.1 := by
+      rw [congrArg Prod.fst hStepEq]
+      show wEndo.stepStock (emergentRace wEndo others hpos reads (T + k)).1.2.1
+          (gate (admits (emergentRace wEndo others hpos reads (T + k)).1.1)
+            (emergentLoop.act (emergentRace wEndo others hpos reads (T + k)).1.2.2)) =
+        (emergentRace wEndo others hpos reads T).1.2.1
+      rw [hAdm k, hact, gate]
+      exact (wEndo_stepStock_safe_ge (hx ▸ hCrit)).trans hx
+    have hph' : (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2.phase = .resolved := by
+      rw [congrArg Prod.snd hStepEq]
+      show nextPhase (emergentRace wEndo others hpos reads (T + k)).1.2.2.phase _ _ = .resolved
+      rw [hph]; rfl
+    have hpos'' : ∀ i, (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2.pos i = endoPostPos i := by
+      intro i
+      rw [congrArg Prod.snd hStepEq]
+      show (emergentRace wEndo others hpos reads (T + k)).1.2.2.pos i +
+          cond (emergentPulse (emergentRace wEndo others hpos reads (T + k)).1.2.2 _ i) 2 0 = endoPostPos i
+      have hpulse : ∀ y, emergentPulse (emergentRace wEndo others hpos reads (T + k)).1.2.2 y i = false :=
+        fun y => by cases i <;> dsimp only [emergentPulse] <;> rw [hph]
+      rw [hpulse _, hpos' i]; rfl
+    have hWeighedExt : Weighting.weighed emergenceItems
+        (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2.pos cExt =
+        Weighting.weighed emergenceItems endoPostPos cExt :=
+      total_congr (fun i => by show cond (cExt i) _ 0 = cond (cExt i) _ 0; rw [hpos'' i]) emergenceItems
+    have hWeighedSafe : Weighting.weighed emergenceItems
+        (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2.pos cSafe =
+        Weighting.weighed emergenceItems endoPostPos cSafe :=
+      total_congr (fun i => by show cond (cSafe i) _ 0 = cond (cSafe i) _ 0; rw [hpos'' i]) emergenceItems
+    have hSel : selectByOrder (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2.pos = .safe := by
+      dsimp only [selectByOrder]; rw [hWeighedExt, hWeighedSafe]; rfl
+    have hact' : emergentLoop.act (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2 = .safe := by
+      show emergentAct (emergentRace wEndo others hpos reads (T + (k + 1))).1.2.2 = .safe
+      dsimp only [emergentAct]; rw [hph', hSel]
+    exact ⟨hxStep, hph', hpos'', hact'⟩
+
+def wMiddleLockRace := emergentRace wEndo 17 (Nat.zero_lt_succ 16) (fun _ => true)
+def wMiddleAlt5Race := emergentRace wEndo 18 (Nat.zero_lt_succ 17) (fun _ => true)
+def wMiddleAlt3Race := emergentRace wEndo 19 (Nat.zero_lt_succ 18) (fun _ => true)
+def wMiddleSpanRecoveryRace := emergentRace wEndo 61 (Nat.zero_lt_succ 60) cadence2
+
+/-- **Middle-band exit to capture lock (`race_middle_exits_to_lock`):** `others = 17`, `wEndo`,
+every-step reading. Registers from `4`, enters `MiddleMinus` at `4`, flips to `MiddlePlus` at `5`,
+exits into Capture Lock at `6`, and is permanently capture-locked with `admits = false` from `7`,
+breaching `stock 8 = 3 < 6` and `stock 9 = 0 < 6`. -/
+theorem race_middle_exits_to_lock :
+    (∀ t, registers (wMiddleLockRace t).1.2.2 = true ↔ 4 ≤ t) ∧
+    MiddleMinus ((wMiddleLockRace 4).1.1, (wMiddleLockRace 4).2) ∧
+    MiddlePlus ((wMiddleLockRace 5).1.1, (wMiddleLockRace 5).2) ∧
+    ((wMiddleLockRace 6).1.1.other ≤ (wMiddleLockRace 6).1.1.carrier ∧ favours (wMiddleLockRace 6).2) ∧
+    (∀ k, Locked order favours (poolRead hi lo) ((wMiddleLockRace (7 + k)).1.1, (wMiddleLockRace (7 + k)).2) ∧
+      admits (wMiddleLockRace (7 + k)).1.1 = false) ∧
+    (wMiddleLockRace 8).1.2.1 = 3 ∧
+    (wMiddleLockRace 9).1.2.1 = 0 ∧
+    (wMiddleLockRace 8).1.2.1 < wEndo.xCrit ∧
+    (wMiddleLockRace 9).1.2.1 < wEndo.xCrit := by
+  have hReg : ∀ t, registers (wMiddleLockRace t).1.2.2 = true ↔ 4 ≤ t :=
+    reg4_of_race wEndo 17 _ _ rfl rfl rfl rfl rfl
+  have hMM4 : MiddleMinus ((wMiddleLockRace 4).1.1, (wMiddleLockRace 4).2) :=
+    ⟨CoreHelpers.natBlt_true_iff.mp rfl, CoreHelpers.natBlt_true_iff.mp rfl⟩
+  have hSpan45 := mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict
+    (r := 4) (r' := 5) rfl (Nat.le_refl 4) (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM4
+  have hMP5 : MiddlePlus ((wMiddleLockRace 5).1.1, (wMiddleLockRace 5).2) :=
+    hSpan45.2.2 (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hSpan56 := mark_middle_plus_span hReg hi_lo_hc hi_lo_ho hi_strict
+    (r := 5) (r' := 6) rfl (by decide : 4 ≤ 5) (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMP5
+  have hMore6 : (wMiddleLockRace 6).1.1.other ≤ (wMiddleLockRace 6).1.1.carrier :=
+    Nat.le_of_ble_eq_true rfl
+  have hCap6 : (wMiddleLockRace 6).1.1.other ≤ (wMiddleLockRace 6).1.1.carrier ∧ favours (wMiddleLockRace 6).2 :=
+    ⟨hMore6, Nat.le_of_lt hSpan56.1.2⟩
+  have hLock7 := hSpan56.2.1 hMore6
+  have hAdmFalse : ∀ k, admits (wMiddleLockRace (5 + k)).1.1 = false
+    | 0 => rfl
+    | 1 => rfl
+    | k + 2 => by
+      have hArith : (7 + k : Nat) = 5 + (k + 2) := by
+        rw [Nat.add_comm 5 (k + 2), Nat.add_assoc k 2 5, Nat.add_comm 2 5, ← Nat.add_assoc, Nat.add_comm k 7]
+      exact Eq.subst (motive := fun n => admits (wMiddleLockRace n).1.1 = false) hArith (hLock7 k).2
+  have hStock8 : (wMiddleLockRace 8).1.2.1 = 3 := by
+    change (emergentRace wEndo 17 (Nat.zero_lt_succ 16) (fun _ => true) 8).1.2.1 = 3
+    rw [race_stock_is_gated]
+    have h5 : (5 + 3 : Nat) = 8 := rfl
+    rw [← h5, lockout_pure_extract wEndo emergentLoop _ 14 5 (fun k hk => by
+      obtain ⟨j, hj⟩ := le_dest hk; rw [hj]; exact hAdmFalse j) 3]
+    rw [← race_stock_is_gated]
+    rfl
+  have hStock9 : (wMiddleLockRace 9).1.2.1 = 0 := by
+    change (emergentRace wEndo 17 (Nat.zero_lt_succ 16) (fun _ => true) 9).1.2.1 = 0
+    rw [race_stock_is_gated]
+    have h5 : (5 + 4 : Nat) = 9 := rfl
+    rw [← h5, lockout_pure_extract wEndo emergentLoop _ 14 5 (fun k hk => by
+      obtain ⟨j, hj⟩ := le_dest hk; rw [hj]; exact hAdmFalse j) 4]
+    rw [← race_stock_is_gated]
+    rfl
+  exact ⟨hReg, hMM4, hMP5, hCap6, hLock7, hStock8, hStock9,
+    hStock8 ▸ (by decide : 3 < 6), hStock9 ▸ (by decide : 0 < 6)⟩
+
+/-- **Five-step alternation turning and surviving (`race_middle_alternates_and_turns`):** `others = 18`,
+`wEndo`, every-step reading. Registers from `4`, alternates `4: MiddleMinus`, `5: MiddlePlus`,
+`6: MiddleMinus`, `7: MiddlePlus`, `8: MiddleMinus`, turns permanently from `9` (and `Locked` from `10`),
+losing reserve across temporary lockouts (`admits 5 = false`, `admits 7 = false`, `stock 4 = 10`,
+`stock 8 = 6`), yet stays at `stock = 6 ≥ wEndo.xCrit` forever. -/
+theorem race_middle_alternates_and_turns :
+    (∀ t, registers (wMiddleAlt5Race t).1.2.2 = true ↔ 4 ≤ t) ∧
+    MiddleMinus ((wMiddleAlt5Race 4).1.1, (wMiddleAlt5Race 4).2) ∧
+    MiddlePlus ((wMiddleAlt5Race 5).1.1, (wMiddleAlt5Race 5).2) ∧
+    MiddleMinus ((wMiddleAlt5Race 6).1.1, (wMiddleAlt5Race 6).2) ∧
+    MiddlePlus ((wMiddleAlt5Race 7).1.1, (wMiddleAlt5Race 7).2) ∧
+    MiddleMinus ((wMiddleAlt5Race 8).1.1, (wMiddleAlt5Race 8).2) ∧
+    (∀ k, disfavours (wMiddleAlt5Race (9 + k)).2 ∧ admits (wMiddleAlt5Race (9 + k)).1.1 = true) ∧
+    (∀ k, Locked (reverse order) disfavours (poolRead hi lo)
+      ((wMiddleAlt5Race (10 + k)).1.1, (wMiddleAlt5Race (10 + k)).2)) ∧
+    admits (wMiddleAlt5Race 5).1.1 = false ∧
+    admits (wMiddleAlt5Race 7).1.1 = false ∧
+    (wMiddleAlt5Race 4).1.2.1 = 10 ∧
+    (wMiddleAlt5Race 8).1.2.1 = 6 ∧
+    (∀ t, wEndo.xCrit ≤ (wMiddleAlt5Race t).1.2.1) ∧
+    (∀ t, 8 ≤ t → (wMiddleAlt5Race t).1.2.1 = 6) := by
+  have hReg : ∀ t, registers (wMiddleAlt5Race t).1.2.2 = true ↔ 4 ≤ t :=
+    reg4_of_race wEndo 18 _ _ rfl rfl rfl rfl rfl
+  have hMM4 : MiddleMinus ((wMiddleAlt5Race 4).1.1, (wMiddleAlt5Race 4).2) :=
+    ⟨CoreHelpers.natBlt_true_iff.mp rfl, CoreHelpers.natBlt_true_iff.mp rfl⟩
+  have hMP5 : MiddlePlus ((wMiddleAlt5Race 5).1.1, (wMiddleAlt5Race 5).2) :=
+    (mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 4) (r' := 5) rfl (Nat.le_refl 4)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM4).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hMM6 : MiddleMinus ((wMiddleAlt5Race 6).1.1, (wMiddleAlt5Race 6).2) :=
+    (mark_middle_plus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 5) (r' := 6) rfl (by decide : 4 ≤ 5)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMP5).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hMP7 : MiddlePlus ((wMiddleAlt5Race 7).1.1, (wMiddleAlt5Race 7).2) :=
+    (mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 6) (r' := 7) rfl (by decide : 4 ≤ 6)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM6).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hMM8 : MiddleMinus ((wMiddleAlt5Race 8).1.1, (wMiddleAlt5Race 8).2) :=
+    (mark_middle_plus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 7) (r' := 8) rfl (by decide : 4 ≤ 7)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMP7).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hSpan89 := mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 8) (r' := 9) rfl (by decide : 4 ≤ 8)
+    (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM8
+  have hFewer8 : (wMiddleAlt5Race 8).1.1.carrier ≤ (wMiddleAlt5Race 8).1.1.other := Nat.le_of_lt hMM8.1
+  have hFewer9 : (wMiddleAlt5Race 9).1.1.carrier ≤ (wMiddleAlt5Race 9).1.1.other := Nat.le_of_ble_eq_true rfl
+  have hTurn9 := (mark_turned_admits_iff hReg hi_lo_hc hi_lo_ho hi_strict (r := 8) rfl
+    (by decide : 4 ≤ 8) hFewer8).mpr hFewer9
+  have hLock10 : ∀ k, Locked (reverse order) disfavours (poolRead hi lo)
+      ((wMiddleAlt5Race (10 + k)).1.1, (wMiddleAlt5Race (10 + k)).2) :=
+    fun k => (hSpan89.2.1 hFewer9 k).1
+  have hAdm5 : admits (wMiddleAlt5Race 5).1.1 = false := by
+    show Nat.ble (wMiddleAlt5Race 5).1.1.carrier (wMiddleAlt5Race 5).1.1.other = false
+    exact ListTests.false_iff_not.mpr (fun h => Nat.not_le_of_gt hMP5.1 (Nat.le_of_ble_eq_true h))
+  have hAdm7 : admits (wMiddleAlt5Race 7).1.1 = false := by
+    show Nat.ble (wMiddleAlt5Race 7).1.1.carrier (wMiddleAlt5Race 7).1.1.other = false
+    exact ListTests.false_iff_not.mpr (fun h => Nat.not_le_of_gt hMP7.1 (Nat.le_of_ble_eq_true h))
+  have hAdm8 : admits (wMiddleAlt5Race 8).1.1 = true := Nat.ble_eq_true_of_le hFewer8
+  have hAdm8Plus : ∀ k, admits (wMiddleAlt5Race (8 + k)).1.1 = true
+    | 0 => hAdm8
+    | k + 1 => by
+      have hArith : 8 + (k + 1) = 9 + k := by
+        rw [← Nat.add_assoc, Nat.add_comm 8 k, Nat.add_assoc k 8 1, Nat.add_comm k 9]
+      rw [hArith]; exact (hTurn9 k).2
+  have hStab := emergentRace_stabilizes_from 18 (Nat.zero_lt_succ 17) (fun _ => true) 8
+    rfl (fun i => by cases i <;> rfl) (by decide : 6 ≤ 6) hAdm8Plus
+  have hGe8 : ∀ t, 8 ≤ t → (wMiddleAlt5Race t).1.2.1 = 6 := by
+    intro t ht
+    obtain ⟨k, hk⟩ := le_dest ht
+    rw [hk]
+    change (emergentRace wEndo 18 (Nat.zero_lt_succ 17) (fun _ => true) (8 + k)).1.2.1 = 6
+    rw [(hStab k).1]
+    rfl
+  have hCritAll : ∀ t, wEndo.xCrit ≤ (wMiddleAlt5Race t).1.2.1 := by
+    intro t
+    match Nat.lt_or_ge t 8 with
+    | .inl hlt =>
+      match t with
+      | 0 => exact by decide
+      | 1 => exact by decide
+      | 2 => exact by decide
+      | 3 => exact by decide
+      | 4 => exact by decide
+      | 5 => exact by decide
+      | 6 => exact by decide
+      | 7 => exact by decide
+      | t + 8 => exact absurd hlt (Nat.not_lt_of_ge (Nat.le_add_left 8 t))
+    | .inr hge => rw [hGe8 t hge]; exact Nat.le_refl 6
+  exact ⟨hReg, hMM4, hMP5, hMM6, hMP7, hMM8, hTurn9, hLock10, hAdm5, hAdm7, rfl, rfl, hCritAll, hGe8⟩
+
+/-- **Three-step oscillation turning and surviving (`race_middle_short_oscillation_turns`):**
+`others = 19`, `wEndo`, every-step reading. Registers from `4`, oscillates `4: MiddleMinus`,
+`5: MiddlePlus`, `6: MiddleMinus`, turns permanently from `7` (and `Locked` from `8`), surviving
+forever with `8 ≤ stock`. -/
+theorem race_middle_short_oscillation_turns :
+    (∀ t, registers (wMiddleAlt3Race t).1.2.2 = true ↔ 4 ≤ t) ∧
+    MiddleMinus ((wMiddleAlt3Race 4).1.1, (wMiddleAlt3Race 4).2) ∧
+    MiddlePlus ((wMiddleAlt3Race 5).1.1, (wMiddleAlt3Race 5).2) ∧
+    MiddleMinus ((wMiddleAlt3Race 6).1.1, (wMiddleAlt3Race 6).2) ∧
+    (∀ k, disfavours (wMiddleAlt3Race (7 + k)).2 ∧ admits (wMiddleAlt3Race (7 + k)).1.1 = true) ∧
+    (∀ k, Locked (reverse order) disfavours (poolRead hi lo)
+      ((wMiddleAlt3Race (8 + k)).1.1, (wMiddleAlt3Race (8 + k)).2)) ∧
+    (∀ t, 8 ≤ (wMiddleAlt3Race t).1.2.1) ∧
+    (∀ t, wEndo.xCrit ≤ (wMiddleAlt3Race t).1.2.1) := by
+  have hReg : ∀ t, registers (wMiddleAlt3Race t).1.2.2 = true ↔ 4 ≤ t :=
+    reg4_of_race wEndo 19 _ _ rfl rfl rfl rfl rfl
+  have hMM4 : MiddleMinus ((wMiddleAlt3Race 4).1.1, (wMiddleAlt3Race 4).2) :=
+    ⟨CoreHelpers.natBlt_true_iff.mp rfl, CoreHelpers.natBlt_true_iff.mp rfl⟩
+  have hMP5 : MiddlePlus ((wMiddleAlt3Race 5).1.1, (wMiddleAlt3Race 5).2) :=
+    (mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 4) (r' := 5) rfl (Nat.le_refl 4)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM4).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hMM6 : MiddleMinus ((wMiddleAlt3Race 6).1.1, (wMiddleAlt3Race 6).2) :=
+    (mark_middle_plus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 5) (r' := 6) rfl (by decide : 4 ≤ 5)
+      (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMP5).2.2
+      (CoreHelpers.natBlt_true_iff.mp rfl)
+  have hSpan67 := mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict (r := 6) (r' := 7) rfl (by decide : 4 ≤ 6)
+    (by decide) (fun _ h1 h2 => absurd h1 (Nat.not_lt_of_ge (Nat.le_of_lt_succ h2))) rfl hMM6
+  have hFewer6 : (wMiddleAlt3Race 6).1.1.carrier ≤ (wMiddleAlt3Race 6).1.1.other := Nat.le_of_lt hMM6.1
+  have hFewer7 : (wMiddleAlt3Race 7).1.1.carrier ≤ (wMiddleAlt3Race 7).1.1.other := Nat.le_of_ble_eq_true rfl
+  have hTurn7 := (mark_turned_admits_iff hReg hi_lo_hc hi_lo_ho hi_strict (r := 6) rfl
+    (by decide : 4 ≤ 6) hFewer6).mpr hFewer7
+  have hLock8 : ∀ k, Locked (reverse order) disfavours (poolRead hi lo)
+      ((wMiddleAlt3Race (8 + k)).1.1, (wMiddleAlt3Race (8 + k)).2) :=
+    fun k => (hSpan67.2.1 hFewer7 k).1
+  have hAdm6Plus : ∀ k, admits (wMiddleAlt3Race (6 + k)).1.1 = true
+    | 0 => Nat.ble_eq_true_of_le hFewer6
+    | k + 1 => by
+      have hArith : 6 + (k + 1) = 7 + k := by
+        rw [← Nat.add_assoc, Nat.add_comm 6 k, Nat.add_assoc k 6 1, Nat.add_comm k 7]
+      rw [hArith]; exact (hTurn7 k).2
+  have hStab := emergentRace_stabilizes_from 19 (Nat.zero_lt_succ 18) (fun _ => true) 6
+    rfl (fun i => by cases i <;> rfl) (by decide : 6 ≤ 8) hAdm6Plus
+  have hAll8 : ∀ t, 8 ≤ (wMiddleAlt3Race t).1.2.1 := by
+    intro t
+    match Nat.lt_or_ge t 6 with
+    | .inl hlt =>
+      match t with
+      | 0 => exact by decide
+      | 1 => exact by decide
+      | 2 => exact by decide
+      | 3 => exact by decide
+      | 4 => exact by decide
+      | 5 => exact by decide
+      | t + 6 => exact absurd hlt (Nat.not_lt_of_ge (Nat.le_add_left 6 t))
+    | .inr hge =>
+      obtain ⟨k, hk⟩ := le_dest hge
+      rw [hk]
+      change 8 ≤ (emergentRace wEndo 19 (Nat.zero_lt_succ 18) (fun _ => true) (6 + k)).1.2.1
+      rw [(hStab k).1]
+      exact Nat.le_refl 8
+  exact ⟨hReg, hMM4, hMP5, hMM6, hTurn7, hLock8, hAll8, fun t => Nat.le_trans (by decide : 6 ≤ 8) (hAll8 t)⟩
+
+/-- **Multi-step span recovery (`race_middle_span_recovery_turns`):** `others = 61`, `wEndo`,
+cadence `cadence2`. Registers from `4`, enters `MiddleMinus` at reading step `r = 5`, overshoots at
+quiet step `6` (`admits 6 = false`, strictly outside `mark_turned_admits_iff` at `r = 5`), yet
+recovers within the quiet span (`c_7 ≤ o_7` at `r' = 7`) and locks turned with `admits = true` from `8`,
+surviving forever with `8 ≤ stock` (`≥ wEndo.xCrit = 6`). -/
+theorem race_middle_span_recovery_turns :
+    (∀ t, registers (wMiddleSpanRecoveryRace t).1.2.2 = true ↔ 4 ≤ t) ∧
+    MiddleMinus ((wMiddleSpanRecoveryRace 5).1.1, (wMiddleSpanRecoveryRace 5).2) ∧
+    admits (wMiddleSpanRecoveryRace 6).1.1 = false ∧
+    (wMiddleSpanRecoveryRace 7).1.1.carrier ≤ (wMiddleSpanRecoveryRace 7).1.1.other ∧
+    (∀ k, Locked (reverse order) disfavours (poolRead hi lo)
+        ((wMiddleSpanRecoveryRace (8 + k)).1.1, (wMiddleSpanRecoveryRace (8 + k)).2) ∧
+      disfavours (wMiddleSpanRecoveryRace (8 + k)).2 ∧
+      admits (wMiddleSpanRecoveryRace (8 + k)).1.1 = true) ∧
+    (∀ t, 8 ≤ (wMiddleSpanRecoveryRace t).1.2.1) ∧
+    (∀ t, wEndo.xCrit ≤ (wMiddleSpanRecoveryRace t).1.2.1) := by
+  have hReg : ∀ t, registers (wMiddleSpanRecoveryRace t).1.2.2 = true ↔ 4 ≤ t :=
+    reg4_of_race wEndo 61 _ cadence2 rfl rfl rfl rfl rfl
+  have hMM5 : MiddleMinus ((wMiddleSpanRecoveryRace 5).1.1, (wMiddleSpanRecoveryRace 5).2) :=
+    ⟨CoreHelpers.natBlt_true_iff.mp rfl, CoreHelpers.natBlt_true_iff.mp rfl⟩
+  have hQuiet57 : ∀ j, 5 < j → j < 7 → cadence2 j = false := by
+    intro j hj1 hj2
+    have h6 : j = 6 := Nat.le_antisymm (Nat.le_of_lt_succ hj2) (Nat.succ_le_of_lt hj1)
+    rw [h6]; rfl
+  have hSpan57 := mark_middle_minus_span hReg hi_lo_hc hi_lo_ho hi_strict
+    (r := 5) (r' := 7) rfl (by decide : 4 ≤ 5) (by decide) hQuiet57 rfl hMM5
+  have hOut6 : admits (wMiddleSpanRecoveryRace 6).1.1 = false := rfl
+  have hFewer7 : (wMiddleSpanRecoveryRace 7).1.1.carrier ≤ (wMiddleSpanRecoveryRace 7).1.1.other :=
+    Nat.le_of_ble_eq_true rfl
+  have hLock8 := hSpan57.2.1 hFewer7
+  have hAdm7Plus : ∀ k, admits (wMiddleSpanRecoveryRace (7 + k)).1.1 = true
+    | 0 => Nat.ble_eq_true_of_le hFewer7
+    | k + 1 => by
+      have hArith : 7 + (k + 1) = 8 + k := by
+        rw [← Nat.add_assoc, Nat.add_comm 7 k, Nat.add_assoc k 7 1, Nat.add_comm k 8]
+      rw [hArith]; exact (hLock8 k).2.2
+  have hStab := emergentRace_stabilizes_from 61 (Nat.zero_lt_succ 60) cadence2 7
+    rfl (fun i => by cases i <;> rfl) (by decide : 6 ≤ 8) hAdm7Plus
+  have hAll8 : ∀ t, 8 ≤ (wMiddleSpanRecoveryRace t).1.2.1 := by
+    intro t
+    match Nat.lt_or_ge t 7 with
+    | .inl hlt =>
+      match t with
+      | 0 => exact by decide
+      | 1 => exact by decide
+      | 2 => exact by decide
+      | 3 => exact by decide
+      | 4 => exact by decide
+      | 5 => exact by decide
+      | 6 => exact by decide
+      | t + 7 => exact absurd hlt (Nat.not_lt_of_ge (Nat.le_add_left 7 t))
+    | .inr hge =>
+      obtain ⟨k, hk⟩ := le_dest hge
+      rw [hk]
+      change 8 ≤ (emergentRace wEndo 61 (Nat.zero_lt_succ 60) cadence2 (7 + k)).1.2.1
+      rw [(hStab k).1]
+      exact Nat.le_refl 8
+  exact ⟨hReg, hMM5, hOut6, hFewer7, hLock8, hAll8, fun t => Nat.le_trans (by decide : 6 ≤ 8) (hAll8 t)⟩
 
 /-! ## Part B: split evidence across two agents -/
 

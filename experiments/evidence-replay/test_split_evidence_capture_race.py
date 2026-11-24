@@ -326,6 +326,165 @@ class TestCaptureLockRace(unittest.TestCase):
                 self.assertTrue(all(favours(row["g"]) for row in trace[:6]))  # type: ignore[arg-type]
                 self.assertTrue(trace[7]["reg"])
 
+    def test_r5_middle_band_trichotomy_and_monotonicity(self) -> None:
+        def is_mm(s: tuple[int, int], g: tuple[int, int]) -> bool:
+            return s[0] < s[1] and g[1] < g[0]
+
+        def is_mp(s: tuple[int, int], g: tuple[int, int]) -> bool:
+            return s[1] < s[0] and g[0] < g[1]
+
+        def is_cap(s: tuple[int, int], g: tuple[int, int]) -> bool:
+            return s[1] <= s[0] and favours(g)
+
+        def is_turn(s: tuple[int, int], g: tuple[int, int]) -> bool:
+            return s[0] <= s[1] and disfavours(g)
+
+        def order_le(a: tuple[int, int], b: tuple[int, int]) -> bool:
+            return a[0] * b[1] <= b[0] * a[1]
+
+        horizon = 20
+        for L in (1, 2, 3, 4):
+            reads = lambda t, L=L: (t % L == L - 1)
+            seq = [t for t in range(4, horizon) if reads(t)]
+            r0 = seq[0]
+            outcomes: list[int] = []  # -1=pre-disfav, 0=cap, 1=turn, 2=still-alt
+            middle_band_o0: list[int] = []
+            prev_trace: list[dict[str, object]] | None = None
+            for others0 in range(1, 1101):
+                trace = run_coupled_race(W_ENDO, EmergentLearner(), others0, reads, x0=14, horizon=horizon)
+                # Four-way disjoint partition at every step
+                for row in trace:
+                    sh = row["share"]
+                    gg = row["g"]
+                    assert isinstance(sh, tuple) and isinstance(gg, tuple)
+                    self.assertTrue(is_cap(sh, gg) or is_turn(sh, gg) or is_mm(sh, gg) or is_mp(sh, gg))
+                    self.assertFalse(is_mm(sh, gg) and is_mp(sh, gg))
+                    self.assertFalse(is_mm(sh, gg) and (is_cap(sh, gg) or is_turn(sh, gg)))
+                    self.assertFalse(is_mp(sh, gg) and (is_cap(sh, gg) or is_turn(sh, gg)))
+
+                # Order monotonicity when both registered by tau=4 (true for others0 >= 15 at L=1,
+                # and generally whenever prev and curr both have reg at r0)
+                if prev_trace is not None and prev_trace[r0]["reg"] and trace[r0]["reg"]:
+                    for t in range(r0, horizon):
+                        s1 = trace[t]["share"]
+                        g1 = trace[t]["g"]
+                        s2 = prev_trace[t]["share"]
+                        g2 = prev_trace[t]["g"]
+                        assert isinstance(s1, tuple) and isinstance(g1, tuple)
+                        assert isinstance(s2, tuple) and isinstance(g2, tuple)
+                        self.assertTrue(order_le(s1, s2))
+                        self.assertTrue(order_le(g1, g2))
+                        if is_turn(s2, g2):
+                            self.assertTrue(is_turn(s1, g1))
+                        if is_cap(s1, g1):
+                            self.assertTrue(is_cap(s2, g2))
+                prev_trace = trace
+
+                s0, g0 = trace[r0]["share"], trace[r0]["g"]
+                s0_next = trace[r0 + 1]["share"]
+                assert isinstance(s0, tuple) and isinstance(g0, tuple) and isinstance(s0_next, tuple)
+                if not is_mm(s0, g0):
+                    outcomes.append(0 if is_cap(s0, g0) else -1)
+                    continue
+
+                absorbed: tuple[str, int] | None = None
+                for n, r in enumerate(seq):
+                    sr, gr = trace[r]["share"], trace[r]["g"]
+                    assert isinstance(sr, tuple) and isinstance(gr, tuple)
+                    if n >= 1 and is_cap(sr, gr):
+                        self.assertEqual(n % 2, 0)
+                        absorbed = ("cap", n)
+                        for row in trace[r + 1 :]:
+                            sh = row["share"]
+                            assert isinstance(sh, tuple)
+                            self.assertLess(sh[1], sh[0])
+                            self.assertFalse(row["admit"])
+                        break
+                    elif n >= 1 and is_turn(sr, gr):
+                        self.assertEqual(n % 2, 1)
+                        absorbed = ("turn", n)
+                        for row in trace[r + 1 :]:
+                            sh, gg = row["share"], row["g"]
+                            assert isinstance(sh, tuple) and isinstance(gg, tuple)
+                            self.assertTrue(disfavours(gg))
+                            self.assertTrue(row["admit"])
+                        break
+                    elif n % 2 == 0:
+                        self.assertTrue(is_mm(sr, gr))
+                    else:
+                        self.assertTrue(is_mp(sr, gr))
+
+                if s0_next[1] < s0_next[0]:
+                    middle_band_o0.append(others0)
+                if absorbed is None:
+                    outcomes.append(2)
+                else:
+                    outcomes.append(1 if absorbed[0] == "turn" else 0)
+
+            self.assertGreater(len(middle_band_o0), 0, f"empty middle band for L={L}")
+            cap_indices = [i for i, v in enumerate(outcomes) if v == 0]
+            alt_indices = [i for i, v in enumerate(outcomes) if v == 2]
+            turn_indices = [i for i, v in enumerate(outcomes) if v == 1]
+            self.assertGreater(len(cap_indices), 0)
+            self.assertGreater(len(turn_indices), 0)
+            self.assertLess(max(cap_indices), min(turn_indices))
+            if alt_indices:
+                self.assertLess(max(cap_indices), min(alt_indices))
+                self.assertLess(max(alt_indices), min(turn_indices))
+
+        # Exact witness checks matching Lean Part A.4b
+        # Witness 1: o0 = 17, L = 1 (exits middle band to capture lock)
+        tr17 = run_coupled_race(W_ENDO, EmergentLearner(), 17, lambda _t: True, x0=14, horizon=12)
+        self.assertTrue(all(tr17[t]["reg"] == (t >= 4) for t in range(12)))
+        self.assertTrue(is_mm(tr17[4]["share"], tr17[4]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mp(tr17[5]["share"], tr17[5]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_cap(tr17[6]["share"], tr17[6]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(all(not tr17[t]["admit"] for t in range(5, 12)))
+        self.assertEqual(tr17[8]["stock"], 3)
+        self.assertEqual(tr17[9]["stock"], 0)
+
+        # Witness 2: o0 = 18, L = 1 (5-step alternation, loses reserve, turns and survives at stock = 6)
+        tr18 = run_coupled_race(W_ENDO, EmergentLearner(), 18, lambda _t: True, x0=14, horizon=14)
+        self.assertTrue(all(tr18[t]["reg"] == (t >= 4) for t in range(14)))
+        self.assertTrue(is_mm(tr18[4]["share"], tr18[4]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mp(tr18[5]["share"], tr18[5]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mm(tr18[6]["share"], tr18[6]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mp(tr18[7]["share"], tr18[7]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mm(tr18[8]["share"], tr18[8]["g"]))  # type: ignore[arg-type]
+        self.assertFalse(tr18[5]["admit"])
+        self.assertFalse(tr18[7]["admit"])
+        self.assertEqual(tr18[4]["stock"], 10)
+        self.assertEqual(tr18[8]["stock"], 6)
+        self.assertTrue(all(disfavours(tr18[t]["g"]) and tr18[t]["admit"] for t in range(9, 14)))  # type: ignore[arg-type]
+        self.assertTrue(all(int(tr18[t]["stock"]) >= W_ENDO.x_crit for t in range(14)))  # type: ignore[arg-type]
+        self.assertTrue(all(tr18[t]["stock"] == 6 for t in range(8, 14)))
+
+        # Witness 3: o0 = 19, L = 1 (3-step oscillation, turns from 7, survives at stock >= 8)
+        tr19 = run_coupled_race(W_ENDO, EmergentLearner(), 19, lambda _t: True, x0=14, horizon=14)
+        self.assertTrue(all(tr19[t]["reg"] == (t >= 4) for t in range(14)))
+        self.assertTrue(is_mm(tr19[4]["share"], tr19[4]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mp(tr19[5]["share"], tr19[5]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(is_mm(tr19[6]["share"], tr19[6]["g"]))  # type: ignore[arg-type]
+        self.assertTrue(all(disfavours(tr19[t]["g"]) and tr19[t]["admit"] for t in range(7, 14)))  # type: ignore[arg-type]
+        self.assertTrue(all(int(tr19[t]["stock"]) >= 8 for t in range(14)))  # type: ignore[arg-type]
+
+        # Witness 4: o0 = 61, L = 2 (cadence2, overshoots at 6, recovers at 7, turns and survives at stock >= 8)
+        cadence2 = lambda t: (t % 2 == 1)
+        tr61 = run_coupled_race(W_ENDO, EmergentLearner(), 61, cadence2, x0=14, horizon=14)
+        self.assertTrue(all(tr61[t]["reg"] == (t >= 4) for t in range(14)))
+        self.assertTrue(is_mm(tr61[5]["share"], tr61[5]["g"]))  # type: ignore[arg-type]
+        self.assertFalse(tr61[6]["admit"])
+        self.assertTrue(tr61[7]["admit"])
+        self.assertTrue(all(disfavours(tr61[t]["g"]) and tr61[t]["admit"] for t in range(8, 14)))  # type: ignore[arg-type]
+        self.assertTrue(all(int(tr61[t]["stock"]) >= 8 for t in range(14)))  # type: ignore[arg-type]
+
+        # Honest boundary: late middle-band turn after substrate collapse at coarser cadences (L=3 o0=129, L=4 o0=599)
+        for L_late, o0_late in ((3, 129), (4, 599)):
+            reads_late = lambda t, L_late=L_late: (t % L_late == L_late - 1)
+            tr_late = run_coupled_race(W_ENDO, EmergentLearner(), o0_late, reads_late, x0=14, horizon=20)
+            self.assertTrue(is_turn(tr_late[-1]["share"], tr_late[-1]["g"]))  # type: ignore[arg-type]
+            self.assertEqual(tr_late[-1]["stock"], 0)
+
 
 class TestSplitEvidenceExhaustive(unittest.TestCase):
     def test_r4_exhaustive_split_marginal_and_closed_capture(self) -> None:

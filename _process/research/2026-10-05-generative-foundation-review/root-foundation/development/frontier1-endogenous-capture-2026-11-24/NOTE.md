@@ -267,3 +267,89 @@ OK
   ]
 }
 ```
+
+---
+
+## 6. Addendum — Alternating Middle Band (AI-written, `d1-middle-band`)
+
+*AI-written (`d1-middle-band`, Frontier 1 delta, 25 November 2026). Closes the open middle-band delta (§4 item 1 above) in `Becoming.EndogenousDetectionRace` and `experiments/evidence-replay/test_split_evidence_capture_race.py`.*
+
+### New Lean Formalization (`Becoming.EndogenousDetectionRace`, Parts A.2b & A.4b)
+
+All 69 prior theorems / 105 declarations remain intact; `Becoming.EndogenousDetectionRace` now comprises **`94` theorems / `137` declarations** (+25 theorems, +7 defs: `MiddleMinus`, `MiddlePlus`, `cadence2`, `wMiddleLockRace`, `wMiddleAlt5Race`, `wMiddleAlt3Race`, `wMiddleSpanRecoveryRace`), strictly 0-axiom `Init`-only (`with_axioms: {}`), `0` warnings, `0` `sorry`, `0` `private` / `lemma` / `class` / unnamed `instance`.
+
+1. **Strict mirror pool signs & four-regime partition (Part A.2b):**
+   - `mirror_strict_disfavours_iff`: `(pool u w x).carrier < (pool u w x).other ↔ x.carrier < x.other` and `mirror_strict_favours_iff`: `(pool u w x).other < (pool u w x).carrier ↔ x.other < x.carrier` (proved in pure `Init` `Nat` via `le_dest (Nat.succ_le_of_lt strict)`).
+   - `MiddleMinus p` (`p.1.carrier < p.1.other ∧ p.2.other < p.2.carrier`) and `MiddlePlus p` (`p.1.other < p.1.carrier ∧ p.2.carrier < p.2.other`).
+   - `reading_state_four_way` proves every `(share, rule)` pair lies in Capture Lock (`other ≤ carrier ∧ favours`), Turned Lock (`carrier ≤ other ∧ disfavours`), `MiddleMinus`, or `MiddlePlus`; `middle_disjoint_locked` proves `MiddleMinus` and `MiddlePlus` are disjoint from each other and from both locked regimes.
+2. **Exact cadence-general one-span transition laws & multi-reading trichotomy (Part A.2b):**
+   - `mark_middle_minus_span`: for any reading schedule `reads : Nat → Bool`, from `MiddleMinus` at reading step `r ≥ τ`, at the next reading step `r' > r`, `g_{r'} = pool u w s_r` satisfies `g_{r'}.carrier < g_{r'}.other`, and either `s_{r'}.carrier ≤ s_{r'}.other` (permanently turned-locked `Locked (reverse order) disfavours (poolRead u w)` with `disfavours` and `admits = true` from `r' + 1`, covering both immediate turns and multi-step quiet-span recovery) or `s_{r'}.other < s_{r'}.carrier` (entering `MiddlePlus`).
+   - `mark_middle_plus_span` (exact dual): from `MiddlePlus` at `r ≥ τ`, at `r' > r`, `g_{r'} = pool u w s_r` satisfies `g_{r'}.other < g_{r'}.carrier`, and either `s_{r'}.other ≤ s_{r'}.carrier` (strictness of `g_{r'}` automatically yields `s_{r'+1}.other < s_{r'+1}.carrier`, locking into Capture Lock with `admits = false` from `r' + 1`) or `s_{r'}.carrier < s_{r'}.other` (flipping back into `MiddleMinus`).
+   - `mark_middle_band_trichotomy`: for any reading sequence `seq` starting from `MiddleMinus` at `seq 0 ≥ τ`, at every index `n : Nat` the course is either absorbed into permanent Turned Lock at some odd index `2 * m + 1 ≤ n`, absorbed into permanent Capture Lock at some even index `2 * m + 2 ≤ n`, or strictly alternating between `MiddleMinus` (even) and `MiddlePlus` (odd) up to `n`.
+3. **Order monotonicity & monotone partition (Part A.2b):**
+   - `select_order_mono`, `paced_post_order_mono` (via `Drawn.pool_reads (mirror_le hc ho strict)`), `mark_post_order_mono`, and `mark_middle_band_monotone_partition`: across two post-registration `markCourse` runs sharing `u, v, w, reads` with `order.le s₁ s₂` and `order.le g₁ g₂` at `r₀ ≥ τ`, at every `r' ≥ r₀`, turned lock of course 2 implies turned lock of course 1, and capture lock of course 1 implies capture lock of course 2.
+4. **Four concrete separating witnesses (`emergentLoop`, `wEndo`, Part A.4b):**
+   - `cadence2` & `cadence2_readAtSpanEnd : PacedStock.ReadAtSpanEnd (fun j => 2 * j) cadence2`.
+   - `wMiddleLockRace` (`others = 17`, every-step): registers from `4`, `MiddleMinus` at `4`, `MiddlePlus` at `5`, Capture Lock at `6`, permanently capture-locked with `admits = false` from `7`, breaching `stock 8 = 3 < 6` and `stock 9 = 0 < 6` (`race_middle_exits_to_lock`).
+   - `wMiddleAlt5Race` (`others = 18`, every-step): alternates `4: MiddleMinus`, `5: MiddlePlus`, `6: MiddleMinus`, `7: MiddlePlus`, `8: MiddleMinus`, turns permanently (`disfavours` & `admits = true` from `9`, `Locked (reverse order)` from `10`), loses reserve across temporary lockouts (`admits 5 = false`, `admits 7 = false`, `stock 4 = 10`, `stock 8 = 6`), yet stays at `stock = 6 ≥ wEndo.xCrit` forever (`race_middle_alternates_and_turns`).
+   - `wMiddleAlt3Race` (`others = 19`, every-step): oscillates `4: MiddleMinus`, `5: MiddlePlus`, `6: MiddleMinus`, turns permanently from `7` (`Locked` from `8`), surviving forever at `8 ≤ stock` (`race_middle_short_oscillation_turns`).
+   - `wMiddleSpanRecoveryRace` (`others = 61`, `cadence2`): registers from `4`, `MiddleMinus` at `5`, overshoots at quiet step `6` (`admits 6 = false`, strictly outside `mark_turned_admits_iff` at `r = 5`), recovers within the quiet span (`c_7 ≤ o_7` at `r' = 7`), permanently turned-locked and admitted from `8`, surviving forever at `8 ≤ stock` (`race_middle_span_recovery_turns`).
+
+### Verbatim Verification Outputs (Addendum)
+
+#### Lean (`scratch_build.py`)
+
+```json
+{
+  "tree": "/Users/ren/tmp/d1-scratch",
+  "modules": 240,
+  "ran": [
+    "Becoming.EndogenousDetectionRace",
+    "BecomingEndogenousDetectionRaceAxiomAudit",
+    "BecomingEndogenousDetectionRaceSignatures",
+    "Becoming.EndogenousDetectionRace.PreludeOnly"
+  ],
+  "reused": 478,
+  "unclean": [],
+  "audits": {
+    "Becoming.EndogenousDetectionRace": {
+      "theorems": 94,
+      "declarations": 137,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.EndogenousDetectionRace": 5.115,
+    "BecomingEndogenousDetectionRaceAxiomAudit": 0.862,
+    "BecomingEndogenousDetectionRaceSignatures": 0.836,
+    "Becoming.EndogenousDetectionRace.PreludeOnly": 4.419
+  }
+}
+```
+
+#### Empirical Replay (`PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/evidence-replay -p 'test_*.py' -v`)
+
+```text
+test_exact_fraction_certificates_and_b2_simulation (test_replay_suite.TestDualityHandshake.test_exact_fraction_certificates_and_b2_simulation) ... ok
+test_negative_tamper_checks_reject (test_replay_suite.TestDualityHandshake.test_negative_tamper_checks_reject) ... ok
+test_dobrushin_lift_xor_relational_and_empirical_safety (test_replay_suite.TestDualityLiftingHandshake.test_dobrushin_lift_xor_relational_and_empirical_safety) ... ok
+test_in1_229_months_and_target_contrasts (test_replay_suite.TestIN1ReplayHandshake.test_in1_229_months_and_target_contrasts) ... ok
+test_disentangled_2d_and_breach_bounds (test_replay_suite.TestPhase2DisentangledStress.test_disentangled_2d_and_breach_bounds) ... ok
+test_two_item_8slot_and_b2_b4 (test_replay_suite.TestProtocol8SlotBenchmark.test_two_item_8slot_and_b2_b4) ... ok
+test_r1_window_grid_across_cadences (test_split_evidence_capture_race.TestCaptureLockRace.test_r1_window_grid_across_cadences) ... ok
+test_r2_no_hardcoded_threshold_and_lockstep_tamper (test_split_evidence_capture_race.TestCaptureLockRace.test_r2_no_hardcoded_threshold_and_lockstep_tamper) ... ok
+test_r3_negative_controls (test_split_evidence_capture_race.TestCaptureLockRace.test_r3_negative_controls) ... ok
+test_r5_middle_band_trichotomy_and_monotonicity (test_split_evidence_capture_race.TestCaptureLockRace.test_r5_middle_band_trichotomy_and_monotonicity) ... ok
+test_r4_exhaustive_split_marginal_and_closed_capture (test_split_evidence_capture_race.TestSplitEvidenceExhaustive.test_r4_exhaustive_split_marginal_and_closed_capture) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 29.468s
+
+OK
+```
+
+**Rule 2 boundary surfaced by `R5` (`test_r5_middle_band_trichotomy_and_monotonicity`):**
+- On coarser cadences (`L = 3, others0 = 129`; `L = 4, others0 = 599`), the share-and-rule course satisfies `mark_middle_band_trichotomy` and turns permanently into `disfavours(g) ∧ admits = true` at odd reading index `n = 3`, yet the intermediate multi-step lockout span (`t = 6..8` at `L = 3`, `t = 8..11` at `L = 4`) already exhausts the `x_crit = 6` stock reserve (`stock = 0`) before the turn completes. Turning in `CarrierCounts` does not imply substrate survival without sufficient pre-turn stock margin (`PacedStock`).
+- Also note for `wMiddleLockRace` (`others = 17`, `L = 1`): lockout starts at `t = 5` (`stock 5 = 10`), so three `.extract` steps breach `stock 8 = 3 < 6` and four steps reach `stock 9 = 0 < 6`.
+- Hygiene: `MARKET_EN` / `MARKET_ZH` (`tools/research/style.py`) → `0` hits across all 3 files; `/Users/ren/tmp/d1-scratch` removed; `0` `__pycache__` / `.pyc` in `experiments/evidence-replay`.
+
