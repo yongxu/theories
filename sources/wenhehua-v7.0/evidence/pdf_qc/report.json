@@ -1,0 +1,32 @@
+{
+  "文合化_v5.0_概念词林.pdf": {
+    "pages": 45,
+    "file_bytes": 451157,
+    "blank_pages": [],
+    "out_of_bounds_blocks": [],
+    "out_of_bounds_count": 0,
+    "min_text_page_chars": 624,
+    "mean_text_page_chars": 1150,
+    "min_margin_pt": 27.0
+  },
+  "文合化_v5.0_理论全集.pdf": {
+    "pages": 55,
+    "file_bytes": 1110177,
+    "blank_pages": [],
+    "out_of_bounds_blocks": [],
+    "out_of_bounds_count": 0,
+    "min_text_page_chars": 765,
+    "mean_text_page_chars": 1345,
+    "min_margin_pt": 27.0
+  },
+  "文合化_v5.0_续迹弱交换专论.pdf": {
+    "pages": 13,
+    "file_bytes": 429981,
+    "blank_pages": [],
+    "out_of_bounds_blocks": [],
+    "out_of_bounds_count": 0,
+    "min_text_page_chars": 675,
+    "mean_text_page_chars": 1238,
+    "min_margin_pt": 27.0
+  }
+}

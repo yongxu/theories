@@ -1,0 +1,4 @@
+Interchange square (fixed boundary, monic spans): True
+Two-stage preserved vertices: 3
+After-gluing nodes: 7
+Associativity up to boundary-aware graph isomorphism: True

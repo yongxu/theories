@@ -1,0 +1,22 @@
+digraph G {
+    graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.55", splines=polyline, fontname="Noto Sans CJK SC"];
+    node [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=12, margin="0.22,0.10", fillcolor="#f1f5f9", color="#64748b", fontcolor="#172033"];
+    edge [color="#64748b", arrowsize=0.6, fontname="Noto Sans CJK SC", fontsize=10];
+    C [label="文法层：类型 · 开放界面 · 合 · 化\n谱系跨度、推积／拉回、弱比较 χ", fillcolor="#e6f6f3", color="#137f77", penwidth=1.6];
+    G1 [label="确定性与可执行行为\n有限函数 · 作用规则"];
+    G2 [label="概率与不确定性\nMarkov 核 · 正规化"];
+    G3 [label="资源与守恒\n化学计量 · 线性不变量"];
+    G4 [label="连续时间变化\n反应速率 · 向量场"];
+    G5 [label="因果与干预\n结构方程 · do 查询"];
+    G6 [label="空间与度量\n带权图 · 路径长度"];
+    G7 [label="抽象与观守\n宏观闭合 · 查询保真", fillcolor="#fff6e6", color="#bb7a22"];
+    P [label="证据层：类型合法 / 组合相容 / 资源守恒\n动力学闭合 / 因果干预 / 语义范围", fillcolor="#e6f6f3", color="#137f77", penwidth=1.4];
+    C -> G1; C -> G2; C -> G3; C -> G5; C -> G6;
+    {rank=same; G1; G2; G3; G5; G6}
+    G1 -> G2 [label="Dirac 嵌入",color="#0f766e"];
+    G3 -> G4 [label="赋予速率", color="#0f766e"];
+    G2 -> G7 [label="强可聚合"];
+    G5 -> G7 [label="保干预查询"];
+    G6 -> G7 [label="选取度量查询"];
+    G1 -> P [style=dotted]; G2 -> P [style=dotted]; G4 -> P [style=dotted]; G5 -> P [style=dotted]; G6 -> P [style=dotted]; G7 -> P;
+}

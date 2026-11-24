@@ -1,0 +1,22 @@
+{
+  "case": "new seam type T added while persistent N seam remains",
+  "seam_trace": [
+    [
+      0,
+      0
+    ]
+  ],
+  "old_seam_arity": 1,
+  "new_seam_arity": 2,
+  "old_joint_nodes": 3,
+  "new_joint_nodes": 4,
+  "persistent_joint_nodes": 3,
+  "explicit_adapter_edge_types": [
+    "copy_N"
+  ],
+  "claims": {
+    "structural_witness_checked": true,
+    "resource_conservation_proven": false,
+    "behavioral_equivalence_proven": false
+  }
+}

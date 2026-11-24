@@ -1,0 +1,2 @@
+# Only needed for graph-isomorphism test; the core engine uses Python stdlib.
+networkx>=3.0

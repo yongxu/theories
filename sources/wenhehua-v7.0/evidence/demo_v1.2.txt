@@ -1,0 +1,5 @@
+合：nodes= 3 edges= 2 ports= {'L.in': 'L::a', 'R.out': 'R::d'}
+化：nodes= 3 edges= 2 ports= {'in': 'a', 'out': 'b'}
+观：coherent abstraction? (False, {'A': 'B', 'B': 'A'}, ('2', 'A', 'B', 'A'))
+守：reaction conserves weighted mass? {'form': True}
+守：before= 4 after= {'H': 2, 'H2': 1} 4

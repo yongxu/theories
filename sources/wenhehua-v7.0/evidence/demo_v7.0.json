@@ -1,0 +1,51 @@
+{
+  "release": "v7.0",
+  "query_lift": {
+    "fine_tv_floor": "1/2",
+    "coarse_tv_floor": "0",
+    "fine_missing": [
+      "extra"
+    ],
+    "coarse_exact": true,
+    "fine_lift": {
+      "a": "1/2",
+      "b": "1/2"
+    },
+    "coarse_lift": {
+      "a": "1/4",
+      "b": "3/4"
+    }
+  },
+  "multi_query": {
+    "individual_tv_floors": [
+      "0",
+      "0"
+    ],
+    "single_common_lift_exists": false,
+    "uniform_marginal_common_lift": true,
+    "uniform_joint_lift_exists": false
+  },
+  "stochastic": {
+    "sequential": {
+      "certified_bound": "7/12",
+      "actual": "5/12"
+    },
+    "independent_tensor": {
+      "certified_bound": "7/12",
+      "actual": "1/2"
+    },
+    "all_outputs_collapsed_error": "0"
+  },
+  "higher_comparison": {
+    "four_stage_source_witnesses": 0,
+    "four_stage_global_witnesses": 1,
+    "is_iso": false
+  },
+  "causal_query": {
+    "observational_y_one_X_causes_Y": "1/2",
+    "observational_y_one_Y_causes_X": "1/2",
+    "interventional_y_one_X_causes_Y": "1",
+    "interventional_y_one_Y_causes_X": "1/2"
+  },
+  "disclaimer": "Exact finite symbolic examples; not universal coherence proof, empirical validation, or causal identification."
+}

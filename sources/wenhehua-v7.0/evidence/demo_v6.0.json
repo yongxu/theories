@@ -1,0 +1,29 @@
+{
+  "causal_doX1_forward_Y1": "1",
+  "causal_doX1_reverse_Y1": "1/2",
+  "causal_observational_equal": true,
+  "coarse_P_AB_to_C": "1/4",
+  "continuous_derivative": {
+    "A": "-2",
+    "B": "0",
+    "C": "2"
+  },
+  "continuous_total_balance": "0",
+  "lineage_comparison_lax": {
+    "extra_global_paths": 1,
+    "global_paths": 1,
+    "invertible": false,
+    "local_paths": 0
+  },
+  "lineage_comparison_strong": {
+    "extra_global_paths": 0,
+    "global_paths": 1,
+    "invertible": true,
+    "local_paths": 1
+  },
+  "metric_sequential_distance": "7",
+  "resource_H_balance": "0",
+  "resource_O_balance": "0",
+  "stochastic": "3/4",
+  "stochastic_expected": "3/4"
+}

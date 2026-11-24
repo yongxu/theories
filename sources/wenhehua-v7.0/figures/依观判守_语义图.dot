@@ -1,0 +1,16 @@
+digraph G {
+ graph [rankdir=TB, bgcolor="white", pad="0.20", nodesep="0.42", ranksep="0.47", fontname="Noto Sans CJK SC", label="依观判守｜从开放过程到有界解释", labelloc="t", fontsize=21, fontcolor="#143743"];
+ node [shape=box,style="rounded,filled",fontname="Noto Sans CJK SC",fontsize=13,fillcolor="#EFF6F6",color="#527078",fontcolor="#183841",margin="0.19,0.12"];
+ edge [color="#5F7880",penwidth=1.5,arrowsize=0.75,fontname="Noto Sans CJK SC",fontsize=11];
+ core [label="文 · 合 · 化\n类型化开放组织 / 变化见证", fillcolor="#DCEFED"];
+ chi [label="高阶比较  χ: U → V\n可比不必可逆"];
+ q [label="观：查询族 Q 与上下文 C\n精观 / 粗观 / 联合观"];
+ exact [label="严格守\n查询推前相同"];
+ approx [label="有界守\n最小 TV 与误差预算"];
+ failure [label="拒绝／反例\n像缺失、共同提升失败、因果差别", fillcolor="#FFF4E9",color="#A17E5A"];
+ evid [label="证书等级\n已证明 · 已测试 · 待校准 · 未知", fillcolor="#E8EDF7"];
+ core -> chi -> q;
+ q -> exact; q -> approx; q -> failure;
+ exact -> evid; approx -> evid; failure -> evid;
+ {rank=same; exact;approx;failure;}
+}

@@ -1,0 +1,9 @@
+digraph G {
+ graph [rankdir=LR,bgcolor="white",pad="0.20",nodesep="0.70",ranksep="0.65",fontname="Noto Sans CJK SC",label="细观不等，粗观可同——但差异仍在",labelloc="t",fontsize=20,fontcolor="#143743"];
+ node [shape=box,style="rounded,filled",fontname="Noto Sans CJK SC",fontsize=14,fillcolor="#F4F6F6",color="#63818A",fontcolor="#193B45"];
+ edge [color="#66838B",penwidth=1.5,arrowsize=0.65,fontname="Noto Sans CJK SC",fontsize=12];
+ subgraph cluster_u {label="局部 U"; fontname="Noto Sans CJK SC"; color="#D5E8E5"; a[label="a",fillcolor="#DCEFED"];b[label="b",fillcolor="#DCEFED"];}
+ subgraph cluster_v {label="整体 V"; fontname="Noto Sans CJK SC";color="#DCE2E7"; a2[label="a · 1/4"];b2[label="b · 1/4"];e[label="e · 1/2",fillcolor="#FFEBDD",color="#AA8267"];}
+ subgraph cluster_o {label="观测 q"; fontname="Noto Sans CJK SC";color="#DCE2E7"; fine[label="精观\na,b,e 三别",fillcolor="#F0F4FC"];coarse[label="粗观\nb 与 e 同类",fillcolor="#F0F4FC"];}
+ a->a2[label="χ"];b->b2[label="χ"]; a2->fine;b2->fine;e->fine; a2->coarse;b2->coarse;e->coarse;
+}

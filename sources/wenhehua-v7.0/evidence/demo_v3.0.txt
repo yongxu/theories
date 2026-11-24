@@ -1,0 +1,8 @@
+[界变] left interfaces: 1 -> 2
+[界变] right interfaces: 1 -> 2
+[界变] common graph nodes: 3
+[时流] after damage: (('damaged', (('temp', '20'), ('humidity', '50'))),)
+[时流] damaged next output: (('damaged', (('temp', '20'),)),)
+[守恒] dx/dt: {'tank1': Fraction(1, 1), 'tank2': Fraction(0, 1)} boundary balance: 1 verified: True
+[观守] successful macro transition: {'A': {'A': Fraction(1, 1), 'B': Fraction(0, 1)}, 'B': {'A': Fraction(0, 1), 'B': Fraction(1, 1)}}
+[反例] rejected abstract interface: interface abstraction conflict: 0 vs 1

@@ -1,0 +1,28 @@
+{
+  "version": "v5.0",
+  "semantics": "finite typed sets; correspondence witnesses, not proven physical identity",
+  "certified_shared_seam": {
+    "local_then_global_witnesses": 1,
+    "global_then_temporal_witnesses": 1,
+    "comparison_map": {
+      "Q[L:[\"left1\",\"left2\"]|R:[\"right1\",\"right2\"]]": "[\"Q[L:left1|R:right1]\",\"Q[L:left2|R:right2]\"]"
+    },
+    "comparison_invertible": true,
+    "extra_formal_global_paths": 0
+  },
+  "untraced_cross_side_handoff": {
+    "local_then_global_witnesses": 0,
+    "global_then_temporal_witnesses": 1,
+    "comparison_map": {},
+    "comparison_invertible": false,
+    "extra_formal_global_paths": 1
+  },
+  "two_distinct_routes_same_endpoints": {
+    "full_provenance_path_count": 2,
+    "boolean_relation_pair_count": 1,
+    "witnesses": [
+      "[\"x\",\"p\"]",
+      "[\"y\",\"q\"]"
+    ]
+  }
+}

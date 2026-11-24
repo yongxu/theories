@@ -1,0 +1,116 @@
+"""Build a deliberately scoped concept supplement; no claims about ancient etymology."""
+import csv
+from pathlib import Path
+R=Path(__file__).resolve().parent
+DATA='''
+界与辨|界|古字今释|相对于连接或观察指定的可交互边界|boundary object|并非物体固有的墙
+界与辨|端|古字今释|被指定为一次交互的端点出现|port occurrence|同节点可以有多个角色
+界与辨|门|研究性转义|接口许可某类作用进入或离开的条件|admissibility predicate|端口存在不保证权限
+界与辨|别|古字今释|在所选观察下可区分的情况|distinction|不等于本体绝对分离
+界与辨|域|古字今释|构造或规律适用的配置范围|domain|不可偷偷外推
+界与辨|型|研究性转义|约束接口和构造可相接的类别|type|字符串同型未必语义同型
+界与辨|界序|新拟复合|有序界面端口出现的排列|ordered interface|重排要有显式迹
+界与辨|界型|新拟复合|界面各端口所携带的类型信息|typed boundary|可能还需单位和协议
+续与身份|续|古字今释|改变前后共同保持的身份见证|preservation witness|不等于时间连续实测
+续与身份|迹|古字今释|旧界面出现到新界面出现的部分对应|partial injection|同名并不自动成迹
+续与身份|承|研究性转义|前一配置中某部分由后一配置接续|span inclusion|必须指定映射
+续与身份|守|古字今释|指定属性在变化中保持|invariance|需说明所守的性质
+续与身份|常|古字今释|某类变化下可持续成立的规律或性质|invariant/stability|常并非不变动
+续与身份|身份|现代用语|用于判断前后是否为同一端口的标准|identity criterion|依观察和物理证据
+续与身份|断续|新拟复合|身份轨迹在某步中断又重出现|partial trace composition|重出现非连续
+续与身份|界迹|新拟复合|记录端口增减与延续的可检查数据|InterfaceTrace|不提供物理时间
+连接与适配|合|古字今释|沿相容界面构成新的整体组织|pushout composition|非任意加法
+连接与适配|接|古字今释|两个接口按约束建立连接|gluing|应明确连接位置
+连接与适配|通|古字今释|关系中的可达可传或可作用|reachability/communication|通不等于完全可替代
+连接与适配|纽|研究性转义|使多局部关系关联的共享位置|junction|共享资源可能冲突
+连接与适配|转接|现代用语|通过明确过程适配不完全相容的两端|adapter|需要额外语义验证
+连接与适配|共界|新拟复合|连接两份开放文的明确共享接口|seam boundary|变界时需共同认可
+连接与适配|合迹|新拟复合|组合前后保留接口身份的配对|horizontal evolution|仅在限定接缝成立
+连接与适配|互接|研究性转义|两个系统具有互补或双向接口作用|bidirectional wiring|不是对称关系必然成立
+变化与重构|化|古字今释|组织或互动可能性的有据变更|rewriting/change|不指定变化速度
+变化与重构|易|古字今释|一个配置改变成另一配置|transition|不等于可逆
+变化与重构|变界|新拟复合|接口数量类型角色或排列发生变化|interface evolution|旧身份要有踪迹
+变化与重构|显|古字今释|将原来未外露之部分开放为接口|exposure|不一定新生节点
+变化与重构|隐|古字今释|将原来外露之部分改为内部不可见|encapsulation|不必删除内部结构
+变化与重构|增|古字今释|增加可辨组件或端口出现|extension|应区分新显与新生
+变化与重构|撤|古字今释|撤去外露身份或连接|withdrawal|撤口不等于销毁
+变化与重构|重排|现代用语|对外露端口排列进行可追踪改变|permutation|若类型不同不能强制互换
+时间与行为|时|古字今释|变化被解释为先后或连续演进的参数|time parameter|span 不自带时间
+时间与行为|序|古字今释|事件之间的先后或依赖|order/partial order|不要求单一全序
+时间与行为|步|现代用语|离散更新的一个事件阶段|discrete step|不能代替连续时间
+时间与行为|流|古字今释|状态在连续时间中的变化|ODE flow|需存在唯一性条件
+时间与行为|历程|现代用语|由多次状态与接口变化构成的序列|trajectory|过程记录与生成律不同
+时间与行为|回环|研究性转义|结果回入自身后续输入的组织|feedback|无延迟可能不良定义
+时间与行为|迟|研究性转义|输出作用经过指定步或时长后生效|guard/delay|可能改变系统行为
+时间与行为|触发|现代用语|某条件满足引发相应变化|event guard|必须明写条件
+概率与可能|势|古字今释|给定配置在规则下可达到的后续空间|reachability set|不能等同于具体概率
+概率与可能|可|古字今释|某构造或变化满足允许条件|admissibility|可做不等于应做
+概率与可能|岐|研究性转义|演化有多个后续分支|branching|分支数不是概率值
+概率与可能|率|古字今释|对结果赋予规范化的概率权重|probability kernel|不能默认独立
+概率与可能|随机|现代用语|未来配置按概率核产生|stochastic transition|需定义样本空间
+概率与可能|共因|现代用语|多个结果受同一上游变量影响|common cause|独立张量会遗漏
+概率与可能|分布|现代用语|可能结果与概率权重的组合|distribution|对象不是单一观测值
+概率与可能|聚态|新拟复合|多个细态归为一个宏观状态|state aggregation|可能丢失马尔可夫性
+流量与约束|量|古字今释|需要明确单位和测度的状态属性|quantity|不同量纲不能直接合
+流量与约束|通量|现代用语|跨越界面单位时间交换的数量|flux|应指定正负和单位
+流量与约束|衡|古字今释|流入和流出之间的平衡关系|balance equation|非普适守恒
+流量与约束|守恒|现代用语|在约定作用下某计量总量保持|conservation law|需证明权重与源项
+流量与约束|源|古字今释|对系统内量作外部增加的机制|source term|可以非保守
+流量与约束|汇|研究性转义|系统内量向外移出的机制|sink term|不应混为内部边
+流量与约束|限|古字今释|物理或形式可行域的条件|constraint|可验证而非形式修辞
+流量与约束|维|研究性转义|物理量的量纲或空间维度|dimension|相同图型不保证量纲一致
+观察与抽象|观|古字今释|指定一组可询问的外部或内部现象|observation/semantics|不等于意识
+观察与抽象|象|古字今释|由某映射生成的现象表示|representation|象不等于实物全貌
+观察与抽象|映|研究性转义|一种描述到另一描述的明确映射|map/functor|需保留规定结构
+观察与抽象|粗|古字今释|减少可辨细节的观察尺度|coarse graining|不保证动力学闭合
+观察与抽象|细|古字今释|包含更丰富差别的表示尺度|refinement|细不等于更正确
+观察与抽象|观守|新拟复合|某一观察族的查询结果受变更或抽象保持|semantic preservation|需列出查询集
+观察与抽象|等|古字今释|相对给定语义下不可区分或可替代|equivalence|结构同构未必行为等价
+观察与抽象|宏闭|新拟复合|宏观状态自行决定其下一步分布或变化|lumpability/closure|需逐同块检验
+因果与解释|因|古字今释|在明确干预语义下可导致结果差异的关系|causal mechanism|语词因不自动有因果证据
+因果与解释|果|古字今释|在给定机制和干预下得到的结果|effect|未说明背景不可判因
+因果与解释|介入|现代用语|对结构机制实施明确替代或设值|intervention|不能等同于观察条件化
+因果与解释|询|古字今释|模型被要求回答的可形式化问题|query|先定问题后谈保真
+因果与解释|验|古字今释|用证明或数据检验命题|verification/testing|测试不是普适证明
+因果与解释|证|古字今释|支持性质成立的推导或可复核数据|proof/witness|应分经验与形式证据
+因果与解释|反例|现代用语|表明某一般断言失败的具体构造|counterexample|一个反例足以否定普遍命题
+因果与解释|相容|现代用语|两个连接、改变或解释满足方格条件|commutativity/compatibility|需指定等号或近似
+反身与文法|文|古字今释|依所选类型和观察可辨的组织|structured configuration|不是世界静态本原
+反身与文法|文之文|新拟复合|规则图式或组织本身成为另一次组织对象|higher order syntax|自描述不等于自我证明
+反身与文法|则|古字今释|指定合法组合和变化规律的约束|axiom/typing law|不是外在的神秘命令
+反身与文法|文法|现代借义|生成、组合、变化与等价的明确定义|grammar/calculus|表现力需逐域检验
+反身与文法|元化|新拟复合|允许有限且有类型地改变变化规则|meta-rewriting|不能默认安全或终止
+反身与文法|成|古字今释|某组生成过程满足组织条件而成立|construction|仅成形不代表良好
+反身与文法|开闭|研究性转义|接口开放或封闭的相对状态|open/closed system|开放不代表没有边界
+反身与文法|一致|现代用语|不同构造路径或观察结果在约定意义下相合|coherence|需要定义可比较对象
+伦理与社会|善|古字今释|需由规范与经验共同判断的福祉方向|normative objective|不能由图论直接导出
+伦理与社会|义|古字今释|行动与制度的正当性标准|legitimacy/fairness|不等于合成效率
+伦理与社会|共|古字今释|共同参与、共同承担或共享资源|collective arrangement|可能包含不平等
+伦理与社会|和|古字今释|存在差异时可持续协调的组织|coordination|不等于取消差异
+伦理与社会|自|古字今释|参与者的自主与选择能力|agency|不应约化为节点属性
+伦理与社会|退|古字今释|可退出某种连接或制度关系的可能|exit right|规则定义需考虑真实成本
+伦理与社会|责|古字今释|行动后果和权利义务的归属|accountability|非结构同构性质
+伦理与社会|普惠|现代用语|成果和机会在群体间可获得的评价|distributional objective|需要明确社会评价指标
+'''.strip()
+rows=[]
+for n,line in enumerate(DATA.splitlines(),1):
+    vals=[x.strip() for x in line.split('|')]
+    if len(vals)!=6: raise ValueError((n,vals))
+    rows.append(vals)
+assert len(rows)==len({(r[0],r[1]) for r in rows})
+header=['语义族','词','术语身份','本研究中的工作定义','数学或工程对应','适用条件与误用风险']
+with (R/'07_界变时流观守_概念增注.csv').open('w',encoding='utf-8-sig',newline='') as f:
+    writer=csv.writer(f);writer.writerow(header);writer.writerows(rows)
+with (R/'07_界变时流观守_概念增注.md').open('w',encoding='utf-8') as f:
+    f.write('# 文之词林：界变·时流·观守概念增注（v3.0）\n\n')
+    f.write(f'**{len(rows)} 条精注工作词条，覆盖 {len(set(r[0] for r in rows))} 个语义族。**\n\n')
+    f.write('此表不是古汉语字典，也不是对古代原典思想的归属声明。「古字今释」表示借用古字作现代工作定义；「新拟复合」表示研究命名。各条都必须服从形式规格，不能单凭字面暗示证明。原有389词、84重点精注、79高阶增注均保留在项目中。\n\n')
+    for group in dict.fromkeys(r[0] for r in rows):
+        f.write('## '+group+'\n\n')
+        f.write('| 词与术语身份 | 工作定义 | 对应 | 审查要点 |\n|---|---|---|---|\n')
+        for g,word,status,definition,mapping,caveat in rows:
+            if g==group:
+                f.write(f'| **{word}**（{status}） | {definition} | {mapping.replace("/"," / ")} | {caveat} |\n')
+        f.write('\n')
+    f.write('## 方法说明\n\n一、严格区分「语言组织之优雅」与「数学命题之成立」。二、不能因为两个术语在不同领域都能用，就认定两个领域满足相同定律。三、如果形式系统发生修订，应连带修订每个词的解释和反例。四、古典考据需要独立阅读原文，不能把本表标为已完成的训诂。\n')
+print('v3 lexicon',len(rows),'words',len(set(r[0] for r in rows)),'families')
