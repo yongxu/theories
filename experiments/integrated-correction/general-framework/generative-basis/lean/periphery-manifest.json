@@ -131,6 +131,16 @@
       "receipt": "observational-fidelity/observational-fidelity-verification.json",
       "checker": "observational-fidelity/check_observational_fidelity.py",
       "record": "observational-fidelity-and-multi-regime-error"
+    },
+    {
+      "module": "SurvivalDistinguishability",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "survival-distinguishability/SurvivalDistinguishability.lean",
+      "receipt": "survival-distinguishability/survival-distinguishability-verification.json",
+      "checker": "survival-distinguishability/check_survival_distinguishability.py",
+      "record": "finite-mode-survival-distinguishability"
     }
   ]
 }

@@ -44,11 +44,18 @@ SCOPE = (
     "and empty_source_infeasible under IsEmpty U; (2) coarsening_tv_mono, macro_refinement_tv_mono, and "
     "zero_tv_does_not_prevent_fiber_viability_split over Becoming.OplaxHistory.C2CoupledAlignmentWitness; "
     "(3) 3-way multi-query convex feasibility separation (per_query_not_implies_joint_marginal and "
-    "joint_marginal_not_implies_joint_dist); and (4) finite Markov kernels FinKernel/compKernel/"
+    "joint_marginal_not_implies_joint_dist); (4) finite Markov kernels FinKernel/compKernel/"
     "tensorKernel, sequential_kernel_tv_bound, independent_tensor_tv_bound, and "
     "three_regime_error_contrast joining linear open-loop TV growth, contractive closed-loop tubes via "
     "AlignmentReals.metricSlack and BecomingReals.iterVar_eq_metricSlack, and coupled-phase/concurrent "
-    "reserve breakdown via Becoming.OplaxHistory."
+    "reserve breakdown via Becoming.OplaxHistory; and (5) oplax rowDefect, optimal_floor_le_rowDefect, "
+    "Dobrushin kernel contraction (tvDist_pushKernel_dobrushin, tvDist_pushKernel_dobrushin_step), "
+    "literal AlignmentReals.MetricLaxSim kernel instantiation (kernelMetricLaxSim) yielding derived "
+    "iterated bounds and Viability.Kernel tube transfer (tvDist_pushKernel_iter_bound, "
+    "kernel_contraction_tube_via_metricLaxSim, three_regime_kernel_contrast), [0,1]-bounded "
+    "viability_risk_transfer_bound and fiber_split_readout_floor, sharp attainment "
+    "(sharp_oplax_dobrushin_attainment on Bool), and closed-loop feedback control "
+    "(feedback_destroys_openloop_contraction)."
 )
 
 

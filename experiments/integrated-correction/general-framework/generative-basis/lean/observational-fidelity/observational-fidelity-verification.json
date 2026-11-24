@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "utc": "20261124T131533.816983Z",
+  "utc": "20261124T140733.167446Z",
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
-  "retained_run": "observational-fidelity-checks/20261124T131533.816983Z",
+  "retained_run": "observational-fidelity-checks/20261124T140733.167446Z",
   "bridge_module": "ObservationalFidelity",
   "compile_order": [
     "Becoming.Prelude",
@@ -627,21 +627,20 @@
     "Becoming.Reconfiguration": "9a68931724c282ee7ffdc1c0f9ccea4edc313f4ea6eea374d3737a481be84e23",
     "Becoming.PolyComposition": "e30e753991112f94faf8a4ddd89e937e2b9384e42ac3e39a7ac269dde43a2d43",
     "Becoming.OplaxHistory": "8e26ee8ada10934444ca5c4b8fa8108136c718317bf785d718c42777e08092a2",
-    "ObservationalFidelity": "ef6ffc7ff3776e52e333470264df3ab231ad6edda87a58be03a0fd3b1f9c41fc"
+    "ObservationalFidelity": "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d"
   },
   "checker_sha256": {
-    "check_observational_fidelity.py": "550b8e802b98ff337c13a05e1f6b2802f5e85b7946697ca31c3e487f9c02b850",
+    "check_observational_fidelity.py": "34382397f4cc84aa63950e15ef07ddef17510c056728c13e54fbf36483fe5b6e",
     "check_becoming.py": "cd19bc36878e0ab5aacca8339fd8439f196ac571a43963a5caba44146b092733"
   },
   "source_commit": {
-    "main": "0ed94d1e1f5cb2fd10d4a99a0d05dd171911f384",
+    "main": "0397c5edd4dd0b024c4a9e164480a3f1c4349c24",
     "copied": [
-      "Becoming.LineOnAStock.lean",
-      "Becoming.WayUnderARule.lean",
-      "check_becoming.py"
+      "ObservationalFidelity.lean",
+      "check_observational_fidelity.py"
     ]
   },
-  "scope": "On ObservationalFidelity, joining WenHeHua (v7 Appendix G / v9 formal/61) over Mathlib's reals to AlignmentReals, BecomingReals, and Becoming.OplaxHistory: (1) finite probability distributions FinDist, pushforward, total variation tvDist, data-processing tvDist_pushforward_le, exact query-image TV blindness floor optimal_query_tv_floor (lower bound + constructive achievement under [Nonempty U]), and empty_source_infeasible under IsEmpty U; (2) coarsening_tv_mono, macro_refinement_tv_mono, and zero_tv_does_not_prevent_fiber_viability_split over Becoming.OplaxHistory.C2CoupledAlignmentWitness; (3) 3-way multi-query convex feasibility separation (per_query_not_implies_joint_marginal and joint_marginal_not_implies_joint_dist); and (4) finite Markov kernels FinKernel/compKernel/tensorKernel, sequential_kernel_tv_bound, independent_tensor_tv_bound, and three_regime_error_contrast joining linear open-loop TV growth, contractive closed-loop tubes via AlignmentReals.metricSlack and BecomingReals.iterVar_eq_metricSlack, and coupled-phase/concurrent reserve breakdown via Becoming.OplaxHistory.",
+  "scope": "On ObservationalFidelity, joining WenHeHua (v7 Appendix G / v9 formal/61) over Mathlib's reals to AlignmentReals, BecomingReals, and Becoming.OplaxHistory: (1) finite probability distributions FinDist, pushforward, total variation tvDist, data-processing tvDist_pushforward_le, exact query-image TV blindness floor optimal_query_tv_floor (lower bound + constructive achievement under [Nonempty U]), and empty_source_infeasible under IsEmpty U; (2) coarsening_tv_mono, macro_refinement_tv_mono, and zero_tv_does_not_prevent_fiber_viability_split over Becoming.OplaxHistory.C2CoupledAlignmentWitness; (3) 3-way multi-query convex feasibility separation (per_query_not_implies_joint_marginal and joint_marginal_not_implies_joint_dist); (4) finite Markov kernels FinKernel/compKernel/tensorKernel, sequential_kernel_tv_bound, independent_tensor_tv_bound, and three_regime_error_contrast joining linear open-loop TV growth, contractive closed-loop tubes via AlignmentReals.metricSlack and BecomingReals.iterVar_eq_metricSlack, and coupled-phase/concurrent reserve breakdown via Becoming.OplaxHistory; and (5) oplax rowDefect, optimal_floor_le_rowDefect, Dobrushin kernel contraction (tvDist_pushKernel_dobrushin, tvDist_pushKernel_dobrushin_step), literal AlignmentReals.MetricLaxSim kernel instantiation (kernelMetricLaxSim) yielding derived iterated bounds and Viability.Kernel tube transfer (tvDist_pushKernel_iter_bound, kernel_contraction_tube_via_metricLaxSim, three_regime_kernel_contrast), [0,1]-bounded viability_risk_transfer_bound and fiber_split_readout_floor, sharp attainment (sharp_oplax_dobrushin_attainment on Bool), and closed-loop feedback control (feedback_destroys_openloop_contraction).",
   "lean_steps": {
     "cache": "/Users/ren/.cache/becoming-lean",
     "fresh": false,
@@ -1679,9 +1678,9 @@
       "Becoming.Reconfiguration.log": "68314ff45483e4ab53de9b64446a73fdd2c5b790ef6e19a2fd28de778b072adb",
       "Becoming.PolyComposition.log": "5334b961cfaa690916f2fed0b4f71578c2958e409e41cd450d9a7143f87fa319",
       "Becoming.OplaxHistory.log": "ac608eead17f6989f1a7d14bc2de03f0c872614774a39078764b5c59d5f57438",
-      "ObservationalFidelity.log": "c45d7d043ff68522b37f27c4777cb6042afa5d8d5a018b51d8f1ea841beed0e5",
-      "ObservationalFidelityAxiomAudit.log": "563aab9e12122b6fa3f2ec8dffc7d3d96524b3a598d09340d6e0e2e5b07260d9",
-      "ObservationalFidelitySignatures.log": "6588871a7acbf1b04a36c994a758d918ab70e1082e0116baa0fc99b3f58db063"
+      "ObservationalFidelity.log": "ff0a7bcf96a1d591d2c94dd5ad1d110e480c715237572d0dfa35e2d39705e670",
+      "ObservationalFidelityAxiomAudit.log": "575c07488f2f1a81319bfd3fbe01aebc703ca03a6e564c1c6ed7abfdc3a30e06",
+      "ObservationalFidelitySignatures.log": "5bbfdef5288675e8c5f50d5029c0aec2cd24f6c651742c636689d9a0bf03c89a"
     }
   },
   "inherited_receipts": {
@@ -31619,7 +31618,7 @@
     {
       "module": "ObservationalFidelity",
       "layer": "periphery",
-      "theorems": 21,
+      "theorems": 35,
       "declarations": [
         {
           "kind": "structure",
@@ -31772,6 +31771,78 @@
         {
           "kind": "theorem",
           "name": "ObservationalFidelity.three_regime_error_contrast"
+        },
+        {
+          "kind": "def",
+          "name": "ObservationalFidelity.rowDefect"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.optimal_floor_le_rowDefect"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.sum_pushforward_mul"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.tvDist_pushKernel_dobrushin"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.tvDist_pushKernel_dobrushin_step"
+        },
+        {
+          "kind": "instance",
+          "name": "ObservationalFidelity.finDistPseudoMetricSpace"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.iterKernel_succ_comm"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.iterKernel_trace"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.trace_ofMap_eq_iterKernel"
+        },
+        {
+          "kind": "def",
+          "name": "ObservationalFidelity.kernelMetricLaxSim"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.tvDist_pushKernel_iter_bound"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.viability_risk_transfer_bound"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.fiber_split_readout_floor"
+        },
+        {
+          "kind": "def",
+          "name": "ObservationalFidelity.sharpBoolKernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.sharp_oplax_dobrushin_attainment"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.feedback_destroys_openloop_contraction"
+        },
+        {
+          "kind": "theorem",
+          "name": "ObservationalFidelity.three_regime_kernel_contrast"
         }
       ],
       "axiom_dependencies": {
@@ -31964,20 +32035,109 @@
           "Classical.choice",
           "Quot.sound",
           "propext"
+        ],
+        "ObservationalFidelity.rowDefect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.optimal_floor_le_rowDefect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.sum_pushforward_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.tvDist_pushKernel_dobrushin": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.tvDist_pushKernel_dobrushin_step": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.finDistPseudoMetricSpace": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.iterKernel_succ_comm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.iterKernel_trace": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.trace_ofMap_eq_iterKernel": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.kernelMetricLaxSim": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.tvDist_pushKernel_iter_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.viability_risk_transfer_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.fiber_split_readout_floor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.sharpBoolKernel": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.sharp_oplax_dobrushin_attainment": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.feedback_destroys_openloop_contraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ObservationalFidelity.three_regime_kernel_contrast": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       },
       "kernel_checked": true
     }
   ],
   "artifact_sha256": {
-    "Becoming.LineOnAStock.lean": "e9ebf78537fde98e2e115c607bb1f2947400dcdf7f0501be3f070bf01ba416d6",
-    "Becoming.WayUnderARule.lean": "3fe4ad41f30c346fe53b3b729dbc7e1df01c5eb735476657e80384ae4fe9abb1",
+    "ObservationalFidelity.lean": "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d",
     "ObservationalFidelity.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "ObservationalFidelityAxiomAudit.lean": "b0c9763bf1126806d12076864b47163913c9f8fe8b96dcc07a71b5d124f93991",
-    "ObservationalFidelityAxiomAudit.log": "80cd7f1b92022a12cfd3b7e57fcbc1f585122a7f82e40dc964e245c9d790f3ea",
-    "ObservationalFidelitySignatures.lean": "b656ed52dee514253fee6b635e33808bc35293b94f9ff41255c9674143ea76db",
-    "ObservationalFidelitySignatures.log": "24c1832b0bda757cc915dce22fed98928932704b34e3cad1a5659d995349c77e",
-    "check_becoming.py": "cd19bc36878e0ab5aacca8339fd8439f196ac571a43963a5caba44146b092733",
+    "ObservationalFidelityAxiomAudit.lean": "079a92d055276fbd30473abbd96be27a03d3cebe865f19a0c1633233b2c2e94a",
+    "ObservationalFidelityAxiomAudit.log": "ff92cef8f45dc7808634927ac009746daa3ef7c9ddf1f6091eb56e3e84d6f1df",
+    "ObservationalFidelitySignatures.lean": "23f025ab3a04c1a784c562f98982a35b1fae8ab4b2097a7da224648c3f02b184",
+    "ObservationalFidelitySignatures.log": "7f670cadb385fc77c1f0b1b5294f49b5e03f52bfe85ae4149d87db5ff6d6fdd3",
+    "check_observational_fidelity.py": "34382397f4cc84aa63950e15ef07ddef17510c056728c13e54fbf36483fe5b6e",
     "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
   }
 }
