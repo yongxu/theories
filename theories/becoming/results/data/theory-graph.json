@@ -12240,11 +12240,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RelSpan",
+   "type": "module",
+   "name": "Becoming.RelSpan",
+   "level": "L1",
+   "theorems": 38,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": false
+  },
+  {
    "id": "module:Becoming.OplaxHistory",
    "type": "module",
    "name": "Becoming.OplaxHistory",
    "level": "L1",
-   "theorems": 59,
+   "theorems": 22,
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
@@ -33695,6 +33706,11 @@
   },
   {
    "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.RelSpan",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
    "to": "module:Becoming.Viability",
    "type": "imports"
   },
@@ -36274,6 +36290,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OplaxHistory",
+   "to": "module:Becoming.RelSpan",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Optimum",
    "to": "module:Becoming.DrawnBeyond",
    "type": "imports"
@@ -36591,6 +36612,11 @@
   {
    "from": "module:Becoming.PolyComposition",
    "to": "module:Becoming.Reconfiguration",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PolyComposition",
+   "to": "module:Becoming.RelSpan",
    "type": "imports"
   },
   {
@@ -37151,6 +37177,11 @@
   {
    "from": "module:Becoming.Rejoining",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RelSpan",
+   "to": "module:Becoming.Prelude",
    "type": "imports"
   },
   {
@@ -52583,6 +52614,11 @@
   {
    "from": "record:oplax-history-comparison-and-relational-loss",
    "to": "module:Becoming.OplaxHistory",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:oplax-history-comparison-and-relational-loss",
+   "to": "module:Becoming.RelSpan",
    "type": "proved-in"
   },
   {

@@ -1,0 +1,52 @@
+{"name": "Becoming.OplaxHistory.BCLeft.eqV", "uses": []}
+{"name": "Becoming.OplaxHistory.BCLeft.ext_sameU", "uses": []}
+{"name": "Becoming.OplaxHistory.BCRight.eqMid", "uses": []}
+{"name": "Becoming.OplaxHistory.Bij.left_inv", "uses": []}
+{"name": "Becoming.OplaxHistory.Bij.right_inv", "uses": []}
+{"name": "Becoming.OplaxHistory.BracketTree.brecOn.eq", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse", "uses": ["Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_inj"]}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip_invol", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_above", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_inj", "uses": ["Becoming.OplaxHistory.C2RelativeLossWitness.sub_lt_of_ge_lt_double", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_invariant", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal", "uses": []}
+{"name": "Becoming.OplaxHistory.C2RelativeLossWitness.sub_lt_of_ge_lt_double", "uses": ["Becoming.Naturals.add_sub_cancel_left", "Becoming.le_dest"]}
+{"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.PushoutSpec.glue", "uses": []}
+{"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom.commL", "uses": []}
+{"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom.commR", "uses": []}
+{"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective", "uses": []}
+{"name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective", "uses": []}
+{"name": "Becoming.OplaxHistory.PullbackElem.ext", "uses": []}
+{"name": "Becoming.OplaxHistory.PullbackElem.mid", "uses": []}
+{"name": "Becoming.OplaxHistory.SpanFunctor.map_comp", "uses": []}
+{"name": "Becoming.OplaxHistory.SpanFunctor.map_congr", "uses": []}
+{"name": "Becoming.OplaxHistory.SpanFunctor.map_id", "uses": []}
+{"name": "Becoming.OplaxHistory.SpanHom.left_eq", "uses": []}
+{"name": "Becoming.OplaxHistory.SpanHom.right_eq", "uses": []}
+{"name": "Becoming.OplaxHistory.bcLeft_mk_ext", "uses": []}
+{"name": "Becoming.OplaxHistory.bcRight_mk_ext", "uses": []}
+{"name": "Becoming.OplaxHistory.bcRight_val_eq_of_eq", "uses": []}
+{"name": "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample", "uses": []}
+{"name": "Becoming.OplaxHistory.bc_isBijective_of_chi_bij", "uses": ["Becoming.OplaxHistory.chi_bijective_iff_bc_all", "Becoming.OplaxHistory.isBijective_of_bij"]}
+{"name": "Becoming.OplaxHistory.bracketTree_coherence_all_n", "uses": ["Becoming.OplaxHistory.BracketTree.proj._proof_2", "Becoming.OplaxHistory.BracketTree.proj._proof_4", "Becoming.OplaxHistory.SpanFunctor.map_comp", "Becoming.OplaxHistory.SpanFunctor.map_id", "Becoming.add_sub_of_le"]}
+{"name": "Becoming.OplaxHistory.chiFlat_proj", "uses": ["Becoming.OplaxHistory.SpanFunctor.map_comp"]}
+{"name": "Becoming.OplaxHistory.chi_assoc_coherence", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.SpanFunctor.map_comp"]}
+{"name": "Becoming.OplaxHistory.chi_bijective_iff_bc_all", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.bcLeft_mk_ext", "Becoming.OplaxHistory.bcMap._proof_1", "Becoming.OplaxHistory.bcRight_mk_ext", "Becoming.OplaxHistory.bcRight_val_eq_of_eq"]}
+{"name": "Becoming.OplaxHistory.chi_bijective_iff_pullback", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.OplaxHistory.chi_comp_functor", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.SpanFunctor.map_comp"]}
+{"name": "Becoming.OplaxHistory.chi_left", "uses": ["Becoming.OplaxHistory.SpanHom.left_eq"]}
+{"name": "Becoming.OplaxHistory.chi_natural", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.SpanFunctor.map_comp"]}
+{"name": "Becoming.OplaxHistory.chi_right", "uses": ["Becoming.OplaxHistory.SpanHom.right_eq"]}
+{"name": "Becoming.OplaxHistory.chi_unit_left", "uses": []}
+{"name": "Becoming.OplaxHistory.chi_unit_right", "uses": []}
+{"name": "Becoming.OplaxHistory.eqRec_inj", "uses": []}
+{"name": "Becoming.OplaxHistory.eqRec_symm_cancel", "uses": []}
+{"name": "Becoming.OplaxHistory.evalPartition_proj_unique", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.OplaxHistory.flatSpan_proj_unique", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid", "Becoming.OplaxHistory.stepCast_inj"]}
+{"name": "Becoming.OplaxHistory.isBijective_of_bij", "uses": ["Becoming.OplaxHistory.Bij.left_inv", "Becoming.OplaxHistory.Bij.right_inv"]}
+{"name": "Becoming.OplaxHistory.macro_refinement_functorial", "uses": ["Becoming.OplaxHistory.SpanHom.left_eq", "Becoming.OplaxHistory.evalPartition_proj_unique"]}
+{"name": "Becoming.OplaxHistory.map_castRight", "uses": []}
+{"name": "Becoming.OplaxHistory.powTwo_pos", "uses": []}
+{"name": "Becoming.OplaxHistory.stepCast_inj", "uses": []}
+{"name": "Becoming.RelSpan.mapTrace", "uses": []}

@@ -3451,6 +3451,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegroupingSelection.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Rejoining.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelSpan.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Remainder.lean",

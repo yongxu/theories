@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "0a3fba4cc7c0be18d66d29eebc9a2db47965b69c",
-  "core_run": "20261124T184422.177368Z"
+  "commit": "f9836f3a68d2970e0125d09ae64a2ef54d40a124",
+  "core_run": "20261124T195858.526167Z"
  },
- "core_sources_sha256": "56397775957e65a3ba5c2d6e2572dcc4d734838e184f1bc4ce3d3992fc8c597e",
+ "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",
  "modules": {
   "Becoming": {
-   "source_sha256": "0fd0437ff12bb68a32cde7fc1afb6280398319f15ab0f92e35fb704cde240fe0",
+   "source_sha256": "643fb58923a7bf5d94eebfe86a8989f0baed0b2a5c264f2efa25d2088812e687",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -130,7 +130,7 @@
    "theorems": 10
   },
   "Becoming.CausalAbstraction": {
-   "source_sha256": "99758e4ef405a3f5f2e5dbcbefcc1a53193ef405e558ee89dcbc9610f14034d6",
+   "source_sha256": "af5c990faf576e4f423aa2ef1913be9dbfbdcf82f0505e1c854e5035228e97ad",
    "theorems": 82
   },
   "Becoming.CausalGrowth": {
@@ -1018,8 +1018,8 @@
    "theorems": 78
   },
   "Becoming.OplaxHistory": {
-   "source_sha256": "8e26ee8ada10934444ca5c4b8fa8108136c718317bf785d718c42777e08092a2",
-   "theorems": 77
+   "source_sha256": "f06a28846e2a4eaa208c73303d9247da2a0a41d3b9f5645c940f8df3098e58c3",
+   "theorems": 26
   },
   "Becoming.Optimum": {
    "source_sha256": "3a4917cc1dc7ac5b0a2787083f7dcd408fb48f722b97c19305ae70d45d0ece34",
@@ -1094,7 +1094,7 @@
    "theorems": 62
   },
   "Becoming.PolyComposition": {
-   "source_sha256": "e30e753991112f94faf8a4ddd89e937e2b9384e42ac3e39a7ac269dde43a2d43",
+   "source_sha256": "555aec8dc64dcac28b44c9675d4885a570d98464e36d7b6ba496e24e84e4f36c",
    "theorems": 124
   },
   "Becoming.PoolCourse": {
@@ -1280,6 +1280,10 @@
   "Becoming.Rejoining": {
    "source_sha256": "c569ff98d685b60e7c93e3a9ff94dcb86365dfcf0751e13e2fda90aca107d2e3",
    "theorems": 20
+  },
+  "Becoming.RelSpan": {
+   "source_sha256": "74bd894a6643db9a9bce9489b90bbf555f5277b6e76bfd0c53238a86782c34ce",
+   "theorems": 52
   },
   "Becoming.RelativePosition": {
    "source_sha256": "485e49e5fb6a530a699aad9aca1f2903915f68fcdb29c3da9fb50cc7d1ca466a",
@@ -1763,8 +1767,8 @@
   }
  },
  "counts": {
-  "modules": 438,
-  "theorems": 22889,
+  "modules": 439,
+  "theorems": 22890,
   "uses_without_row": 60
  }
 }

@@ -6,7 +6,7 @@
 
 [中文（各章一览）](THEORY-GRAPH.zh.md) · 84–110 minutes to read in full; the terrain and the chapters at a glance, what the chapters' picture shows and the edge kinds, with their tables, in 36–46 minutes.
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3359 nodes, 7613 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3360 nodes, 7618 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 Two pictures, the dynamics first: [the terrain](atlas/TERRAIN.md) shows the dynamics of [the atlas](atlas/ATLAS.md) and the exits recorded between their families, drawn by `tools/research/atlas.py` from the atlas's entries alone, an arrow a count of exits, not a route; the picture under [the chapters at a glance](#the-spine) shows the chapters and their recorded uses of one another.
 
@@ -93,7 +93,7 @@ A region's results are the records whose home section is in its chapter, so the 
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
 | The map: generation, keeping, degeneration, orders, capture and the lock | 5 | 125 | 103 | 0 |
-| Knowing and testing | 0 | 118 | 93 | 0 |
+| Knowing and testing | 0 | 118 | 94 | 0 |
 | Life and evolution | 0 | 46 | 24 | 0 |
 | Collectives and selection | 0 | 74 | 29 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
@@ -642,7 +642,7 @@ Results (118):
 - [Which selections survive and remain executable when the lumping changes](records/selection-when-the-lumping-changes.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (93, 18 stated on the grammar): `ActiveInquiryLoop`, `Blanket`, `BlanketCouplings`, `BlanketWeights`, `CausalAbstraction`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `CommonResponse`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `EndogenousDetectionRace`, `EndogenousEmergence`, `Experiment`, `FaultEnvelopes`, `Feedback`, `FreeEnergyCounting`, `GrammarTesting`, `HeldForReading`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `ListingValuation`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `OplaxHistory`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadStages`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RoomNet`, `RoomRuns`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (94, 18 stated on the grammar): `ActiveInquiryLoop`, `Blanket`, `BlanketCouplings`, `BlanketWeights`, `CausalAbstraction`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `CommonResponse`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `EndogenousDetectionRace`, `EndogenousEmergence`, `Experiment`, `FaultEnvelopes`, `Feedback`, `FreeEnergyCounting`, `GrammarTesting`, `HeldForReading`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `ListingValuation`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `OplaxHistory`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadStages`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `RelSpan`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RoomNet`, `RoomRuns`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -962,4 +962,4 @@ Results (7):
 
 ## Not yet on the root
 
-327 of 434 core modules do not yet state their theorems on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+328 of 435 core modules do not yet state their theorems on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

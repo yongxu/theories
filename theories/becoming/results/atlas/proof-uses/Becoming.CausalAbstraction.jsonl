@@ -42,7 +42,7 @@
 {"name": "Becoming.exactCausal_passive_factors", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.ExactCausalAbs.obs_eq"]}
 {"name": "Becoming.exactCausal_refuted_of_confound_varied", "uses": ["Becoming.Confound.confounded", "Becoming.Confound.varied_refutes", "Becoming.ExactCausalAbs.factors", "Becoming.Run.stepsThrough_of_factors"]}
 {"name": "Becoming.exactCausal_trace_exact_iff", "uses": ["Becoming.exactCausal_trace_map", "Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
-{"name": "Becoming.exactCausal_trace_map", "uses": ["Becoming.ExactCausalAbs.factors", "Generative.Trace.brecOn"]}
+{"name": "Becoming.exactCausal_trace_map", "uses": ["Becoming.ExactCausalAbs.factors", "Becoming.RelSpan.mapTrace"]}
 {"name": "Becoming.exchange_givesAlike_iff_sensitive_in", "uses": ["Becoming.alike_of_sensitive_agree", "Becoming.keepHist_eq_iff"]}
 {"name": "Becoming.imageMap_iff_grammar", "uses": []}
 {"name": "Becoming.keepHist_eq_iff", "uses": ["Becoming.keepRow_eq_iff", "Becoming.le_succ_cases"]}

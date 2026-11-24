@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 420 | 21,161 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 421 | 21,162 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [Becoming active periphery](lean-declarations/becoming-periphery.md) | 16 | 639 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
@@ -23,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 148 | 2,065 |
+| [Generative core and relational structure](lean-declarations/core.md) | 149 | 2,072 |
 | [Other formal studies](lean-declarations/other.md) | 30 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -711,7 +711,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PlasticityPreparation.lean](lean-declarations/shared.md#module-c527ff17c751) | Organizational formation through revisable evaluation |
 | [PlasticityWitness.lean](lean-declarations/shared.md#module-ac933f076498) | Organizational formation through revisable evaluation |
 | [PluralRecords.lean](lean-declarations/abstraction.md#module-2a54e07465df) | Abstraction, applicability and constitution |
-| [PolyComposition.lean](lean-declarations/becoming-core-part-6.md#module-9cd6aa6411e2) | Becoming pure core |
+| [PolyComposition.lean](lean-declarations/becoming-core-part-5.md#module-9cd6aa6411e2) | Becoming pure core |
 | [PoolCourse.lean](lean-declarations/becoming-core-part-6.md#module-034ebac54637) | Becoming pure core |
 | [PoolFromCourse.lean](lean-declarations/becoming-core-part-6.md#module-16b05c29881a) | Becoming pure core |
 | [PoolResponse.lean](lean-declarations/becoming-core-part-6.md#module-618dbf62e7d3) | Becoming pure core |
@@ -838,6 +838,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RegroupingSelection.lean](lean-declarations/becoming-core-part-6.md#module-e5f3e2f92610) | Becoming pure core |
 | [Regulation.lean](lean-declarations/becoming-core-part-6.md#module-cbdc23b68478) | Becoming pure core |
 | [Rejoining.lean](lean-declarations/becoming-core-part-6.md#module-585d560964c5) | Becoming pure core |
+| [RelSpan.lean](lean-declarations/becoming-core-part-6.md#module-685df1910fc1) | Becoming pure core |
+| [RelSpanEncounterAdapter.lean](lean-declarations/core.md#module-cfbb15fb39f6) | Generative core and relational structure |
 | [RelationalAssembly.lean](lean-declarations/abstraction.md#module-b1e9ae8b3572) | Abstraction, applicability and constitution |
 | [RelationalBecoming.lean](lean-declarations/core.md#module-678ee419f096) | Generative core and relational structure |
 | [RelationalContinuation.lean](lean-declarations/core.md#module-670551b8b671) | Generative core and relational structure |

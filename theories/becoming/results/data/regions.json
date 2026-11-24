@@ -5198,10 +5198,15 @@
       "base": "periphery",
       "note": "v4.29.1 periphery #12 (Wave U5): 0-axiom bridge from October RenewalConfigurations to Becoming.KeepableStep with standalone checker"
     },
+    "Becoming.RelSpan": {
+      "region": "knowing",
+      "base": "general",
+      "note": "L1 (Wave 3): 0-axiom lower span/oplax base preserving Becoming.OplaxHistory.* Parts 0-2 plus RelSpan.mapTrace"
+    },
     "Becoming.OplaxHistory": {
       "region": "knowing",
       "base": "general",
-      "note": "L1 (Wave U6): 0-axiom normal oplax Span(F) chi coherence, Beck-Chevalley iff, emergent/C2 obstructions, Trace/CausalAbstraction/PolyComposition/GrammarLaws bridges"
+      "note": "L1 (Wave U6/Wave 3): 0-axiom closed-loop bridges onto Trace, CausalAbstraction, PolyComposition, coproduct/guarded interchange, and GrammarLaws"
     },
     "Becoming.DoubleKernel": {
       "region": "map",

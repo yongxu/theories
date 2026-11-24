@@ -5703,6 +5703,38 @@ Definitions and types:
 
 </details>
 
+<a id="module-cfbb15fb39f6"></a>
+
+<details>
+<summary>RelSpanEncounterAdapter.lean — 13 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean`
+
+Imports: `Becoming.RelSpan`, `EncounterEntry`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [RelSpanEncounterAdapter.mem_of_listNth?_eq_some](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L34) | 34 |
+| [RelSpanEncounterAdapter.exists_listNth?_eq_some_of_mem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L39) | 39 |
+| [RelSpanEncounterAdapter.proj_surjective_iff_completesPostBranch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L66) | 66 |
+| [RelSpanEncounterAdapter.sysA_proj_surjective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L81) | 81 |
+| [RelSpanEncounterAdapter.sysB_leftMid_reqB_empty_fiber](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L86) | 86 |
+| [RelSpanEncounterAdapter.heldout_pathCount_vs_branch_fiber_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L94) | 94 |
+| [RelSpanEncounterAdapter.branchProcess_mapTrace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L108) | 108 |
+
+Definitions and types:
+
+- `def` [RelSpanEncounterAdapter.listNth?](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L29) (L29)
+- `def` [RelSpanEncounterAdapter.Mid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L49) (L49)
+- `structure` [RelSpanEncounterAdapter.ExitOcc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L53) (L53)
+- `def` [RelSpanEncounterAdapter.ExitWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L58) (L58)
+- `def` [RelSpanEncounterAdapter.forgetIdx](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L62) (L62)
+- `def` [RelSpanEncounterAdapter.branchProcess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/RelSpanEncounterAdapter.lean#L104) (L104)
+
+</details>
+
 <a id="module-6b8e6a0d66ac"></a>
 
 <details>

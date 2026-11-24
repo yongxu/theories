@@ -364,7 +364,7 @@
         "Becoming.mechanism_intervention_underdetermined",
         "Becoming.exactCausal_refuted_of_confound_varied"
       ],
-      "sha256": "99758e4ef405a3f5f2e5dbcbefcc1a53193ef405e558ee89dcbc9610f14034d6"
+      "sha256": "af5c990faf576e4f423aa2ef1913be9dbfbdcf82f0505e1c854e5035228e97ad"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T014702.078186Z/verification.json",
@@ -376,12 +376,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u3-2026-11-24/NOTE.md",
       "role": "review",
       "sha256": "9d03c1ed1ad4c41f7ffea4486964d583b2628fd06a8c0ab31bf8107b6d1bc6bb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T195858.526167Z/verification.json",
+      "role": "receipt",
+      "sha256": "0b996c108a800c2cb950cc830112a7baf4053f3546228911d4682dbacc8179d4",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalAbstraction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T014702.078186Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T195858.526167Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CausalAbstraction",
       "success_pointer": "/status",
       "success_value": "passed"

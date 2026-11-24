@@ -101,9 +101,9 @@
 {"name": "Becoming.PolyComposition.ofOpenComponent_closedStep_eq", "uses": []}
 {"name": "Becoming.PolyComposition.ofOpenComponent_guard_iff", "uses": []}
 {"name": "Becoming.PolyComposition.ofOpenComponent_kernel_iff", "uses": ["Becoming.PolyComposition.ofOpenComponent_guard_iff", "Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "Becoming.PolyComposition.ofOpenComponent_trace_iff"]}
-{"name": "Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Becoming.RelSpan.mapTrace"]}
 {"name": "Becoming.PolyComposition.ofOpenComponent_trace_iff", "uses": ["Becoming.PolyComposition.ofOpenComponent_trace_from_poly", "Becoming.PolyComposition.ofOpenComponent_trace_to_poly", "Becoming.map_comp_eq", "Becoming.map_eq_of"]}
-{"name": "Becoming.PolyComposition.ofOpenComponent_trace_to_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Generative.Trace.brecOn"]}
+{"name": "Becoming.PolyComposition.ofOpenComponent_trace_to_poly", "uses": ["Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff", "Becoming.RelSpan.mapTrace"]}
 {"name": "Becoming.PolyComposition.ofOpenState_toOpenState", "uses": []}
 {"name": "Becoming.PolyComposition.polySiteDraw_compose", "uses": ["Becoming.PolyComposition.sumPortDraws_append", "Becoming.PolyComposition.sumPortDraws_map"]}
 {"name": "Becoming.PolyComposition.poly_close_kernel", "uses": ["Becoming.PolyComposition.poly_close_viable", "Becoming.Viability.Certificate.kernel"]}

@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T184422.177368Z",
- "core_sources_sha256": "56397775957e65a3ba5c2d6e2572dcc4d734838e184f1bc4ce3d3992fc8c597e",
+ "core_receipt": "20261124T195858.526167Z",
+ "core_sources_sha256": "170631e292b10e4ef0896250a6afa7cb276f1c6c126d162da0b407c625b34e03",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -37150,7 +37150,8 @@
      "Becoming.OplaxHistory.BracketTree",
      "Becoming.OplaxHistory.bracketTree_coherence_all_n",
      "Becoming.OplaxHistory.evalPartition_proj_unique",
-     "Becoming.OplaxHistory.macro_refinement_functorial"
+     "Becoming.OplaxHistory.macro_refinement_functorial",
+     "Becoming.RelSpan.mapTrace"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -70630,7 +70631,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "91a8398a3f32fd4799e1eb67f5cc7c6ebe8a7364ba6dab502f9f7f1fe9eff417",
+   "modules_sha256": "9f44c31d21f770e2e2b79fc92228dd0fea4a2b25a14eba4520927c4c5c3800f9",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
