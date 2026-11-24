@@ -81,7 +81,7 @@ Physics read onto the spine. Gouy–Stodola: exergy destroyed is T0 times the en
 - related, not a proved adapter: [merge-of-a-part-kept-by-the-rest](merge-of-a-part-kept-by-the-rest.md). The floor of destroyed exergy, here a physical premise, is not Landauer's bound alone; Landauer's count is a core law there.
 - related, not a proved adapter: [balance-from-the-first-law](balance-from-the-first-law.md). The exergy balance, a premise here, is derived there from thermodynamics' first law and the entropy balance at each exchange, in the same reading that gives the levels' balance.
 
-**Used by:** [balance-from-the-first-law](balance-from-the-first-law.md)
+**Used by:** [balance-from-the-first-law](balance-from-the-first-law.md) · [unified-becoming-over-reals](unified-becoming-over-reals.md)
 
 <a id="sources--来源"></a>
 ### Sources

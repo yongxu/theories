@@ -61,6 +61,8 @@ Reading (AI-written): formalizes in Mathlib ℝ the exact quantitative penalties
 - **formal-reuse**: [lax-multi-scale-viability](lax-multi-scale-viability.md). Discretizes MetricLaxSim directly into MultiScaleViability lax_kernel_of_certificate.
 - **formal-reuse**: [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md). Embeds linear FA hysteresis directly as an AdaptiveLoops.OpenLoop and invoke assume_guarantee_joint_kernel.
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

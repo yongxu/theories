@@ -79,6 +79,8 @@ Curie's principle (Curie 1894; Chalmers 1970, British Journal for the Philosophy
 - **formal-reuse**: [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md). exchangeAt, descent, Exchangeable, Symmetric and Law.run: the core's descent on identical cells, its exchange of neighbouring cells and its run, read with noise over the reals.
 - related, not a proved adapter: [selection-through-a-model-of-the-options](selection-through-a-model-of-the-options.md). Selection through a model of the options: a choice reading the options only through a full tie singles out none; independent noise at each cell parts identical cells with positive weight, never with certainty (alike_positive, Witness.independentNoise_parts).
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

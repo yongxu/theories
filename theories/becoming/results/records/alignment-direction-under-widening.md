@@ -101,7 +101,7 @@ The constructed case distinguishes expansion, service, transfer and abrupt withd
 - related, not a proved adapter: [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md). Why D2b failed: where the rest outruns the renewal, no weight of a reading after its end selects a member's restraint; CG2 tested the boundary on learners.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). At a mutual best response restraint is no best response and a condition beyond every family falls by the joint capacity: the outcome D2b's learners reached.
 
-**Used by:** [organizational-formation-from-generative-comparison](organizational-formation-from-generative-comparison.md) (interpretive)
+**Used by:** [organizational-formation-from-generative-comparison](organizational-formation-from-generative-comparison.md) (interpretive) · [whole-becoming-master-spine](whole-becoming-master-spine.md)
 
 <a id="sources--来源"></a>
 ### Sources

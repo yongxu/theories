@@ -67,6 +67,8 @@ Reading (AI-written): formalizes how preferences/weights update endogenously fro
 - **formal-reuse**: [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md). Derives assortment symmetry and threshold emergence from SelectionLevels.
 - **formal-reuse**: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Applies GroupEnding.Flow.lineages_raises to substrate-coupled lineage dynamics.
 
+**Used by:** [whole-becoming-master-spine](whole-becoming-master-spine.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

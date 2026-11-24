@@ -66,6 +66,8 @@ Reading (AI-written): unites L0-L3 into one checkable core spine showing when co
 - **formal-reuse**: [transformative-viability-order](transformative-viability-order.md). Certifies TransformsViably continuation along the composed spine and in MasterSpineWitness.
 - related, not a proved adapter: [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md). Mathlib ℝ periphery sibling proving continuous inertia, delay variance, metric contraction, and linear FA bounds excluded from L5's 0-axiom core (CE12/CE13).
 
+**Used by:** [whole-becoming-master-spine](whole-becoming-master-spine.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

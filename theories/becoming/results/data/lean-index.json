@@ -20,22 +20,22 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2356,
-    "distinct_byte_contents": 1947,
+    "lean_paths": 2359,
+    "distinct_byte_contents": 1950,
     "byte_identical_duplicate_groups": 140,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1305,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 1012
+      "working-source": 1015
     },
-    "working_named_theorem_lemma_occurrences": 33513,
-    "working_explicit_named_declaration_occurrences": 49404,
+    "working_named_theorem_lemma_occurrences": 33609,
+    "working_explicit_named_declaration_occurrences": 49640,
     "working_groups": {
       "abstraction": 45,
-      "becoming-core": 414,
-      "becoming-periphery": 10,
+      "becoming-core": 415,
+      "becoming-periphery": 12,
       "becoming-ring": 18,
       "concern": 15,
       "core": 135,
@@ -9100,8 +9100,19 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+      "sha256": "82fa900a24584df46035f58d9d77589698efda357089f72e9b54c98c76fec795",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
-      "sha256": "db3cf482429ef18a45c529385c0b1d3d74d52f4a3d37c1a862f6db9540375b2a",
+      "sha256": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -12930,6 +12941,20 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+      "sha256": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MatchedCourses.lean",
       "sha256": "0b7433345d7bd4e09685525bd0dd524bdf12ef4096ff6e3fe32e5f6f75a11171",
       "role": "working-source",
@@ -16393,6 +16418,17 @@
       "group": "renewal",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean",
+      "sha256": "9ce13a8456d982686f76dfc5c6dd1701ebbed3b370402420f25c2216494d37b9",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -160861,6 +160897,1172 @@
       "declaration_counts": {
         "def": 3,
         "theorem": 18
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4": {
+      "byte_size": 274779,
+      "line_count": 5096,
+      "imports": [
+        "Becoming.AlignmentSpine",
+        "Becoming.PolyComposition",
+        "Becoming.CausalAbstraction",
+        "Becoming.ActiveInquiryLoop",
+        "Becoming.EvolutionaryDrawdown",
+        "Becoming.EndogenousOrder",
+        "Becoming.Direction",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarMap"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "polyUniformToOpenComponent",
+          "qualified_name_hint": "Becoming.MasterSpine.polyUniformToOpenComponent",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "polyUniformToOpen_closedStep_eq",
+          "qualified_name_hint": "Becoming.MasterSpine.polyUniformToOpen_closedStep_eq",
+          "line": 68
+        },
+        {
+          "kind": "def",
+          "name": "polyUniformToOpenContract",
+          "qualified_name_hint": "Becoming.MasterSpine.polyUniformToOpenContract",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "wholeGSum",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeGSum",
+          "line": 138
+        },
+        {
+          "kind": "theorem",
+          "name": "wholeGSum_rises",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeGSum_rises",
+          "line": 146
+        },
+        {
+          "kind": "def",
+          "name": "wholeWireObs",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeWireObs",
+          "line": 156
+        },
+        {
+          "kind": "def",
+          "name": "wholeInnerBlk",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeInnerBlk",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "wholeInnerBlkContract",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeInnerBlkContract",
+          "line": 175
+        },
+        {
+          "kind": "def",
+          "name": "wholeSealedLeft",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeSealedLeft",
+          "line": 185
+        },
+        {
+          "kind": "def",
+          "name": "wholeSealedLeftContract",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeSealedLeftContract",
+          "line": 195
+        },
+        {
+          "kind": "def",
+          "name": "wholeScopeOpen",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeScopeOpen",
+          "line": 229
+        },
+        {
+          "kind": "def",
+          "name": "wholeScopeOpenContract",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeScopeOpenContract",
+          "line": 239
+        },
+        {
+          "kind": "def",
+          "name": "scopeOpenComponent",
+          "qualified_name_hint": "Becoming.MasterSpine.scopeOpenComponent",
+          "line": 269
+        },
+        {
+          "kind": "def",
+          "name": "scopeOpenContract",
+          "qualified_name_hint": "Becoming.MasterSpine.scopeOpenContract",
+          "line": 278
+        },
+        {
+          "kind": "def",
+          "name": "wholeOp",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeOp",
+          "line": 302
+        },
+        {
+          "kind": "def",
+          "name": "wholeOpContract",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeOpContract",
+          "line": 317
+        },
+        {
+          "kind": "def",
+          "name": "wholeScopeOp",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeScopeOp",
+          "line": 338
+        },
+        {
+          "kind": "def",
+          "name": "wholeInquirySpec",
+          "qualified_name_hint": "Becoming.MasterSpine.wholeInquirySpec",
+          "line": 352
+        },
+        {
+          "kind": "def",
+          "name": "IsProbeAt",
+          "qualified_name_hint": "Becoming.MasterSpine.IsProbeAt",
+          "line": 376
+        },
+        {
+          "kind": "def",
+          "name": "IsOpState",
+          "qualified_name_hint": "Becoming.MasterSpine.IsOpState",
+          "line": 383
+        },
+        {
+          "kind": "def",
+          "name": "IsOpTheta",
+          "qualified_name_hint": "Becoming.MasterSpine.IsOpTheta",
+          "line": 390
+        },
+        {
+          "kind": "def",
+          "name": "IsOpWithInit",
+          "qualified_name_hint": "Becoming.MasterSpine.IsOpWithInit",
+          "line": 397
+        },
+        {
+          "kind": "def",
+          "name": "extractOpState",
+          "qualified_name_hint": "Becoming.MasterSpine.extractOpState",
+          "line": 405
+        },
+        {
+          "kind": "def",
+          "name": "extractOpDist",
+          "qualified_name_hint": "Becoming.MasterSpine.extractOpDist",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "inquiry_step_phase",
+          "qualified_name_hint": "Becoming.MasterSpine.inquiry_step_phase",
+          "line": 419
+        },
+        {
+          "kind": "theorem",
+          "name": "inquiry_phase_inv",
+          "qualified_name_hint": "Becoming.MasterSpine.inquiry_phase_inv",
+          "line": 462
+        },
+        {
+          "kind": "theorem",
+          "name": "exploreMarginInv_init",
+          "qualified_name_hint": "Becoming.MasterSpine.exploreMarginInv_init",
+          "line": 506
+        },
+        {
+          "kind": "theorem",
+          "name": "exploreMarginInv_along_run",
+          "qualified_name_hint": "Becoming.MasterSpine.exploreMarginInv_along_run",
+          "line": 544
+        },
+        {
+          "kind": "theorem",
+          "name": "postProbe_isOpTheta",
+          "qualified_name_hint": "Becoming.MasterSpine.postProbe_isOpTheta",
+          "line": 570
+        },
+        {
+          "kind": "theorem",
+          "name": "postProbe_step_lemma",
+          "qualified_name_hint": "Becoming.MasterSpine.postProbe_step_lemma",
+          "line": 598
+        },
+        {
+          "kind": "def",
+          "name": "postProbeRun",
+          "qualified_name_hint": "Becoming.MasterSpine.postProbeRun",
+          "line": 634
+        },
+        {
+          "kind": "theorem",
+          "name": "postProbeRun_opInvariants",
+          "qualified_name_hint": "Becoming.MasterSpine.postProbeRun_opInvariants",
+          "line": 657
+        },
+        {
+          "kind": "structure",
+          "name": "WholeArchitecture",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture",
+          "line": 739
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.initLeft",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.initLeft",
+          "line": 1199
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.initOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.initOp",
+          "line": 1202
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.leftComp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.leftComp",
+          "line": 1205
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.cLeft",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.cLeft",
+          "line": 1208
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.rightComp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.rightComp",
+          "line": 1214
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.cRight",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.cRight",
+          "line": 1217
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.compOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.compOp",
+          "line": 1224
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.cOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.cOp",
+          "line": 1227
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.spec",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.spec",
+          "line": 1230
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.inqCertAndKernel",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.inqCertAndKernel",
+          "line": 1234
+        },
+        {
+          "kind": "theorem",
+          "name": "WholeArchitecture.phaseInv",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.phaseInv",
+          "line": 1241
+        },
+        {
+          "kind": "theorem",
+          "name": "WholeArchitecture.invAll",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.invAll",
+          "line": 1248
+        },
+        {
+          "kind": "theorem",
+          "name": "WholeArchitecture.postIsOpTheta",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta",
+          "line": 1253
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitecture.rOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.rOp",
+          "line": 1258
+        },
+        {
+          "kind": "theorem",
+          "name": "WholeArchitecture.rOp_kernel",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitecture.rOp_kernel",
+          "line": 1263
+        },
+        {
+          "kind": "def",
+          "name": "WholeArchitectureViableProp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeArchitectureViableProp",
+          "line": 1290
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_architecture_viable_and_coupled",
+          "qualified_name_hint": "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+          "line": 1362
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_architecture_upgrade_mode_viable",
+          "qualified_name_hint": "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable",
+          "line": 1425
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_architecture_scopeMode_bridge",
+          "qualified_name_hint": "Becoming.MasterSpine.whole_architecture_scopeMode_bridge",
+          "line": 1468
+        },
+        {
+          "kind": "def",
+          "name": "MasterSpineGrammarLiftsProp",
+          "qualified_name_hint": "Becoming.MasterSpine.MasterSpineGrammarLiftsProp",
+          "line": 1549
+        },
+        {
+          "kind": "theorem",
+          "name": "masterSpine_grammar_lifts",
+          "qualified_name_hint": "Becoming.MasterSpine.masterSpine_grammar_lifts",
+          "line": 1594
+        },
+        {
+          "kind": "def",
+          "name": "AlignmentPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.AlignmentPanoramaProp",
+          "line": 1632
+        },
+        {
+          "kind": "def",
+          "name": "PolyPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.PolyPanoramaProp",
+          "line": 1806
+        },
+        {
+          "kind": "def",
+          "name": "CausalPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.CausalPanoramaProp",
+          "line": 2001
+        },
+        {
+          "kind": "def",
+          "name": "GeneralObstructionsProp",
+          "qualified_name_hint": "Becoming.MasterSpine.GeneralObstructionsProp",
+          "line": 2117
+        },
+        {
+          "kind": "def",
+          "name": "ActiveInquiryPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.ActiveInquiryPanoramaProp",
+          "line": 2162
+        },
+        {
+          "kind": "def",
+          "name": "EndogenousOrderPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.EndogenousOrderPanoramaProp",
+          "line": 2349
+        },
+        {
+          "kind": "def",
+          "name": "EvolutionaryDrawdownPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.EvolutionaryDrawdownPanoramaProp",
+          "line": 2636
+        },
+        {
+          "kind": "def",
+          "name": "FullObstructionPanoramaProp",
+          "qualified_name_hint": "Becoming.MasterSpine.FullObstructionPanoramaProp",
+          "line": 2799
+        },
+        {
+          "kind": "theorem",
+          "name": "full_obstruction_and_sharpness_panorama",
+          "qualified_name_hint": "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama",
+          "line": 2811
+        },
+        {
+          "kind": "theorem",
+          "name": "masterSpine_readsOnlyDynamics",
+          "qualified_name_hint": "Becoming.MasterSpine.masterSpine_readsOnlyDynamics",
+          "line": 2882
+        },
+        {
+          "kind": "theorem",
+          "name": "masterSpine_admits_rival",
+          "qualified_name_hint": "Becoming.MasterSpine.masterSpine_admits_rival",
+          "line": 2889
+        },
+        {
+          "kind": "theorem",
+          "name": "masterSpine_cannot_entail_unrestricted",
+          "qualified_name_hint": "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted",
+          "line": 2897
+        },
+        {
+          "kind": "def",
+          "name": "K6EthicsFirewallProp",
+          "qualified_name_hint": "Becoming.MasterSpine.K6EthicsFirewallProp",
+          "line": 2903
+        },
+        {
+          "kind": "theorem",
+          "name": "k6_ethics_chain_and_firewall",
+          "qualified_name_hint": "Becoming.MasterSpine.k6_ethics_chain_and_firewall",
+          "line": 3013
+        },
+        {
+          "kind": "def",
+          "name": "MasterAlignmentDichotomyProp",
+          "qualified_name_hint": "Becoming.MasterSpine.MasterAlignmentDichotomyProp",
+          "line": 3033
+        },
+        {
+          "kind": "theorem",
+          "name": "whole_becoming_master_theorem",
+          "qualified_name_hint": "Becoming.MasterSpine.whole_becoming_master_theorem",
+          "line": 3078
+        },
+        {
+          "kind": "def",
+          "name": "wG",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wG",
+          "line": 3100
+        },
+        {
+          "kind": "theorem",
+          "name": "wG_rises",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wG_rises",
+          "line": 3104
+        },
+        {
+          "kind": "def",
+          "name": "wProbeObs",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wProbeObs",
+          "line": 3120
+        },
+        {
+          "kind": "def",
+          "name": "wObsL",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wObsL",
+          "line": 3123
+        },
+        {
+          "kind": "def",
+          "name": "wObsR",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wObsR",
+          "line": 3125
+        },
+        {
+          "kind": "def",
+          "name": "wWorld",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wWorld",
+          "line": 3127
+        },
+        {
+          "kind": "def",
+          "name": "wSp₁",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSp₁",
+          "line": 3137
+        },
+        {
+          "kind": "def",
+          "name": "wSp₂",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSp₂",
+          "line": 3192
+        },
+        {
+          "kind": "def",
+          "name": "wG_hide",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wG_hide",
+          "line": 3222
+        },
+        {
+          "kind": "theorem",
+          "name": "wG_hide_rises",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wG_hide_rises",
+          "line": 3224
+        },
+        {
+          "kind": "def",
+          "name": "wFlagOf",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wFlagOf",
+          "line": 3231
+        },
+        {
+          "kind": "def",
+          "name": "wWireObs",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wWireObs",
+          "line": 3233
+        },
+        {
+          "kind": "def",
+          "name": "wBaseR",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBaseR",
+          "line": 3235
+        },
+        {
+          "kind": "def",
+          "name": "wInitR",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wInitR",
+          "line": 3237
+        },
+        {
+          "kind": "def",
+          "name": "wProposeR",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wProposeR",
+          "line": 3239
+        },
+        {
+          "kind": "def",
+          "name": "wChannel",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wChannel",
+          "line": 3244
+        },
+        {
+          "kind": "def",
+          "name": "wPlan",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPlan",
+          "line": 3246
+        },
+        {
+          "kind": "def",
+          "name": "wProbeDraw",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wProbeDraw",
+          "line": 3248
+        },
+        {
+          "kind": "def",
+          "name": "wProbeStepDraw",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wProbeStepDraw",
+          "line": 3250
+        },
+        {
+          "kind": "def",
+          "name": "wInfer",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wInfer",
+          "line": 3252
+        },
+        {
+          "kind": "def",
+          "name": "wCompOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCompOp",
+          "line": 3258
+        },
+        {
+          "kind": "def",
+          "name": "wInitOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wInitOp",
+          "line": 3262
+        },
+        {
+          "kind": "def",
+          "name": "wCLeft",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCLeft",
+          "line": 3265
+        },
+        {
+          "kind": "def",
+          "name": "wCRight",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCRight",
+          "line": 3281
+        },
+        {
+          "kind": "def",
+          "name": "wCOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCOp",
+          "line": 3284
+        },
+        {
+          "kind": "def",
+          "name": "wSpec",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSpec",
+          "line": 3286
+        },
+        {
+          "kind": "abbrev",
+          "name": "WOpS",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.WOpS",
+          "line": 3290
+        },
+        {
+          "kind": "def",
+          "name": "wDefaultDist",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDefaultDist",
+          "line": 3293
+        },
+        {
+          "kind": "def",
+          "name": "wStepFull",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wStepFull",
+          "line": 3298
+        },
+        {
+          "kind": "def",
+          "name": "wOrbitFull",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull",
+          "line": 3304
+        },
+        {
+          "kind": "theorem",
+          "name": "wDefaultTol",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDefaultTol",
+          "line": 3309
+        },
+        {
+          "kind": "def",
+          "name": "w_r_full",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.w_r_full",
+          "line": 3315
+        },
+        {
+          "kind": "theorem",
+          "name": "wOrbitFull_1",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1",
+          "line": 3323
+        },
+        {
+          "kind": "theorem",
+          "name": "wOrbitFull_ge_2",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2",
+          "line": 3327
+        },
+        {
+          "kind": "theorem",
+          "name": "wROp_level_eq",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq",
+          "line": 3337
+        },
+        {
+          "kind": "theorem",
+          "name": "wDrawExt_pos",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDrawExt_pos",
+          "line": 3346
+        },
+        {
+          "kind": "theorem",
+          "name": "wEq_of_distNat_zero",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero",
+          "line": 3358
+        },
+        {
+          "kind": "def",
+          "name": "cappedDistNat",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat",
+          "line": 3365
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedDistNat_le",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_le",
+          "line": 3368
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedDistNat_eq_of_le",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_eq_of_le",
+          "line": 3374
+        },
+        {
+          "kind": "theorem",
+          "name": "cappedDistNat_zero_iff",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_zero_iff",
+          "line": 3377
+        },
+        {
+          "kind": "def",
+          "name": "wSlackNat",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSlackNat",
+          "line": 3387
+        },
+        {
+          "kind": "def",
+          "name": "wSlackLeft",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSlackLeft",
+          "line": 3420
+        },
+        {
+          "kind": "def",
+          "name": "wRX",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wRX",
+          "line": 3432
+        },
+        {
+          "kind": "def",
+          "name": "wRA",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wRA",
+          "line": 3437
+        },
+        {
+          "kind": "def",
+          "name": "wRB",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wRB",
+          "line": 3447
+        },
+        {
+          "kind": "def",
+          "name": "wDrawQA",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDrawQA",
+          "line": 3457
+        },
+        {
+          "kind": "def",
+          "name": "wDrawQB",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDrawQB",
+          "line": 3459
+        },
+        {
+          "kind": "def",
+          "name": "wSimX",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSimX",
+          "line": 3461
+        },
+        {
+          "kind": "def",
+          "name": "wSimA",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSimA",
+          "line": 3526
+        },
+        {
+          "kind": "def",
+          "name": "wSimB",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wSimB",
+          "line": 3643
+        },
+        {
+          "kind": "def",
+          "name": "wMacroGuard",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wMacroGuard",
+          "line": 3753
+        },
+        {
+          "kind": "def",
+          "name": "wCertQ",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCertQ",
+          "line": 3757
+        },
+        {
+          "kind": "abbrev",
+          "name": "WCausalQ",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.WCausalQ",
+          "line": 3884
+        },
+        {
+          "kind": "def",
+          "name": "wPiCausal",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPiCausal",
+          "line": 3886
+        },
+        {
+          "kind": "theorem",
+          "name": "wCausal_goAlike",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_goAlike",
+          "line": 3888
+        },
+        {
+          "kind": "theorem",
+          "name": "wCausal_nonconst",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_nonconst",
+          "line": 3937
+        },
+        {
+          "kind": "inductive",
+          "name": "EvoPlace",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.EvoPlace",
+          "line": 3943
+        },
+        {
+          "kind": "def",
+          "name": "wEvoLevel",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvoLevel",
+          "line": 3950
+        },
+        {
+          "kind": "def",
+          "name": "wWEvo",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wWEvo",
+          "line": 3957
+        },
+        {
+          "kind": "def",
+          "name": "wLEvo",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wLEvo",
+          "line": 3981
+        },
+        {
+          "kind": "def",
+          "name": "wGEvo",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wGEvo",
+          "line": 3997
+        },
+        {
+          "kind": "theorem",
+          "name": "wEvo_acting",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_acting",
+          "line": 4007
+        },
+        {
+          "kind": "theorem",
+          "name": "wEvo_family_eq",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq",
+          "line": 4023
+        },
+        {
+          "kind": "theorem",
+          "name": "wEvo_descended",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_descended",
+          "line": 4034
+        },
+        {
+          "kind": "theorem",
+          "name": "wEvo_exact",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_exact",
+          "line": 4072
+        },
+        {
+          "kind": "def",
+          "name": "wEvoLgs",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvoLgs",
+          "line": 4099
+        },
+        {
+          "kind": "def",
+          "name": "wEvoVal",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wEvoVal",
+          "line": 4101
+        },
+        {
+          "kind": "inductive",
+          "name": "BadPlace",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.BadPlace",
+          "line": 4111
+        },
+        {
+          "kind": "def",
+          "name": "wBadLevelFn",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBadLevelFn",
+          "line": 4116
+        },
+        {
+          "kind": "def",
+          "name": "wBadTakeFn",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBadTakeFn",
+          "line": 4123
+        },
+        {
+          "kind": "def",
+          "name": "wWBad",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wWBad",
+          "line": 4130
+        },
+        {
+          "kind": "def",
+          "name": "wLBad",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wLBad",
+          "line": 4157
+        },
+        {
+          "kind": "theorem",
+          "name": "wBad_balances",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBad_balances",
+          "line": 4175
+        },
+        {
+          "kind": "theorem",
+          "name": "wBad_acting",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBad_acting",
+          "line": 4191
+        },
+        {
+          "kind": "theorem",
+          "name": "wBad_dependent",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBad_dependent",
+          "line": 4218
+        },
+        {
+          "kind": "def",
+          "name": "wGBad",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wGBad",
+          "line": 4232
+        },
+        {
+          "kind": "theorem",
+          "name": "wGBad_family",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_family",
+          "line": 4242
+        },
+        {
+          "kind": "theorem",
+          "name": "wGBad_descended",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_descended",
+          "line": 4258
+        },
+        {
+          "kind": "def",
+          "name": "wOrdItems",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wOrdItems",
+          "line": 4285
+        },
+        {
+          "kind": "def",
+          "name": "wOrdOwn",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wOrdOwn",
+          "line": 4288
+        },
+        {
+          "kind": "def",
+          "name": "wUOrd",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wUOrd",
+          "line": 4292
+        },
+        {
+          "kind": "def",
+          "name": "wFeedbackOrd",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wFeedbackOrd",
+          "line": 4299
+        },
+        {
+          "kind": "def",
+          "name": "wAOrd",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wAOrd",
+          "line": 4301
+        },
+        {
+          "kind": "def",
+          "name": "wBOrd",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBOrd",
+          "line": 4307
+        },
+        {
+          "kind": "inductive",
+          "name": "WNashAct",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.WNashAct",
+          "line": 4314
+        },
+        {
+          "kind": "inductive",
+          "name": "WNashForm",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.WNashForm",
+          "line": 4318
+        },
+        {
+          "kind": "inductive",
+          "name": "WNashCond",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.WNashCond",
+          "line": 4325
+        },
+        {
+          "kind": "def",
+          "name": "wNashActs",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wNashActs",
+          "line": 4330
+        },
+        {
+          "kind": "def",
+          "name": "wNarrowMenu",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wNarrowMenu",
+          "line": 4332
+        },
+        {
+          "kind": "def",
+          "name": "wWideMenu",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wWideMenu",
+          "line": 4336
+        },
+        {
+          "kind": "def",
+          "name": "wDrawOf",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wDrawOf",
+          "line": 4340
+        },
+        {
+          "kind": "def",
+          "name": "wYieldOf",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wYieldOf",
+          "line": 4344
+        },
+        {
+          "kind": "def",
+          "name": "wBaseDraw",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wBaseDraw",
+          "line": 4348
+        },
+        {
+          "kind": "def",
+          "name": "wGateOpen",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wGateOpen",
+          "line": 4352
+        },
+        {
+          "kind": "def",
+          "name": "wPoolStep",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep",
+          "line": 4360
+        },
+        {
+          "kind": "def",
+          "name": "wPoolTake1",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake1",
+          "line": 4370
+        },
+        {
+          "kind": "def",
+          "name": "wPoolTake2",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake2",
+          "line": 4373
+        },
+        {
+          "kind": "def",
+          "name": "wPoolTakeBase",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeBase",
+          "line": 4376
+        },
+        {
+          "kind": "def",
+          "name": "wPoolTakeGate",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTakeGate",
+          "line": 4379
+        },
+        {
+          "kind": "def",
+          "name": "wPoolGive",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolGive",
+          "line": 4386
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_rr",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr",
+          "line": 4389
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_oo",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_oo",
+          "line": 4406
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_ungated_or",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_or",
+          "line": 4420
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_ungated_ro",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_ro",
+          "line": 4434
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_gated_or_ge16",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_or_ge16",
+          "line": 4448
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolStep_gated_ro_ge16",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_ro_ge16",
+          "line": 4466
+        },
+        {
+          "kind": "theorem",
+          "name": "wPoolTake_le_wPoolStep",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep",
+          "line": 4484
+        },
+        {
+          "kind": "def",
+          "name": "wCRWeb",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCRWeb",
+          "line": 4520
+        },
+        {
+          "kind": "def",
+          "name": "wCRFlow",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCRFlow",
+          "line": 4548
+        },
+        {
+          "kind": "theorem",
+          "name": "wCR_balances",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCR_balances",
+          "line": 4560
+        },
+        {
+          "kind": "theorem",
+          "name": "wCR_acting",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCR_acting",
+          "line": 4593
+        },
+        {
+          "kind": "theorem",
+          "name": "wCR_dependent",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCR_dependent",
+          "line": 4609
+        },
+        {
+          "kind": "def",
+          "name": "wAdmBool",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool",
+          "line": 4633
+        },
+        {
+          "kind": "theorem",
+          "name": "wAdmBool_iff",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool_iff",
+          "line": 4636
+        },
+        {
+          "kind": "def",
+          "name": "wCR",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCR",
+          "line": 4671
+        },
+        {
+          "kind": "theorem",
+          "name": "wCR_tracks_rOp",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.wCR_tracks_rOp",
+          "line": 4691
+        },
+        {
+          "kind": "def",
+          "name": "witnessArchitecture",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture",
+          "line": 4698
+        },
+        {
+          "kind": "theorem",
+          "name": "witness_holds_master_theorem",
+          "qualified_name_hint": "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem",
+          "line": 5074
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 2,
+        "def": 123,
+        "inductive": 5,
+        "structure": 1,
+        "theorem": 58
       },
       "textual_markers": {
         "sorry": [],
@@ -320964,6 +322166,264 @@
       },
       "print_axioms_commands": 0
     },
+    "82fa900a24584df46035f58d9d77589698efda357089f72e9b54c98c76fec795": {
+      "byte_size": 51974,
+      "line_count": 900,
+      "imports": [
+        "AlignmentReals",
+        "FreeEnergyReals",
+        "ExpectedFreeEnergyReals",
+        "CellsUnderNoise",
+        "LinearBlankets",
+        "EntropyProduction",
+        "RegimeReals",
+        "Representation",
+        "SlowingDown",
+        "Mathlib.Analysis.Normed.Lp.PiLp"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "iterVar",
+          "qualified_name_hint": "Becoming.Reals.iterVar",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "metricSlack_succ_unfold",
+          "qualified_name_hint": "Becoming.Reals.metricSlack_succ_unfold",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "iterVar_eq_metricSlack",
+          "qualified_name_hint": "Becoming.Reals.iterVar_eq_metricSlack",
+          "line": 85
+        },
+        {
+          "kind": "theorem",
+          "name": "iterVar_tendsto_stationaryVariance",
+          "qualified_name_hint": "Becoming.Reals.iterVar_tendsto_stationaryVariance",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "metricSlack_stationaryVariance_bridge",
+          "qualified_name_hint": "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+          "line": 117
+        },
+        {
+          "kind": "theorem",
+          "name": "slowingDown_inertia_regime_collapse",
+          "qualified_name_hint": "Becoming.Reals.slowingDown_inertia_regime_collapse",
+          "line": 163
+        },
+        {
+          "kind": "def",
+          "name": "finiteLawOfMeasure",
+          "qualified_name_hint": "Becoming.Reals.finiteLawOfMeasure",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "finiteLawOfMeasure_expect_eq_integral",
+          "qualified_name_hint": "Becoming.Reals.finiteLawOfMeasure_expect_eq_integral",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "finiteLawOfMeasure_prob_eq_real",
+          "qualified_name_hint": "Becoming.Reals.finiteLawOfMeasure_prob_eq_real",
+          "line": 256
+        },
+        {
+          "kind": "theorem",
+          "name": "fluctuation_complement_survival_ge",
+          "qualified_name_hint": "Becoming.Reals.fluctuation_complement_survival_ge",
+          "line": 279
+        },
+        {
+          "kind": "theorem",
+          "name": "finiteLawOfMeasure_exergy_fluctuation_survival",
+          "qualified_name_hint": "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival",
+          "line": 308
+        },
+        {
+          "kind": "def",
+          "name": "gibbsWeight",
+          "qualified_name_hint": "Becoming.Reals.gibbsWeight",
+          "line": 387
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbsWeight_eq_posterior",
+          "qualified_name_hint": "Becoming.Reals.gibbsWeight_eq_posterior",
+          "line": 391
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbsWeight_eq_softmax",
+          "qualified_name_hint": "Becoming.Reals.gibbsWeight_eq_softmax",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbsWeight_pos",
+          "qualified_name_hint": "Becoming.Reals.gibbsWeight_pos",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbsWeight_sum_one",
+          "qualified_name_hint": "Becoming.Reals.gibbsWeight_sum_one",
+          "line": 407
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbs_minimizes_freeEnergy_exchangeable",
+          "qualified_name_hint": "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable",
+          "line": 426
+        },
+        {
+          "kind": "def",
+          "name": "linftyOpSeminormedAddCommGroup",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOpSeminormedAddCommGroup",
+          "line": 522
+        },
+        {
+          "kind": "def",
+          "name": "linftyOpNormedAddCommGroup",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedAddCommGroup",
+          "line": 527
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_norm_def",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_def",
+          "line": 535
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_nnnorm_def",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_def",
+          "line": 541
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_nnnorm_mul",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_mul",
+          "line": 546
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_norm_mul",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_mul",
+          "line": 565
+        },
+        {
+          "kind": "def",
+          "name": "linftyOpNormedRing",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+          "line": 571
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_nnnorm_diagonal",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_diagonal",
+          "line": 576
+        },
+        {
+          "kind": "theorem",
+          "name": "linftyOp_norm_diagonal",
+          "qualified_name_hint": "Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_diagonal",
+          "line": 584
+        },
+        {
+          "kind": "theorem",
+          "name": "euler_eq_mulVec",
+          "qualified_name_hint": "Becoming.Reals.euler_eq_mulVec",
+          "line": 600
+        },
+        {
+          "kind": "theorem",
+          "name": "euler_iterate_eq_pow_mulVec",
+          "qualified_name_hint": "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+          "line": 605
+        },
+        {
+          "kind": "theorem",
+          "name": "euler_unit_iterate_eq_drawnMultiplier",
+          "qualified_name_hint": "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "emA_sq_eq",
+          "qualified_name_hint": "Becoming.Reals.emA_sq_eq",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "emA_pow_four_eq",
+          "qualified_name_hint": "Becoming.Reals.emA_pow_four_eq",
+          "line": 636
+        },
+        {
+          "kind": "theorem",
+          "name": "emA_pow_four_norm_lt_one",
+          "qualified_name_hint": "Becoming.Reals.emA_pow_four_norm_lt_one",
+          "line": 651
+        },
+        {
+          "kind": "theorem",
+          "name": "emA_rate_lt_one",
+          "qualified_name_hint": "Becoming.Reals.emA_rate_lt_one",
+          "line": 660
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_blanket_vs_fa_leakage_and_damped_runaway",
+          "qualified_name_hint": "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+          "line": 684
+        },
+        {
+          "kind": "def",
+          "name": "twoCellSymEnergy",
+          "qualified_name_hint": "Becoming.Reals.twoCellSymEnergy",
+          "line": 755
+        },
+        {
+          "kind": "theorem",
+          "name": "twoCellSymEnergy_symm",
+          "qualified_name_hint": "Becoming.Reals.twoCellSymEnergy_symm",
+          "line": 758
+        },
+        {
+          "kind": "theorem",
+          "name": "twoCellParted_injective",
+          "qualified_name_hint": "Becoming.Reals.twoCellParted_injective",
+          "line": 764
+        },
+        {
+          "kind": "theorem",
+          "name": "becoming_reals_cross_module_witness",
+          "qualified_name_hint": "Becoming.Reals.becoming_reals_cross_module_witness",
+          "line": 784
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 31
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "8301847b0d974ab267a5a5b44f6a49486ac2cc94607b93377fad1380b7906332": {
       "byte_size": 11199,
       "line_count": 252,
@@ -382975,6 +384435,82 @@
         "inductive": 2,
         "structure": 1,
         "theorem": 37
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "9ce13a8456d982686f76dfc5c6dd1701ebbed3b370402420f25c2216494d37b9": {
+      "byte_size": 6726,
+      "line_count": 130,
+      "imports": [
+        "Becoming.KeepableStep",
+        "RenewalConfigurations"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "historyRun",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.historyRun",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "runHistory",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.runHistory",
+          "line": 52
+        },
+        {
+          "kind": "theorem",
+          "name": "runHistory_historyRun",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+          "line": 56
+        },
+        {
+          "kind": "theorem",
+          "name": "historyRun_runHistory",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "renewable_iff_keepable",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.renewable_iff_keepable",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "renewable_iff_step",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.renewable_iff_step",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "renewability_not_generated",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "renewable_iff_step_same",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "renewability_not_generated_same",
+          "qualified_name_hint": "Becoming.Viability.RenewalBridge.renewability_not_generated_same",
+          "line": 122
+        }
+      ],
+      "declaration_counts": {
+        "def": 2,
+        "theorem": 7
       },
       "textual_markers": {
         "sorry": [],
@@ -527769,450 +529305,6 @@
       },
       "print_axioms_commands": 0
     },
-    "db3cf482429ef18a45c529385c0b1d3d74d52f4a3d37c1a862f6db9540375b2a": {
-      "byte_size": 484146,
-      "line_count": 5454,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.GrammarReadings",
-        "Becoming.GrammarMap",
-        "Becoming.GrammarTesting",
-        "Becoming.GrammarCandidates",
-        "Becoming.MapInstances",
-        "Becoming.MapRegions",
-        "Becoming.GrammarLaws",
-        "Becoming.GrammarConditionals",
-        "Becoming.CommonResponse",
-        "Becoming.GrammarTransport",
-        "Becoming.ShownOrder",
-        "Becoming.World",
-        "Becoming.Witnesses",
-        "Becoming.Frame",
-        "Becoming.Laws",
-        "Becoming.Labelled",
-        "Becoming.Inquiry",
-        "Becoming.Derivation",
-        "Becoming.ClassifiedBeliefProcesses",
-        "Becoming.MoveOutcomeProcesses",
-        "Becoming.Recurrence",
-        "Becoming.Diagonal",
-        "Becoming.Context",
-        "Becoming.ContextArrivalTraces",
-        "Becoming.Quantum",
-        "Becoming.Renewal",
-        "Becoming.Dependence",
-        "Becoming.Restoration",
-        "Becoming.Horizon",
-        "Becoming.Joint",
-        "Becoming.Experiment",
-        "Becoming.Mechanism",
-        "Becoming.Unfolding",
-        "Becoming.LawAlongRun",
-        "Becoming.Irreversibility",
-        "Becoming.Histories",
-        "Becoming.Branching",
-        "Becoming.Listing",
-        "Becoming.Stuttering",
-        "Becoming.Reordering",
-        "Becoming.IdleRemoval",
-        "Becoming.OrderNormal",
-        "Becoming.OneStep",
-        "Becoming.Weighted",
-        "Becoming.Transmission",
-        "Becoming.Succession",
-        "Becoming.Attraction",
-        "Becoming.Substitution",
-        "Becoming.Arising",
-        "Becoming.Flow",
-        "Becoming.Stock",
-        "Becoming.Change",
-        "Becoming.Population",
-        "Becoming.Identity",
-        "Becoming.Persistence",
-        "Becoming.ContinuedClasses",
-        "Becoming.WorldRepresentation",
-        "Becoming.Wholes",
-        "Becoming.Dissipation",
-        "Becoming.Locality",
-        "Becoming.Seeking",
-        "Becoming.Roles",
-        "Becoming.LabelledRoles",
-        "Becoming.Reserve",
-        "Becoming.Evolution",
-        "Becoming.Capture",
-        "Becoming.SelectionTerm",
-        "Becoming.Reproduction",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.RootForms",
-        "Becoming.Founding",
-        "Becoming.Drift",
-        "Becoming.Space",
-        "Becoming.Premises",
-        "Becoming.Sampling",
-        "Becoming.Tower",
-        "Becoming.Openness",
-        "Becoming.Decidedness",
-        "Becoming.Refinement",
-        "Becoming.PredicateIteration",
-        "Becoming.RisingIteration",
-        "Becoming.CensusTable",
-        "Becoming.Counting",
-        "Becoming.Standing",
-        "Becoming.Resolution",
-        "Becoming.Amounts",
-        "Becoming.LeastLoss",
-        "Becoming.WholeAmounts",
-        "Becoming.InAmounts",
-        "Becoming.Entropy",
-        "Becoming.SelectionPace",
-        "Becoming.Units",
-        "Becoming.Imbalance",
-        "Becoming.Continuity",
-        "Becoming.Continuation",
-        "Becoming.RenewalFlow",
-        "Becoming.Admission",
-        "Becoming.Exclusion",
-        "Becoming.Exhaustion",
-        "Becoming.Regions",
-        "Becoming.EventualWidening",
-        "Becoming.EventualWideningInstances",
-        "Becoming.ComparingCourses",
-        "Becoming.ReachableRanges",
-        "Becoming.HeldPossible",
-        "Becoming.Tasks",
-        "Becoming.CausalGrowth",
-        "Becoming.Presence",
-        "Becoming.ReorderingGrowth",
-        "Becoming.FreeEnergyGuarantees",
-        "Becoming.Blanket",
-        "Becoming.BlanketWeights",
-        "Becoming.BlanketCouplings",
-        "Becoming.LumpedSeeking",
-        "Becoming.FreeEnergyCounting",
-        "Becoming.ModelStatements",
-        "Becoming.Growth",
-        "Becoming.Retaining",
-        "Becoming.OwnWidening",
-        "Becoming.Clearing",
-        "Becoming.Extension",
-        "Becoming.Metaethics",
-        "Becoming.Lifting",
-        "Becoming.Ranking",
-        "Becoming.ActiveReading",
-        "Becoming.LossMatching",
-        "Becoming.StrictTransport",
-        "Becoming.MatchedCourses",
-        "Becoming.Correspondence",
-        "Becoming.Descent",
-        "Becoming.Standpoints",
-        "Becoming.Significance",
-        "Becoming.ValuationFrames",
-        "Becoming.RelativePosition",
-        "Becoming.PositionTerms",
-        "Becoming.Interdependence",
-        "Becoming.Feeding",
-        "Becoming.Feedback",
-        "Becoming.BoundedSignificance",
-        "Becoming.Cuts",
-        "Becoming.EdgeClosure",
-        "Becoming.SeedReach",
-        "Becoming.ScopedReach",
-        "Becoming.Boundaries",
-        "Becoming.ConveyanceBoundaries",
-        "Becoming.BalanceRegions",
-        "Becoming.Weightings",
-        "Becoming.Relevance",
-        "Becoming.Testing",
-        "Becoming.Runaway",
-        "Becoming.Response",
-        "Becoming.TimedResponse",
-        "Becoming.Latency",
-        "Becoming.Centers",
-        "Becoming.Counterfactual",
-        "Becoming.Regrouping",
-        "Becoming.Selection",
-        "Becoming.Learning",
-        "Becoming.Unread",
-        "Becoming.Cascade",
-        "Becoming.ReachedCascade",
-        "Becoming.RevisionRoutes",
-        "Becoming.ReadStages",
-        "Becoming.PropositionIdentity",
-        "Becoming.Hexagrams",
-        "Becoming.HexagramPlaces",
-        "Becoming.HexagramLaws",
-        "Becoming.HexagramSites",
-        "Becoming.HexagramSequences",
-        "Becoming.Withholding",
-        "Becoming.LoopReturn",
-        "Becoming.Pace",
-        "Becoming.RuleCapture",
-        "Becoming.ClosedCapture",
-        "Becoming.RuleShaping",
-        "Becoming.ChoiceCountCapture",
-        "Becoming.DrawnShaping",
-        "Becoming.DrawnReplacement",
-        "Becoming.ReadInTime",
-        "Becoming.PoolFromCourse",
-        "Becoming.PatternPassing",
-        "Becoming.JointKeeping",
-        "Becoming.KeepableStep",
-        "Becoming.Undecided",
-        "Becoming.Junctures",
-        "Becoming.Commuting",
-        "Becoming.WeightedCommuting",
-        "Becoming.HexagramCommuting",
-        "Becoming.Tolerance",
-        "Becoming.Revision",
-        "Becoming.Contacts",
-        "Becoming.RegroupingSelection",
-        "Becoming.ReferencePlan",
-        "Becoming.ContinuingRevision",
-        "Becoming.Description",
-        "Becoming.Identification",
-        "Becoming.Learnable",
-        "Becoming.Assurance",
-        "Becoming.AssurancePlans",
-        "Becoming.Integers",
-        "Becoming.Segmentation",
-        "Becoming.Readout",
-        "Becoming.Dephasing",
-        "Becoming.ProjectedLaws",
-        "Becoming.JointPhase",
-        "Becoming.SummaryFutures",
-        "Becoming.Gated",
-        "Becoming.Viability",
-        "Becoming.Keeping",
-        "Becoming.ReflexivePrediction",
-        "Becoming.Prelude",
-        "Becoming.CoreHelpers",
-        "Becoming.Ideals",
-        "Becoming.ContingentPlans",
-        "Becoming.Actuation",
-        "Becoming.TreeSearch",
-        "Becoming.Dispatch",
-        "Becoming.FaultEnvelopes",
-        "Becoming.Transactions",
-        "Becoming.Reconfiguration",
-        "Becoming.PooledEnvelopes",
-        "Becoming.WitnessRefinement",
-        "Becoming.WitnessRefinementRuns",
-        "Becoming.ChanceFloors",
-        "Becoming.IntegerOrder",
-        "Becoming.Acceptance",
-        "Becoming.GuardHorizon",
-        "Becoming.OpenedCorrection",
-        "Becoming.Countdown",
-        "Becoming.Lasting",
-        "Becoming.Copying",
-        "Becoming.Retrodiction",
-        "Becoming.CrossSituational",
-        "Becoming.Likeness",
-        "Becoming.Distinguishing",
-        "Becoming.JointPlans",
-        "Becoming.Composition",
-        "Becoming.Joining",
-        "Becoming.Granularity",
-        "Becoming.HistoryLanguages",
-        "Becoming.HistoryIdeals",
-        "Becoming.HistoryIdealsTraces",
-        "Becoming.Verification",
-        "Becoming.Coverage",
-        "Becoming.Presentations",
-        "Becoming.Carriers",
-        "Becoming.BranchingCorrespondence",
-        "Becoming.JointCorrespondence",
-        "Becoming.ListFootprints",
-        "Becoming.Fragments",
-        "Becoming.LocalUnits",
-        "Becoming.JoiningContexts",
-        "Becoming.JoiningCodes",
-        "Becoming.JoiningRoles",
-        "Becoming.Postponement",
-        "Becoming.Novelty",
-        "Becoming.Reading",
-        "Becoming.PlaceTransitionNets",
-        "Becoming.SharedCodes",
-        "Becoming.CountedCodes",
-        "Becoming.ExchangePremises",
-        "Becoming.OverExchange",
-        "Becoming.Readings",
-        "Becoming.MoveFormation",
-        "Becoming.Sensitivity",
-        "Becoming.Tail",
-        "Becoming.Courses",
-        "Becoming.Parting",
-        "Becoming.Onward",
-        "Becoming.Typicality",
-        "Becoming.ConditionalWeights",
-        "Becoming.Situations",
-        "Becoming.Propagation",
-        "Becoming.Regulation",
-        "Becoming.ReadingSchedule",
-        "Becoming.BandRest",
-        "Becoming.RegimeMargin",
-        "Becoming.RunTurns",
-        "Becoming.DrawHistory",
-        "Becoming.RoomNet",
-        "Becoming.RoomRuns",
-        "Becoming.ReaderRebuilding",
-        "Becoming.RuleRebuilding",
-        "Becoming.ListingRefutations",
-        "Becoming.Loops",
-        "Becoming.Remainder",
-        "Becoming.Routes",
-        "Becoming.Closing",
-        "Becoming.Thresholds",
-        "Becoming.Observation",
-        "Becoming.Frequency",
-        "Becoming.MutualDependence",
-        "Becoming.Gain",
-        "Becoming.KeepingWidening",
-        "Becoming.SelectionShift",
-        "Becoming.LineageRegions",
-        "Becoming.LineageRegimes",
-        "Becoming.LineageDrawdown",
-        "Becoming.WideningOnTheMap",
-        "Becoming.Gluing",
-        "Becoming.Runs",
-        "Becoming.CourseWorlds",
-        "Becoming.LearnableRuns",
-        "Becoming.PartialReadout",
-        "Becoming.CodeAcquisition",
-        "Becoming.RouteFormation",
-        "Becoming.ResponseLearning",
-        "Becoming.LearnedGrouping",
-        "Becoming.ParityReadings",
-        "Becoming.FinerTraces",
-        "Becoming.HistorySums",
-        "Becoming.FormedLoops",
-        "Becoming.AttractionRuns",
-        "Becoming.ContactCourses",
-        "Becoming.ContextualRuns",
-        "Becoming.ContinuingRuns",
-        "Becoming.CopyCourses",
-        "Becoming.CounterfactualRuns",
-        "Becoming.CouplingTraces",
-        "Becoming.CourseRoles",
-        "Becoming.HorizonWebs",
-        "Becoming.IdentificationRuns",
-        "Becoming.LastingRuns",
-        "Becoming.LearningRuns",
-        "Becoming.ListedWebs",
-        "Becoming.ReferencePlanTraces",
-        "Becoming.RouteTraces",
-        "Becoming.SeekingRuns",
-        "Becoming.SelectionRuns",
-        "Becoming.SensitivityWebs",
-        "Becoming.SituationTraces",
-        "Becoming.StrengthFlows",
-        "Becoming.TypicalRuns",
-        "Becoming.WeightedTraces",
-        "Becoming.LevelCoupling",
-        "Becoming.Interleavings",
-        "Becoming.CensusCounts",
-        "Becoming.CensusBinding",
-        "Becoming.Unrolling",
-        "Becoming.Labels",
-        "Becoming.Enough",
-        "Becoming.Settling",
-        "Becoming.LastChange",
-        "Becoming.LimitVerification",
-        "Becoming.SelectionGap",
-        "Becoming.SelectionReach",
-        "Becoming.UnitMatchings",
-        "Becoming.UnreadStandings",
-        "Becoming.DrawnBeyond",
-        "Becoming.WindowedWaiting",
-        "Becoming.PairSelection",
-        "Becoming.PairFlow",
-        "Becoming.PairChance",
-        "Becoming.JointDraw",
-        "Becoming.Optimum",
-        "Becoming.OptimumSeason",
-        "Becoming.CoupledDrawers",
-        "Becoming.SetPointOptimum",
-        "Becoming.SelectionPool",
-        "Becoming.SampledSelection",
-        "Becoming.PoolResponse",
-        "Becoming.Training",
-        "Becoming.PoolCourse",
-        "Becoming.Rejoining",
-        "Becoming.Lexical",
-        "Becoming.Frontier",
-        "Becoming.FrontierFrames",
-        "Becoming.FrontierWorlds",
-        "Becoming.Direction",
-        "Becoming.ScoreRepresentation",
-        "Becoming.Alternatives",
-        "Becoming.Bundles",
-        "Becoming.ActivationCapacity",
-        "Becoming.Narrowing",
-        "Becoming.NarrowingRuns",
-        "Becoming.ReadingLoop",
-        "Becoming.RevisionPlans",
-        "Becoming.HeldForReading",
-        "Becoming.ListingValuation",
-        "Becoming.SecuredContent",
-        "Becoming.ProfileReach",
-        "Becoming.RenewalBound",
-        "Becoming.Handoff",
-        "Becoming.RuleHandoff",
-        "Becoming.GrammarCourse",
-        "Becoming.GrammarRegularity",
-        "Becoming.ProcessRepresentation",
-        "Becoming.GrammarScope",
-        "Becoming.GrammarCases",
-        "Becoming.GrammarCrossing",
-        "Becoming.PremiseWitnesses",
-        "Becoming.PremisesTogether",
-        "Becoming.GrammarPath",
-        "Becoming.GuardedStep",
-        "Becoming.RoutesToC",
-        "Becoming.FlowCenters",
-        "Becoming.PersistingChoices",
-        "Becoming.BeyondCoupling",
-        "Becoming.OwnClass",
-        "Becoming.ConditionInTime",
-        "Becoming.ReadingsPersist",
-        "Becoming.FromTheDynamics",
-        "Becoming.ReadOffInTime",
-        "Becoming.TurningInTime",
-        "Becoming.LevelAlone",
-        "Becoming.LineOnAStock",
-        "Becoming.WayOfUnits",
-        "Becoming.LineOnAStockCases",
-        "Becoming.WayUnderARule",
-        "Becoming.ReadingsSpread",
-        "Becoming.SignificanceStatements",
-        "Becoming.AdaptiveLoops",
-        "Becoming.PacedStock",
-        "Becoming.MultiScaleViability",
-        "Becoming.OpenComposition",
-        "Becoming.PolyComposition",
-        "Becoming.CausalAbstraction",
-        "Becoming.ActiveInquiryLoop",
-        "Becoming.TransformativeViability",
-        "Becoming.StockFlowBridge",
-        "Becoming.EndogenousTurning",
-        "Becoming.UnifiedDrawdown",
-        "Becoming.EvolutionaryDrawdown",
-        "Becoming.ScopeDynamics",
-        "Becoming.EndogenousOrder",
-        "Becoming.AlignmentSpine"
-      ],
-      "declarations": [],
-      "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "db44669cad44018e864d9921184c7887303a4da5a473a81338c5a47cbe06de6f": {
       "byte_size": 15165,
       "line_count": 317,
@@ -600464,6 +601556,451 @@
         "def": 15,
         "theorem": 17
       },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75": {
+      "byte_size": 485316,
+      "line_count": 5456,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.GrammarReadings",
+        "Becoming.GrammarMap",
+        "Becoming.GrammarTesting",
+        "Becoming.GrammarCandidates",
+        "Becoming.MapInstances",
+        "Becoming.MapRegions",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarConditionals",
+        "Becoming.CommonResponse",
+        "Becoming.GrammarTransport",
+        "Becoming.ShownOrder",
+        "Becoming.World",
+        "Becoming.Witnesses",
+        "Becoming.Frame",
+        "Becoming.Laws",
+        "Becoming.Labelled",
+        "Becoming.Inquiry",
+        "Becoming.Derivation",
+        "Becoming.ClassifiedBeliefProcesses",
+        "Becoming.MoveOutcomeProcesses",
+        "Becoming.Recurrence",
+        "Becoming.Diagonal",
+        "Becoming.Context",
+        "Becoming.ContextArrivalTraces",
+        "Becoming.Quantum",
+        "Becoming.Renewal",
+        "Becoming.Dependence",
+        "Becoming.Restoration",
+        "Becoming.Horizon",
+        "Becoming.Joint",
+        "Becoming.Experiment",
+        "Becoming.Mechanism",
+        "Becoming.Unfolding",
+        "Becoming.LawAlongRun",
+        "Becoming.Irreversibility",
+        "Becoming.Histories",
+        "Becoming.Branching",
+        "Becoming.Listing",
+        "Becoming.Stuttering",
+        "Becoming.Reordering",
+        "Becoming.IdleRemoval",
+        "Becoming.OrderNormal",
+        "Becoming.OneStep",
+        "Becoming.Weighted",
+        "Becoming.Transmission",
+        "Becoming.Succession",
+        "Becoming.Attraction",
+        "Becoming.Substitution",
+        "Becoming.Arising",
+        "Becoming.Flow",
+        "Becoming.Stock",
+        "Becoming.Change",
+        "Becoming.Population",
+        "Becoming.Identity",
+        "Becoming.Persistence",
+        "Becoming.ContinuedClasses",
+        "Becoming.WorldRepresentation",
+        "Becoming.Wholes",
+        "Becoming.Dissipation",
+        "Becoming.Locality",
+        "Becoming.Seeking",
+        "Becoming.Roles",
+        "Becoming.LabelledRoles",
+        "Becoming.Reserve",
+        "Becoming.Evolution",
+        "Becoming.Capture",
+        "Becoming.SelectionTerm",
+        "Becoming.Reproduction",
+        "Becoming.SelectionLevels",
+        "Becoming.GroupEnding",
+        "Becoming.RootForms",
+        "Becoming.Founding",
+        "Becoming.Drift",
+        "Becoming.Space",
+        "Becoming.Premises",
+        "Becoming.Sampling",
+        "Becoming.Tower",
+        "Becoming.Openness",
+        "Becoming.Decidedness",
+        "Becoming.Refinement",
+        "Becoming.PredicateIteration",
+        "Becoming.RisingIteration",
+        "Becoming.CensusTable",
+        "Becoming.Counting",
+        "Becoming.Standing",
+        "Becoming.Resolution",
+        "Becoming.Amounts",
+        "Becoming.LeastLoss",
+        "Becoming.WholeAmounts",
+        "Becoming.InAmounts",
+        "Becoming.Entropy",
+        "Becoming.SelectionPace",
+        "Becoming.Units",
+        "Becoming.Imbalance",
+        "Becoming.Continuity",
+        "Becoming.Continuation",
+        "Becoming.RenewalFlow",
+        "Becoming.Admission",
+        "Becoming.Exclusion",
+        "Becoming.Exhaustion",
+        "Becoming.Regions",
+        "Becoming.EventualWidening",
+        "Becoming.EventualWideningInstances",
+        "Becoming.ComparingCourses",
+        "Becoming.ReachableRanges",
+        "Becoming.HeldPossible",
+        "Becoming.Tasks",
+        "Becoming.CausalGrowth",
+        "Becoming.Presence",
+        "Becoming.ReorderingGrowth",
+        "Becoming.FreeEnergyGuarantees",
+        "Becoming.Blanket",
+        "Becoming.BlanketWeights",
+        "Becoming.BlanketCouplings",
+        "Becoming.LumpedSeeking",
+        "Becoming.FreeEnergyCounting",
+        "Becoming.ModelStatements",
+        "Becoming.Growth",
+        "Becoming.Retaining",
+        "Becoming.OwnWidening",
+        "Becoming.Clearing",
+        "Becoming.Extension",
+        "Becoming.Metaethics",
+        "Becoming.Lifting",
+        "Becoming.Ranking",
+        "Becoming.ActiveReading",
+        "Becoming.LossMatching",
+        "Becoming.StrictTransport",
+        "Becoming.MatchedCourses",
+        "Becoming.Correspondence",
+        "Becoming.Descent",
+        "Becoming.Standpoints",
+        "Becoming.Significance",
+        "Becoming.ValuationFrames",
+        "Becoming.RelativePosition",
+        "Becoming.PositionTerms",
+        "Becoming.Interdependence",
+        "Becoming.Feeding",
+        "Becoming.Feedback",
+        "Becoming.BoundedSignificance",
+        "Becoming.Cuts",
+        "Becoming.EdgeClosure",
+        "Becoming.SeedReach",
+        "Becoming.ScopedReach",
+        "Becoming.Boundaries",
+        "Becoming.ConveyanceBoundaries",
+        "Becoming.BalanceRegions",
+        "Becoming.Weightings",
+        "Becoming.Relevance",
+        "Becoming.Testing",
+        "Becoming.Runaway",
+        "Becoming.Response",
+        "Becoming.TimedResponse",
+        "Becoming.Latency",
+        "Becoming.Centers",
+        "Becoming.Counterfactual",
+        "Becoming.Regrouping",
+        "Becoming.Selection",
+        "Becoming.Learning",
+        "Becoming.Unread",
+        "Becoming.Cascade",
+        "Becoming.ReachedCascade",
+        "Becoming.RevisionRoutes",
+        "Becoming.ReadStages",
+        "Becoming.PropositionIdentity",
+        "Becoming.Hexagrams",
+        "Becoming.HexagramPlaces",
+        "Becoming.HexagramLaws",
+        "Becoming.HexagramSites",
+        "Becoming.HexagramSequences",
+        "Becoming.Withholding",
+        "Becoming.LoopReturn",
+        "Becoming.Pace",
+        "Becoming.RuleCapture",
+        "Becoming.ClosedCapture",
+        "Becoming.RuleShaping",
+        "Becoming.ChoiceCountCapture",
+        "Becoming.DrawnShaping",
+        "Becoming.DrawnReplacement",
+        "Becoming.ReadInTime",
+        "Becoming.PoolFromCourse",
+        "Becoming.PatternPassing",
+        "Becoming.JointKeeping",
+        "Becoming.KeepableStep",
+        "Becoming.Undecided",
+        "Becoming.Junctures",
+        "Becoming.Commuting",
+        "Becoming.WeightedCommuting",
+        "Becoming.HexagramCommuting",
+        "Becoming.Tolerance",
+        "Becoming.Revision",
+        "Becoming.Contacts",
+        "Becoming.RegroupingSelection",
+        "Becoming.ReferencePlan",
+        "Becoming.ContinuingRevision",
+        "Becoming.Description",
+        "Becoming.Identification",
+        "Becoming.Learnable",
+        "Becoming.Assurance",
+        "Becoming.AssurancePlans",
+        "Becoming.Integers",
+        "Becoming.Segmentation",
+        "Becoming.Readout",
+        "Becoming.Dephasing",
+        "Becoming.ProjectedLaws",
+        "Becoming.JointPhase",
+        "Becoming.SummaryFutures",
+        "Becoming.Gated",
+        "Becoming.Viability",
+        "Becoming.Keeping",
+        "Becoming.ReflexivePrediction",
+        "Becoming.Prelude",
+        "Becoming.CoreHelpers",
+        "Becoming.Ideals",
+        "Becoming.ContingentPlans",
+        "Becoming.Actuation",
+        "Becoming.TreeSearch",
+        "Becoming.Dispatch",
+        "Becoming.FaultEnvelopes",
+        "Becoming.Transactions",
+        "Becoming.Reconfiguration",
+        "Becoming.PooledEnvelopes",
+        "Becoming.WitnessRefinement",
+        "Becoming.WitnessRefinementRuns",
+        "Becoming.ChanceFloors",
+        "Becoming.IntegerOrder",
+        "Becoming.Acceptance",
+        "Becoming.GuardHorizon",
+        "Becoming.OpenedCorrection",
+        "Becoming.Countdown",
+        "Becoming.Lasting",
+        "Becoming.Copying",
+        "Becoming.Retrodiction",
+        "Becoming.CrossSituational",
+        "Becoming.Likeness",
+        "Becoming.Distinguishing",
+        "Becoming.JointPlans",
+        "Becoming.Composition",
+        "Becoming.Joining",
+        "Becoming.Granularity",
+        "Becoming.HistoryLanguages",
+        "Becoming.HistoryIdeals",
+        "Becoming.HistoryIdealsTraces",
+        "Becoming.Verification",
+        "Becoming.Coverage",
+        "Becoming.Presentations",
+        "Becoming.Carriers",
+        "Becoming.BranchingCorrespondence",
+        "Becoming.JointCorrespondence",
+        "Becoming.ListFootprints",
+        "Becoming.Fragments",
+        "Becoming.LocalUnits",
+        "Becoming.JoiningContexts",
+        "Becoming.JoiningCodes",
+        "Becoming.JoiningRoles",
+        "Becoming.Postponement",
+        "Becoming.Novelty",
+        "Becoming.Reading",
+        "Becoming.PlaceTransitionNets",
+        "Becoming.SharedCodes",
+        "Becoming.CountedCodes",
+        "Becoming.ExchangePremises",
+        "Becoming.OverExchange",
+        "Becoming.Readings",
+        "Becoming.MoveFormation",
+        "Becoming.Sensitivity",
+        "Becoming.Tail",
+        "Becoming.Courses",
+        "Becoming.Parting",
+        "Becoming.Onward",
+        "Becoming.Typicality",
+        "Becoming.ConditionalWeights",
+        "Becoming.Situations",
+        "Becoming.Propagation",
+        "Becoming.Regulation",
+        "Becoming.ReadingSchedule",
+        "Becoming.BandRest",
+        "Becoming.RegimeMargin",
+        "Becoming.RunTurns",
+        "Becoming.DrawHistory",
+        "Becoming.RoomNet",
+        "Becoming.RoomRuns",
+        "Becoming.ReaderRebuilding",
+        "Becoming.RuleRebuilding",
+        "Becoming.ListingRefutations",
+        "Becoming.Loops",
+        "Becoming.Remainder",
+        "Becoming.Routes",
+        "Becoming.Closing",
+        "Becoming.Thresholds",
+        "Becoming.Observation",
+        "Becoming.Frequency",
+        "Becoming.MutualDependence",
+        "Becoming.Gain",
+        "Becoming.KeepingWidening",
+        "Becoming.SelectionShift",
+        "Becoming.LineageRegions",
+        "Becoming.LineageRegimes",
+        "Becoming.LineageDrawdown",
+        "Becoming.WideningOnTheMap",
+        "Becoming.Gluing",
+        "Becoming.Runs",
+        "Becoming.CourseWorlds",
+        "Becoming.LearnableRuns",
+        "Becoming.PartialReadout",
+        "Becoming.CodeAcquisition",
+        "Becoming.RouteFormation",
+        "Becoming.ResponseLearning",
+        "Becoming.LearnedGrouping",
+        "Becoming.ParityReadings",
+        "Becoming.FinerTraces",
+        "Becoming.HistorySums",
+        "Becoming.FormedLoops",
+        "Becoming.AttractionRuns",
+        "Becoming.ContactCourses",
+        "Becoming.ContextualRuns",
+        "Becoming.ContinuingRuns",
+        "Becoming.CopyCourses",
+        "Becoming.CounterfactualRuns",
+        "Becoming.CouplingTraces",
+        "Becoming.CourseRoles",
+        "Becoming.HorizonWebs",
+        "Becoming.IdentificationRuns",
+        "Becoming.LastingRuns",
+        "Becoming.LearningRuns",
+        "Becoming.ListedWebs",
+        "Becoming.ReferencePlanTraces",
+        "Becoming.RouteTraces",
+        "Becoming.SeekingRuns",
+        "Becoming.SelectionRuns",
+        "Becoming.SensitivityWebs",
+        "Becoming.SituationTraces",
+        "Becoming.StrengthFlows",
+        "Becoming.TypicalRuns",
+        "Becoming.WeightedTraces",
+        "Becoming.LevelCoupling",
+        "Becoming.Interleavings",
+        "Becoming.CensusCounts",
+        "Becoming.CensusBinding",
+        "Becoming.Unrolling",
+        "Becoming.Labels",
+        "Becoming.Enough",
+        "Becoming.Settling",
+        "Becoming.LastChange",
+        "Becoming.LimitVerification",
+        "Becoming.SelectionGap",
+        "Becoming.SelectionReach",
+        "Becoming.UnitMatchings",
+        "Becoming.UnreadStandings",
+        "Becoming.DrawnBeyond",
+        "Becoming.WindowedWaiting",
+        "Becoming.PairSelection",
+        "Becoming.PairFlow",
+        "Becoming.PairChance",
+        "Becoming.JointDraw",
+        "Becoming.Optimum",
+        "Becoming.OptimumSeason",
+        "Becoming.CoupledDrawers",
+        "Becoming.SetPointOptimum",
+        "Becoming.SelectionPool",
+        "Becoming.SampledSelection",
+        "Becoming.PoolResponse",
+        "Becoming.Training",
+        "Becoming.PoolCourse",
+        "Becoming.Rejoining",
+        "Becoming.Lexical",
+        "Becoming.Frontier",
+        "Becoming.FrontierFrames",
+        "Becoming.FrontierWorlds",
+        "Becoming.Direction",
+        "Becoming.ScoreRepresentation",
+        "Becoming.Alternatives",
+        "Becoming.Bundles",
+        "Becoming.ActivationCapacity",
+        "Becoming.Narrowing",
+        "Becoming.NarrowingRuns",
+        "Becoming.ReadingLoop",
+        "Becoming.RevisionPlans",
+        "Becoming.HeldForReading",
+        "Becoming.ListingValuation",
+        "Becoming.SecuredContent",
+        "Becoming.ProfileReach",
+        "Becoming.RenewalBound",
+        "Becoming.Handoff",
+        "Becoming.RuleHandoff",
+        "Becoming.GrammarCourse",
+        "Becoming.GrammarRegularity",
+        "Becoming.ProcessRepresentation",
+        "Becoming.GrammarScope",
+        "Becoming.GrammarCases",
+        "Becoming.GrammarCrossing",
+        "Becoming.PremiseWitnesses",
+        "Becoming.PremisesTogether",
+        "Becoming.GrammarPath",
+        "Becoming.GuardedStep",
+        "Becoming.RoutesToC",
+        "Becoming.FlowCenters",
+        "Becoming.PersistingChoices",
+        "Becoming.BeyondCoupling",
+        "Becoming.OwnClass",
+        "Becoming.ConditionInTime",
+        "Becoming.ReadingsPersist",
+        "Becoming.FromTheDynamics",
+        "Becoming.ReadOffInTime",
+        "Becoming.TurningInTime",
+        "Becoming.LevelAlone",
+        "Becoming.LineOnAStock",
+        "Becoming.WayOfUnits",
+        "Becoming.LineOnAStockCases",
+        "Becoming.WayUnderARule",
+        "Becoming.ReadingsSpread",
+        "Becoming.SignificanceStatements",
+        "Becoming.AdaptiveLoops",
+        "Becoming.PacedStock",
+        "Becoming.MultiScaleViability",
+        "Becoming.OpenComposition",
+        "Becoming.PolyComposition",
+        "Becoming.CausalAbstraction",
+        "Becoming.ActiveInquiryLoop",
+        "Becoming.TransformativeViability",
+        "Becoming.StockFlowBridge",
+        "Becoming.EndogenousTurning",
+        "Becoming.UnifiedDrawdown",
+        "Becoming.EvolutionaryDrawdown",
+        "Becoming.ScopeDynamics",
+        "Becoming.EndogenousOrder",
+        "Becoming.AlignmentSpine",
+        "Becoming.MasterSpine"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
       "textual_markers": {
         "sorry": [],
         "admit": [],

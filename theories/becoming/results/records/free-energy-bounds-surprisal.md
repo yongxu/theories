@@ -87,7 +87,7 @@ Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951)
 - related, not a proved adapter: [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md). Expected free energy and its terms: risk, ambiguity, epistemic and pragmatic value stated beside free energy, the epistemic value an expected information gain through this posterior.
 - related, not a proved adapter: [free-energy-bound-in-counts](free-energy-bound-in-counts.md). The free-energy bound in counts: the bound and its equality for count beliefs in the pure core, with no axiom and no support condition; on the support, over hypotheses listed once, this bound is it through the logarithm (gap_counts).
 
-**Used by:** [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md)
+**Used by:** [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md) · [unified-becoming-over-reals](unified-becoming-over-reals.md)
 
 <a id="sources--来源"></a>
 ### Sources

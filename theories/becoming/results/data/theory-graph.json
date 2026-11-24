@@ -4809,6 +4809,18 @@
    "page": "theories/becoming/results/records/relative-position-is-zero-sum.md"
   },
   {
+   "id": "record:renewal-bridge-to-keepable-step",
+   "type": "result",
+   "record": "renewal-bridge-to-keepable-step",
+   "title": "October renewal histories coincide by field renaming with keepable-step runs",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/renewal-bridge-to-keepable-step.md"
+  },
+  {
    "id": "record:renewing-consuming-formation",
    "type": "result",
    "record": "renewing-consuming-formation",
@@ -6381,6 +6393,18 @@
    "page": "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md"
   },
   {
+   "id": "record:unified-becoming-over-reals",
+   "type": "result",
+   "record": "unified-becoming-over-reals",
+   "title": "Unified real-valued periphery joining all nine Mathlib becoming modules",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/unified-becoming-over-reals.md"
+  },
+  {
    "id": "record:unified-drawdown-overdraw-and-aliasing",
    "type": "result",
    "record": "unified-drawdown-overdraw-and-aliasing",
@@ -7291,6 +7315,18 @@
    "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/whole-and-regions-and-bounded-centers.md"
+  },
+  {
+   "id": "record:whole-becoming-master-spine",
+   "type": "result",
+   "record": "whole-becoming-master-spine",
+   "title": "Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/whole-becoming-master-spine.md"
   },
   {
    "id": "record:whole-drawing-beyond-renewal-ends",
@@ -12091,6 +12127,17 @@
    "name": "Becoming.AlignmentSpine",
    "level": "L2",
    "theorems": 68,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.MasterSpine",
+   "type": "module",
+   "name": "Becoming.MasterSpine",
+   "level": "L2",
+   "theorems": 58,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -35706,6 +35753,51 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.ActiveInquiryLoop",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.AlignmentSpine",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.CausalAbstraction",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.Direction",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.EndogenousOrder",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.EvolutionaryDrawdown",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MasterSpine",
+   "to": "module:Becoming.PolyComposition",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.MatchedCourses",
    "to": "module:Becoming.LossMatching",
    "type": "imports"
@@ -55058,6 +55150,11 @@
    "interface": true
   },
   {
+   "from": "record:renewal-bridge-to-keepable-step",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:renewing-consuming-formation",
    "to": "module:Becoming.Extension",
    "type": "proved-in"
@@ -61082,6 +61179,51 @@
    "type": "related"
   },
   {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:continuous-stochastic-alignment-reals",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:expected-free-energy-and-its-terms",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:free-energy-bounds-surprisal",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:identical-cells-under-noise",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:least-loss-from-entropy-production",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:regime-in-any-amounts",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:slowing-down-before-an-own-end",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:the-blanket-in-a-linear-steady-state",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:unified-becoming-over-reals",
+   "to": "record:what-discrete-steps-and-whole-amounts-represent",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:unified-drawdown-overdraw-and-aliasing",
    "to": "module:Becoming.UnifiedDrawdown",
    "type": "proved-in"
@@ -64797,6 +64939,66 @@
    "to": "record:significance-retained-within-margin",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "module:Becoming.MasterSpine",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:active-inquiry-deadline-cascade-and-blankets",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:alignment-direction-under-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:derived-evolutionary-drawdown-and-transitions",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:endogenous-order-scope-coevolution-and-nash",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:interventional-causal-abstraction-and-goodhart",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:master-alignment-spine-and-sharpness",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:unified-drawdown-overdraw-and-aliasing",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:whole-becoming-master-spine",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "formal-reuse"
   },
   {
    "from": "record:whole-drawing-beyond-renewal-ends",

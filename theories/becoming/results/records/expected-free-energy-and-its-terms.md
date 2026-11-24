@@ -84,6 +84,8 @@ Expected free energy as defined by Parr and Friston (2019, Biological Cybernetic
 - **formal-reuse**: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). seekWeight, Tied, seeking_keeps_order and the coin of Agree: the core's course of seeking, read over the reals with choice by expected free energy as its policy.
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: in counting form, in the pure core, a pair every experiment ties keeps its prior order under every course of seeking; choice by expected free energy with natural weights is among its policies (efe_seeking_keeps_order, an instance).
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

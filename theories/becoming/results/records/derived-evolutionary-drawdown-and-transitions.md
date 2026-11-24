@@ -65,6 +65,8 @@ Reading (AI-written): connects multi-level evolutionary dynamics (SelectionLevel
 - **formal-reuse**: [a-line-on-a-stock](a-line-on-a-stock.md). Connects LineOnAStock growth and exhaustion to derived_line_grows_and_ends.
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Viability.Kernel for closedProcess_kernel_readOffExchange and SafeTwoSite.
 
+**Used by:** [whole-becoming-master-spine](whole-becoming-master-spine.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

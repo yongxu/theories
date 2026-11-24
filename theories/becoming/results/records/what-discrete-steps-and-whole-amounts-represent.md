@@ -67,6 +67,8 @@ The goal record's question whether every becoming can be represented with discre
   - Preserved conditions: None. [WholeAmounts.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WholeAmounts.lean)
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). The representation question of the first target.
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

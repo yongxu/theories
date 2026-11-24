@@ -68,6 +68,8 @@ Reading (AI-written): formalizes exploration-exploitation headroom, multi-agent 
 - **formal-reuse**: [learnable-through-a-map](learnable-through-a-map.md). Connects Learnable and LearnableRuns identification bounds to learnable_passive_underdetermined.
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Viability.Kernel, Viability.Certificate, and guard invariants.
 
+**Used by:** [whole-becoming-master-spine](whole-becoming-master-spine.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

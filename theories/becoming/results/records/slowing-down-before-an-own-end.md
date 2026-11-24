@@ -64,6 +64,8 @@ Critical slowing down: the recovery rate falls to zero at a bifurcation (Wissel 
 - **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). Reuses RegimeMargin.Meets, Keeps, Short, FromNothing, holds, and ends_iff_below to join continuous slowing-down statistics with discrete regime persistence and collapse.
 - related, not a proved adapter: [runaway-distance-uncoupled](runaway-distance-uncoupled.md). T6's unseen half: where the stock couples in by threshold only, nothing coupled in bounds the distance to the break (Web.break_not_bounded); this record states the seen half, where the condition is itself observed.
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

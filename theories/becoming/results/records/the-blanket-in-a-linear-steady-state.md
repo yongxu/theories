@@ -88,6 +88,8 @@ The Ornstein–Uhlenbeck steady state: the Lyapunov equation and the Helmholtz f
 - **formal-reuse**: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). Blanket.Blanketed, Parts, step, course and agent_through_sensory: the Euler step of a sparsely coupled drift read as a blanketed law, and its runs as the law's courses.
 - related, not a proved adapter: [the-blanket-at-a-steady-state](the-blanket-at-a-steady-state.md). The statistical blanket in counts, in the pure core: row_zero_iff is the counterpart of detailed balance of the internal moves.
 
+**Used by:** [unified-becoming-over-reals](unified-becoming-over-reals.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -124,6 +124,63 @@ Definitions and types:
 
 </details>
 
+<a id="module-276654d59928"></a>
+
+<details>
+<summary>BecomingReals.lean — 38 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean`
+
+Imports: `AlignmentReals`, `FreeEnergyReals`, `ExpectedFreeEnergyReals`, `CellsUnderNoise`, `LinearBlankets`, `EntropyProduction`, `RegimeReals`, `Representation`, `SlowingDown`, `Mathlib.Analysis.Normed.Lp.PiLp`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Reals.metricSlack_succ_unfold](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L76) | 76 |
+| [Becoming.Reals.iterVar_eq_metricSlack](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L85) | 85 |
+| [Becoming.Reals.iterVar_tendsto_stationaryVariance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L92) | 92 |
+| [Becoming.Reals.metricSlack_stationaryVariance_bridge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L117) | 117 |
+| [Becoming.Reals.slowingDown_inertia_regime_collapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L163) | 163 |
+| [Becoming.Reals.finiteLawOfMeasure_expect_eq_integral](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L247) | 247 |
+| [Becoming.Reals.finiteLawOfMeasure_prob_eq_real](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L256) | 256 |
+| [Becoming.Reals.fluctuation_complement_survival_ge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L279) | 279 |
+| [Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L308) | 308 |
+| [Becoming.Reals.gibbsWeight_eq_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L391) | 391 |
+| [Becoming.Reals.gibbsWeight_eq_softmax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L397) | 397 |
+| [Becoming.Reals.gibbsWeight_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L402) | 402 |
+| [Becoming.Reals.gibbsWeight_sum_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L407) | 407 |
+| [Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L426) | 426 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_def](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L535) | 535 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_def](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L541) | 541 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L546) | 546 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L565) | 565 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_nnnorm_diagonal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L576) | 576 |
+| [Becoming.Reals.LocalMatrixOpNorm.linftyOp_norm_diagonal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L584) | 584 |
+| [Becoming.Reals.euler_eq_mulVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L600) | 600 |
+| [Becoming.Reals.euler_iterate_eq_pow_mulVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L605) | 605 |
+| [Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L613) | 613 |
+| [Becoming.Reals.emA_sq_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L624) | 624 |
+| [Becoming.Reals.emA_pow_four_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L636) | 636 |
+| [Becoming.Reals.emA_pow_four_norm_lt_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L651) | 651 |
+| [Becoming.Reals.emA_rate_lt_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L660) | 660 |
+| [Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L684) | 684 |
+| [Becoming.Reals.twoCellSymEnergy_symm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L758) | 758 |
+| [Becoming.Reals.twoCellParted_injective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L764) | 764 |
+| [Becoming.Reals.becoming_reals_cross_module_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L784) | 784 |
+
+Definitions and types:
+
+- `def` [Becoming.Reals.iterVar](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L71) (L71)
+- `def` [Becoming.Reals.finiteLawOfMeasure](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L225) (L225)
+- `def` [Becoming.Reals.gibbsWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L387) (L387)
+- `def` [Becoming.Reals.LocalMatrixOpNorm.linftyOpSeminormedAddCommGroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L522) (L522)
+- `def` [Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedAddCommGroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L527) (L527)
+- `def` [Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L571) (L571)
+- `def` [Becoming.Reals.twoCellSymEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean#L755) (L755)
+
+</details>
+
 <a id="module-5b5a065f08cd"></a>
 
 <details>
@@ -177,6 +234,34 @@ Definitions and types:
 - `def` [Becoming.FallibleInquiry.Witness.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean#L277) (L277)
 - `def` [Becoming.FallibleInquiry.Witness.law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean#L282) (L282)
 - `def` [Becoming.FallibleInquiry.Witness.read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean#L286) (L286)
+
+</details>
+
+<a id="module-2a8248ef137c"></a>
+
+<details>
+<summary>RenewalBridge.lean — 9 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean`
+
+Imports: `Becoming.KeepableStep`, `RenewalConfigurations`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Viability.RenewalBridge.runHistory_historyRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L56) | 56 |
+| [Becoming.Viability.RenewalBridge.historyRun_runHistory](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L60) | 60 |
+| [Becoming.Viability.RenewalBridge.renewable_iff_keepable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L70) | 70 |
+| [Becoming.Viability.RenewalBridge.renewable_iff_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L83) | 83 |
+| [Becoming.Viability.RenewalBridge.renewability_not_generated](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L102) | 102 |
+| [Becoming.Viability.RenewalBridge.renewable_iff_step_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L115) | 115 |
+| [Becoming.Viability.RenewalBridge.renewability_not_generated_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L122) | 122 |
+
+Definitions and types:
+
+- `def` [Becoming.Viability.RenewalBridge.historyRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L48) (L48)
+- `def` [Becoming.Viability.RenewalBridge.runHistory](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean#L52) (L52)
 
 </details>
 

@@ -71,7 +71,7 @@ Reading (AI-written): unifies Rubenstein et al. / Beckers-Halpern exact and appr
 - **formal-reuse**: [lax-multi-scale-viability](lax-multi-scale-viability.md). Delegates interventional kernel transfer and vertical tower composition to LaxSim.comp, LaxSim.compAdditive, lax_kernel_of_kernel, and WitnessTwoScale.damp_lip.
 - **formal-reuse**: [conditions-kept-together](conditions-kept-together.md). Reuses Assurance.ofMap, Viability.disturbed, Viability.Certificate, and Viability.Kernel.
 
-**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md)
+**Used by:** [active-inquiry-deadline-cascade-and-blankets](active-inquiry-deadline-cascade-and-blankets.md) · [whole-becoming-master-spine](whole-becoming-master-spine.md)
 
 <a id="sources--来源"></a>
 ### Sources
