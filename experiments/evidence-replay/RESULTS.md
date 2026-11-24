@@ -78,6 +78,9 @@ Report file: [encounter-entry-verification.json](../integrated-correction/genera
   - `pigeonhole_upper_bound = 1696`, `warehouse_first_prefix4 = 1536`, `warehouse_first_rep4 = 1536`, `requester_first_3plus1 = 2048`.
 - **Private naming & dynamic shift (`30` trials):**
   - `mean_unaligned = 1130.67`, `mean_learned = 2048.0` (`21` paid queries / `84` bits), `mean_shifted_stale = 1130.67`, `mean_relearned = 2048.0`, `mean_scrambled_control = 1156.27`.
+- **Endogenous silent-drift self-detection vs. global audit (§8.4, [memo §8](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/full-picture-decisions-2026-11-24/ZETA-AND-THE-FULL-MAP.zh.md#round-three)):**
+  - Exhaustive `40,320` (`8!`) permutations confirm `12` zero-bit checks have `0` false alarms and `0` misses.
+  - Across `40` online trials × `40` steps (`audit_interval = 5`, silent shift at step `8..21`, plus `40` unshifted controls with `0` false alarms and `1.0` unshifted accuracy across all regimes): `stale_no_detection` and `silenced_reporter_control` both drop to `mean_post_shift_accuracy = 0.5484` (`11.325` mean post-shift errors / unheard mismatches, `0.0` queries); `global_preventive_12q_then_21q` recovers `0.9681` accuracy (`40/40` detected) at `94.675` total queries (`84.0` on unshifted controls); `endogenous_local_3q_repair` achieves `0.7747` (`16.95` total queries, `0.0` pre-shift/unshifted); `endogenous_alarm_full_21q_repair` matches global accuracy (`0.9601`, `max_post_shift_errors = 1`, `40/40` detected) at `21.0` total queries (`0.0` pre-shift/unshifted).
 - **B2 / B4 probe-budget comparison:**
   - B2 4-probe separation drops `1.0` (`alpha=0.0, 0.5`) → `0.816` (`0.8`) → `0.40` (`1.0`).
   - B4 (`12` seeds) collapse rates: `unguarded_nominal = 1.0`, `guarded_targeted_low_alias = 0.0`, `guarded_blind_high_alias = 0.3333`, `guarded_late_lag8 = 0.1667`.

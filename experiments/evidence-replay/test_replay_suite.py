@@ -258,6 +258,52 @@ class TestProtocol8SlotBenchmark(unittest.TestCase):
         fixture = json.loads((HERE / "fixtures" / "protocol_8slot.json").read_text(encoding="utf-8"))
         self.assertEqual(fixture, res)
 
+    def test_silent_drift_endogenous_vs_global_detection(self) -> None:
+        res = p8.generate_protocol_8slot(write=False)
+        sd = res["eight_slot_silent_drift_detection"]
+        self.assertEqual(sd["checks_count"], 12)
+        self.assertEqual(sd["exhaustive_permutations_checked"], 40320)
+        self.assertFalse(sd["identity_false_alarm"])
+        self.assertEqual(sd["undetected_non_identity"], 0)
+        self.assertEqual(sd["shifted_trials_with_errors"], sd["n_trials"])
+
+        protos = sd["protocols"]
+        for name, metrics in protos.items():
+            self.assertEqual(metrics["unshifted_false_alarms"], 0, name)
+            self.assertEqual(metrics["mean_unshifted_accuracy"], 1.0, name)
+
+        stale = protos["stale_no_detection"]
+        silenced = protos["silenced_reporter_control"]
+        glob = protos["global_preventive_12q_then_21q"]
+        loc3 = protos["endogenous_local_3q_repair"]
+        alarm21 = protos["endogenous_alarm_full_21q_repair"]
+
+        self.assertLess(stale["mean_post_shift_accuracy"], 0.70)
+        self.assertEqual(silenced["mean_post_shift_accuracy"], stale["mean_post_shift_accuracy"])
+        self.assertEqual(silenced["mean_post_shift_errors"], stale["mean_post_shift_errors"])
+        self.assertEqual(silenced["mean_repairs"], 0.0)
+        self.assertGreater(silenced["mean_unheard_mismatches"], 5.0)
+
+        self.assertEqual(glob["detected_trials"], sd["n_trials"])
+        self.assertGreater(glob["mean_post_shift_accuracy"], 0.90)
+        self.assertEqual(glob["mean_unshifted_queries"], 84.0)
+        self.assertGreater(glob["mean_total_queries"], 80.0)
+
+        self.assertEqual(loc3["mean_unshifted_queries"], 0.0)
+        self.assertEqual(loc3["mean_pre_shift_queries"], 0.0)
+        self.assertLess(loc3["mean_total_queries"], glob["mean_total_queries"])
+        self.assertGreater(loc3["mean_post_shift_accuracy"], stale["mean_post_shift_accuracy"])
+
+        self.assertEqual(alarm21["mean_unshifted_queries"], 0.0)
+        self.assertEqual(alarm21["mean_pre_shift_queries"], 0.0)
+        self.assertEqual(alarm21["detected_trials"], sd["shifted_trials_with_errors"])
+        self.assertLessEqual(alarm21["max_post_shift_errors"], 1)
+        self.assertGreater(alarm21["mean_post_shift_accuracy"], 0.95)
+        self.assertLess(alarm21["mean_total_queries"], glob["mean_total_queries"])
+
+        fixture = json.loads((HERE / "fixtures" / "protocol_8slot.json").read_text(encoding="utf-8"))
+        self.assertEqual(fixture, res)
+
 
 class TestDualityLiftingHandshake(unittest.TestCase):
     def test_dobrushin_lift_xor_relational_and_empirical_safety(self) -> None:

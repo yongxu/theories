@@ -23,7 +23,7 @@ One joined, machine-checked map of how goings-on form, persist, adapt, and end w
 
 ## What we are trying next
 
-Every milestone clears an ungameable bar before landing — **net simplification/bridge**, **genuinely derived mechanism or composition** (no sterile dictionaries, no trivial `T := σ j` re-indexings, no standalone leaves), **real-learner friction**, or **cold-read clarity** — with adversarial paper attacks before any Lean build and single-telling metadata (`records/<id>.json` as sole prose source).
+Every milestone clears an ungameable bar before landing — **net simplification/bridge**, **genuinely derived mechanism or composition** (no sterile dictionaries, no trivial `T := σ j` re-indexings, no standalone leaves), **real-learner friction**, or **cold-read clarity** — with adversarial paper attacks before any Lean build and single-telling metadata (`records/<id>.json` as sole prose source). When reviewing coarse-grainings or entry gates, also check the §8.2–§8.3 handoff lens ([memo §8](research/2026-10-05-generative-foundation-review/root-foundation/development/full-picture-decisions-2026-11-24/ZETA-AND-THE-FULL-MAP.zh.md#round-three)): whether a summary adequate for today's fixed act still preserves option value for downstream requests/tradeoffs, and whether marginal single-entrant screening excludes complementary newcomers.
 
 1. **Phase 0 (Context & Single-Telling — confirmed permanent under `4A`):** Losslessly split `DIRECTION.md` and `BECOMING-WORKBOARD.md` into compact live fronts + `< 1 MiB` archives; stop 11-way manual prose copying and `check_becoming.py` `SCOPE` bloat; archive the frozen `results/map/` snapshot to `theories/becoming/history/results-map-2026-11-23/` with live pointers to `CANONICAL-MAP.md` and `ATLAS.md`.
 2. **Phase 1 — Build the Missing In-Between in Lean (Paper Attack → Lean):**
@@ -49,7 +49,7 @@ Every milestone clears an ungameable bar before landing — **net simplification
 
 ## What we do not know
 
-- Under what exact conditions an adaptive loop comes to register an unread substrate drain endogenously (beyond handed-in readings or unit extinction) before capture locks out its critics.
+- Under what exact conditions an adaptive loop comes to register an unread substrate drain or silent interface/convention drift endogenously (beyond handed-in readings, external recalibration triggers, or unit extinction — turning unscalable global preventive audits into timely affected-party-triggered local verification, as benchmarked in [`protocol_8slot_benchmark.py`](../experiments/evidence-replay/protocol_8slot_benchmark.py)) before capture or irreversibility locks out its critics.
 - Which interface certificates let two adaptive pools compose over shared substrates *while evolving internal forms, capabilities, and objectives*.
 - What minimal slack conditions allow macro-scale viability guarantees to transfer cleanly to fine-step stochastic or gradient-trained systems (`ε`-approximate coarse-graining).
 - How to formalize transformative continuation where legacy units cease as new becomings form beyond fixed `cap`/`Safe` inputs (`NeedTwentySeven`'s extinction-triggered halt is settled under Ren's 24 November `2B` decision as ecological exhaustion `Tested`, reserving *turning in time* for pre-exhaustion course change).

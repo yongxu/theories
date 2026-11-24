@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import random
 import sys
+from itertools import permutations
 from pathlib import Path
 from typing import Any, Dict, List, Sequence, Tuple
 
@@ -136,6 +137,60 @@ def _hamming_weight(x: int) -> int:
     return x.bit_count()
 
 
+def _binary_plane_stocks(pi_w: Sequence[int]) -> List[int]:
+    """Build 3 binary bit-plane test stocks encoding `pi_w[true_slot]` with zero side-channel names."""
+    plane_stocks = [0, 0, 0]
+    for true_slot in range(8):
+        w_priv = pi_w[true_slot]
+        for k in range(3):
+            if (w_priv >> k) & 1:
+                plane_stocks[k] |= 1 << true_slot
+    return plane_stocks
+
+
+def _probe_slot_bits(pi_w: Sequence[int], pi_r: Sequence[int], r_priv: int) -> Tuple[int, int]:
+    """Probe one requester slot `r_priv` across the 3 bit-planes (3 queries) to read current `w_priv`."""
+    plane_stocks = _binary_plane_stocks(pi_w)
+    true_slot = pi_r.index(r_priv)
+    w_val = 0
+    for k in range(3):
+        bit_k = _bit(plane_stocks[k], true_slot)
+        w_val |= bit_k << k
+    return w_val, 3
+
+
+def _learn_full_permutation(pi_w: Sequence[int], pi_r: Sequence[int]) -> Tuple[Dict[int, int], int]:
+    """Recover exact `mapping[r_priv] = w_priv` via 7*3 = 21 paid queries; deduce 8th by elimination."""
+    learned: Dict[int, int] = {}
+    queries = 0
+    remaining_w = set(range(8))
+    for r_priv in range(7):
+        w_val, q_used = _probe_slot_bits(pi_w, pi_r, r_priv)
+        queries += q_used
+        learned[r_priv] = w_val
+        remaining_w.remove(w_val)
+    learned[7] = next(iter(remaining_w))
+    return learned, queries
+
+
+def _zero_bit_global_audit(
+    pi_w: Sequence[int], pi_r: Sequence[int], mapping: Dict[int, int]
+) -> Tuple[bool, int]:
+    """Check the 12 `(r_priv, k)` positions where `((mapping[r_priv] >> k) & 1) == 0`; stop on first 1."""
+    assert len(mapping) == 8 and set(mapping.values()) == set(range(8))
+    plane_stocks = _binary_plane_stocks(pi_w)
+    queries = 0
+    for r_priv in range(8):
+        true_slot = pi_r.index(r_priv)
+        expected_w = mapping[r_priv]
+        for k in range(3):
+            if not ((expected_w >> k) & 1):
+                queries += 1
+                if _bit(plane_stocks[k], true_slot):
+                    return True, queries
+    return False, queries
+
+
 def run_8slot_4bit_experiment(seed: int = 8001) -> Dict[str, Any]:
     """Exhaustive 256 x 8 = 2048 evaluation of §5 8-slot 4-bit communication protocols."""
     all_stocks = list(range(256))
@@ -195,39 +250,8 @@ def run_8slot_4bit_experiment(seed: int = 8001) -> Dict[str, Any]:
     pairing_queries_used: List[int] = []
 
     def learn_permutation(pi_w: Sequence[int], pi_r: Sequence[int]) -> Tuple[Dict[int, int], int]:
-        """Learn mapping from requester private name -> warehouse private name via paid 1-bit probes.
-
-        In each paid pairing round, warehouse loads a known 1-hot test configuration on a candidate
-        warehouse slot (or binary-plane encoding across 3 rounds per requester slot). Using 3
-        binary-bit-plane test stocks prepared by the warehouse (bit k of warehouse index j),
-        querying each requester private slot `r_priv` across the 3 bit-planes takes 3*(3+1) = 12 bits
-        per slot (or 7*3 = 21 paid queries total, deducing the 8th by elimination) to recover the
-        exact permutation `mapping[r_priv] = w_priv` with ZERO side-channel names!
-        """
-        # Warehouse creates 3 fixed binary-plane test stocks: stock_bit_k[w_idx] = (w_idx >> k) & 1
-        plane_stocks = [0, 0, 0]
-        for true_slot in range(8):
-            w_priv = pi_w[true_slot]
-            for k in range(3):
-                if (w_priv >> k) & 1:
-                    plane_stocks[k] |= (1 << true_slot)
-
-        learned: Dict[int, int] = {}
-        queries = 0
-        # Probe requester's first 7 private indices; deduce 8th by elimination
-        remaining_w = set(range(8))
-        for r_priv in range(7):
-            true_slot = pi_r.index(r_priv)
-            w_val = 0
-            for k in range(3):
-                queries += 1  # 1 paid 3+1-bit query on binary plane k
-                # Physical warehouse holds true_slot's bit of plane_stocks[k]
-                bit_k = _bit(plane_stocks[k], true_slot)
-                w_val |= (bit_k << k)
-            learned[r_priv] = w_val
-            remaining_w.remove(w_val)
-        learned[7] = next(iter(remaining_w))
-        return learned, queries
+        """Learn mapping from requester private name -> warehouse private name via paid 1-bit probes."""
+        return _learn_full_permutation(pi_w, pi_r)
 
     for _ in range(n_perm_trials):
         pi_w = list(range(8))
@@ -372,11 +396,192 @@ def run_b2_b4_probe_budget_connection() -> Dict[str, Any]:
     return {"b2_4bit_probe_aliasing": b2_rows, "b4_probe_regime_contrast": b4_rows}
 
 
+def run_8slot_silent_drift_detection_experiment(
+    n_trials: int = 40, horizon: int = 40, audit_interval: int = 5, seed: int = 8401
+) -> Dict[str, Any]:
+    """§8.4 endogenous silent-drift self-detection vs. periodic 12-query global audit & silenced control."""
+    slots = tuple(range(8))
+    checks = [(j, b) for j in slots for b in range(3) if not (j & (1 << b))]
+    assert len(checks) == 12
+    identity_false_alarm = any((slots[j] >> b) & 1 for j, b in checks)
+    undetected_non_identity = 0
+    total_perms = 0
+    for perm in permutations(slots):
+        total_perms += 1
+        if all(not (perm[j] >> b) & 1 for j, b in checks) and perm != slots:
+            undetected_non_identity += 1
+    assert total_perms == 40320 and not identity_false_alarm and undetected_non_identity == 0
+
+    protocols = (
+        "stale_no_detection",
+        "global_preventive_12q_then_21q",
+        "endogenous_local_3q_repair",
+        "endogenous_alarm_full_21q_repair",
+        "silenced_reporter_control",
+    )
+
+    def simulate_stream(
+        protocol: str,
+        init_mapping: Dict[int, int],
+        pi_w: Sequence[int],
+        pi_w2: Sequence[int],
+        pi_r: Sequence[int],
+        stream: Sequence[Tuple[int, int]],
+        shift_step: int | None,
+    ) -> Dict[str, Any]:
+        mapping = dict(init_mapping)
+        pre_queries = 0
+        total_queries = 0
+        repairs = 0
+        first_detect_step: int | None = None
+        post_errors = 0
+        post_steps = 0
+        unheard_mismatches = 0
+
+        for t, (stock, r_true) in enumerate(stream):
+            shifted = shift_step is not None and t >= shift_step
+            pi_w_cur = pi_w2 if shifted else pi_w
+
+            if protocol == "global_preventive_12q_then_21q" and t > 0 and t % audit_interval == 0:
+                drifted, q_audit = _zero_bit_global_audit(pi_w_cur, pi_r, mapping)
+                total_queries += q_audit
+                if not shifted:
+                    pre_queries += q_audit
+                if drifted:
+                    if first_detect_step is None:
+                        first_detect_step = t
+                    mapping, q_rebuild = _learn_full_permutation(pi_w_cur, pi_r)
+                    total_queries += q_rebuild
+                    if not shifted:
+                        pre_queries += q_rebuild
+                    repairs += 1
+
+            r_priv = pi_r[r_true]
+            w_priv = mapping[r_priv]
+            reply = _bit(stock, pi_w_cur.index(w_priv))
+            truth = _bit(stock, r_true)
+            correct = reply == truth
+            if shifted:
+                post_steps += 1
+                if not correct:
+                    post_errors += 1
+
+            if not correct:
+                if protocol == "endogenous_local_3q_repair":
+                    if first_detect_step is None:
+                        first_detect_step = t
+                    new_w, q_slot = _probe_slot_bits(pi_w_cur, pi_r, r_priv)
+                    mapping[r_priv] = new_w
+                    total_queries += q_slot
+                    if not shifted:
+                        pre_queries += q_slot
+                    repairs += 1
+                elif protocol == "endogenous_alarm_full_21q_repair":
+                    if first_detect_step is None:
+                        first_detect_step = t
+                    mapping, q_rebuild = _learn_full_permutation(pi_w_cur, pi_r)
+                    total_queries += q_rebuild
+                    if not shifted:
+                        pre_queries += q_rebuild
+                    repairs += 1
+                elif protocol == "silenced_reporter_control":
+                    unheard_mismatches += 1
+
+        return {
+            "pre_shift_queries": pre_queries,
+            "total_queries": total_queries,
+            "repairs": repairs,
+            "detected": first_detect_step is not None,
+            "detect_step": first_detect_step,
+            "post_errors": post_errors,
+            "post_steps": post_steps,
+            "unheard_mismatches": unheard_mismatches,
+        }
+
+    rng = random.Random(seed)
+    shifted_runs: Dict[str, List[Dict[str, Any]]] = {p: [] for p in protocols}
+    unshifted_runs: Dict[str, List[Dict[str, Any]]] = {p: [] for p in protocols}
+    shift_steps: List[int] = []
+
+    for _ in range(n_trials):
+        pi_w = list(slots)
+        pi_r = list(slots)
+        rng.shuffle(pi_w)
+        rng.shuffle(pi_r)
+        init_mapping, _ = _learn_full_permutation(pi_w, pi_r)
+
+        shift_step = rng.randrange(8, 22)
+        shift_steps.append(shift_step)
+        pi_w2 = list(slots)
+        rng.shuffle(pi_w2)
+        if pi_w2 == pi_w:
+            pi_w2[0], pi_w2[1] = pi_w2[1], pi_w2[0]
+
+        stream = [(rng.randrange(256), rng.randrange(8)) for _ in range(horizon)]
+        for p in protocols:
+            shifted_runs[p].append(
+                simulate_stream(p, init_mapping, pi_w, pi_w2, pi_r, stream, shift_step)
+            )
+            unshifted_runs[p].append(
+                simulate_stream(p, init_mapping, pi_w, pi_w2, pi_r, stream, None)
+            )
+
+    shifted_trials_with_errors = sum(1 for r in shifted_runs["stale_no_detection"] if r["post_errors"] > 0)
+    protocol_summary: Dict[str, Any] = {}
+    for p in protocols:
+        s_list = shifted_runs[p]
+        u_list = unshifted_runs[p]
+        latencies = [
+            r["detect_step"] - st
+            for r, st in zip(s_list, shift_steps)
+            if r["detect_step"] is not None
+        ]
+        total_post_steps = sum(r["post_steps"] for r in s_list)
+        total_post_errors = sum(r["post_errors"] for r in s_list)
+        entry: Dict[str, Any] = {
+            "shifted_trials": n_trials,
+            "detected_trials": sum(1 for r in s_list if r["detected"]),
+            "mean_detection_latency_steps": (
+                round(sum(latencies) / len(latencies), 4) if latencies else None
+            ),
+            "mean_pre_shift_queries": round(sum(r["pre_shift_queries"] for r in s_list) / n_trials, 4),
+            "mean_total_queries": round(sum(r["total_queries"] for r in s_list) / n_trials, 4),
+            "mean_repairs": round(sum(r["repairs"] for r in s_list) / n_trials, 4),
+            "mean_post_shift_errors": round(total_post_errors / n_trials, 4),
+            "max_post_shift_errors": max(r["post_errors"] for r in s_list),
+            "mean_post_shift_accuracy": round(1.0 - (total_post_errors / total_post_steps), 4),
+            "unshifted_trials": n_trials,
+            "unshifted_false_alarms": sum(1 for r in u_list if r["repairs"] > 0 or r["detected"]),
+            "mean_unshifted_queries": round(sum(r["total_queries"] for r in u_list) / n_trials, 4),
+            "mean_unshifted_accuracy": round(
+                1.0 - (sum(r["post_errors"] for r in u_list) / (n_trials * horizon)), 4
+            ),
+        }
+        if p == "silenced_reporter_control":
+            entry["mean_unheard_mismatches"] = round(
+                sum(r["unheard_mismatches"] for r in s_list) / n_trials, 4
+            )
+        protocol_summary[p] = entry
+
+    return {
+        "checks_count": len(checks),
+        "exhaustive_permutations_checked": total_perms,
+        "identity_false_alarm": identity_false_alarm,
+        "undetected_non_identity": undetected_non_identity,
+        "n_trials": n_trials,
+        "horizon": horizon,
+        "audit_interval": audit_interval,
+        "shifted_trials_with_errors": shifted_trials_with_errors,
+        "protocols": protocol_summary,
+    }
+
+
 def generate_protocol_8slot(write: bool = True) -> Dict[str, Any]:
     out = {
-        "ai_written": "Track S3 (24 November 2026), Section 5 communication-order + B2/B4 probe benchmark",
+        "ai_written": "Track S3 (24 November 2026), Section 5 communication-order + B2/B4 probe + §8.4 silent-drift benchmark",
         "two_item_blackbox": run_two_item_blackbox_experiment(),
         "eight_slot_4bit": run_8slot_4bit_experiment(),
+        "eight_slot_silent_drift_detection": run_8slot_silent_drift_detection_experiment(),
         "b2_b4_probe_connection": run_b2_b4_probe_budget_connection(),
     }
     if write:
@@ -387,6 +592,7 @@ def generate_protocol_8slot(write: bool = True) -> Dict[str, Any]:
 
 def main() -> int:
     res = generate_protocol_8slot(write=True)
+    sd = res["eight_slot_silent_drift_detection"]["protocols"]
     print(
         json.dumps(
             {
@@ -400,6 +606,10 @@ def main() -> int:
                 "eight_slot_requester_first": res["eight_slot_4bit"]["requester_first_3plus1_hits"],
                 "eight_slot_learned_hits": res["eight_slot_4bit"]["mean_learned_hits"],
                 "eight_slot_scrambled_hits": res["eight_slot_4bit"]["mean_scrambled_control_hits"],
+                "silent_drift_post_acc": {
+                    k: (sd[k]["mean_post_shift_accuracy"], sd[k]["mean_total_queries"])
+                    for k in sd
+                },
                 "b4_regimes": [
                     (r["regime"], r["collapse_rate"])
                     for r in res["b2_b4_probe_connection"]["b4_probe_regime_contrast"]

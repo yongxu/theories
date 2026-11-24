@@ -1,5 +1,5 @@
 {
-  "ai_written": "Track S3 (24 November 2026), Section 5 communication-order + B2/B4 probe benchmark",
+  "ai_written": "Track S3 (24 November 2026), Section 5 communication-order + B2/B4 probe + \u00a78.4 silent-drift benchmark",
   "two_item_blackbox": {
     "n_episodes": 200,
     "fifo_diagnostic_match_load0": 100,
@@ -26,6 +26,94 @@
     "mean_shifted_stale_hits": 1130.67,
     "mean_relearned_hits": 2048.0,
     "mean_scrambled_control_hits": 1156.27
+  },
+  "eight_slot_silent_drift_detection": {
+    "checks_count": 12,
+    "exhaustive_permutations_checked": 40320,
+    "identity_false_alarm": false,
+    "undetected_non_identity": 0,
+    "n_trials": 40,
+    "horizon": 40,
+    "audit_interval": 5,
+    "shifted_trials_with_errors": 40,
+    "protocols": {
+      "stale_no_detection": {
+        "shifted_trials": 40,
+        "detected_trials": 0,
+        "mean_detection_latency_steps": null,
+        "mean_pre_shift_queries": 0.0,
+        "mean_total_queries": 0.0,
+        "mean_repairs": 0.0,
+        "mean_post_shift_errors": 11.325,
+        "max_post_shift_errors": 18,
+        "mean_post_shift_accuracy": 0.5484,
+        "unshifted_trials": 40,
+        "unshifted_false_alarms": 0,
+        "mean_unshifted_queries": 0.0,
+        "mean_unshifted_accuracy": 1.0
+      },
+      "global_preventive_12q_then_21q": {
+        "shifted_trials": 40,
+        "detected_trials": 40,
+        "mean_detection_latency_steps": 1.825,
+        "mean_pre_shift_queries": 28.2,
+        "mean_total_queries": 94.675,
+        "mean_repairs": 1.0,
+        "mean_post_shift_errors": 0.8,
+        "max_post_shift_errors": 3,
+        "mean_post_shift_accuracy": 0.9681,
+        "unshifted_trials": 40,
+        "unshifted_false_alarms": 0,
+        "mean_unshifted_queries": 84.0,
+        "mean_unshifted_accuracy": 1.0
+      },
+      "endogenous_local_3q_repair": {
+        "shifted_trials": 40,
+        "detected_trials": 40,
+        "mean_detection_latency_steps": 1.075,
+        "mean_pre_shift_queries": 0.0,
+        "mean_total_queries": 16.95,
+        "mean_repairs": 5.65,
+        "mean_post_shift_errors": 5.65,
+        "max_post_shift_errors": 8,
+        "mean_post_shift_accuracy": 0.7747,
+        "unshifted_trials": 40,
+        "unshifted_false_alarms": 0,
+        "mean_unshifted_queries": 0.0,
+        "mean_unshifted_accuracy": 1.0
+      },
+      "endogenous_alarm_full_21q_repair": {
+        "shifted_trials": 40,
+        "detected_trials": 40,
+        "mean_detection_latency_steps": 1.075,
+        "mean_pre_shift_queries": 0.0,
+        "mean_total_queries": 21.0,
+        "mean_repairs": 1.0,
+        "mean_post_shift_errors": 1.0,
+        "max_post_shift_errors": 1,
+        "mean_post_shift_accuracy": 0.9601,
+        "unshifted_trials": 40,
+        "unshifted_false_alarms": 0,
+        "mean_unshifted_queries": 0.0,
+        "mean_unshifted_accuracy": 1.0
+      },
+      "silenced_reporter_control": {
+        "shifted_trials": 40,
+        "detected_trials": 0,
+        "mean_detection_latency_steps": null,
+        "mean_pre_shift_queries": 0.0,
+        "mean_total_queries": 0.0,
+        "mean_repairs": 0.0,
+        "mean_post_shift_errors": 11.325,
+        "max_post_shift_errors": 18,
+        "mean_post_shift_accuracy": 0.5484,
+        "unshifted_trials": 40,
+        "unshifted_false_alarms": 0,
+        "mean_unshifted_queries": 0.0,
+        "mean_unshifted_accuracy": 1.0,
+        "mean_unheard_mismatches": 11.325
+      }
+    }
   },
   "b2_b4_probe_connection": {
     "b2_4bit_probe_aliasing": [

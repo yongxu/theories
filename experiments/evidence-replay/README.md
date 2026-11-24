@@ -19,7 +19,7 @@ Per `AGENTS.md` Rules 1–2:
 - [phase2_disentangled_stress.py](phase2_disentangled_stress.py) → [fixtures/phase2_disentangled.json](fixtures/phase2_disentangled.json):
   Disentangled 2D local sweep independently varying `rho_reward` and `rho_feat` while holding `x0`, `renewal`, and `warn_onset` fixed, reporting competing-risk switch-time + pre-switch-death counts without dropping collapsed runs, plus stochastic excursion/breach probability checks.
 - [protocol_8slot_benchmark.py](protocol_8slot_benchmark.py) → [fixtures/protocol_8slot.json](fixtures/protocol_8slot.json):
-  Local benchmark for §5 communication-order and inquiry bottlenecks: 2-item inquiry with causal controls, 8-slot 4-bit warehouse-first vs requester-first separation, private naming alignment + scrambled-reply control, and B2/B4 probe-budget comparison.
+  Local benchmark for §5 and §8.4 ([memo §8](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/full-picture-decisions-2026-11-24/ZETA-AND-THE-FULL-MAP.zh.md#round-three)) communication-order, inquiry, and self-detection bottlenecks: 2-item inquiry with causal controls, 8-slot 4-bit warehouse-first vs requester-first separation, private naming alignment + scrambled-reply control, 5-regime endogenous silent-drift self-detection vs periodic 12-query global audit (plus exhaustive `8!` check), and B2/B4 probe-budget comparison.
 - [test_replay_suite.py](test_replay_suite.py):
   `unittest` suite exercising all four generators, verifying regenerated output consistency, exact rational invariants, and negative tamper detections.
 - [RESULTS.md](RESULTS.md):
