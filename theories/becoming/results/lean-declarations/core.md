@@ -1012,154 +1012,164 @@ Contains 32 textual `#print axioms` commands; their results belong to the origin
 <a id="module-22b0bc85b6fc"></a>
 
 <details>
-<summary>Challenge.lean — 22 explicit declarations</summary>
+<summary>Challenge.lean — 26 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean`
 
-Imports: `BecomingSpec.V1.Targets`, `BecomingSpec.V2.Targets`, `BecomingSpec.Revision.IN1`, `BecomingSpec.Extensions.OplaxTargets`, `BecomingSpec.Extensions.EntryTargets`
+Imports: `BecomingSpec.V1.Targets`, `BecomingSpec.V2.Targets`, `BecomingSpec.Revision.IN1`, `BecomingSpec.Extensions.OplaxTargets`, `BecomingSpec.Extensions.EntryTargets`, `BecomingSpec.Extensions.SpineTargets`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [BecomingSpecCheck.v1_prefixMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L17) | 17 |
-| [BecomingSpecCheck.v1_live](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L18) | 18 |
-| [BecomingSpecCheck.v1_cycleBoundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L19) | 19 |
-| [BecomingSpecCheck.v1_sameViewObstruction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L20) | 20 |
-| [BecomingSpecCheck.v1_in1SameViewWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L21) | 21 |
-| [BecomingSpecCheck.v1_commonAction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L22) | 22 |
-| [BecomingSpecCheck.v1_completes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L23) | 23 |
-| [BecomingSpecCheck.v1_branchStuck](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L24) | 24 |
-| [BecomingSpecCheck.v1_significanceFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L25) | 25 |
-| [BecomingSpecCheck.v2_eraseCommutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L27) | 27 |
-| [BecomingSpecCheck.v2_pass2RefinesPass1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L28) | 28 |
-| [BecomingSpecCheck.v2_v1Blindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L29) | 29 |
-| [BecomingSpecCheck.in1_sameView](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L31) | 31 |
-| [BecomingSpecCheck.in1_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L32) | 32 |
-| [BecomingSpecCheck.in1_decisionDefeat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L33) | 33 |
-| [BecomingSpecCheck.in1_seed3FaithfulHarm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L34) | 34 |
-| [BecomingSpecCheck.in1_seed7RevisionSaves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L35) | 35 |
-| [BecomingSpecCheck.ext_allFibers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L37) | 37 |
-| [BecomingSpecCheck.ext_missingLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L38) | 38 |
-| [BecomingSpecCheck.entry_adaptiveBeatsFixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L40) | 40 |
-| [BecomingSpecCheck.entry_branchingVsPathCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L41) | 41 |
-| [BecomingSpecCheck.entry_openSecondEntry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L42) | 42 |
+| [BecomingSpecCheck.v1_prefixMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L18) | 18 |
+| [BecomingSpecCheck.v1_live](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L19) | 19 |
+| [BecomingSpecCheck.v1_cycleBoundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L20) | 20 |
+| [BecomingSpecCheck.v1_sameViewObstruction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L21) | 21 |
+| [BecomingSpecCheck.v1_in1SameViewWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L22) | 22 |
+| [BecomingSpecCheck.v1_commonAction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L23) | 23 |
+| [BecomingSpecCheck.v1_completes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L24) | 24 |
+| [BecomingSpecCheck.v1_branchStuck](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L25) | 25 |
+| [BecomingSpecCheck.v1_significanceFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L26) | 26 |
+| [BecomingSpecCheck.v2_eraseCommutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L28) | 28 |
+| [BecomingSpecCheck.v2_pass2RefinesPass1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L29) | 29 |
+| [BecomingSpecCheck.v2_v1Blindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L30) | 30 |
+| [BecomingSpecCheck.in1_sameView](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L32) | 32 |
+| [BecomingSpecCheck.in1_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L33) | 33 |
+| [BecomingSpecCheck.in1_decisionDefeat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L34) | 34 |
+| [BecomingSpecCheck.in1_seed3FaithfulHarm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L35) | 35 |
+| [BecomingSpecCheck.in1_seed7RevisionSaves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L36) | 36 |
+| [BecomingSpecCheck.ext_allFibers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L38) | 38 |
+| [BecomingSpecCheck.ext_missingLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L39) | 39 |
+| [BecomingSpecCheck.entry_adaptiveBeatsFixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L41) | 41 |
+| [BecomingSpecCheck.entry_branchingVsPathCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L42) | 42 |
+| [BecomingSpecCheck.entry_openSecondEntry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L43) | 43 |
+| [BecomingSpecCheck.spine_hiddenCouplingCollapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L45) | 45 |
+| [BecomingSpecCheck.spine_widenHealsBlindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L46) | 46 |
+| [BecomingSpecCheck.spine_directed3DNonCollapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L47) | 47 |
+| [BecomingSpecCheck.spine_masterSpineEthicsFirewall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Challenge.lean#L48) | 48 |
 
 </details>
 
 <a id="module-09cd04ea32a6"></a>
 
 <details>
-<summary>Solution.lean — 97 explicit declarations</summary>
+<summary>Solution.lean — 103 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean`
 
-Imports: `BecomingSpec.V1.Targets`, `BecomingSpec.V2.Targets`, `BecomingSpec.Revision.IN1`, `BecomingSpec.Extensions.OplaxTargets`, `BecomingSpec.Extensions.EntryTargets`, `Becoming.RegimeMargin`, `Becoming.OpenComposition`, `Becoming.PacedStock`, `Becoming.Assurance`, `Becoming.GuardHorizon`, `Becoming.Significance`, `Becoming.OplaxHistory`, `EncounterEntry`
+Imports: `BecomingSpec.V1.Targets`, `BecomingSpec.V2.Targets`, `BecomingSpec.Revision.IN1`, `BecomingSpec.Extensions.OplaxTargets`, `BecomingSpec.Extensions.EntryTargets`, `BecomingSpec.Extensions.SpineTargets`, `Becoming.RegimeMargin`, `Becoming.OpenComposition`, `Becoming.PacedStock`, `Becoming.Assurance`, `Becoming.GuardHorizon`, `Becoming.Significance`, `Becoming.OplaxHistory`, `Becoming.DoubleKernel`, `Becoming.MasterSpine`, `EncounterEntry`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [BecomingSpecCheck.adapter_stock_eq_regimeStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L29) | 29 |
-| [BecomingSpecCheck.bool_ite_eq_prop_ite](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L43) | 43 |
-| [BecomingSpecCheck.adapter_margin_closedStep_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L49) | 49 |
-| [BecomingSpecCheck.v1_prefixMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L65) | 65 |
-| [BecomingSpecCheck.liveG_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L105) | 105 |
-| [BecomingSpecCheck.v1_live](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L116) | 116 |
-| [BecomingSpecCheck.adapter_live_openComposition_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L121) | 121 |
-| [BecomingSpecCheck.iter_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L139) | 139 |
-| [BecomingSpecCheck.adapter_cycleStep_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L144) | 144 |
-| [BecomingSpecCheck.adapter_cycleStep_reach6](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L171) | 171 |
-| [BecomingSpecCheck.cycleStep_pos_of_ge5](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L188) | 188 |
-| [BecomingSpecCheck.adapter_cycleStep2_reach5](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L203) | 203 |
-| [BecomingSpecCheck.v1_cycleBoundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L230) | 230 |
-| [BecomingSpecCheck.adapter_sameView_to_fiberSplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L244) | 244 |
-| [BecomingSpecCheck.v1_sameViewObstruction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L251) | 251 |
-| [BecomingSpecCheck.v1_in1SameViewWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L259) | 259 |
-| [BecomingSpecCheck.hasObs_sound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L270) | 270 |
-| [BecomingSpecCheck.hasObs_complete](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L282) | 282 |
-| [BecomingSpecCheck.adapter_commonAction_via_guardHorizon](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L298) | 298 |
-| [BecomingSpecCheck.v1_commonAction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L317) | 317 |
-| [BecomingSpecCheck.adapter_trace_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L327) | 327 |
-| [BecomingSpecCheck.adapter_safeTrace_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L341) | 341 |
-| [BecomingSpecCheck.adapter_completes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L356) | 356 |
-| [BecomingSpecCheck.adapter_determined_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L367) | 367 |
-| [BecomingSpecCheck.adapter_branchStep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L371) | 371 |
-| [BecomingSpecCheck.v1_completes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L375) | 375 |
-| [BecomingSpecCheck.v1_branchStuck](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L397) | 397 |
-| [BecomingSpecCheck.adapter_unrestricted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L410) | 410 |
-| [BecomingSpecCheck.v1_significanceFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L414) | 414 |
-| [BecomingSpecCheck.v2_eraseCommutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L426) | 426 |
-| [BecomingSpecCheck.v2_pass2RefinesPass1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L429) | 429 |
-| [BecomingSpecCheck.v2_v1Blindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L432) | 432 |
-| [BecomingSpecCheck.adapter_in1_fiberSplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L435) | 435 |
-| [BecomingSpecCheck.in1_sameView](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L443) | 443 |
-| [BecomingSpecCheck.in1_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L446) | 446 |
-| [BecomingSpecCheck.in1_decisionDefeat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L450) | 450 |
-| [BecomingSpecCheck.in1_seed3FaithfulHarm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L453) | 453 |
-| [BecomingSpecCheck.in1_seed7RevisionSaves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L460) | 460 |
-| [BecomingSpecCheck.pbToFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L491) | 491 |
-| [BecomingSpecCheck.pbFromTo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L495) | 495 |
-| [BecomingSpecCheck.pbInj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L499) | 499 |
-| [BecomingSpecCheck.adapter_chi_bijective_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L505) | 505 |
-| [BecomingSpecCheck.bcMap_const_bijective_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L584) | 584 |
-| [BecomingSpecCheck.pbExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L699) | 699 |
-| [BecomingSpecCheck.bcRightValEq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L705) | 705 |
-| [BecomingSpecCheck.bcLeftMkExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L717) | 717 |
-| [BecomingSpecCheck.bcRightMkExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L729) | 729 |
-| [BecomingSpecCheck.ext_allFibers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L742) | 742 |
-| [BecomingSpecCheck.adapter_oplax_chi_iff_bc_all](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L794) | 794 |
-| [BecomingSpecCheck.ext_missingLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L803) | 803 |
-| [BecomingSpecCheck.fromToSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L837) | 837 |
-| [BecomingSpecCheck.toFromSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L841) | 841 |
-| [BecomingSpecCheck.toFromSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L845) | 845 |
-| [BecomingSpecCheck.fromToSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L846) | 846 |
-| [BecomingSpecCheck.adapter_slotOracle_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L848) | 848 |
-| [BecomingSpecCheck.toSpecTree_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L868) | 868 |
-| [BecomingSpecCheck.runTree_toSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L875) | 875 |
-| [BecomingSpecCheck.runTree_fromSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L888) | 888 |
-| [BecomingSpecCheck.runTree_ofFixed_adapter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L901) | 901 |
-| [BecomingSpecCheck.entry_adaptiveBeatsFixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L917) | 917 |
-| [BecomingSpecCheck.toFromSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L986) | 986 |
-| [BecomingSpecCheck.fromToSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L990) | 990 |
-| [BecomingSpecCheck.branchStateEq_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L994) | 994 |
-| [BecomingSpecCheck.sumNatList_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1004) | 1004 |
-| [BecomingSpecCheck.map_toSpec_pathsFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1009) | 1009 |
-| [BecomingSpecCheck.adapter_pathsFrom_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1041) | 1041 |
-| [BecomingSpecCheck.mem_map_toSpec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1055) | 1055 |
-| [BecomingSpecCheck.mem_of_mem_map_toSpec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1060) | 1060 |
-| [BecomingSpecCheck.adapter_completesPostBranch_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1067) | 1067 |
-| [BecomingSpecCheck.entry_branchingVsPathCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1102) | 1102 |
-| [BecomingSpecCheck.adapter_encounterEntryInterface_openGate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1144) | 1144 |
-| [BecomingSpecCheck.adapter_encounterEntryInterface_runOps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1148) | 1148 |
-| [BecomingSpecCheck.entry_openSecondEntry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1152) | 1152 |
+| [BecomingSpecCheck.adapter_stock_eq_regimeStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L32) | 32 |
+| [BecomingSpecCheck.bool_ite_eq_prop_ite](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L46) | 46 |
+| [BecomingSpecCheck.adapter_margin_closedStep_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L52) | 52 |
+| [BecomingSpecCheck.v1_prefixMargin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L68) | 68 |
+| [BecomingSpecCheck.liveG_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L108) | 108 |
+| [BecomingSpecCheck.v1_live](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L119) | 119 |
+| [BecomingSpecCheck.adapter_live_openComposition_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L124) | 124 |
+| [BecomingSpecCheck.iter_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L142) | 142 |
+| [BecomingSpecCheck.adapter_cycleStep_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L147) | 147 |
+| [BecomingSpecCheck.adapter_cycleStep_reach6](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L174) | 174 |
+| [BecomingSpecCheck.cycleStep_pos_of_ge5](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L191) | 191 |
+| [BecomingSpecCheck.adapter_cycleStep2_reach5](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L206) | 206 |
+| [BecomingSpecCheck.v1_cycleBoundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L233) | 233 |
+| [BecomingSpecCheck.adapter_sameView_to_fiberSplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L247) | 247 |
+| [BecomingSpecCheck.v1_sameViewObstruction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L254) | 254 |
+| [BecomingSpecCheck.v1_in1SameViewWitness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L262) | 262 |
+| [BecomingSpecCheck.hasObs_sound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L273) | 273 |
+| [BecomingSpecCheck.hasObs_complete](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L285) | 285 |
+| [BecomingSpecCheck.adapter_commonAction_via_guardHorizon](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L301) | 301 |
+| [BecomingSpecCheck.v1_commonAction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L320) | 320 |
+| [BecomingSpecCheck.adapter_trace_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L330) | 330 |
+| [BecomingSpecCheck.adapter_safeTrace_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L344) | 344 |
+| [BecomingSpecCheck.adapter_completes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L359) | 359 |
+| [BecomingSpecCheck.adapter_determined_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L370) | 370 |
+| [BecomingSpecCheck.adapter_branchStep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L374) | 374 |
+| [BecomingSpecCheck.v1_completes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L378) | 378 |
+| [BecomingSpecCheck.v1_branchStuck](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L400) | 400 |
+| [BecomingSpecCheck.adapter_unrestricted_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L413) | 413 |
+| [BecomingSpecCheck.v1_significanceFree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L417) | 417 |
+| [BecomingSpecCheck.v2_eraseCommutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L429) | 429 |
+| [BecomingSpecCheck.v2_pass2RefinesPass1](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L432) | 432 |
+| [BecomingSpecCheck.v2_v1Blindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L435) | 435 |
+| [BecomingSpecCheck.adapter_in1_fiberSplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L438) | 438 |
+| [BecomingSpecCheck.in1_sameView](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L446) | 446 |
+| [BecomingSpecCheck.in1_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L449) | 449 |
+| [BecomingSpecCheck.in1_decisionDefeat](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L453) | 453 |
+| [BecomingSpecCheck.in1_seed3FaithfulHarm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L456) | 456 |
+| [BecomingSpecCheck.in1_seed7RevisionSaves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L463) | 463 |
+| [BecomingSpecCheck.pbToFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L494) | 494 |
+| [BecomingSpecCheck.pbFromTo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L498) | 498 |
+| [BecomingSpecCheck.pbInj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L502) | 502 |
+| [BecomingSpecCheck.adapter_chi_bijective_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L508) | 508 |
+| [BecomingSpecCheck.bcMap_const_bijective_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L587) | 587 |
+| [BecomingSpecCheck.pbExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L702) | 702 |
+| [BecomingSpecCheck.bcRightValEq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L708) | 708 |
+| [BecomingSpecCheck.bcLeftMkExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L720) | 720 |
+| [BecomingSpecCheck.bcRightMkExt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L732) | 732 |
+| [BecomingSpecCheck.ext_allFibers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L745) | 745 |
+| [BecomingSpecCheck.adapter_oplax_chi_iff_bc_all](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L797) | 797 |
+| [BecomingSpecCheck.ext_missingLift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L806) | 806 |
+| [BecomingSpecCheck.fromToSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L840) | 840 |
+| [BecomingSpecCheck.toFromSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L844) | 844 |
+| [BecomingSpecCheck.toFromSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L848) | 848 |
+| [BecomingSpecCheck.fromToSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L849) | 849 |
+| [BecomingSpecCheck.adapter_slotOracle_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L851) | 851 |
+| [BecomingSpecCheck.toSpecTree_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L871) | 871 |
+| [BecomingSpecCheck.runTree_toSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L878) | 878 |
+| [BecomingSpecCheck.runTree_fromSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L891) | 891 |
+| [BecomingSpecCheck.runTree_ofFixed_adapter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L904) | 904 |
+| [BecomingSpecCheck.entry_adaptiveBeatsFixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L920) | 920 |
+| [BecomingSpecCheck.toFromSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L989) | 989 |
+| [BecomingSpecCheck.fromToSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L993) | 993 |
+| [BecomingSpecCheck.branchStateEq_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L997) | 997 |
+| [BecomingSpecCheck.sumNatList_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1007) | 1007 |
+| [BecomingSpecCheck.map_toSpec_pathsFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1012) | 1012 |
+| [BecomingSpecCheck.adapter_pathsFrom_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1044) | 1044 |
+| [BecomingSpecCheck.mem_map_toSpec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1058) | 1058 |
+| [BecomingSpecCheck.mem_of_mem_map_toSpec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1063) | 1063 |
+| [BecomingSpecCheck.adapter_completesPostBranch_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1070) | 1070 |
+| [BecomingSpecCheck.entry_branchingVsPathCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1105) | 1105 |
+| [BecomingSpecCheck.adapter_encounterEntryInterface_openGate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1147) | 1147 |
+| [BecomingSpecCheck.adapter_encounterEntryInterface_runOps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1151) | 1151 |
+| [BecomingSpecCheck.entry_openSecondEntry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1155) | 1155 |
+| [BecomingSpecCheck.adapter_specOrbit_eq_lawOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1176) | 1176 |
+| [BecomingSpecCheck.adapter_specRegimeStep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1181) | 1181 |
+| [BecomingSpecCheck.spine_hiddenCouplingCollapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1185) | 1185 |
+| [BecomingSpecCheck.spine_widenHealsBlindness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1204) | 1204 |
+| [BecomingSpecCheck.spine_directed3DNonCollapse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1245) | 1245 |
+| [BecomingSpecCheck.spine_masterSpineEthicsFirewall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1265) | 1265 |
 
 Definitions and types:
 
-- `def` [BecomingSpecCheck.toCountdownComp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L33) (L33)
-- `def` [BecomingSpecCheck.toCountdownContract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L37) (L37)
-- `def` [BecomingSpecCheck.toSlackState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L137) (L137)
-- `def` [BecomingSpecCheck.hasObs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L264) (L264)
-- `def` [BecomingSpecCheck.choiceFin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L295) (L295)
-- `def` [BecomingSpecCheck.toProcess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L325) (L325)
-- `def` [BecomingSpecCheck.toOplaxSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L470) (L470)
-- `def` [BecomingSpecCheck.toOplaxFunctor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L476) (L476)
-- `def` [BecomingSpecCheck.pbToOplax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L483) (L483)
-- `def` [BecomingSpecCheck.pbFromOplax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L487) (L487)
-- `def` [BecomingSpecCheck.toSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L824) (L824)
-- `def` [BecomingSpecCheck.fromSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L829) (L829)
-- `def` [BecomingSpecCheck.toSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L834) (L834)
-- `def` [BecomingSpecCheck.fromSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L835) (L835)
-- `def` [BecomingSpecCheck.toSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L856) (L856)
-- `def` [BecomingSpecCheck.fromSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L862) (L862)
-- `def` [BecomingSpecCheck.toSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L956) (L956)
-- `def` [BecomingSpecCheck.fromSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L962) (L962)
-- `def` [BecomingSpecCheck.toSpecBranchLabel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L968) (L968)
-- `def` [BecomingSpecCheck.fromSpecBranchLabel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L973) (L973)
-- `def` [BecomingSpecCheck.fromSpecPostReq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L978) (L978)
-- `def` [BecomingSpecCheck.toSpecPostReq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L982) (L982)
-- `def` [BecomingSpecCheck.toSpecEdges](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L999) (L999)
-- `def` [BecomingSpecCheck.encounterEntryInterface](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1115) (L1115)
+- `def` [BecomingSpecCheck.toCountdownComp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L36) (L36)
+- `def` [BecomingSpecCheck.toCountdownContract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L40) (L40)
+- `def` [BecomingSpecCheck.toSlackState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L140) (L140)
+- `def` [BecomingSpecCheck.hasObs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L267) (L267)
+- `def` [BecomingSpecCheck.choiceFin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L298) (L298)
+- `def` [BecomingSpecCheck.toProcess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L328) (L328)
+- `def` [BecomingSpecCheck.toOplaxSpan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L473) (L473)
+- `def` [BecomingSpecCheck.toOplaxFunctor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L479) (L479)
+- `def` [BecomingSpecCheck.pbToOplax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L486) (L486)
+- `def` [BecomingSpecCheck.pbFromOplax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L490) (L490)
+- `def` [BecomingSpecCheck.toSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L827) (L827)
+- `def` [BecomingSpecCheck.fromSpecSlotProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L832) (L832)
+- `def` [BecomingSpecCheck.toSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L837) (L837)
+- `def` [BecomingSpecCheck.fromSpecPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L838) (L838)
+- `def` [BecomingSpecCheck.toSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L859) (L859)
+- `def` [BecomingSpecCheck.fromSpecTree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L865) (L865)
+- `def` [BecomingSpecCheck.toSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L959) (L959)
+- `def` [BecomingSpecCheck.fromSpecBranchState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L965) (L965)
+- `def` [BecomingSpecCheck.toSpecBranchLabel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L971) (L971)
+- `def` [BecomingSpecCheck.fromSpecBranchLabel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L976) (L976)
+- `def` [BecomingSpecCheck.fromSpecPostReq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L981) (L981)
+- `def` [BecomingSpecCheck.toSpecPostReq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L985) (L985)
+- `def` [BecomingSpecCheck.toSpecEdges](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1002) (L1002)
+- `def` [BecomingSpecCheck.encounterEntryInterface](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/Solution.lean#L1118) (L1118)
 
 </details>
 
@@ -1226,6 +1236,31 @@ Definitions and types:
 - `def` [BecomingSpec.Extensions.bcMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/OplaxTargets.lean#L55) (L55)
 - `def` [BecomingSpec.Extensions.allFibersTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/OplaxTargets.lean#L60) (L60)
 - `def` [BecomingSpec.Extensions.missingLiftTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/OplaxTargets.lean#L65) (L65)
+
+</details>
+
+<a id="module-d1342d6821e6"></a>
+
+<details>
+<summary>SpineTargets.lean — 7 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) · No direct module-documentation link found
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean`
+
+Imports: `Init`
+
+No explicit theorem/lemma scanned; this may be an import, audit or definition module.
+
+Definitions and types:
+
+- `def` [BecomingSpec.Extensions.specOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L19) (L19)
+- `def` [BecomingSpec.Extensions.specRegimeStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L23) (L23)
+- `def` [BecomingSpec.Extensions.wideningRenewal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L26) (L26)
+- `def` [BecomingSpec.Extensions.hiddenCouplingCollapseTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L29) (L29)
+- `def` [BecomingSpec.Extensions.widenHealsBlindnessTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L36) (L36)
+- `def` [BecomingSpec.Extensions.directed3DNonCollapseTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L45) (L45)
+- `def` [BecomingSpec.Extensions.masterSpineEthicsFirewallTarget](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec/BecomingSpec/Extensions/SpineTargets.lean#L52) (L52)
 
 </details>
 
@@ -1463,6 +1498,75 @@ Definitions and types:
 - `def` [DualityBridges.krylovSub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L426) (L426)
 - `abbrev` [DualityBridges.ShortWord](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L547) (L547)
 - `def` [DualityBridges.shortWordQuery](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityBridges.lean#L551) (L551)
+
+</details>
+
+<a id="module-6972f0e89d4e"></a>
+
+<details>
+<summary>DualityLifting.lean — 29 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean`
+
+Imports: `Mathlib.Analysis.LocallyConvex.Separation`, `Mathlib.Analysis.Convex.StdSimplex`, `Mathlib.Analysis.Normed.Module.FiniteDimension`, `Mathlib.Tactic`, `ConsequenceDuality`, `DualityBridges`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [DualityLifting.sum_stepOp_eq_pushKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L64) | 64 |
+| [DualityLifting.stepOp_const](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L81) | 81 |
+| [DualityLifting.iterStepOp_const](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L86) | 86 |
+| [DualityLifting.stepOp_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L92) | 92 |
+| [DualityLifting.stepOp_smul_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L97) | 97 |
+| [DualityLifting.stepOp_finset_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L103) | 103 |
+| [DualityLifting.iterStepOp_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L110) | 110 |
+| [DualityLifting.iterStepOp_finset_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L117) | 117 |
+| [DualityLifting.iterStepOp_smul_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L125) | 125 |
+| [DualityLifting.iterStepOp_linear_residual](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L131) | 131 |
+| [DualityLifting.osc_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L143) | 143 |
+| [DualityLifting.abs_sub_mid_le_half_osc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L152) | 152 |
+| [DualityLifting.half_osc_le_sup_abs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L162) | 162 |
+| [DualityLifting.osc_stepOp_le_dobrushin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L176) | 176 |
+| [DualityLifting.osc_iterStepOp_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L225) | 225 |
+| [DualityLifting.dobrushin_dualBound_lift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L237) | 237 |
+| [DualityLifting.dobrushin_horizon_primalGap_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L270) | 270 |
+| [DualityLifting.tensor_dualBound_subadditive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L306) | 306 |
+| [DualityLifting.coupled_relational_gap_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L350) | 350 |
+| [DualityLifting.empirical_estimate_error_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L593) | 593 |
+| [DualityLifting.empirical_threshold_safety_certificate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L688) | 688 |
+
+Definitions and types:
+
+- `structure` [DualityLifting.MarkovKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L29) (L29)
+- `def` [DualityLifting.kernelMatrix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L33) (L33)
+- `def` [DualityLifting.pushKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L37) (L37)
+- `def` [DualityLifting.iterStepOp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L51) (L51)
+- `def` [DualityLifting.osc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L57) (L57)
+- `def` [DualityLifting.mid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L61) (L61)
+- `def` [DualityLifting.prodQueryFamily](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L296) (L296)
+- `def` [DualityLifting.prodSumConsequence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/DualityLifting.lean#L302) (L302)
+
+</details>
+
+<a id="module-76c18810e63a"></a>
+
+<details>
+<summary>TrackBKrylovBridge.lean — 5 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean`
+
+Imports: `DualityBridges`, `SurvivalDistinguishability`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [TrackBKrylovBridge.stepOp_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean#L21) | 21 |
+| [TrackBKrylovBridge.survVec_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean#L25) | 25 |
+| [TrackBKrylovBridge.trackB_finite_krylov_zero_minimax_radius](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean#L38) | 38 |
+| [TrackBKrylovBridge.short_word_agreement_lifts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean#L59) | 59 |
+| [TrackBKrylovBridge.countdown_zero_minimax_radius](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/TrackBKrylovBridge.lean#L71) | 71 |
 
 </details>
 

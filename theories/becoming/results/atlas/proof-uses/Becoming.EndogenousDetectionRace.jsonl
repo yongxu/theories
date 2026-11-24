@@ -1,0 +1,69 @@
+{"name": "Becoming.EndogenousDetectionRace.cadence3_mod", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd", "uses": ["Becoming.EndogenousDetectionRace.cadence3_mod", "Becoming.Naturals.lt_of_add_lt_add_left", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant", "uses": ["Becoming.ClosedCapture.join_alike"]}
+{"name": "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss", "uses": ["Becoming.ClosedCapture.Drawn.pool_reads", "Becoming.ClosedCapture.Drawn.through_locks", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.join_course", "Becoming.ClosedCapture.lock_outlives_loss", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.Pace.paced_shift", "Becoming.RuleCapture.CarrierCounts.raises", "Becoming.RuleCapture.CarrierCounts.upper"]}
+{"name": "Becoming.EndogenousDetectionRace.count_view_invariant", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before", "uses": ["Becoming.EndogenousDetectionRace.gated_eq_closed", "Becoming.EndogenousDetectionRace.race_stock_is_gated"]}
+{"name": "Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01", "uses": ["Becoming.EndogenousDetectionRace.exchange_detects", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe", "uses": ["Becoming.EndogenousDetectionRace.exchange_detects"]}
+{"name": "Becoming.EndogenousDetectionRace.exchange_detects", "uses": ["Becoming.EndogenousDetectionRace.mask_involutive"]}
+{"name": "Becoming.EndogenousDetectionRace.feedList_prefix", "uses": ["Becoming.EndogenousDetectionRace.feedList_snoc", "Becoming.EndogenousDetectionRace.streamPrefix_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.feedList_snoc", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.feed_lockstep", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.feed_pairLoop", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.gate_extract", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.gate_of_admitted", "uses": ["Becoming.EndogenousDetectionRace.gate_extract"]}
+{"name": "Becoming.EndogenousDetectionRace.gatedStep_eq_closed", "uses": ["Becoming.EndogenousDetectionRace.gate_of_admitted"]}
+{"name": "Becoming.EndogenousDetectionRace.gated_eq_closed", "uses": ["Becoming.EndogenousDetectionRace.gatedStep_eq_closed"]}
+{"name": "Becoming.EndogenousDetectionRace.hi_lo_hc", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.hi_lo_ho", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.hi_strict", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant", "uses": ["Becoming.EndogenousDetectionRace.lockout_pure_extract"]}
+{"name": "Becoming.EndogenousDetectionRace.lockout_pure_extract", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.markCourse_feedStep_eq", "uses": ["Becoming.EndogenousDetectionRace.mark_beyond_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.markRead_eq_lossPool", "uses": ["Becoming.ClosedCapture.Thinned.lossPool_past", "Becoming.CoreHelpers.natBlt_true_iff"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_beyond_succ", "uses": ["Becoming.EndogenousDetectionRace.turn_fst", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_eq_thinned", "uses": ["Becoming.EndogenousDetectionRace.markRead_eq_lossPool", "Becoming.EndogenousDetectionRace.turn_fst", "Becoming.EndogenousDetectionRace.turn_sim", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_kept_iff", "uses": ["Becoming.ClosedCapture.Thinned.kept_iff", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.EndogenousDetectionRace.mark_eq_thinned"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_kept_locks_out", "uses": ["Becoming.ClosedCapture.Drawn.mirror_favours_iff", "Becoming.ClosedCapture.Drawn.mirror_le", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.read_late_kept", "Becoming.EndogenousDetectionRace.mark_eq_thinned", "Becoming.EndogenousDetectionRace.not_admits_of_le"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "uses": ["Becoming.EndogenousDetectionRace.turn_sim_plain", "Becoming.Pace.paced_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_reads_beyond", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.mark_turned_admits_iff", "uses": ["Becoming.ClosedCapture.Drawn.mirror_disfavours_iff", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.past_course", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.EndogenousDetectionRace.mark_eq_thinned", "Becoming.EndogenousDetectionRace.region_stays", "Becoming.EndogenousDetectionRace.select_keeps_admitted"]}
+{"name": "Becoming.EndogenousDetectionRace.mark_turned_iff", "uses": ["Becoming.ClosedCapture.Drawn.mirror_disfavours_iff", "Becoming.ClosedCapture.Thinned.lossStep_accrues", "Becoming.ClosedCapture.Thinned.rule_read", "Becoming.ClosedCapture.Thinned.turned_iff", "Becoming.EndogenousDetectionRace.mark_eq_thinned", "Becoming.EndogenousDetectionRace.rule_kept_span", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.mask_assoc", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.mask_cancel_left", "uses": ["Becoming.EndogenousDetectionRace.mask_involutive"]}
+{"name": "Becoming.EndogenousDetectionRace.mask_comm", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.mask_involutive", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.not_admits_of_le", "uses": ["Becoming.RuleCapture.CarrierCounts.other_pos"]}
+{"name": "Becoming.EndogenousDetectionRace.race_exo_no_false_turn", "uses": ["Becoming.ClosedCapture.Drawn.pool_favours", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.region_stays", "Becoming.EndogenousDetectionRace.unreg_of_race", "Becoming.EndogenousDetectionRace.w1Race._proof_1"]}
+{"name": "Becoming.EndogenousDetectionRace.race_fast_cadence", "uses": ["Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.mark_turned_admits_iff", "Becoming.EndogenousDetectionRace.reg4_of_race", "Becoming.EndogenousDetectionRace.w5SlowRace._proof_1", "Becoming.EndogenousEmergence.wEndo_orbit_above_crit"]}
+{"name": "Becoming.EndogenousDetectionRace.race_in_time", "uses": ["Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.mark_turned_admits_iff", "Becoming.EndogenousDetectionRace.reg4_of_race", "Becoming.EndogenousDetectionRace.w1Race._proof_1", "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency", "Becoming.EndogenousEmergence.wEndo_orbit_above_crit"]}
+{"name": "Becoming.EndogenousDetectionRace.race_late_after_registration", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.lockout_pure_extract", "Becoming.EndogenousDetectionRace.mark_kept_iff", "Becoming.EndogenousDetectionRace.mark_kept_locks_out", "Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.reg4_of_race", "Becoming.EndogenousDetectionRace.w2Race._proof_1", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.race_masked_strain", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.lockout_pure_extract", "Becoming.EndogenousDetectionRace.mark_kept_iff", "Becoming.EndogenousDetectionRace.mark_kept_locks_out", "Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.registers_from_of_resolved", "Becoming.EndogenousDetectionRace.w1Race._proof_1", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.race_probe_blocked", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousDetectionRace.closed_trap_outlives_loss", "Becoming.EndogenousDetectionRace.lockout_pure_extract", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.not_admits_of_le", "Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.unreg_of_race", "Becoming.EndogenousDetectionRace.w3Race._proof_1", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.race_reads_beyond", "uses": ["Becoming.EndogenousDetectionRace.mark_reads_beyond"]}
+{"name": "Becoming.EndogenousDetectionRace.race_slow_cadence", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.lockout_pure_extract", "Becoming.EndogenousDetectionRace.mark_kept_iff", "Becoming.EndogenousDetectionRace.mark_kept_locks_out", "Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.reg4_of_race", "Becoming.EndogenousDetectionRace.w5SlowRace._proof_1", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.race_stock_is_gated", "uses": ["Becoming.EndogenousDetectionRace.mark_beyond_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.reg4_of_race", "uses": ["Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.registers_from_of_resolved"]}
+{"name": "Becoming.EndogenousDetectionRace.region_stays", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.registers_from_of_resolved", "uses": ["Becoming.EndogenousDetectionRace.registers_stays", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.registers_stays", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.resolved_unregistered_stays", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.retag_symmetry", "uses": ["Becoming.EndogenousDetectionRace.mask_assoc", "Becoming.EndogenousDetectionRace.mask_comm", "Becoming.EndogenousDetectionRace.mask_involutive"]}
+{"name": "Becoming.EndogenousDetectionRace.rule_kept_span", "uses": ["Becoming.Pace.paced_succ"]}
+{"name": "Becoming.EndogenousDetectionRace.select_keeps_admitted", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.silencing_consensus", "uses": ["Becoming.EndogenousDetectionRace.feed_lockstep", "Becoming.EndogenousDetectionRace.retag_symmetry"]}
+{"name": "Becoming.EndogenousDetectionRace.split_exchange_turns", "uses": ["Becoming.ClosedCapture.Drawn.pool_favours", "Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01", "Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe", "Becoming.EndogenousDetectionRace.hi_lo_hc", "Becoming.EndogenousDetectionRace.hi_lo_ho", "Becoming.EndogenousDetectionRace.hi_strict", "Becoming.EndogenousDetectionRace.markCourse_feedStep_eq", "Becoming.EndogenousDetectionRace.mark_eq_thinned", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.mark_turned_admits_iff", "Becoming.EndogenousDetectionRace.region_stays"]}
+{"name": "Becoming.EndogenousDetectionRace.split_marginal_count_eq", "uses": ["Becoming.EndogenousDetectionRace.count_view_invariant"]}
+{"name": "Becoming.EndogenousDetectionRace.split_marginal_impossibility", "uses": ["Becoming.EndogenousDetectionRace.feed_lockstep", "Becoming.EndogenousDetectionRace.retag_symmetry"]}
+{"name": "Becoming.EndogenousDetectionRace.split_silenced_trapped", "uses": ["Becoming.EndogenousDetectionRace.closed_trap_outlives_loss", "Becoming.EndogenousDetectionRace.feed_pairLoop", "Becoming.EndogenousDetectionRace.markCourse_feedStep_eq", "Becoming.EndogenousDetectionRace.mark_never_eq_pre", "Becoming.EndogenousDetectionRace.silencing_consensus"]}
+{"name": "Becoming.EndogenousDetectionRace.split_two_of_two", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.split_witness_endo", "uses": ["Becoming.EndogenousDetectionRace.split_exchange_turns", "Becoming.EndogenousDetectionRace.split_marginal_count_eq", "Becoming.EndogenousDetectionRace.split_silenced_trapped"]}
+{"name": "Becoming.EndogenousDetectionRace.streamPrefix_succ", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.turn_fst", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.turn_sim", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.turn_sim_plain", "uses": []}
+{"name": "Becoming.EndogenousDetectionRace.unreg_of_race", "uses": ["Becoming.EndogenousDetectionRace.race_stock_is_gated", "Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved"]}
+{"name": "Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved", "uses": ["Becoming.EndogenousDetectionRace.resolved_unregistered_stays", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousDetectionRace.verdict_leak", "uses": ["Becoming.EndogenousDetectionRace.mask_involutive"]}
+{"name": "Becoming.EndogenousDetectionRace.viewBList_prefix", "uses": []}

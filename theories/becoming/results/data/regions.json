@@ -2970,6 +2970,21 @@
       "region": "knowing",
       "base": "periphery",
       "note": "SurvivalDistinguishability (Track B2, Mathlib periphery #14): Krylov card - 1 real-matrix distinguishability, countdown sharpness, mode-switch counterexample, and C2 witness"
+    },
+    "endogenous-detection-before-capture-lock": {
+      "region": "knowing",
+      "base": "general",
+      "note": "Becoming.EndogenousDetectionRace + EndogenousEmergence (Frontier 1): pre-capture turning window under any cadence and split-evidence exchange vs closed silencing"
+    },
+    "open-ended-epoch-handoff": {
+      "region": "capacity",
+      "base": "general",
+      "note": "Becoming.OpenEndedComposition (Frontier 2): EpochHandoffGate with contravariant AnchorStep, exact Rule 9 reductions, Horn 1a/1b/2, and evolve-vs-compose separation"
+    },
+    "quantitative-transfer-of-four-guard-failure-regimes": {
+      "region": "map",
+      "base": "periphery",
+      "note": "QuantitativeTransfer (Frontier 3, Mathlib periphery #15): Rank-1 pool ceiling vs anchor, aliasing floor, lag wall, and trust-region contraction paired with B5"
     }
   },
   "modules": {
@@ -5197,6 +5212,26 @@
       "region": "knowing",
       "base": "periphery",
       "note": "Mathlib v4.30.0-rc2 periphery #14: Krylov (card - 1) survival distinguishability bound, countdown sharpness, mode-switch counterexample, and C2CoupledAlignmentWitness separation"
+    },
+    "Becoming.EndogenousEmergence": {
+      "region": "knowing",
+      "base": "general",
+      "note": "L2 (Frontier 1): 0-axiom Obs-only Moore emergence sufficiency vs universal P1-P3 necessity, downstream firewall, and MasterSpine GuardedProof bridge"
+    },
+    "Becoming.EndogenousDetectionRace": {
+      "region": "knowing",
+      "base": "general",
+      "note": "L2 (Frontier 1): 0-axiom EndogenousEmergence-ClosedCapture-PacedStock pre-capture window dichotomy and 2^T tag-invariant split-evidence exchange"
+    },
+    "Becoming.OpenEndedComposition": {
+      "region": "capacity",
+      "base": "general",
+      "note": "L2 (Frontier 2): 0-axiom TransformsAcrossEpochs, Horn 1a/1b/2 bounds, Dual-Variance AnchorStep EpochHandoffGate, Poly reductions, and evolve-vs-compose separation"
+    },
+    "QuantitativeTransfer": {
+      "region": "map",
+      "base": "periphery",
+      "note": "Mathlib v4.30.0-rc2 periphery #15: Rank-1 correlated pool ceiling, aliased readout/mixture floors, continuous lag horizon, and trust-region MetricLaxSim contraction"
     }
   }
 }

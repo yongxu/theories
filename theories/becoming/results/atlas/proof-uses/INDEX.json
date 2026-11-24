@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "401bb5be0003a214b5f7b5c952f68abb477df976",
-  "core_run": "20261124T131113.069112Z"
+  "commit": "3fad621b23752e9ef570541a9aef42c5c31538db",
+  "core_run": "20261124T162330.082121Z"
  },
- "core_sources_sha256": "93fe4567732b78705a5252741b6cc6181865fe093e60a761c2193be107deaa03",
+ "core_sources_sha256": "e2aface5196c50dfd96f5cdcc262858f86e30502fdc611ccf3359c1d9df4ccaa",
  "modules": {
   "Becoming": {
-   "source_sha256": "4088465f6bef4312fb7243edf9851e6e7759c721d4f3f2d7833d30629518c1a5",
+   "source_sha256": "0fd0437ff12bb68a32cde7fc1afb6280398319f15ab0f92e35fb704cde240fe0",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -396,6 +396,14 @@
   "Becoming.EdgeClosure": {
    "source_sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
    "theorems": 4
+  },
+  "Becoming.EndogenousDetectionRace": {
+   "source_sha256": "4238424eff5691981c6b4316434e141d155c6a692dbd4569a7d893ca71fe9ed8",
+   "theorems": 69
+  },
+  "Becoming.EndogenousEmergence": {
+   "source_sha256": "88ba811aec4a20dc7da4a14861a907a87956cced206982cfcb67d8464b0b9ae8",
+   "theorems": 46
   },
   "Becoming.EndogenousOrder": {
    "source_sha256": "8e03226f29101afce5ca456ee2786aa31d1fb558399d2ef3d69c2e003b94cb34",
@@ -996,6 +1004,10 @@
   "Becoming.OpenComposition": {
    "source_sha256": "caaf7a55cbea778ef58cc2275d3143d043ab3852bdf68393177f38390f5b2899",
    "theorems": 86
+  },
+  "Becoming.OpenEndedComposition": {
+   "source_sha256": "b1849cba3d788e118a4304dca56d011485e5acb8ddf72773d9695271c63e24dd",
+   "theorems": 111
   },
   "Becoming.OpenedCorrection": {
    "source_sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d",
@@ -1751,8 +1763,8 @@
   }
  },
  "counts": {
-  "modules": 435,
-  "theorems": 22628,
-  "uses_without_row": 51
+  "modules": 438,
+  "theorems": 22854,
+  "uses_without_row": 55
  }
 }

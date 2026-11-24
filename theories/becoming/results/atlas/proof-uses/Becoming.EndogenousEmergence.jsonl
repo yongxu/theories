@@ -1,0 +1,46 @@
+{"name": "Becoming.EndogenousEmergence.EmergentOrderSystem.convergedOwn", "uses": []}
+{"name": "Becoming.EndogenousEmergence.EmergentOrderSystem.greedyEverywhere", "uses": []}
+{"name": "Becoming.EndogenousEmergence.EmergentOrderSystem.initPrefersExtract", "uses": []}
+{"name": "Becoming.EndogenousEmergence.EmergentOrderSystem.viableKernel", "uses": []}
+{"name": "Becoming.EndogenousEmergence.cFull_widensBy_cSafe", "uses": []}
+{"name": "Becoming.EndogenousEmergence.cSafe_widensBy_cExt", "uses": []}
+{"name": "Becoming.EndogenousEmergence.chiChainProof_commutes_chiConstFlat", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.SpanFunctor.map_comp", "Becoming.OplaxHistory.SpanFunctor.map_congr", "Becoming.OplaxHistory.SpanFunctor.map_id"]}
+{"name": "Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_of_plateau", "uses": ["Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_upto", "Becoming.EndogenousEmergence.silent_cliff_universal_lockstep"]}
+{"name": "Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_upto", "uses": ["Becoming.EndogenousEmergence.silent_cliff_universal_lockstep"]}
+{"name": "Becoming.EndogenousEmergence.closedOrbit_succ_fst", "uses": []}
+{"name": "Becoming.EndogenousEmergence.closedOrbit_succ_snd", "uses": []}
+{"name": "Becoming.EndogenousEmergence.downstream_zero_and_unowned_forever", "uses": ["Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater", "Becoming.EndogenousOrder.uncoupled_zero_weight_forever"]}
+{"name": "Becoming.EndogenousEmergence.emergentLoop_separates_exo", "uses": ["Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater", "Becoming.EndogenousEmergence.increasingInOwn_exo_init", "Becoming.total_congr"]}
+{"name": "Becoming.EndogenousEmergence.emergent_act_governed_by_orderUpdater", "uses": ["Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater", "Becoming.EndogenousEmergence.selectByOrder_safe_iff", "Becoming.total_congr"]}
+{"name": "Becoming.EndogenousEmergence.emergent_grammar_lumping_and_fiber_split", "uses": ["Becoming.EndogenousEmergence.reach_eq_orbit", "Becoming.EndogenousEmergence.wEndo_orbit_above_crit", "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness", "Becoming.OplaxHistory.span_step_grammar_lumping"]}
+{"name": "Becoming.EndogenousEmergence.emergent_order_firewall", "uses": ["Becoming.EndogenousEmergence.cFull_widensBy_cSafe", "Becoming.EndogenousEmergence.downstream_zero_and_unowned_forever", "Becoming.EndogenousOrder.uncoupled_blindness_firewall", "Becoming.ScopeDynamics.scopeLaw_admits_rival", "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted"]}
+{"name": "Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater", "uses": []}
+{"name": "Becoming.EndogenousEmergence.endoResolved_ownHat_eq", "uses": []}
+{"name": "Becoming.EndogenousEmergence.endoResolved_pos_eq", "uses": []}
+{"name": "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency", "uses": ["Becoming.EndogenousEmergence.cSafe_widensBy_cExt", "Becoming.EndogenousEmergence.emergent_act_governed_by_orderUpdater", "Becoming.EndogenousEmergence.emergent_pos_eq_orderUpdater", "Becoming.EndogenousEmergence.reach_eq_orbit", "Becoming.EndogenousEmergence.wEndo_orbit_above_crit", "Becoming.EndogenousEmergence.wEndo_orbit_stabilizes", "Becoming.EndogenousOrder.ranksNet_increasingInOwn_of_bounds", "Becoming.Weighting.widensOn_of_widensBy", "Becoming.le_dest"]}
+{"name": "Becoming.EndogenousEmergence.increasingInOwn_exo_init", "uses": []}
+{"name": "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.EndogenousEmergence.emergentLoop_separates_exo", "Becoming.EndogenousEmergence.emergent_grammar_lumping_and_fiber_split", "Becoming.EndogenousEmergence.emergent_order_firewall", "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency", "Becoming.EndogenousEmergence.one_probe_universal_insufficiency", "Becoming.EndogenousEmergence.silent_cliff_universal_collapse", "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse", "Becoming.EndogenousEmergence.wholeArchitecture_oplax_guarded_bridge", "Becoming.EndogenousEmergence.witnessArchitecture_sensory_fiber_split", "Becoming.ListTests.false_iff_not", "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted"]}
+{"name": "Becoming.EndogenousEmergence.minNat_eq_right_of_ge", "uses": []}
+{"name": "Becoming.EndogenousEmergence.one_probe_universal_insufficiency", "uses": ["Becoming.EndogenousEmergence.unguided_obs_lockstep", "Becoming.EndogenousEmergence.zero_probe_endo_exo_indistinguishable"]}
+{"name": "Becoming.EndogenousEmergence.parSeqChain_left_inv", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.EndogenousEmergence.posChain_flatSpan_left_inv", "uses": ["Becoming.OplaxHistory.PullbackElem.ext"]}
+{"name": "Becoming.EndogenousEmergence.posChain_flatSpan_right_inv", "uses": ["Becoming.OplaxHistory.PullbackElem.ext", "Becoming.OplaxHistory.PullbackElem.mid"]}
+{"name": "Becoming.EndogenousEmergence.reach_closedOrbit", "uses": ["Becoming.EndogenousEmergence.trace_of_orbit_steps"]}
+{"name": "Becoming.EndogenousEmergence.reach_eq_orbit", "uses": ["Generative.trace_cons_iff", "Generative.trace_nil_iff"]}
+{"name": "Becoming.EndogenousEmergence.selectByOrder_endoPost", "uses": []}
+{"name": "Becoming.EndogenousEmergence.selectByOrder_initPos", "uses": []}
+{"name": "Becoming.EndogenousEmergence.selectByOrder_safe_iff", "uses": ["Becoming.CoreHelpers.natBlt_true_iff"]}
+{"name": "Becoming.EndogenousEmergence.separation_requires_safe_perturbation", "uses": ["Becoming.EndogenousEmergence.zero_probe_endo_exo_indistinguishable"]}
+{"name": "Becoming.EndogenousEmergence.silent_cliff_universal_collapse", "uses": ["Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_of_plateau", "Becoming.EndogenousEmergence.reach_closedOrbit"]}
+{"name": "Becoming.EndogenousEmergence.silent_cliff_universal_lockstep", "uses": []}
+{"name": "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse", "uses": ["Becoming.EndogenousEmergence.closedOrbit_eq_pureExtract_of_plateau", "Becoming.EndogenousEmergence.minNat_eq_right_of_ge", "Becoming.EndogenousEmergence.reach_closedOrbit"]}
+{"name": "Becoming.EndogenousEmergence.trace_of_orbit_steps", "uses": []}
+{"name": "Becoming.EndogenousEmergence.unguided_obs_lockstep", "uses": []}
+{"name": "Becoming.EndogenousEmergence.wEndo_orbit_above_crit", "uses": ["Becoming.EndogenousEmergence.wEndo_orbit_stabilizes"]}
+{"name": "Becoming.EndogenousEmergence.wEndo_orbit_stabilizes", "uses": ["Becoming.EndogenousEmergence.endoResolved_ownHat_eq", "Becoming.EndogenousEmergence.endoResolved_pos_eq", "Becoming.total_congr"]}
+{"name": "Becoming.EndogenousEmergence.wEndo_safe_preserves_stock", "uses": ["Becoming.CoreHelpers.natBlt_true_iff", "Becoming.ListTests.false_iff_not", "Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.EndogenousEmergence.wEndo_wExo_agree_on_extract", "uses": []}
+{"name": "Becoming.EndogenousEmergence.wholeArchitecture_oplax_guarded_bridge", "uses": ["Becoming.EndogenousEmergence.chiChainProof_commutes_chiConstFlat", "Becoming.MasterSpine.WholeArchitecture.rOp_kernel", "Becoming.MasterSpine.whole_architecture_viable_and_coupled", "Becoming.OplaxHistory.exactAbsChainMap_endpoints", "Becoming.OplaxHistory.isBijective_of_bij", "Becoming.OplaxHistory.span_step_grammar_lumping", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.EndogenousEmergence.witnessArchitecture_sensory_fiber_split", "uses": ["Becoming.MasterSpine.WholeArchitecture.invAll", "Becoming.MasterSpine.WholeArchitecture.phaseInv", "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta", "Becoming.MasterSpine.WholeArchitecture.rOp_kernel", "Becoming.MasterSpine.postProbeRun_opInvariants", "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness"]}
+{"name": "Becoming.EndogenousEmergence.worlds_strictly_greedy_everywhere", "uses": []}
+{"name": "Becoming.EndogenousEmergence.zero_probe_endo_exo_indistinguishable", "uses": []}

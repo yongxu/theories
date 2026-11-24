@@ -1,0 +1,208 @@
+{
+  "schema_version": 2,
+  "id": "open-ended-epoch-handoff",
+  "title": {
+    "en": "Epoch handoff: what may change across epochs, what must not"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "statement": {
+    "en": "Upgrades passing an EpochHandoffGate (anchored, target certified and total, live headroom) keep the original floor and current guard over every run; one epoch gives anchored_selfMod_viable exactly; dropping only the anchor lets a floor-lowering run drain to 0 inside its own kernel."
+  },
+  "hypotheses": [
+    {
+      "en": "No axiom. RegimeMargin.Coupled.Indexed.Rises for G; EpochCert of the starting epoch; starting state in its K; lag margin x_crit + eta * (sitePreCap + envCap) <= x0 on in-scope sites. Non-deadlock: EpochTotal of the starting epoch and the starting state in K."
+    }
+  ],
+  "laws": [
+    {
+      "en": "Capabilities across epochs, exact reduction, Horn 1a, Horn 2.",
+      "declarations": [
+        "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
+        "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+        "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
+        "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
+        "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
+        "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects"
+      ]
+    },
+    {
+      "en": "Handoff gate, epoch-chain viability, anchor preservation, non-deadlock.",
+      "declarations": [
+        "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
+        "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
+        "Becoming.OpenEndedComposition.EpochHandoffGate",
+        "Becoming.OpenEndedComposition.epochInv_certificate",
+        "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+        "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
+        "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
+        "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry"
+      ]
+    },
+    {
+      "en": "Exact single-epoch reductions and separations from static envelopes.",
+      "declarations": [
+        "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
+        "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+        "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+        "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
+        "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
+        "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down"
+      ]
+    },
+    {
+      "en": "Scope entry and floor rewriting.",
+      "declarations": [
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
+        "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+        "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering"
+      ]
+    },
+    {
+      "en": "Evolve versus compose on one composed substrate.",
+      "declarations": [
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11"
+      ]
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual system meets EpochCert, AnchorStep or the gate (recognition, Rule 2).",
+      "kind": "scope"
+    },
+    {
+      "en": "Substrate draw during a real switchover; a substrate law or environment draw that changes across epochs.",
+      "kind": "scope"
+    },
+    {
+      "en": "Which unmodelled sites should enter scope, or when.",
+      "kind": "scope"
+    },
+    {
+      "en": "The composed gate of Part 5 as the gate of a joint epoch family.",
+      "kind": "scope"
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; verified inside the 0-axiom Init-only core closure with Lean 4.29.1 (becoming-checks/20261124T162330.082121Z): 90 theorems, 178 declarations, 0 nonempty axioms, 0 warnings. Adversarial review by swarm worker f2-critic (PASS)."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): what is evolvable (modes, sensors, capabilities, envelopes) and what is anchored (substrate law, floors in scope, environment bounds) must be separated, and the anchored side may only tighten; moving a floor to the evolvable side is the wireheading route, and freezing capabilities on the anchored side is lock-in."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
+  "dependencies": [
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses OpenComposition's step lemmas and recovers substrate_margin_step as the unscoped case."
+      }
+    },
+    {
+      "id": "transformative-viability-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "TransformsViably is the one-epoch case of TransformsAcrossEpochs (constantEpoch_iff_transformsViably)."
+      }
+    },
+    {
+      "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "polyClosedStep, PolyContract, compose; anchored_selfMod_viable and monotone_selfWidening_viable recovered as single-epoch cases."
+      }
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: drafted (Frontier 2). AI-written."
+    }
+  ],
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T16:25:00+00:00",
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
+      "role": "proof",
+      "sha256": "b1849cba3d788e118a4304dca56d011485e5acb8ddf72773d9695271c63e24dd",
+      "declarations": [
+        "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
+        "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+        "Becoming.OpenEndedComposition.EpochHandoffGate",
+        "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects",
+        "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
+        "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11",
+        "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
+        "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+        "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
+        "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering",
+        "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+        "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
+        "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down",
+        "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
+        "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+        "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
+        "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
+        "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+        "Becoming.OpenEndedComposition.epochInv_certificate",
+        "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry",
+        "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
+        "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
+        "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+        "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
+        "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T162330.082121Z/verification.json",
+      "role": "receipt",
+      "sha256": "07b237414f78c3eaaa33905e3a6eacf5adcf96b0f3c68887e478ecc9bde3355d",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier2-open-ended-composition-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "441297e1fc0f8ca74a0d1a4ad65d3cbde0383b236233b669e30e0a64f78a4bf6"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenEndedComposition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T162330.082121Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OpenEndedComposition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "aliases": [],
+  "related": [],
+  "counterexamples": [],
+  "next_delta": {
+    "en": "Human read by Ren; restate Part 5 composed gate as the gate of a joint epoch family."
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "id": "quantitative-transfer-of-four-guard-failure-regimes",
+  "title": {
+    "en": "Limits and remedies for four guarded-runtime failure regimes over the reals"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "statement": {
+    "en": "Rank-1 drift caps pool disagreement at 1 - gamma while an uncoupled anchor detects it; aliased probes separate fibers iff 2*eps < (1 - alpha) * gap; drawdown crosses x_crit past lag (x0 - x_crit)/H1; projected steps stay in a contraction tube while unprojected steps exit."
+  },
+  "laws": [
+    {
+      "en": "Scores γ c + (1 - γ) u_i with residuals in [0, 1]: disagreement ≤ 1 - γ for every M, attained for M ≥ 2; pool-mean error ≥ γ|c - t| - (1 - γ) for every M, equal to γ|c - t| at truthful residuals; anchor veto fires when τ + (1 - γ) + εₐ < γ|c - t| while internal veto with τ ≥ 1 - γ never fires.",
+      "declarations": [
+        "QuantitativeTransfer.pool_disagreement_ceiling",
+        "QuantitativeTransfer.pool_shared_bias_floor",
+        "QuantitativeTransfer.pool_ceiling_attained",
+        "QuantitativeTransfer.anchor_detects_shared_drift",
+        "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+        "QuantitativeTransfer.correlated_pool_lab_witness"
+      ]
+    },
+    {
+      "en": "Aliased readings (1 - α) p + α m∘f under bounded noise ε separate two same-fiber states iff 2ε < (1 - α)|p u₁ - p u₂|; inside, every predictor of a viability split errs by ≥ 1/2 (fiber_split_readout_floor on admissible pairs); finite mixture laws give test error sum ≥ 1 - (1 - α) tvDist ≥ α, attained.",
+      "declarations": [
+        "QuantitativeTransfer.aliased_fiber_gap",
+        "QuantitativeTransfer.aliased_separable_iff",
+        "QuantitativeTransfer.aliased_readout_floor",
+        "QuantitativeTransfer.aliased_lab_witness",
+        "QuantitativeTransfer.two_point_test_floor",
+        "QuantitativeTransfer.mixture_aliasing_test_floor",
+        "QuantitativeTransfer.mixture_floor_attained"
+      ]
+    },
+    {
+      "en": "Continuous drawdown at rate ≥ H₁ on [0, L] with (x₀ - x_crit)/H₁ < L reaches x_crit before L, exact on the linear trajectory; the leakage switching lag is strictly increasing in ρ and nonpositive at ρ = 0.",
+      "declarations": [
+        "QuantitativeTransfer.lag_horizon_wall",
+        "QuantitativeTransfer.lag_wall_iff_linear",
+        "QuantitativeTransfer.switching_score_persists",
+        "QuantitativeTransfer.switchLag_strictMono_rho",
+        "QuantitativeTransfer.switchLag_nonpos_tabular",
+        "QuantitativeTransfer.leakage_lag_wall",
+        "QuantitativeTransfer.b1_headroom_witness"
+      ]
+    },
+    {
+      "en": "Trust-region steps after an α-Lipschitz guard form a MetricLaxSim (α, 1, Δ, 0), giving the tube α^n d₀ + Δ(1 - α^n)/(1 - α) (attained on ℝ) and a Viability.Kernel for bands B ≥ max d₀ (Δ/(1 - α)); unprojected steps leave every band in one step.",
+      "declarations": [
+        "QuantitativeTransfer.trustRegionMetricLaxSim",
+        "QuantitativeTransfer.trust_region_tube",
+        "QuantitativeTransfer.trust_region_tube_attained",
+        "QuantitativeTransfer.trust_region_viability",
+        "QuantitativeTransfer.unprojected_step_overshoots",
+        "QuantitativeTransfer.trust_region_lab_witness"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity; bounded residuals in [0, 1]; bounded observation noise; continuity and a derivative bound on [0, L]; an α-Lipschitz guard map with 0 ≤ α < 1."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "Does not prove a floor for Gaussian additive aliasing; the bounded-noise wall and the finite mixture floor are the statements proved."
+    },
+    {
+      "kind": "correspondence",
+      "en": "Does not show that the stress lab's judges share one drift weight, that its guard is an α-Lipschitz map, or that its drawdown keeps rate H₁ through the lag; in B5 an aliased anchor helped as much as a clear one, so the anchor's information premise was not what mattered there."
+    },
+    {
+      "kind": "non-implication",
+      "en": "A collapse rate does not identify a wall: survival under a throttled guard is not separation.",
+      "witness": "QuantitativeTransfer.aliased_separable_iff"
+    }
+  ],
+  "standard_boundaries": [
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T154706.011836Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept)."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; state the walls as bounds on detector advantage (Youden J), and prove a Gaussian-additive aliasing floor once measure-theoretic laws are admitted to the periphery."
+  },
+  "correspondence": {
+    "en": "Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_long_lag and FAIL_high_lr onto ObservationalFidelity.fiber_split_readout_floor, tvDist, AlignmentReals.MetricLaxSim and metric_laxSim_contraction_tube."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
+  "dependencies": [
+    {
+      "id": "observational-fidelity-and-multi-regime-error",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Imports FinDist, tvDist, diracDist and fiber_split_readout_floor."
+      }
+    },
+    {
+      "id": "continuous-stochastic-alignment-reals",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Instantiates MetricLaxSim; uses advance_blocks, metricSlack_eq, metricSlack_le, metric_laxSim_contraction_tube."
+      }
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T154706.011836Z/verification.json",
+      "sha256_pointer": "/source_sha256/QuantitativeTransfer",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: added as Mathlib periphery #15 (Frontier 3), paired with neural stress-lab B5. AI-written."
+    }
+  ],
+  "reviewed_at_utc": "2026-11-24T16:25:00+00:00",
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
+      "role": "proof",
+      "sha256": "8dc6d2bcbc7b8636e8120c8e26e62a4d5994005c0e395b920a52474c709c02ac",
+      "declarations": [
+        "QuantitativeTransfer.aliased_fiber_gap",
+        "QuantitativeTransfer.aliased_lab_witness",
+        "QuantitativeTransfer.aliased_readout_floor",
+        "QuantitativeTransfer.aliased_separable_iff",
+        "QuantitativeTransfer.anchor_detects_shared_drift",
+        "QuantitativeTransfer.b1_headroom_witness",
+        "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+        "QuantitativeTransfer.correlated_pool_lab_witness",
+        "QuantitativeTransfer.lag_horizon_wall",
+        "QuantitativeTransfer.lag_wall_iff_linear",
+        "QuantitativeTransfer.leakage_lag_wall",
+        "QuantitativeTransfer.mixture_aliasing_test_floor",
+        "QuantitativeTransfer.mixture_floor_attained",
+        "QuantitativeTransfer.pool_ceiling_attained",
+        "QuantitativeTransfer.pool_disagreement_ceiling",
+        "QuantitativeTransfer.pool_shared_bias_floor",
+        "QuantitativeTransfer.switchLag_nonpos_tabular",
+        "QuantitativeTransfer.switchLag_strictMono_rho",
+        "QuantitativeTransfer.switching_score_persists",
+        "QuantitativeTransfer.trustRegionMetricLaxSim",
+        "QuantitativeTransfer.trust_region_lab_witness",
+        "QuantitativeTransfer.trust_region_tube",
+        "QuantitativeTransfer.trust_region_tube_attained",
+        "QuantitativeTransfer.trust_region_viability",
+        "QuantitativeTransfer.two_point_test_floor",
+        "QuantitativeTransfer.unprojected_step_overshoots"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T154706.011836Z/verification.json",
+      "role": "receipt",
+      "sha256": "466c646dc94c0122e08a6310fbb4f022516674a0347ab01b900516abb9ccf862",
+      "declarations": []
+    },
+    {
+      "path": "experiments/neural-alignment-stress-lab/b5_walls.py",
+      "role": "integration",
+      "sha256": "ef4d6c942a84d772f372b000fd72ec676907ec55c9ef01224f1406b80d46d1b0"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier3-quantitative-transfer-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "5d10ed5888891f7b5465a8e57b06f71259be926e20e45fe9744888efa0639c47"
+    }
+  ],
+  "aliases": [],
+  "related": [],
+  "counterexamples": []
+}

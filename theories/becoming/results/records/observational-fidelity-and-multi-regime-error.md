@@ -64,6 +64,8 @@ Formalizes WenHeHua v7 Appendix G / v9 formal/61 observational TV theory in Math
 - **formal-reuse**: [continuous-stochastic-alignment-reals](continuous-stochastic-alignment-reals.md). Instantiates Becoming.AlignmentReals.MetricLaxSim via kernelMetricLaxSim and reuses metricSlack_eq, metricSlack_le, metricSlack_le_max, and metric_laxSim_contraction_tube.
 - **formal-reuse**: [unified-becoming-over-reals](unified-becoming-over-reals.md). Reuses Becoming.Reals.iterVar_eq_metricSlack in three_regime_error_contrast.
 
+**Used by:** [quantitative-transfer-of-four-guard-failure-regimes](quantitative-transfer-of-four-guard-failure-regimes.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

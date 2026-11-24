@@ -2265,6 +2265,18 @@
    "page": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md"
   },
   {
+   "id": "record:endogenous-detection-before-capture-lock",
+   "type": "result",
+   "record": "endogenous-detection-before-capture-lock",
+   "title": "Endogenous detection before capture lock and split evidence",
+   "title_zh": "捕获锁定前之内生检测与分裂证据",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/endogenous-detection-before-capture-lock.md"
+  },
+  {
    "id": "record:endogenous-order-scope-coevolution-and-nash",
    "type": "result",
    "record": "endogenous-order-scope-coevolution-and-nash",
@@ -4101,6 +4113,18 @@
    "page": "theories/becoming/results/records/only-the-order-of-change-shows.md"
   },
   {
+   "id": "record:open-ended-epoch-handoff",
+   "type": "result",
+   "record": "open-ended-epoch-handoff",
+   "title": "Epoch handoff: what may change across epochs, what must not",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "capacity",
+   "base": "general",
+   "page": "theories/becoming/results/records/open-ended-epoch-handoff.md"
+  },
+  {
    "id": "record:open-form-realization-under-revision",
    "type": "result",
    "record": "open-form-realization-under-revision",
@@ -4495,6 +4519,18 @@
    "region": "significance",
    "base": "frame",
    "page": "theories/becoming/results/records/protection-priority-excludes-uniform-aggregation.md"
+  },
+  {
+   "id": "record:quantitative-transfer-of-four-guard-failure-regimes",
+   "type": "result",
+   "record": "quantitative-transfer-of-four-guard-failure-regimes",
+   "title": "Limits and remedies for four guarded-runtime failure regimes over the reals",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md"
   },
   {
    "id": "record:raising-what-couples-in-draws-from-beyond",
@@ -12209,6 +12245,39 @@
    "level": "L1",
    "theorems": 36,
    "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EndogenousEmergence",
+   "type": "module",
+   "name": "Becoming.EndogenousEmergence",
+   "level": "L2",
+   "theorems": 42,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.EndogenousDetectionRace",
+   "type": "module",
+   "name": "Becoming.EndogenousDetectionRace",
+   "level": "L2",
+   "theorems": 69,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OpenEndedComposition",
+   "type": "module",
+   "name": "Becoming.OpenEndedComposition",
+   "level": "L2",
+   "theorems": 90,
+   "region": "capacity",
    "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
@@ -34318,6 +34387,41 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.EndogenousDetectionRace",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousDetectionRace",
+   "to": "module:Becoming.EndogenousEmergence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousDetectionRace",
+   "to": "module:Becoming.PacedStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousEmergence",
+   "to": "module:Becoming.DoubleKernel",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousEmergence",
+   "to": "module:Becoming.EndogenousOrder",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousEmergence",
+   "to": "module:Becoming.MasterSpine",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousEmergence",
+   "to": "module:Becoming.OplaxHistory",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.EndogenousOrder",
    "to": "module:Becoming.PersistingChoices",
    "type": "imports"
@@ -36105,6 +36209,16 @@
   {
    "from": "module:Becoming.OpenComposition",
    "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenEndedComposition",
+   "to": "module:Becoming.PolyComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenEndedComposition",
+   "to": "module:Becoming.TransformativeViability",
    "type": "imports"
   },
   {
@@ -45556,6 +45670,36 @@
    "type": "related"
   },
   {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "module:Becoming.EndogenousDetectionRace",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "module:Becoming.EndogenousEmergence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "record:closed-capture",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "record:paced-stock-and-cadence-margin-sandwich",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:endogenous-detection-before-capture-lock",
+   "to": "record:whole-becoming-master-spine",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:endogenous-order-scope-coevolution-and-nash",
    "to": "module:Becoming.EndogenousOrder",
    "type": "proved-in"
@@ -52318,6 +52462,26 @@
    "type": "related"
   },
   {
+   "from": "record:open-ended-epoch-handoff",
+   "to": "module:Becoming.OpenEndedComposition",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:open-ended-epoch-handoff",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:open-ended-epoch-handoff",
+   "to": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:open-ended-epoch-handoff",
+   "to": "record:transformative-viability-order",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:open-form-realization-under-revision",
    "to": "module:Becoming.Handoff",
    "type": "proved-in"
@@ -54161,6 +54325,16 @@
    "from": "record:protection-priority-excludes-uniform-aggregation",
    "to": "record:relational-generative-comparison",
    "type": "related"
+  },
+  {
+   "from": "record:quantitative-transfer-of-four-guard-failure-regimes",
+   "to": "record:continuous-stochastic-alignment-reals",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:quantitative-transfer-of-four-guard-failure-regimes",
+   "to": "record:observational-fidelity-and-multi-regime-error",
+   "type": "formal-reuse"
   },
   {
    "from": "record:raising-what-couples-in-draws-from-beyond",

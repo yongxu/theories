@@ -1,0 +1,246 @@
+{
+  "schema_version": 2,
+  "id": "endogenous-detection-before-capture-lock",
+  "title": {
+    "en": "Endogenous detection before capture lock and split evidence",
+    "zh": "捕获锁定前之内生检测与分裂证据"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "statement": {
+    "en": "An observation-only learner moving a pool reading at its registration step hits the exact ClosedCapture window: locked out if already outnumbered when read, turning permanently if not outnumbered next step. Under one-time-mask split evidence, sound local filters stay silent while exchange turns.",
+    "zh": "仅读任务回报之学习者，其登记步令他者之池读切换，恰落入封闭捕获之窗口：读步时若载体已不少则锁定，次步仍不占优则永转。一次掩码分裂证据下，局部可靠警报归零，交换一位则转。"
+  },
+  "hypotheses": [
+    {
+      "en": "No Lean axiom. Discrete steps; Moore-machine learner reading only primary task return; majority admission gate on CarrierCounts; two-kind unnormalized Drawn.pool; mirror reading for others after registration; one-bit mask split streams over binary tag prefixes.",
+      "zh": "无 Lean 公理。离散步；仅读原任务回报之摩尔机学习者；基于载体计数之多数准入闸门；两类未归一化之阅读池；登记后他者取镜像阅读；基于二进制标签前缀之单位掩码分裂流。"
+    }
+  ],
+  "laws": [
+    {
+      "en": "Gate and lockout: where intended restraint is admitted, the gated course matches the closed orbit (gated_eq_closed); once locked out, stock follows pure extraction regardless of what any learner intends or registers (lockout_pure_extract, lockout_learner_irrelevant).",
+      "zh": "闸门与锁定：凡欲节制处获准入，受闸进程即合无闸轨道（gated_eq_closed）；一旦锁定，无论学习者欲何或登记何，存量皆归纯抽取（lockout_pure_extract、lockout_learner_irrelevant）。",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.gated_eq_closed",
+        "Becoming.EndogenousDetectionRace.lockout_pure_extract",
+        "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant"
+      ]
+    },
+    {
+      "en": "Pre-capture turning window for any reading cadence: whenever registration holds from step tau, share and rule match Thinned.course with loss bound tau (mark_eq_thinned), giving exact capture lock-in (mark_kept_iff, mark_kept_locks_out) and exact cadence-general admission (mark_turned_iff, mark_turned_admits_iff).",
+      "zh": "任意阅读节奏下之捕获前转向窗口：凡登记自第 tau 步起成立，份额与规则即合阈值 tau 之稀释历程（mark_eq_thinned），给出精确锁定（mark_kept_iff、mark_kept_locks_out）与任意节奏下之精确准入充要条件（mark_turned_iff、mark_turned_admits_iff）。",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.mark_eq_thinned",
+        "Becoming.EndogenousDetectionRace.mark_kept_iff",
+        "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+        "Becoming.EndogenousDetectionRace.mark_turned_iff",
+        "Becoming.EndogenousDetectionRace.mark_turned_admits_iff"
+      ]
+    },
+    {
+      "en": "Six separating witnesses for emergentLoop: timely turn (race_in_time), late registration after lock-in (race_late_after_registration), probe blocked (race_probe_blocked), strain masked one step longer (race_masked_strain), cadence separation under PacedStock.ReadAtSpanEnd (race_slow_cadence, race_fast_cadence, cadence3_readAtSpanEnd), and exogenous control (race_exo_no_false_turn).",
+      "zh": "涌现学习者之六组分离见证：及时转向、迟登记仍锁、探针被阻、应变被掩（race_in_time 至 race_masked_strain）、阅读节奏决定存亡（cadence3_readAtSpanEnd、race_slow_cadence、race_fast_cadence）及外生对照（race_exo_no_false_turn）。",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.race_in_time",
+        "Becoming.EndogenousDetectionRace.race_late_after_registration",
+        "Becoming.EndogenousDetectionRace.race_probe_blocked",
+        "Becoming.EndogenousDetectionRace.race_masked_strain",
+        "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+        "Becoming.EndogenousDetectionRace.race_slow_cadence",
+        "Becoming.EndogenousDetectionRace.race_fast_cadence",
+        "Becoming.EndogenousDetectionRace.race_exo_no_false_turn"
+      ]
+    },
+    {
+      "en": "Split-evidence marginal conservation and exchange coupling: retag involution preserves all 2^T tag counts (retag_symmetry, count_view_invariant, split_marginal_count_eq), trapping sound consensus in closed capture (silencing_consensus, split_silenced_trapped) while raw verdicts leak (verdict_leak) and one-bit exchange turns selection (exchange_detects, split_exchange_turns, split_witness_endo).",
+      "zh": "分裂证据之边际守恒与交换耦合：重标对合守恒全部 2^T 标签计数（count_view_invariant、split_marginal_count_eq），令局部可靠共识锁于封闭池（split_silenced_trapped），非可靠裁决泄证（verdict_leak），单位交换令选择转向（split_exchange_turns、split_witness_endo）。",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.retag_symmetry",
+        "Becoming.EndogenousDetectionRace.count_view_invariant",
+        "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
+        "Becoming.EndogenousDetectionRace.silencing_consensus",
+        "Becoming.EndogenousDetectionRace.verdict_leak",
+        "Becoming.EndogenousDetectionRace.exchange_detects",
+        "Becoming.EndogenousDetectionRace.split_silenced_trapped",
+        "Becoming.EndogenousDetectionRace.split_exchange_turns",
+        "Becoming.EndogenousDetectionRace.split_witness_endo"
+      ]
+    },
+    {
+      "en": "Observation-only emergence prerequisite: emergentLoop shifts endogenous weights over returning support under non-myopic return (endogenous_emergence_sufficiency), lifts onto MasterSpine via (n+1)-step GuardedProof (item12_endogenous_emergence_and_oplax_master_bridge), and breaks universally when sensory strain, two-step probing, or width fails.",
+      "zh": "仅读回报之内生涌现前提：emergentLoop 于非近视回报下调整自返权重（endogenous_emergence_sufficiency）并经 (n+1) 步 GuardedProof 接至主干（item12_endogenous_emergence_and_oplax_master_bridge），缺感官应变、两步探针或宽度则普适失效。",
+      "declarations": [
+        "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency",
+        "Becoming.EndogenousEmergence.silent_cliff_universal_collapse",
+        "Becoming.EndogenousEmergence.one_probe_universal_insufficiency",
+        "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse",
+        "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge"
+      ]
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "The middle band where carriers are fewer than others at reading step r yet outnumber them at r + 1 is left uncharacterized.",
+      "zh": "阅读步 r 时载体尚少于他者而于 r + 1 步反超之中段未加刻画。"
+    },
+    {
+      "kind": "scope",
+      "en": "Part B fixes the depletion stream before agents act and counts uniformly over all 2^T binary tags; closed-loop mask-substrate coupling and non-uniform tag distributions are open.",
+      "zh": "乙部假定耗竭信号于行动前给定且对全部 2^T 标签均匀计数；掩码与底物之闭环耦合及非均匀标签分布仍开放。"
+    },
+    {
+      "kind": "non-implication",
+      "en": "Endogenous registration remains confined to self-returning continuation and leaves one-way downstream dependents unranked (emergent_order_firewall).",
+      "zh": "内生登记仅及于自返之相续，不赋予单向受累者任何位序（emergent_order_firewall）。",
+      "witness": "Becoming.EndogenousEmergence.emergent_order_firewall"
+    }
+  ],
+  "not_required": [
+    {
+      "en": "No exogenous alarm, threshold constant, or regime label is read by the learner.",
+      "zh": "学习者不读取任何外生警报、阈值常数或体制标签。"
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; lean-check verified Becoming.EndogenousEmergence (42 theorems, 100 declarations) and Becoming.EndogenousDetectionRace (69 theorems, 105 declarations) with 0 core axioms (becoming-checks/20261124T162330.082121Z); pure stdlib replay test_split_evidence_capture_race.py passes within 9/9 evidence-replay tests.",
+    "zh": "Lean 4.29.1 纯 Init 经 scratch_build.py 验明 Becoming.EndogenousEmergence（42 定理、100 声明、空公理报告）与 Becoming.EndogenousDetectionRace（69 定理、105 声明、空公理报告）；纯标准库回放随 evidence-replay 通过 9/9。"
+  },
+  "next_delta": {
+    "en": "Human read by Ren; characterize the alternating middle band between mark_kept_iff and mark_turned_admits_iff.",
+    "zh": "于中央合入时将两模块接入 Becoming.lean 与清单；刻画 mark_kept_iff 与 mark_turned_admits_iff 间之中段。"
+  },
+  "related": [
+    {
+      "id": "closed-capture",
+      "detail": {
+        "en": "ClosedCapture.Thinned treats the threshold N at which others read the loss as a parameter; here N is derived from an observation-only learner registration step.",
+        "zh": "ClosedCapture.Thinned 以他者读损阈值 N 为外参；此处 N 由仅读回报学习者之登记步内生导出。"
+      }
+    }
+  ],
+  "reviewed_at_utc": "2026-11-24T16:25:00+00:00",
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
+      "role": "proof",
+      "sha256": "4238424eff5691981c6b4316434e141d155c6a692dbd4569a7d893ca71fe9ed8",
+      "declarations": [
+        "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+        "Becoming.EndogenousDetectionRace.count_view_invariant",
+        "Becoming.EndogenousDetectionRace.exchange_detects",
+        "Becoming.EndogenousDetectionRace.gated_eq_closed",
+        "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant",
+        "Becoming.EndogenousDetectionRace.lockout_pure_extract",
+        "Becoming.EndogenousDetectionRace.mark_eq_thinned",
+        "Becoming.EndogenousDetectionRace.mark_kept_iff",
+        "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+        "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
+        "Becoming.EndogenousDetectionRace.mark_turned_iff",
+        "Becoming.EndogenousDetectionRace.race_exo_no_false_turn",
+        "Becoming.EndogenousDetectionRace.race_fast_cadence",
+        "Becoming.EndogenousDetectionRace.race_in_time",
+        "Becoming.EndogenousDetectionRace.race_late_after_registration",
+        "Becoming.EndogenousDetectionRace.race_masked_strain",
+        "Becoming.EndogenousDetectionRace.race_probe_blocked",
+        "Becoming.EndogenousDetectionRace.race_slow_cadence",
+        "Becoming.EndogenousDetectionRace.retag_symmetry",
+        "Becoming.EndogenousDetectionRace.silencing_consensus",
+        "Becoming.EndogenousDetectionRace.split_exchange_turns",
+        "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
+        "Becoming.EndogenousDetectionRace.split_silenced_trapped",
+        "Becoming.EndogenousDetectionRace.split_witness_endo",
+        "Becoming.EndogenousDetectionRace.verdict_leak"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousEmergence.lean",
+      "role": "proof",
+      "sha256": "88ba811aec4a20dc7da4a14861a907a87956cced206982cfcb67d8464b0b9ae8",
+      "declarations": [
+        "Becoming.EndogenousEmergence.emergent_order_firewall",
+        "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency",
+        "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge",
+        "Becoming.EndogenousEmergence.one_probe_universal_insufficiency",
+        "Becoming.EndogenousEmergence.silent_cliff_universal_collapse",
+        "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T162330.082121Z/verification.json",
+      "role": "receipt",
+      "sha256": "07b237414f78c3eaaa33905e3a6eacf5adcf96b0f3c68887e478ecc9bde3355d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/evidence-replay/test_split_evidence_capture_race.py",
+      "role": "integration",
+      "sha256": "a7a99d178cf52691c9c9546261fdff2c43dfe4bdc3969e09c7e3f05e5ba100ec"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier1-endogenous-capture-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "8d27fbd7c3c79336337142ea6cc64a821f0a0fcc230f059faf89256965beb5b7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T162330.082121Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EndogenousDetectionRace",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousEmergence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T162330.082121Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EndogenousEmergence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "aliases": [],
+  "counterexamples": [],
+  "dependencies": [
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses ClosedCapture.Thinned and ClosedCapture.lock_outlives_loss with N derived from registration step tau."
+      }
+    },
+    {
+      "id": "paced-stock-and-cadence-margin-sandwich",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Instantiates PacedStock.ReadAtSpanEnd at cadence 3 in cadence3_readAtSpanEnd."
+      }
+    },
+    {
+      "id": "whole-becoming-master-spine",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "EndogenousEmergence bridges onto MasterSpine.WholeArchitecture via (n + 1)-step GuardedProof."
+      }
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: added as Frontier 1 (Becoming.EndogenousEmergence + Becoming.EndogenousDetectionRace, core receipt becoming-checks/20261124T162330.082121Z). AI-written."
+    }
+  ],
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean",
+  "correspondence": {
+    "en": "Observation-only emergence coupled to ClosedCapture turning windows and distributed one-time-mask split evidence; does not settle exogenous identification of actual systems (Rule 2)."
+  }
+}

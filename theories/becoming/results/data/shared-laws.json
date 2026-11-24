@@ -1,12 +1,12 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T131113.069112Z",
- "core_sources_sha256": "93fe4567732b78705a5252741b6cc6181865fe093e60a761c2193be107deaa03",
+ "core_receipt": "20261124T162330.082121Z",
+ "core_sources_sha256": "e2aface5196c50dfd96f5cdcc262858f86e30502fdc611ccf3359c1d9df4ccaa",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "85e524b7c2b13800d41822343d1e6bf83993724bf31efbb823fb547fc3c2696f",
+  "theories/becoming/results/completion/COVERAGE.json": "a4802f5b71c1b68822866bbe71d7c98ad6a53f9aac3c6b6f40d3c909783f3743",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4534,
+  "laws": 4548,
   "no_declarations": 9,
-  "outside": 412,
-  "grammar": 1171,
+  "outside": 416,
+  "grammar": 1179,
   "balance, represented": 642,
   "anchor, not reached": 99,
-  "no shared law": 2201,
+  "no shared law": 2203,
   "vocabulary_only": 106,
-  "closure": 648,
-  "balance": 935,
+  "closure": 656,
+  "balance": 936,
   "return": 260,
-  "lumping": 102,
-  "order": 118
+  "lumping": 103,
+  "order": 120
  },
  "counts_at_model": {
   "laws": 23,
@@ -17959,6 +17959,90 @@
     ],
     "shared_laws": [
      "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "endogenous-detection-before-capture-lock": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.EndogenousDetectionRace.gated_eq_closed",
+     "Becoming.EndogenousDetectionRace.lockout_pure_extract",
+     "Becoming.EndogenousDetectionRace.lockout_learner_irrelevant"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.EndogenousDetectionRace.mark_eq_thinned",
+     "Becoming.EndogenousDetectionRace.mark_kept_iff",
+     "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
+     "Becoming.EndogenousDetectionRace.mark_turned_iff",
+     "Becoming.EndogenousDetectionRace.mark_turned_admits_iff"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.EndogenousDetectionRace.race_in_time",
+     "Becoming.EndogenousDetectionRace.race_late_after_registration",
+     "Becoming.EndogenousDetectionRace.race_probe_blocked",
+     "Becoming.EndogenousDetectionRace.race_masked_strain",
+     "Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd",
+     "Becoming.EndogenousDetectionRace.race_slow_cadence",
+     "Becoming.EndogenousDetectionRace.race_fast_cadence",
+     "Becoming.EndogenousDetectionRace.race_exo_no_false_turn"
+    ],
+    "shared_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.EndogenousDetectionRace.retag_symmetry",
+     "Becoming.EndogenousDetectionRace.count_view_invariant",
+     "Becoming.EndogenousDetectionRace.split_marginal_count_eq",
+     "Becoming.EndogenousDetectionRace.silencing_consensus",
+     "Becoming.EndogenousDetectionRace.verdict_leak",
+     "Becoming.EndogenousDetectionRace.exchange_detects",
+     "Becoming.EndogenousDetectionRace.split_silenced_trapped",
+     "Becoming.EndogenousDetectionRace.split_exchange_turns",
+     "Becoming.EndogenousDetectionRace.split_witness_endo"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency",
+     "Becoming.EndogenousEmergence.silent_cliff_universal_collapse",
+     "Becoming.EndogenousEmergence.one_probe_universal_insufficiency",
+     "Becoming.EndogenousEmergence.thin_strain_band_universal_collapse",
+     "Becoming.EndogenousEmergence.item12_endogenous_emergence_and_oplax_master_bridge"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "lumping",
+     "order"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -36579,6 +36663,89 @@
     "dependence": "no shared law"
    }
   ],
+  "open-ended-epoch-handoff": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.OpenEndedComposition.TransformsAcrossEpochs",
+     "Becoming.OpenEndedComposition.constantEpoch_iff_transformsViably",
+     "Becoming.OpenEndedComposition.anchored_rejects_unsafe",
+     "Becoming.OpenEndedComposition.unanchored_selfRevision_certifies_any_collapse",
+     "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_transformsAcrossEpochs",
+     "Becoming.OpenEndedComposition.RigidLockInWitness.rigidLockIn_fails_all_separating_caps",
+     "Becoming.OpenEndedComposition.RigidLockInWitness.coarsened_reading_passes",
+     "Becoming.OpenEndedComposition.Horn2WebWitness.unanchored_passes",
+     "Becoming.OpenEndedComposition.Horn2WebWitness.anchored_rejects"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.OpenEndedComposition.scoped_substrate_margin_step",
+     "Becoming.OpenEndedComposition.unscoped_recovers_substrate_margin_step",
+     "Becoming.OpenEndedComposition.EpochHandoffGate",
+     "Becoming.OpenEndedComposition.epochInv_certificate",
+     "Becoming.OpenEndedComposition.epochChain_viability_kernel_on_K",
+     "Becoming.OpenEndedComposition.epochChain_anchor_never_weakened",
+     "Becoming.OpenEndedComposition.epochChain_nonDeadlock",
+     "Becoming.OpenEndedComposition.gate_rejects_infeasible_entry"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.OpenEndedComposition.singleEpoch_recovers_anchored_selfMod",
+     "Becoming.OpenEndedComposition.singleEpoch_recovers_monotone_selfWidening",
+     "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.no_static_anchoredSelfMod_envelope",
+     "Becoming.OpenEndedComposition.BlindSensorUpgradeWitness.epochChain_certifies_upgrade",
+     "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.no_finite_draw_bound",
+     "Becoming.OpenEndedComposition.UnboundedAscendingEpochsWitness.upgrade_down"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.closedScope_allows_sNew_collapse",
+     "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.timelyOpenEntry_protects_both",
+     "Becoming.OpenEndedComposition.SiteExpansionBlindnessWitness.lateOpenEntry_rejected",
+     "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.unanchored_drains_inside_own_kernel",
+     "Becoming.OpenEndedComposition.UnanchoredPolyWireheading.anchored_refuses_lowering"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.solo_A_evolve_viable",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "open-form-realization-under-revision": [
    {
     "law": 1,
@@ -40473,6 +40640,88 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   }
+  ],
+  "quantitative-transfer-of-four-guard-failure-regimes": [
+   {
+    "law": 1,
+    "declarations": [
+     "QuantitativeTransfer.pool_disagreement_ceiling",
+     "QuantitativeTransfer.pool_shared_bias_floor",
+     "QuantitativeTransfer.pool_ceiling_attained",
+     "QuantitativeTransfer.anchor_detects_shared_drift",
+     "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+     "QuantitativeTransfer.correlated_pool_lab_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.pool_disagreement_ceiling",
+     "QuantitativeTransfer.pool_shared_bias_floor",
+     "QuantitativeTransfer.pool_ceiling_attained",
+     "QuantitativeTransfer.anchor_detects_shared_drift",
+     "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+     "QuantitativeTransfer.correlated_pool_lab_witness"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "QuantitativeTransfer.aliased_fiber_gap",
+     "QuantitativeTransfer.aliased_separable_iff",
+     "QuantitativeTransfer.aliased_readout_floor",
+     "QuantitativeTransfer.aliased_lab_witness",
+     "QuantitativeTransfer.two_point_test_floor",
+     "QuantitativeTransfer.mixture_aliasing_test_floor",
+     "QuantitativeTransfer.mixture_floor_attained"
+    ],
+    "outside": [
+     "QuantitativeTransfer.aliased_fiber_gap",
+     "QuantitativeTransfer.aliased_separable_iff",
+     "QuantitativeTransfer.aliased_readout_floor",
+     "QuantitativeTransfer.aliased_lab_witness",
+     "QuantitativeTransfer.two_point_test_floor",
+     "QuantitativeTransfer.mixture_aliasing_test_floor",
+     "QuantitativeTransfer.mixture_floor_attained"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "QuantitativeTransfer.lag_horizon_wall",
+     "QuantitativeTransfer.lag_wall_iff_linear",
+     "QuantitativeTransfer.switching_score_persists",
+     "QuantitativeTransfer.switchLag_strictMono_rho",
+     "QuantitativeTransfer.switchLag_nonpos_tabular",
+     "QuantitativeTransfer.leakage_lag_wall",
+     "QuantitativeTransfer.b1_headroom_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.lag_horizon_wall",
+     "QuantitativeTransfer.lag_wall_iff_linear",
+     "QuantitativeTransfer.switching_score_persists",
+     "QuantitativeTransfer.switchLag_strictMono_rho",
+     "QuantitativeTransfer.switchLag_nonpos_tabular",
+     "QuantitativeTransfer.leakage_lag_wall",
+     "QuantitativeTransfer.b1_headroom_witness"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "QuantitativeTransfer.trustRegionMetricLaxSim",
+     "QuantitativeTransfer.trust_region_tube",
+     "QuantitativeTransfer.trust_region_tube_attained",
+     "QuantitativeTransfer.trust_region_viability",
+     "QuantitativeTransfer.unprojected_step_overshoots",
+     "QuantitativeTransfer.trust_region_lab_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.trustRegionMetricLaxSim",
+     "QuantitativeTransfer.trust_region_tube",
+     "QuantitativeTransfer.trust_region_tube_attained",
+     "QuantitativeTransfer.trust_region_viability",
+     "QuantitativeTransfer.unprojected_step_overshoots",
+     "QuantitativeTransfer.trust_region_lab_witness"
+    ]
    }
   ],
   "raising-what-couples-in-draws-from-beyond": [
@@ -70162,7 +70411,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "af68a36dcd106cb633cee738c5024f4dbf2263926b0852e1624d9bfacee3d537",
+   "modules_sha256": "346a27befdea6ed03138b0348528bdef6cf90d834a7f4d0e8dc1a5ed89e087c5",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

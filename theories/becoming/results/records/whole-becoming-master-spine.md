@@ -68,6 +68,8 @@ Reading (AI-written): serves as the single top-level culmination of the 0-axiom 
 - **formal-reuse**: [alignment-direction-under-widening](alignment-direction-under-widening.md). Verifies full K6 compatibility chain from Valuation.significant_iff to grounded_widening_selected.
 - **formal-reuse**: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). Establishes unconditional ReadsOnlyDynamics and scopeLaw_cannot_entail_unrestricted firewalls.
 
+**Used by:** [endogenous-detection-before-capture-lock](endogenous-detection-before-capture-lock.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

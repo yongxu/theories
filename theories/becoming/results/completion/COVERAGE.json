@@ -280,7 +280,8 @@
         "active-inquiry-deadline-cascade-and-blankets",
         "oplax-history-comparison-and-relational-loss",
         "observational-fidelity-and-multi-regime-error",
-        "finite-mode-survival-distinguishability"
+        "finite-mode-survival-distinguishability",
+        "endogenous-detection-before-capture-lock"
       ],
       "declarations": [
         "Becoming.Flow.unexcluded_beyond_coupling",
@@ -358,7 +359,8 @@
         "significance-retained-within-margin",
         "own-widening-within-the-margin",
         "open-interface-composition-and-replacement",
-        "polynomial-dynamic-interfaces-and-coupled-laxity"
+        "polynomial-dynamic-interfaces-and-coupled-laxity",
+        "open-ended-epoch-handoff"
       ],
       "declarations": [
         "Becoming.WithinMoves.after_course",
@@ -647,7 +649,10 @@
         "oplax-history-comparison-and-relational-loss",
         "guarded-double-category-certificate-kernel",
         "observational-fidelity-and-multi-regime-error",
-        "finite-mode-survival-distinguishability"
+        "finite-mode-survival-distinguishability",
+        "endogenous-detection-before-capture-lock",
+        "open-ended-epoch-handoff",
+        "quantitative-transfer-of-four-guard-failure-regimes"
       ],
       "declarations": [
         "Becoming.Flow.unselected_beyond_coupling",
