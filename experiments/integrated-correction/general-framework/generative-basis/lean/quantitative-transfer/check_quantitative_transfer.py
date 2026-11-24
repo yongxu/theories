@@ -64,7 +64,8 @@ SCOPE = (
     "(8) multi-step (T-sample) sequential Gaussian aliasing via T-fold convolution convPow: "
     "gaussianSeqLaw equals gaussianReal (T * aliasedProbe) (T * v) with sample-mean pushforward variance v / T, "
     "giving the sqrt(T) Youden ceiling, sample-complexity lower bound 4 v J_target^2 / ((1 - α)|p u₁ - p u₂|)^2 <= T, "
-    "T-sample midpoint sharpness, the joint lag-horizon vs. sample-complexity wall sequential_gaussian_lag_sample_wall, "
+    "T-sample midpoint sharpness, the joint lag-horizon vs. sample-complexity wall sequential_gaussian_lag_sample_wall "
+    "(bounding measurable events on the T-sample sum gaussianSeqLaw under unit-rate sampling (T : ℝ) <= t), "
     "and the B5 sequential witness (T = 4 capped at 15/17 < 9/10 vs T = 100 achieving >= 9/10)."
 )
 

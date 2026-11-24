@@ -52,12 +52,17 @@ a remedy):
 8. **Multi-step (`T`-sample) sequential Gaussian aliasing & sample-complexity vs. lag-horizon wall.**
    Via `T`-fold convolution `convPow`, `gaussianSeqLaw` equals
    `gaussianReal (T * aliasedProbe ...) (T * v)` (with sample-mean pushforward `v / T`), yielding
-   the `√T` Youden ceiling, sample-complexity lower bound `4 v J_target^2 / Δ^2 ≤ T`, `T`-sample
-   midpoint sharpness, the joint lag-horizon vs. sample-complexity wall
-   `sequential_gaussian_lag_sample_wall`, and the `B5` sequential witness (`T = 4` vs `T = 100`).
+   the `√T` Youden ceiling, sample-complexity lower bound `4 v J_target^2 / Δ^2 ≤ T` for measurable
+   events on the `T`-sample sum, `T`-sample midpoint sharpness, the joint lag-horizon vs.
+   sample-complexity wall `sequential_gaussian_lag_sample_wall` (assuming unit-rate sampling
+   `(T : ℝ) ≤ t`, without proving sufficiency over general `ℝ^T` statistics), and the `B5`
+   sequential witness (`T = 4` vs `T = 100`).
 
 Applying any of these to the stress lab is a recognition, not a proof (Rule 2); see
-`frontier3-quantitative-transfer-2026-11-24/PAPER-ATTACK.md`.
+`frontier3-quantitative-transfer-2026-11-24/PAPER-ATTACK.md`. In particular, applying Part 8
+additionally assumes i.i.d. additive Gaussian observations across steps and, in
+`sequential_gaussian_lag_sample_wall`, unit-rate sampling `(T : ℝ) ≤ t` (at most one sample per
+unit continuous time before crossing `x_crit`).
 -/
 
 namespace QuantitativeTransfer
@@ -1839,8 +1844,10 @@ theorem gaussian_seq_midpoint_sharp {U O : Type*} {T : ℕ} (hT : 0 < T) {α : �
 /-- **Joint Lag + Sequential Aliasing Wall (`sequential_gaussian_lag_sample_wall`):** whenever the
 lag-bounded horizon `(x 0 - x_crit) / H₁ < L` is strictly shorter than the required sample
 complexity `4 v J_target^2 / ((1 - α) |p u₁ - p u₂|)^2`, the reserve hits `x_crit` at some
-`t ≤ (x 0 - x_crit) / H₁ < L` and every detector using `0 < T ≤ t` samples has
-`|measYoudenJ| < J_target` on every measurable event `A`. -/
+`t ≤ (x 0 - x_crit) / H₁ < L` and every measurable event `A` on the `T`-sample sum
+`gaussianSeqLaw` (and equivalently on the sample mean via `gaussianSeqMean_map_eq`) for
+`0 < T` with `(T : ℝ) ≤ t` (unit-rate sampling) has `|measYoudenJ| < J_target`. (Proved for
+events on the `T`-sample sum; sufficiency over general `ℝ^T` statistics is not formalized here.) -/
 theorem sequential_gaussian_lag_sample_wall {U O : Type*} {x : ℝ → ℝ} {H₁ L x_crit : ℝ}
     (hH : 0 < H₁) (hx0 : x_crit ≤ x 0) (hL : (x 0 - x_crit) / H₁ < L)
     (hcont : ContinuousOn x (Icc 0 L)) (hdiff : DifferentiableOn ℝ x (Ioo 0 L))
