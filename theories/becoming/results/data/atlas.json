@@ -201998,7 +201998,7 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "5b44c4785d23bbbecf4033b7396768932bfb1c2c",
+   "commit": "e3f869fa58a37d27a69053824ecc67da113e9f6b",
    "core_run": "20261124T162330.082121Z"
   },
   "core_sources_sha256": "e2aface5196c50dfd96f5cdcc262858f86e30502fdc611ccf3359c1d9df4ccaa",

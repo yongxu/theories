@@ -9,7 +9,7 @@
   "dependency_sha256": {
     "FiniteProbKrylov": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f"
   },
-  "verified_at_utc": "2026-11-24T17:09:04.633649+00:00",
+  "verified_at_utc": "2026-11-24T17:30:29.712298+00:00",
   "ai_written": true,
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",

@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "utc": "20261124T170243.242498Z",
+  "utc": "20261124T172818.351051Z",
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
-  "retained_run": "finite-prob-krylov-checks/20261124T170243.242498Z",
+  "retained_run": "finite-prob-krylov-checks/20261124T172818.351051Z",
   "bridge_module": "FiniteProbKrylov",
   "compile_order": [
     "FiniteProbKrylov"
@@ -15,11 +15,11 @@
     "FiniteProbKrylov": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f"
   },
   "checker_sha256": {
-    "check_finite_prob_krylov.py": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4",
-    "check_becoming.py": "cd19bc36878e0ab5aacca8339fd8439f196ac571a43963a5caba44146b092733"
+    "check_finite_prob_krylov.py": "2c191e987a1126918b27d4978dd20c66bad3faf6279a16ca750f332f79f6f48a",
+    "check_becoming.py": "c9d2a08a441cea93e0e32688880f36bebf5a9bbbfdf01983fb6a5257b2c53680"
   },
   "source_commit": {
-    "main": "c2151efa8d9a99ac58d98af9c4a4b8610de7a392",
+    "main": "b40b47a2e2edd120f5a3d4c8120cc762d4df36b0",
     "copied": [
       "FiniteProbKrylov.lean",
       "check_finite_prob_krylov.py"
@@ -367,7 +367,7 @@
   ],
   "artifact_sha256": {
     "FiniteProbKrylov.lean": "b0052f7194c1a2699ca69189eb171bd80855e558ce6ab581fc4f8f1fd427a64f",
-    "check_finite_prob_krylov.py": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4",
+    "check_finite_prob_krylov.py": "2c191e987a1126918b27d4978dd20c66bad3faf6279a16ca750f332f79f6f48a",
     "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
   }
 }

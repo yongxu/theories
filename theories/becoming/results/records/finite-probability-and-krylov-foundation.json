@@ -7,7 +7,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-24T17:04:00+00:00",
+  "reviewed_at_utc": "2026-11-24T17:30:00+00:00",
   "statement": {
     "en": "Shared Mathlib ℝ periphery foundation proving finite probability TV metric properties and optimal query floors alongside Krylov rank-bounded stabilization and FiberLumpable observable-horizon compression for real matrices."
   },
@@ -100,7 +100,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written (Wave 1, 24 November 2026); machine-checked by -O-safe Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170243.242498Z): all 33 declaration audits (21 theorems, 12 defs/structures, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. Consumed by ObservationalFidelity, SurvivalDistinguishability, ConsequenceDuality, and DualityBridges (FinDist becomes an abbrev for FiniteProb.FinDist while explicit theorem signatures stay intact). No person has read it."
+    "en": "AI-written (Wave 1, 24 November 2026); machine-checked by -O-safe Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172818.351051Z): all 33 declaration audits (21 theorems, 12 defs/structures, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. Consumed by ObservationalFidelity, SurvivalDistinguishability, ConsequenceDuality, and DualityBridges (FinDist becomes an abbrev for FiniteProb.FinDist while explicit theorem signatures stay intact). No person has read it."
   },
   "next_delta": {
     "en": "Human read by Ren; extend approximate lumpability perturbation bounds if real-learner trajectories require near-FiberLumpable error propagation."
@@ -174,19 +174,19 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/check_finite_prob_krylov.py",
       "role": "integration",
-      "sha256": "ac5e6d61759b44d67cc9d21f5a772a0116e1b9664e52482cd0e9e0957865b6a4"
+      "sha256": "2c191e987a1126918b27d4978dd20c66bad3faf6279a16ca750f332f79f6f48a"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T170243.242498Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T172818.351051Z/verification.json",
       "role": "receipt",
-      "sha256": "d5ecadbdace8739417df85d8bafa8382b0822456289ffadabccc1032d93bf7cb",
+      "sha256": "caaa99ff554e5cc60804c379edab48f00af288aa2dbd7defa7988ebb7803c513",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T170243.242498Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T172818.351051Z/verification.json",
       "sha256_pointer": "/source_sha256/FiniteProbKrylov",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -194,7 +194,7 @@
   ],
   "history": [
     {
-      "en": "24 November 2026 (Wave 1): added FiniteProbKrylov (Mathlib v4.30.0-rc2 periphery module, -O-verified receipt 20261124T170243.242498Z) factoring shared FiniteProb laws and FiniteKrylov rank-form stabilization + FiberLumpable observable-horizon bridge. AI-written."
+      "en": "24 November 2026 (Wave 1): added FiniteProbKrylov (Mathlib v4.30.0-rc2 periphery module, -O-verified receipt 20261124T172818.351051Z) factoring shared FiniteProb laws and FiniteKrylov rank-form stabilization + FiberLumpable observable-horizon bridge. AI-written."
     }
   ]
 }

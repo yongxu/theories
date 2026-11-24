@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162749.416501Z): all 24 declaration audits (16 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 16/16 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted).
+AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172918.063622Z): all 24 declaration audits (16 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 16/16 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted).
 
 Canonical source: [SurvivalDistinguishability.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean)
 
@@ -73,7 +73,7 @@ Formalizes the Moore/Krylov finite-automaton survival distinguishability bound (
 | statement | [PREDICTIONS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/PREDICTIONS.md) | — |
 | review | [RESULTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/RESULTS.md) | — |
 | integration | [frozen_q_survival_test.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/frozen_q_survival_test.py) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T162749.416501Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T172918.063622Z/verification.json) | — |
 
 Aliases: `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_obs_pred`, `SurvivalDistinguishability.countdown_attains_card_pred`, `SurvivalDistinguishability.three_state_mode_switch_counterexample`, `SurvivalDistinguishability.c2_coupled_survival_separation`
 
@@ -82,8 +82,8 @@ Aliases: `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred
 
 - 24 November 2026: added finite-mode-survival-distinguishability (Mathlib periphery, SurvivalDistinguishability.lean, initial receipt 20261124T120827.390573Z; refreshed on 0397c5edd to 20261124T140857.994394Z) with Krylov card - 1 theorem, countdown sharpness witness, 3-state mode-switch counterexample, C2CoupledAlignmentWitness client, and initial frozen-Q local CPU empirical test. AI-written.
 - 24 November 2026 (Astra audit fix): clarified arbitrary real-matrix statement vs nonnegative substochastic probability interpretation, corrected frozen-Q alive-state operator cutoff to 62 (63 x 63 alive states), formalized idle_hi < pending_lo separation for deterministic replay after the initial 11:12:36Z evaluation, enforced -O-safe --pred-sha + calibration/separation checks in frozen_q_survival_test.py, aligned correspondence and headings to analytical-prediction / deterministic-replay wording, and refreshed references and reviewed_at_utc. AI-written.
-- 24 November 2026 (Wave 1): abbreviated stepOp to FiniteKrylov.stepLinearMap, bridged local survVec and krylovSub to FiniteProbKrylov via equality theorems (survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov), and added FiberLumpable observable-horizon bridge survival_indistinguishable_iff_le_obs_pred (non-trivial for substochastic survival matrices; receipt 20261124T162749.416501Z). AI-written.
+- 24 November 2026 (Wave 1): abbreviated stepOp to FiniteKrylov.stepLinearMap, bridged local survVec and krylovSub to FiniteProbKrylov via equality theorems (survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov), and added FiberLumpable observable-horizon bridge survival_indistinguishable_iff_le_obs_pred (non-trivial for substochastic survival matrices; receipt 20261124T172918.063622Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T16:37:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T17:30:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

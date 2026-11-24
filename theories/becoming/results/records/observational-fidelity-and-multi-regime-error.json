@@ -7,7 +7,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-24T16:37:00+00:00",
+  "reviewed_at_utc": "2026-11-24T17:30:00+00:00",
   "statement": {
     "en": "Over Mathlib ℝ (standard axioms only), ObservationalFidelity proves the query TV blindness floor, empty-source infeasibility, zero-TV coexistence with FiberViabilitySplit, three-way query separation, Dobrushin-MetricLaxSim kernel tubes, [0,1] risk transfer, and sharp/feedback controls."
   },
@@ -119,7 +119,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162457.244500Z): all 60 declaration audits (39 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it."
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172839.408876Z): all 60 declaration audits (39 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it."
   },
   "next_delta": {
     "en": "Human read by Ren; sample-complexity / concentration inequalities or continuous measurable query spaces if required beyond finite laws."
@@ -221,16 +221,16 @@
       "sha256": "b56d67b2a6f1391b0ab68e81b04b460d22545f6fb3e67ffba92a8e0dd979d4cb"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T162457.244500Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T172839.408876Z/verification.json",
       "role": "receipt",
-      "sha256": "a6cb962010f85dffc2d905ff6e96abbd37dea4d647e262fe1b7828fd6ac8c33e",
+      "sha256": "711dddd2c4a4f92b9be2dc4d974ff0840442cf1ba70067821d60d0b83e8107db",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T162457.244500Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T172839.408876Z/verification.json",
       "sha256_pointer": "/source_sha256/ObservationalFidelity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -247,7 +247,7 @@
       "en": "24 November 2026 (Astra audit fix): refreshed reviewed_at_utc, added full kernel_contraction_tube_via_metricLaxSim transfer hypotheses and identity-query massOutside f precision, and fixed C2CoupledAlignmentWitness counterexample wording (in-phase viable vs anti-phase non-viable, refuting a sound and complete macro predicate). AI-written."
     },
     {
-      "en": "24 November 2026 (Wave 1): deduplicated shared FinDist/TV declarations onto FiniteProbKrylov and added B1-B2 FiberLumpable-rowDefect characterizations (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, fiberLumpable_iff_exists_zero_rowDefect, fixed_macro_nonzero_rowDefect_witness; receipt 20261124T162457.244500Z). AI-written."
+      "en": "24 November 2026 (Wave 1): deduplicated shared FinDist/TV declarations onto FiniteProbKrylov and added B1-B2 FiberLumpable-rowDefect characterizations (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, fiberLumpable_iff_exists_zero_rowDefect, fixed_macro_nonzero_rowDefect_witness; receipt 20261124T172839.408876Z). AI-written."
     }
   ]
 }

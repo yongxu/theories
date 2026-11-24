@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written (Wave 1, 24 November 2026); machine-checked by -O-safe Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170243.242498Z): all 33 declaration audits (21 theorems, 12 defs/structures, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. Consumed by ObservationalFidelity, SurvivalDistinguishability, ConsequenceDuality, and DualityBridges (FinDist becomes an abbrev for FiniteProb.FinDist while explicit theorem signatures stay intact). No person has read it.
+AI-written (Wave 1, 24 November 2026); machine-checked by -O-safe Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172818.351051Z): all 33 declaration audits (21 theorems, 12 defs/structures, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. Consumed by ObservationalFidelity, SurvivalDistinguishability, ConsequenceDuality, and DualityBridges (FinDist becomes an abbrev for FiniteProb.FinDist while explicit theorem signatures stay intact). No person has read it.
 
 Canonical source: [FiniteProbKrylov.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean)
 
@@ -68,15 +68,15 @@ Eliminates duplicated FinDist/TV and Krylov code across four Mathlib periphery m
 |---|---|---|
 | proof | [FiniteProbKrylov.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/FiniteProbKrylov.lean) | `FiniteProb.FinDist`, `FiniteProb.FinDist.ext`, `FiniteProb.diracDist`, `FiniteProb.pushforward`, `FiniteProb.pushforward_comp`, `FiniteProb.tvDist`, `FiniteProb.tvDist_nonneg`, `FiniteProb.tvDist_self`, `FiniteProb.tvDist_symm`, `FiniteProb.tvDist_eq_zero_iff`, `FiniteProb.tvDist_triangle`, `FiniteProb.tvDist_pushforward_le`, `FiniteProb.massOutside`, `FiniteProb.massOutside_nonneg`, `FiniteProb.optimal_query_tv_floor`, `FiniteProb.empty_source_infeasible`, `FiniteKrylov.stepOp`, `FiniteKrylov.stepLinearMap`, `FiniteKrylov.wordVec`, `FiniteKrylov.survVec`, `FiniteKrylov.krylovSub`, `FiniteKrylov.krylovSub_mono`, `FiniteKrylov.stepLinearMap_mem_krylovSub_succ`, `FiniteKrylov.krylovSub_step_eq_of_eq`, `FiniteKrylov.krylovSub_stabilizes_from`, `FiniteKrylov.krylovSub_stabilizes_before_rank`, `FiniteKrylov.krylovSub_stabilizes_before_card`, `FiniteKrylov.wordVec_mem_krylovSub_pred`, `FiniteKrylov.FiberLumpable`, `FiniteKrylov.pullbackLinear`, `FiniteKrylov.mem_range_pullbackLinear_iff`, `FiniteKrylov.survival_indistinguishable_iff_le_obs_pred`, `FiniteKrylov.lumpable_obs_horizon_one_witness` |
 | integration | [check_finite_prob_krylov.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/check_finite_prob_krylov.py) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T170243.242498Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/finite-prob-krylov/finite-prob-krylov-checks/20261124T172818.351051Z/verification.json) | — |
 
 Aliases: `FiniteProb.optimal_query_tv_floor`, `FiniteKrylov.krylovSub_stabilizes_before_rank`, `FiniteKrylov.survival_indistinguishable_iff_le_obs_pred`, `FiniteKrylov.lumpable_obs_horizon_one_witness`
 
 <a id="history--沿革"></a>
 ### History
 
-- 24 November 2026 (Wave 1): added FiniteProbKrylov (Mathlib v4.30.0-rc2 periphery module, -O-verified receipt 20261124T170243.242498Z) factoring shared FiniteProb laws and FiniteKrylov rank-form stabilization + FiberLumpable observable-horizon bridge. AI-written.
+- 24 November 2026 (Wave 1): added FiniteProbKrylov (Mathlib v4.30.0-rc2 periphery module, -O-verified receipt 20261124T172818.351051Z) factoring shared FiniteProb laws and FiniteKrylov rank-form stabilization + FiberLumpable observable-horizon bridge. AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T17:04:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T17:30:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

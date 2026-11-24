@@ -43,7 +43,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162457.244500Z): all 60 declaration audits (39 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it.
+AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172839.408876Z): all 60 declaration audits (39 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words. No person has read it.
 
 Canonical source: [ObservationalFidelity.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean)
 
@@ -78,7 +78,7 @@ Formalizes WenHeHua v7 Appendix G / v9 formal/61 observational TV theory in Math
 | integration | [check_observational_fidelity.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/check_observational_fidelity.py) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T085020.963689Z/verification.json) | — |
 | review | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T162457.244500Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T172839.408876Z/verification.json) | — |
 
 Aliases: —
 
@@ -88,8 +88,8 @@ Aliases: —
 - 24 November 2026 (Wave U6): added ObservationalFidelity (Mathlib v4.30.0-rc2 periphery) formalizing WenHeHua v7 Appendix G / v9 formal/61 TV query blindness floors, multi-query convex separations, and a three-regime error contrast joining AlignmentReals, BecomingReals, Becoming.OplaxHistory, and Becoming.PolyComposition. AI-written.
 - 24 November 2026 (Track B1): extended ObservationalFidelity with rowDefect, Dobrushin contraction (tvDist_pushKernel_dobrushin, tvDist_pushKernel_dobrushin_step), literal AlignmentReals.MetricLaxSim kernel instantiation (kernelMetricLaxSim), derived Viability.Kernel tube transfer, [0, 1] viability_risk_transfer_bound + fiber_split_readout_floor, sharpBoolKernel attainment, and feedback_destroys_openloop_contraction (initial receipt 20261124T120707.983329Z; refreshed on 0397c5edd to 20261124T140733.167446Z). AI-written.
 - 24 November 2026 (Astra audit fix): refreshed reviewed_at_utc, added full kernel_contraction_tube_via_metricLaxSim transfer hypotheses and identity-query massOutside f precision, and fixed C2CoupledAlignmentWitness counterexample wording (in-phase viable vs anti-phase non-viable, refuting a sound and complete macro predicate). AI-written.
-- 24 November 2026 (Wave 1): deduplicated shared FinDist/TV declarations onto FiniteProbKrylov and added B1-B2 FiberLumpable-rowDefect characterizations (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, fiberLumpable_iff_exists_zero_rowDefect, fixed_macro_nonzero_rowDefect_witness; receipt 20261124T162457.244500Z). AI-written.
+- 24 November 2026 (Wave 1): deduplicated shared FinDist/TV declarations onto FiniteProbKrylov and added B1-B2 FiberLumpable-rowDefect characterizations (rowDefect_eq_zero_iff_pushforward, modeRowDefect_eq_zero_iff_pushforward, fiberLumpable_iff_exists_zero_rowDefect, fixed_macro_nonzero_rowDefect_witness; receipt 20261124T172839.408876Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T16:37:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T17:30:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

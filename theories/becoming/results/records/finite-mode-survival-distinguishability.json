@@ -7,7 +7,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-24T16:37:00+00:00",
+  "reviewed_at_utc": "2026-11-24T17:30:00+00:00",
   "statement": {
     "en": "On nonempty finite state spaces and real matrix families Mode -> S -> S -> ℝ (survival probabilities when nonnegative substochastic), two states agree on all mode words iff they agree through length card - 1; sharp at card - 1, switch-sensitive, and separates C2 states."
   },
@@ -94,7 +94,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T162749.416501Z): all 24 declaration audits (16 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 16/16 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted)."
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T172918.063622Z): all 24 declaration audits (16 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 16/16 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted)."
   },
   "next_delta": {
     "en": "Human read by Ren; extend matrix distinguishability bounds from finite state spaces to approximate continuous/non-stationary kernels under Rule 2."
@@ -179,16 +179,16 @@
       "sha256": "f445d512247e5089dcd6420d055de17bb0eba854cac60a6d0b85755c9eacfc38"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T162749.416501Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T172918.063622Z/verification.json",
       "role": "receipt",
-      "sha256": "b27591379439955c5edc97890a20b72aea4b97678892d2cd0aa52cb3b1531c96",
+      "sha256": "f37ae66a8c6e7ca53b9684b77fe38a83c0778c11be9be96132c3b06f0acb9132",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T162749.416501Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T172918.063622Z/verification.json",
       "sha256_pointer": "/source_sha256/SurvivalDistinguishability",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -202,7 +202,7 @@
       "en": "24 November 2026 (Astra audit fix): clarified arbitrary real-matrix statement vs nonnegative substochastic probability interpretation, corrected frozen-Q alive-state operator cutoff to 62 (63 x 63 alive states), formalized idle_hi < pending_lo separation for deterministic replay after the initial 11:12:36Z evaluation, enforced -O-safe --pred-sha + calibration/separation checks in frozen_q_survival_test.py, aligned correspondence and headings to analytical-prediction / deterministic-replay wording, and refreshed references and reviewed_at_utc. AI-written."
     },
     {
-      "en": "24 November 2026 (Wave 1): abbreviated stepOp to FiniteKrylov.stepLinearMap, bridged local survVec and krylovSub to FiniteProbKrylov via equality theorems (survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov), and added FiberLumpable observable-horizon bridge survival_indistinguishable_iff_le_obs_pred (non-trivial for substochastic survival matrices; receipt 20261124T162749.416501Z). AI-written."
+      "en": "24 November 2026 (Wave 1): abbreviated stepOp to FiniteKrylov.stepLinearMap, bridged local survVec and krylovSub to FiniteProbKrylov via equality theorems (survVec_eq_finiteKrylov, krylovSub_eq_finiteKrylov), and added FiberLumpable observable-horizon bridge survival_indistinguishable_iff_le_obs_pred (non-trivial for substochastic survival matrices; receipt 20261124T172918.063622Z). AI-written."
     }
   ]
 }

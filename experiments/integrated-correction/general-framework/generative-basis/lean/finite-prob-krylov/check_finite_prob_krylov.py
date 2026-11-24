@@ -135,6 +135,7 @@ def main():
         require(not scan["private"] and not scan["unnamed_instances"],
                 ("unaudited declarations in bridge", scan["private"], scan["unnamed_instances"]))
         registry = scan["declarations"]
+        require(bool(registry), "scanned zero declarations in FiniteProbKrylov")
         market = {
             item["name"]: sorted(set(core.name_words(item["name"])) & core.MARKET_WORDS)
             for item in registry

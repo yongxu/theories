@@ -162,7 +162,10 @@ def compile_lean(lean_bin, args, cwd, env, what):
 
 
 def main() -> int:
-    src = SOURCE_FILE.read_text(encoding="utf-8")
+    raw_bytes = SOURCE_FILE.read_bytes()
+    src = raw_bytes.decode("utf-8")
+    conseq_bytes = BASE_CONSEQ.read_bytes()
+    bridges_bytes = BASE_BRIDGES.read_bytes()
     toolchain = TOOLCHAIN_FILE.read_text(encoding="utf-8").strip()
     lean_bin = find_lean_binary()
     lean_ver = subprocess.check_output([str(lean_bin), "--version"], text=True).strip()
@@ -181,36 +184,37 @@ def main() -> int:
     index = core.module_index()
     order: list[str] = []
     seen: set[str] = set()
+    inherited_bytes: dict[str, bytes] = {}
 
     def visit(name: str) -> None:
         if name in seen or name.split(".")[0] in {"Init", "Std", "Lean", "Mathlib"}:
             return
         paths = index.get(name, [])
-        assert len(paths) == 1, (name, [str(p) for p in paths])
-        for dep in core.imports_of(paths[0].read_bytes()):
+        if len(paths) != 1:
+            raise RuntimeError(f"Expected unique source path for {name}, got {[str(p) for p in paths]}")
+        data = paths[0].read_bytes()
+        inherited_bytes[name] = data
+        for dep in core.imports_of(data):
             visit(dep)
         seen.add(name)
         order.append(name)
 
     visit(TRACK_B_MODULE)
     inherited = list(order)
+    if index[TRACK_B_MODULE][0].resolve() != TRACK_B.resolve():
+        raise RuntimeError(f"Track B path mismatch: {index[TRACK_B_MODULE][0]} != {TRACK_B}")
+    trackb_bytes = inherited_bytes[TRACK_B_MODULE]
 
     with tempfile.TemporaryDirectory(prefix="trackb_krylov_bridge_") as tmp:
         tmp_path = pathlib.Path(tmp)
         env = os.environ.copy()
         env["LEAN_PATH"] = os.pathsep.join([str(tmp_path)] + math_paths)
 
-        conseq_bytes = BASE_CONSEQ.read_bytes()
-        bridges_bytes = BASE_BRIDGES.read_bytes()
-        trackb_bytes = TRACK_B.read_bytes()
-        raw_bytes = SOURCE_FILE.read_bytes()
-
         for name in inherited:
             rel = core.source_file(name)
             target = tmp_path / rel
             target.parent.mkdir(parents=True, exist_ok=True)
-            dep_bytes = trackb_bytes if name == TRACK_B_MODULE else index[name][0].read_bytes()
-            target.write_bytes(dep_bytes)
+            target.write_bytes(inherited_bytes[name])
             compile_lean(lean_bin, ["-o", str(tmp_path / rel[:-5]) + ".olean", rel],
                          tmp_path, env, name)
 
@@ -243,6 +247,7 @@ def main() -> int:
         or BASE_BRIDGES.read_bytes() != bridges_bytes
         or TRACK_B.read_bytes() != trackb_bytes
         or SOURCE_FILE.read_bytes() != raw_bytes
+        or any(index[name][0].read_bytes() != data for name, data in inherited_bytes.items())
     ):
         raise RuntimeError("Source bytes changed on disk during check; snapshot integrity failed")
 
@@ -251,6 +256,7 @@ def main() -> int:
         "source_file": str(SOURCE_FILE.relative_to(HERE)),
         "source_sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "imported_unmodified_sha256": {
+            "FiniteProbKrylov": hashlib.sha256(inherited_bytes["FiniteProbKrylov"]).hexdigest(),
             "ConsequenceDuality": hashlib.sha256(conseq_bytes).hexdigest(),
             "DualityBridges": hashlib.sha256(bridges_bytes).hexdigest(),
             TRACK_B_MODULE: hashlib.sha256(trackb_bytes).hexdigest(),

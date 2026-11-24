@@ -230,6 +230,7 @@ def main() -> int:
         axiom_file.write_text("\n".join(axiom_lines) + "\n", encoding="utf-8")
         axiom_res = subprocess.run(
             [str(LEAN_BIN), str(axiom_file)],
+            cwd=tmp_dir,
             env=env,
             text=True,
             capture_output=True,
@@ -256,6 +257,7 @@ def main() -> int:
         sig_file.write_text("\n".join(sig_lines) + "\n", encoding="utf-8")
         sig_res = subprocess.run(
             [str(LEAN_BIN), str(sig_file)],
+            cwd=tmp_dir,
             env=env,
             text=True,
             capture_output=True,
