@@ -6,7 +6,7 @@
 
 > 这一版仍在修订之中。
 
-*前面这几段约 12–15 分钟，全页约 14–18 分钟；下面各个入口各注明所需时间。*
+*前面这几段约 16–21 分钟，全页约 19–25 分钟；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成；与它所链接之处不一致时，以所链接之处为准。*
 
@@ -14,7 +14,7 @@
 
 这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
-**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 34–44 分钟）。这项工作现在往哪里去、离那里还有多远、下一步试什么，见[方向页](_process/DIRECTION.md)（英文）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。
+**先读**统一的三步读法：（1）约 5–15 分钟在此或[一页](theories/becoming/ONE-PAGE.zh.md)（约 40–52 分钟）速览；（2）[规范地图](theories/becoming/CANONICAL-MAP.zh.md)（[英文版](theories/becoming/CANONICAL-MAP.md)，约 41–53 分钟），把形式脊柱、66 项已登记检验（57 项绑定到动态）、受检情境与先报失效的压力检验合在一次通读里；（3）1 小时审计包——[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)（[英文版](theories/becoming/ALIGNMENT-FOUNDATION.md)）与[人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md)（[英文版](theories/becoming/HUMAN-AUDIT-GUIDE.md)）——以及[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)中的风格化 6 项诊断规格（英文）。这项工作现在往哪里去、离那里还有多远、下一步试什么，见[方向页](_process/DIRECTION.md)（英文）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。
 
 **有什么用。** 本论的中心：一个选择可以一直达到它自己的标准，而某样东西却在耗减，哪怕是它赖以延续的，只要那东西还剩多少对它还不造成差别。这一损失算不算数，也在生灭变化之中形成，形成于人与 AI 之中；只关于动态的定理并不决定它（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四件事：什么能对它造成差别；什么对它不造成差别；有没有余地（是否凡有一个容许的结果把某一样对它不造成差别者留得比另一个更高，就有某个容许的结果在对它造成差别者上处处不低于前者、且至少一处更高？）；以及，若它的规则只由它已偏向的份额重新定出，它能不能锁定。对评判者还要问第五件：它的裁决由一些判断合成，其中谁的判断能随损失增长而变，何时变。这项工作在它的模型上证明了[一个选择在对它造成差别者上达到最好之处，只要有余地，每一样对它不造成差别者，任何容许的结果把它留到多低，它就有多低](theories/becoming/ONE-PAGE.zh.md)；以及，在无噪声时，一条规则若只由它已偏向的份额重新定出，一旦锁定，便在《一页》列出的三个条件下一直保持锁定，不论损失增长到多大，只要这损失对下一步所选出的与规则都不造成差别。一个排名，若其下一条规则按它排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](theories/becoming/chapters/02-MAP.md#t7)。今天要用，有为这五件事所设的[一张表单](theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
@@ -26,6 +26,12 @@
 
 **看到了多远。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 598 条结果](RESULTS.md)中的 567 条给出回执：每一条都从其所述前提推出，任何人都能自己复核，不必信任谁。说实际的奖励、市场与训练出的系统满足这些前提，是猜想，在检验可能失败之处接受检验；说这些定理能解释事物怎样继续下去，说一切（标准也在内）都在[同一个关系性的展开](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding)之中形成，是论证。伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标](theories/becoming/chapters/08-METHOD.md#open-items-ranked)。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为“有通过，有未通过”，4 项通过，4 项未通过，7 项是其他结局；3 项暂缓、放弃或尚未运行。一次对照它所知文献的自动化回顾发现，[每条核心结果都近乎依定义，或是已知结果的重述](theories/becoming/chapters/08-METHOD.md#known-results)，并为每一条指出最接近的先前结果。它认为新的：前提账簿，每个结论都说出其前提，每个前提都被表明在一个模型中成立、在另一个中不成立；把[排序结果](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)所预设的范围与次序说清楚；以及用于守恒、受观察所限的选择与机会集之比较的同一套词汇，它称之为一种表述方式（其原话见 [08 §8](theories/becoming/chapters/08-METHOD.md#known-results)）。
 
+**三层协同、风格化运行时规格与先报失效的压力检验。** 在[规范地图](theories/becoming/CANONICAL-MAP.zh.md)与[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)中，当前统一框架立于三层协同结构之上（[方向页](_process/DIRECTION.md)）：（1）耦合适应系统对齐理论，面向盲区与暗耗、节律期限与耦合检测竞态下的及时转向、以及跨尺度与开放组合；（2）Lean 中零公理的关系前提与反例核心，与隔离的 16 个外围模块（`14` 个 Mathlib `v4.30.0-rc2` 模块加 `2` 个非 Mathlib 模块 `Becoming.FallibleInquiry` 与 `RenewalBridge`，覆盖对所有模式字成立的 `|S| - 1` Krylov 生存可区分性与观测保真度）及独立支线（零公理 `BecomingSpec`、`EncounterEntry` 与 `RelSpanEncounterAdapter`，以及依赖 Mathlib 的 `ConsequenceDuality` 与桥接模块）分开（模块清单与实时计数见对齐基础与规范地图）；（3）智慧与生生伦理通过 `not_entails` 防火墙与动力学并立——任何只读取动力学、且可满足的律都不对所有重要性指派强迫蕴涵 `Unrestricted`（`ScopeDynamics`、`AlignmentSpine`、`MasterSpine`，由构造使然）。在 Lean 之外，[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)（`28` 项单元测试、`14` 个示例）为风格化、AI 编写的提案规格运行 `6` 项精确有理数诊断（依据手设布尔与整数标记机械判为 `GUARDED` 或 `OBSTRUCTED`，并未编码真实 RLHF/RLAIF 管线）。按先报失效的原则：在 `66` 条已登记的经验/模型检验行中（`57` 条绑定到动态，`9` 条未预言/校准；论题计数见上文），`MQ3`（`113` 个鱼类种群上 `0/4`）、`MQ7`、`VD1` 与 `UE31b`（推翻了 `T2` 先前表述），连同 `EM1`、`IN1`（`evidence-replay` 在 `98e0ce989` 上通过 `15/15` 项回放核验，含 8 槽内生静默漂移自检基准与 `R5` 中段三分/单调性）与 `LA2`（单模型在上下文中读取参考集、训练形成情形未测，池化桥接失效），显示了既有模型绑定或表述的破缺之处。在合成[神经对齐压力实验室](experiments/neural-alignment-stress-lab/RESULTS.md)（`B1`–`B5`）中，`B1` 在名义节律边界 `b_feas = 27` 处即出现 `0.55–0.90` 崩塌（即使留出 `+12` 存量余地至 `x0 = 39` 仍有 `0.40–0.45` 崩塌）；`B2` 在被动宏观 TV 审计下出现 `0.902` 隐蔽动作率（`stealth_boost`）与 `1.00` 崩塌（`20/20` 种子）；`B4` 的受护运行 `full_guarded`（`20` 种子）在相关评判者池漂移（`0.50`）、长滞后（`0.45`，`B5` 注明其中含部分种子运气）、高学习率（`lr = 4.0` 时 `0.25`，`lr = 8.0` 时 `0.70`；`B5` 新种子上 `0.80`）与严重混叠（`0.25`）下仍有 `25–50%` 崩塌；`B5` 中 11 项预登记预测有 `4` 项（`P8`–`P11`）未通过（`7` 项成立），仅凭崩塌率不能识别不可逾越之壁，`J = 0.000` 为事后开环核验，且 `lag = 8` 并非清晰之壁；而[真实学习者 B1–B3](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md) 评估在 `B1` 记为 `chosen_m = null`、在 `B2` C 臂记为 `online_passed = false`（`exact_gap = 0.008426 < 0.05`）。
+
+![支撑三层协同架构的四重验证层级：层级 A 零公理关系核心、层级 B 隔离的 16 个外围模块与独立核验支线、层级 C 风格化 6 项运行时规格与先报失效压力之壁，以及经由规则 2 鸿沟与 not_entails 防火墙分隔的层级 D](theories/becoming/results/architecture.zh.svg)
+
+*[统一架构](theories/becoming/CANONICAL-MAP.zh.md)（[英文图](theories/becoming/results/architecture.svg)）展示支撑三层协同架构的四重验证层级：层级 A（零公理核心）、层级 B（隔离的 `14` 个 Mathlib 加 `2` 个非 Mathlib 外围模块与独立支线）、层级 C（风格化 `6` 项运行时规格与先报失效压力实验），经由规则 2 识别鸿沟与 `not_entails` 防火墙，与层级 D（智慧对照表与生生伦理）分隔开。*
+
 ![地形：图集中动态的八个族，以及其间已记录的出口；只依条目画出，一支箭头是出口的计数，不是一条路线](theories/becoming/results/atlas/terrain.svg)
 
 *地形（英文图）：图集中的动态，以及其各族之间已记录的出口，只依图集的条目画出；一支箭头是出口的计数，不是一条路线（[地形](theories/becoming/results/atlas/TERRAIN.md)、[图集](theories/becoming/results/atlas/ATLAS.md)，皆英文）。*
@@ -36,14 +42,17 @@
 
 ## 从哪里读起
 
-先读最短的一层：[一页](theories/becoming/ONE-PAGE.zh.md)；一小时，再读[用途](theories/becoming/USES.zh.md)与[实例](theories/becoming/USES-EXAMPLES.zh.md)中你所在领域的一两例；两小时左右，读一页、用途与[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
+推荐三步读法：先读最短的一层[一页](theories/becoming/ONE-PAGE.zh.md)；再读[规范地图](theories/becoming/CANONICAL-MAP.zh.md)（把零公理核心、16 个外围模块、66 项绑定检验与压力测试合在一起）；然后进入[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)、1 小时[人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md)与[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)，或读[用途](theories/becoming/USES.zh.md)、[实例](theories/becoming/USES-EXAMPLES.zh.md)与[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 34–44 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理与三层对齐进展 | 约 40–52 分钟 |
+| [规范地图](theories/becoming/CANONICAL-MAP.zh.md) | 全图通读综合（[英文版](theories/becoming/CANONICAL-MAP.md)）：零公理脊柱、16 个隔离外围模块、66 项已登记检验（57 项绑定动态）、4 个受检情境、压力测试与 `not_entails` 边界 | 英文版约 41–53 分钟 |
+| [对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md) | 面向 AI 对齐的三项诚实主张（[英文版](theories/becoming/ALIGNMENT-FOUNDATION.md)）：结构核心、风格化 6 项[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)诊断与先报失效的压力边界 | 专题入口 |
+| [人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md) | 给独立研究者的 1 小时可复核审计清单（[英文版](theories/becoming/HUMAN-AUDIT-GUIDE.md)），直接核验 Lean 回执、外围隔离与 `B1`–`B5` 失效 | 约 1 小时审计 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 37–48 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 58–75 分钟 |
-| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 81–105 分钟 |
+| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 81–106 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
 | [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 132–171 分钟 |
@@ -52,6 +61,6 @@
 | [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 84–110 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 134–175 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 38–50 分钟 |
 | [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 39–51 分钟 |
-| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–13 分钟 |
+| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 11–14 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文；义以英文版为准。

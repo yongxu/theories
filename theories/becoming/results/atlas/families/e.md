@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-10 of the atlas's 204 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+10 of the atlas's 220 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -18,7 +18,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [Restoring giving from total withholding](#restoring-giving-from-the-worst-start) | [restoring-giving-from-the-worst-start](../../records/restoring-giving-from-the-worst-start.md) | any type | recorded-checked (theorem) | 3 | 4 |
 | [Thresholds of waiting](#thresholds-of-waiting) | [thresholds-of-waiting](../../records/thresholds-of-waiting.md), [tolerance-monotone-across-laws](../../records/tolerance-monotone-across-laws.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 4 | 5 |
 | [A pair tolerates only within a window](#a-pair-tolerates-only-within-a-window) | [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md) | a named model | recorded-checked (theorem) | 3 | 4 |
-| [Errors by chance in a pair keeping mutual withholding](#errors-by-chance-in-a-pair-keeping-mutual-withholding) | [errors-by-chance-in-a-pair-keeping-mutual-withholding](../../records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md) | a named model | recorded-checked (theorem) | 0 | 5 |
+| [Errors by chance in a pair keeping mutual withholding](#errors-by-chance-in-a-pair-keeping-mutual-withholding) | [errors-by-chance-in-a-pair-keeping-mutual-withholding](../../records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md) | a named model | recorded-checked (theorem) | 1 | 5 |
 | [Offspring read from giving that waits](#offspring-read-from-giving-that-waits) | [offspring-read-from-giving-that-waits](../../records/offspring-read-from-giving-that-waits.md) | a named model | recorded-checked (theorem) | 0 | 4 |
 | [What decides giving against keeping on a flow](#what-decides-giving-against-keeping-on-a-flow) | [what-decides-giving-against-keeping-on-a-flow](../../records/what-decides-giving-against-keeping-on-a-flow.md) | World | recorded-checked (theorem) | 1 | 4 |
 | [What giving that waits draws on](#what-giving-that-waits-draws-on) | [what-giving-that-waits-draws-on](../../records/what-giving-that-waits-draws-on.md) | World | recorded-checked (theorem) | 0 | 4 |
@@ -253,7 +253,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.PairChance.absorbed_share`: [a law keeping mutual withholding](../premises/e.md#pairchance-keepswithheld), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.PairChance.window_witness`: none listed
 - **Forbids.** Not stated.
-- **Exits.** None.
+- **Exits.**
+  - To a state, in words: “permanent mutual withholding from the first of two consecutive joint errors regardless of later inputs”: sufficient, by `Becoming.PairChance.burst_absorbs`. Its edge: Where both formations err at two consecutive steps, a mutual-withholding pair stays absorbingly withheld from then on.. Records: [errors-by-chance-in-a-pair-keeping-mutual-withholding](../../records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding](../../../chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**

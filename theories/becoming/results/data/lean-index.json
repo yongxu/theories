@@ -9096,7 +9096,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9108,7 +9109,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9285,9 +9287,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9323,9 +9328,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9686,8 +9694,10 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9861,12 +9871,15 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "experiments/reform-events/DESIGN.md"
+        "experiments/reform-events/DESIGN.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10685,9 +10698,11 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10797,9 +10812,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10812,9 +10830,12 @@
       "receipt_bytes_match": true,
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10828,8 +10849,10 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10945,7 +10968,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13080,9 +13104,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13208,7 +13235,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13353,8 +13381,10 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13368,10 +13398,13 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier2-open-ended-composition-2026-11-24/NOTE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13423,10 +13456,13 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13440,11 +13476,15 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "theories/becoming/chapters/05-COLLECTIVES.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13559,9 +13599,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13741,9 +13784,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -14543,7 +14589,10 @@
       "receipt_bytes_match": true,
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -15201,9 +15250,12 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -15329,16 +15381,19 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/HUMAN-AUDIT-GUIDE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md",
-        "theories/becoming/history/THE-THEORY-OF-BECOMING.md"
+        "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -15592,7 +15647,8 @@
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md",
-        "theories/becoming/history/THE-THEORY-OF-BECOMING.md"
+        "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -15730,7 +15786,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -16681,7 +16738,8 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -16692,7 +16750,8 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -16703,7 +16762,8 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -16714,7 +16774,8 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -17904,9 +17965,11 @@
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
         "experiments/evidence-replay/README.md",
-        "experiments/evidence-replay/RESULTS.md"
+        "experiments/evidence-replay/RESULTS.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -17916,7 +17979,9 @@
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
-      "direct_documentation_links_from": [],
+      "direct_documentation_links_from": [
+        "theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -17926,7 +17991,11 @@
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
-        "RESULTS.md"
+        "RESULTS.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -19273,8 +19342,11 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md"
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u6-2026-11-24/NOTE.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -19297,7 +19369,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -19335,7 +19408,10 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md"
+        "theories/becoming/ALIGNMENT-FOUNDATION.md",
+        "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.md",
+        "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },

@@ -14,7 +14,7 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 
 ## A. Absorption and ending
 
-31 dynamics, 47 exits.
+32 dynamics (31 read for premises, 1 pending premise extraction), 53 exits.
 
 ```mermaid
 flowchart LR
@@ -51,102 +51,115 @@ flowchart LR
   n30["A reserve defers the end"]
   n31["Dormancy over a stretch, and an ending that is final"]
   n32["The market model's share, margin and ends"]
+  n33["Derived selection-to-drawdown collapse, multi-site exchange…"]
   e1(["outside the region R at step n + 1 from inside it at step n: the move…"])
   n0 -.->|necessary| e1
   e2(["a witness: in Exit…"])
   n0 -.->|witness| e2
-  e3(["a witness: in OneWay, false is possibly drawn into 'true', a region…"])
-  n2 -.->|witness| e3
-  e4(["the sub-process keeping P s…"])
-  n3 -->|sufficient| e4
-  e5(["x is a juncture for s, and the source has, not not, reached the…"])
-  n3 -.->|necessary| e5
-  e6(["a step of continuation from a member of P to something outside P…"])
-  n4 -.->|necessary| e6
-  e7(["a witness without the gate: after one step of joint excess a part…"])
-  n6 -.->|witness| e7
+  e3(["a returning configuration within m steps and one cycle per basin…"])
+  n1 -->|sufficient| e3
+  e4(["a witness: in OneWay, false is possibly drawn into 'true', a region…"])
+  n2 -.->|witness| e4
+  e5(["the sub-process keeping P s…"])
+  n3 -->|sufficient| e5
+  e6(["x is a juncture for s, and the source has, not not, reached the…"])
+  n3 -.->|necessary| e6
+  e7(["a step of continuation from a member of P to something outside P…"])
+  n4 -.->|necessary| e7
+  e8(["a witness without the gate: after one step of joint excess a part…"])
+  n6 -.->|witness| e8
   n6 -.->|necessary| n7
-  e8(["the condition meets g's earlier need at t…"])
-  n7 -.->|necessary| e8
-  e9(["at every step t after T at which g is still active, g no longer…"])
+  e9(["the condition meets g's earlier need at t…"])
   n7 -.->|necessary| e9
-  e10(["a witness: from one configuration of one process, three runs break…"])
-  n7 -.->|witness| e10
-  e11(["from a start level up to hi, the condition ends…"])
-  n8 ==>|exact| e11
-  e12(["a witness with giving that adjusts one unit a step toward the…"])
-  n8 -.->|witness| e12
-  e13(["the line reaches, within as many steps as its starting level, a…"])
-  n9 -->|sufficient| e13
-  e14(["the line never ends: at the first marked step, the need met there and…"])
-  n9 ==>|exact| e14
-  e15(["the line under the kind's class ends while the net goes on, and the…"])
-  n9 -->|sufficient| e15
-  e16(["from the level nine, first marked at six: the way turns with two…"])
-  n9 -.->|witness| e16
-  e17(["the net ends: at some step no need is met, with no bound on the step'…"])
-  n10 -->|sufficient| e17
-  e18(["a first unmet need within hi + 1 steps, the way until then the…"])
+  e10(["at every step t after T at which g is still active, g no longer…"])
+  n7 -.->|necessary| e10
+  e11(["a witness: from one configuration of one process, three runs break…"])
+  n7 -.->|witness| e11
+  e12(["from a start level up to hi, the condition ends…"])
+  n8 ==>|exact| e12
+  e13(["a witness with giving that adjusts one unit a step toward the…"])
+  n8 -.->|witness| e13
+  e14(["the line reaches, within as many steps as its starting level, a…"])
+  n9 -->|sufficient| e14
+  e15(["the line never ends: at the first marked step, the need met there and…"])
+  n9 ==>|exact| e15
+  e16(["the line under the kind's class ends while the net goes on, and the…"])
+  n9 -->|sufficient| e16
+  e17(["from the level nine, first marked at six: the way turns with two…"])
+  n9 -.->|witness| e17
+  e18(["the net ends: at some step no need is met, with no bound on the step'…"])
   n10 -->|sufficient| e18
-  e19(["a closed line is gone from the way from some step on, and what is…"])
+  e19(["a first unmet need within hi + 1 steps, the way until then the…"])
   n10 -->|sufficient| e19
-  e20(["from a level up to hi at or above the threshold for its recent…"])
-  n11 ==>|exact| e20
-  e21(["some formation supported at a step t from T before T + n feeds g's…"])
-  n13 -.->|necessary| e21
-  e22(["a witness: with either of two redundant feeders, or both, the…"])
-  n13 -.->|witness| e22
-  e23(["a witness on a separate flow: with Overshoot's dependences, each…"])
+  e20(["a closed line is gone from the way from some step on, and what is…"])
+  n10 -->|sufficient| e20
+  e21(["from a level up to hi at or above the threshold for its recent…"])
+  n11 ==>|exact| e21
+  e22(["some formation supported at a step t from T before T + n feeds g's…"])
+  n13 -.->|necessary| e22
+  e23(["a witness: with either of two redundant feeders, or both, the…"])
   n13 -.->|witness| e23
+  e24(["a witness on a separate flow: with Overshoot's dependences, each…"])
+  n13 -.->|witness| e24
   n13 -->|sufficient| n14
-  e24(["where the consumer consumes through no dependence that such a change…"])
-  n14 ==>|exact| e24
-  e25(["a witness: a lone formation consuming only through its own dependence…"])
-  n14 -.->|witness| e25
-  e26(["a witness: with no draw on the middle condition of a three-link…"])
-  n15 -.->|witness| e26
-  e27(["a witness of mutual support: from level two the first condition ends…"])
+  e25(["where the consumer consumes through no dependence that such a change…"])
+  n14 ==>|exact| e25
+  e26(["a witness: a lone formation consuming only through its own dependence…"])
+  n14 -.->|witness| e26
+  e27(["a witness: with no draw on the middle condition of a three-link…"])
   n15 -.->|witness| e27
-  n15 -.->|witness| n16
-  e28(["a witness with a recent giving: one condition under a draw of two…"])
+  e28(["a witness of mutual support: from level two the first condition ends…"])
   n15 -.->|witness| e28
-  e29(["a whole of every part active at every step from T on, exactly where…"])
-  n18 ==>|exact| e29
-  e30(["a witness: in Generations, a formation that is the whole of every…"])
-  n18 -.->|witness| e30
-  e31(["a witness: in Body, the spreading lineage, whose descendant needs…"])
-  n19 -.->|witness| e31
-  e32(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
-  n20 -.->|witness| e32
-  e33(["a witness: a renewer giving two units at every step and requiring…"])
+  n15 -.->|witness| n16
+  e29(["a witness with a recent giving: one condition under a draw of two…"])
+  n15 -.->|witness| e29
+  e30(["a whole of every part active at every step from T on, exactly where…"])
+  n18 ==>|exact| e30
+  e31(["a witness: in Generations, a formation that is the whole of every…"])
+  n18 -.->|witness| e31
+  e32(["a witness: in Body, the spreading lineage, whose descendant needs…"])
+  n19 -.->|witness| e32
+  e33(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
   n20 -.->|witness| e33
-  e34(["a witness without the gate: the renewer's own line, giving to the…"])
+  e34(["a witness: a renewer giving two units at every step and requiring…"])
   n20 -.->|witness| e34
-  e35(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
+  e35(["a witness without the gate: the renewer's own line, giving to the…"])
   n20 -.->|witness| e35
-  e36(["another rule of the family: from no holder and no other, at a quota…"])
-  n22 -->|sufficient| e36
-  e37(["another rule of the family: a reader rebuilt from the supply, at…"])
-  n23 -->|sufficient| e37
-  e38(["the course contains a gated move: some move a of the plan has gate a…"])
-  n24 -.->|necessary| e38
-  e39(["the course splits into a prefix that keeps the quantity, a gated step…"])
+  e36(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
+  n20 -.->|witness| e36
+  e37(["another rule of the family: from no holder and no other, at a quota…"])
+  n22 -->|sufficient| e37
+  e38(["another rule of the family: a reader rebuilt from the supply, at…"])
+  n23 -->|sufficient| e38
+  e39(["the course contains a gated move: some move a of the plan has gate a…"])
   n24 -.->|necessary| e39
+  e40(["the course splits into a prefix that keeps the quantity, a gated step…"])
+  n24 -.->|necessary| e40
+  e41(["empty next generation (G.size (t + 1) = 0), leaving no member to…"])
+  n25 -->|sufficient| e41
+  e42(["no offspring across step t for any member depending (at need '= m) on…"])
+  n25 -->|sufficient| e42
   n26 -->|sufficient| n27
   n26 ==>|exact| n27
-  e40(["a witness: a formation unsupported at the first three steps and…"])
-  n31 -.->|witness| e40
-  e41(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
-  n32 ==>|exact| e41
-  e42(["a witness: in the original example at β = 1/2 with no shocks, from…"])
-  n32 -.->|witness| e42
+  e43(["inactivity once steps past last support reach the decaying reserve…"])
+  n30 -->|sufficient| e43
+  e44(["a witness: a formation unsupported at the first three steps and…"])
+  n31 -.->|witness| e44
+  e45(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
+  n32 ==>|exact| e45
+  e46(["a witness: in the original example at β = 1/2 with no shocks, from…"])
+  n32 -.->|witness| e46
+  e47(["eventual drawdown collapse once embodied positive-selection surplus…"])
+  n33 -->|sufficient| e47
+  e48(["sealed internal viability and major-transition selection shift across…"])
+  n33 -->|sufficient| e48
   classDef other stroke-dasharray: 3 3
 ```
 
 | Dynamic | Leaves to | Reaches by named exits (weakest step) |
 |---|---|---|
 | [Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) | 1. outside the region R at step n + 1 from inside it at step n: the move the run took at step n is one under which R is not absorbing (¬ AbsorbingUnder P R (r.act n)) (necessary; dropping [every move taken keeps the region](premises/a.md#run-moves-keep), [invariant](premises/a.md#invariant))<br>2. a witness: in Exit (configurations and moves are bits, the move true flips), {true} is absorbing under the move false and not under true, so not invariant; the run that leaves is in {true} at step 0 and out of it at step 1, and its move at step 0 does not keep {true} (witness; dropping [every move taken keeps the region](premises/a.md#run-moves-keep), [invariant](premises/a.md#invariant)) | — |
-| [Basins of a determined law, one cycle each](families/a.md#basins-of-a-determined-law) | **none: no exit is stated** | — |
+| [Basins of a determined law, one cycle each](families/a.md#basins-of-a-determined-law) | 1. a returning configuration within m steps and one cycle per basin across m listed configurations (sufficient) | — |
 | [Necessarily drawn exactly what does not return](families/a.md#necessarily-drawn-is-not-returning) | 1. a witness: in OneWay, false is possibly drawn into {true}, a region the process never leaves, is not necessarily drawn into it (the run that keeps false never enters it), and returns (witness) | — |
 | [Every loss passes a juncture](families/a.md#every-loss-passes-a-juncture) | 1. the sub-process keeping P s (the steps after which s can still be had) keeps s: from wherever its course from s leads it can have s again (Keeps (keeping P s) s) (sufficient; dropping [cannot be had again](premises/a.md#branching-lost))<br>2. x is a juncture for s, and the source has, not not, reached the reader g by D (¬ ¬ ReachedBy L L' W obs source g D) (necessary; dropping [the source has not reached the reader](premises/a.md#timedresponse-unreached)) | — |
 | [Not going out of a region](families/a.md#not-going-out-of-a-region) | 1. a step of continuation from a member of P to something outside P, placed on the line: reached from the line's start and reaching its end (necessary; dropping [«闭» (closed)](PREMISES.md#grammarlaws-bi)) | — |
@@ -169,13 +182,14 @@ flowchart LR
 | [The ends of a rule rebuilt from its members: no holder, and the end, do not return](families/a.md#a-rule-with-no-holder-does-not-return) | 1. another rule of the family: from no holder and no other, at a quota, a level and a tenure of at least one, with entrants on offer, the rule taught from outside has holders after one step; taught by members, or not at all, it has none (sufficient; dropping [taught by members or not at all](PREMISES.md#rulerebuilding-taught-within)) | — |
 | [A reader rebuilt from the level it reads: its end does not come back](families/a.md#a-reader-rebuilt-from-its-stock-ends-with-it) | 1. another rule of the family: a reader rebuilt from the supply, at least one unit wanted, gone, is present again after one supplied step, at every level (sufficient; dropping [a reader rebuilt from the level](PREMISES.md#readerrebuilding-rebuilt-from-level)) | — |
 | [What ungated steps keep; an empty pool stays empty](families/a.md#what-a-gate-keeps) | 1. the course contains a gated move: some move a of the plan has gate a = true (necessary; dropping [a course of ungated moves](premises/a.md#gated-plan-ungated))<br>2. the course splits into a prefix that keeps the quantity, a gated step that itself changes it, and the rest (necessary; dropping [a course of ungated moves](premises/a.md#gated-plan-ungated)) | — |
-| [Groups with less leave nothing; groups on one family end together](families/a.md#selection-among-groups-by-ending) | **none: no exit is stated** | — |
+| [Groups with less leave nothing; groups on one family end together](families/a.md#selection-among-groups-by-ending) | 1. empty next generation (G.size (t + 1) = 0), leaving no member to select among at t + 1 (sufficient)<br>2. no offspring across step t for any member depending (at need >= m) on a condition pushed into joint excess (sufficient) | — |
 | [Draining: below a drained level no history lasts](families/a.md#market-finite-support-obstruction) | 1. [Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) (sufficient; dropping [stock short of the horizon](premises/a.md#finitesupportobstruction-stock-short), [below level n](premises/a.md#lasting-below-level))<br>2. [Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) (exact; dropping [below level n](premises/a.md#lasting-below-level)) | [Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) (exact), [Not going out of a region](families/a.md#not-going-out-of-a-region) (exact) |
 | [Four routes of transition, none a proved phase transition](families/a.md#four-routes-of-transition) | **none: no exit is stated** | — |
 | [Slowing down before a condition's own end](families/a.md#slowing-down-before-an-own-end) | **none: no exit is stated** | — |
-| [A reserve defers the end](families/a.md#reserve-defers-ending) | **none: no exit is stated** | — |
+| [A reserve defers the end](families/a.md#reserve-defers-ending) | 1. inactivity once steps past last support reach the decaying reserve bound (sufficient) | — |
 | [Dormancy over a stretch, and an ending that is final](families/a.md#dormancy-over-a-stretch) | 1. a witness: a formation unsupported at the first three steps and supported from step three on, with a reserve of three falling by one at each unsupported step, is active at every step: support returning within the reserve finds it (witness; dropping [unsupported over the stretch](premises/a.md#web-unsupported-over-stretch)) | — |
 | [The market model's share, margin and ends](families/a.md#market-model-share-margin-and-ends) | 1. where the margin M = α(1 − θ) − βλθ is negative, the floor is not protected: some level θ ≤ q ≤ 1 under some influence 0 ≤ w ≤ λ falls below θ at the next step (exact)<br>2. a witness: in the original example at β = 1/2 with no shocks, from the box about the maintenance end with stock at least 5, the guarded history never stops (witness) | — |
+| [Derived selection-to-drawdown collapse, multi-site exchange bridges, and compositional transitions](families/a.md#derived-evolutionary-drawdown-and-transitions) | 1. eventual drawdown collapse once embodied positive-selection surplus pushes uptake above bounded substrate renewal (sufficient)<br>2. sealed internal viability and major-transition selection shift across boundary-hidden OpenComponent assemblies (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -212,7 +226,7 @@ flowchart LR
 
 ## B. Drains beyond what couples in
 
-28 dynamics, 77 exits.
+28 dynamics, 79 exits.
 
 ```mermaid
 flowchart LR
@@ -342,52 +356,56 @@ flowchart LR
   e37(["with a part whose activity never ends, every other premise of…"])
   n26 -.->|witness| e37
   n26 -.->|witness| n27
-  e38(["valuing the catch only up to 26, the optima among the season's…"])
-  n29 -.->|witness| e38
-  e39(["ranked by the ground's catch alone, the optima among the season's…"])
-  n29 -.->|witness| e39
-  e40(["where a list holds exactly the members and each member's coupling of…"])
-  n30 ==>|exact| e40
-  e41(["in Clearing, every selection through the pooled coupling of the…"])
-  n30 -.->|witness| e41
-  n30 -.->|witness| n31
-  e42(["where the rest follows a law reading through its couplings and the…"])
-  n30 -.->|necessary| e42
-  e43(["in Replenishing an actor takes one unit from a condition at step 0…"])
+  e38(["zero loss beyond the region once the region covers every formation of…"])
+  n28 -->|sufficient| e38
+  e39(["dweller excluded outside alongDependence from step 2 on whenever…"])
+  n28 -.->|witness| e39
+  e40(["valuing the catch only up to 26, the optima among the season's…"])
+  n29 -.->|witness| e40
+  e41(["ranked by the ground's catch alone, the optima among the season's…"])
+  n29 -.->|witness| e41
+  e42(["where a list holds exactly the members and each member's coupling of…"])
+  n30 ==>|exact| e42
+  e43(["in Clearing, every selection through the pooled coupling of the…"])
   n30 -.->|witness| e43
-  e44(["two histories are selected alike by every selection read off a…"])
-  n30 ==>|exact| e44
+  n30 -.->|witness| n31
+  e44(["where the rest follows a law reading through its couplings and the…"])
+  n30 -.->|necessary| e44
+  e45(["in Replenishing an actor takes one unit from a condition at step 0…"])
+  n30 -.->|witness| e45
+  e46(["two histories are selected alike by every selection read off a…"])
+  n30 ==>|exact| e46
   n30 -.->|reading| n32
   n30 -.->|argued| n33
   n30 -.->|argued| n13
   n30 -.->|argued| n3
   n30 -.->|argued| n34
   n30 -.->|reading| n35
-  e45(["read off a fixed pool, selection by persistence fails at every course…"])
-  n33 -->|sufficient| e45
-  e46(["not reached here: the meta-attractor itself, a selection by share…"])
-  n33 -.->|open| e46
+  e47(["read off a fixed pool, selection by persistence fails at every course…"])
+  n33 -->|sufficient| e47
+  e48(["not reached here: the meta-attractor itself, a selection by share…"])
+  n33 -.->|open| e48
   n33 -.->|reading| n32
   n33 -.->|reading| n36
   n33 -.->|argued| n35
-  e47(["too late: the courses are not readable in time, and no family of…"])
-  n34 -->|sufficient| e47
-  e48(["read only once it has happened: where what is kept includes every…"])
-  n34 -->|sufficient| e48
+  e49(["too late: the courses are not readable in time, and no family of…"])
+  n34 -->|sufficient| e49
+  e50(["read only once it has happened: where what is kept includes every…"])
+  n34 -->|sufficient| e50
   n34 -.->|witness| n37
   n34 -.->|reading| n38
-  e49(["a narrowing ranked above its widening without a negative weight: the…"])
-  n39 -.->|witness| e49
-  e50(["a narrowing ranked above its widening when read right under a net…"])
-  n39 ==>|exact| e50
-  e51(["separate evaluation diverging from joint increment: adding an item is…"])
+  e51(["a narrowing ranked above its widening without a negative weight: the…"])
   n39 -.->|witness| e51
-  e52(["positive weightings within ratio n/d disagreeing on a mixed…"])
+  e52(["a narrowing ranked above its widening when read right under a net…"])
   n39 ==>|exact| e52
-  e53(["the shared order no longer separating a widening: every item added…"])
-  n39 -->|sufficient| e53
-  e54(["monotone trap keeping level below threshold m across 'T, T + N'…"])
-  n40 -->|sufficient| e54
+  e53(["separate evaluation diverging from joint increment: adding an item is…"])
+  n39 -.->|witness| e53
+  e54(["positive weightings within ratio n/d disagreeing on a mixed…"])
+  n39 ==>|exact| e54
+  e55(["the shared order no longer separating a widening: every item added…"])
+  n39 -->|sufficient| e55
+  e56(["monotone trap keeping level below threshold m across 'T, T + N'…"])
+  n40 -->|sufficient| e56
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -414,7 +432,7 @@ flowchart LR
 | [Position does not protect](families/b.md#position-does-not-protect) | 1. in Restored the race is one step of joint excess and the part, greatest at every step by what each has drawn, is inactive at step one; the renewer, which gives at that step and does not require the condition, restores the level, and the part is active from step two on (a witness) (dropping [the gate at need m](PREMISES.md#flow-gated))<br>2. in the clearing witness the clearer, greatest at every step by what it has drawn, does not require the habitat and is active and supported at every step, while the dweller, depending on the habitat at need one, is inactive from step two on (witness; dropping [a dependence at the step](PREMISES.md#web-requires), [every part requires the condition from the race's end](premises/b.md#flow-family-requires-from-race-end))<br>3. a flow with the race's positions at every step (the same greatest part, the first rising in position in both) in which what is taken is within what is given at every step, the condition rises and every part is active at every step (a witness) (dropping [joint excess at the steps named](PREMISES.md#flow-joint-excess)) | — |
 | [No finite part bears taking](families/b.md#no-finite-part-bears-taking) | 1. [A closed cycle sustains unceasing arising, without dissipation](families/f.md#closed-cycle-without-dissipation) (witness; dropping [dissipation](PREMISES.md#k3-dissipation))<br>2. the flow balances, gives and takes only while active, keeps activity supported and is dissipative, yet no step is enclosed: at every step the renewer gives the pool one unit while taking nothing, and a formation takes from the pool (a witness) (dropping [enclosed](PREMISES.md#k3-enclosed)) | [A closed cycle sustains unceasing arising, without dissipation](families/f.md#closed-cycle-without-dissipation) (witness), [The rest theorem](families/g.md#continued-change-needs-openness) (witness) |
 | [A whole drawing beyond renewal ends](families/b.md#whole-drawing-beyond-renewal-ends) | 1. [A whole persists through the arising of its parts](families/h.md#whole-persists-through-generation) (witness; dropping [a family drawn beyond its renewal](PREMISES.md#flow-family-excess))<br>2. with a part whose activity never ends, every other premise of Whole.family_excess_ends holds, the uptake exceeding the replenishment at step zero from a stock below one plus the need, and the whole is active at every step (a witness) (dropping [a formation's activity ends](PREMISES.md#web-ends))<br>3. [A whole persists through the arising of its parts](families/h.md#whole-persists-through-generation) (witness; dropping [parts arise depending on the family](premises/b.md#web-whole-arising-depends-on-family)) | [A whole persists through the arising of its parts](families/h.md#whole-persists-through-generation) (witness) |
-| [Loss beyond a region](families/b.md#loss-beyond-a-region) | **none: no exit is stated** | — |
+| [Loss beyond a region](families/b.md#loss-beyond-a-region) | 1. zero loss beyond the region once the region covers every formation of the whole (sufficient)<br>2. dweller excluded outside alongDependence from step 2 on whenever levels omit the clearer part (witness) | — |
 | [LA4's season](families/b.md#the-test-season-meets-the-optimum-laws) | 1. valuing the catch only up to 26, the optima among the season's outcomes include a season keeping the bay at six and one emptying it (a witness) (dropping [Rising](premises/b.md#optimum-rising))<br>2. ranked by the ground's catch alone, the optima among the season's outcomes include a season keeping the bay at six and one emptying it (a witness) (dropping [Rising](premises/b.md#optimum-rising)) | — |
 | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | 1. where a list holds exactly the members and each member's coupling of two histories up to t is decided, some selection through the pooled coupling separates them exactly where some member couples them apart (exact)<br>2. in Clearing, every selection through the pooled coupling of the clearer and its source selects the cleared and the spared world alike at every step; the dweller lies beyond the clearer's closure drawn through both flows; and its admission at step 2 is a selection through the pooled coupling of every pool holding it, from step 2 on, holding in the spared world and failing in the cleared one, while no pool within the clearer's closure has it (a witness) (dropping [the pool within the group's closure drawn through both flows](PREMISES.md#flow-pool-within-group-closure-either))<br>3. [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (witness; dropping [the pool within the group's closure drawn through both flows](PREMISES.md#flow-pool-within-group-closure-either))<br>4. where the rest follows a law reading through its couplings and the part acts alike with c from s on, a difference at c open at s and closed at s + N closes through a formation outside the part, present at some step between, exchanging with c differently in the two courses and coupling them apart up to that step (necessary)<br>5. in Replenishing an actor takes one unit from a condition at step 0 and a responder coupling into it, following a law reading through its coupling, gives one unit where the level stands below its start: the courses are apart at step 1, through the responder (a witness)<br>6. two histories are selected alike by every selection read off a group's couplings over the whole run exactly where they are alike through every member's couplings at every step: such a selection is turned only where a difference changes, at some step, what couples into some member (exact; dropping [the part beyond the coupling closure](PREMISES.md#selection-part-beyond), [the two acts agree within the group's closure](PREMISES.md#selectiongap-acts-agree-within-group-closure))<br>7. [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading)<br>8. [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) (argued)<br>9. [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (argued)<br>10. [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (argued)<br>11. [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (argued)<br>12. [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (reading) | [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (witness), [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) (reading), [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading), [The point of no return of a regime](families/a.md#margin-of-a-regime) (argued), [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading), [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (argued), [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading), [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) (argued), [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (argued), [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued), [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (argued) |
 | [A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) | 1. read off a fixed pool, selection by persistence fails at every course removing a line alive at the start: the removal registered (sufficient)<br>2. not reached here: the meta-attractor itself, a selection by share coming to select for control of its rule, would need RuleShaping's counts read off the pool the course gives, a join not made; read off its survivors the selection reads nothing beyond them as closed capture reads nothing beyond its share, a likeness of shape (SurvivorsPersist beside Unread), not a law (open)<br>3. [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading)<br>4. [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading)<br>5. [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued) | [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) (reading), [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) (reading), [The loss read in time by the others, joined to the critical mass](families/c.md#loss-read-in-time-by-the-others) (reading), [The point of no return of a regime](families/a.md#margin-of-a-regime) (reading), [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) (reading), [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](families/b.md#reading-a-loss-in-time) (reading), [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) (reading), [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) (reading), [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (argued), [The rest outruns the renewal](families/b.md#the-rest-outruns-the-renewal) (reading), [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) (reading) |
@@ -469,7 +487,7 @@ flowchart LR
 
 ## C. Capture of the selection
 
-21 dynamics, 30 exits.
+22 dynamics (21 read for premises, 1 pending premise extraction), 34 exits.
 
 ```mermaid
 flowchart LR
@@ -494,71 +512,80 @@ flowchart LR
   n18["Fidelity under one name-table discipline…"]
   n19["A way of units on a stock under a rule set again…"]
   n20["Open adaptive loops, assume-guarantee viability, and the…"]
-  e1(["from the locked configuration carriers two to one under hi…"])
-  n1 -.->|witness| e1
-  e2(["at the step after every reading step r with N ≤ b + r, the rule in…"])
-  n2 -->|sufficient| e2
-  e3(["along the joined two-level step, from a start whose rule favours, the…"])
+  n21["Endogenous detection before capture lock and split evidence…"]
+  e1(["permanently shifted orbit following the perturbed rule from the next…"])
+  n0 -.->|witness| e1
+  e2(["from the locked configuration carriers two to one under hi…"])
+  n1 -.->|witness| e2
+  e3(["at the step after every reading step r with N ≤ b + r, the rule in…"])
   n2 -->|sufficient| e3
-  e4(["where the carriers are fewer than the others at the reading step at…"])
-  n3 ==>|exact| e4
-  e5(["the shapers' share falls strictly at every step of the run, nothing…"])
-  n4 -->|sufficient| e5
+  e4(["along the joined two-level step, from a start whose rule favours, the…"])
+  n2 -->|sufficient| e4
+  e5(["where the carriers are fewer than the others at the reading step at…"])
+  n3 ==>|exact| e5
+  e6(["the shapers' share falls strictly at every step of the run, nothing…"])
+  n4 -->|sufficient| e6
   n4 -->|sufficient| n1
-  e6(["from a start the rule read there favours, the others reading the loss…"])
-  n5 ==>|exact| e6
-  e7(["drawn one member at a time, from every count i ≤ M the histories…"])
-  n5 -->|sufficient| e7
-  e8(["at a reading step r at which the loss has reached its bound and the…"])
-  n6 ==>|exact| e8
-  e9(["counts three to two under the score one to two, the rule in force…"])
-  n7 -.->|witness| e9
-  e10(["counts three to one under a new score one to four, read at once…"])
+  e7(["from a start the rule read there favours, the others reading the loss…"])
+  n5 ==>|exact| e7
+  e8(["drawn one member at a time, from every count i ≤ M the histories…"])
+  n5 -->|sufficient| e8
+  e9(["at a reading step r at which the loss has reached its bound and the…"])
+  n6 ==>|exact| e9
+  e10(["counts three to two under the score one to two, the rule in force…"])
   n7 -.->|witness| e10
-  e11(["counts three to two under the score one to two, the rule in force…"])
-  n11 -.->|witness| e11
-  e12(["counts three to one under a new score one to four, read at once…"])
+  e11(["counts three to one under a new score one to four, read at once…"])
+  n7 -.->|witness| e11
+  e12(["counts three to two under the score one to two, the rule in force…"])
   n11 -.->|witness| e12
-  e13(["from the locked configuration carriers two to one under hi, the rule…"])
-  n12 -.->|witness| e13
-  e14(["at the step after every reading step r with N ≤ b + r, the rule in…"])
-  n12 -->|sufficient| e14
-  e15(["every formation gives the sense one form, from every start, after the…"])
-  n13 ==>|exact| e15
-  e16(["the group no longer agrees at the sense after the step: a member…"])
+  e13(["counts three to one under a new score one to four, read at once…"])
+  n11 -.->|witness| e13
+  e14(["from the locked configuration carriers two to one under hi, the rule…"])
+  n12 -.->|witness| e14
+  e15(["at the step after every reading step r with N ≤ b + r, the rule in…"])
+  n12 -->|sufficient| e15
+  e16(["every formation gives the sense one form, from every start, after the…"])
   n13 ==>|exact| e16
-  e17(["leaving needs a formation holding a form other than the imposed one…"])
-  n13 -.->|necessary| e17
-  e18(["the formation hearing tells m from m' at the next step: it holds at m…"])
-  n13 -->|sufficient| e18
-  e19(["every formation tells m and m' apart again: each holds at m the…"])
+  e17(["the group no longer agrees at the sense after the step: a member…"])
+  n13 ==>|exact| e17
+  e18(["leaving needs a formation holding a form other than the imposed one…"])
+  n13 -.->|necessary| e18
+  e19(["the formation hearing tells m from m' at the next step: it holds at m…"])
   n13 -->|sufficient| e19
-  e20(["in a witness of two formations from a symmetric disagreement, each of…"])
-  n13 -.->|witness| e20
-  e21(["from no counts, one hearing of the first word of greatest count, a…"])
-  n14 -.->|witness| e21
-  e22(["from counts 1, 0 for one agent and 0, 0 for the other, one step of…"])
+  e20(["every formation tells m and m' apart again: each holds at m the…"])
+  n13 -->|sufficient| e20
+  e21(["in a witness of two formations from a symmetric disagreement, each of…"])
+  n13 -.->|witness| e21
+  e22(["from no counts, one hearing of the first word of greatest count, a…"])
   n14 -.->|witness| e22
-  e23(["leaving the lock: only along a stretch containing a reading step…"])
-  n16 -.->|necessary| e23
-  e24(["turned for good from step 4: readers standing while the loss is below…"])
-  n16 -.->|witness| e24
-  e25(["not locked at step 4, the rule in force favouring the others at step…"])
+  e23(["from counts 1, 0 for one agent and 0, 0 for the other, one step of…"])
+  n14 -.->|witness| e23
+  e24(["leaving the lock: only along a stretch containing a reading step…"])
+  n16 -.->|necessary| e24
+  e25(["turned for good from step 4: readers standing while the loss is below…"])
   n16 -.->|witness| e25
-  e26(["a first step with no need met (ends_iff_unmet), or a step holding…"])
-  n19 -->|sufficient| e26
-  e27(["witness of a single unit need tipping between Tested persistence…"])
-  n19 -.->|witness| e27
-  e28(["permanent joint Viability.Kernel above x_crit across heterogeneous…"])
-  n20 -->|sufficient| e28
-  e29(["joint substrate collapse while every local unread loop continues to…"])
+  e26(["not locked at step 4, the rule in force favouring the others at step…"])
+  n16 -.->|witness| e26
+  e27(["a first step with no need met (ends_iff_unmet), or a step holding…"])
+  n19 -->|sufficient| e27
+  e28(["witness of a single unit need tipping between Tested persistence…"])
+  n19 -.->|witness| e28
+  e29(["permanent joint Viability.Kernel above x_crit across heterogeneous…"])
   n20 -->|sufficient| e29
+  e30(["joint substrate collapse while every local unread loop continues to…"])
+  n20 -->|sufficient| e30
+  e31(["permanent disfavouring of target carriers and admission of…"])
+  n21 ==>|exact| e31
+  e32(["permanent lockout of alternatives (admits = false) at every step from…"])
+  n21 -->|sufficient| e32
+  e33(["split-evidence contrast where isolated locally sound filters stay…"])
+  n21 -->|sufficient| e33
   classDef other stroke-dasharray: 3 3
 ```
 
 | Dynamic | Leaves to | Reaches by named exits (weakest step) |
 |---|---|---|
-| [The capture of a target](families/c.md#target-capture) | **none: no exit is stated** | — |
+| [The capture of a target](families/c.md#target-capture) | 1. permanently shifted orbit following the perturbed rule from the next step on (witness) | — |
 | [Capture through the rule](families/c.md#capture-through-the-rule) | 1. from the locked configuration carriers two to one under hi (each carrier four offspring to each other's one), the rule reversed to lo and held one step before the threshold reading reads: the course is locked the other way from step 1, neither share nor rule rises at any later step, and the rule after the first reading step is below hi (witness; dropping [the reading favours at every share](premises/c.md#rulecapture-uniform), [the perturbed rule favours](premises/c.md#rulecapture-keeps)) | — |
 | [Closed capture (meta-attractor, in the glossary's sense) (元吸引子)](families/c.md#closed-capture) | 1. at the step after every reading step r with N ≤ b + r, the rule in force does not favour, so the course is not locked there, whatever the share (sufficient; dropping [Unread](premises/c.md#closedcapture-unread))<br>2. along the joined two-level step, from a start whose rule favours, the line under the class of favouring or not is not unending: past the reading step the rule no longer favours (sufficient; dropping [Unread](premises/c.md#closedcapture-unread)) | — |
 | [Readers drawn from the selected](families/c.md#readers-drawn-from-the-selected) | 1. where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is not locked for good under the late pool from the next step on (exact; dropping [the others' reading favours the carriers](premises/c.md#closedcapture-drawn-fv), [Unread](premises/c.md#closedcapture-unread)) | — |
@@ -579,6 +606,7 @@ flowchart LR
 | [Fidelity under one name-table discipline (Controlled English vs. classical statements)](families/c.md#fidelity-under-one-discipline) | **none: no exit is stated** | — |
 | [A way of units on a stock under a rule set again (依复定之律而在存上之群行)](families/c.md#a-way-of-units-under-a-rule-set-again) | 1. a first step with no need met (ends_iff_unmet), or a step holding Tested whose net never ends under share-reading premises (tested_lasts) (sufficient)<br>2. witness of a single unit need tipping between Tested persistence (twelve small units) and total collapse (NeedTwentySix vs NeedTwentySeven) (witness) | — |
 | [Open adaptive loops, assume-guarantee viability, and the coupled race (开放适应回路、假设保证存续与耦合竞速)](families/c.md#coupled-adaptive-loops-and-race) | 1. permanent joint Viability.Kernel above x_crit across heterogeneous black-box adaptive loops when warning buffer covers (globalMaxLag + 1) * preTotal (sufficient)<br>2. joint substrate collapse while every local unread loop continues to satisfy its own LocalOK predicates (unread_adaptive_joint_collapse; coupled_race_theorem witnesses) (sufficient) | — |
+| [Endogenous detection before capture lock and split evidence (捕获锁定前之内生检测与分裂证据)](families/c.md#endogenous-detection-before-capture-lock) | 1. permanent disfavouring of target carriers and admission of alternatives (admits = true) at every step from r + 1 on iff carrier <= other at r + 1 (exact)<br>2. permanent lockout of alternatives (admits = false) at every step from r + 1 on (sufficient)<br>3. split-evidence contrast where isolated locally sound filters stay locked in carrier favour while pooled exchange turns to alternative admission (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread: the joined laws of closed capture hold it by their form, the loss there unread, and list it; the other locks hold it by having nothing beyond the share, and do not list it.
 
@@ -603,7 +631,7 @@ flowchart LR
 
 ## D. Locks of knowing
 
-25 dynamics, 35 exits.
+31 dynamics (25 read for premises, 6 pending premise extraction), 65 exits.
 
 ```mermaid
 flowchart LR
@@ -614,25 +642,33 @@ flowchart LR
   n4["What seeking cannot separate"]
   n5["What holding an act for a reading is worth: a listing that…"]
   n6["A prediction read by what it predicts"]
-  n7["Runaway, and the distance to the break that does not couple…"]
-  n8["A reading kept by its update, and the reading its own…"]
-  n9["What training installs"]
-  n10["What a commuting law keeps apart, and what a learner's…"]
-  n11["A family of readings within what it reads"]
-  n12["Adaptive closure: a reference changed outside what is…"]
-  n13["Correction is not calibration: references recover the…"]
-  n14["Extrapolation by elimination"]
-  n15["A cascade at the histories reached, and readers reading…"]
-  n16["A pool that recruits through itself"]
-  n17["Which selections survive and remain executable when the…"]
-  n18["A revision of a reading that opens a correction, along one…"]:::other
-  n19["A wrong projection admitted at every step while the move…"]
-  n20["Evidence through change: readings propagated through…"]
-  n21["Chosen encounters: records only narrow the candidates, and…"]
-  n22["A reading informed and revalued along one law: the updates…"]
-  n23["What choices show of the order they come from (所择所示之序)"]
-  n24["When complying when read and acting by its own law when not…"]
-  n25["Source check: coders detecting excess in their own and…"]
+  n7["Repeated publication under negation"]:::other
+  n8["Runaway, and the distance to the break that does not couple…"]
+  n9["A reading kept by its update, and the reading its own…"]
+  n10["What training installs"]
+  n11["What a commuting law keeps apart, and what a learner's…"]
+  n12["A family of readings within what it reads"]
+  n13["A map moving every value never rests along its run"]:::other
+  n14["Adaptive closure: a reference changed outside what is…"]
+  n15["Correction is not calibration: references recover the…"]
+  n16["Extrapolation by elimination"]
+  n17["A cascade at the histories reached, and readers reading…"]
+  n18["A pool that recruits through itself"]
+  n19["Which selections survive and remain executable when the…"]
+  n20["A revision of a reading that opens a correction, along one…"]:::other
+  n21["A wrong projection admitted at every step while the move…"]
+  n22["Evidence through change: readings propagated through…"]
+  n23["Chosen encounters: records only narrow the candidates, and…"]
+  n24["A reading informed and revalued along one law: the updates…"]
+  n25["What choices show of the order they come from (所择所示之序)"]
+  n26["When complying when read and acting by its own law when not…"]
+  n27["Source check: coders detecting excess in their own and…"]
+  n28["Exact and lax interventional causal abstraction…"]
+  n29["Active inquiry margin sandwich, cascade alarm capture…"]
+  n30["Oplax Span(F) history comparison, Beck-Chevalley…"]
+  n31["Query-image TV blindness floor, multi-query separation, and…"]
+  n32["Finite-mode survival distinguishability at horizon card…"]
+  n33["Shared finite probability laws and Krylov rank…"]
   e1(["the orbit rests with its target met from some step on, exactly where…"])
   n0 ==>|exact| e1
   e2(["for every condition, it is not the case that it rises at arbitrarily…"])
@@ -649,58 +685,116 @@ flowchart LR
   n4 -.->|witness| e7
   e8(["listing both signs and holding first, the formation is off from the…"])
   n5 -.->|witness| e8
-  e9(["with the stock coupled into the formation by level, any positive…"])
-  n7 -->|sufficient| e9
-  e10(["in the commons where the rest outruns the renewal, a local search in…"])
-  n9 -.->|witness| e10
-  e11(["a law under which the runs from x and from σ x are at one…"])
-  n10 -.->|necessary| e11
-  e12(["in the named history, after reopening, inspecting and taking up, the…"])
-  n12 -.->|witness| e12
-  e13(["the admitted run equals the run with responsive reports, for every…"])
-  n13 -->|sufficient| e13
-  e14(["in the named runs, inspecting the changed channels with seven units…"])
-  n13 -.->|witness| e14
-  e15(["the pool admitting a reader where the habitat reads empty couples the…"])
-  n16 -.->|witness| e15
-  e16(["the scheduled pool, alike before step 2, couples the lost and the…"])
-  n16 -.->|witness| e16
-  e17(["where the new relation makes alike a pair the old one tells apart…"])
-  n17 ==>|exact| e17
-  e18(["run jointly with a process, the stock process executes a course…"])
-  n17 ==>|exact| e18
-  n17 -.->|witness| n18
-  e19(["rebuilding the link away from two units reaches…"])
-  n17 -.->|witness| e19
-  n17 -.->|witness| n18
-  e20(["with the moves varied against the hidden bit, no determined process…"])
-  n19 -.->|witness| e20
-  e21(["after a change recorded as steady while the world moved, the actual…"])
-  n20 -.->|witness| e21
-  e22(["after a scan leaves two models, predicting a reset reopens all three…"])
-  n20 -.->|witness| e22
-  e23(["a control change after the last report reopens all three models…"])
-  n20 -.->|witness| e23
-  e24(["the meaning is no longer a candidate after n + k steps: some bearing…"])
-  n21 ==>|exact| e24
-  e25(["after surveying the place again, the recalled access report is the…"])
-  n21 -.->|witness| e25
-  e26(["along the course from both worlds listed, the agreeing valuation and…"])
-  n22 -.->|witness| e26
-  e27(["along the course from the first world alone, the reversed valuation…"])
-  n22 -.->|witness| e27
-  e28(["no strict order accords with the choices…"])
-  n23 ==>|exact| e28
-  e29(["no positive comparison between any two alternatives is forced where…"])
-  n23 -->|sufficient| e29
-  e30(["both rankings of two distinct unreached alternatives remain…"])
-  n23 -->|sufficient| e30
-  e31(["acting by its own law at both stages is chosen and strictly preferred…"])
-  n24 -->|sufficient| e31
-  e32(["acting by its own law at both stages is chosen and strictly preferred…"])
-  n24 -->|sufficient| e32
-  e33(["complyThenOwn cannot be realized by any deterministic act law whose…"])
-  n24 ==>|exact| e33
+  e9(["fixed publication at every later step iff the step-delayed prediction…"])
+  n6 ==>|exact| e9
+  e10(["failure of every published prediction (¬ Right r p) whenever the…"])
+  n6 -->|sufficient| e10
+  n6 -.->|witness| n7
+  e11(["with the stock coupled into the formation by level, any positive…"])
+  n8 -->|sufficient| e11
+  e12(["task preserved along every configuration reached from a sound start…"])
+  n9 ==>|exact| e12
+  e13(["failure of any single safe uniform act across all worlds despite…"])
+  n9 -.->|witness| e13
+  e14(["in the commons where the rest outruns the renewal, a local search in…"])
+  n10 -.->|witness| e14
+  e15(["a law under which the runs from x and from σ x are at one…"])
+  n11 -.->|necessary| e15
+  n12 -->|sufficient| n13
+  e16(["in the named history, after reopening, inspecting and taking up, the…"])
+  n14 -.->|witness| e16
+  e17(["the admitted run equals the run with responsive reports, for every…"])
+  n15 -->|sufficient| e17
+  e18(["in the named runs, inspecting the changed channels with seven units…"])
+  n15 -.->|witness| e18
+  e19(["no step from which an extrapolation matches every coming diagonal…"])
+  n16 -->|sufficient| e19
+  e20(["eventual periodic lasso whenever finite-lasso elimination rests with…"])
+  n16 -.->|necessary| e20
+  e21(["divergent member actions across two worlds after identical prior acts…"])
+  n17 ==>|exact| e21
+  e22(["identical actions along every world-reachable history from member 0…"])
+  n17 -.->|witness| e22
+  e23(["refutation of the universal all-histories condition ReadsOnlyActsFrom…"])
+  n17 -.->|witness| e23
+  e24(["the pool admitting a reader where the habitat reads empty couples the…"])
+  n18 -.->|witness| e24
+  e25(["the scheduled pool, alike before step 2, couples the lost and the…"])
+  n18 -.->|witness| e25
+  e26(["where the new relation makes alike a pair the old one tells apart…"])
+  n19 ==>|exact| e26
+  e27(["run jointly with a process, the stock process executes a course…"])
+  n19 ==>|exact| e27
+  n19 -.->|witness| n20
+  e28(["rebuilding the link away from two units reaches…"])
+  n19 -.->|witness| e28
+  n19 -.->|witness| n20
+  e29(["with the moves varied against the hidden bit, no determined process…"])
+  n21 -.->|witness| e29
+  e30(["after a change recorded as steady while the world moved, the actual…"])
+  n22 -.->|witness| e30
+  e31(["after a scan leaves two models, predicting a reset reopens all three…"])
+  n22 -.->|witness| e31
+  e32(["a control change after the last report reopens all three models…"])
+  n22 -.->|witness| e32
+  e33(["the meaning is no longer a candidate after n + k steps: some bearing…"])
+  n23 ==>|exact| e33
+  e34(["after surveying the place again, the recalled access report is the…"])
+  n23 -.->|witness| e34
+  e35(["along the course from both worlds listed, the agreeing valuation and…"])
+  n24 -.->|witness| e35
+  e36(["along the course from the first world alone, the reversed valuation…"])
+  n24 -.->|witness| e36
+  e37(["no strict order accords with the choices…"])
+  n25 ==>|exact| e37
+  e38(["no positive comparison between any two alternatives is forced where…"])
+  n25 -->|sufficient| e38
+  e39(["both rankings of two distinct unreached alternatives remain…"])
+  n25 -->|sufficient| e39
+  e40(["acting by its own law at both stages is chosen and strictly preferred…"])
+  n26 -->|sufficient| e40
+  e41(["acting by its own law at both stages is chosen and strictly preferred…"])
+  n26 -->|sufficient| e41
+  e42(["complyThenOwn cannot be realized by any deterministic act law whose…"])
+  n26 ==>|exact| e42
+  e43(["exact interventional trace equality and lifted causal simulation iff…"])
+  n28 ==>|exact| e43
+  e44(["micro Viability.Kernel (C1.scheduledProcess sigma sched) under an…"])
+  n28 -->|sufficient| e44
+  e45(["micro Viability.Kernel (C1.feedbackProcess (fun s =' kappa (pi s)))…"])
+  n28 -->|sufficient| e45
+  e46(["Causal Goodhart micro collapse despite exact 16-state passive lumping…"])
+  n28 -.->|witness| e46
+  e47(["viable probing through model identification and recovery when reserve…"])
+  n29 -->|sufficient| e47
+  e48(["pool drawdown collapse under shared cascade alarm synchronization or…"])
+  n29 -->|sufficient| e48
+  e49(["internal blanket isolation whenever composed subsystems screen off…"])
+  n29 -.->|necessary| e49
+  e50(["pullback-preserving history comparison (chi bijective) iff universal…"])
+  n30 ==>|exact| e50
+  e51(["refutation of any macro predicate Kq being simultaneously complete…"])
+  n30 -->|sufficient| e51
+  e52(["refutation of any simultaneously sound and complete macro viability…"])
+  n30 -.->|witness| e52
+  e53(["bounded multi-step kernel TV contraction tubes via MetricLaxSim when…"])
+  n31 -->|sufficient| e53
+  e54(["exact FiberLumpable observable invariance iff zero rowDefect macro…"])
+  n31 ==>|exact| e54
+  e55(["latent fiber viability split persisting even when query-image TV…"])
+  n31 -.->|witness| e55
+  e56(["full all-word survival indistinguishability iff agreement holds…"])
+  n32 ==>|exact| e56
+  e57(["compressed all-word distinguishability horizon '= 'Obs' - 1 iff exact…"])
+  n32 ==>|exact| e57
+  e58(["two-step mode-switch separation between states agreeing on every…"])
+  n32 -.->|witness| e58
+  e59(["strictly stabilized Krylov word-vector span once length reaches…"])
+  n33 -->|sufficient| e59
+  e60(["observable-quotient horizon '= 'Obs' - 1 iff exact FiberLumpable…"])
+  n33 ==>|exact| e60
+  e61(["non-trivial query TV distortion floor '= massOutside f on finite…"])
+  n33 -->|sufficient| e61
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -712,16 +806,16 @@ flowchart LR
 | [What a course chosen through its model does not test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) | 1. the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently (exact)<br>2. a formation that senses the two worlds apart does not keep the task K at every step in the second world (necessary; dropping [kept](premises/d.md#readingloop-kept))<br>3. started with both candidates and the untried act, the formation separates the worlds: in the first it rests from step four on the true candidate alone, the untried act and the high value; in the second from step three on the true candidate alone and the known act, having sensed the low value at step one and at no other step (a witness) (dropping [floor](premises/d.md#readingloop-floor))<br>4. started with the true candidate alone and the first ranking of the values, the formation takes the untried act and senses the high value from step three on in the first world, while the second ranking, so started, keeps the known act (a witness; informing is represented by the start, not by an act within the law) (dropping [floor](premises/d.md#readingloop-floor)) | — |
 | [What seeking cannot separate](families/d.md#what-seeking-cannot-separate) | 1. with the experiment reading both tosses chosen, the course of two heads leaves the true coin above the tails-biased one: the order the agreement-reading experiment kept turns (a witness) (dropping [Tied](premises/d.md#lumpedseeking-tied)) | — |
 | [What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop](families/d.md#a-stop-passed-by-a-listing-that-fixes-the-sign) | 1. listing both signs and holding first, the formation is off from the second step where going on loses (and goes on from the second where it gains, both_on) (a witness) (dropping [all predict a gain](premises/d.md#heldforreading-all-predict-gain)) | — |
-| [A prediction read by what it predicts](families/d.md#a-prediction-read-by-what-it-predicts) | **none: no exit is stated** | — |
+| [A prediction read by what it predicts](families/d.md#a-prediction-read-by-what-it-predicts) | 1. fixed publication at every later step iff the step-delayed prediction is right (exact)<br>2. failure of every published prediction (¬ Right r p) whenever the response moves every value (any V, including cycles of period > 2) (sufficient)<br>3. [Repeated publication under negation](families/f.md#publication-under-negation-alternates) (witness) | [Repeated publication under negation](families/f.md#publication-under-negation-alternates) (witness) |
 | [Runaway, and the distance to the break that does not couple in](families/d.md#a-break-read-only-by-threshold) | 1. with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: a raise of the stock couples in (sufficient; dropping [unobserved](premises/d.md#runaway-unobserved)) | — |
-| [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) | **none: no exit is stated** | — |
+| [A reading kept by its update, and the reading its own history carries](families/d.md#a-reading-kept-by-its-update) | 1. task preserved along every configuration reached from a sound start iff each state act leads into the task from its reading (exact)<br>2. failure of any single safe uniform act across all worlds despite pairwise-shared safe acts (witness) | — |
 | [What training installs](families/d.md#what-training-installs) | 1. in the commons where the rest outruns the renewal, a local search in which every candidate is a neighbour moves from restraint to the drawing law at its first step, at every weight; one with empty neighbourhoods rests at restraint, which the reward settles on at no weight (a witness) | — |
 | [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart) | 1. a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ (necessary; dropping [Law.Commutes](premises/d.md#commuting-commutes)) | — |
-| [A family of readings within what it reads](families/d.md#readings-within-what-they-read) | **none: no exit is stated** | — |
+| [A family of readings within what it reads](families/d.md#readings-within-what-they-read) | 1. [A map moving every value never rests along its run](families/f.md#a-map-moving-every-value-never-rests) (sufficient) | [A map moving every value never rests along its run](families/f.md#a-map-moving-every-value-never-rests) (sufficient), [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](families/f.md#revision-with-an-undecided-value) (sufficient) |
 | [Adaptive closure: a reference changed outside what is retained is not resolved from the view](families/d.md#adaptive-closure-cannot-resolve) | 1. in the named history, after reopening, inspecting and taking up, the changed history's judgment is the present target (true), with the inspection budget and the work at nothing; reopening and taking up without inspection, or with no inspection left, leaves it not correct (a witness) (dropping [ClosedLocal](premises/d.md#normativeactivity-closedlocal), [ClosedDomain](premises/d.md#normativeactivity-closeddomain)) | — |
 | [Correction is not calibration: references recover the report, and later change defeats it](families/d.md#correction-is-not-calibration) | 1. the admitted run equals the run with responsive reports, for every network and task list (sufficient)<br>2. in the named runs, inspecting the changed channels with seven units revises the overwritten matrix within two tasks, one succeeding; with six units it stays unrevised, none succeeding (a witness) | — |
-| [Extrapolation by elimination](families/d.md#learning-by-refutation) | **none: no exit is stated** | — |
-| [A cascade at the histories reached, and readers reading readers](families/d.md#a-cascade-at-the-histories-reached) | **none: no exit is stated** | — |
+| [Extrapolation by elimination](families/d.md#learning-by-refutation) | 1. no step from which an extrapolation matches every coming diagonal value (sufficient)<br>2. eventual periodic lasso whenever finite-lasso elimination rests with decidable equality (necessary) | — |
+| [A cascade at the histories reached, and readers reading readers](families/d.md#a-cascade-at-the-histories-reached) | 1. divergent member actions across two worlds after identical prior acts iff their rule separates the worlds coupling values (exact)<br>2. identical actions along every world-reachable history from member 0 even when member 0 reads only past an unreachable prefix (witness)<br>3. refutation of the universal all-histories condition ReadsOnlyActsFrom 0 (witness) | — |
 | [A pool that recruits through itself](families/d.md#a-pool-that-recruits-through-itself) | 1. the pool admitting a reader where the habitat reads empty couples the lost and the spared history apart at step 1 (a witness) (dropping [Web.RecruitsThrough](premises/d.md#poolcourse-recruitsthrough))<br>2. the scheduled pool, alike before step 2, couples the lost and the spared history apart at step 2, through the reader, a member at step 2 along the spared history too (a witness) | — |
 | [Which selections survive and remain executable when the lumping changes](families/d.md#selection-when-the-lumping-changes) | 1. where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one (exact)<br>2. run jointly with a process, the stock process executes a course exactly where the stock covers it and the process can execute it; where either fails, the course is not executed (exact)<br>3. [A revision of a reading that opens a correction, along one process](families/h.md#a-revision-that-opens-a-correction) (witness)<br>4. rebuilding the link away from two units reaches (1, link unformed, response false): the selection 'is true' is no longer through the lumping, and correction is disabled (a witness)<br>5. [A revision of a reading that opens a correction, along one process](families/h.md#a-revision-that-opens-a-correction) (witness) | [A revision of a reading that opens a correction, along one process](families/h.md#a-revision-that-opens-a-correction) (witness) |
 | [A wrong projection admitted at every step while the move goes in step with what it leaves out](families/d.md#a-wrong-projection-admitted-at-every-step) | 1. with the moves varied against the hidden bit, no determined process admits the projected steps of the run up to the fifth configuration: the model in which the move decides the outcome is excluded, as is every determined model read through the outcome (a witness) | — |
@@ -731,6 +825,12 @@ flowchart LR
 | [What choices show of the order they come from (所择所示之序)](families/d.md#what-choices-show-of-an-order) | 1. no strict order accords with the choices (every strict according relation is excluded) where the shown relation has a cycle (accorded_iff_noCycle) (exact)<br>2. no positive comparison between any two alternatives is forced where choices are required only to be maximal (AccordsWeakly; weakly_forces_no_comparison) (sufficient)<br>3. both rankings of two distinct unreached alternatives remain consistent with all met choices (both_ways_of_unreached; witness Untried.same_search_met, same_search_after) (sufficient) | — |
 | [When complying when read and acting by its own law when not is best (读时从、不读时依己律何时为最优)](families/d.md#when-complying-when-read-is-best) | 1. acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever there is no value at the unread stage (V = 0; no_value, no_value_chooses_own, ownAtBoth_above_without_value) (sufficient)<br>2. acting by its own law at both stages is chosen and strictly preferred (where 0 < c T) whenever complying when read does not raise the weight of being kept (k_C ≤ k_O; kept_not_raised, kept_not_raised_chooses_own) (sufficient)<br>3. complyThenOwn cannot be realized by any deterministic act law whose lumping ties the two stages (π true = π false; complyThenOwn_realized_iff, read_fixes_unread), though drawing afresh independently can still beat ownAtBoth where 2 k_O V + c T < k_C V (exact) | — |
 | [Source check: coders detecting excess in their own and another's texts](families/d.md#fidelity-coders-on-own-and-other-texts) | **none: no exit is stated** | — |
+| [Exact and lax interventional causal abstraction, composition, and Causal Goodhart](families/d.md#interventional-causal-abstraction-and-goodhart) | 1. exact interventional trace equality and lifted causal simulation iff micro/macro intervention commutation holds (exact)<br>2. micro Viability.Kernel (C1.scheduledProcess sigma sched) under an open-loop schedule (sufficient)<br>3. micro Viability.Kernel (C1.feedbackProcess (fun s => kappa (pi s))) under closed-loop state feedback (sufficient)<br>4. Causal Goodhart micro collapse despite exact 16-state passive lumping and eternal macro safety (witness) | — |
+| [Active inquiry margin sandwich, cascade alarm capture, delay obstructions, and blanket screening](families/d.md#active-inquiry-deadline-cascade-and-blankets) | 1. viable probing through model identification and recovery when reserve headroom brackets reserve drawn by probing (sufficient)<br>2. pool drawdown collapse under shared cascade alarm synchronization or missed inquiry deadline (sufficient)<br>3. internal blanket isolation whenever composed subsystems screen off determined internal parts (necessary) | — |
+| [Oplax Span(F) history comparison, Beck-Chevalley characterization, and relational loss obstructions](families/d.md#oplax-history-comparison-and-relational-loss) | 1. pullback-preserving history comparison (chi bijective) iff universal Beck-Chevalley holds across every observer (exact)<br>2. refutation of any macro predicate Kq being simultaneously complete (K u -> Kq (chi u)) and sound (Kq (chi u) -> K u) (sufficient)<br>3. refutation of any simultaneously sound and complete macro viability predicate Kq on coupled C2 parity histories (witness) | — |
+| [Query-image TV blindness floor, multi-query separation, and three-regime error contrast](families/d.md#observational-fidelity-and-multi-regime-error) | 1. bounded multi-step kernel TV contraction tubes via MetricLaxSim when Dobrushin coefficient alpha < 1 and rowDefect bounds slack (sufficient)<br>2. exact FiberLumpable observable invariance iff zero rowDefect macro kernels exist (exact)<br>3. latent fiber viability split persisting even when query-image TV error equals zero (witness) | — |
+| [Finite-mode survival distinguishability at horizon card minus one](families/d.md#finite-mode-survival-distinguishability) | 1. full all-word survival indistinguishability iff agreement holds through word length \|S\| - 1 (exact)<br>2. compressed all-word distinguishability horizon <= \|Obs\| - 1 iff exact FiberLumpable compression holds (exact)<br>3. two-step mode-switch separation between states agreeing on every single-mode constant sequence (witness) | — |
+| [Shared finite probability laws and Krylov rank stabilization foundation](families/d.md#finite-probability-and-krylov-foundation) | 1. strictly stabilized Krylov word-vector span once length reaches Module.finrank (sufficient)<br>2. observable-quotient horizon <= \|Obs\| - 1 iff exact FiberLumpable holds on FinKernel (exact)<br>3. non-trivial query TV distortion floor >= massOutside f on finite distributions (sufficient) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -752,7 +852,7 @@ flowchart LR
 
 ## E. Waiting and reciprocity
 
-10 dynamics, 14 exits.
+10 dynamics, 15 exits.
 
 ```mermaid
 flowchart LR
@@ -787,10 +887,12 @@ flowchart LR
   e9(["under a window of two, from one withholding, the pair gives together…"])
   n3 -.->|witness| e9
   n3 -->|sufficient| n4
-  e10(["one failed renewal takes a formation below its need: keeping, it…"])
-  n6 -.->|witness| e10
-  e11(["from the configuration with neither side active and the reserve…"])
-  n8 -.->|witness| e11
+  e10(["permanent mutual withholding from the first of two consecutive joint…"])
+  n4 -->|sufficient| e10
+  e11(["one failed renewal takes a formation below its need: keeping, it…"])
+  n6 -.->|witness| e11
+  e12(["from the configuration with neither side active and the reserve…"])
+  n8 -.->|witness| e12
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -800,7 +902,7 @@ flowchart LR
 | [Restoring giving from total withholding](families/e.md#restoring-giving-from-the-worst-start) | 1. under giving first, with the sources decided, a formation gives at step n from every start exactly where no clear chain of n waits leads into it (exact)<br>2. without memory, a formation gives at step n from every start exactly where no chain of n waits leads into it (exact)<br>3. under giving first, with the sources decided, where no clear chain is L waits long, every formation gives at every step from L on, whatever the start (sufficient) | — |
 | [Thresholds of waiting](families/e.md#thresholds-of-waiting) | 1. a formation sparing all it waits on gives at every step after the start under the tolerating law, whatever the start (sufficient; dropping [no formation spares all it waits on](premises/e.md#tolerance-spares-none))<br>2. from total withholding, a formation giving at any step under the tolerating law finds a formation that waits on at most as many as its tolerance: giving restored needs a sparing formation (necessary; dropping [no formation spares all it waits on](premises/e.md#tolerance-spares-none))<br>3. where the start gives outside a set W and every formation waits on at most its tolerance inside W, every formation gives at every step from step 1 on under the tolerating law (sufficient)<br>4. under the certificate law, a domain gives at step 1 from every start withholding exactly one of its admitted fault sets, exactly where its envelope is separated (exact) | — |
 | [A pair tolerates only within a window](families/e.md#a-pair-tolerates-only-within-a-window) | 1. among the one-step laws of a pair keeping mutual giving, restoring mutual giving after one withholding and answering a constant withholder hold together exactly where the law is agreement of one's own last step with the partner's (f a b = (a == b)) (exact; dropping [a pair law keeping inclusion](premises/e.md#windowedwaiting-pairkeepsinclusion))<br>2. under a window of two, from one withholding, the pair gives together at every step from step 1 (a course computed for this law, not a condition) (witness)<br>3. [Errors by chance in a pair keeping mutual withholding](families/e.md#errors-by-chance-in-a-pair-keeping-mutual-withholding) (sufficient; dropping [errors spaced](premises/e.md#windowedwaiting-spaced)) | [Errors by chance in a pair keeping mutual withholding](families/e.md#errors-by-chance-in-a-pair-keeping-mutual-withholding) (sufficient) |
-| [Errors by chance in a pair keeping mutual withholding](families/e.md#errors-by-chance-in-a-pair-keeping-mutual-withholding) | **none: no exit is stated** | — |
+| [Errors by chance in a pair keeping mutual withholding](families/e.md#errors-by-chance-in-a-pair-keeping-mutual-withholding) | 1. permanent mutual withholding from the first of two consecutive joint errors regardless of later inputs (sufficient) | — |
 | [Offspring read from giving that waits](families/e.md#offspring-read-from-giving-that-waits) | **none: no exit is stated** | — |
 | [What decides giving against keeping on a flow](families/e.md#what-decides-giving-against-keeping-on-a-flow) | 1. one failed renewal takes a formation below its need: keeping, it never stands again; sharing, its partner's slack lifts it, its renewal resumes, and over m + 4 steps the sharing pair's lines exceed the keeping pair's by m, the gain carried by the resumed renewal, an inflow from beyond the pair (a witness) (dropping [both formations active before the step](premises/e.md#pairflow-both-active-before)) | — |
 | [What giving that waits draws on](families/e.md#what-giving-that-waits-draws-on) | **none: no exit is stated** | — |
@@ -819,7 +921,7 @@ flowchart LR
 
 ## F. Cycles and alternation
 
-24 dynamics, 8 exits.
+24 dynamics, 11 exits.
 
 ```mermaid
 flowchart LR
@@ -858,9 +960,15 @@ flowchart LR
   e2(["with three values, from any start, the liar's revision run rests at…"])
   n9 ==>|exact| e2
   n10 -.->|witness| n11
+  e3(["non-settling infinite change iff a reachable step goes to a distinct…"])
+  n12 ==>|exact| e3
   n19 -->|sufficient| n20
   n21 -->|sufficient| n22
   n23 -->|sufficient| n20
+  e4(["closed difference at 0 within d turns whenever every positive state…"])
+  n27 -->|sufficient| e4
+  e5(["some link around the loop returning strictly less than it receives"])
+  n27 -.->|necessary| e5
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -876,7 +984,7 @@ flowchart LR
 | [A map moving every value never rests along its run](families/f.md#a-map-moving-every-value-never-rests) | 1. [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](families/f.md#revision-with-an-undecided-value) (sufficient; dropping [Diagonal.Moves](PREMISES.md#diagonal-moves)) | [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](families/f.md#revision-with-an-undecided-value) (sufficient) |
 | [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](families/f.md#revision-with-an-undecided-value) | 1. a witness: with the undecided value and the strong three-valued tables, the liar's revision from all undecided is undecided at every stage (stage liar n i = u for every n and i), a run at rest from its start (witness)<br>2. with three values, from any start, the liar's revision run rests at step n (its value at n + 1 equals its value at n) exactly where the liar is undecided at n (exact) | — |
 | [Without memory, a withholding returns around every loop of waits](families/f.md#withholding-returns-around-a-loop) | 1. [Restoring giving from total withholding](families/e.md#restoring-giving-from-the-worst-start) (witness) | [Restoring giving from total withholding](families/e.md#restoring-giving-from-the-worst-start) (witness) |
-| [A run round a loop keeps changing](families/f.md#a-run-round-a-loop-keeps-changing) | **none: no exit is stated** | — |
+| [A run round a loop keeps changing](families/f.md#a-run-round-a-loop-keeps-changing) | 1. non-settling infinite change iff a reachable step goes to a distinct configuration returning to it (exact) | — |
 | [Recurrence under every law of change](families/f.md#recurrence-without-premise) | **none: no exit is stated** | — |
 | [Recurrence without decidedness](families/f.md#recurrence-without-decidedness) | **none: no exit is stated** | — |
 | [Returning where the course branches](families/f.md#returning-where-the-course-branches) | **none: no exit is stated** | — |
@@ -889,7 +997,7 @@ flowchart LR
 | [Return grades renewal](families/f.md#becoming-return-grades) | **none: no exit is stated** | — |
 | [The law of waxing and waning (消息之律)](families/f.md#waxing-and-waning-returns) | **none: no exit is stated** | — |
 | [How loops form within the unfolding](families/f.md#how-loops-form) | **none: no exit is stated** | — |
-| [Whether a loop closes, keeps or widens a difference](families/f.md#whether-a-loop-closes-a-difference) | **none: no exit is stated** | — |
+| [Whether a loop closes, keeps or widens a difference](families/f.md#whether-a-loop-closes-a-difference) | 1. closed difference at 0 within d turns whenever every positive state contracts strictly (sufficient)<br>2. some link around the loop returning strictly less than it receives (necessary) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -901,7 +1009,7 @@ flowchart LR
 
 ## G. Closure and stagnation
 
-18 dynamics, 59 exits.
+18 dynamics, 60 exits.
 
 ```mermaid
 flowchart LR
@@ -932,122 +1040,124 @@ flowchart LR
   n24["A merged distinction returns only from a form held outside…"]
   e1(["a witness on the whole numbers: Q and F both the successor step, the…"])
   n0 -.->|witness| e1
+  e2(["settling of a run (Settles r) iff at every step T it is decided…"])
+  n1 ==>|exact| e2
   n2 ==>|exact| n3
-  e2(["the possible under Q keeps widening along the course, read from its…"])
-  n4 -.->|necessary| e2
-  e3(["the held possible keeps widening along the course, and from every…"])
+  e3(["the possible under Q keeps widening along the course, read from its…"])
   n4 -.->|necessary| e3
-  e4(["the held possible keeps widening along the course only where no list…"])
+  e4(["the held possible keeps widening along the course, and from every…"])
   n4 -.->|necessary| e4
-  e5(["a witness on the raised rule's process…"])
-  n4 -.->|witness| e5
-  e6(["a witness on a rule tower whose move k + 1 copies the rule at height…"])
+  e5(["the held possible keeps widening along the course only where no list…"])
+  n4 -.->|necessary| e5
+  e6(["a witness on the raised rule's process…"])
   n4 -.->|witness| e6
+  e7(["a witness on a rule tower whose move k + 1 copies the rule at height…"])
+  n4 -.->|witness| e7
   n4 -.->|witness| n5
-  e7(["at arbitrarily late steps the rest of the world gives the family more…"])
-  n6 -.->|necessary| e7
-  e8(["with balance on the family from T₀ as well, the family is not closed…"])
+  e8(["at arbitrarily late steps the rest of the world gives the family more…"])
   n6 -.->|necessary| e8
-  e9(["a witness without the first law: on one condition, a flow with a…"])
-  n6 -.->|witness| e9
-  e10(["a witness without fixed needs: on a loosening web with one condition…"])
+  e9(["with balance on the family from T₀ as well, the family is not closed…"])
+  n6 -.->|necessary| e9
+  e10(["a witness without the first law: on one condition, a flow with a…"])
   n6 -.->|witness| e10
+  e11(["a witness without fixed needs: on a loosening web with one condition…"])
+  n6 -.->|witness| e11
   n6 -.->|witness| n7
-  e11(["the levels with the part widen those without it: its net draw stays…"])
-  n8 ==>|exact| e11
-  e12(["a witness, a giver from beyond: without its part the formation false…"])
-  n8 -.->|witness| e12
-  e13(["a witness, the clearer's part: the levels without the part include…"])
+  e12(["the levels with the part widen those without it: its net draw stays…"])
+  n8 ==>|exact| e12
+  e13(["a witness, a giver from beyond: without its part the formation false…"])
   n8 -.->|witness| e13
-  e14(["a witness, a conveyor taking a unit from one condition and giving it…"])
+  e14(["a witness, the clearer's part: the levels without the part include…"])
   n8 -.->|witness| e14
-  e15(["a witness, a drawer within renewal at step 0 (RenewingAt 0)…"])
+  e15(["a witness, a conveyor taking a unit from one condition and giving it…"])
   n8 -.->|witness| e15
-  e16(["a witness on one condition: a formation drawing on a condition that…"])
+  e16(["a witness, a drawer within renewal at step 0 (RenewingAt 0)…"])
   n8 -.->|witness| e16
-  e17(["a witness: the flow balanced, only active formations taking, and only…"])
+  e17(["a witness on one condition: a formation drawing on a condition that…"])
   n8 -.->|witness| e17
   e18(["a witness: the flow balanced, only active formations taking, and only…"])
   n8 -.->|witness| e18
-  e19(["across the step at which the family rises, the rest of the world…"])
-  n9 -.->|necessary| e19
-  e20(["a witness, the counting web on one condition: the level is the step…"])
-  n9 -.->|witness| e20
-  e21(["a witness, the counting web with nothing taking part: the family is…"])
+  e19(["a witness: the flow balanced, only active formations taking, and only…"])
+  n8 -.->|witness| e19
+  e20(["across the step at which the family rises, the rest of the world…"])
+  n9 -.->|necessary| e20
+  e21(["a witness, the counting web on one condition: the level is the step…"])
   n9 -.->|witness| e21
-  e22(["standing changes at arbitrarily late steps across which what stands…"])
-  n10 ==>|exact| e22
-  e23(["with arising recurring, for every T some step from T on is not…"])
-  n10 -.->|necessary| e23
-  e24(["a witness, the world exposed: it meets all eight premises, no step is…"])
-  n10 -.->|witness| e24
-  e25(["two witnesses, each enclosed at every step and arising without end…"])
+  e22(["a witness, the counting web with nothing taking part: the family is…"])
+  n9 -.->|witness| e22
+  e23(["standing changes at arbitrarily late steps across which what stands…"])
+  n10 ==>|exact| e23
+  e24(["with arising recurring, for every T some step from T on is not…"])
+  n10 -.->|necessary| e24
+  e25(["a witness, the world exposed: it meets all eight premises, no step is…"])
   n10 -.->|witness| e25
-  e26(["a witness, attrition: a census of what stands (nothing stands)…"])
+  e26(["two witnesses, each enclosed at every step and arising without end…"])
   n10 -.->|witness| e26
-  e27(["a witness, gathering: balanced, conserving, every step enclosed, the…"])
-  n11 -.->|witness| e27
+  e27(["a witness, attrition: a census of what stands (nothing stands)…"])
+  n10 -.->|witness| e27
+  e28(["a witness, gathering: balanced, conserving, every step enclosed, the…"])
+  n11 -.->|witness| e28
   n11 -.->|witness| n12
-  e28(["with arising recurring, for every T some step from T on is not…"])
-  n13 -.->|necessary| e28
-  e29(["with arising recurring, for every T it is not the case both that…"])
+  e29(["with arising recurring, for every T some step from T on is not…"])
   n13 -.->|necessary| e29
-  e30(["a witness, emission: a census of what is active, every relatum…"])
-  n13 -.->|witness| e30
-  e31(["a witness, circulation: a census of what stands, balance at the unit…"])
+  e30(["with arising recurring, for every T it is not the case both that…"])
+  n13 -.->|necessary| e30
+  e31(["a witness, emission: a census of what is active, every relatum…"])
   n13 -.->|witness| e31
-  e32(["a witness, asymptote, with the unit splitting at arbitrarily late…"])
+  e32(["a witness, circulation: a census of what stands, balance at the unit…"])
   n13 -.->|witness| e32
-  e33(["the family's total's strict falls do not stop from T on…"])
-  n14 ==>|exact| e33
-  e34(["a witness, in any amounts along an amount d that does not rise and…"])
-  n14 -.->|witness| e34
-  e35(["a witness: in the dyadic amounts, Archimedean with no least fall, not…"])
+  e33(["a witness, asymptote, with the unit splitting at arbitrarily late…"])
+  n13 -.->|witness| e33
+  e34(["the family's total's strict falls do not stop from T on…"])
+  n14 ==>|exact| e34
+  e35(["a witness, in any amounts along an amount d that does not rise and…"])
   n14 -.->|witness| e35
-  e36(["a witness in the dyadic amounts, Archimedean: across each step the…"])
-  n15 -.->|witness| e36
-  e37(["a witness in layered amounts: the stock does not rise, falls by at…"])
+  e36(["a witness: in the dyadic amounts, Archimedean with no least fall, not…"])
+  n14 -.->|witness| e36
+  e37(["a witness in the dyadic amounts, Archimedean: across each step the…"])
   n15 -.->|witness| e37
-  e38(["a witness: the halving stock in the dyadic amounts takes values no…"])
+  e38(["a witness in layered amounts: the stock does not rise, falls by at…"])
   n15 -.->|witness| e38
-  e39(["a witness: a condition standing at one up to a random step ω and at…"])
-  n16 -.->|witness| e39
+  e39(["a witness: the halving stock in the dyadic amounts takes values no…"])
+  n15 -.->|witness| e39
+  e40(["a witness: a condition standing at one up to a random step ω and at…"])
+  n16 -.->|witness| e40
   n17 -.->|witness| n18
-  e40(["a witness with no band: the gated giving rises with what is left and…"])
-  n17 -.->|witness| e40
-  e41(["the response f is zero at no amount, and the coupling stops by no…"])
-  n19 ==>|exact| e41
-  e42(["the coupling recurs: at arbitrarily late steps something passes…"])
-  n19 -->|sufficient| e42
-  e43(["an active renewer of the family recurs: for every T, it is not the…"])
-  n20 -.->|necessary| e43
-  e44(["the family's replenishment is zero from no step on…"])
+  e41(["a witness with no band: the gated giving rises with what is left and…"])
+  n17 -.->|witness| e41
+  e42(["the response f is zero at no amount, and the coupling stops by no…"])
+  n19 ==>|exact| e42
+  e43(["the coupling recurs: at arbitrarily late steps something passes…"])
+  n19 -->|sufficient| e43
+  e44(["an active renewer of the family recurs: for every T, it is not the…"])
   n20 -.->|necessary| e44
+  e45(["the family's replenishment is zero from no step on…"])
+  n20 -.->|necessary| e45
   n20 -.->|witness| n21
-  e45(["on a world with activity decided and its census counted by a bound…"])
-  n22 ==>|exact| e45
-  e46(["in a finite world with activity decided, arising recurs exactly where…"])
+  e46(["on a world with activity decided and its census counted by a bound…"])
   n22 ==>|exact| e46
+  e47(["in a finite world with activity decided, arising recurs exactly where…"])
+  n22 ==>|exact| e47
   n22 ==>|exact| n23
-  e47(["two witnesses: accretion, with a census of what is active, arising…"])
-  n22 -.->|witness| e47
-  e48(["a witness for any bound B that never falls and passes every number…"])
+  e48(["two witnesses: accretion, with a census of what is active, arising…"])
   n22 -.->|witness| e48
-  e49(["a witness, procession: one relatum active at each step…"])
+  e49(["a witness for any bound B that never falls and passes every number…"])
   n22 -.->|witness| e49
-  e50(["a merged distinction returns only where some formation outside the…"])
-  n24 -.->|necessary| e50
-  e51(["after the step at which h, holding the imposed form at m', hears at m…"])
-  n24 -->|sufficient| e51
-  e52(["where all hold an imposed code, a form x coined by o at m, not the…"])
+  e50(["a witness, procession: one relatum active at each step…"])
+  n22 -.->|witness| e50
+  e51(["a merged distinction returns only where some formation outside the…"])
+  n24 -.->|necessary| e51
+  e52(["after the step at which h, holding the imposed form at m', hears at m…"])
   n24 -->|sufficient| e52
+  e53(["where all hold an imposed code, a form x coined by o at m, not the…"])
+  n24 -->|sufficient| e53
   classDef other stroke-dasharray: 3 3
 ```
 
 | Dynamic | Leaves to | Reaches by named exits (weakest step) |
 |---|---|---|
 | [The grammar's law of rest: falls that end do not recur](families/g.md#falls-that-end-do-not-recur) | 1. a witness on the whole numbers: Q and F both the successor step, the line g the identity, every step a step of Q, the F steps recurring along g («屡» F g), and the line's place at 0 drawn in under Q («入» Q (g 0)): a place drawn in whose marked steps recur, so not at rest (witness; dropping [the courses of falls end](premises/g.md#grammarlaws-ends)) | — |
-| [The last change of a run](families/g.md#the-last-change-of-a-run) | **none: no exit is stated** | — |
+| [The last change of a run](families/g.md#the-last-change-of-a-run) | 1. settling of a run (Settles r) iff at every step T it is decided whether the run changes again (given DecidableEq S, finite list membership held, and ¬ Settling.ChangesInLoop r) (exact) | — |
 | [When the runs of a process settle](families/g.md#when-the-runs-of-a-process-settle) | 1. [A run round a loop keeps changing](families/f.md#a-run-round-a-loop-keeps-changing) (exact) | [A run round a loop keeps changing](families/f.md#a-run-round-a-loop-keeps-changing) (exact) |
 | [Where the possible grows](families/g.md#where-the-possible-grows) | 1. the possible under Q keeps widening along the course, read from its first step, and from every step N some bounded stretch of the course from N is not made of moves of Q throughout (∃ d, ¬ ∀ i, i < d → Q.step (r.state (N + i)) (r.act (N + i)) (r.state (N + i + 1))) (necessary; dropping [moves of Q from N on](premises/g.md#heldpossible-within-from))<br>2. the held possible keeps widening along the course, and from every step N some bounded stretch from N does not hold the part read by Same throughout (∃ d, ¬ ∀ i, i < d → Same (r.state (N + i)) (r.state (N + i + 1))) (necessary; dropping [what is held stays from T on](premises/g.md#heldpossible-stays))<br>3. the held possible keeps widening along the course only where no list holds the whole possible from its start (¬ ∃ ys, ∀ x, Reaching.Possible P adm (r.state 0) x → x ∈ ys) (necessary; dropping [a list holds the whole possible](premises/g.md#heldpossible-possible-listed))<br>4. a witness on the raised rule's process (a configuration a rule n and a position; a move raises the rule by one or moves the position to any value at most n): along the course raising the rule at every step from (0, 0), the possible with the rule held keeps widening, read from its first step (witness; dropping [what is held stays from T on](premises/g.md#heldpossible-stays), [a list holds the whole possible](premises/g.md#heldpossible-possible-listed))<br>5. a witness on a rule tower whose move k + 1 copies the rule at height k + 1 down to height k: along the course copying down to height k at step k, the possible with the rules from any height n up held keeps widening, read from its first step (witness; dropping [what is held stays from T on](premises/g.md#heldpossible-stays), [a list holds the whole possible](premises/g.md#heldpossible-possible-listed))<br>6. [Growth relative to what is held with renewal without end: the rule raised every other step](families/h.md#rule-raised-every-other-step) (witness; dropping [what is held stays from T on](premises/g.md#heldpossible-stays), [a list holds the whole possible](premises/g.md#heldpossible-possible-listed)) | [Growth relative to what is held with renewal without end: the rule raised every other step](families/h.md#rule-raised-every-other-step) (witness) |
 | [What keeping widening needs, and what carries it](families/g.md#what-keeping-widening-needs) | 1. at arbitrarily late steps the rest of the world gives the family more than it takes, or the family is not closed across the step (∀ M, ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t)) (necessary; dropping [balance on the family from a step](premises/g.md#keepingwidening-balanced-on-family), [the list holds every condition](PREMISES.md#flow-every-condition-listed))<br>2. with balance on the family from T₀ as well, the family is not closed across the step at arbitrarily late steps (∀ M, ∃ t, M ≤ t ∧ ¬ L.ClosedAt cs t): some formation present takes or gives a condition outside it (necessary; dropping [the list holds every condition](PREMISES.md#flow-every-condition-listed))<br>3. a witness without the first law: on one condition, a flow with a source giving from nothing balances, keeps widening by name from step 0 with needs fixed within the one condition, every condition listed once, and at no step is the rest a net giver or the family open (witness; dropping [a flow gaining nothing on closed families](PREMISES.md#flow-gainless))<br>4. a witness without fixed needs: on a loosening web with one condition, a course keeps widening by name from step 0 with every requirement on that condition, the need of a formation changing between steps 0 and 1, and the stock one at every step (witness; dropping [needs fixed within a family](premises/g.md#keepingwidening-requires-within))<br>5. [The kind relay: widening within kinds, what it can form by name only returning](families/h.md#kind-relay-keeps-widening-within-kinds) (witness; dropping [the continuation contains carrying on while supported, or passing support](premises/g.md#keepingwidening-contains-supported-passing), [the continuation contains carrying on or passing support](premises/g.md#keepingwidening-contains-passings), [dissipated on a family across a step](PREMISES.md#flow-dissipateson)) | [The kind relay: widening within kinds, what it can form by name only returning](families/h.md#kind-relay-keeps-widening-within-kinds) (witness) |
@@ -1120,7 +1230,7 @@ flowchart LR
 
 ## H. Kept regions, renewal, generation
 
-47 dynamics, 86 exits.
+55 dynamics (47 read for premises, 8 pending premise extraction), 116 exits.
 
 ```mermaid
 flowchart LR
@@ -1185,160 +1295,225 @@ flowchart LR
   n58["Dynamical scope selection, myopic invasion collapse, and…"]
   n59["Continuous and stochastic alignment realizations over…"]
   n60["Composed zero-axiom master alignment spine and sharpness…"]
-  e1(["a witness: balanced, only active formations giving and activity…"])
-  n2 -.->|witness| e1
-  e2(["a witness: balanced, only active formations giving and activity…"])
-  n2 -.->|witness| e2
-  e3(["nothing carries the pattern at any step from T + d on…"])
-  n4 -->|sufficient| e3
+  n61["Polynomial dynamic interfaces, serialized reconfiguration…"]
+  n62["Endogenous order formation, scope co-evolution, course Nash…"]
+  n63["Unified zero-axiom Becoming master spine, grammar lifts…"]
+  n64["Unified real-valued periphery joining all nine Mathlib…"]
+  n65["October renewal histories coincide by field renaming with…"]
+  n66["Strict double-category certificate kernel, conservative 3D…"]
+  n67["Epoch handoff: what may change across epochs, what must not"]
+  n68["Limits and remedies for four guarded-runtime failure…"]
+  e1(["restoration of the sustaining activity after a deficit-length window…"])
+  n1 -->|sufficient| e1
+  e2(["flat absorbed level immune to later nominal inputs once both…"])
+  n1 -->|sufficient| e2
+  e3(["a witness: balanced, only active formations giving and activity…"])
+  n2 -.->|witness| e3
+  e4(["a witness: balanced, only active formations giving and activity…"])
+  n2 -.->|witness| e4
+  e5(["nothing carries the pattern at any step from T + d on…"])
+  n4 -->|sufficient| e5
   n5 -->|sufficient| n6
   n5 -.->|witness| n6
   n5 -->|sufficient| n7
   n5 -->|sufficient| n8
-  e4(["a dependence of g on c, met at t, broken across the step…"])
-  n11 ==>|exact| e4
-  e5(["every optimum among the open courses, of every order rising with the…"])
-  n13 -->|sufficient| e5
-  e6(["every optimum meets f's need of c at every step to the n-th and…"])
-  n13 -->|sufficient| e6
+  e6(["a dependence of g on c, met at t, broken across the step…"])
+  n11 ==>|exact| e6
+  e7(["every optimum among the open courses, of every order rising with the…"])
+  n13 -->|sufficient| e7
+  e8(["every optimum meets f's need of c at every step to the n-th and…"])
+  n13 -->|sufficient| e8
   n13 -->|sufficient| n14
-  e7(["a witness: under a burst renewing four at one, the dweller's need…"])
-  n13 -.->|witness| e7
+  e9(["a witness: under a burst renewing four at one, the dweller's need…"])
+  n13 -.->|witness| e9
   n15 -->|sufficient| n16
   n15 -->|sufficient| n16
   n15 -->|sufficient| n16
   n15 -.->|witness| n16
   n17 -.->|necessary| n18
-  e8(["a witness on Revising's stock-and-link process: from the link off and…"])
-  n19 -.->|witness| e8
-  e9(["a witness: with the link on and no stock, replenishing one unit…"])
-  n19 -.->|witness| e9
+  e10(["a witness on Revising's stock-and-link process: from the link off and…"])
+  n19 -.->|witness| e10
+  e11(["a witness: with the link on and no stock, replenishing one unit…"])
+  n19 -.->|witness| e11
   n20 -->|sufficient| n21
-  e10(["carriers present, the carriers' share falls across the step: c k…"])
-  n22 -->|sufficient| e10
-  e11(["a witness (Drawing): the pair is mutually dependent and mutually…"])
-  n23 -.->|witness| e11
-  e12(["a witness (Drawing): every formation's acts return, and the condition…"])
-  n23 -.->|witness| e12
-  e13(["the renewal rate below its initial value at every step from the first…"])
-  n26 -->|sufficient| e13
-  e14(["nothing forms at any step from the budget on: ∀ n, budget c0 ≤ n →…"])
-  n26 -->|sufficient| e14
-  e15(["each part alone within renewal forms at every step, and the formation…"])
-  n26 -->|sufficient| e15
-  e16(["a step that continues under E and leaves E's core: y continues x…"])
-  n27 -.->|necessary| e16
-  e17(["witness (ChoicePoint): from the configuration split each of two…"])
-  n28 -.->|witness| e17
+  e12(["carriers present, the carriers' share falls across the step: c k…"])
+  n22 -->|sufficient| e12
+  e13(["a witness (Drawing): the pair is mutually dependent and mutually…"])
+  n23 -.->|witness| e13
+  e14(["a witness (Drawing): every formation's acts return, and the condition…"])
+  n23 -.->|witness| e14
+  e15(["unboundedly recurring active renewers whenever unceasing arising…"])
+  n24 -.->|necessary| e15
+  e16(["inflow from outside an enclosed balanced dissipative finite family…"])
+  n25 -.->|necessary| e16
+  e17(["persistent fed pool outlasting every individual per-step fuel in Lone"])
+  n25 -.->|witness| e17
+  e18(["the renewal rate below its initial value at every step from the first…"])
+  n26 -->|sufficient| e18
+  e19(["nothing forms at any step from the budget on: ∀ n, budget c0 ≤ n →…"])
+  n26 -->|sufficient| e19
+  e20(["each part alone within renewal forms at every step, and the formation…"])
+  n26 -->|sufficient| e20
+  e21(["a step that continues under E and leaves E's core: y continues x…"])
+  n27 -.->|necessary| e21
+  e22(["witness (ChoicePoint): from the configuration split each of two…"])
+  n28 -.->|witness| e22
   n28 ==>|exact| n29
-  e18(["for β above 5/12 (with 0 ≤ β ≤ 3/4), not every physical state with…"])
-  n28 ==>|exact| e18
-  e19(["witness: at β = 5/12, for every ε ' 0 a constant adverse quality…"])
-  n28 -.->|witness| e19
-  e20(["the carrier's step is blocked: step returns none, so no successor…"])
-  n31 -->|sufficient| e20
-  e21(["the carrier's step is blocked: step returns none, so no successor…"])
-  n31 -->|sufficient| e21
-  e22(["witness (financed): the aggregate market state is safe under the…"])
-  n31 -.->|witness| e22
-  e23(["witness: in the declared machine, a handoff to those present '1, 2…"])
-  n32 -.->|witness| e23
-  e24(["witness: in the declared machine, enrolling worker 1 after attempt…"])
-  n32 -.->|witness| e24
-  e25(["witness: two rounds from one mature chain with the blocks for three…"])
-  n33 -.->|witness| e25
-  e26(["witness: from a pool of eight tokens of one kind and eight units of…"])
-  n33 -.->|witness| e26
-  e27(["witness: with nine units and no reserved stop, after the first actual…"])
-  n35 -.->|witness| e27
-  e28(["witness: a fault deleting the pending marker of a partly changed…"])
-  n35 -.->|witness| e28
-  e29(["the supervisor stops: every admissible schedule from an armed device…"])
-  n35 -->|sufficient| e29
-  e30(["every admitted course longer than the margin from a valid…"])
-  n35 -->|sufficient| e30
-  e31(["witness: with interruption bound one and deadline fifteen, an…"])
-  n35 -.->|witness| e31
+  e23(["for β above 5/12 (with 0 ≤ β ≤ 3/4), not every physical state with…"])
+  n28 ==>|exact| e23
+  e24(["witness: at β = 5/12, for every ε ' 0 a constant adverse quality…"])
+  n28 -.->|witness| e24
+  e25(["the carrier's step is blocked: step returns none, so no successor…"])
+  n31 -->|sufficient| e25
+  e26(["the carrier's step is blocked: step returns none, so no successor…"])
+  n31 -->|sufficient| e26
+  e27(["witness (financed): the aggregate market state is safe under the…"])
+  n31 -.->|witness| e27
+  e28(["witness: in the declared machine, a handoff to those present '1, 2…"])
+  n32 -.->|witness| e28
+  e29(["witness: in the declared machine, enrolling worker 1 after attempt…"])
+  n32 -.->|witness| e29
+  e30(["witness: two rounds from one mature chain with the blocks for three…"])
+  n33 -.->|witness| e30
+  e31(["witness: from a pool of eight tokens of one kind and eight units of…"])
+  n33 -.->|witness| e31
+  e32(["witness: with nine units and no reserved stop, after the first actual…"])
+  n35 -.->|witness| e32
+  e33(["witness: a fault deleting the pending marker of a partly changed…"])
+  n35 -.->|witness| e33
+  e34(["the supervisor stops: every admissible schedule from an armed device…"])
+  n35 -->|sufficient| e34
+  e35(["every admitted course longer than the margin from a valid…"])
+  n35 -->|sufficient| e35
+  e36(["witness: with interruption bound one and deadline fifteen, an…"])
+  n35 -.->|witness| e36
   n36 -.->|witness| n37
-  e32(["witness: a course read by offspring number, exact at step 0 and not…"])
-  n39 -.->|witness| e32
-  e33(["witness: concordance with the mark positive at every step before N…"])
-  n39 -.->|witness| e33
-  e34(["witness: reproduction simply stopped, the mark a label rather than a…"])
-  n39 -.->|witness| e34
+  e37(["witness: a course read by offspring number, exact at step 0 and not…"])
+  n39 -.->|witness| e37
+  e38(["witness: concordance with the mark positive at every step before N…"])
+  n39 -.->|witness| e38
+  e39(["witness: reproduction simply stopped, the mark a label rather than a…"])
+  n39 -.->|witness| e39
   n39 -->|sufficient| n40
   n40 -->|sufficient| n41
-  e35(["the self-preservation half of instrumental convergence, where a…"])
-  n40 -.->|reading| e35
+  e40(["the self-preservation half of instrumental convergence, where a…"])
+  n40 -.->|reading| e40
   n40 -.->|reading| n42
   n40 -.->|reading| n43
   n44 -->|sufficient| n40
   n44 -->|sufficient| n45
-  e36(["witness: where the dweller's line renews the source, the line reading…"])
-  n44 -.->|witness| e36
+  e41(["witness: where the dweller's line renews the source, the line reading…"])
+  n44 -.->|witness| e41
   n44 -.->|witness| n46
   n44 -.->|reading| n47
   n47 -.->|reading| n48
-  e37(["the region's carriers at T + n + 1 are exactly the revisions into it…"])
-  n47 -->|sufficient| e37
+  e42(["the region's carriers at T + n + 1 are exactly the revisions into it…"])
+  n47 -->|sufficient| e42
   n47 -->|sufficient| n45
   n47 -.->|witness| n46
-  e38(["witness: where the dweller's line renewed the source, the narrow…"])
-  n47 -.->|witness| e38
+  e43(["witness: where the dweller's line renewed the source, the narrow…"])
+  n47 -.->|witness| e43
   n47 -.->|argued| n43
-  e39(["witness: under a real access loss, an acquired attendance goal…"])
-  n49 -.->|witness| e39
-  e40(["witness: under a real access loss, revision without response leaves…"])
-  n49 -.->|witness| e40
-  e41(["witness: with access loss and transition loss together…"])
-  n49 -.->|witness| e41
-  e42(["witness: reform from a revised state whose work is one unit fails…"])
-  n49 -.->|witness| e42
-  e43(["for a class E, everything downstream of m lies on its line under E…"])
-  n50 ==>|exact| e43
-  e44(["not everything downstream of m lies on its line under E: the line…"])
-  n50 -->|sufficient| e44
-  e45(["witness (Unclosed): under a constant class holding the member with a…"])
-  n50 -.->|witness| e45
-  e46(["witness (Inconstant): a class holding the member's effects that is…"])
-  n50 -.->|witness| e46
-  e47(["with the grown link (p, n) cut, its ends lie apart: p and n are not…"])
-  n51 -->|sufficient| e47
-  e48(["witness: with the retaining edge (0, 7) aggregated onto the chain…"])
-  n51 -.->|witness| e48
-  e49(["it is not the case that the formation f is active at arbitrarily late…"])
-  n21 -->|sufficient| e49
-  e50(["the process has no run: where every admissible step lowers a…"])
-  n21 -->|sufficient| e50
-  e51(["witness (Renewable): from one configuration, with the focal formation…"])
-  n21 -.->|witness| e51
-  e52(["permanent fine-step viability within 'H₂ + y₂, hi' once span stride L…"])
-  n52 -->|sufficient| e52
-  e53(["unrecoverable coupled failure: either observations conflate under L '…"])
-  n52 -->|sufficient| e53
-  e54(["micro Viability.Kernel certified from macro Certificate despite…"])
-  n53 -->|sufficient| e54
-  e55(["perpetual TransformsViably evolution with genuine micro-turnover on…"])
-  n54 -.->|witness| e55
-  e56(["closed Viability.Kernel and synchronous-product LaxSim stability…"])
-  n55 -->|sufficient| e56
-  e57(["sustained Viability.Kernel across pooled Clearing and live…"])
-  n56 -->|sufficient| e57
-  e58(["global fleet Viability.Kernel preserved under inductive…"])
-  n57 -->|sufficient| e58
-  e59(["bounded safe substrate band 'S_safe, hi' with TransformsViably and…"])
-  n58 -->|sufficient| e59
-  e60(["explicit continuous/stochastic Viability.Kernel radii and discrete…"])
-  n59 -->|sufficient| e60
-  e61(["composed exposed and hidden viability across live upgrades…"])
-  n60 -->|sufficient| e61
+  e44(["witness: under a real access loss, an acquired attendance goal…"])
+  n49 -.->|witness| e44
+  e45(["witness: under a real access loss, revision without response leaves…"])
+  n49 -.->|witness| e45
+  e46(["witness: with access loss and transition loss together…"])
+  n49 -.->|witness| e46
+  e47(["witness: reform from a revised state whose work is one unit fails…"])
+  n49 -.->|witness| e47
+  e48(["for a class E, everything downstream of m lies on its line under E…"])
+  n50 ==>|exact| e48
+  e49(["not everything downstream of m lies on its line under E: the line…"])
+  n50 -->|sufficient| e49
+  e50(["witness (Unclosed): under a constant class holding the member with a…"])
+  n50 -.->|witness| e50
+  e51(["witness (Inconstant): a class holding the member's effects that is…"])
+  n50 -.->|witness| e51
+  e52(["with the grown link (p, n) cut, its ends lie apart: p and n are not…"])
+  n51 -->|sufficient| e52
+  e53(["witness: with the retaining edge (0, 7) aggregated onto the chain…"])
+  n51 -.->|witness| e53
+  e54(["it is not the case that the formation f is active at arbitrarily late…"])
+  n21 -->|sufficient| e54
+  e55(["the process has no run: where every admissible step lowers a…"])
+  n21 -->|sufficient| e55
+  e56(["witness (Renewable): from one configuration, with the focal formation…"])
+  n21 -.->|witness| e56
+  e57(["permanent fine-step viability within 'H₂ + y₂, hi' once span stride L…"])
+  n52 -->|sufficient| e57
+  e58(["unrecoverable coupled failure: either observations conflate under L '…"])
+  n52 -->|sufficient| e58
+  e59(["micro Viability.Kernel certified from macro Certificate despite…"])
+  n53 -->|sufficient| e59
+  e60(["perpetual TransformsViably evolution with genuine micro-turnover on…"])
+  n54 -.->|witness| e60
+  e61(["closed Viability.Kernel and synchronous-product LaxSim stability…"])
+  n55 -->|sufficient| e61
+  e62(["sustained Viability.Kernel across pooled Clearing and live…"])
+  n56 -->|sufficient| e62
+  e63(["global fleet Viability.Kernel preserved under inductive…"])
+  n57 -->|sufficient| e63
+  e64(["bounded safe substrate band 'S_safe, hi' with TransformsViably and…"])
+  n58 -->|sufficient| e64
+  e65(["explicit continuous/stochastic Viability.Kernel radii and discrete…"])
+  n59 -->|sufficient| e65
+  e66(["composed exposed and hidden viability across live upgrades…"])
+  n60 -->|sufficient| e66
+  n61 ==>|exact| n55
+  e67(["Viability.Kernel of closedProcess (A ⊕ B) under composeContract and…"])
+  n61 -->|sufficient| e67
+  e68(["Viability.Kernel preserved across serialized epoch-reserve…"])
+  n61 -->|sufficient| e68
+  e69(["finite-step depletion inside blind mode when dynamic mode switching…"])
+  n61 -.->|witness| e69
+  e70(["restored unique restrained pure Nash equilibrium (r0, r0) on the…"])
+  n62 -->|sufficient| e70
+  e71(["Viability.Kernel preservation under timely PolyComposition ScopeMode…"])
+  n62 -->|sufficient| e71
+  e72(["collapse of restrained symmetric pure Nash and non-entailment of…"])
+  n62 -->|sufficient| e72
+  n63 -->|sufficient| n60
+  e73(["full five-grammar unification, U1-U4 sharpness panorama, K6…"])
+  n63 -->|sufficient| e73
+  e74(["constructive arithmetic instantiation of every MasterSpine claim on…"])
+  n63 -.->|witness| e74
+  n64 -->|sufficient| n59
+  e75(["operator-norm stability (rate ' 1) paired with linear-FA leakage…"])
+  n64 -->|sufficient| e75
+  e76(["explicit cross-module real-valued parameter tuple witnessing all nine…"])
+  n64 -.->|witness| e76
+  e77(["Keepable (channelProcess law) Live c across all conditional renewal…"])
+  n65 ==>|exact| e77
+  e78(["no keepable generation of dead configurations…"])
+  n65 -->|sufficient| e78
+  e79(["soundness of EqCert rewrites across every StrictDoubleCat semantics…"])
+  n66 -->|sufficient| e79
+  e80(["sound RelSpan compositional evaluation gated by explicit…"])
+  n66 -->|sufficient| e80
+  e81(["non-invertible oplax chiStep rejected by strict equality certificates…"])
+  n66 -.->|witness| e81
+  e82(["static PolyComposition TransformsViably exactly across a single…"])
+  n67 ==>|exact| e82
+  e83(["preserved Viability.Kernel, non-weakening AnchorStep, and…"])
+  n67 -->|sufficient| e83
+  e84(["silent substrate drain to zero inside a self-modifying kernel once…"])
+  n67 -.->|witness| e84
+  e85(["exact separation of two same-fiber states under alpha-aliased…"])
+  n68 ==>|exact| e85
+  e86(["viable trust-region contraction tube vs overshoot outside guard…"])
+  n68 -->|sufficient| e86
+  e87(["guaranteed safety threshold crossing x_crit whenever continuous…"])
+  n68 -->|sufficient| e87
+  e88(["single unprojected gradient/policy step overshooting the contraction…"])
+  n68 -.->|witness| e88
   classDef other stroke-dasharray: 3 3
 ```
 
 | Dynamic | Leaves to | Reaches by named exits (weakest step) |
 |---|---|---|
 | [Generation, keeping and degeneration at two grains (生成、守、退化)](families/h.md#generation-and-degeneration-at-two-grains) | **none: no exit is stated** | — |
-| [Supported repair and reformation of a sustaining relation](families/h.md#supported-renewal-recovery) | **none: no exit is stated** | — |
+| [Supported repair and reformation of a sustaining relation](families/h.md#supported-renewal-recovery) | 1. restoration of the sustaining activity after a deficit-length window with positive supported net contribution (sufficient)<br>2. flat absorbed level immune to later nominal inputs once both activities lose support (sufficient) | — |
 | [Support passed on by later gainers](families/h.md#support-passed-on) | 1. a witness: balanced, only active formations giving and activity needing support, with nothing supported at step 0, a formation whose requirement loosens across step 0 is supported at step 1 (witness; dropping [requirements that do not loosen](PREMISES.md#web-unloosened))<br>2. a witness: balanced, only active formations giving and activity needing support, one formation's requirements never loosening, another formation gives at step 0 to the condition the first requires there, and the first, unsupported at step 0, is supported at step 1 (witness; dropping [only members giving to what members require](premises/h.md#flow-only-members-give-to-members-needs)) | — |
 | [A whole persists through the arising of its parts](families/h.md#whole-persists-through-generation) | **none: no exit is stated** | — |
 | [A pattern outlasting its carriers lasts through passing](families/h.md#a-pattern-lasts-through-passing) | 1. nothing carries the pattern at any step from T + d on (¬ V.Present t for every t ≥ T + d) (sufficient; dropping [the pattern present from T on](premises/h.md#web-pattern-present-from)) | — |
@@ -1354,8 +1529,8 @@ flowchart LR
 | [Activity forms reference revision and makes it recur](families/h.md#recurring-reference-revision) | 1. [Renewal and consumption classify runs](families/h.md#becoming-renewal-reading) (sufficient) | [Renewal and consumption classify runs](families/h.md#becoming-renewal-reading) (sufficient) |
 | [Mutation and the balance it sets](families/h.md#mutation-and-the-balance-it-sets) | 1. carriers present, the carriers' share falls across the step: c k (c + d) < c (c k + (c m + d w)), the share cross-multiplied (sufficient) | — |
 | [Mutual dependence, and the exponential pace that loops of couplings give](families/h.md#mutual-dependence-and-its-pace) | 1. a witness (Drawing): the pair is mutually dependent and mutually dependent in time from step 0, and not from step 1: from step 1, for some formations f and g, g's continuation lies within f's closure in time at no step (witness; dropping [mutual dependence in time from a step](premises/h.md#flow-mutuallydependentfrom))<br>2. a witness (Drawing): every formation's acts return, and the condition held de se at the returning formations holds along affecting and along being affected and fails along feeding (witness; dropping [mutual feeding](premises/h.md#flow-mutuallyfed)) | — |
-| [More needs more renewers; unceasing arising needs renewal](families/h.md#more-needs-renewers) | **none: no exit is stated** | — |
-| [A continuing family cannot go unfed from beyond](families/h.md#continuing-self-fed-from-beyond) | **none: no exit is stated** | — |
+| [More needs more renewers; unceasing arising needs renewal](families/h.md#more-needs-renewers) | 1. unboundedly recurring active renewers whenever unceasing arising depletes a condition (necessary) | — |
+| [A continuing family cannot go unfed from beyond](families/h.md#continuing-self-fed-from-beyond) | 1. inflow from outside an enclosed balanced dissipative finite family whenever taking or rising persists arbitrarily late (necessary)<br>2. persistent fed pool outlasting every individual per-step fuel in Lone (witness) | — |
 | [Renewing and consuming formation](families/h.md#renewing-consuming-formation) | 1. the renewal rate below its initial value at every step from the first on: ∀ k, (path law c0 demand (1 + k)).renew < c0.renew (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal))<br>2. nothing forms at any step from the budget on: ∀ n, budget c0 ≤ n → formed law c0 demand n = 0, with budget c0 = stock + tri renew (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal))<br>3. each part alone within renewal forms at every step, and the formation sharing the conditions, under any allocation within what forms jointly, is nothing at every step from the budget on (sufficient; dropping [pressure within renewal](premises/h.md#renewingformation-withinrenewal)) | — |
 | [A regularity kept and left along its own line](families/h.md#a-regularity-kept-and-changed) | 1. a step that continues under E and leaves E's core: y continues x under E and the core of E does not make x and y alike («异» R E («核» R E) x y) (necessary; dropping [a step kept under the core](premises/h.md#grammarregularity-kept-step), [a line kept under the core](premises/h.md#grammarregularity-kept-line)) | — |
 | [Never leaving a guard, conditions kept together, and lasting](families/h.md#never-leaving-a-guard) | 1. witness (ChoicePoint): from the configuration split each of two guards is keepable, kept along some run, while no run keeps the two together (witness)<br>2. [Not going out of a region](families/a.md#not-going-out-of-a-region) (exact)<br>3. for β above 5/12 (with 0 ≤ β ≤ 3/4), not every physical state with positive share lands: some never reaches the protection region, exactly as the margin at quality 3/8 under the worst influence is negative (exact; dropping [a correction strength at most 5/12](premises/h.md#partialregimetransition-beta-le-five-twelfths))<br>4. witness: at β = 5/12, for every ε > 0 a constant adverse quality error e with 0 < e < ε and a physical state with positive share whose history under that noisy law never lands (witness; dropping [the regime step with no extra quality error](premises/h.md#regimeboundary-step-error-free)) | [Not going out of a region](families/a.md#not-going-out-of-a-region) (exact) |
@@ -1384,6 +1559,14 @@ flowchart LR
 | [Dynamical scope selection, myopic invasion collapse, and reciprocal open-interface stability (动态视域选择、近视入侵崩溃与互惠开放接口稳定)](families/h.md#dynamical-scope-and-reciprocal-stability) | 1. bounded safe substrate band [S_safe, hi] with TransformsViably and surplus reversal under reciprocal Withholding / OpenComposition gating (sufficient) | — |
 | [Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](families/h.md#continuous-stochastic-alignment-reals) | 1. explicit continuous/stochastic Viability.Kernel radii and discrete Becoming core reductions when explicit penalty headroom holds (sufficient) | — |
 | [Composed zero-axiom master alignment spine and sharpness suite (零公理组合主对齐脊柱与边界锐度反例集)](families/h.md#master-alignment-spine-and-sharpness) | 1. composed exposed and hidden viability across live upgrades, synchronous multiscale transfer, and complete CE01-CE15 sharpness separation (sufficient) | — |
+| [Polynomial dynamic interfaces, serialized reconfiguration, and coupled laxity](families/h.md#polynomial-dynamic-interfaces-and-coupled-laxity) | 1. [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](families/h.md#open-interface-composition-and-replacement) (exact)<br>2. Viability.Kernel of closedProcess (A ⊕ B) under composeContract and closedGuard (sufficient)<br>3. Viability.Kernel preserved across serialized epoch-reserve reconfiguration steps (sufficient)<br>4. finite-step depletion inside blind mode when dynamic mode switching stays unadapted (witness) | [Open-interface composition, boundary hiding, structural replacement, and laxity (开放接口组合、边界隐藏、异构替换与松弛仿真)](families/h.md#open-interface-composition-and-replacement) (exact) |
+| [Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall](families/h.md#endogenous-order-scope-coevolution-and-nash) | 1. restored unique restrained pure Nash equilibrium (r0, r0) on the widened menu {r0, d0} (sufficient)<br>2. Viability.Kernel preservation under timely PolyComposition ScopeMode switching for any unconstrained proposer (sufficient)<br>3. collapse of restrained symmetric pure Nash and non-entailment of Unrestricted under rival valuations (sufficient) | — |
+| [Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall](families/h.md#whole-becoming-master-spine) | 1. [Composed zero-axiom master alignment spine and sharpness suite (零公理组合主对齐脊柱与边界锐度反例集)](families/h.md#master-alignment-spine-and-sharpness) (sufficient)<br>2. full five-grammar unification, U1-U4 sharpness panorama, K6 compatibility, and unconditional Unrestricted non-entailment (sufficient)<br>3. constructive arithmetic instantiation of every MasterSpine claim on witnessArchitecture (witness) | [Composed zero-axiom master alignment spine and sharpness suite (零公理组合主对齐脊柱与边界锐度反例集)](families/h.md#master-alignment-spine-and-sharpness) (sufficient) |
+| [Unified real-valued periphery joining all nine Mathlib becoming modules](families/h.md#unified-becoming-over-reals) | 1. [Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](families/h.md#continuous-stochastic-alignment-reals) (sufficient)<br>2. operator-norm stability (rate < 1) paired with linear-FA leakage hysteresis across Autonomous and AdaptiveLoops (sufficient)<br>3. explicit cross-module real-valued parameter tuple witnessing all nine periphery bridges simultaneously (witness) | [Continuous and stochastic alignment realizations over Mathlib reals (基于 Mathlib 实数的连续与随机对齐实现)](families/h.md#continuous-stochastic-alignment-reals) (sufficient) |
+| [October renewal histories coincide by field renaming with keepable-step runs](families/h.md#renewal-bridge-to-keepable-step) | 1. Keepable (channelProcess law) Live c across all conditional renewal configurations (exact)<br>2. no keepable generation of dead configurations (dead stays dead across ChannelLaw steps) (sufficient) | — |
+| [Strict double-category certificate kernel, conservative 3D extension, and guarded oplax syntax](families/h.md#guarded-double-category-certificate-kernel) | 1. soundness of EqCert rewrites across every StrictDoubleCat semantics with invariant 2D frames and weights (sufficient)<br>2. sound RelSpan compositional evaluation gated by explicit Beck-Chevalley interchange witnesses (sufficient)<br>3. non-invertible oplax chiStep rejected by strict equality certificates yet distinguished cleanly under guarded syntax (witness) | — |
+| [Epoch handoff: what may change across epochs, what must not](families/h.md#open-ended-epoch-handoff) | 1. static PolyComposition TransformsViably exactly across a single constant-epoch handoff (exact)<br>2. preserved Viability.Kernel, non-weakening AnchorStep, and non-deadlocking runs across infinite EpochHandoffGate chains (sufficient)<br>3. silent substrate drain to zero inside a self-modifying kernel once only the anchor is dropped (witness) | — |
+| [Limits and remedies for four guarded-runtime failure regimes over the reals](families/h.md#quantitative-transfer-of-four-guard-failure-regimes) | 1. exact separation of two same-fiber states under alpha-aliased bounded-eps probes iff 2 * eps < (1 - alpha) * \|p u1 - p u2\| (exact)<br>2. viable trust-region contraction tube vs overshoot outside guard horizon (sufficient)<br>3. guaranteed safety threshold crossing x_crit whenever continuous drawdown lag exceeds (x0 - x_crit) / H1 (sufficient)<br>4. single unprojected gradient/policy step overshooting the contraction guard tube (witness) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
@@ -1578,7 +1761,7 @@ flowchart LR
 
 *AI-written. Computed at each render from what Lean printed of the theorems each proof uses (the print; what it was made from is under the next paragraph) and from which theorems the entries list; typed by no one, and no result. The lines are last in each dynamic's section on its family's page, for every family, read for its premises or not.*
 
-A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,409 of the 22,890 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 59 pairs of dynamics with an exit from one to the other, 34 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 21 dynamics list no theorem the print has a row for and can have no line (9 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 60 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
+A line of this kind says that the proof of one theorem, as written, uses another theorem, and that the entries list the two under different dynamics. It says no more. 2,718 of the 22,890 theorems in the print are listed under a dynamic, so these lines are of those; where a chain is shown it runs through the rest. A use is not a case: the using theorem need not be the used one with its roles fixed. It is not a joining and not an exit: it says nothing of a course passing from one dynamic to the other, and its direction is the order of proof, the used theorem declared before its user, which is no direction of change. It cannot see a passage: where going from one dynamic to another is itself what a theorem states, the proof of it need use nothing listed under either, and of the 64 pairs of dynamics with an exit from one to the other, 37 have no line of this kind. Passages proved in Lean that no exit names are not on this page under any kind; that none is shown is not that none is proved. A line is of two theorems, and a dynamic lists many: that one of them is used is not a use of what the dynamic's name says. Which dynamic a theorem is under is kept by hand, so every line rests on the listing as well as on Lean; 109 theorems of the print are listed under more than one dynamic, and where the using theorem is also listed under the used one's dynamic, or the used one under the using one's, the use is shown as a shared listing and not as a use between those two. Only theorems declared in the modules of the core receipt are printed, and definitions are not followed: 27 dynamics list no theorem the print has a row for and can have no line (9 of them list no declaration), and a theorem stated with another dynamic's notion and using none of its theorems has none. The printer follows one call, and every declaration under a theorem's own name (Lean's auxiliary ones, and any theorem a person declared under that name), counting what they use as the theorem's own; a field of a structure that is a proposition has a row, so a proof that takes it from the structure it is given shows as a use, though what it uses is an assumption and not a proved theorem; a use it does not follow is not shown, so where no line is, none was found; 60 names the printed proofs use have no row in the print, and nothing is followed past such a name. A chain through theorems no dynamic lists says where the proofs as written lead, and not that the first needs the last: a theorem between may prove several things of which the next takes one. Such a chain also rests on what is not listed: were a theorem between entered under a dynamic, the chain would stop there. How often a dynamic's theorems are used says they were proved earlier and are called often; it says nothing of that dynamic's place among the others. The figures in this paragraph are counts of what is listed and printed, told so that a reader knows how much the lines cover. They change when a theorem is listed or a proof rewritten, and a change in them is not the map nearer or further.
 
 **What the print was made from.** Commit `f9836f3a68d2`, the core run of `20261124T195858.526167Z`, leanprover/lean4:v4.29.1: 22,890 theorems in 439 modules. It binds the sources the core receipt names.
 

@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-28 of the atlas's 204 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+28 of the atlas's 220 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -35,7 +35,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [Position does not protect](#position-does-not-protect) | [relative-position-is-zero-sum](../../records/relative-position-is-zero-sum.md), [what-position-reads](../../records/what-position-reads.md) | World | recorded-checked (theorem); recorded-checked (theorem) | 3 | 8 |
 | [No finite part bears taking](#no-finite-part-bears-taking) | [no-finite-part-bears-taking](../../records/no-finite-part-bears-taking.md), [far-conveying-runs-the-family-down](../../records/far-conveying-runs-the-family-down.md) | World | recorded-checked (theorem); recorded-checked (theorem) | 2 | 10 |
 | [A whole drawing beyond renewal ends](#whole-drawing-beyond-renewal-ends) | [whole-drawing-beyond-renewal-ends](../../records/whole-drawing-beyond-renewal-ends.md) | World | recorded-checked (theorem) | 3 | 4 |
-| [Loss beyond a region](#loss-beyond-a-region) | [loss-beyond-a-region](../../records/loss-beyond-a-region.md) | World | recorded-checked (theorem) | 0 | 4 |
+| [Loss beyond a region](#loss-beyond-a-region) | [loss-beyond-a-region](../../records/loss-beyond-a-region.md) | World | recorded-checked (theorem) | 2 | 4 |
 | [LA4's season](#the-test-season-meets-the-optimum-laws) | [the-test-season-meets-the-optimum-laws](../../records/the-test-season-meets-the-optimum-laws.md) | a named model | recorded-checked (theorem) | 2 | 3 |
 | [Selection blind beyond the coupling closure](#unselected-beyond-the-coupling-closure) | [selection-through-couplings](../../records/selection-through-couplings.md), [the-gap-for-ones-own-act](../../records/the-gap-for-ones-own-act.md), [what-pooled-coupling-reaches](../../records/what-pooled-coupling-reaches.md), [what-a-pools-acts-respond-to](../../records/what-a-pools-acts-respond-to.md), [where-two-courses-rejoin](../../records/where-two-courses-rejoin.md), [selection-read-off-continuations](../../records/selection-read-off-continuations.md), [where-the-blindness-lifts](../../records/where-the-blindness-lifts.md), [route-b-universal-form-closed](../../records/route-b-universal-form-closed.md), [covering-by-the-returning-formations](../../records/covering-by-the-returning-formations.md), [route-b-joined](../../records/route-b-joined.md), [selection-through-couplings-at-a-coarser-step](../../records/selection-through-couplings-at-a-coarser-step.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 12 | 13 |
 | [A selection read off the pool its own course gives registers no removal](#selection-read-off-its-own-survivors) | [a-selection-removing-its-readers](../../records/a-selection-removing-its-readers.md) | World | recorded-checked (theorem) | 5 | 3 |
@@ -1111,7 +1111,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Clearing.loses_beyond`: [WithheldLevels](../PREMISES.md#admission-withheldlevels)
   - `Becoming.Clearing.undermines_within_renewal`: none listed
 - **Forbids.** Not stated.
-- **Exits.** None.
+- **Exits.**
+  - To a state, in words: “zero loss beyond the region once the region covers every formation of the whole”: sufficient, by `Becoming.Web.not_losesBeyond_whole`. Its edge: When the admitted region covers the whole, nothing lies beyond it to lose.. Records: [loss-beyond-a-region](../../records/loss-beyond-a-region.md) recorded-checked (theorem). ([07-SIGNIFICANCE.md#r-loss-beyond-a-region](../../../chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region))
+  - To a state, in words: “dweller excluded outside alongDependence from step 2 on whenever levels omit the clearer part”: witness, by `Becoming.Clearing.loses_beyond`. Its edge: Active supported clearer admits everything alongDependence while excluding the dweller beyond it.. Records: [loss-beyond-a-region](../../records/loss-beyond-a-region.md) recorded-checked (theorem). ([07-SIGNIFICANCE.md#r-loss-beyond-a-region](../../../chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -1267,6 +1269,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/commons-gated-renewal](../../../../../experiments/commons-gated-renewal): T3, run
+  - [experiments/learned-claim-agents](../../../../../experiments/learned-claim-agents): None, run
 - **Tests bound to it.** [MQ1 (simulation)](../BINDINGS.md#test-mq1-simulation) (the binding), [IN1 (round 2)](../BINDINGS.md#test-in1-round-2) (the binding), [SE1](../BINDINGS.md#test-se1) (nothing failed), [LCA](../BINDINGS.md#test-lca) (the binding)
 - **Open.**
   - The laws do not derive who selects, what couples into the selector, whether an actual selection goes through the couplings, whether offspring follow the selection, or whether reaching beyond is chosen. ([selection-through-couplings.md#does-not-show--未表明](../../records/selection-through-couplings.md#does-not-show--未表明))
@@ -1424,7 +1427,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Whether actual valuers rank kept sets (presentation invariance), whether a separate sign gives the joint context's increment, and how dispersed actual weights are (VT1); human valuers remain untested. ([07-SIGNIFICANCE.md#t5](../../../chapters/07-SIGNIFICANCE.md#t5))
 - **Beyond its couplings.** Non-additive orders and orders with negative weights or uncounted items lie outside positive additive weightings; only where every order in a class ranks widenings higher does widening coincide with their shared order.
 - **Sources.** [07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening](../../../chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening), [07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it](../../../chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it), [07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks](../../../chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks), [07-SIGNIFICANCE.md#t5](../../../chapters/07-SIGNIFICANCE.md#t5)
-- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.Weighting.widens_iff_every_positive`: in `Becoming.EndogenousOrder.macroAdmits_restores_comparability`, listed under [Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall](h.md#endogenous-order-scope-coevolution-and-nash).
+    - `Becoming.Weighting.ranksNet_widensBy`: in `Becoming.EndogenousOrder.online_weight_learner_reverses_off_support`, `Becoming.EndogenousOrder.uncoupled_blindness_firewall` and `Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall`, listed under [Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall](h.md#endogenous-order-scope-coevolution-and-nash).
+    - `Becoming.Weighting.ranksNet_ties`: in `Becoming.EndogenousOrder.uncoupled_blindness_firewall`, listed under [Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall](h.md#endogenous-order-scope-coevolution-and-nash).
 
 <a id="unclamped-stock-flow-bridge"></a>
 ### Unclamped pre-overdraw stock–flow bridge and coupled indexed correspondence (未截断先于透支之存流桥及耦合索引相应)

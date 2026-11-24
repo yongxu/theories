@@ -10,7 +10,7 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-24 of the atlas's 204 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+24 of the atlas's 220 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -24,7 +24,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [A map moving every value never rests along its run](#a-map-moving-every-value-never-rests) | [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md), [readings-within-what-they-read](../../records/readings-within-what-they-read.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 1 | 1 |
 | [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](#revision-with-an-undecided-value) | [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) | a named model | recorded-checked (theorem) | 2 | 2 |
 | [Without memory, a withholding returns around every loop of waits](#withholding-returns-around-a-loop) | [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md), [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 1 | 3 |
-| [A run round a loop keeps changing](#a-run-round-a-loop-keeps-changing) | [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md), [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md) | any process | recorded-checked (theorem); recorded-checked (theorem) | 0 | 1 |
+| [A run round a loop keeps changing](#a-run-round-a-loop-keeps-changing) | [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md), [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md) | any process | recorded-checked (theorem); recorded-checked (theorem) | 1 | 1 |
 | [Recurrence under every law of change](#recurrence-without-premise) | [recurrence-without-premise](../../records/recurrence-without-premise.md), [where-a-move-is-formed](../../records/where-a-move-is-formed.md), [identification-where-bounded](../../records/identification-where-bounded.md), [identification-where-runs-part](../../records/identification-where-runs-part.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 0 | 4 |
 | [Recurrence without decidedness](#recurrence-without-decidedness) | [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md) | World | recorded-checked (theorem) | 0 | 1 |
 | [Returning where the course branches](#returning-where-the-course-branches) | [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md) | any process | recorded-checked (theorem) | 0 | 1 |
@@ -37,7 +37,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | [Return grades renewal](#becoming-return-grades) | [becoming-return-grades](../../records/becoming-return-grades.md) | World | recorded-checked (theorem) | 0 | 3 |
 | [The law of waxing and waning (消息之律)](#waxing-and-waning-returns) | [hexagrams-on-the-spine](../../records/hexagrams-on-the-spine.md), [hexagram-arrangements-and-laws](../../records/hexagram-arrangements-and-laws.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 0 | 2 |
 | [How loops form within the unfolding](#how-loops-form) | [how-loops-form](../../records/how-loops-form.md), [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md), [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 0 | 4 |
-| [Whether a loop closes, keeps or widens a difference](#whether-a-loop-closes-a-difference) | [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) | any type | recorded-checked (theorem) | 0 | 4 |
+| [Whether a loop closes, keeps or widens a difference](#whether-a-loop-closes-a-difference) | [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) | any type | recorded-checked (theorem) | 2 | 4 |
 
 <a id="overcompensating-giving-cycles"></a>
 ### Overcompensating giving can cycle for ever
@@ -407,7 +407,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Enough.Free.stays_meet_not_assured`: none listed
   - `Becoming.Enough.law_possibly_iff_assured`: none listed
 - **Forbids.** Not stated.
-- **Exits.** None.
+- **Exits.**
+  - To a state, in words: “non-settling infinite change iff a reachable step goes to a distinct configuration returning to it”: exact, by `Becoming.Settling.keeps_changing_iff`. Its edge: In a world held by a list, some run keeps changing forever iff a reachable non-trivial loop returns to itself.. Records: [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md) recorded-checked (theorem). ([08-METHOD.md#r-when-the-runs-of-a-process-settle](../../../chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -857,7 +858,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a particular law runs away around a loop: the runaway is of the most difference that can arrive, attained by the carrying law; a law exchanging nothing is within every strength and has no runaway, loop or not. ([how-a-carried-difference-grows.md#does-not-show--未表明](../../records/how-a-carried-difference-grows.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-how-loops-form](../../../chapters/02-MAP.md#r-how-loops-form), [02-MAP.md#r-loops-within-what-a-law-reads](../../../chapters/02-MAP.md#r-loops-within-what-a-law-reads), [02-MAP.md#r-how-a-carried-difference-grows](../../../chapters/02-MAP.md#r-how-a-carried-difference-grows)
-- **Uses between proofs.** None found. A use Lean's printer did not follow would not show here, and a chain that ends at a theorem listed here is shown where it starts ([what a line of this kind says, and what it does not](../TERRAIN.md#uses-between-proofs)).
+- **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
+  - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.break_carried_nowhere`: in `Becoming.ActiveInquiryLoop.network_threshold_blindness`, listed under [Active inquiry margin sandwich, cascade alarm capture, delay obstructions, and blanket screening](d.md#active-inquiry-deadline-cascade-and-blankets).
 
 <a id="whether-a-loop-closes-a-difference"></a>
 ### Whether a loop closes, keeps or widens a difference
@@ -884,7 +888,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.LoopReturn.gap_course`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [exchanges responding to the gap by a map](../premises/f.md#loopreturn-respondsbyreturn)
   - `Becoming.LoopReturn.replenishing_no_return`: none listed
 - **Forbids.** Not stated.
-- **Exits.** None.
+- **Exits.**
+  - To a state, in words: “closed difference at 0 within d turns whenever every positive state contracts strictly”: sufficient, by `Becoming.LoopReturn.closes_within`. Its edge: Where f 0 = 0 and f x < x for all positive x, difference d closes to 0 within d turns and merges distinct starts.. Records: [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem). ([02-MAP.md#r-whether-a-loop-closes-a-difference](../../../chapters/02-MAP.md#r-whether-a-loop-closes-a-difference))
+  - To a state, in words: “some link around the loop returning strictly less than it receives”: necessary, by `Becoming.LoopReturn.closing_needs_less`. Its edge: Closing any positive difference around a loop requires at least one contractive link giving back less than received.. Records: [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem). ([02-MAP.md#r-whether-a-loop-closes-a-difference](../../../chapters/02-MAP.md#r-whether-a-loop-closes-a-difference))
 - **Transitions.**
   - tipping in a parameter: with links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound from a positive start (`Becoming.LoopReturn.whole_factors`, `Becoming.LoopReturn.nothing_between`). Between the product of the whole-number factors at most 1: the difference is nothing from the first turn (product 0) or the same at every turn (product 1) and the product at least 2: from a positive start the difference exceeds every bound. Records: [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem).
 - **Tests.** None.

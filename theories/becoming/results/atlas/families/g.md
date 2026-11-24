@@ -10,12 +10,12 @@ The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*. The lines on uses between proofs, last in an entry's section, are no part of the curated layer: they are computed at each render from what Lean printed of its proof terms and from the declarations the entries list, and typed by no one; they too create no result.
 
-18 of the atlas's 204 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+18 of the atlas's 220 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | [The grammar's law of rest: falls that end do not recur](#falls-that-end-do-not-recur) | [shared-laws-on-the-grammar](../../records/shared-laws-on-the-grammar.md) | root | recorded-checked (theorem) | 1 | 2 |
-| [The last change of a run](#the-last-change-of-a-run) | [the-last-change-of-a-run](../../records/the-last-change-of-a-run.md) | any process | recorded-checked (theorem) | 0 | 2 |
+| [The last change of a run](#the-last-change-of-a-run) | [the-last-change-of-a-run](../../records/the-last-change-of-a-run.md) | any process | recorded-checked (theorem) | 1 | 2 |
 | [When the runs of a process settle](#when-the-runs-of-a-process-settle) | [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md), [where-a-run-goes-on](../../records/where-a-run-goes-on.md) | any process | recorded-checked (theorem); recorded-checked (theorem) | 1 | 6 |
 | [Where the possible grows](#where-the-possible-grows) | [where-the-possible-grows](../../records/where-the-possible-grows.md) | any process | recorded-checked (theorem) | 6 | 9 |
 | [What keeping widening needs, and what carries it](#what-keeping-widening-needs) | [what-keeping-widening-needs](../../records/what-keeping-widening-needs.md) | World | recorded-checked (theorem) | 5 | 6 |
@@ -68,6 +68,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
   - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
     - `Becoming.«屡则或屡»`: in `Becoming.Amounts.rests_of_finite_reading`, listed under [The least loss as a premise of rest](#least-loss-rest).
+    - `Becoming.«尽则不屡»`: in `Becoming.MasterSpine.masterSpine_grammar_lifts`, listed under [Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall](h.md#whole-becoming-master-spine).
+    - `Becoming.Amounts.falls_end`: in `Becoming.MasterSpine.masterSpine_grammar_lifts`, listed under [Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall](h.md#whole-becoming-master-spine).
   - *Listed here and under another dynamic, by hand.* `Becoming.Amounts.rests_unrefuted`, also under [The least loss as a premise of rest](#least-loss-rest). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="the-last-change-of-a-run"></a>
@@ -90,7 +92,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.LastChange.assured_iff_of_lpo`: [the limited principle of omniscience](../premises/g.md#lpo), [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed), [decided](../PREMISES.md#k3-decided)
   - `Becoming.LastChange.not_not_rests`: [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed), [every reachable staying configuration meets the target](../premises/g.md#lastchange-stays-meet), [no reachable change can be undone](../premises/g.md#lastchange-no-undo), [the run starts at s](../premises/g.md#lastchange-starts-at), [decided](../PREMISES.md#k3-decided)
 - **Forbids.** Not stated.
-- **Exits.** None.
+- **Exits.**
+  - To a state, in words: “settling of a run (Settles r) iff at every step T it is decided whether the run changes again (given DecidableEq S, finite list membership held, and ¬ Settling.ChangesInLoop r)”: exact, by `Becoming.LastChange.settles_iff_decided`. Its edge: With decidable equality on states, every configuration held in a finite list l, and no change within a loop (¬ Settling.ChangesInLoop r), a run settles iff every step T decides ChangesAgain r T or StillFrom r T.. Records: [the-last-change-of-a-run](../../records/the-last-change-of-a-run.md) recorded-checked (theorem). ([08-METHOD.md#r-the-last-change-of-a-run](../../../chapters/08-METHOD.md#r-the-last-change-of-a-run))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -752,6 +755,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/margin-measured](../../../../../experiments/margin-measured): T2, run
+  - [experiments/state-named-in-advance](../../../../../experiments/state-named-in-advance): T2, run
+  - [experiments/state-against-embedding](../../../../../experiments/state-against-embedding): T2, run
 - **Tests bound to it.** [MQ4](../BINDINGS.md#test-mq4) (the binding), [MQ5](../BINDINGS.md#test-mq5) (the binding), [MQ7](../BINDINGS.md#test-mq7) (the measurement), [UE31b](../BINDINGS.md#test-ue31b) (the law), [UE32](../BINDINGS.md#test-ue32) (nothing failed)
 - **Open.**
   - Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts). ([where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明](../../records/where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明))
