@@ -2637,6 +2637,18 @@
    "page": "theories/becoming/results/records/finite-joining-tree-lifting.md"
   },
   {
+   "id": "record:finite-mode-survival-distinguishability",
+   "type": "result",
+   "record": "finite-mode-survival-distinguishability",
+   "title": "Finite-mode survival distinguishability at horizon card minus one",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/finite-mode-survival-distinguishability.md"
+  },
+  {
    "id": "record:finite-trace-transport",
    "type": "result",
    "record": "finite-trace-transport",
@@ -46595,6 +46607,16 @@
    "from": "record:finite-joining-tree-lifting",
    "to": "record:retained-reference-joining-recovery",
    "type": "related"
+  },
+  {
+   "from": "record:finite-mode-survival-distinguishability",
+   "to": "record:observational-fidelity-and-multi-regime-error",
+   "type": "related"
+  },
+  {
+   "from": "record:finite-mode-survival-distinguishability",
+   "to": "record:oplax-history-comparison-and-relational-loss",
+   "type": "formal-reuse"
   },
   {
    "from": "record:finite-trace-transport",

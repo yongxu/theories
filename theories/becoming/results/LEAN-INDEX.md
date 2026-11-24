@@ -19,7 +19,7 @@ Valid inference, recognition, motivation, implementation and universal scope are
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,372 `.lean` paths and 1,963 distinct byte contents**, including 140 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,373 `.lean` paths and 1,964 distinct byte contents**, including 140 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
@@ -27,9 +27,9 @@ The inventory contains **2,372 `.lean` paths and 1,963 distinct byte contents**,
 | Development attempt | 1,305 |
 | Historical draft | 3 |
 | Imported archive | 23 |
-| Working source | 1,028 |
+| Working source | 1,029 |
 
-The working-source and audit entries contain **33,920 explicit theorem/lemma occurrences** and 50,311 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **33,947 explicit theorem/lemma occurrences** and 50,349 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -42,7 +42,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 |---|---:|
 | [Becoming pure core](#group-becoming-core) | 417 |
 | [Becoming instances and applications](#group-becoming-ring) | 18 |
-| [Becoming active periphery](#group-becoming-periphery) | 13 |
+| [Becoming active periphery](#group-becoming-periphery) | 14 |
 | [The ethics and the generative direction](#group-ethics) | 139 |
 | [Valuation development and liangzhi](#group-valuation) | 19 |
 | [Attainable inquiry, contact and process laws](#group-inquiry) | 71 |
@@ -529,10 +529,11 @@ Conceptual entry: [08-METHOD §pure](../chapters/08-METHOD.md#pure-core-and-peri
 | [ExpectedFreeEnergyReals](../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean) · [Names](lean-declarations/becoming-periphery.md#module-08914cd7e653) | 49 | 19 | [Theory](../chapters/03-KNOWING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [FreeEnergyReals](../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean) · [Names](lean-declarations/becoming-periphery.md#module-00dcabf3b882) | 70 | 6 | [Theory](../chapters/03-KNOWING.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [LinearBlankets](../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean) · [Names](lean-declarations/becoming-periphery.md#module-4cd0718b9ba1) | 62 | 30 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
-| [ObservationalFidelity](../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean) · [Names](lean-declarations/becoming-periphery.md#module-46c8172f5cac) | 21 | 17 | [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
+| [ObservationalFidelity](../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean) · [Names](lean-declarations/becoming-periphery.md#module-46c8172f5cac) | 35 | 20 | [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [EntropyProduction](../../../experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean) · [Names](lean-declarations/becoming-periphery.md#module-38befb7a7fdb) | 44 | 30 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [RegimeReals](../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Names](lean-declarations/becoming-periphery.md#module-89709f49ef41) | 14 | 3 | [Theory](../history/THE-THEORY-OF-BECOMING.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [Representation](../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean) · [Names](lean-declarations/becoming-periphery.md#module-cac9de43b3e1) | 47 | 15 | [Theory](../chapters/08-METHOD.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
+| [SurvivalDistinguishability](../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean) · [Names](lean-declarations/becoming-periphery.md#module-bb5aa3867ba2) | 13 | 8 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [SlowingDown](../../../experiments/integrated-correction/general-framework/generative-basis/lean/warning/SlowingDown.lean) · [Names](lean-declarations/becoming-periphery.md#module-c24e6fba1313) | 24 | 8 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 
 <a id="group-ethics"></a>

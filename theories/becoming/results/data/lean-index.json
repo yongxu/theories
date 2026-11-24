@@ -20,22 +20,22 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2372,
-    "distinct_byte_contents": 1963,
+    "lean_paths": 2373,
+    "distinct_byte_contents": 1964,
     "byte_identical_duplicate_groups": 140,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1305,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 1028
+      "working-source": 1029
     },
-    "working_named_theorem_lemma_occurrences": 33920,
-    "working_explicit_named_declaration_occurrences": 50311,
+    "working_named_theorem_lemma_occurrences": 33947,
+    "working_explicit_named_declaration_occurrences": 50349,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 417,
-      "becoming-periphery": 13,
+      "becoming-periphery": 14,
       "becoming-ring": 18,
       "concern": 15,
       "core": 145,
@@ -19150,7 +19150,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
-      "sha256": "ef6ffc7ff3776e52e333470264df3ab231ad6edda87a58be03a0fd3b1f9c41fc",
+      "sha256": "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -19195,6 +19195,17 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/chapters/08-METHOD.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
+      "sha256": "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154",
+      "role": "working-source",
+      "group": "becoming-periphery",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -150211,6 +150222,158 @@
       ],
       "declaration_counts": {
         "def": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154": {
+      "byte_size": 14375,
+      "line_count": 279,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.LinearAlgebra.Dimension.Constructions",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.Tactic",
+        "Becoming.OplaxHistory"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "stepOp",
+          "qualified_name_hint": "SurvivalDistinguishability.stepOp",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "survVec",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_cons",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_cons",
+          "line": 34
+        },
+        {
+          "kind": "def",
+          "name": "krylovSub",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub",
+          "line": 39
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_mono",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_mono",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "one_le_finrank_krylov_zero",
+          "qualified_name_hint": "SurvivalDistinguishability.one_le_finrank_krylov_zero",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "nat_chain_stabilizes",
+          "qualified_name_hint": "SurvivalDistinguishability.nat_chain_stabilizes",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "krylovSub_map_step_le",
+          "qualified_name_hint": "SurvivalDistinguishability.krylovSub_map_step_le",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_mem_krylov_stabilized",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_mem_krylov_stabilized",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "survival_indistinguishable_iff_le_card_pred",
+          "qualified_name_hint": "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+          "line": 95
+        },
+        {
+          "kind": "def",
+          "name": "countdownK",
+          "qualified_name_hint": "SurvivalDistinguishability.countdownK",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_countdownK",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_countdownK",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "countdown_attains_card_pred",
+          "qualified_name_hint": "SurvivalDistinguishability.countdown_attains_card_pred",
+          "line": 147
+        },
+        {
+          "kind": "def",
+          "name": "switchK",
+          "qualified_name_hint": "SurvivalDistinguishability.switchK",
+          "line": 172
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_switchK_false",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_false",
+          "line": 176
+        },
+        {
+          "kind": "theorem",
+          "name": "survVec_switchK_true",
+          "qualified_name_hint": "SurvivalDistinguishability.survVec_switchK_true",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "three_state_mode_switch_counterexample",
+          "qualified_name_hint": "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+          "line": 198
+        },
+        {
+          "kind": "abbrev",
+          "name": "C2FinState",
+          "qualified_name_hint": "SurvivalDistinguishability.C2FinState",
+          "line": 209
+        },
+        {
+          "kind": "def",
+          "name": "c2Embed",
+          "qualified_name_hint": "SurvivalDistinguishability.c2Embed",
+          "line": 212
+        },
+        {
+          "kind": "def",
+          "name": "c2Op",
+          "qualified_name_hint": "SurvivalDistinguishability.c2Op",
+          "line": 217
+        },
+        {
+          "kind": "theorem",
+          "name": "c2_coupled_survival_separation",
+          "qualified_name_hint": "SurvivalDistinguishability.c2_coupled_survival_separation",
+          "line": 226
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 7,
+        "theorem": 13
       },
       "textual_markers": {
         "sorry": [],
@@ -587633,260 +587796,6 @@
       },
       "print_axioms_commands": 0
     },
-    "ef6ffc7ff3776e52e333470264df3ab231ad6edda87a58be03a0fd3b1f9c41fc": {
-      "byte_size": 43255,
-      "line_count": 794,
-      "imports": [
-        "Mathlib.Algebra.BigOperators.Field",
-        "Mathlib.Tactic",
-        "AlignmentReals",
-        "BecomingReals",
-        "Becoming.OplaxHistory"
-      ],
-      "declarations": [
-        {
-          "kind": "structure",
-          "name": "FinDist",
-          "qualified_name_hint": "ObservationalFidelity.FinDist",
-          "line": 49
-        },
-        {
-          "kind": "theorem",
-          "name": "FinDist.ext",
-          "qualified_name_hint": "ObservationalFidelity.FinDist.ext",
-          "line": 54
-        },
-        {
-          "kind": "def",
-          "name": "diracDist",
-          "qualified_name_hint": "ObservationalFidelity.diracDist",
-          "line": 61
-        },
-        {
-          "kind": "def",
-          "name": "pushforward",
-          "qualified_name_hint": "ObservationalFidelity.pushforward",
-          "line": 67
-        },
-        {
-          "kind": "theorem",
-          "name": "pushforward_comp",
-          "qualified_name_hint": "ObservationalFidelity.pushforward_comp",
-          "line": 80
-        },
-        {
-          "kind": "def",
-          "name": "tvDist",
-          "qualified_name_hint": "ObservationalFidelity.tvDist",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_nonneg",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_nonneg",
-          "line": 103
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_self",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_self",
-          "line": 107
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_symm",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_symm",
-          "line": 111
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_triangle",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_triangle",
-          "line": 116
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_pushforward_le",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_pushforward_le",
-          "line": 124
-        },
-        {
-          "kind": "def",
-          "name": "massOutside",
-          "qualified_name_hint": "ObservationalFidelity.massOutside",
-          "line": 146
-        },
-        {
-          "kind": "theorem",
-          "name": "massOutside_nonneg",
-          "qualified_name_hint": "ObservationalFidelity.massOutside_nonneg",
-          "line": 150
-        },
-        {
-          "kind": "theorem",
-          "name": "optimal_query_tv_floor",
-          "qualified_name_hint": "ObservationalFidelity.optimal_query_tv_floor",
-          "line": 161
-        },
-        {
-          "kind": "theorem",
-          "name": "empty_source_infeasible",
-          "qualified_name_hint": "ObservationalFidelity.empty_source_infeasible",
-          "line": 347
-        },
-        {
-          "kind": "theorem",
-          "name": "coarsening_tv_mono",
-          "qualified_name_hint": "ObservationalFidelity.coarsening_tv_mono",
-          "line": 357
-        },
-        {
-          "kind": "theorem",
-          "name": "macro_refinement_tv_mono",
-          "qualified_name_hint": "ObservationalFidelity.macro_refinement_tv_mono",
-          "line": 404
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_tv_does_not_prevent_fiber_viability_split",
-          "qualified_name_hint": "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
-          "line": 426
-        },
-        {
-          "kind": "def",
-          "name": "diagSupport",
-          "qualified_name_hint": "ObservationalFidelity.diagSupport",
-          "line": 460
-        },
-        {
-          "kind": "theorem",
-          "name": "diagSupport_fst_eq_snd",
-          "qualified_name_hint": "ObservationalFidelity.diagSupport_fst_eq_snd",
-          "line": 464
-        },
-        {
-          "kind": "def",
-          "name": "fourFifthsBool",
-          "qualified_name_hint": "ObservationalFidelity.fourFifthsBool",
-          "line": 473
-        },
-        {
-          "kind": "def",
-          "name": "oneFifthBool",
-          "qualified_name_hint": "ObservationalFidelity.oneFifthBool",
-          "line": 479
-        },
-        {
-          "kind": "def",
-          "name": "diagLift",
-          "qualified_name_hint": "ObservationalFidelity.diagLift",
-          "line": 485
-        },
-        {
-          "kind": "theorem",
-          "name": "per_query_not_implies_joint_marginal",
-          "qualified_name_hint": "ObservationalFidelity.per_query_not_implies_joint_marginal",
-          "line": 500
-        },
-        {
-          "kind": "def",
-          "name": "uniformPairBool",
-          "qualified_name_hint": "ObservationalFidelity.uniformPairBool",
-          "line": 532
-        },
-        {
-          "kind": "def",
-          "name": "fairBool",
-          "qualified_name_hint": "ObservationalFidelity.fairBool",
-          "line": 538
-        },
-        {
-          "kind": "theorem",
-          "name": "joint_marginal_not_implies_joint_dist",
-          "qualified_name_hint": "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
-          "line": 548
-        },
-        {
-          "kind": "def",
-          "name": "FinKernel",
-          "qualified_name_hint": "ObservationalFidelity.FinKernel",
-          "line": 592
-        },
-        {
-          "kind": "def",
-          "name": "pushKernel",
-          "qualified_name_hint": "ObservationalFidelity.pushKernel",
-          "line": 596
-        },
-        {
-          "kind": "def",
-          "name": "compKernel",
-          "qualified_name_hint": "ObservationalFidelity.compKernel",
-          "line": 609
-        },
-        {
-          "kind": "def",
-          "name": "prodDist",
-          "qualified_name_hint": "ObservationalFidelity.prodDist",
-          "line": 614
-        },
-        {
-          "kind": "def",
-          "name": "tensorKernel",
-          "qualified_name_hint": "ObservationalFidelity.tensorKernel",
-          "line": 626
-        },
-        {
-          "kind": "theorem",
-          "name": "pushKernel_tv_step",
-          "qualified_name_hint": "ObservationalFidelity.pushKernel_tv_step",
-          "line": 631
-        },
-        {
-          "kind": "def",
-          "name": "iterKernel",
-          "qualified_name_hint": "ObservationalFidelity.iterKernel",
-          "line": 681
-        },
-        {
-          "kind": "theorem",
-          "name": "sequential_kernel_tv_bound",
-          "qualified_name_hint": "ObservationalFidelity.sequential_kernel_tv_bound",
-          "line": 688
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_prodDist_le",
-          "qualified_name_hint": "ObservationalFidelity.tvDist_prodDist_le",
-          "line": 701
-        },
-        {
-          "kind": "theorem",
-          "name": "independent_tensor_tv_bound",
-          "qualified_name_hint": "ObservationalFidelity.independent_tensor_tv_bound",
-          "line": 733
-        },
-        {
-          "kind": "theorem",
-          "name": "three_regime_error_contrast",
-          "qualified_name_hint": "ObservationalFidelity.three_regime_error_contrast",
-          "line": 753
-        }
-      ],
-      "declaration_counts": {
-        "def": 16,
-        "structure": 1,
-        "theorem": 21
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "ef8cbcb4d4097f5b0e4ccfedbd15de2f90752a43d035da66134e07e2d1ad33e1": {
       "byte_size": 11788,
       "line_count": 249,
@@ -608620,6 +608529,362 @@
       "declaration_counts": {
         "def": 13,
         "inductive": 2,
+        "theorem": 35
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "fbbcacbdb4424df7cdc5757f88bcbc066111941bf6d62b0db741d7af2bb1f24d": {
+      "byte_size": 68511,
+      "line_count": 1092,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Tactic",
+        "AlignmentReals",
+        "BecomingReals",
+        "Becoming.OplaxHistory"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "FinDist",
+          "qualified_name_hint": "ObservationalFidelity.FinDist",
+          "line": 49
+        },
+        {
+          "kind": "theorem",
+          "name": "FinDist.ext",
+          "qualified_name_hint": "ObservationalFidelity.FinDist.ext",
+          "line": 54
+        },
+        {
+          "kind": "def",
+          "name": "diracDist",
+          "qualified_name_hint": "ObservationalFidelity.diracDist",
+          "line": 61
+        },
+        {
+          "kind": "def",
+          "name": "pushforward",
+          "qualified_name_hint": "ObservationalFidelity.pushforward",
+          "line": 67
+        },
+        {
+          "kind": "theorem",
+          "name": "pushforward_comp",
+          "qualified_name_hint": "ObservationalFidelity.pushforward_comp",
+          "line": 80
+        },
+        {
+          "kind": "def",
+          "name": "tvDist",
+          "qualified_name_hint": "ObservationalFidelity.tvDist",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_nonneg",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_nonneg",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_self",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_self",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_symm",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_symm",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_triangle",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_triangle",
+          "line": 116
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushforward_le",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushforward_le",
+          "line": 124
+        },
+        {
+          "kind": "def",
+          "name": "massOutside",
+          "qualified_name_hint": "ObservationalFidelity.massOutside",
+          "line": 146
+        },
+        {
+          "kind": "theorem",
+          "name": "massOutside_nonneg",
+          "qualified_name_hint": "ObservationalFidelity.massOutside_nonneg",
+          "line": 150
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_query_tv_floor",
+          "qualified_name_hint": "ObservationalFidelity.optimal_query_tv_floor",
+          "line": 161
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_source_infeasible",
+          "qualified_name_hint": "ObservationalFidelity.empty_source_infeasible",
+          "line": 347
+        },
+        {
+          "kind": "theorem",
+          "name": "coarsening_tv_mono",
+          "qualified_name_hint": "ObservationalFidelity.coarsening_tv_mono",
+          "line": 357
+        },
+        {
+          "kind": "theorem",
+          "name": "macro_refinement_tv_mono",
+          "qualified_name_hint": "ObservationalFidelity.macro_refinement_tv_mono",
+          "line": 404
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_tv_does_not_prevent_fiber_viability_split",
+          "qualified_name_hint": "ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split",
+          "line": 426
+        },
+        {
+          "kind": "def",
+          "name": "diagSupport",
+          "qualified_name_hint": "ObservationalFidelity.diagSupport",
+          "line": 460
+        },
+        {
+          "kind": "theorem",
+          "name": "diagSupport_fst_eq_snd",
+          "qualified_name_hint": "ObservationalFidelity.diagSupport_fst_eq_snd",
+          "line": 464
+        },
+        {
+          "kind": "def",
+          "name": "fourFifthsBool",
+          "qualified_name_hint": "ObservationalFidelity.fourFifthsBool",
+          "line": 473
+        },
+        {
+          "kind": "def",
+          "name": "oneFifthBool",
+          "qualified_name_hint": "ObservationalFidelity.oneFifthBool",
+          "line": 479
+        },
+        {
+          "kind": "def",
+          "name": "diagLift",
+          "qualified_name_hint": "ObservationalFidelity.diagLift",
+          "line": 485
+        },
+        {
+          "kind": "theorem",
+          "name": "per_query_not_implies_joint_marginal",
+          "qualified_name_hint": "ObservationalFidelity.per_query_not_implies_joint_marginal",
+          "line": 500
+        },
+        {
+          "kind": "def",
+          "name": "uniformPairBool",
+          "qualified_name_hint": "ObservationalFidelity.uniformPairBool",
+          "line": 532
+        },
+        {
+          "kind": "def",
+          "name": "fairBool",
+          "qualified_name_hint": "ObservationalFidelity.fairBool",
+          "line": 538
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_marginal_not_implies_joint_dist",
+          "qualified_name_hint": "ObservationalFidelity.joint_marginal_not_implies_joint_dist",
+          "line": 548
+        },
+        {
+          "kind": "def",
+          "name": "FinKernel",
+          "qualified_name_hint": "ObservationalFidelity.FinKernel",
+          "line": 592
+        },
+        {
+          "kind": "def",
+          "name": "pushKernel",
+          "qualified_name_hint": "ObservationalFidelity.pushKernel",
+          "line": 596
+        },
+        {
+          "kind": "def",
+          "name": "compKernel",
+          "qualified_name_hint": "ObservationalFidelity.compKernel",
+          "line": 609
+        },
+        {
+          "kind": "def",
+          "name": "prodDist",
+          "qualified_name_hint": "ObservationalFidelity.prodDist",
+          "line": 614
+        },
+        {
+          "kind": "def",
+          "name": "tensorKernel",
+          "qualified_name_hint": "ObservationalFidelity.tensorKernel",
+          "line": 626
+        },
+        {
+          "kind": "theorem",
+          "name": "pushKernel_tv_step",
+          "qualified_name_hint": "ObservationalFidelity.pushKernel_tv_step",
+          "line": 631
+        },
+        {
+          "kind": "def",
+          "name": "iterKernel",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel",
+          "line": 681
+        },
+        {
+          "kind": "theorem",
+          "name": "sequential_kernel_tv_bound",
+          "qualified_name_hint": "ObservationalFidelity.sequential_kernel_tv_bound",
+          "line": 688
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_prodDist_le",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_prodDist_le",
+          "line": 701
+        },
+        {
+          "kind": "theorem",
+          "name": "independent_tensor_tv_bound",
+          "qualified_name_hint": "ObservationalFidelity.independent_tensor_tv_bound",
+          "line": 733
+        },
+        {
+          "kind": "theorem",
+          "name": "three_regime_error_contrast",
+          "qualified_name_hint": "ObservationalFidelity.three_regime_error_contrast",
+          "line": 753
+        },
+        {
+          "kind": "def",
+          "name": "rowDefect",
+          "qualified_name_hint": "ObservationalFidelity.rowDefect",
+          "line": 797
+        },
+        {
+          "kind": "theorem",
+          "name": "optimal_floor_le_rowDefect",
+          "qualified_name_hint": "ObservationalFidelity.optimal_floor_le_rowDefect",
+          "line": 801
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_pushforward_mul",
+          "qualified_name_hint": "ObservationalFidelity.sum_pushforward_mul",
+          "line": 811
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_dobrushin",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin",
+          "line": 819
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_dobrushin_step",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
+          "line": 877
+        },
+        {
+          "kind": "theorem",
+          "name": "iterKernel_succ_comm",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel_succ_comm",
+          "line": 906
+        },
+        {
+          "kind": "theorem",
+          "name": "iterKernel_trace",
+          "qualified_name_hint": "ObservationalFidelity.iterKernel_trace",
+          "line": 910
+        },
+        {
+          "kind": "theorem",
+          "name": "trace_ofMap_eq_iterKernel",
+          "qualified_name_hint": "ObservationalFidelity.trace_ofMap_eq_iterKernel",
+          "line": 915
+        },
+        {
+          "kind": "def",
+          "name": "kernelMetricLaxSim",
+          "qualified_name_hint": "ObservationalFidelity.kernelMetricLaxSim",
+          "line": 925
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_pushKernel_iter_bound",
+          "qualified_name_hint": "ObservationalFidelity.tvDist_pushKernel_iter_bound",
+          "line": 951
+        },
+        {
+          "kind": "theorem",
+          "name": "kernel_contraction_tube_via_metricLaxSim",
+          "qualified_name_hint": "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim",
+          "line": 967
+        },
+        {
+          "kind": "theorem",
+          "name": "viability_risk_transfer_bound",
+          "qualified_name_hint": "ObservationalFidelity.viability_risk_transfer_bound",
+          "line": 980
+        },
+        {
+          "kind": "theorem",
+          "name": "fiber_split_readout_floor",
+          "qualified_name_hint": "ObservationalFidelity.fiber_split_readout_floor",
+          "line": 1006
+        },
+        {
+          "kind": "def",
+          "name": "sharpBoolKernel",
+          "qualified_name_hint": "ObservationalFidelity.sharpBoolKernel",
+          "line": 1016
+        },
+        {
+          "kind": "theorem",
+          "name": "sharp_oplax_dobrushin_attainment",
+          "qualified_name_hint": "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
+          "line": 1022
+        },
+        {
+          "kind": "theorem",
+          "name": "feedback_destroys_openloop_contraction",
+          "qualified_name_hint": "ObservationalFidelity.feedback_destroys_openloop_contraction",
+          "line": 1064
+        },
+        {
+          "kind": "theorem",
+          "name": "three_regime_kernel_contrast",
+          "qualified_name_hint": "ObservationalFidelity.three_regime_kernel_contrast",
+          "line": 1077
+        }
+      ],
+      "declaration_counts": {
+        "def": 19,
+        "structure": 1,
         "theorem": 35
       },
       "textual_markers": {

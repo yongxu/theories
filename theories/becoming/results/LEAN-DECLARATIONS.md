@@ -14,7 +14,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 |---|---:|---:|
 | [Becoming pure core](lean-declarations/becoming-core.md) | 417 | 20,925 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 13 | 517 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 14 | 544 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -999,6 +999,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SupportNecessity.lean](lean-declarations/renewal.md#module-bedcaae2aaa8) | Support and renewal |
 | [SupportedRevision.lean](lean-declarations/learning.md#module-ed748ff2bb5a) | Learning, prediction and dynamics |
 | [SurfaceSelection.lean](lean-declarations/ethics-part-1.md#module-b298a57e747a) | The ethics and the generative direction |
+| [SurvivalDistinguishability.lean](lean-declarations/becoming-periphery.md#module-bb5aa3867ba2) | Becoming active periphery |
 | [SustainedJudgment.lean](lean-declarations/ethics-part-1.md#module-0fd5374df4b5) | The ethics and the generative direction |
 | [SymbolicDynamics.lean](lean-declarations/learning.md#module-0146a609b532) | Learning, prediction and dynamics |
 | [SystemIndividuation.lean](lean-declarations/core.md#module-237ec5d3745f) | Generative core and relational structure |

@@ -362,6 +362,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean",

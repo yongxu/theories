@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Atlas](theories/becoming/results/atlas/ATLAS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-593 registered results: 562 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). 1542 curated edges join 519 results to the results they draw on.
+594 registered results: 563 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 3 open targets (`open`), 7 superseded (`superseded`) and 1 withdrawn (`withdrawn`). 1543 curated edges join 520 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -175,6 +175,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [finite-fallible-inquiry-necessity][] ← <a id="finite-fallible-inquiry-necessity--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="finite-fallible-inquiry-necessity--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="finite-fallible-inquiry-necessity--imbalance-as-relatum"></a>[imbalance-as-relatum][]
 - [finite-granularity-question-recovery][] ← <a id="finite-granularity-question-recovery--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="finite-granularity-question-recovery--retained-reference-joining-recovery"></a>[retained-reference-joining-recovery][]
 - [finite-joining-tree-lifting][] ← <a id="finite-joining-tree-lifting--multivalued-joining-common-structure"></a>[multivalued-joining-common-structure][]
+- [finite-mode-survival-distinguishability][] ← <a id="finite-mode-survival-distinguishability--oplax-history-comparison-and-relational-loss"></a>[oplax-history-comparison-and-relational-loss][]
 - [fixation-by-drift][] ← <a id="fixation-by-drift--drift-offspring-sampled"></a>[drift-offspring-sampled][] · <a id="fixation-by-drift--typicality-by-counting"></a>[typicality-by-counting][]
 - [fixation-with-selection][] ← <a id="fixation-with-selection--fixation-by-drift"></a>[fixation-by-drift][]
 - [fixed-places-and-sole-lines][] ← <a id="fixed-places-and-sole-lines--place-relations-in-context"></a>[place-relations-in-context][] · <a id="fixed-places-and-sole-lines--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] · <a id="fixed-places-and-sole-lines--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="fixed-places-and-sole-lines--generalization-through-lumping"></a>[generalization-through-lumping][]
@@ -708,6 +709,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [finite-fallible-inquiry-necessity]: theories/becoming/results/records/finite-fallible-inquiry-necessity.md
 [finite-granularity-question-recovery]: theories/becoming/results/records/finite-granularity-question-recovery.md
 [finite-joining-tree-lifting]: theories/becoming/results/records/finite-joining-tree-lifting.md
+[finite-mode-survival-distinguishability]: theories/becoming/results/records/finite-mode-survival-distinguishability.md
 [finite-trace-transport]: theories/becoming/results/records/finite-trace-transport.md
 [fixation-by-drift]: theories/becoming/results/records/fixation-by-drift.md
 [fixation-with-selection]: theories/becoming/results/records/fixation-with-selection.md

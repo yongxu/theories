@@ -6,7 +6,7 @@
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "b9bb06b8ac9e860bb827d820e8c9869113645543b520a8ba3f315515403fde34",
+  "theories/becoming/results/completion/COVERAGE.json": "85e524b7c2b13800d41822343d1e6bf83993724bf31efbb823fb547fc3c2696f",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
@@ -58,9 +58,9 @@
   ]
  },
  "counts": {
-  "laws": 4528,
+  "laws": 4534,
   "no_declarations": 9,
-  "outside": 406,
+  "outside": 412,
   "grammar": 1171,
   "balance, represented": 642,
   "anchor, not reached": 99,
@@ -21098,6 +21098,62 @@
     "dependence": "no shared law"
    }
   ],
+  "finite-mode-survival-distinguishability": [
+   {
+    "law": 1,
+    "declarations": [
+     "SurvivalDistinguishability.stepOp",
+     "SurvivalDistinguishability.survVec",
+     "SurvivalDistinguishability.krylovSub",
+     "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred"
+    ],
+    "outside": [
+     "SurvivalDistinguishability.stepOp",
+     "SurvivalDistinguishability.survVec",
+     "SurvivalDistinguishability.krylovSub",
+     "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "SurvivalDistinguishability.countdownK",
+     "SurvivalDistinguishability.survVec_countdownK",
+     "SurvivalDistinguishability.countdown_attains_card_pred"
+    ],
+    "outside": [
+     "SurvivalDistinguishability.countdownK",
+     "SurvivalDistinguishability.survVec_countdownK",
+     "SurvivalDistinguishability.countdown_attains_card_pred"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "SurvivalDistinguishability.switchK",
+     "SurvivalDistinguishability.three_state_mode_switch_counterexample"
+    ],
+    "outside": [
+     "SurvivalDistinguishability.switchK",
+     "SurvivalDistinguishability.three_state_mode_switch_counterexample"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "SurvivalDistinguishability.C2FinState",
+     "SurvivalDistinguishability.c2Embed",
+     "SurvivalDistinguishability.c2Op",
+     "SurvivalDistinguishability.c2_coupled_survival_separation"
+    ],
+    "outside": [
+     "SurvivalDistinguishability.C2FinState",
+     "SurvivalDistinguishability.c2Embed",
+     "SurvivalDistinguishability.c2Op",
+     "SurvivalDistinguishability.c2_coupled_survival_separation"
+    ]
+   }
+  ],
   "finite-trace-transport": [
    {
     "law": 1,
@@ -35726,7 +35782,8 @@
      "ObservationalFidelity.sequential_kernel_tv_bound",
      "ObservationalFidelity.tvDist_prodDist_le",
      "ObservationalFidelity.independent_tensor_tv_bound",
-     "ObservationalFidelity.three_regime_error_contrast"
+     "ObservationalFidelity.three_regime_error_contrast",
+     "ObservationalFidelity.three_regime_kernel_contrast"
     ],
     "outside": [
      "ObservationalFidelity.FinKernel",
@@ -35734,7 +35791,46 @@
      "ObservationalFidelity.sequential_kernel_tv_bound",
      "ObservationalFidelity.tvDist_prodDist_le",
      "ObservationalFidelity.independent_tensor_tv_bound",
-     "ObservationalFidelity.three_regime_error_contrast"
+     "ObservationalFidelity.three_regime_error_contrast",
+     "ObservationalFidelity.three_regime_kernel_contrast"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "ObservationalFidelity.rowDefect",
+     "ObservationalFidelity.optimal_floor_le_rowDefect",
+     "ObservationalFidelity.tvDist_pushKernel_dobrushin",
+     "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
+     "ObservationalFidelity.kernelMetricLaxSim",
+     "ObservationalFidelity.tvDist_pushKernel_iter_bound",
+     "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim"
+    ],
+    "outside": [
+     "ObservationalFidelity.rowDefect",
+     "ObservationalFidelity.optimal_floor_le_rowDefect",
+     "ObservationalFidelity.tvDist_pushKernel_dobrushin",
+     "ObservationalFidelity.tvDist_pushKernel_dobrushin_step",
+     "ObservationalFidelity.kernelMetricLaxSim",
+     "ObservationalFidelity.tvDist_pushKernel_iter_bound",
+     "ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "ObservationalFidelity.viability_risk_transfer_bound",
+     "ObservationalFidelity.fiber_split_readout_floor",
+     "ObservationalFidelity.sharpBoolKernel",
+     "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
+     "ObservationalFidelity.feedback_destroys_openloop_contraction"
+    ],
+    "outside": [
+     "ObservationalFidelity.viability_risk_transfer_bound",
+     "ObservationalFidelity.fiber_split_readout_floor",
+     "ObservationalFidelity.sharpBoolKernel",
+     "ObservationalFidelity.sharp_oplax_dobrushin_attainment",
+     "ObservationalFidelity.feedback_destroys_openloop_contraction"
     ]
    }
   ],

@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "id": "finite-mode-survival-distinguishability",
+  "title": {
+    "en": "Finite-mode survival distinguishability at horizon card minus one"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T13:16:05+00:00",
+  "statement": {
+    "en": "On nonempty finite state spaces and real matrix families Mode -> S -> S -> ℝ (survival probabilities when nonnegative substochastic), two states agree on all mode words iff they agree through length card - 1; sharp at card - 1, switch-sensitive, and separates C2 states."
+  },
+  "laws": [
+    {
+      "en": "Via Krylov subspace stabilization over (S -> ℝ) for arbitrary real matrices Mode -> S -> S -> ℝ (interpreted as survival probabilities when nonnegative substochastic), two states agree on all mode words iff they agree through length Fintype.card S - 1 (survival_indistinguishable_iff_le_card_pred).",
+      "declarations": [
+        "SurvivalDistinguishability.stepOp",
+        "SurvivalDistinguishability.survVec",
+        "SurvivalDistinguishability.krylovSub",
+        "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred"
+      ]
+    },
+    {
+      "en": "For every positive n, the one-mode countdown matrix on Fin (n + 1) makes states 0 and 1 agree on every word shorter than n while separating them at exact length n = Fintype.card (Fin (n + 1)) - 1 (countdown_attains_card_pred).",
+      "declarations": [
+        "SurvivalDistinguishability.countdownK",
+        "SurvivalDistinguishability.survVec_countdownK",
+        "SurvivalDistinguishability.countdown_attains_card_pred"
+      ]
+    },
+    {
+      "en": "On a three-state two-mode operator, constant sequences [false]*k and [true]*k keep states 0 and 1 equal to 1 for every length k, whereas the two-step switch [false, true] separates 1 from 0 (three_state_mode_switch_counterexample).",
+      "declarations": [
+        "SurvivalDistinguishability.switchK",
+        "SurvivalDistinguishability.three_state_mode_switch_counterexample"
+      ]
+    },
+    {
+      "en": "Restricting Becoming.OplaxHistory.C2CoupledAlignmentWitness to live configurations (Bool x Bool) x Bool yields a finite sub-stochastic operator separating same-projection states finInPhase and finAntiPhase at length 1 <= card - 1 (c2_coupled_survival_separation).",
+      "declarations": [
+        "SurvivalDistinguishability.C2FinState",
+        "SurvivalDistinguishability.c2Embed",
+        "SurvivalDistinguishability.c2Op",
+        "SurvivalDistinguishability.c2_coupled_survival_separation"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound) in Mathlib periphery #14; assumes finite nonempty state space [Fintype S] [Nonempty S] and arbitrary real matrices K : Mode -> S -> S -> ℝ against the all-ones vector (interpreted as survival probabilities when rows are nonnegative substochastic)."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "Does not prove finite-horizon distinguishability bounds for infinite-state, continuous-state, or non-stationary transition kernels."
+    },
+    {
+      "kind": "non-implication",
+      "en": "Agreement across arbitrary single-mode constant sequences does not ensure indistinguishability under mode switches.",
+      "witness": "SurvivalDistinguishability.three_state_mode_switch_counterexample"
+    },
+    {
+      "kind": "correspondence",
+      "en": "Exact finite-matrix separation on frozen greedy policies never establishes by itself that online learning agents keep stationary or time-homogeneous transition kernels."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
+      "detail": {
+        "en": "countdown_attains_card_pred proves tightness of Fintype.card S - 1 for every n >= 1; three_state_mode_switch_counterexample shows all constant-mode words fail to separate states 0 and 1 while [false, true] separates them."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T140857.994394Z): all 21 declarations (13 theorems, 0 private) pass under standard axioms [Classical.choice, Quot.sound, propext] with 0 sorryAx and 0 forbidden market words; 14/14 periphery fresh. Frozen-Q local CPU deterministic replay on the 63 x 63 alive-state operator (|S_alive| = 63, theorem cutoff 62; 500 seeds/arm, -O-safe --pred-sha enforced via ValueError) passed all Wilson, normal-band, Hoeffding, and disjoint-Wilson separation criteria (same-commit provenance noted)."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; extend matrix distinguishability bounds from finite state spaces to approximate continuous/non-stationary kernels under Rule 2."
+  },
+  "correspondence": {
+    "en": "Formalizes the Moore/Krylov finite-automaton survival distinguishability bound (length <= card - 1) over Mathlib ℝ, joins it onto Becoming.OplaxHistory.C2CoupledAlignmentWitness, and pairs it with an analytical frozen-Q-table matrix evaluation and deterministic local CPU replay extracted from the CoupledRace Q-learner."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
+  "aliases": [
+    "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+    "SurvivalDistinguishability.countdown_attains_card_pred",
+    "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+    "SurvivalDistinguishability.c2_coupled_survival_separation"
+  ],
+  "dependencies": [
+    {
+      "id": "oplax-history-comparison-and-relational-loss",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Imports C2CoupledAlignmentWitness (stepFn, guardS, c2ProjMicro, uInPhase_kernel, uAntiPhase_not_kernel) into c2Op and c2_coupled_survival_separation."
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "observational-fidelity-and-multi-regime-error",
+      "detail": {
+        "en": "Companion periphery module connecting zero observation TV on C2CoupledAlignmentWitness to FiberViabilitySplit."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
+      "role": "proof",
+      "declarations": [
+        "SurvivalDistinguishability.stepOp",
+        "SurvivalDistinguishability.survVec",
+        "SurvivalDistinguishability.krylovSub",
+        "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+        "SurvivalDistinguishability.countdownK",
+        "SurvivalDistinguishability.survVec_countdownK",
+        "SurvivalDistinguishability.countdown_attains_card_pred",
+        "SurvivalDistinguishability.switchK",
+        "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+        "SurvivalDistinguishability.C2FinState",
+        "SurvivalDistinguishability.c2Embed",
+        "SurvivalDistinguishability.c2Op",
+        "SurvivalDistinguishability.c2_coupled_survival_separation"
+      ],
+      "sha256": "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/check_survival_distinguishability.py",
+      "role": "integration",
+      "sha256": "91939f6d8f11b7ef5d0a43dcdb910290245a75e8c952cb719b74437505d98396"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/PREDICTIONS.md",
+      "role": "statement",
+      "sha256": "89f8f65b7d78046f26e5b220e413c4b81993369f8048dcbcc4926fb7d070090b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/RESULTS.md",
+      "role": "review",
+      "sha256": "41efadf5a38b11857af7e83a7f7b45a7ca53422763a3b9b23ea9b16889007559"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-b1-b2-2026-11-24/frozen_q_survival_test.py",
+      "role": "integration",
+      "sha256": "f445d512247e5089dcd6420d055de17bb0eba854cac60a6d0b85755c9eacfc38"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T140857.994394Z/verification.json",
+      "role": "receipt",
+      "sha256": "f7d3286b75ddfbf7fd553f88c0b7fbe30de58ef330939ac69428170249ec5e89",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/survival-distinguishability-checks/20261124T140857.994394Z/verification.json",
+      "sha256_pointer": "/source_sha256/SurvivalDistinguishability",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026: added finite-mode-survival-distinguishability (Mathlib periphery #14, SurvivalDistinguishability.lean, initial receipt 20261124T120827.390573Z; refreshed on 0397c5edd to 20261124T140857.994394Z) with Krylov card - 1 theorem, countdown sharpness witness, 3-state mode-switch counterexample, C2CoupledAlignmentWitness client, and initial frozen-Q local CPU empirical test. AI-written."
+    },
+    {
+      "en": "24 November 2026 (Astra audit fix): clarified arbitrary real-matrix statement vs nonnegative substochastic probability interpretation, corrected frozen-Q alive-state operator cutoff to 62 (63 x 63 alive states), formalized idle_hi < pending_lo separation for deterministic replay after the initial 11:12:36Z evaluation, enforced -O-safe --pred-sha + calibration/separation checks in frozen_q_survival_test.py, aligned correspondence and headings to analytical-prediction / deterministic-replay wording, and refreshed references and reviewed_at_utc. AI-written."
+    }
+  ]
+}

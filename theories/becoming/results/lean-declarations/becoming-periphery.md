@@ -656,7 +656,7 @@ Definitions and types:
 <a id="module-46c8172f5cac"></a>
 
 <details>
-<summary>ObservationalFidelity.lean — 38 explicit declarations</summary>
+<summary>ObservationalFidelity.lean — 55 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
@@ -687,6 +687,20 @@ Imports: `Mathlib.Algebra.BigOperators.Field`, `Mathlib.Tactic`, `AlignmentReals
 | [ObservationalFidelity.tvDist_prodDist_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L701) | 701 |
 | [ObservationalFidelity.independent_tensor_tv_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L733) | 733 |
 | [ObservationalFidelity.three_regime_error_contrast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L753) | 753 |
+| [ObservationalFidelity.optimal_floor_le_rowDefect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L801) | 801 |
+| [ObservationalFidelity.sum_pushforward_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L811) | 811 |
+| [ObservationalFidelity.tvDist_pushKernel_dobrushin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L819) | 819 |
+| [ObservationalFidelity.tvDist_pushKernel_dobrushin_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L877) | 877 |
+| [ObservationalFidelity.iterKernel_succ_comm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L906) | 906 |
+| [ObservationalFidelity.iterKernel_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L910) | 910 |
+| [ObservationalFidelity.trace_ofMap_eq_iterKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L915) | 915 |
+| [ObservationalFidelity.tvDist_pushKernel_iter_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L951) | 951 |
+| [ObservationalFidelity.kernel_contraction_tube_via_metricLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L967) | 967 |
+| [ObservationalFidelity.viability_risk_transfer_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L980) | 980 |
+| [ObservationalFidelity.fiber_split_readout_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L1006) | 1006 |
+| [ObservationalFidelity.sharp_oplax_dobrushin_attainment](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L1022) | 1022 |
+| [ObservationalFidelity.feedback_destroys_openloop_contraction](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L1064) | 1064 |
+| [ObservationalFidelity.three_regime_kernel_contrast](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L1077) | 1077 |
 
 Definitions and types:
 
@@ -707,6 +721,9 @@ Definitions and types:
 - `def` [ObservationalFidelity.prodDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L614) (L614)
 - `def` [ObservationalFidelity.tensorKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L626) (L626)
 - `def` [ObservationalFidelity.iterKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L681) (L681)
+- `def` [ObservationalFidelity.rowDefect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L797) (L797)
+- `def` [ObservationalFidelity.kernelMetricLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L925) (L925)
+- `def` [ObservationalFidelity.sharpBoolKernel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/ObservationalFidelity.lean#L1016) (L1016)
 
 </details>
 
@@ -917,6 +934,46 @@ Definitions and types:
 - `def` [Becoming.Representation.shear](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L650) (L650)
 - `def` [Becoming.Representation.RandomEnd.level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L695) (L695)
 - `def` [Becoming.Representation.RandomEnd.weight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean#L702) (L702)
+
+</details>
+
+<a id="module-bb5aa3867ba2"></a>
+
+<details>
+<summary>SurvivalDistinguishability.lean — 21 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean`
+
+Imports: `Mathlib.Algebra.BigOperators.Field`, `Mathlib.LinearAlgebra.Dimension.Constructions`, `Mathlib.LinearAlgebra.FiniteDimensional.Lemmas`, `Mathlib.Tactic`, `Becoming.OplaxHistory`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [SurvivalDistinguishability.survVec_cons](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L34) | 34 |
+| [SurvivalDistinguishability.krylovSub_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L43) | 43 |
+| [SurvivalDistinguishability.one_le_finrank_krylov_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L47) | 47 |
+| [SurvivalDistinguishability.nat_chain_stabilizes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L58) | 58 |
+| [SurvivalDistinguishability.krylovSub_map_step_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L76) | 76 |
+| [SurvivalDistinguishability.survVec_mem_krylov_stabilized](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L83) | 83 |
+| [SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L95) | 95 |
+| [SurvivalDistinguishability.survVec_countdownK](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L118) | 118 |
+| [SurvivalDistinguishability.countdown_attains_card_pred](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L147) | 147 |
+| [SurvivalDistinguishability.survVec_switchK_false](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L176) | 176 |
+| [SurvivalDistinguishability.survVec_switchK_true](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L185) | 185 |
+| [SurvivalDistinguishability.three_state_mode_switch_counterexample](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L198) | 198 |
+| [SurvivalDistinguishability.c2_coupled_survival_separation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L226) | 226 |
+
+Definitions and types:
+
+- `def` [SurvivalDistinguishability.stepOp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L21) (L21)
+- `def` [SurvivalDistinguishability.survVec](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L29) (L29)
+- `def` [SurvivalDistinguishability.krylovSub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L39) (L39)
+- `def` [SurvivalDistinguishability.countdownK](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L115) (L115)
+- `def` [SurvivalDistinguishability.switchK](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L172) (L172)
+- `abbrev` [SurvivalDistinguishability.C2FinState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L209) (L209)
+- `def` [SurvivalDistinguishability.c2Embed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L212) (L212)
+- `def` [SurvivalDistinguishability.c2Op](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/survival-distinguishability/SurvivalDistinguishability.lean#L217) (L217)
 
 </details>
 
