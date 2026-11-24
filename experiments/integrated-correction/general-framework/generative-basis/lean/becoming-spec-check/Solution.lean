@@ -3,6 +3,7 @@ import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
 import BecomingSpec.Extensions.EntryTargets
+import BecomingSpec.Extensions.SpineTargets
 import Becoming.RegimeMargin
 import Becoming.OpenComposition
 import Becoming.PacedStock
@@ -10,6 +11,8 @@ import Becoming.Assurance
 import Becoming.GuardHorizon
 import Becoming.Significance
 import Becoming.OplaxHistory
+import Becoming.DoubleKernel
+import Becoming.MasterSpine
 import EncounterEntry
 
 /-!
@@ -1167,5 +1170,115 @@ theorem entry_openSecondEntry : BecomingSpec.Extensions.openSecondEntryTarget :=
     ⟨stRej, hRejRun, hRejCount, hRejInst, hRejAct⟩,
     ⟨stRev1, stAct2, stMsk2, hRev1Run, hSeal1, hOpen2, hAct2Run, hMsk2Run, hAct2Neq, hAct2Floor, hMsk2Floor⟩,
     hUniv⟩
+
+/-! ## Adapter 9: Spine-Level Stability, 3D Non-Collapse & Master Ethics Firewall -/
+
+theorem adapter_specOrbit_eq_lawOrbit {S : Type} (next : S → S) (s : S) :
+    ∀ t, BecomingSpec.Extensions.specOrbit next s t = Becoming.Law.orbit next s t
+  | 0 => rfl
+  | t + 1 => congrArg next (adapter_specOrbit_eq_lawOrbit next s t)
+
+theorem adapter_specRegimeStep_eq (g : Nat → Nat) (H x : Nat) :
+    BecomingSpec.Extensions.specRegimeStep g H x = Becoming.RegimeMargin.step g H x :=
+  rfl
+
+theorem spine_hiddenCouplingCollapse : BecomingSpec.Extensions.hiddenCouplingCollapseTarget := by
+  obtain ⟨hBlindSafe, _, hCompCrash⟩ := Becoming.OpenComposition.hidden_coupling_interchange_failure
+  let S₁ : Type := (Unit → Nat) × Unit
+  let step₁ : S₁ → S₁ := fun st => Becoming.OpenComposition.HiddenCouplingFailure.blindStep st ((), ())
+  let stock₁ : S₁ → Nat := fun st => st.1 ()
+  let s₁₀ : S₁ := (fun _ => 4, ())
+  let S₂ : Type := (Unit → Nat) × (Unit × Unit)
+  let step₂ : S₂ → S₂ := fun st => Becoming.OpenComposition.HiddenCouplingFailure.composedStep st ((), ((), ()))
+  let stock₂ : S₂ → Nat := fun st => st.1 ()
+  let s₂₀ : S₂ := (fun _ => 4, ((), ()))
+  refine ⟨S₁, S₂, step₁, stock₁, s₁₀, step₂, stock₂, s₂₀, rfl, rfl, ?_, ?_⟩
+  · intro t
+    show 3 ≤ (BecomingSpec.Extensions.specOrbit step₁ s₁₀ t).1 ()
+    rw [adapter_specOrbit_eq_lawOrbit]
+    exact hBlindSafe t
+  · show (BecomingSpec.Extensions.specOrbit step₂ s₂₀ 4).1 () = 0
+    rw [adapter_specOrbit_eq_lawOrbit]
+    exact hCompCrash
+
+theorem spine_widenHealsBlindness : BecomingSpec.Extensions.widenHealsBlindnessTarget := by
+  obtain ⟨hCrash, hKernel⟩ := Becoming.OpenComposition.widen_interface_heals_blindness
+  refine ⟨?_, ?_⟩
+  · intro drawA drawB nextA nextB rA rB hA hB
+    rw [adapter_specOrbit_eq_lawOrbit]
+    exact hCrash drawA drawB nextA nextB rA rB hA hB
+  · let Sw : Type := (Unit → Nat) × (Bool × Bool)
+    let stepW : Sw → Sw := fun st =>
+      Becoming.OpenComposition.closedStep
+        (Becoming.OpenComposition.OpenComponent.compose
+          Becoming.OpenComposition.WideningWitness.widenedAgent
+          Becoming.OpenComposition.WideningWitness.widenedAgent)
+        (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+        (fun (em : Bool) (_ : Nat) (_ : Unit) => em)
+        Becoming.OpenComposition.WideningWitness.gShared
+        (fun (_ : Unit) (_ : Unit) => 0)
+        st ((), ((), ()))
+    let stockW : Sw → Nat := fun st => st.1 ()
+    let sW₀ : Sw := (fun _ => 6, (true, true))
+    let run : Becoming.Run
+        (Becoming.OpenComposition.closedProcess
+          (Becoming.OpenComposition.OpenComponent.compose
+            Becoming.OpenComposition.WideningWitness.widenedAgent
+            Becoming.OpenComposition.WideningWitness.widenedAgent)
+          (Becoming.OpenComposition.composeContract
+            (Becoming.OpenComposition.WideningWitness.widenedContract true)
+            (Becoming.OpenComposition.WideningWitness.widenedContract true))
+          (fun x => (Nat.blt (x ()) 8, Nat.blt (x ()) 8))
+          (fun (em : Bool) (_ : Nat) (_ : Unit) => em)
+          Becoming.OpenComposition.WideningWitness.gShared
+          (fun (_ : Unit) (_ : Unit) => 0)
+          (fun (_ : Unit) => True)) :=
+      ⟨Becoming.Law.orbit stepW sW₀,
+       fun _ => ((), ((), ())),
+       fun _ => ⟨⟨trivial, fun _ => ⟨trivial, trivial⟩⟩, rfl⟩⟩
+    refine ⟨Sw, stepW, stockW, sW₀, rfl, ?_⟩
+    intro t
+    show 3 ≤ (BecomingSpec.Extensions.specOrbit stepW sW₀ t).1 ()
+    rw [adapter_specOrbit_eq_lawOrbit]
+    exact (Becoming.Viability.Kernel.run run hKernel t).1 ()
+
+theorem spine_directed3DNonCollapse : BecomingSpec.Extensions.directed3DNonCollapseTarget := by
+  let wBool : Becoming.DoubleKernel.directedNonCollapse2Sig.SqGen → Nat := fun g =>
+    match (g : Bool) with | false => 0 | true => 1
+  obtain ⟨h3, hne, hrev⟩ := Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness
+  refine ⟨Becoming.DoubleKernel.SqTerm Becoming.DoubleKernel.directedNonCollapse2Sig,
+    Becoming.DoubleKernel.Cell3Term Becoming.DoubleKernel.directedNonCollapse3Sig,
+    Becoming.DoubleKernel.EqCert Becoming.DoubleKernel.directedNonCollapse2Sig,
+    Becoming.DoubleKernel.HasEndpoints3 Becoming.DoubleKernel.directedNonCollapse3Sig,
+    Becoming.DoubleKernel.termWeight Becoming.DoubleKernel.directedNonCollapse2Sig wBool,
+    ?_, ?_,
+    .gen (G := Becoming.DoubleKernel.directedNonCollapse2Sig) false,
+    .gen (G := Becoming.DoubleKernel.directedNonCollapse2Sig) true,
+    .gen3 (G := Becoming.DoubleKernel.directedNonCollapse3Sig) (),
+    h3, hne, hrev⟩
+  · intro P Q hEq
+    exact Becoming.DoubleKernel.eqCert_preserves_weight wBool hEq
+  · intro Γ P Q hHas
+    exact Becoming.DoubleKernel.hasEndpoints3_weight_mono
+      (G := Becoming.DoubleKernel.directedNonCollapse3Sig) wBool (fun _ => Nat.zero_le 1) hHas
+
+theorem spine_masterSpineEthicsFirewall : BecomingSpec.Extensions.masterSpineEthicsFirewallTarget := by
+  refine ⟨?_, ?_⟩
+  · intro Pos F D MasterLaw p f d hd hall
+    apply Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted MasterLaw p f hd
+    intro d' sig hm ⟨q, t, g⟩
+    exact hall d' sig hm q t g
+  · have hViable : Becoming.MasterSpine.WholeArchitectureViableProp
+        Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture :=
+      (Becoming.MasterSpine.whole_becoming_master_theorem
+        Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture () ()
+        (fun _ : Unit => True) (d := ()) trivial).1
+    refine ⟨_, Becoming.MasterSpine.WholeArchitectureViableProp,
+      Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture, hViable, ?_⟩
+    intro hall
+    apply Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted
+      Becoming.MasterSpine.WholeArchitectureViableProp () () hViable
+    intro a sig hva ⟨q, t, g⟩
+    exact hall a sig hva q t g
 
 end BecomingSpecCheck

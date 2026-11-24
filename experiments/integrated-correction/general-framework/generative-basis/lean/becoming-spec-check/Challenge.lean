@@ -3,6 +3,7 @@ import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
 import BecomingSpec.Extensions.EntryTargets
+import BecomingSpec.Extensions.SpineTargets
 
 /-!
 # BecomingSpec Challenge Holes (`Challenge.lean`)
@@ -40,5 +41,10 @@ theorem ext_missingLift : BecomingSpec.Extensions.missingLiftTarget := sorry
 theorem entry_adaptiveBeatsFixed : BecomingSpec.Extensions.adaptiveBeatsFixedTarget := sorry
 theorem entry_branchingVsPathCount : BecomingSpec.Extensions.branchingVsPathCountTarget := sorry
 theorem entry_openSecondEntry : BecomingSpec.Extensions.openSecondEntryTarget := sorry
+
+theorem spine_hiddenCouplingCollapse : BecomingSpec.Extensions.hiddenCouplingCollapseTarget := sorry
+theorem spine_widenHealsBlindness : BecomingSpec.Extensions.widenHealsBlindnessTarget := sorry
+theorem spine_directed3DNonCollapse : BecomingSpec.Extensions.directed3DNonCollapseTarget := sorry
+theorem spine_masterSpineEthicsFirewall : BecomingSpec.Extensions.masterSpineEthicsFirewallTarget := sorry
 
 end BecomingSpecCheck

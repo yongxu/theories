@@ -205,5 +205,105 @@ class TestProtocol8SlotBenchmark(unittest.TestCase):
         self.assertEqual(fixture, res)
 
 
+class TestDualityLiftingHandshake(unittest.TestCase):
+    def test_dobrushin_lift_xor_relational_and_empirical_safety(self) -> None:
+        def step_vec(P: list[list[Fraction]], v: list[Fraction]) -> list[Fraction]:
+            return [sum(row[sp] * v[sp] for sp in range(len(v))) for row in P]
+
+        def osc(v: list[Fraction]) -> Fraction:
+            return max(v) - min(v)
+
+        def mid(v: list[Fraction]) -> Fraction:
+            return (max(v) + min(v)) / 2
+
+        # 1. Exact Dobrushin alpha = 1/2 lift vs absorbing alpha = 1
+        P_half = [
+            [Fraction(3, 4), Fraction(1, 4)],
+            [Fraction(1, 4), Fraction(3, 4)],
+        ]
+        P_id = [
+            [Fraction(1), Fraction(0)],
+            [Fraction(0), Fraction(1)],
+        ]
+        F0 = [[Fraction(2), Fraction(1)]]
+        h0 = [Fraction(1), Fraction(3)]
+        b0 = Fraction(0)
+        c0 = [Fraction(1)]
+        r0 = [h0[s] - b0 - sum(F0[j][s] * c0[j] for j in range(len(F0))) for s in range(2)]
+        self.assertEqual(r0, [Fraction(-1), Fraction(2)])
+        r_cur = list(r0)
+        F_cur = [list(row) for row in F0]
+        h_cur = list(h0)
+        r_abs = list(r0)
+        eps_dob = Fraction(1, 20)
+        base_sup = max(abs(x) for x in r0)
+        for t in range(5):
+            self.assertEqual(osc(r_cur), (Fraction(1, 2) ** t) * osc(r0))
+            b_t = b0 + mid(r_cur)
+            lifted_bound = max(
+                abs(h_cur[s] - b_t - sum(F_cur[j][s] * c0[j] for j in range(len(F0))))
+                for s in range(2)
+            ) + eps_dob * sum(abs(cj) for cj in c0)
+            self.assertLessEqual(
+                lifted_bound, (Fraction(1, 2) ** t) * base_sup + eps_dob * sum(abs(cj) for cj in c0)
+            )
+            self.assertEqual(osc(r_abs), osc(r0))
+            r_cur = step_vec(P_half, r_cur)
+            h_cur = step_vec(P_half, h_cur)
+            F_cur = [step_vec(P_half, row) for row in F_cur]
+            r_abs = step_vec(P_id, r_abs)
+
+        # 2. Exact Bool x Bool XOR/equality relational separation: 1/2 -> min(1/2, eps)
+        # States order: (0,0), (0,1), (1,0), (1,1)
+        F_marg = [
+            [Fraction(1), Fraction(1), Fraction(0), Fraction(0)],  # p1 = 0
+            [Fraction(1), Fraction(0), Fraction(1), Fraction(0)],  # p2 = 0
+        ]
+        h_eq = [Fraction(1), Fraction(0), Fraction(0), Fraction(1)]
+        F_ext = F_marg + [h_eq]
+        for eps in (Fraction(0), Fraction(1, 8), Fraction(1, 2), Fraction(3, 4)):
+            p_m, mu_m, nu_m = dual.solve_consequence_primal(F_marg, h_eq, eps)
+            d_m, b_m, c_m = dual.solve_consequence_dual(F_marg, h_eq, eps)
+            L_m, U_m = dual.verify_certificate(F_marg, h_eq, eps, mu_m, nu_m, b_m, c_m)
+            self.assertEqual(p_m, Fraction(1, 2))
+            self.assertEqual(d_m, Fraction(1, 2))
+            self.assertEqual(L_m, Fraction(1, 2))
+            self.assertEqual(U_m, Fraction(1, 2))
+
+            expected = min(Fraction(1, 2), eps)
+            p_e, mu_e, nu_e = dual.solve_consequence_primal(F_ext, h_eq, eps)
+            d_e, b_e, c_e = dual.solve_consequence_dual(F_ext, h_eq, eps)
+            L_e, U_e = dual.verify_certificate(F_ext, h_eq, eps, mu_e, nu_e, b_e, c_e)
+            self.assertEqual(p_e, expected)
+            self.assertEqual(d_e, expected)
+            self.assertEqual(L_e, expected)
+            self.assertEqual(U_e, expected)
+
+        # 3. Single-distribution empirical safety certificate + exceeded-drift failure
+        F_approx = [[Fraction(285, 1000), Fraction(632, 1000)]]
+        h_b2 = [Fraction(0), Fraction(1)]
+        b_b2 = Fraction(-285, 347)
+        c_b2 = [Fraction(1000, 347)]
+        delta = Fraction(1, 100)
+        eps_sam = Fraction(1, 50)
+        R_inf = max(abs(h_b2[s] - b_b2 - F_approx[0][s] * c_b2[0]) for s in range(2))
+        R_tot = R_inf + abs(c_b2[0]) * (eps_sam + delta)
+        mu_b2 = [Fraction(247, 347), Fraction(100, 347)]
+        true_val = sum(h_b2[s] * mu_b2[s] for s in range(2))
+
+        F_true_ok = [[F_approx[0][0] + delta, F_approx[0][1] - delta]]
+        y_ok = sum(F_true_ok[0][s] * mu_b2[s] for s in range(2)) + eps_sam
+        est_ok = b_b2 + c_b2[0] * y_ok
+        self.assertLessEqual(abs(true_val - est_ok), R_tot)
+        tau_safe = est_ok - R_tot
+        self.assertLessEqual(tau_safe + R_tot, est_ok)
+        self.assertLessEqual(tau_safe, true_val)
+
+        F_true_bad = [[F_approx[0][0] - 2 * delta, F_approx[0][1] - 2 * delta]]
+        y_bad = sum(F_true_bad[0][s] * mu_b2[s] for s in range(2)) - eps_sam
+        est_bad = b_b2 + c_b2[0] * y_bad
+        self.assertGreater(abs(true_val - est_bad), R_tot)
+
+
 if __name__ == "__main__":
     unittest.main()

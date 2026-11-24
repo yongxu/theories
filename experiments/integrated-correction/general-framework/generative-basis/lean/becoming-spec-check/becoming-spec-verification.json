@@ -1,7 +1,7 @@
 {
   "ai_written": "Track S1 (2026-11-24)",
   "status": "PASS",
-  "generated_utc": "2026-11-24T12:49:05Z",
+  "generated_utc": "2026-11-24T14:10:50Z",
   "hygiene": {
     "toolchains_ok": true,
     "spec_imports": {
@@ -19,6 +19,9 @@
       ],
       "BecomingSpec.Extensions.EntryTargets": [
         "Init"
+      ],
+      "BecomingSpec.Extensions.SpineTargets": [
+        "Init"
       ]
     },
     "challenge_imports": [
@@ -26,7 +29,8 @@
       "BecomingSpec.V2.Targets",
       "BecomingSpec.Revision.IN1",
       "BecomingSpec.Extensions.OplaxTargets",
-      "BecomingSpec.Extensions.EntryTargets"
+      "BecomingSpec.Extensions.EntryTargets",
+      "BecomingSpec.Extensions.SpineTargets"
     ],
     "line_counts": {
       "BecomingSpec.V1.Targets": 143,
@@ -34,8 +38,9 @@
       "BecomingSpec.Revision.IN1": 62,
       "BecomingSpec.Extensions.OplaxTargets": 72,
       "BecomingSpec.Extensions.EntryTargets": 143,
-      "Challenge": 44,
-      "Solution": 1171
+      "BecomingSpec.Extensions.SpineTargets": 58,
+      "Challenge": 50,
+      "Solution": 1284
     },
     "v1_v2_in1_total_lines": 277
   },
@@ -70,7 +75,11 @@
         "BecomingSpec.Extensions.missingLiftTarget",
         "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
         "BecomingSpec.Extensions.branchingVsPathCountTarget",
-        "BecomingSpec.Extensions.openSecondEntryTarget"
+        "BecomingSpec.Extensions.openSecondEntryTarget",
+        "BecomingSpec.Extensions.hiddenCouplingCollapseTarget",
+        "BecomingSpec.Extensions.widenHealsBlindnessTarget",
+        "BecomingSpec.Extensions.directed3DNonCollapseTarget",
+        "BecomingSpec.Extensions.masterSpineEthicsFirewallTarget"
       ]
     },
     "v4_30_0_rc2": {
@@ -103,7 +112,11 @@
         "BecomingSpec.Extensions.missingLiftTarget",
         "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
         "BecomingSpec.Extensions.branchingVsPathCountTarget",
-        "BecomingSpec.Extensions.openSecondEntryTarget"
+        "BecomingSpec.Extensions.openSecondEntryTarget",
+        "BecomingSpec.Extensions.hiddenCouplingCollapseTarget",
+        "BecomingSpec.Extensions.widenHealsBlindnessTarget",
+        "BecomingSpec.Extensions.directed3DNonCollapseTarget",
+        "BecomingSpec.Extensions.masterSpineEthicsFirewallTarget"
       ]
     },
     "cross_toolchain_public_spec_type_match": true,
@@ -122,15 +135,15 @@
     "public_spec_symbols_matched": 394
   },
   "comparator_verification": {
-    "challenge_closure_sha256": "075be635fa4ed9d7ac8e2f5fd3b841fbd9d7c047f6ce0ad17d559e385445bf8e",
+    "challenge_closure_sha256": "cb33265de8491d69c55a2dec3349861c2848e1b1f45d4f98d81ef35028826b7e",
     "dep_stats": {
-      "total": 176,
-      "reused_from_cache": 175,
+      "total": 240,
+      "reused_from_cache": 239,
       "compiled_fresh": 1
     },
-    "targets_matched": 22,
-    "closure_constants_matched": 211,
-    "solution_constants_audited": 157,
+    "targets_matched": 26,
+    "closure_constants_matched": 219,
+    "solution_constants_audited": 167,
     "adapter_theorems": [
       "BecomingSpecCheck.adapter_branchStep_eq",
       "BecomingSpecCheck.adapter_chi_bijective_iff",
@@ -151,11 +164,13 @@
       "BecomingSpecCheck.adapter_safeTrace_iff",
       "BecomingSpecCheck.adapter_sameView_to_fiberSplit",
       "BecomingSpecCheck.adapter_slotOracle_commutes",
+      "BecomingSpecCheck.adapter_specOrbit_eq_lawOrbit",
+      "BecomingSpecCheck.adapter_specRegimeStep_eq",
       "BecomingSpecCheck.adapter_stock_eq_regimeStep",
       "BecomingSpecCheck.adapter_trace_iff",
       "BecomingSpecCheck.adapter_unrestricted_iff"
     ],
-    "print_axioms_verified_count": 44
+    "print_axioms_verified_count": 50
   },
   "tamper_self_tests": [
     {

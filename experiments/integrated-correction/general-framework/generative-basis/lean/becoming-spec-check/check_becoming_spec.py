@@ -49,6 +49,7 @@ SPEC_MODULES = [
     "BecomingSpec.Revision.IN1",
     "BecomingSpec.Extensions.OplaxTargets",
     "BecomingSpec.Extensions.EntryTargets",
+    "BecomingSpec.Extensions.SpineTargets",
 ]
 
 ALLOWED_SPEC_IMPORTS = {
@@ -57,6 +58,7 @@ ALLOWED_SPEC_IMPORTS = {
     "BecomingSpec.Revision.IN1": {"BecomingSpec.V2.Targets"},
     "BecomingSpec.Extensions.OplaxTargets": {"Init"},
     "BecomingSpec.Extensions.EntryTargets": {"Init"},
+    "BecomingSpec.Extensions.SpineTargets": {"Init"},
 }
 
 TARGET_THEOREMS = [
@@ -82,6 +84,10 @@ TARGET_THEOREMS = [
     "BecomingSpecCheck.entry_adaptiveBeatsFixed",
     "BecomingSpecCheck.entry_branchingVsPathCount",
     "BecomingSpecCheck.entry_openSecondEntry",
+    "BecomingSpecCheck.spine_hiddenCouplingCollapse",
+    "BecomingSpecCheck.spine_widenHealsBlindness",
+    "BecomingSpecCheck.spine_directed3DNonCollapse",
+    "BecomingSpecCheck.spine_masterSpineEthicsFirewall",
 ]
 
 TARGET_DEFS = [
@@ -107,6 +113,10 @@ TARGET_DEFS = [
     "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
     "BecomingSpec.Extensions.branchingVsPathCountTarget",
     "BecomingSpec.Extensions.openSecondEntryTarget",
+    "BecomingSpec.Extensions.hiddenCouplingCollapseTarget",
+    "BecomingSpec.Extensions.widenHealsBlindnessTarget",
+    "BecomingSpec.Extensions.directed3DNonCollapseTarget",
+    "BecomingSpec.Extensions.masterSpineEthicsFirewallTarget",
 ]
 
 IMPORT_RE = re.compile(r"^\s*import\s+([A-Za-z0-9_.]+)", re.MULTILINE)
@@ -247,6 +257,7 @@ import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
 import BecomingSpec.Extensions.EntryTargets
+import BecomingSpec.Extensions.SpineTargets
 open Lean
 
 partial def lvlKey : Level → String

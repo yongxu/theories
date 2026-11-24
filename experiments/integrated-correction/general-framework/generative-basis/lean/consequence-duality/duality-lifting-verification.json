@@ -1,0 +1,315 @@
+{
+  "module": "DualityLifting",
+  "source_file": "DualityLifting.lean",
+  "source_sha256": "cac323a74f9c9421c317e674880ad312da0638f4472735aa586b91888df16f32",
+  "verified_at_utc": "2026-11-24T14:14:49.525248+00:00",
+  "ai_written": true,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "status": "passed",
+  "standard_axioms_allowed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_axioms_used": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sorry_ax_count": 0,
+  "static_checks": {
+    "private_declarations": [],
+    "unnamed_instances": [],
+    "forbidden_tokens": [],
+    "market_word_hits": [],
+    "missing_required_declarations": []
+  },
+  "declaration_count": 29,
+  "theorem_count": 21,
+  "definition_count": 7,
+  "structure_count": 1,
+  "required_declarations_verified": [
+    "DualityLifting.MarkovKernel",
+    "DualityLifting.kernelMatrix",
+    "DualityLifting.pushKernel",
+    "DualityLifting.iterStepOp",
+    "DualityLifting.osc",
+    "DualityLifting.mid",
+    "DualityLifting.sum_stepOp_eq_pushKernel",
+    "DualityLifting.osc_stepOp_le_dobrushin",
+    "DualityLifting.osc_iterStepOp_le",
+    "DualityLifting.dobrushin_dualBound_lift",
+    "DualityLifting.dobrushin_horizon_primalGap_bound",
+    "DualityLifting.prodQueryFamily",
+    "DualityLifting.prodSumConsequence",
+    "DualityLifting.tensor_dualBound_subadditive",
+    "DualityLifting.coupled_relational_gap_witness",
+    "DualityLifting.empirical_estimate_error_bound",
+    "DualityLifting.empirical_threshold_safety_certificate"
+  ],
+  "declarations": [
+    {
+      "kind": "structure",
+      "name": "DualityLifting.MarkovKernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.kernelMatrix",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.pushKernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.iterStepOp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.osc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.mid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.sum_stepOp_eq_pushKernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.stepOp_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.iterStepOp_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.stepOp_sub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.stepOp_smul_right",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.stepOp_finset_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.iterStepOp_sub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.iterStepOp_finset_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.iterStepOp_smul_right",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.iterStepOp_linear_residual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.osc_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.abs_sub_mid_le_half_osc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.half_osc_le_sup_abs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.osc_stepOp_le_dobrushin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.osc_iterStepOp_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.dobrushin_dualBound_lift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.dobrushin_horizon_primalGap_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.prodQueryFamily",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "DualityLifting.prodSumConsequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.tensor_dualBound_subadditive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.coupled_relational_gap_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.empirical_estimate_error_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "DualityLifting.empirical_threshold_safety_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}
