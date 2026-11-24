@@ -1,7 +1,7 @@
 {
   "ai_written": "Track S1 (2026-11-24)",
   "status": "PASS",
-  "generated_utc": "2026-11-24T12:15:52Z",
+  "generated_utc": "2026-11-24T12:38:34Z",
   "hygiene": {
     "toolchains_ok": true,
     "spec_imports": {
@@ -16,21 +16,26 @@
       ],
       "BecomingSpec.Extensions.OplaxTargets": [
         "Init"
+      ],
+      "BecomingSpec.Extensions.EntryTargets": [
+        "Init"
       ]
     },
     "challenge_imports": [
       "BecomingSpec.V1.Targets",
       "BecomingSpec.V2.Targets",
       "BecomingSpec.Revision.IN1",
-      "BecomingSpec.Extensions.OplaxTargets"
+      "BecomingSpec.Extensions.OplaxTargets",
+      "BecomingSpec.Extensions.EntryTargets"
     ],
     "line_counts": {
       "BecomingSpec.V1.Targets": 143,
       "BecomingSpec.V2.Targets": 72,
       "BecomingSpec.Revision.IN1": 62,
       "BecomingSpec.Extensions.OplaxTargets": 72,
-      "Challenge": 39,
-      "Solution": 820
+      "BecomingSpec.Extensions.EntryTargets": 143,
+      "Challenge": 44,
+      "Solution": 1171
     },
     "v1_v2_in1_total_lines": 277
   },
@@ -40,7 +45,7 @@
       "version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
       "compile_rc": 0,
       "warnings_count": 0,
-      "total_constants_audited": 292,
+      "total_constants_audited": 475,
       "injEq_count": 0,
       "axiom_failures": [],
       "print_axioms_clean_targets": [
@@ -62,7 +67,10 @@
         "BecomingSpec.Revision.IN1.in1Seed3FaithfulHarmTarget",
         "BecomingSpec.Revision.IN1.in1Seed7RevisionSavesTarget",
         "BecomingSpec.Extensions.allFibersTarget",
-        "BecomingSpec.Extensions.missingLiftTarget"
+        "BecomingSpec.Extensions.missingLiftTarget",
+        "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
+        "BecomingSpec.Extensions.branchingVsPathCountTarget",
+        "BecomingSpec.Extensions.openSecondEntryTarget"
       ]
     },
     "v4_30_0_rc2": {
@@ -70,7 +78,7 @@
       "version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
       "compile_rc": 0,
       "warnings_count": 0,
-      "total_constants_audited": 297,
+      "total_constants_audited": 484,
       "injEq_count": 0,
       "axiom_failures": [],
       "print_axioms_clean_targets": [
@@ -92,50 +100,62 @@
         "BecomingSpec.Revision.IN1.in1Seed3FaithfulHarmTarget",
         "BecomingSpec.Revision.IN1.in1Seed7RevisionSavesTarget",
         "BecomingSpec.Extensions.allFibersTarget",
-        "BecomingSpec.Extensions.missingLiftTarget"
+        "BecomingSpec.Extensions.missingLiftTarget",
+        "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
+        "BecomingSpec.Extensions.branchingVsPathCountTarget",
+        "BecomingSpec.Extensions.openSecondEntryTarget"
       ]
     },
     "cross_toolchain_public_spec_type_match": true,
     "cross_toolchain_target_defs_exact_body_match": true,
     "lean430_brecOn_lambda_factored_defs": [
+      "BecomingSpec.Extensions.ofFixed",
+      "BecomingSpec.Extensions.pathsFrom",
+      "BecomingSpec.Extensions.runTree",
+      "BecomingSpec.Extensions.sumNatList",
       "BecomingSpec.V1.Completes",
       "BecomingSpec.V1.MarginSpec.run",
       "BecomingSpec.V1.in1Trace",
       "BecomingSpec.V1.iter",
       "BecomingSpec.V2.runLake"
     ],
-    "public_spec_symbols_matched": 240
+    "public_spec_symbols_matched": 394
   },
   "comparator_verification": {
-    "challenge_closure_sha256": "8b3fdf1cd285bddfca1e1a3cc4294d7f60c7fbd39b97a877e9784315904b4260",
+    "challenge_closure_sha256": "075be635fa4ed9d7ac8e2f5fd3b841fbd9d7c047f6ce0ad17d559e385445bf8e",
     "dep_stats": {
-      "total": 175,
+      "total": 176,
       "reused_from_cache": 175,
-      "compiled_fresh": 0
+      "compiled_fresh": 1
     },
-    "targets_matched": 19,
-    "closure_constants_matched": 133,
-    "solution_constants_audited": 92,
+    "targets_matched": 22,
+    "closure_constants_matched": 211,
+    "solution_constants_audited": 157,
     "adapter_theorems": [
       "BecomingSpecCheck.adapter_branchStep_eq",
       "BecomingSpecCheck.adapter_chi_bijective_iff",
       "BecomingSpecCheck.adapter_commonAction_via_guardHorizon",
+      "BecomingSpecCheck.adapter_completesPostBranch_iff",
       "BecomingSpecCheck.adapter_completes_iff",
       "BecomingSpecCheck.adapter_cycleStep2_reach5",
       "BecomingSpecCheck.adapter_cycleStep_commutes",
       "BecomingSpecCheck.adapter_cycleStep_reach6",
       "BecomingSpecCheck.adapter_determined_iff",
+      "BecomingSpecCheck.adapter_encounterEntryInterface_openGate",
+      "BecomingSpecCheck.adapter_encounterEntryInterface_runOps",
       "BecomingSpecCheck.adapter_in1_fiberSplit",
       "BecomingSpecCheck.adapter_live_openComposition_commutes",
       "BecomingSpecCheck.adapter_margin_closedStep_commutes",
       "BecomingSpecCheck.adapter_oplax_chi_iff_bc_all",
+      "BecomingSpecCheck.adapter_pathsFrom_commutes",
       "BecomingSpecCheck.adapter_safeTrace_iff",
       "BecomingSpecCheck.adapter_sameView_to_fiberSplit",
+      "BecomingSpecCheck.adapter_slotOracle_commutes",
       "BecomingSpecCheck.adapter_stock_eq_regimeStep",
       "BecomingSpecCheck.adapter_trace_iff",
       "BecomingSpecCheck.adapter_unrestricted_iff"
     ],
-    "print_axioms_verified_count": 36
+    "print_axioms_verified_count": 44
   },
   "tamper_self_tests": [
     {

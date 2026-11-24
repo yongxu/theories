@@ -48,6 +48,7 @@ SPEC_MODULES = [
     "BecomingSpec.V2.Targets",
     "BecomingSpec.Revision.IN1",
     "BecomingSpec.Extensions.OplaxTargets",
+    "BecomingSpec.Extensions.EntryTargets",
 ]
 
 ALLOWED_SPEC_IMPORTS = {
@@ -55,6 +56,7 @@ ALLOWED_SPEC_IMPORTS = {
     "BecomingSpec.V2.Targets": {"Init"},
     "BecomingSpec.Revision.IN1": {"BecomingSpec.V2.Targets"},
     "BecomingSpec.Extensions.OplaxTargets": {"Init"},
+    "BecomingSpec.Extensions.EntryTargets": {"Init"},
 }
 
 TARGET_THEOREMS = [
@@ -77,6 +79,9 @@ TARGET_THEOREMS = [
     "BecomingSpecCheck.in1_seed7RevisionSaves",
     "BecomingSpecCheck.ext_allFibers",
     "BecomingSpecCheck.ext_missingLift",
+    "BecomingSpecCheck.entry_adaptiveBeatsFixed",
+    "BecomingSpecCheck.entry_branchingVsPathCount",
+    "BecomingSpecCheck.entry_openSecondEntry",
 ]
 
 TARGET_DEFS = [
@@ -99,6 +104,9 @@ TARGET_DEFS = [
     "BecomingSpec.Revision.IN1.in1Seed7RevisionSavesTarget",
     "BecomingSpec.Extensions.allFibersTarget",
     "BecomingSpec.Extensions.missingLiftTarget",
+    "BecomingSpec.Extensions.adaptiveBeatsFixedTarget",
+    "BecomingSpec.Extensions.branchingVsPathCountTarget",
+    "BecomingSpec.Extensions.openSecondEntryTarget",
 ]
 
 IMPORT_RE = re.compile(r"^\s*import\s+([A-Za-z0-9_.]+)", re.MULTILINE)
@@ -238,6 +246,7 @@ import BecomingSpec.V1.Targets
 import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
+import BecomingSpec.Extensions.EntryTargets
 open Lean
 
 partial def lvlKey : Level → String
@@ -305,10 +314,11 @@ def main : IO Unit := do
     { module := `BecomingSpec.V1.Targets },
     { module := `BecomingSpec.V2.Targets },
     { module := `BecomingSpec.Revision.IN1 },
-    { module := `BecomingSpec.Extensions.OplaxTargets }
+    { module := `BecomingSpec.Extensions.OplaxTargets },
+    { module := `BecomingSpec.Extensions.EntryTargets }
   ] {} 0
   let mut specMods : Std.HashSet Nat := {}
-  for m in [`BecomingSpec.V1.Targets, `BecomingSpec.V2.Targets, `BecomingSpec.Revision.IN1, `BecomingSpec.Extensions.OplaxTargets] do
+  for m in [`BecomingSpec.V1.Targets, `BecomingSpec.V2.Targets, `BecomingSpec.Revision.IN1, `BecomingSpec.Extensions.OplaxTargets, `BecomingSpec.Extensions.EntryTargets] do
     if let some idx := env.getModuleIdx? m then
       specMods := specMods.insert idx
   let ctx : Core.Context := { fileName := "<spec-audit>", fileMap := default }
@@ -399,7 +409,7 @@ def compile_spec_and_audit(lean_bin: Path, tag: str, spec_dir: Path = SPEC_ROOT)
 def populate_becoming_deps(lean_bin: Path, sol_text: str, build_dir: Path, tmp_src: Path) -> dict[str, int]:
     """Restore cached Becoming `.olean`s where SHA-256 matches `check_becoming.py`, compiling any misses in temp."""
     sol_imps = parse_imports(sol_text)
-    needed_roots = [m for m in sol_imps if m.startswith("Becoming.")]
+    needed_roots = [m for m in sol_imps if m.startswith("Becoming.") or m == "EncounterEntry"]
 
     # Load `check_becoming.py` read-only with `sys.dont_write_bytecode = True` for exact cache keys.
     cb_spec = importlib.util.spec_from_file_location("becoming_checker_readonly", str(BECOMING_ROOT / "check_becoming.py"))

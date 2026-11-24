@@ -2,6 +2,7 @@ import BecomingSpec.V1.Targets
 import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
+import BecomingSpec.Extensions.EntryTargets
 
 /-!
 # BecomingSpec Challenge Holes (`Challenge.lean`)
@@ -35,5 +36,9 @@ theorem in1_seed7RevisionSaves : BecomingSpec.Revision.IN1.in1Seed7RevisionSaves
 
 theorem ext_allFibers : BecomingSpec.Extensions.allFibersTarget := sorry
 theorem ext_missingLift : BecomingSpec.Extensions.missingLiftTarget := sorry
+
+theorem entry_adaptiveBeatsFixed : BecomingSpec.Extensions.adaptiveBeatsFixedTarget := sorry
+theorem entry_branchingVsPathCount : BecomingSpec.Extensions.branchingVsPathCountTarget := sorry
+theorem entry_openSecondEntry : BecomingSpec.Extensions.openSecondEntryTarget := sorry
 
 end BecomingSpecCheck

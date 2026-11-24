@@ -2,6 +2,7 @@ import BecomingSpec.V1.Targets
 import BecomingSpec.V2.Targets
 import BecomingSpec.Revision.IN1
 import BecomingSpec.Extensions.OplaxTargets
+import BecomingSpec.Extensions.EntryTargets
 import Becoming.RegimeMargin
 import Becoming.OpenComposition
 import Becoming.PacedStock
@@ -9,6 +10,7 @@ import Becoming.Assurance
 import Becoming.GuardHorizon
 import Becoming.Significance
 import Becoming.OplaxHistory
+import EncounterEntry
 
 /-!
 # BecomingSpec Solution & Core Adapters (`Solution.lean`)
@@ -816,5 +818,354 @@ theorem ext_missingLift : BecomingSpec.Extensions.missingLiftTarget := by
         Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS, ?_, ?_⟩
     · exact Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split
     · exact Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness
+
+/-! ## Adapter 8: Adaptive Inquiry, Branching & Open Second Entry ↔ `EncounterEntry` -/
+
+def toSpecSlotProbe : EncounterEntry.SlotProbe → BecomingSpec.Extensions.SlotProbe
+  | .probeWhere => .probeWhere
+  | .readL => .readL
+  | .readR => .readR
+
+def fromSpecSlotProbe : BecomingSpec.Extensions.SlotProbe → EncounterEntry.SlotProbe
+  | .probeWhere => .probeWhere
+  | .readL => .readL
+  | .readR => .readR
+
+def toSpecPair (s : EncounterEntry.SlotState) : Bool × Bool := (s.slotLoc, s.slotVal)
+def fromSpecPair (s : Bool × Bool) : EncounterEntry.SlotState := ⟨s.1, s.2⟩
+
+theorem fromToSpecSlotProbe (p : BecomingSpec.Extensions.SlotProbe) :
+    toSpecSlotProbe (fromSpecSlotProbe p) = p := by
+  cases p <;> rfl
+
+theorem toFromSpecSlotProbe (p : EncounterEntry.SlotProbe) :
+    fromSpecSlotProbe (toSpecSlotProbe p) = p := by
+  cases p <;> rfl
+
+theorem toFromSpecPair (s : Bool × Bool) : toSpecPair (fromSpecPair s) = s := rfl
+theorem fromToSpecPair (s : EncounterEntry.SlotState) : fromSpecPair (toSpecPair s) = s := rfl
+
+theorem adapter_slotOracle_commutes (s : Bool × Bool) (p : EncounterEntry.SlotProbe) :
+    EncounterEntry.slotOracle (fromSpecPair s) p =
+      BecomingSpec.Extensions.slotOracle s (toSpecSlotProbe p) := by
+  cases p with
+  | probeWhere => rfl
+  | readL => cases s.1 <;> rfl
+  | readR => cases s.1 <;> rfl
+
+def toSpecTree :
+    EncounterEntry.InquiryTree EncounterEntry.SlotProbe Bool EncounterEntry.SlotState →
+      BecomingSpec.Extensions.InquiryTree BecomingSpec.Extensions.SlotProbe Bool (Bool × Bool)
+  | .stop act => .stop (toSpecPair act)
+  | .ask p next => .ask (toSpecSlotProbe p) (fun o => toSpecTree (next o))
+
+def fromSpecTree :
+    BecomingSpec.Extensions.InquiryTree BecomingSpec.Extensions.SlotProbe Bool (Bool × Bool) →
+      EncounterEntry.InquiryTree EncounterEntry.SlotProbe Bool EncounterEntry.SlotState
+  | .stop act => .stop (fromSpecPair act)
+  | .ask p next => .ask (fromSpecSlotProbe p) (fun o => fromSpecTree (next o))
+
+theorem toSpecTree_within :
+    ∀ {n : Nat} {t : EncounterEntry.InquiryTree EncounterEntry.SlotProbe Bool EncounterEntry.SlotState},
+      EncounterEntry.WithinQueries n t → BecomingSpec.Extensions.WithinQueries n (toSpecTree t)
+  | _, .stop _, .stop n act => .stop n (toSpecPair act)
+  | _, .ask _ _, .ask n p next h =>
+      .ask n (toSpecSlotProbe p) (fun o => toSpecTree (next o)) (fun o => toSpecTree_within (h o))
+
+theorem runTree_toSpecTree (s : Bool × Bool) :
+    ∀ t : EncounterEntry.InquiryTree EncounterEntry.SlotProbe Bool EncounterEntry.SlotState,
+      BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s) (toSpecTree t) =
+        toSpecPair (EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s)) t)
+  | .stop _ => rfl
+  | .ask p next => by
+      change BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s)
+          (toSpecTree (next (BecomingSpec.Extensions.slotOracle s (toSpecSlotProbe p)))) =
+        toSpecPair (EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s))
+          (next (EncounterEntry.slotOracle (fromSpecPair s) p)))
+      rw [← adapter_slotOracle_commutes s p]
+      exact runTree_toSpecTree s (next (EncounterEntry.slotOracle (fromSpecPair s) p))
+
+theorem runTree_fromSpecTree (s : Bool × Bool) :
+    ∀ t : BecomingSpec.Extensions.InquiryTree BecomingSpec.Extensions.SlotProbe Bool (Bool × Bool),
+      EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s)) (fromSpecTree t) =
+        fromSpecPair (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s) t)
+  | .stop _ => rfl
+  | .ask p next => by
+      change EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s))
+          (fromSpecTree (next (EncounterEntry.slotOracle (fromSpecPair s) (fromSpecSlotProbe p)))) =
+        fromSpecPair (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s)
+          (next (BecomingSpec.Extensions.slotOracle s p)))
+      rw [adapter_slotOracle_commutes s (fromSpecSlotProbe p), fromToSpecSlotProbe p]
+      exact runTree_fromSpecTree s (next (BecomingSpec.Extensions.slotOracle s p))
+
+theorem runTree_ofFixed_adapter {Act₁ Act₂ : Type} (g : Act₁ → Act₂) (s : Bool × Bool) :
+    ∀ (ps : List BecomingSpec.Extensions.SlotProbe) (dec : List Bool → Act₁),
+      EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s))
+          (EncounterEntry.ofFixed (ps.map fromSpecSlotProbe) (fun os => g (dec os))) =
+        g (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s)
+          (BecomingSpec.Extensions.ofFixed ps dec))
+  | [], _ => rfl
+  | p :: ps, dec => by
+      change EncounterEntry.runTree (EncounterEntry.slotOracle (fromSpecPair s))
+          (EncounterEntry.ofFixed (ps.map fromSpecSlotProbe)
+            (fun os => g (dec (EncounterEntry.slotOracle (fromSpecPair s) (fromSpecSlotProbe p) :: os)))) =
+        g (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle s)
+          (BecomingSpec.Extensions.ofFixed ps (fun os => dec (BecomingSpec.Extensions.slotOracle s p :: os))))
+      rw [adapter_slotOracle_commutes s (fromSpecSlotProbe p), fromToSpecSlotProbe p]
+      exact runTree_ofFixed_adapter g s ps (fun os => dec (BecomingSpec.Extensions.slotOracle s p :: os))
+
+theorem entry_adaptiveBeatsFixed : BecomingSpec.Extensions.adaptiveBeatsFixedTarget := by
+  refine ⟨⟨toSpecTree EncounterEntry.adaptiveSlotTree,
+      toSpecTree_within EncounterEntry.adaptiveSlotTree_within_two, ?_⟩, ?_, ?_⟩
+  · intro s
+    rw [runTree_toSpecTree s EncounterEntry.adaptiveSlotTree,
+      EncounterEntry.adaptive_two_step_identifies_pair (fromSpecPair s)]
+    exact toFromSpecPair s
+  · intro p₁ p₂ dec
+    obtain ⟨⟨s₁, s₂, hne, heq⟩, ⟨sBad, hBad⟩⟩ :=
+      EncounterEntry.fixed_two_step_misses_pair (fromSpecSlotProbe p₁) (fromSpecSlotProbe p₂)
+        (fun os => fromSpecPair (dec os))
+    refine ⟨⟨toSpecPair s₁, toSpecPair s₂, fun h => hne (congrArg fromSpecPair h), ?_⟩,
+      ⟨toSpecPair sBad, fun h => hBad ?_⟩⟩
+    · have h1 := runTree_ofFixed_adapter fromSpecPair (toSpecPair s₁) [p₁, p₂] dec
+      have h2 := runTree_ofFixed_adapter fromSpecPair (toSpecPair s₂) [p₁, p₂] dec
+      have hs1 : fromSpecPair (toSpecPair s₁) = s₁ := fromToSpecPair s₁
+      have hs2 : fromSpecPair (toSpecPair s₂) = s₂ := fromToSpecPair s₂
+      rw [hs1] at h1
+      rw [hs2] at h2
+      have eqEnc :
+          EncounterEntry.runTree (EncounterEntry.slotOracle s₁)
+            (EncounterEntry.ofFixed [fromSpecSlotProbe p₁, fromSpecSlotProbe p₂]
+              (fun os => fromSpecPair (dec os))) =
+          EncounterEntry.runTree (EncounterEntry.slotOracle s₂)
+            (EncounterEntry.ofFixed [fromSpecSlotProbe p₁, fromSpecSlotProbe p₂]
+              (fun os => fromSpecPair (dec os))) := heq
+      have hLeft : fromSpecPair (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle (toSpecPair s₁))
+          (BecomingSpec.Extensions.ofFixed [p₁, p₂] dec)) =
+          fromSpecPair (BecomingSpec.Extensions.runTree (BecomingSpec.Extensions.slotOracle (toSpecPair s₂))
+          (BecomingSpec.Extensions.ofFixed [p₁, p₂] dec)) := h1.symm.trans (eqEnc.trans h2)
+      exact congrArg toSpecPair hLeft
+    · have hB := runTree_ofFixed_adapter fromSpecPair (toSpecPair sBad) [p₁, p₂] dec
+      rw [fromToSpecPair sBad] at hB
+      exact hB.trans (congrArg fromSpecPair h)
+  · refine ⟨EncounterEntry.valueOnlyDecode, fun s => ?_⟩
+    have hV := runTree_ofFixed_adapter (fun v : Bool => v) s [.readL, .readR] EncounterEntry.valueOnlyDecode
+    have hEnc := EncounterEntry.fixed_two_step_recovers_value_only (fromSpecPair s)
+    exact hV.symm.trans hEnc
+
+def toSpecBranchState : EncounterEntry.BranchState → BecomingSpec.Extensions.BranchState
+  | .entry => .entry
+  | .leftMid => .leftMid
+  | .rightMid => .rightMid
+  | .exitDone => .exitDone
+
+def fromSpecBranchState : BecomingSpec.Extensions.BranchState → EncounterEntry.BranchState
+  | .entry => .entry
+  | .leftMid => .leftMid
+  | .rightMid => .rightMid
+  | .exitDone => .exitDone
+
+def toSpecBranchLabel : EncounterEntry.BranchLabel → BecomingSpec.Extensions.BranchLabel
+  | .stepX => .stepX
+  | .reqA => .reqA
+  | .reqB => .reqB
+
+def fromSpecBranchLabel : BecomingSpec.Extensions.BranchLabel → EncounterEntry.BranchLabel
+  | .stepX => .stepX
+  | .reqA => .reqA
+  | .reqB => .reqB
+
+def fromSpecPostReq : BecomingSpec.Extensions.PostReq → EncounterEntry.PostReq
+  | .reqA => .reqA
+  | .reqB => .reqB
+
+def toSpecPostReq : EncounterEntry.PostReq → BecomingSpec.Extensions.PostReq
+  | .reqA => .reqA
+  | .reqB => .reqB
+
+theorem toFromSpecBranchState (s : BecomingSpec.Extensions.BranchState) :
+    toSpecBranchState (fromSpecBranchState s) = s := by
+  cases s <;> rfl
+
+theorem fromToSpecBranchState (s : EncounterEntry.BranchState) :
+    fromSpecBranchState (toSpecBranchState s) = s := by
+  cases s <;> rfl
+
+theorem branchStateEq_commutes (a b : EncounterEntry.BranchState) :
+    BecomingSpec.Extensions.branchStateEq (toSpecBranchState a) (toSpecBranchState b) =
+      EncounterEntry.branchStateEq a b := by
+  cases a <;> cases b <;> rfl
+
+def toSpecEdges (sys : EncounterEntry.BranchSys)
+    (s : BecomingSpec.Extensions.BranchState) (l : BecomingSpec.Extensions.BranchLabel) :
+    List BecomingSpec.Extensions.BranchState :=
+  (sys.edges (fromSpecBranchState s) (fromSpecBranchLabel l)).map toSpecBranchState
+
+theorem sumNatList_eq : ∀ xs : List Nat,
+    BecomingSpec.Extensions.sumNatList xs = EncounterEntry.sumNatList xs
+  | [] => rfl
+  | x :: xs => congrArg (x + ·) (sumNatList_eq xs)
+
+theorem map_toSpec_pathsFrom (sys : EncounterEntry.BranchSys) :
+    ∀ (w : List EncounterEntry.BranchLabel) (s tgt : EncounterEntry.BranchState),
+      BecomingSpec.Extensions.pathsFrom (toSpecEdges sys)
+          (toSpecBranchState s) (w.map toSpecBranchLabel) (toSpecBranchState tgt) =
+        EncounterEntry.pathsFrom sys s w tgt
+  | [], s, tgt => by
+      change (if BecomingSpec.Extensions.branchStateEq (toSpecBranchState s) (toSpecBranchState tgt) then 1 else 0) =
+        (if EncounterEntry.branchStateEq s tgt then 1 else 0)
+      rw [branchStateEq_commutes s tgt]
+  | l :: ls, s, tgt => by
+      change BecomingSpec.Extensions.sumNatList
+          (((toSpecEdges sys (toSpecBranchState s) (toSpecBranchLabel l)).map
+            (fun s' => BecomingSpec.Extensions.pathsFrom (toSpecEdges sys) s'
+              (ls.map toSpecBranchLabel) (toSpecBranchState tgt)))) =
+        EncounterEntry.sumNatList
+          ((sys.edges s l).map (fun s' => EncounterEntry.pathsFrom sys s' ls tgt))
+      rw [sumNatList_eq]
+      have hEdge : toSpecEdges sys (toSpecBranchState s) (toSpecBranchLabel l) =
+          (sys.edges s l).map toSpecBranchState := by
+        cases s <;> cases l <;> rfl
+      rw [hEdge]
+      have hMap :
+          ((sys.edges s l).map toSpecBranchState).map
+            (fun s' => BecomingSpec.Extensions.pathsFrom (toSpecEdges sys) s'
+              (ls.map toSpecBranchLabel) (toSpecBranchState tgt)) =
+          (sys.edges s l).map (fun s' => EncounterEntry.pathsFrom sys s' ls tgt) := by
+        induction (sys.edges s l) with
+        | nil => rfl
+        | cons hd tl ih =>
+            exact congr (congrArg List.cons (map_toSpec_pathsFrom sys ls hd tgt)) ih
+      rw [hMap]
+
+theorem adapter_pathsFrom_commutes (sys : EncounterEntry.BranchSys)
+    (w : List BecomingSpec.Extensions.BranchLabel) :
+    BecomingSpec.Extensions.pathsFrom (toSpecEdges sys) .entry w .exitDone =
+      EncounterEntry.entryToExitCount sys (w.map fromSpecBranchLabel) := by
+  have hw : w = (w.map fromSpecBranchLabel).map toSpecBranchLabel := by
+    induction w with
+    | nil => rfl
+    | cons a as ih =>
+        have ha : a = toSpecBranchLabel (fromSpecBranchLabel a) := by cases a <;> rfl
+        exact congr (congrArg List.cons ha) ih
+  have hLhs := map_toSpec_pathsFrom sys (w.map fromSpecBranchLabel) .entry .exitDone
+  rw [← hw] at hLhs
+  exact hLhs
+
+theorem mem_map_toSpec {α β : Type} (f : α → β) {a : α} :
+    ∀ {xs : List α}, a ∈ xs → f a ∈ xs.map f
+  | _ :: _, .head _ => .head _
+  | _ :: _, .tail _ h => .tail _ (mem_map_toSpec f h)
+
+theorem mem_of_mem_map_toSpec {α β : Type} (f : α → β) :
+    ∀ {xs : List α} {b : β}, b ∈ xs.map f → ∃ a, a ∈ xs ∧ f a = b
+  | _ :: _, _, .head _ => ⟨_, .head _, rfl⟩
+  | _ :: _, _, .tail _ h =>
+      let ⟨a, ha, heq⟩ := mem_of_mem_map_toSpec f h
+      ⟨a, .tail _ ha, heq⟩
+
+theorem adapter_completesPostBranch_iff (sys : EncounterEntry.BranchSys) :
+    BecomingSpec.Extensions.CompletesPostBranch (toSpecEdges sys) ↔
+      EncounterEntry.CompletesPostBranch sys := by
+  constructor
+  · intro hSpec mid hMid r
+    have hEdge : toSpecEdges sys .entry .stepX = (sys.edges .entry .stepX).map toSpecBranchState := rfl
+    have hMem : toSpecBranchState mid ∈ toSpecEdges sys .entry .stepX :=
+      hEdge ▸ mem_map_toSpec toSpecBranchState hMid
+    obtain ⟨tgt, hTgtMem, hTgtEq⟩ := hSpec (toSpecBranchState mid) hMem (toSpecPostReq r)
+    have hLab : toSpecEdges sys (toSpecBranchState mid) (BecomingSpec.Extensions.postLabel (toSpecPostReq r)) =
+        (sys.edges mid (EncounterEntry.postLabel r)).map toSpecBranchState := by
+      cases mid <;> cases r <;> rfl
+    rw [hLab] at hTgtMem
+    obtain ⟨tgtEnc, hEncMem, hEncEq⟩ := mem_of_mem_map_toSpec toSpecBranchState hTgtMem
+    have hEqExit : toSpecBranchState tgtEnc = .exitDone := hEncEq.trans hTgtEq
+    have hEncExit : tgtEnc = .exitDone := by
+      cases tgtEnc <;> first | rfl | exact nomatch hEqExit
+    exact ⟨tgtEnc, hEncMem, hEncExit⟩
+  · intro hEnc mid hMid r
+    have hEdge : toSpecEdges sys .entry .stepX = (sys.edges .entry .stepX).map toSpecBranchState := rfl
+    rw [hEdge] at hMid
+    obtain ⟨midEnc, hEncMid, hMidEq⟩ := mem_of_mem_map_toSpec toSpecBranchState hMid
+    obtain ⟨tgt, hTgtMem, hTgtEq⟩ := hEnc midEnc hEncMid (fromSpecPostReq r)
+    have hMidFrom : fromSpecBranchState mid = midEnc := by
+      rw [← hMidEq]
+      exact fromToSpecBranchState midEnc
+    have hLab : toSpecEdges sys mid (BecomingSpec.Extensions.postLabel r) =
+        (sys.edges midEnc (EncounterEntry.postLabel (fromSpecPostReq r))).map toSpecBranchState := by
+      change (sys.edges (fromSpecBranchState mid) (fromSpecBranchLabel (BecomingSpec.Extensions.postLabel r))).map toSpecBranchState = _
+      rw [hMidFrom]
+      cases r <;> rfl
+    refine ⟨toSpecBranchState tgt, hLab ▸ mem_map_toSpec toSpecBranchState hTgtMem, ?_⟩
+    rw [hTgtEq]
+    rfl
+
+theorem entry_branchingVsPathCount : BecomingSpec.Extensions.branchingVsPathCountTarget := by
+  refine ⟨toSpecEdges EncounterEntry.sysA, toSpecEdges EncounterEntry.sysB, ?_, ?_, ?_, ?_, ?_⟩
+  · rw [adapter_pathsFrom_commutes]
+    exact EncounterEntry.sysA_path_counts_2xa_2xb.1
+  · rw [adapter_pathsFrom_commutes]
+    exact EncounterEntry.sysA_path_counts_2xa_2xb.2
+  · intro w
+    rw [adapter_pathsFrom_commutes, adapter_pathsFrom_commutes]
+    exact EncounterEntry.pathCount_eq (w.map fromSpecBranchLabel)
+  · exact (adapter_completesPostBranch_iff EncounterEntry.sysA).mpr EncounterEntry.sysA_completes_all
+  · intro hB
+    exact EncounterEntry.sysB_branch_stuck ((adapter_completesPostBranch_iff EncounterEntry.sysB).mp hB)
+
+def encounterEntryInterface :
+    BecomingSpec.Extensions.OpenEntryInterface
+      EncounterEntry.World EncounterEntry.ProcState EncounterEntry.Act
+      EncounterEntry.Submission EncounterEntry.FreshObserver EncounterEntry.ProcOp where
+  initResolved := EncounterEntry.initResolved
+  pubRead := EncounterEntry.publicRead
+  subQuery sub w := sub.query w
+  subSafe sub := sub.probeSafe
+  subRisk sub := sub.probeRisk
+  obsRead obs q w := obs.readContact q w
+  obsHazard obs w := obs.checkHazard w
+  openGate st sub := EncounterEntry.openGate st sub = true
+  sealingGate := EncounterEntry.sealingGate
+  execStep := EncounterEntry.execStep
+  runOps := EncounterEntry.runOps
+  reachable := EncounterEntry.ReachableProc
+  submitOp := EncounterEntry.ProcOp.submit
+  verifyOp := EncounterEntry.ProcOp.verifyHead
+  applyOp := EncounterEntry.ProcOp.applyRevision
+  actuateOp := EncounterEntry.ProcOp.actuate
+  reserve st := st.reserve
+  stepsLeft st := st.stepsLeft
+  rejectedCount st := st.rejectedCount
+  installedCount st := st.installed.length
+  lastAct st := st.lastAct
+  protectAct := EncounterEntry.Act.protect
+  normalAct := EncounterEntry.Act.normalOp
+  queueEmpty st := st.queue = []
+
+theorem adapter_encounterEntryInterface_openGate (st : EncounterEntry.ProcState) (sub : EncounterEntry.Submission) :
+    encounterEntryInterface.openGate st sub ↔ EncounterEntry.openGate st sub = true :=
+  Iff.rfl
+
+theorem adapter_encounterEntryInterface_runOps (st : EncounterEntry.ProcState) (ops : List EncounterEntry.ProcOp) :
+    encounterEntryInterface.runOps st ops = EncounterEntry.runOps st ops :=
+  rfl
+
+theorem entry_openSecondEntry : BecomingSpec.Extensions.openSecondEntryTarget := by
+  have hMain := EncounterEntry.encounter_refines_and_preserves_entry
+  obtain ⟨⟨hPub1, hQ1, hOpen1, stPend, hPendRun, hPendRej⟩,
+          ⟨del, msk, hDelRun, hMskRun, hStepsEq, hActNeq, hDelFloor, hMskFloor⟩,
+          ⟨stRej, hRejRun, hRejCount, hRejInst, hRejAct⟩,
+          ⟨⟨hSeal0, stRev1, stAct2, stMsk2, hRev1Run, hSeal1, hOpen2, hAct2Run, hMsk2Run, hAct2Neq, hAct2Floor, hMsk2Floor⟩,
+           hUniv⟩⟩ := hMain
+  exact ⟨EncounterEntry.World, EncounterEntry.ProcState, EncounterEntry.Act,
+    EncounterEntry.Submission, EncounterEntry.FreshObserver, EncounterEntry.ProcOp,
+    encounterEntryInterface, EncounterEntry.reserveFloor, EncounterEntry.canonicalObserver,
+    EncounterEntry.worldSafeBase, EncounterEntry.worldRisk1, EncounterEntry.worldRisk2,
+    EncounterEntry.entrant1Sub, EncounterEntry.entrant2Sub, EncounterEntry.falseSub,
+    EncounterEntry.protect_ne_normalOp, hPub1, hQ1, hOpen1, hSeal0,
+    ⟨stPend, hPendRun, hPendRej⟩,
+    ⟨del, msk, hDelRun, hMskRun, hStepsEq, hActNeq, hDelFloor, hMskFloor⟩,
+    ⟨stRej, hRejRun, hRejCount, hRejInst, hRejAct⟩,
+    ⟨stRev1, stAct2, stMsk2, hRev1Run, hSeal1, hOpen2, hAct2Run, hMsk2Run, hAct2Neq, hAct2Floor, hMsk2Floor⟩,
+    hUniv⟩
 
 end BecomingSpecCheck
