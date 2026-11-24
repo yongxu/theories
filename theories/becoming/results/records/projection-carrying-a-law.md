@@ -15,13 +15,13 @@
 2. Configurations alike under π go alike when any two configurations alike under π go by the same move to configurations alike under π. The image is determined, and some determined process on the description admits every step of P read through π, exactly where configurations alike go alike. (`Becoming.GoAlike`, `Becoming.image_determined_iff`, `Becoming.carries_law_iff`, `Becoming.Determined`)
    - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 3. Through the identity, going alike is determinacy; the description that distinguishes nothing always goes alike; a description of the image goes alike exactly where the composite description does. (`Becoming.goAlike_id_iff`, `Becoming.goAlike_const`, `Becoming.goAlike_image_iff`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 4. Where configurations alike go alike, two runs with the same moves from configurations alike under π stay alike under π at every step. (`Becoming.GoAlike.runs_agree`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 5. Where the next configuration depends only on π, configurations alike go alike, and two runs with the same moves from configurations alike under π are equal from the first step on. (`Becoming.DependsOnlyOn`, `Becoming.DependsOnlyOn.goAlike`, `Becoming.DependsOnlyOn.reabsorbed`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 6. A determined law depends only on π, as a process, exactly where configurations alike under π have the same next configuration, and then their orbits agree from the next step on. With the configuration read as state and rule, and the next configuration depending on the rule and not the state, two configurations with the same rule have the same orbit from the next step on. (`Becoming.Law.dependsOnlyOn_iff`, `Becoming.Law.reabsorbed`, `Becoming.Law.orbit`, `Becoming.Law.process`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 7. In a system changing its own rule, the state x under rule g becomes F g x u by move u and the rule becomes G g x; it is one determined process on the pair of state and rule. The state's projection goes alike, equivalently some determined process on the state admits every step read through the state, exactly where F agrees for every two rules at every state and move. (`Becoming.adaptive`, `Becoming.adaptive_determined`, `Becoming.adaptive_state_law_iff`, `Becoming.adaptive_state_carries_iff`)
    - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 8. Along its runs, on a stretch where the rule stays g, the state's steps are steps of the determined law of g. (`Becoming.ruleLaw`, `Becoming.ruleLaw_determined`, `Becoming.Run.steps_by_rule`)
@@ -136,6 +136,7 @@ On 12 October 2026 Ren asked “hows cause–effect system comparing to our theo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.Image`, `Becoming.Image.least`, `Becoming.GoAlike`, `Becoming.carries_law_iff`, `Becoming.image_determined_iff`, `Becoming.goAlike_id_iff`, `Becoming.goAlike_const`, `Becoming.goAlike_image_iff`, `Becoming.GoAlike.runs_agree`, `Becoming.DependsOnlyOn`, `Becoming.DependsOnlyOn.reabsorbed`, `Becoming.Law.reabsorbed`, `Becoming.adaptive`, `Becoming.adaptive_state_law_iff`, `Becoming.adaptive_state_carries_iff`, `Becoming.ruleLaw`, `Becoming.Run.steps_by_rule`, `Becoming.Run.TakesThrough`, `Becoming.Run.not_fixesThrough_of_untaken`, `Becoming.Run.not_fixesThrough_of_goAlike`, `Becoming.Coarse.carries`, `Becoming.Switching.no_state_law`, `mechanism`, `机制`, `emergence`, `涌现`, `carries a law`, `承载规律`, `相同者同去`, `adaptive system`, `改变自身规则的系统`
 

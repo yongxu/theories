@@ -25,7 +25,7 @@
 7. Forward: a trace is passing through the moves' relations along its word («历»), and a word is feasible exactly where that leads somewhere. A process factors through a map exactly where each move's image lies within the other's (Mechanism's image, move by move); a run's configurations carry the line of steps into the steps, and with the move inside a run is exactly a sequence along which that image lies within. (`Becoming.trace_iff_li`, `Becoming.feasible_iff_li`, `Becoming.factorsThrough_iff_image`, `Becoming.run_image`, `Becoming.run_iff_image`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 8. Going on along some branch of the steps («延») is lying in a family that keeps moving, and a run goes on from where it starts. On relations on a type of the first universe, going on gives a line exactly under dependent choice, read from Onward's calibration; within finitely many configurations it gives one with nothing chosen. (`Becoming.yan_iff_keepsMoving`, `Becoming.run_yan`, `Becoming.yan_line_iff_dependentChoice`, `Becoming.yan_line_of_list`)
-   - *Shared laws, by Lean dependency:* finite runs; its declarations reach the grammar's vocabulary only.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 9. The steps forget the moves: on one configuration with two moves, the process stepping only by true and the one stepping only by false have the same steps, and only the first is enabled by true. (`Becoming.Forgotten.byTrue`, `Becoming.Forgotten.byFalse`, `Becoming.Forgotten.moves_forgotten`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 10. Along any map: it preserves a relation exactly where the image of the relation along it lies within the other («保之像»), and going on along some branch reflects along any map lifting continuation, with no inverse («延之拉回»). (`Becoming.«保之像»`, `Becoming.«延之拉回»`)
@@ -131,6 +131,7 @@ A process is a labelled transition system, and its moves' relations are its labe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `The processes' representation theorem`, `过程之表示定理`, `the model with the move inside`, `着在其内之模型`, `Becoming.renaming_of_withMove`, `Becoming.forall_steps_iff`, `Becoming.trace_iff_li`, `Becoming.yan_line_iff_dependentChoice`
 

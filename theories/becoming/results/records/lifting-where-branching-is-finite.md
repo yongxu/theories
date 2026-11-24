@@ -107,6 +107,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.Lasting.lifting`, `Becoming.Lasting.step_iff_either`, `Becoming.Lasting.Unbounded`, `Becoming.Lasting.Unbounded.step_not_not`, `Becoming.Lasting.FinitelyBranching`, `lifting where branching is finite`, `有限分支处的提升`, `König lifting`, `Kőnig lifting`, `lasting some course`, `持续某段进程`
 

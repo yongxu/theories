@@ -76,7 +76,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
   - Preserved conditions: The continuation condition, as a hypothesis. [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean)
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Where the whole gains nothing (a premise), a rise of an observed family's stock is paid from beyond it; rise_needs_fall is the counterpart for position, with no premise, since position is relative by definition.
 
-**Used by:** [least-parts-and-equal-shares](least-parts-and-equal-shares.md) · [what-position-reads](what-position-reads.md)
+**Used by:** [least-parts-and-equal-shares](least-parts-and-equal-shares.md) · [the-selection-term-and-a-lineages-fate](the-selection-term-and-a-lineages-fate.md) · [what-position-reads](what-position-reads.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -106,6 +106,7 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `the game of relative position`, `相对位置的博弈`, `zero-sum game of relative position`, `relative position is zero-sum`, `相对位置是零和的`, `position does not protect`, `Becoming.RelativePosition.change_balances`, `Becoming.RelativePosition.not_all_rise`, `Becoming.Flow.race_ends_greatest`, `Becoming.Flow.ends_at_race_end`
 

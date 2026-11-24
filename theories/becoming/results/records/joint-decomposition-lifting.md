@@ -82,6 +82,7 @@ The whole/code/joint interpretation is supplied; universal physical compactness 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261122T094514.036246Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.liftsFromEach_iff`, `Becoming.liftsFromEach_iff_of_kernel`, `Becoming.IdentifiesJointAlike.lifts`, `Becoming.liftsFromEach_of_sameJointTests`, `Becoming.liftsFromEach_of_exact`, `Becoming.matchesParts_of_exact`, `Becoming.JointFrame.TestsStable.of_em`, `Becoming.matchesParts_of_compact_iff_em`
 

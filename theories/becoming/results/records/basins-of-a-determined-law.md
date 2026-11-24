@@ -11,7 +11,7 @@
 ## Laws
 
 1. Within m listed configurations every course enters what returns before step m. (`Becoming.Law.enters_returning_within`)
-   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 2. The courses of two configurations meet where at some steps they are at one configuration; after meeting they run together, and meeting is reflexive, symmetric and transitive under any determined law. (`Becoming.Law.Meet`, `Becoming.Law.Meet.refl`, `Becoming.Law.Meet.symm`, `Becoming.Law.Meet.later`, `Becoming.Law.Meet.trans`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A course reaches every returning configuration of its basin; within finitely many configurations each basin holds one cycle. (`Becoming.Law.Meet.reaches_returning`, `Becoming.Law.basin_one_cycle`)
@@ -71,6 +71,7 @@ Basins of attraction of a finite map: its functional graph splits into component
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Basins of a determined law`, `确定之律之势`, `Becoming.Law.enters_returning_within`
 

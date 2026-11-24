@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 407 | 20,253 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 409 | 20,347 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [Becoming active periphery](lean-declarations/becoming-periphery.md) | 10 | 458 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
@@ -200,6 +200,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CopyingCorrection.lean](lean-declarations/ethics-part-1.md#module-3f41827ba132) | The ethics and the generative direction |
 | [CopyingInstances.lean](lean-declarations/ethics-part-1.md#module-f2a3bd8b06de) | The ethics and the generative direction |
 | [CopyingRegistration.lean](lean-declarations/ethics-part-1.md#module-250d62f8722f) | The ethics and the generative direction |
+| [CoreHelpers.lean](lean-declarations/becoming-core-part-1.md#module-260a834401d2) | Becoming pure core |
 | [CorePredication.lean](lean-declarations/core.md#module-361d0be23e0b) | Generative core and relational structure |
 | [CoreTreeRearticulation.lean](lean-declarations/inquiry.md#module-2bcbeddc6d03) | Attainable inquiry, contact and process laws |
 | [CorrectionBoundary.lean](lean-declarations/ethics-part-1.md#module-e43bea25e92f) | The ethics and the generative direction |
@@ -701,6 +702,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PortRenewalBoundary.lean](lean-declarations/inquiry.md#module-c7210c591afe) | Attainable inquiry, contact and process laws |
 | [PortRenewalLawClosure.lean](lean-declarations/inquiry.md#module-5c50415006f1) | Attainable inquiry, contact and process laws |
 | [PortValuation.lean](lean-declarations/inquiry.md#module-e625c38f5208) | Attainable inquiry, contact and process laws |
+| [PositionTerms.lean](lean-declarations/becoming-core-part-5.md#module-3a2263e414fa) | Becoming pure core |
 | [PositionedPositiveReason.lean](lean-declarations/ethics-part-2.md#module-04bd31edc270) | The ethics and the generative direction |
 | [PositiveGroundUncertainty.lean](lean-declarations/ethics-part-2.md#module-829cc0c15abc) | The ethics and the generative direction |
 | [Postponement.lean](lean-declarations/becoming-core-part-5.md#module-7dcca1590134) | Becoming pure core |

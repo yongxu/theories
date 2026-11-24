@@ -46,6 +46,8 @@
     - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 18. At a kind grain that separates offspring from parents, each formation its own kind, the kind class is the carrier class and the line takes no step: there concordance is two at every step while every member of every cohort degenerates, and in Chain every cohort is nonempty while every occurrence degenerates. So the impossibility above is a law of a kind grain at which listed offspring continue their parents, not of every grain. (`Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind`, `Becoming.LineageRegions.Chain.kinds_apart`, `Becoming.LineageRegions.Chain.stands_once`)
     - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar's vocabulary only.
+19. Position invariance underneath the selection term (Becoming.PositionTerms): two profiles give every member the same relative position (RelativePosition.Keeps) iff they give every paired difference or own concordance the same value (keeps_iff_same_terms, keeps_iff_own_concord), and iff their concordance and discordance agree with every amount (keeps_iff_terms, lifted over generations by kept_step); TwoProfiles constructs distinct profiles differing in absolute reproduction while preserving relative order. SelectionShift.{concord_shifted, discord_shifted, shift_step} derive directly from PositionTerms. (`Becoming.PositionTerms.keeps_iff_same_terms`, `Becoming.PositionTerms.keeps_iff_own_concord`, `Becoming.PositionTerms.keeps_iff_terms`, `Becoming.PositionTerms.kept_step`, `Becoming.PositionTerms.TwoProfiles.same_order_apart`, `Becoming.PositionTerms.TwoProfiles.one_amount_not_enough`)
+    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -79,7 +81,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.SelectionShift, 105 declarations (83 theorems), and Becoming.LineageRegions, 174 declarations (129 theorems), at receipt 20261101T024359.312453Z, each with an empty axiom report; the modules recompiled by independent AI verifiers in four review rounds, every finding taken.
+Checked by the core checker with Lean 4.29.1 from the prelude (receipt 20261123T234229.023849Z): Becoming.PositionTerms (30 declarations, 26 theorems), Becoming.SelectionShift (80 theorems; moved to L2 through PositionTerms, no ethical predicate), and Becoming.LineageRegions (126 theorems), each with an empty axiom report; Wave U2 diff audit (00113d4b: PASS).
 
 Canonical source: [LineageRegions.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean)
 
@@ -98,6 +100,7 @@ Price's equation (Price 1970) and Fisher's fundamental theorem in its exact case
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
+- **formal-reuse**: [relative-position-is-zero-sum](relative-position-is-zero-sum.md). Becoming.PositionTerms reuses RelativePosition.Keeps below Becoming.SelectionShift so shift invariance derives from relative-position invariance.
 - **formal-reuse**: [selection-term-over-generations](selection-term-over-generations.md). The selection term proper (SelectionTerm.concord, discord), the cohorts of SelectionTerm.Generations and generations of descent (SelectionTerm.Flow.Descended), read here for what the term leaves out and joined to the map.
 - **formal-reuse**: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). The reading by offspring number (ByNumber) and the one-step law rises_exact_iff, whose nonemptiness the exception extends to every later cohort; Reproduction.Flow.lineage_ends, which the census reads as degeneration; the stock-one relay.
 - **formal-reuse**: [degeneration-from-a-horizon](degeneration-from-a-horizon.md). Web.ends_of_ends_at and Web.kind_every_branch_ends_of_gone (Becoming.MapInstances and Becoming.KeepingWidening, imported): an empty cohort under the census, and a line gone at a step, end the line on every branch.
@@ -122,8 +125,10 @@ Price's equation (Price 1970) and Fisher's fundamental theorem in its exact case
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.exists_add_of_le`, `Becoming.length_pos_of_mem`, `Becoming.Naturals.succ_ne_zero`, `Becoming.bool_of_and_true` |
 | proof | [Change.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean) | `Becoming.excess_add_right` |
 | proof | [Thresholds.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean) | `Becoming.Thresholds.cond_pos` |
+| proof | [PositionTerms.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PositionTerms.lean) | `Becoming.PositionTerms.keeps_iff_same_terms`, `Becoming.PositionTerms.keeps_iff_own_concord`, `Becoming.PositionTerms.keeps_iff_terms`, `Becoming.PositionTerms.kept_step`, `Becoming.PositionTerms.TwoProfiles.same_order_apart`, `Becoming.PositionTerms.TwoProfiles.one_amount_not_enough` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.SelectionShift.Generations.shift_step`, `Becoming.SelectionShift.Generations.last_term_zero`, `Becoming.SelectionShift.Generations.never_empties_while`, `Becoming.SelectionShift.Generations.never_empties_of_unbounded`, `Becoming.SelectionShift.Generations.line_kept`, `Becoming.SelectionShift.Generations.goes_on_iff`, `Becoming.SelectionShift.Generations.goes_on`, `Becoming.SelectionShift.Horizon.same_terms_two_fates`, `Becoming.SelectionShift.Horizon.two_fates_of_nonempty`, `Becoming.SelectionShift.Horizon.eventually_zero_two_fates`, `Becoming.SelectionShift.Horizon.terms_boundary`, `Becoming.LineageRegions.descended_carries`, `Becoming.LineageRegions.descended_carries_supported`, `Becoming.LineageRegions.generation_of_exact`, `Becoming.LineageRegions.generation_of_positive_term`, `Becoming.LineageRegions.degeneration_of_empty`, `Becoming.LineageRegions.degeneration_of_dissipation`, `Becoming.LineageRegions.empty_of_degenerates`, `Becoming.LineageRegions.generation_degenerates_iff`, `Becoming.LineageRegions.degenerates_iff_line_ends`, `Becoming.LineageRegions.not_all_degenerate_while`, `Becoming.LineageRegions.Courses.same_terms_two_fates`, `Becoming.LineageRegions.Courses.positive_but_last`
 
@@ -133,6 +138,7 @@ Aliases: `Becoming.SelectionShift.Generations.shift_step`, `Becoming.SelectionSh
 - 1 November 2026, board item EL (evolution read on the root, its part EL1): added, citing Becoming.SelectionShift (the counting layer) and Becoming.LineageRegions (the join on the map). The design's draft claims that no course of selection terms decides and that a term positive at every generation can go with every member degenerating were refuted in the Lean rounds and are kept as the laws that refute them; the witness is positive at every cohort but the last nonempty one.
 - 1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 24 November 2026 (Wave U2): derived Becoming.SelectionShift.{concord_shifted, discord_shifted, shift_step} directly from Becoming.PositionTerms (placed below SelectionShift over RelativePosition.Keeps), moving SelectionShift to L2 through PositionTerms (no ethical predicate). AI-written.
 
 </details>
 

@@ -4098,8 +4098,7 @@
       "chain": [
        "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
        "Becoming.WayOfUnits.unending_of_fixed",
-       "Becoming.WayOfUnits.course_fixed",
-       "Becoming.LineOnAStock.course_fixed"
+       "Becoming.LineOnAStock.unending_of_fixed"
       ]
      },
      {
@@ -4109,8 +4108,7 @@
       "chain": [
        "Becoming.WayOfUnits.GivenFromNothing.more_use_fails",
        "Becoming.WayOfUnits.unending_of_fixed",
-       "Becoming.WayOfUnits.course_fixed",
-       "Becoming.LineOnAStock.course_fixed"
+       "Becoming.LineOnAStock.unending_of_fixed"
       ]
      },
      {
@@ -38847,7 +38845,15 @@
     "read": 10,
     "uses": [],
     "chains": [],
-    "used_by": [],
+    "used_by": [
+     {
+      "used": "Becoming.«屡则或屡»",
+      "dynamic": "least-loss-rest",
+      "in": [
+       "Becoming.Amounts.rests_of_finite_reading"
+      ]
+     }
+    ],
     "shared": [
      {
       "theorem": "Becoming.Amounts.rests_unrefuted",
@@ -43525,6 +43531,13 @@
    "uses_between_proofs": {
     "read": 17,
     "uses": [
+     {
+      "dynamic": "falls-that-end-do-not-recur",
+      "used": "Becoming.«屡则或屡»",
+      "in": [
+       "Becoming.Amounts.rests_of_finite_reading"
+      ]
+     },
      {
       "dynamic": "rest-exactly-where-falls-stop",
       "used": "Becoming.Amounts.rests_unrefuted_of_finite_reading",
@@ -54576,6 +54589,16 @@
        "Becoming.LineageRegions.degeneration_of_empty",
        "Becoming.Web.ends_of_ends_at"
       ]
+     },
+     {
+      "dynamics": [
+       "position-does-not-protect"
+      ],
+      "chain": [
+       "Becoming.SelectionShift.Generations.shift_step",
+       "Becoming.PositionTerms.keeps_of_shifted",
+       "Becoming.RelativePosition.keeps_iff_common"
+      ]
      }
     ],
     "used_by": [],
@@ -59715,13 +59738,6 @@
     "used_by": [
      {
       "used": "Becoming.OpenComposition.close_contract_kernel",
-      "dynamic": "unified-drawdown-overdraw-and-aliasing",
-      "in": [
-       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"
-      ]
-     },
-     {
-      "used": "Becoming.OpenComposition.close_contract_kernel",
       "dynamic": "master-alignment-spine-and-sharpness",
       "in": [
        "Becoming.AlignmentSpine.ComposedSpine.master_alignment_spine_viable"
@@ -59739,13 +59755,6 @@
       "dynamic": "dynamical-scope-and-reciprocal-stability",
       "in": [
        "Becoming.ScopeDynamics.OpenCompositionBridge.reciprocal_open_compose_viable"
-      ]
-     },
-     {
-      "used": "Becoming.OpenComposition.replace_left_viable",
-      "dynamic": "unified-drawdown-overdraw-and-aliasing",
-      "in": [
-       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"
       ]
      },
      {
@@ -60238,20 +60247,6 @@
       "in": [
        "Becoming.UnifiedDrawdown.unit_balancesOn_iff_le"
       ]
-     },
-     {
-      "dynamic": "open-interface-composition-and-replacement",
-      "used": "Becoming.OpenComposition.close_contract_kernel",
-      "in": [
-       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable"
-      ]
-     },
-     {
-      "dynamic": "open-interface-composition-and-replacement",
-      "used": "Becoming.OpenComposition.replace_left_viable",
-      "in": [
-       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable"
-      ]
      }
     ],
     "chains": [
@@ -60297,6 +60292,36 @@
        "Becoming.UnifiedDrawdown.pooled_restraint_restores_viability",
        "Becoming.Viability.Certificate.kernel",
        "Becoming.Viability.kernel_iff_held"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_restraint_open_viable",
+       "Becoming.OpenComposition.composeList_viable",
+       "Becoming.OpenComposition.close_contract_kernel"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+       "Becoming.OpenComposition.composeList_replace_head_viable",
+       "Becoming.OpenComposition.close_contract_kernel"
+      ]
+     },
+     {
+      "dynamics": [
+       "open-interface-composition-and-replacement"
+      ],
+      "chain": [
+       "Becoming.UnifiedDrawdown.OpenCompositionBridge.fleet_upgrade_head_viable",
+       "Becoming.OpenComposition.composeList_replace_head_viable",
+       "Becoming.OpenComposition.replace_left_viable"
       ]
      }
     ],
@@ -61034,6 +61059,7 @@
       "chain": [
        "Becoming.AlignmentSpine.ComposedSpine.master_spine_upgrade_scope_viable",
        "Becoming.AlignmentSpine.ComposedSpine.replace_right_viable",
+       "Becoming.OpenComposition.replace_right_viable",
        "Becoming.OpenComposition.compose_close_interchange"
       ]
      },
@@ -202088,18 +202114,18 @@
   "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
   "toolchain": "leanprover/lean4:v4.29.1",
   "printed_from": {
-   "commit": "230d247a726ff8d7aff83b852af19161e46f82df",
-   "core_run": "20261123T212116.218407Z"
+   "commit": "77c5d56a0728a22f5d51a99138ff66dae1734f0f",
+   "core_run": "20261123T234229.023849Z"
   },
-  "core_sources_sha256": "8c210e78890d05cee06a5a602dec180d9a0d0732e9dc17b6b1016635bdd522ce",
+  "core_sources_sha256": "6860b26db255124498d0249ad2a0ec3146af8bcf3a4008b873033acf5352fed1",
   "counts": {
-   "modules": 425,
-   "theorems": 21662,
+   "modules": 427,
+   "theorems": 21756,
    "uses_without_row": 34
   },
   "counted": {
-   "modules": 425,
-   "theorems": 21662,
+   "modules": 427,
+   "theorems": 21756,
    "uses_without_row": 34
   },
   "binds_receipt": true,

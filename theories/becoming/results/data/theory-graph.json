@@ -7410,7 +7410,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 217,
+   "theorems": 224,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7685,7 +7685,7 @@
    "type": "module",
    "name": "Becoming.Mechanism",
    "level": "L1",
-   "theorems": 31,
+   "theorems": 33,
    "region": "knowing",
    "base": "frame",
    "on_grammar": true,
@@ -7710,7 +7710,7 @@
    "theorems": 60,
    "region": "knowing",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -8587,7 +8587,7 @@
    "type": "module",
    "name": "Becoming.BlanketCouplings",
    "level": "L1",
-   "theorems": 69,
+   "theorems": 74,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -8796,7 +8796,7 @@
    "type": "module",
    "name": "Becoming.Significance",
    "level": "L2",
-   "theorems": 30,
+   "theorems": 33,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
@@ -8820,6 +8820,17 @@
    "level": "L2",
    "theorems": 61,
    "region": "collective",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PositionTerms",
+   "type": "module",
+   "name": "Becoming.PositionTerms",
+   "level": "L2",
+   "theorems": 26,
+   "region": "life",
    "base": "old-base",
    "on_grammar": false,
    "reaches_grammar": true
@@ -9093,7 +9104,7 @@
    "type": "module",
    "name": "Becoming.Cascade",
    "level": "L1",
-   "theorems": 7,
+   "theorems": 10,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -9661,6 +9672,17 @@
    "reaches_grammar": false
   },
   {
+   "id": "module:Becoming.CoreHelpers",
+   "type": "module",
+   "name": "Becoming.CoreHelpers",
+   "level": "L1",
+   "theorems": 45,
+   "region": "method",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": false
+  },
+  {
    "id": "module:Becoming.Ideals",
    "type": "module",
    "name": "Becoming.Ideals",
@@ -9742,7 +9764,7 @@
    "type": "module",
    "name": "Becoming.Reconfiguration",
    "level": "L1",
-   "theorems": 51,
+   "theorems": 56,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -9899,7 +9921,7 @@
    "theorems": 182,
    "region": "root",
    "base": "general",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10284,7 +10306,7 @@
    "theorems": 28,
    "region": "map",
    "base": "frame",
-   "on_grammar": false,
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -10566,7 +10588,7 @@
    "id": "module:Becoming.SelectionShift",
    "type": "module",
    "name": "Becoming.SelectionShift",
-   "level": "L1",
+   "level": "L2",
    "theorems": 80,
    "region": "life",
    "base": "general",
@@ -11865,7 +11887,7 @@
    "type": "module",
    "name": "Becoming.PacedStock",
    "level": "L2",
-   "theorems": 45,
+   "theorems": 49,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11876,7 +11898,7 @@
    "type": "module",
    "name": "Becoming.MultiScaleViability",
    "level": "L1",
-   "theorems": 36,
+   "theorems": 39,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11887,7 +11909,7 @@
    "type": "module",
    "name": "Becoming.OpenComposition",
    "level": "L1",
-   "theorems": 26,
+   "theorems": 38,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11909,7 +11931,7 @@
    "type": "module",
    "name": "Becoming.StockFlowBridge",
    "level": "L2",
-   "theorems": 40,
+   "theorems": 54,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -11920,7 +11942,7 @@
    "type": "module",
    "name": "Becoming.EndogenousTurning",
    "level": "L2",
-   "theorems": 85,
+   "theorems": 65,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11931,7 +11953,7 @@
    "type": "module",
    "name": "Becoming.UnifiedDrawdown",
    "level": "L2",
-   "theorems": 107,
+   "theorems": 105,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11942,7 +11964,7 @@
    "type": "module",
    "name": "Becoming.ScopeDynamics",
    "level": "L2",
-   "theorems": 67,
+   "theorems": 64,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11953,7 +11975,7 @@
    "type": "module",
    "name": "Becoming.AlignmentSpine",
    "level": "L2",
-   "theorems": 71,
+   "theorems": 68,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -32830,6 +32852,11 @@
   },
   {
    "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
    "to": "module:Becoming.CoupledDrawers",
    "type": "imports"
   },
@@ -32846,6 +32873,11 @@
   {
    "from": "module:Becoming.AdaptiveLoops",
    "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.OpenComposition",
    "type": "imports"
   },
   {
@@ -32891,6 +32923,11 @@
   {
    "from": "module:Becoming.AlignmentSpine",
    "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.AlignmentSpine",
+   "to": "module:Becoming.CoreHelpers",
    "type": "imports"
   },
   {
@@ -33111,6 +33148,11 @@
   {
    "from": "module:Becoming.BlanketCouplings",
    "to": "module:Becoming.IdentificationRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BlanketCouplings",
+   "to": "module:Becoming.OpenComposition",
    "type": "imports"
   },
   {
@@ -33529,6 +33571,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.CoreHelpers",
+   "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Correspondence",
    "to": "module:Becoming.Labelled",
    "type": "imports"
@@ -33926,6 +33973,11 @@
   {
    "from": "module:Becoming.EndogenousTurning",
    "to": "module:Becoming.Clearing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.EndogenousTurning",
+   "to": "module:Becoming.CoreHelpers",
    "type": "imports"
   },
   {
@@ -35505,6 +35557,11 @@
   },
   {
    "from": "module:Becoming.MultiScaleViability",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.MultiScaleViability",
    "to": "module:Becoming.ProjectedLaws",
    "type": "imports"
   },
@@ -35580,12 +35637,17 @@
   },
   {
    "from": "module:Becoming.OpenComposition",
-   "to": "module:Becoming.AdaptiveLoops",
+   "to": "module:Becoming.CoreHelpers",
    "type": "imports"
   },
   {
    "from": "module:Becoming.OpenComposition",
    "to": "module:Becoming.MultiScaleViability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenComposition",
+   "to": "module:Becoming.RegimeMargin",
    "type": "imports"
   },
   {
@@ -35715,6 +35777,11 @@
   },
   {
    "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
    "to": "module:Becoming.Granularity",
    "type": "imports"
   },
@@ -35726,6 +35793,11 @@
   {
    "from": "module:Becoming.PacedStock",
    "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PacedStock",
+   "to": "module:Becoming.MultiScaleViability",
    "type": "imports"
   },
   {
@@ -35751,11 +35823,6 @@
   {
    "from": "module:Becoming.PacedStock",
    "to": "module:Becoming.Viability",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PacedStock",
-   "to": "module:Becoming.WayUnderARule",
    "type": "imports"
   },
   {
@@ -35941,6 +36008,16 @@
   {
    "from": "module:Becoming.Population",
    "to": "module:Becoming.Change",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PositionTerms",
+   "to": "module:Becoming.RelativePosition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PositionTerms",
+   "to": "module:Becoming.Reproduction",
    "type": "imports"
   },
   {
@@ -36311,6 +36388,11 @@
   {
    "from": "module:Becoming.Readout",
    "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Reconfiguration",
+   "to": "module:Becoming.OpenComposition",
    "type": "imports"
   },
   {
@@ -36840,6 +36922,11 @@
   },
   {
    "from": "module:Becoming.ScopeDynamics",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ScopeDynamics",
    "to": "module:Becoming.GroupEnding",
    "type": "imports"
   },
@@ -37015,7 +37102,7 @@
   },
   {
    "from": "module:Becoming.SelectionShift",
-   "to": "module:Becoming.Reproduction",
+   "to": "module:Becoming.PositionTerms",
    "type": "imports"
   },
   {
@@ -37181,6 +37268,11 @@
   {
    "from": "module:Becoming.StockFlowBridge",
    "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.StockFlowBridge",
+   "to": "module:Becoming.Stock",
    "type": "imports"
   },
   {
@@ -37406,6 +37498,11 @@
   {
    "from": "module:Becoming.UnifiedDrawdown",
    "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnifiedDrawdown",
+   "to": "module:Becoming.CoreHelpers",
    "type": "imports"
   },
   {
@@ -37878,6 +37975,11 @@
   {
    "from": "record:a-formations-couplings-as-its-blanket",
    "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "record:open-interface-composition-and-replacement",
    "type": "formal-reuse"
   },
   {
@@ -43964,6 +44066,11 @@
   {
    "from": "record:coupled-adaptive-loops-and-race",
    "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:coupled-adaptive-loops-and-race",
+   "to": "record:open-interface-composition-and-replacement",
    "type": "formal-reuse"
   },
   {
@@ -51506,11 +51613,6 @@
   },
   {
    "from": "record:open-interface-composition-and-replacement",
-   "to": "record:coupled-adaptive-loops-and-race",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:open-interface-composition-and-replacement",
    "to": "record:lax-multi-scale-viability",
    "type": "formal-reuse"
   },
@@ -52090,11 +52192,6 @@
   },
   {
    "from": "record:paced-stock-and-cadence-margin-sandwich",
-   "to": "record:a-way-of-units-under-a-rule-set-again",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:paced-stock-and-cadence-margin-sandwich",
    "to": "record:conditions-kept-together",
    "type": "formal-reuse"
   },
@@ -52111,6 +52208,11 @@
   {
    "from": "record:paced-stock-and-cadence-margin-sandwich",
    "to": "record:laws-at-coarser-steps",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:paced-stock-and-cadence-margin-sandwich",
+   "to": "record:lax-multi-scale-viability",
    "type": "formal-reuse"
   },
   {
@@ -55468,6 +55570,11 @@
    "from": "record:reviewers-count-by-independent-causes",
    "to": "record:copied-witnesses-change-nothing",
    "type": "related"
+  },
+  {
+   "from": "record:reviewers-count-by-independent-causes",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
   },
   {
    "from": "record:revision-comes-to-drawing-everything",
@@ -59031,6 +59138,11 @@
   },
   {
    "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.PositionTerms",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -59068,6 +59180,11 @@
    "from": "record:the-selection-term-and-a-lineages-fate",
    "to": "record:only-the-order-of-change-shows",
    "type": "related"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "record:relative-position-is-zero-sum",
+   "type": "formal-reuse"
   },
   {
    "from": "record:the-selection-term-and-a-lineages-fate",

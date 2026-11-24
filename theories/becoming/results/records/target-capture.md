@@ -24,7 +24,7 @@
 6. In a world's flow where what stands at each step is listed, each once, and runs down across every step from step T on, descent does not occur at arbitrarily late steps. (`Becoming.Flow.descent_exhausted`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. For any law on configurations of a state and a rule whose next configuration depends on the rule and not on the state, two configurations with the same rule have the same orbit from the next step on. It is the instance, with the rule as the projection, of the law that a determined law depending only on a projection gives configurations alike under it the same orbit from the next step on. (`Becoming.Law.perturbation_reabsorbed`, `Becoming.Law.reabsorbed`, `Becoming.Law.orbit`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 8. In Captured, on pairs of Booleans whose next state is the rule and whose rule keeps itself, the next configuration does not depend on the state: a state perturbed against the rule is at the rule's configuration from the next step on, so its run is the unperturbed run from then on, while from a perturbed rule the state follows the new rule and the run differs at every step from the next on. (`Becoming.Captured.next`, `Becoming.Captured.byRule`, `Becoming.Captured.state_perturbation_returns`, `Becoming.Captured.rule_perturbation_changes`, `Becoming.SeekingRuns.captured_state_returns`, `Becoming.SeekingRuns.captured_rule_changes`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
@@ -131,6 +131,7 @@ Ren on 10 October spoke of nature hijacked “by what they "got nurtured"”, an
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.share_not_lower`, `Becoming.share_rises`, `Becoming.Flow.descent_needs_unrun`, `Becoming.Flow.descent_exhausted`, `Becoming.Law.perturbation_reabsorbed`, `hijacking`, `劫持`, `capture`, `捕获`, `selection of minds`, `winner rewrites the test`, `Becoming.CaptureWorlds.unsupported_leave_none`, `Becoming.CaptureWorlds.share_rises_of_unsupported`, `Becoming.CaptureWorlds.share_not_lower_of_unsupported`, `Becoming.SeekingRuns.captured_state_returns`, `Becoming.SeekingRuns.captured_rule_changes`
 

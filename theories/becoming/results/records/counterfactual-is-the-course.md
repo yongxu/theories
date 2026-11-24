@@ -51,7 +51,7 @@
 19. So for a run of the course's standard model, its history shows a determined law, and the part's move a at x has a step of the model beyond what the history shows exactly where the history never takes a at x. (`Becoming.Consistent`, `Becoming.exists_law_iff`, `Becoming.inputs_determined`, `Becoming.ExchangeLaw.counterfactual_beyond_shown`)
     - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 20. Where the part's move is formed by a law on the configuration (the stage and the history so far), a run closed by it from the starting levels is at every step the course the law with that act generates, so two such runs agree. (`Becoming.ExchangeLaw.policy`, `Becoming.closedBy`, `Becoming.ExchangeLaw.closedBy_course`, `Becoming.closedBy_runs_agree`)
-    - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+    - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -190,6 +190,7 @@ Ren wrote: “another agent has got this far, maybe merge first and see if there
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.ExchangeLaw`, `Becoming.ExchangeLaw.Nonanticipating`, `Becoming.ExchangeLaw.Through`, `Becoming.ExchangeLaw.Sensitive`, `Becoming.ExchangeLaw.Feasible`, `Becoming.ExchangeLaw.course`, `Becoming.Flow.Follows`, `Becoming.Flow.ActsAlike`, `Becoming.counterfactual_fixed`, `Becoming.ExchangeLaw.course_balances_iff`, `Becoming.counterfactual_is_course`, `Becoming.ExchangeLaw.course_unique`, `Becoming.ExchangeLaw.Through.responds`, `Becoming.ExchangeLaw.Nonanticipating.through_sensitive`, `Becoming.ExchangeLaw.Through.couples_of_sensitive`, `Becoming.comparison_of_courses`, `Becoming.comparison_through_sensitivity`, `Becoming.comparison_with_act`, `Becoming.ExchangeLaw.course_trajectory`, `Becoming.ExchangeLaw.act_not_taken`, `Becoming.Loop.courses_fixed`
 

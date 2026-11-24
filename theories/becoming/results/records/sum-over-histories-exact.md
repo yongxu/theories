@@ -107,6 +107,7 @@ Answering Ren's question of 12 October 2026 on laws that are not determined: “
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.Weights`, `Becoming.Weights.sum_courses`, `Becoming.Weights.transfer`, `Becoming.Weights.along`, `Becoming.courses`, `Becoming.Weights.Hom`, `Becoming.Weights.Hom.transfer`, `Becoming.possibility`, `Becoming.possibility_transfer_iff`, `Becoming.counting`, `Becoming.support`, `Becoming.counting_transfer_iff`, `Becoming.Weights.lumped_iff`, `Becoming.Lumping.loses`, `sum over histories`, `历史之和`, `weighted histories`, `加权历史`, `transfer`, `转移`, `lumpability`, `可归并`, `Feynman diagrams`, `费曼图`
 

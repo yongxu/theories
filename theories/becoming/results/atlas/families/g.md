@@ -66,7 +66,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Sources.** [01-ROOT.md#r-shared-laws-on-the-grammar](../../../chapters/01-ROOT.md#r-shared-laws-on-the-grammar)
 - **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
   - *Used directly by proofs here.* None found. A use Lean's printer did not follow would not show here.
-  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here. None found.
+  - *Proofs elsewhere that directly use a theorem listed here.* Chains are shown where they start, not here.
+    - `Becoming.«屡则或屡»`: in `Becoming.Amounts.rests_of_finite_reading`, listed under [The least loss as a premise of rest](#least-loss-rest).
   - *Listed here and under another dynamic, by hand.* `Becoming.Amounts.rests_unrefuted`, also under [The least loss as a premise of rest](#least-loss-rest). A use with such a theorem at one end is not shown as a use between the two dynamics that list it.
 
 <a id="the-last-change-of-a-run"></a>
@@ -688,6 +689,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Sources.** [02-MAP.md#r-least-loss-rest](../../../chapters/02-MAP.md#r-least-loss-rest), [02-MAP.md#r-rest-by-balance](../../../chapters/02-MAP.md#r-rest-by-balance), [02-MAP.md#r-rest-from-a-finite-reading](../../../chapters/02-MAP.md#r-rest-from-a-finite-reading)
 - **Uses between proofs.** Computed at render from what Lean printed of its proof terms, typed by no one. A line says that the proof of one theorem, as written, uses another theorem, the two listed under different dynamics. It is not a case, a joining or an exit, and it is about those two theorems, not about the two dynamics ([what it does not show](../TERRAIN.md#uses-between-proofs)).
   - *Used directly by proofs here.*
+    - `Becoming.«屡则或屡»`, in `Becoming.Amounts.rests_of_finite_reading`, listed under [The grammar's law of rest: falls that end do not recur](#falls-that-end-do-not-recur).
     - `Becoming.Amounts.rests_unrefuted_of_finite_reading`, in `Becoming.Amounts.rests_of_finite_reading`, listed under [Rest exactly where the total stops falling](#rest-exactly-where-falls-stop).
   - *Reached through theorems no dynamic lists.* Each step is one proof using the next. The chain is of the proofs as written: the first theorem need not need the last.
     - `Becoming.Branching.loss_needs_merge` → `Becoming.Branching.Lossless.loses_nothing` → `Becoming.Branching.Lossless.recurs`, listed under [Returning where the course branches](f.md#returning-where-the-course-branches).

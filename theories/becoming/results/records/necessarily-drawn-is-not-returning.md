@@ -22,7 +22,7 @@
 5. A configuration possibly drawn may return on another course: in OneWay, false is possibly but not necessarily drawn into {true}, which the process never leaves, and returns. (`Becoming.Branching.OneWay.process`, `Becoming.Branching.OneWay.atTrue`, `Becoming.Branching.OneWay.atTrue_invariant`, `Becoming.Branching.OneWay.staying`, `Becoming.Branching.OneWay.passing`, `Becoming.Branching.OneWay.returns`, `Becoming.Branching.OneWay.possibly_not_necessarily`)
    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 6. Under a determined process the moves decide whether a run is drawn in: two runs from one configuration, one entering a region and the other never, differ in some move (Branching.Determined.moves_decide); in OneWay, the run that passes and the run that keeps false differ so. (`Becoming.Branching.OneWay.determined`, `Becoming.Branching.OneWay.moves_decide`, `Becoming.Branching.Determined.moves_decide`)
-   - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 7. Under every process the future narrows: what can be had n steps on is a region the process never leaves, and a configuration that cannot be had n steps on is necessarily drawn into it, every run entering at step n. (`Becoming.Branching.reachable_invariant`, `Becoming.Branching.lost_necessarily_drawn`, `Becoming.Branching.necessarilyDrawn_of_lost`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 8. Within finitely many configurations every run enters what returns (Run.enters_returning); where a list holds every configuration, a configuration necessarily drawn at which a given run begins rules out that the process merges nothing, concluding that rather than supplying a merge. (`Becoming.Branching.NecessarilyDrawn.not_lossless`, `Becoming.Run.enters_returning`)
@@ -122,6 +122,7 @@ This answers attraction for processes that are not determined, a next step of at
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.Branching.PossiblyDrawnInto`, `Becoming.Branching.NecessarilyDrawnInto`, `Becoming.Branching.necessarilyDrawn_iff_not_returns`, `Becoming.Branching.possiblyDrawn_iff`, `Becoming.Branching.Returns.run`, `Becoming.Branching.OneWay.possibly_not_necessarily`, `Becoming.Law.rule_absorbing`, `Becoming.Law.perturbation_drawnInto`, `Becoming.Captured.state_perturbation_drawn`, `possibly drawn`, `可能被吸入`, `necessarily drawn`, `必然被吸入`
 

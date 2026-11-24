@@ -15,7 +15,7 @@
 2. Under a determined law, read as a process with one action whose step goes to the law's next configuration, being had n steps on, keeping every possibility, returning, merging nothing and merging are the law's own notions, by definition. (`Becoming.Law.process`, `Becoming.Branching.law_reachable_iff`, `Becoming.Branching.law_keeps_iff`, `Becoming.Branching.law_returns_iff`, `Becoming.Branching.law_lossless_iff`, `Becoming.Branching.law_merges_iff`)
    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. For any process, with no premise: a configuration not reachable n steps on is not reachable at any later step; a configuration that returns can be had at every step, so where every configuration returns every configuration can be had at every step; and every configuration can be had at every step exactly where every configuration can be had at the next step from some configuration. (`Becoming.Branching.lost_stays`, `Becoming.Branching.Returns.reachable`, `Becoming.Branching.keeps_of_returns`, `Becoming.Branching.keeps_iff_fed`, `Becoming.Branching.KeepsPossibilities`)
-   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 4. For any process, with no finiteness: a configuration returns exactly where some configuration reachable from it has it at the next step; and every configuration returns exactly where every region the process never leaves keeps every possibility of its own, which is exactly where each such region has each of its configurations at the next step from within it. (`Becoming.Branching.returns_iff_fed_ahead`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.returns_iff_fedWithin`, `Becoming.Branching.keepsWithin_iff_fedWithin`, `Becoming.Branching.KeepsWithin`, `Becoming.Branching.FedWithin`)
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 5. For a process that merges nothing and a run of it whose configurations a list holds: the run is at each of its configurations again after some positive number of steps; and a natural-number quantity on configurations that never falls along that run keeps its value across every step. (`Becoming.Branching.Lossless.comes_back`, `Becoming.Branching.Lossless.recurs`, `Becoming.Branching.Lossless.no_rise`)
@@ -27,11 +27,11 @@
 8. Witness: in a determined process of three listed stages, each able to move and each had at every step, the middle stage never returns and is necessarily drawn into the last; keeping every possibility does not give returning. (`Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.Transit.determined`)
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 9. Witness: in a process on two listed configurations, false and true step to one configuration, both return, and every configuration can be had at every step: a merge need not lose a possibility. (`Becoming.Branching.OneWay.merge_keeps`)
-   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 10. Witness: the fork merges nothing and lists its three configurations, yet its origin, whose ends cannot move, never returns and is possibly drawn into some region the fork never leaves (its left end, in the proof): within listed configurations, merging nothing need not give a configuration its return without a run from it. (`Becoming.Branching.fork_lossless_not_returns`)
     - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 11. Under a determined process, two runs that meet at a step and take the same moves from then on stay together at every later step; in a witness that is not determined, two runs from one configuration taking the same moves part at the first step, though read through its first part the process is determined up to likeness and the runs stay alike. (`Becoming.Branching.Determined.stays_merged`, `Becoming.Coarse.meet_and_part`)
-    - *Shared laws, by Lean dependency:* lumping; its declarations do not reach the grammar.
+    - *Shared laws, by Lean dependency:* lumping; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -121,6 +121,7 @@ Following Ren's “move towards 100%” of 12 October 2026: the three-way equiva
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `Becoming.Branching.Reachable`, `Becoming.Branching.Returns`, `Becoming.Branching.Lossless`, `Becoming.Branching.returns_iff_fed_ahead`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.keeps_iff_fed`, `Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.OneWay.merge_keeps`, `Becoming.Branching.Lossless.returns`, `returning under branching`, `分支下的返回`
 

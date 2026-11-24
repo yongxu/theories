@@ -80,6 +80,7 @@ The deterministic form of an information cascade (Bikhchandani, Hirshleifer and 
 | integration | [REVIEW-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-LEAN.md) | — |
 | integration | [REVIEW-TEXTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z/verification.json) | — |
 
 Aliases: `readers reading readers`, `读者读读者`, `a cascade`, `级联`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.Copying.reaches_first_only`
 
