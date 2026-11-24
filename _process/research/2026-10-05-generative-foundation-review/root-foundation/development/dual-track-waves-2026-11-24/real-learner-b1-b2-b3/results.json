@@ -4,37 +4,37 @@
     "cells": {
       "s3_(12)^8": {
         "max_emp_tv_vs_macro": 0.11702559564011948,
-        "max_exact_tv_vs_macro": 0.11520242223391909,
+        "max_exact_tv_vs_macro": 0.11520242223391906,
         "max_impl_tv": 0.024851064870420443
       },
       "s3_(21)^8": {
         "max_emp_tv_vs_macro": 0.12380666784594345,
-        "max_exact_tv_vs_macro": 0.11418024346190994,
+        "max_exact_tv_vs_macro": 0.11418024346190993,
         "max_impl_tv": 0.03543935956647032
       },
       "s3_1^16": {
         "max_emp_tv_vs_macro": 0.20957980817031285,
-        "max_exact_tv_vs_macro": 0.21567367028999107,
+        "max_exact_tv_vs_macro": 0.21567367028999104,
         "max_impl_tv": 0.017671907127236857
       },
       "s3_2^16": {
         "max_emp_tv_vs_macro": 0.22055579329383201,
-        "max_exact_tv_vs_macro": 0.18635942577494663,
+        "max_exact_tv_vs_macro": 0.18635942577494666,
         "max_impl_tv": 0.037570416586466815
       },
       "s4_(12)^8": {
         "max_emp_tv_vs_macro": 0.10596447538217998,
-        "max_exact_tv_vs_macro": 0.09267502891750395,
+        "max_exact_tv_vs_macro": 0.09267502891750398,
         "max_impl_tv": 0.013289446464676023
       },
       "s4_(21)^8": {
         "max_emp_tv_vs_macro": 0.09668624334476503,
-        "max_exact_tv_vs_macro": 0.0961375663773773,
+        "max_exact_tv_vs_macro": 0.09613756637737735,
         "max_impl_tv": 0.028250817416456755
       },
       "s4_1^16": {
         "max_emp_tv_vs_macro": 0.15044844041578742,
-        "max_exact_tv_vs_macro": 0.14249720965590407,
+        "max_exact_tv_vs_macro": 0.14249720965590404,
         "max_impl_tv": 0.0086335131599039
       },
       "s4_2^16": {
@@ -51,54 +51,54 @@
     "impl_sanity_passed": true,
     "max_emp_tv_vs_macro": 0.22055579329383201,
     "max_emp_vs_exact_micro_tv": 0.037570416586466815,
-    "max_exact_tv_vs_macro": 0.21567367028999107,
+    "max_exact_tv_vs_macro": 0.21567367028999104,
     "n_rollouts_per_cell": 1024,
     "path2_summary": {
       "s3_(12)^8": {
         "emp_vs_exact_micro_path2_tv": 0.01688455326511005,
-        "exact_path2_tv_micro_macro": 0.043301885042297115,
+        "exact_path2_tv_micro_macro": 0.04330188504229712,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s3_(21)^8": {
         "emp_vs_exact_micro_path2_tv": 0.0080820183948696,
-        "exact_path2_tv_micro_macro": 0.04381324525709548,
+        "exact_path2_tv_micro_macro": 0.043813245257095484,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s3_1^16": {
         "emp_vs_exact_micro_path2_tv": 0.012545914742450225,
-        "exact_path2_tv_micro_macro": 0.04330188504229708,
+        "exact_path2_tv_micro_macro": 0.04330188504229712,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s3_2^16": {
         "emp_vs_exact_micro_path2_tv": 0.011025178265110047,
-        "exact_path2_tv_micro_macro": 0.04461700947892335,
+        "exact_path2_tv_micro_macro": 0.04461700947892339,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s4_(12)^8": {
         "emp_vs_exact_micro_path2_tv": 0.010454664203633713,
-        "exact_path2_tv_micro_macro": 0.0422603083333994,
+        "exact_path2_tv_micro_macro": 0.04226030833339942,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s4_(21)^8": {
         "emp_vs_exact_micro_path2_tv": 0.0012821154287019924,
-        "exact_path2_tv_micro_macro": 0.04379438897779448,
+        "exact_path2_tv_micro_macro": 0.04379438897779449,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s4_1^16": {
         "emp_vs_exact_micro_path2_tv": 0.0010688783591934375,
-        "exact_path2_tv_micro_macro": 0.04226030833339943,
+        "exact_path2_tv_micro_macro": 0.04226030833339942,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       },
       "s4_2^16": {
         "emp_vs_exact_micro_path2_tv": 0.012066370987922516,
-        "exact_path2_tv_micro_macro": 0.04459779900899919,
+        "exact_path2_tv_micro_macro": 0.04459779900899912,
         "two_step_coupling_bound": 0.04564933514348224,
         "within_2e1_bound": true
       }
@@ -347,15 +347,26 @@
   },
   "b3": {
     "clamped_advanced_exec_streams": 64,
+    "clamped_advanced_exec_uncensored_streams": 54,
     "clamped_advanced_request_streams": 64,
     "collapse_count_clamped": 0,
     "collapse_count_natural": 61,
     "early_prot_exec_before_cone_natural": 53,
-    "mean_head_updates_clamped_before_req": 5.0,
+    "mean_head_updates_clamped_before_req": 4.0,
     "n_streams": 64,
     "paired_request_time_shift_mean": 18.203125,
+    "post_collapse_shadow_request_only_natural": 10,
     "protected_before_noreturn_clamped": 64,
     "protected_before_noreturn_natural": 54,
+    "relapsed_after_prot_exec_natural": 51,
+    "relapsed_prot_exec_count_range": [
+      2,
+      23
+    ],
+    "relapsed_theta1_range": [
+      -0.12472857711006219,
+      -0.031300693871173374
+    ],
     "t_cone_hit": {
       "censored": 0,
       "count": 64,
@@ -390,10 +401,24 @@
       "max": 26,
       "mean": 23.203125,
       "min": 23
+    },
+    "t_req_nat_pre_collapse": {
+      "censored": 10,
+      "count": 54,
+      "max": 23,
+      "mean": 23.0,
+      "min": 23
+    },
+    "x_at_first_exec_clm": {
+      "censored": 0,
+      "count": 64,
+      "max": 19,
+      "mean": 19.0,
+      "min": 19
     }
   },
-  "evaluate_cpu_seconds": 1.27268,
-  "predict_cpu_seconds": 0.360394,
-  "prediction_sha": "a72760f4513cd98480d1a9fe7bf0613b50e0be520f318a6bd08a75e78d2561df",
-  "total_cpu_seconds": 1.6330740000000001
+  "evaluate_cpu_seconds": 1.288179,
+  "predict_cpu_seconds": 0.36639900000000003,
+  "prediction_sha": "a5e6e4bacf911d77217bebb2ff17ab1796f6bbd1095f8ccb133ae6484e7dc515",
+  "total_cpu_seconds": 1.6545779999999999
 }

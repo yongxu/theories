@@ -100,11 +100,18 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
 
         t_cone_hit: int | None = None
         t_req_nat: int | None = None
+        t_req_nat_pre_collapse: int | None = None
         t_exec_nat: int | None = None
         t_nr_nat: int | None = None
+        prot_exec_count_nat = 0
+        relapsed_after_prot_nat = False
+        theta1_at_relapse_nat: float | None = None
         t_req_clm: int | None = None
         t_exec_clm: int | None = None
         t_nr_clm: int | None = None
+        head_updates_clm = 0
+        updates_before_req_clm: int | None = None
+        x_at_first_exec_clm: int | None = None
 
         for idx, (u_new, v_new) in enumerate(post_obs):
             t_post = idx + 1  # number of post-change observations incorporated
@@ -131,8 +138,10 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
             if not col_nat:
                 if pend_agg_nat:
                     x_nat = max(0, x_nat - 1)
-                elif t_exec_nat is None:
-                    t_exec_nat = t_post
+                else:
+                    prot_exec_count_nat += 1
+                    if t_exec_nat is None:
+                        t_exec_nat = t_post
                 if x_nat <= 0:
                     col_nat = True
             if not col_clm:
@@ -140,14 +149,21 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
                     x_clm = max(0, x_clm - 1)
                 elif t_exec_clm is None:
                     t_exec_clm = t_post
+                    x_at_first_exec_clm = x_clm
                 if x_clm <= 0:
                     col_clm = True
 
             # 2) Decision + head update (continue shadow policy head even if collapsed!)
             score_nat = theta_nat[0] * z_nat[0] + theta_nat[1] * z_nat[1]
             req_prot_nat = score_nat >= 0.0
-            if req_prot_nat and t_req_nat is None:
-                t_req_nat = t_post
+            if req_prot_nat:
+                if t_req_nat is None:
+                    t_req_nat = t_post
+                if not col_nat and t_req_nat_pre_collapse is None:
+                    t_req_nat_pre_collapse = t_post
+            elif (not col_nat) and (t_exec_nat is not None) and (not relapsed_after_prot_nat):
+                relapsed_after_prot_nat = True
+                theta1_at_relapse_nat = theta_nat[1]
             err_nat = 1.0 - score_nat
             theta_nat[0] += lr * err_nat * z_nat[0]
             theta_nat[1] += lr * err_nat * z_nat[1]
@@ -157,9 +173,11 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
             req_prot_clm = score_clm >= 0.0
             if req_prot_clm and t_req_clm is None:
                 t_req_clm = t_post
+                updates_before_req_clm = head_updates_clm
             err_clm = 1.0 - score_clm
             theta_clm[0] += lr * err_clm * z_clm[0]
             theta_clm[1] += lr * err_clm * z_clm[1]
+            head_updates_clm += 1
             pend_agg_clm = not req_prot_clm
 
         if t_exec_nat is not None and (t_cone_hit is None or t_exec_nat < t_cone_hit):
@@ -173,13 +191,19 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
             "stream": i,
             "t_cone_hit": t_cone_hit,
             "t_req_nat": t_req_nat,
+            "t_req_nat_pre_collapse": t_req_nat_pre_collapse,
             "t_exec_nat": t_exec_nat,
             "t_nr_nat": t_nr_nat,
+            "prot_exec_count_nat": prot_exec_count_nat,
+            "relapsed_after_prot_nat": relapsed_after_prot_nat,
+            "theta1_at_relapse_nat": theta1_at_relapse_nat,
             "col_nat": col_nat,
             "x_end_nat": x_nat,
             "t_req_clm": t_req_clm,
             "t_exec_clm": t_exec_clm,
             "t_nr_clm": t_nr_clm,
+            "updates_before_req_clm": updates_before_req_clm,
+            "x_at_first_exec_clm": x_at_first_exec_clm,
             "col_clm": col_clm,
             "x_end_clm": x_clm,
         })
@@ -201,6 +225,14 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
     ]
     prot_before_nr_nat = sum(1 for s in streams if s["t_exec_nat"] is not None and (s["t_nr_nat"] is None or s["t_exec_nat"] < s["t_nr_nat"]))
     prot_before_nr_clm = sum(1 for s in streams if s["t_exec_clm"] is not None and (s["t_nr_clm"] is None or s["t_exec_clm"] < s["t_nr_clm"]))
+    uncensored_nat = [s for s in streams if s["t_exec_nat"] is not None]
+    relapsed_nat = [s for s in streams if s["t_exec_nat"] is not None and s["col_nat"]]
+    relapsed_prot_counts = [s["prot_exec_count_nat"] for s in relapsed_nat]
+    relapse_thetas = [s["theta1_at_relapse_nat"] for s in relapsed_nat if s["theta1_at_relapse_nat"] is not None]
+    clamped_adv_exec_uncensored = sum(
+        1 for s in uncensored_nat if s["t_exec_clm"] is not None and s["t_exec_clm"] < s["t_exec_nat"]
+    )
+    post_collapse_shadow_reqs = sum(1 for s in streams if s["t_req_nat"] is not None and s["t_req_nat_pre_collapse"] is None)
 
     return {
         "n_streams": n_streams,
@@ -208,14 +240,21 @@ def evaluate_b3_heldout() -> Dict[str, Any]:
         "collapse_count_clamped": sum(1 for s in streams if s["col_clm"]),
         "protected_before_noreturn_natural": prot_before_nr_nat,
         "protected_before_noreturn_clamped": prot_before_nr_clm,
+        "post_collapse_shadow_request_only_natural": post_collapse_shadow_reqs,
+        "relapsed_after_prot_exec_natural": len(relapsed_nat),
+        "relapsed_prot_exec_count_range": [min(relapsed_prot_counts), max(relapsed_prot_counts)] if relapsed_prot_counts else None,
+        "relapsed_theta1_range": [min(relapse_thetas), max(relapse_thetas)] if relapse_thetas else None,
         "early_prot_exec_before_cone_natural": early_before_cone_natural,
         "clamped_advanced_request_streams": clamped_advanced_request,
         "clamped_advanced_exec_streams": clamped_advanced_exec,
+        "clamped_advanced_exec_uncensored_streams": clamped_adv_exec_uncensored,
         "paired_request_time_shift_mean": sum(req_shifts) / len(req_shifts),
         "t_cone_hit": stats("t_cone_hit"),
         "t_req_nat": stats("t_req_nat"),
+        "t_req_nat_pre_collapse": stats("t_req_nat_pre_collapse"),
         "t_exec_nat": stats("t_exec_nat"),
         "t_req_clm": stats("t_req_clm"),
         "t_exec_clm": stats("t_exec_clm"),
-        "mean_head_updates_clamped_before_req": stats("t_req_clm")["mean"],
+        "x_at_first_exec_clm": stats("x_at_first_exec_clm"),
+        "mean_head_updates_clamped_before_req": stats("updates_before_req_clm")["mean"],
     }

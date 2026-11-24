@@ -37,10 +37,6 @@ RES_FILE = HERE / "results.json"
 BUDGET_SECONDS = 18.0
 
 
-def canonical_digest(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
 def cmd_predict() -> int:
     t0 = time.process_time()
     train_data = train_real_learner()
@@ -59,21 +55,23 @@ def cmd_predict() -> int:
         "train_cpu_seconds": elapsed,
         **train_data,
     }
-    CKPT_FILE.write_text(json.dumps(ckpt_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    ckpt_bytes = (json.dumps(ckpt_payload, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    CKPT_FILE.write_bytes(ckpt_bytes)
 
     # Strip large exact Fraction tables not needed downstream while keeping chosen_m, blocks, tubes, B2/B3
     b1_serial = {k: v for k, v in b1_pred.items() if k not in ("k_frac", "l_frac")}
     pred_payload: Dict[str, Any] = {
         "ai_written": True,
         "predict_cpu_seconds": elapsed,
-        "checkpoints_sha256": canonical_digest(CKPT_FILE),
+        "checkpoints_sha256": hashlib.sha256(ckpt_bytes).hexdigest(),
         "runtime_observational_fidelity_crosscheck": rt_checks,
         "b1": b1_serial,
         "b2": b2_pred,
         "b3": b3_pred,
     }
-    PRED_FILE.write_text(json.dumps(pred_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    pred_sha = canonical_digest(PRED_FILE)
+    pred_bytes = (json.dumps(pred_payload, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    PRED_FILE.write_bytes(pred_bytes)
+    pred_sha = hashlib.sha256(pred_bytes).hexdigest()
     print(json.dumps({
         "status": "predicted",
         "predict_cpu_seconds": round(elapsed, 4),
@@ -88,14 +86,17 @@ def cmd_predict() -> int:
 def cmd_evaluate(expected_sha: str) -> int:
     if not PRED_FILE.is_file() or not CKPT_FILE.is_file():
         raise FileNotFoundError("Missing predictions.json or checkpoints.json; run predict first")
-    actual_sha = canonical_digest(PRED_FILE)
+    # Single-read hash-and-parse prevents TOCTOU swap between verification and load.
+    pred_bytes = PRED_FILE.read_bytes()
+    actual_sha = hashlib.sha256(pred_bytes).hexdigest()
     if actual_sha != expected_sha:
         raise ValueError(f"Prediction SHA mismatch: expected {expected_sha}, got {actual_sha}")
+    pred_data = json.loads(pred_bytes.decode("utf-8"))
 
-    ckpt_data = json.loads(CKPT_FILE.read_text(encoding="utf-8"))
-    pred_data = json.loads(PRED_FILE.read_text(encoding="utf-8"))
-    if canonical_digest(CKPT_FILE) != pred_data["checkpoints_sha256"]:
+    ckpt_bytes = CKPT_FILE.read_bytes()
+    if hashlib.sha256(ckpt_bytes).hexdigest() != pred_data["checkpoints_sha256"]:
         raise ValueError("checkpoints.json modified after predict")
+    ckpt_data = json.loads(ckpt_bytes.decode("utf-8"))
 
     t0 = time.process_time()
     pol1 = load_policy(ckpt_data["ckpt_1"])

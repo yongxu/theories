@@ -521,9 +521,9 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
             # Exact marginals t=0..16
             micro_dist = [Fraction(1 if x == start_x else 0) for x in MICRO_STATES]
             macro_dist = [Fraction(1 if o == F_MAP[start_x] else 0) for o in MACRO_STATES]
-            exact_micro_unproj: List[List[float]] = []
-            exact_micro_marginals: List[List[float]] = []
-            exact_macro_marginals: List[List[float]] = []
+            exact_micro_unproj_frac: List[List[Fraction]] = []
+            exact_micro_marginals_frac: List[List[Fraction]] = []
+            exact_macro_marginals_frac: List[List[Fraction]] = []
             for m in sched:
                 next_micro = [Fraction(0)] * 5
                 for x in range(5):
@@ -535,9 +535,9 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
                         next_macro[o2] += macro_dist[o1] * l_frac[m][o1][o2]
                 micro_dist = next_micro
                 macro_dist = next_macro
-                exact_micro_unproj.append([float(v) for v in micro_dist])
-                exact_micro_marginals.append([float(v) for v in project_micro_row(micro_dist)])
-                exact_macro_marginals.append([float(v) for v in macro_dist])
+                exact_micro_unproj_frac.append(micro_dist)
+                exact_micro_marginals_frac.append(project_micro_row(micro_dist))
+                exact_macro_marginals_frac.append(macro_dist)
 
             # Held-out empirical paths via PacedReserveEnv.step
             emp_counts = [[0, 0, 0, 0] for _ in range(16)]
@@ -569,17 +569,26 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
                 key2 = (pair_obs[0], pair_obs[1])
                 path2_emp_counts[key2] = path2_emp_counts.get(key2, 0) + 1
 
-            # Score marginals and risks at t = 1..16 in one pass
+            # Score marginals and risks at t = 1..16 using exact Fraction values for theoretical checks
+            h_cem_frac = [Fraction(1), Fraction(0), Fraction(0), Fraction(0), Fraction(0)]
+            b_cem_frac = [Fraction(1), Fraction(0), Fraction(0), Fraction(0)]
+            h_res_frac = [Fraction(4 - x, 4) for x in MICRO_STATES]
+            b_res_frac = [Fraction(1), Fraction(3, 4), Fraction(1, 2), Fraction(1, 8)]
+
             cell_max_tv_exact = 0.0
             cell_max_tv_emp = 0.0
             cell_max_impl_tv = 0.0
             for t in range(16):
                 emp_m = [c / n_rollouts for c in emp_counts[t]]
-                ex_u = exact_micro_unproj[t]
-                ex_m = exact_micro_marginals[t]
-                ex_L = exact_macro_marginals[t]
+                ex_u_frac = exact_micro_unproj_frac[t]
+                ex_m_frac = exact_micro_marginals_frac[t]
+                ex_L_frac = exact_macro_marginals_frac[t]
+                ex_m = [float(v) for v in ex_m_frac]
+                ex_L = [float(v) for v in ex_L_frac]
+
                 impl_tv = tv_rows(emp_m, ex_m)
-                tv_ex = tv_rows(ex_m, ex_L)
+                tv_ex_frac = tv_rows_frac(ex_m_frac, ex_L_frac)
+                tv_ex = float(tv_ex_frac)
                 tv_em = tv_rows(emp_m, ex_L)
                 tube_r = chosen_tube[t + 1]
                 cell_max_impl_tv = max(cell_max_impl_tv, impl_tv)
@@ -588,59 +597,61 @@ def evaluate_b1_heldout(policy: ReinforcePolicy, b1_pred: Mapping[str, Any]) -> 
                 max_emp_vs_exact_micro_tv = max(max_emp_vs_exact_micro_tv, impl_tv)
                 max_exact_tv_vs_macro = max(max_exact_tv_vs_macro, tv_ex)
                 max_emp_tv_vs_macro = max(max_emp_tv_vs_macro, tv_em)
-                if tv_ex > tube_r + 1e-12:
+                if tv_ex > tube_r:
                     exact_tube_violations += 1
-                if tv_em > tube_r + tv_allow + 1e-12:
+                if tv_em > tube_r + tv_allow:
                     emp_tube_violations += 1
 
-                l_cem_exp = sum(ex_L[o] * b_cem[o] for o in range(4))
-                l_res_exp = sum(ex_L[o] * b_res[o] for o in range(4))
-                ex_c_diff = abs(sum(ex_u[x] * h_cem[x] for x in range(5)) - l_cem_exp)
-                ex_r_diff = abs(sum(ex_u[x] * h_res[x] for x in range(5)) - l_res_exp)
-                if ex_c_diff > tv_ex + 1e-12 or ex_c_diff > tube_r + 1e-12:
+                l_cem_exp_frac = sum(ex_L_frac[o] * b_cem_frac[o] for o in range(4))
+                l_res_exp_frac = sum(ex_L_frac[o] * b_res_frac[o] for o in range(4))
+                ex_c_diff_frac = abs(sum(ex_u_frac[x] * h_cem_frac[x] for x in range(5)) - l_cem_exp_frac)
+                ex_r_diff_frac = abs(sum(ex_u_frac[x] * h_res_frac[x] for x in range(5)) - l_res_exp_frac)
+                if ex_c_diff_frac > tv_ex_frac or float(ex_c_diff_frac) > tube_r:
                     exact_risk_violations += 1
-                if ex_r_diff > 0.125 + tv_ex + 1e-12 or ex_r_diff > 0.125 + tube_r + 1e-12:
+                if ex_r_diff_frac > Fraction(1, 8) + tv_ex_frac or float(ex_r_diff_frac) > 0.125 + tube_r:
                     exact_risk_violations += 1
 
+                l_cem_exp = float(l_cem_exp_frac)
+                l_res_exp = float(l_res_exp_frac)
                 em_c_diff = abs(emp_h_cem_sums[t] / n_rollouts - l_cem_exp)
                 em_r_diff = abs(emp_h_res_sums[t] / n_rollouts - l_res_exp)
-                if em_c_diff > tube_r + risk_allow + 1e-12:
+                if em_c_diff > tube_r + risk_allow:
                     emp_risk_violations += 1
-                if em_r_diff > 0.125 + tube_r + risk_allow + 1e-12:
+                if em_r_diff > 0.125 + tube_r + risk_allow:
                     emp_risk_violations += 1
 
-            # 2-step exact projected path law vs L path law
+            # 2-step exact Fraction projected path law vs L path law over fixed ordered macro pairs
             m0, m1 = sched[0], sched[1]
             o0 = MACRO_STATES.index(F_MAP[start_x])
-            p2_micro: Dict[Tuple[str, str], float] = {}
-            p2_macro: Dict[Tuple[str, str], float] = {}
+            ordered_p2_keys = [(a1, a2) for a1 in MACRO_STATES for a2 in MACRO_STATES]
+            p2_micro_frac: Dict[Tuple[str, str], Fraction] = {k: Fraction(0) for k in ordered_p2_keys}
+            p2_macro_frac: Dict[Tuple[str, str], Fraction] = {k: Fraction(0) for k in ordered_p2_keys}
             for y1 in MICRO_STATES:
-                w1 = float(k_frac[m0][start_x][y1])
-                if w1 == 0.0:
+                w1 = k_frac[m0][start_x][y1]
+                if w1 == 0:
                     continue
                 for y2 in MICRO_STATES:
-                    w2 = w1 * float(k_frac[m1][y1][y2])
-                    if w2 > 0.0:
-                        k2 = (F_MAP[y1], F_MAP[y2])
-                        p2_micro[k2] = p2_micro.get(k2, 0.0) + w2
+                    w2 = w1 * k_frac[m1][y1][y2]
+                    if w2 > 0:
+                        p2_micro_frac[(F_MAP[y1], F_MAP[y2])] += w2
             for a1_i, a1 in enumerate(MACRO_STATES):
-                w1 = float(l_frac[m0][o0][a1_i])
-                if w1 == 0.0:
+                w1 = l_frac[m0][o0][a1_i]
+                if w1 == 0:
                     continue
                 for a2_i, a2 in enumerate(MACRO_STATES):
-                    w2 = w1 * float(l_frac[m1][a1_i][a2_i])
-                    if w2 > 0.0:
-                        k2 = (a1, a2)
-                        p2_macro[k2] = p2_macro.get(k2, 0.0) + w2
-            all_p2_keys = set(p2_micro) | set(p2_macro) | set(path2_emp_counts)
-            p2_emp = {k: path2_emp_counts.get(k, 0) / n_rollouts for k in all_p2_keys}
-            tv_p2_ex = 0.5 * sum(abs(p2_micro.get(k, 0.0) - p2_macro.get(k, 0.0)) for k in all_p2_keys)
-            tv_p2_impl = 0.5 * sum(abs(p2_emp.get(k, 0.0) - p2_micro.get(k, 0.0)) for k in all_p2_keys)
+                    w2 = w1 * l_frac[m1][a1_i][a2_i]
+                    if w2 > 0:
+                        p2_macro_frac[(a1, a2)] += w2
+            tv_p2_ex_frac = sum(abs(p2_micro_frac[k] - p2_macro_frac[k]) for k in ordered_p2_keys) / 2
+            eps1_frac = Fraction(b1_pred["blocks"]["1"]["eps_exact"])
+            bound_2e1_frac = min(Fraction(1), 2 * eps1_frac)
+            p2_emp = {k: path2_emp_counts.get(k, 0) / n_rollouts for k in ordered_p2_keys}
+            tv_p2_impl = 0.5 * sum(abs(p2_emp[k] - float(p2_micro_frac[k])) for k in ordered_p2_keys)
             path2_results[f"s{start_x}_{sched_name}"] = {
-                "exact_path2_tv_micro_macro": tv_p2_ex,
+                "exact_path2_tv_micro_macro": float(tv_p2_ex_frac),
                 "emp_vs_exact_micro_path2_tv": tv_p2_impl,
-                "two_step_coupling_bound": b1_pred["two_step_path_bound_from_e1"],
-                "within_2e1_bound": tv_p2_ex <= b1_pred["two_step_path_bound_from_e1"] + 1e-12,
+                "two_step_coupling_bound": float(bound_2e1_frac),
+                "within_2e1_bound": tv_p2_ex_frac <= bound_2e1_frac,
             }
 
             cell_summaries[f"s{start_x}_{sched_name}"] = {

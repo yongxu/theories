@@ -4,7 +4,7 @@
 
 ## 1. Epistemic Boundary & Hypotheses (Rules 1 & 2)
 
-- **Proved in Lean (cited, not re-proved here):** `ObservationalFidelity.tvDist_pushKernel_iter_bound`, `ObservationalFidelity.viability_risk_transfer_bound`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred` (`FiniteProbKrylov.krylovSub_stabilizes_before_rank`), and `QuantitativeTransfer` continuous lag bounds hold **given their hypotheses**.
+- **Proved in Lean (cited, not re-proved here):** `ObservationalFidelity.tvDist_pushKernel_iter_bound`, `ObservationalFidelity.viability_risk_transfer_bound`, `SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred` (`FiniteKrylov.krylovSub_stabilizes_before_rank`), and `QuantitativeTransfer` continuous lag bounds hold **given their hypotheses**.
 - **Tested here (empirical falsification & sanity on concrete runs):** Whether exact micro/macro kernels extracted from a real `ReinforcePolicy(6, 4, 2)` network + `Random.random()` sampler match held-out trajectories of `PacedReserveEnv` (implementation sanity), at what chronological block grain `m ∈ {1, 2, 4, 8}` unconditional contraction becomes informative vs death-driven, how exogenous vs online non-stationary updates break frozen-operator predictions at fixed physical state, and whether clamping natural rolling-PCA lag on a linear head + pending-action latency shifts protection before collapse. Agreement here never proves that general learners satisfy Lean hypotheses.
 
 ## 2. Learner Training & Exact 53-bit Kernel Extraction (`predict`)
