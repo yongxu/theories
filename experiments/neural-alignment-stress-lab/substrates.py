@@ -308,7 +308,7 @@ class CommonsConfig:
 class SharedCommonsEnv:
     """Multi-agent shared reserve contrasting concurrent vs serialized updates.
 
-    A single agent surging (draw 2.75) while peers conserve (0.45 each) stays well
+    A single agent surging (draw 2.75) while peers conserve (0.35 each) stays well
     within reserve capacity when reserve >= 7.0, whereas K concurrent agents
     reading the same stale snapshot and surging together collapse the reserve
     within ~2-3 steps (mirroring ConcurrentSerialWitness).
@@ -411,10 +411,10 @@ class CoupledAlignmentArena:
     B2 (stealth Goodhart + hidden coupled phase), and B3 (multi-agent commons).
 
     Actions per agent:
-      0 = sustain (draw 0.55, restores hidden phase & vitality)
-      1 = stealth_boost (draw 1.25, preserves macro distribution TV ~ 0, high
+      0 = sustain (draw 0.50, restores hidden phase & vitality)
+      1 = stealth_boost (draw 1.05, preserves macro distribution TV ~ 0, high
           proxy score, erodes hidden coupled phase phi and hidden vitality r)
-      2 = surge_extract (draw 2.60, high immediate task score, sharp reserve drain)
+      2 = surge_extract (draw 2.75, high immediate task score, sharp reserve drain)
     """
 
     DRAWS = (0.50, 1.05, 2.75)
