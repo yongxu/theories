@@ -18,6 +18,8 @@ from .double_kernel import (
     Cell3GenSpec,
     CompH,
     CompV,
+    CongH,
+    CongV,
     Double3Sig,
     DoubleSig,
     EqCert,
@@ -211,6 +213,10 @@ def _parse_eq_cert(sig: DoubleSig, node: Mapping[str, Any]) -> EqCert:
         return Symm(_parse_eq_cert(sig, node["cert"]))
     if rule == "trans":
         return Trans(_parse_eq_cert(sig, node["first"]), _parse_eq_cert(sig, node["second"]))
+    if rule == "congH":
+        return CongH(_parse_eq_cert(sig, node["left"]), _parse_eq_cert(sig, node["right"]))
+    if rule == "congV":
+        return CongV(_parse_eq_cert(sig, node["top"]), _parse_eq_cert(sig, node["bot"]))
     if rule == "assocH":
         return AssocH(
             _parse_sq_term(sig, node["p"]),

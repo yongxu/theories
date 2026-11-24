@@ -104,6 +104,74 @@ class TestCLIAndHygiene(unittest.TestCase):
         self.assertEqual(rep.verdict, Verdict.PROVED)
         self.assertIn("[PROVED]", rep.format_text())
 
+    def test_json_dsl_and_cli_support_cong_h_and_cong_v(self) -> None:
+        spec = {
+            "name": "strict_kernel_cong_h_v",
+            "kind": "strict_kernel",
+            "objs": ["o00", "o01", "o02", "o10", "o11", "o12", "o20", "o21", "o22"],
+            "h_gens": {
+                "h00": ["o00", "o01"],
+                "h01": ["o01", "o02"],
+                "h10": ["o10", "o11"],
+                "h11": ["o11", "o12"],
+                "h20": ["o20", "o21"],
+                "h21": ["o21", "o22"],
+            },
+            "v_gens": {
+                "v00": ["o00", "o10"],
+                "v01": ["o01", "o11"],
+                "v02": ["o02", "o12"],
+                "v10": ["o10", "o20"],
+                "v11": ["o11", "o21"],
+                "v12": ["o12", "o22"],
+            },
+            "sq_gens": {
+                "P": {
+                    "tl": "o00", "tr": "o01", "bl": "o10", "br": "o11",
+                    "top": ["h00"], "bot": ["h10"], "left": ["v00"], "right": ["v01"],
+                },
+                "Q": {
+                    "tl": "o01", "tr": "o02", "bl": "o11", "br": "o12",
+                    "top": ["h01"], "bot": ["h11"], "left": ["v01"], "right": ["v02"],
+                },
+                "R": {
+                    "tl": "o10", "tr": "o11", "bl": "o20", "br": "o21",
+                    "top": ["h10"], "bot": ["h20"], "left": ["v10"], "right": ["v11"],
+                },
+            },
+            "eq_certs": [
+                {
+                    "label": "congH_check",
+                    "cert": {
+                        "rule": "congH",
+                        "left": {"rule": "idH_l", "p": "P"},
+                        "right": {"rule": "refl", "term": "Q"},
+                    },
+                },
+                {
+                    "label": "congV_check",
+                    "cert": {
+                        "rule": "congV",
+                        "top": {"rule": "idV_l", "p": "P"},
+                        "bot": {"rule": "symm", "cert": {"rule": "idV_r", "p": "R"}},
+                    },
+                },
+            ],
+        }
+        rep = evaluate_pipeline_spec(spec)
+        self.assertEqual(rep.verdict, Verdict.PROVED)
+        self.assertEqual(len(rep.checks), 2)
+        with tempfile.TemporaryDirectory() as td:
+            spec_file = Path(td) / "cong_spec.json"
+            spec_file.write_text(json.dumps(spec), encoding="utf-8")
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                rc = cli_main(["check", str(spec_file), "--json"])
+            self.assertEqual(rc, 0)
+            out = json.loads(buf.getvalue())
+            self.assertEqual(out["verdict"], "PROVED")
+            self.assertEqual([c["label"] for c in out["checks"]], ["congH_check", "congV_check"])
+
     def test_zero_forbidden_market_words_across_package(self) -> None:
         word_re = re.compile(r"[A-Za-z]+")
         hits: list[tuple[str, str]] = []
