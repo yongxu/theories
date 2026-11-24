@@ -1174,10 +1174,55 @@ theorem exactAbsChainMap_endpoints {S A I Q B J : Type}
       π ((constFlatSpan (processStepSpan (C₁.proc i)) n).right x) :=
   (exactAbsChainWithEnds abs i n x).2
 
-/-- **Exact Lifting Eliminates Spurious Macro Trajectories:**
-If `abs : ExactCausalAbs C₁ C₂ π φ ω` satisfies `abs.Lifts`, then every macro `n`-step trajectory
-from `π s` lifts to an actual concrete trajectory in `constFlatSpan (processStepSpan (C₁.proc i)) n`
-with matching endpoint projection (`Surj` on macro chains rooted at `π s`). -/
+/-- Zero-axiom equality of `ProcessStepWitness`es from equal source, action, and target
+(kernel proof irrelevance on `P.step : Prop`). -/
+theorem ProcessStepWitness.ext {S A : Type} {P : Process S A}
+    {w₁ w₂ : ProcessStepWitness P}
+    (hs : w₁.src = w₂.src) (ha : w₁.act = w₂.act) (hd : w₁.dst = w₂.dst) :
+    w₁ = w₂ := by
+  cases w₁ with
+  | mk s₁ a₁ d₁ st₁ =>
+    cases w₂ with
+    | mk s₂ a₂ d₂ st₂ =>
+      change s₁ = s₂ at hs
+      change a₁ = a₂ at ha
+      change d₁ = d₂ at hd
+      subst hs
+      subst ha
+      subst hd
+      rfl
+
+/-- **Full-Chain Lifting under `ExactCausalAbs.Lifts` (`exactCausal_lifts_implies_chain_lift`):**
+Under the same hypotheses as `exactCausal_lifts_implies_chi_surjective`, every macro `n`-step
+trajectory `y` rooted at `π s` lifts to a concrete `n`-step trajectory `x` rooted at `s` whose
+projection `exactAbsChainMap abs i n x` equals `y` itself (matching every intermediate state and
+action, not only endpoints). -/
+theorem exactCausal_lifts_implies_chain_lift {S A I Q B J : Type}
+    {C₁ : CausalSystem S A I} {C₂ : CausalSystem Q B J}
+    {π : S → Q} {φ : A → B} {ω : I → J}
+    (abs : ExactCausalAbs C₁ C₂ π φ ω) (lifts : abs.Lifts) (i : I) (n : Nat) :
+    ∀ (s : S) (y : (constFlatSpan (processStepSpan (C₂.proc (ω i))) n).W),
+      (constFlatSpan (processStepSpan (C₂.proc (ω i))) n).left y = π s →
+      ∃ x : (constFlatSpan (processStepSpan (C₁.proc i)) n).W,
+        (constFlatSpan (processStepSpan (C₁.proc i)) n).left x = s ∧
+        exactAbsChainMap abs i n x = y := by
+  induction n with
+  | zero =>
+    intro s y hy
+    exact ⟨s, rfl, hy.symm⟩
+  | succ m ih =>
+    intro s y hy
+    let hy0 : y.fst.src = π s := hy
+    obtain ⟨a, m₁, hact, hstep₁, hm₁⟩ := lifts i s y.fst.act y.fst.dst (hy0 ▸ y.fst.step)
+    have hySnd : (constFlatSpan (processStepSpan (C₂.proc (ω i))) m).left y.snd = π m₁ :=
+      y.mid.symm.trans hm₁.symm
+    obtain ⟨xTail, hxLeft, hxChain⟩ := ih m₁ y.snd hySnd
+    refine ⟨⟨⟨s, a, m₁, hstep₁⟩, xTail, hxLeft.symm⟩, rfl, ?_⟩
+    exact PullbackElem.ext (ProcessStepWitness.ext hy0.symm hact hm₁) hxChain
+
+/-- **Endpoint Lifting Corollary (`exactCausal_lifts_implies_chi_surjective`):**
+Corollary of `exactCausal_lifts_implies_chain_lift`: every rooted macro `n`-step trajectory from
+`π s` lifts to a concrete trajectory with matching right-endpoint projection. -/
 theorem exactCausal_lifts_implies_chi_surjective {S A I Q B J : Type}
     {C₁ : CausalSystem S A I} {C₂ : CausalSystem Q B J}
     {π : S → Q} {φ : A → B} {ω : I → J}
@@ -1189,18 +1234,9 @@ theorem exactCausal_lifts_implies_chi_surjective {S A I Q B J : Type}
         (constFlatSpan (processStepSpan (C₂.proc (ω i))) n).right
           (exactAbsChainMap abs i n x) =
         (constFlatSpan (processStepSpan (C₂.proc (ω i))) n).right y := by
-  induction n with
-  | zero =>
-    intro s y hy
-    refine ⟨s, rfl, hy.symm⟩
-  | succ m ih =>
-    intro s y hy
-    let hy0 : y.fst.src = π s := hy
-    obtain ⟨a, m₁, _, hstep₁, hm₁⟩ := lifts i s y.fst.act y.fst.dst (hy0 ▸ y.fst.step)
-    have hySnd : (constFlatSpan (processStepSpan (C₂.proc (ω i))) m).left y.snd = π m₁ :=
-      y.mid.symm.trans hm₁.symm
-    obtain ⟨xTail, hxLeft, hxRight⟩ := ih m₁ y.snd hySnd
-    refine ⟨⟨⟨s, a, m₁, hstep₁⟩, xTail, hxLeft.symm⟩, rfl, hxRight⟩
+  intro s y hy
+  obtain ⟨x, hxLeft, hxEq⟩ := exactCausal_lifts_implies_chain_lift abs lifts i n s y hy
+  exact ⟨x, hxLeft, congrArg (constFlatSpan (processStepSpan (C₂.proc (ω i))) n).right hxEq⟩
 
 /-- **Non-Surjective Macro History Counterexample on `CausalGoodhartWitness`:**
 Under interventional `boost` (`true`), the macro proxy sustains `guardQ` forever from `π s₀ = .two`,
@@ -1442,6 +1478,245 @@ theorem coprod_strong_vs_time_oplax (S : SumPreservingFunctor)
         F.map_comp (@Sum.inr K.W K'.W) PullbackElem.snd v
       exact (congrArg (S.sumBij K.W K'.W).toFun (h1.trans (h2.trans h3))).trans
         (S.sum_inr (F.map PullbackElem.snd v))
+
+/-! ### Finite-Presentation Rigidity for `SumPreservingFunctor` & Non-Sum `SpanFunctor` Witness -/
+
+/-- Constructive finite presentation of a small carrier `X : Type`. -/
+inductive FinPres : Type → Type 1 where
+  | empty : FinPres Empty
+  | unit : FinPres Unit
+  | sum {X Y : Type} : FinPres X → FinPres Y → FinPres (Sum X Y)
+  | bij {X Y : Type} : Bij X Y → FinPres X → FinPres Y
+
+/-- Any `SumPreservingFunctor` maps `Empty` to an empty type (`0` axioms). -/
+theorem sumPreserving_empty_isEmpty (S : SumPreservingFunctor) (u : S.toFunctor.obj Empty) : False := by
+  have hmap : S.toFunctor.map (@Sum.inl Empty Empty) u = S.toFunctor.map (@Sum.inr Empty Empty) u :=
+    S.toFunctor.map_congr (fun e => Empty.elim e) u
+  have hinl := S.sum_inl (X := Empty) (Y := Empty) u
+  have hinr := S.sum_inr (X := Empty) (Y := Empty) u
+  have hsum : (Sum.inl u : Sum (S.toFunctor.obj Empty) (S.toFunctor.obj Empty)) = Sum.inr u :=
+    hinl.symm.trans ((congrArg (S.sumBij Empty Empty).toFun hmap).trans hinr)
+  nomatch hsum
+
+/-- Canonical natural map `X × F(Unit) → F(X)` sending `(x, t)` to `F(fun _ => x)(t)`. -/
+def prodUnitToF (F : SpanFunctor) (X : Type) : X × F.obj Unit → F.obj X :=
+  fun p => F.map (fun _ => p.1) p.2
+
+/-- Naturality of `prodUnitToF` along every `g : X → Y`. -/
+theorem prodUnitToF_natural (F : SpanFunctor) {X Y : Type} (g : X → Y) (x : X) (t : F.obj Unit) :
+    F.map g (prodUnitToF F X (x, t)) = prodUnitToF F Y (g x, t) :=
+  (F.map_comp g (fun _ => x) t).symm
+
+/-- Constructive bijection `X × S.toFunctor.obj Unit ≃ S.toFunctor.obj X` on any `FinPres X`
+whose forward map is pointwise equal to `prodUnitToF S.toFunctor X`. -/
+def prodUnitBijOfFinPres (S : SumPreservingFunctor) :
+    {X : Type} → FinPres X →
+      { b : Bij (X × S.toFunctor.obj Unit) (S.toFunctor.obj X) //
+        ∀ p, b.toFun p = prodUnitToF S.toFunctor X p }
+  | _, .empty =>
+    ⟨{ toFun := fun p => Empty.elim p.1
+       invFun := fun u => False.elim (sumPreserving_empty_isEmpty S u)
+       left_inv := fun p => Empty.elim p.1
+       right_inv := fun u => False.elim (sumPreserving_empty_isEmpty S u) },
+     fun p => Empty.elim p.1⟩
+  | _, .unit =>
+    ⟨{ toFun := prodUnitToF S.toFunctor Unit
+       invFun := fun t => ((), t)
+       left_inv := fun (u, t) => by
+         cases u
+         show ((), S.toFunctor.map (fun _ : Unit => ()) t) = ((), t)
+         exact congrArg ((), ·)
+           ((S.toFunctor.map_congr (fun a => by cases a; rfl) t).trans (S.toFunctor.map_id t))
+       right_inv := fun t =>
+         (S.toFunctor.map_congr (fun a => by cases a; rfl) t).trans (S.toFunctor.map_id t) },
+     fun _ => rfl⟩
+  | _, .sum (X := X) (Y := Y) px py => by
+    let ihX := prodUnitBijOfFinPres S px
+    let ihY := prodUnitBijOfFinPres S py
+    let T := S.toFunctor.obj Unit
+    let dist : Bij (Sum X Y × T) (Sum (X × T) (Y × T)) :=
+      { toFun := fun
+          | (.inl x, t) => .inl (x, t)
+          | (.inr y, t) => .inr (y, t)
+        invFun := fun
+          | .inl (x, t) => (.inl x, t)
+          | .inr (y, t) => (.inr y, t)
+        left_inv := fun
+          | (.inl _, _) => rfl
+          | (.inr _, _) => rfl
+        right_inv := fun
+          | .inl (_, _) => rfl
+          | .inr (_, _) => rfl }
+    let sumMap : Bij (Sum (X × T) (Y × T)) (Sum (S.toFunctor.obj X) (S.toFunctor.obj Y)) :=
+      { toFun := fun
+          | .inl p => .inl (ihX.1.toFun p)
+          | .inr q => .inr (ihY.1.toFun q)
+        invFun := fun
+          | .inl u => .inl (ihX.1.invFun u)
+          | .inr v => .inr (ihY.1.invFun v)
+        left_inv := fun
+          | .inl p => congrArg Sum.inl (ihX.1.left_inv p)
+          | .inr q => congrArg Sum.inr (ihY.1.left_inv q)
+        right_inv := fun
+          | .inl u => congrArg Sum.inl (ihX.1.right_inv u)
+          | .inr v => congrArg Sum.inr (ihY.1.right_inv v) }
+    let b := Bij.trans dist (Bij.trans sumMap (S.sumBij X Y).symm)
+    refine ⟨b, fun p => ?_⟩
+    rcases p with ⟨x | y, t⟩
+    · change (S.sumBij X Y).invFun (Sum.inl (ihX.1.toFun (x, t))) =
+        S.toFunctor.map (fun _ => Sum.inl x) t
+      have hx : ihX.1.toFun (x, t) = S.toFunctor.map (fun _ => x) t := ihX.2 (x, t)
+      rw [hx]
+      have hleft := (S.sumBij X Y).left_inv (S.toFunctor.map Sum.inl (S.toFunctor.map (fun _ => x) t))
+      have hinl := congrArg (S.sumBij X Y).invFun (S.sum_inl (X := X) (Y := Y) (S.toFunctor.map (fun _ => x) t))
+      have hcomp := (S.toFunctor.map_comp (Sum.inl : X → X ⊕ Y) (fun _ : Unit => x) t).symm
+      exact (hinl.symm.trans hleft).trans hcomp
+    · change (S.sumBij X Y).invFun (Sum.inr (ihY.1.toFun (y, t))) =
+        S.toFunctor.map (fun _ => Sum.inr y) t
+      have hy : ihY.1.toFun (y, t) = S.toFunctor.map (fun _ => y) t := ihY.2 (y, t)
+      rw [hy]
+      have hleft := (S.sumBij X Y).left_inv (S.toFunctor.map Sum.inr (S.toFunctor.map (fun _ => y) t))
+      have hinr := congrArg (S.sumBij X Y).invFun (S.sum_inr (X := X) (Y := Y) (S.toFunctor.map (fun _ => y) t))
+      have hcomp := (S.toFunctor.map_comp (Sum.inr : Y → X ⊕ Y) (fun _ : Unit => y) t).symm
+      exact (hinr.symm.trans hleft).trans hcomp
+  | _, .bij (X := X) (Y := Y) e px => by
+    let ihX := prodUnitBijOfFinPres S px
+    let T := S.toFunctor.obj Unit
+    let onProd : Bij (Y × T) (X × T) :=
+      { toFun := fun p => (e.invFun p.1, p.2)
+        invFun := fun q => (e.toFun q.1, q.2)
+        left_inv := fun (y, t) => congrArg (·, t) (e.right_inv y)
+        right_inv := fun (x, t) => congrArg (·, t) (e.left_inv x) }
+    let onObj : Bij (S.toFunctor.obj X) (S.toFunctor.obj Y) :=
+      { toFun := S.toFunctor.map e.toFun
+        invFun := S.toFunctor.map e.invFun
+        left_inv := fun u =>
+          ((S.toFunctor.map_comp e.invFun e.toFun u).symm).trans
+            ((S.toFunctor.map_congr e.left_inv u).trans (S.toFunctor.map_id u))
+        right_inv := fun v =>
+          ((S.toFunctor.map_comp e.toFun e.invFun v).symm).trans
+            ((S.toFunctor.map_congr e.right_inv v).trans (S.toFunctor.map_id v)) }
+    let b := Bij.trans onProd (Bij.trans ihX.1 onObj)
+    refine ⟨b, fun (y, t) => ?_⟩
+    change S.toFunctor.map e.toFun (ihX.1.toFun (e.invFun y, t)) = S.toFunctor.map (fun _ => y) t
+    rw [ihX.2 (e.invFun y, t)]
+    exact (S.toFunctor.map_comp e.toFun (fun _ => e.invFun y) t).symm.trans
+      (S.toFunctor.map_congr (fun _ => e.right_inv y) t)
+
+/-- Pointwise bijectivity of `prodUnitToF` for any `SumPreservingFunctor` on a `FinPres` carrier. -/
+theorem prodUnitToF_isBijective (S : SumPreservingFunctor) {X : Type} (px : FinPres X) :
+    IsBijective (prodUnitToF S.toFunctor X) := by
+  let b := prodUnitBijOfFinPres S px
+  have hb := isBijective_of_bij b.1
+  refine ⟨fun p₁ p₂ eq => hb.1 p₁ p₂ ((b.2 p₁).trans (eq.trans (b.2 p₂).symm)),
+          fun u => ?_⟩
+  obtain ⟨p, hp⟩ := hb.2 u
+  exact ⟨p, (b.2 p).symm.trans hp⟩
+
+/-- **Finite-Presentation Rigidity (`sumPreserving_finPres_chi_bijective`):**
+Any `SumPreservingFunctor` forces canonical `chi` bijectivity whenever `H.W`, `K.W`, the middle
+carrier `D`, and `PullbackElem H.right K.left` admit explicit finite presentations `FinPres`,
+explaining why guarded oplax assembly must accept arbitrary `SpanFunctor`s rather than
+`SumPreservingFunctor`s. -/
+theorem sumPreserving_finPres_chi_bijective (S : SumPreservingFunctor)
+    {A D C : Type} (H : RelSpan A D) (K : RelSpan D C)
+    (pW : FinPres H.W) (pV : FinPres K.W) (pD : FinPres D)
+    (pPB : FinPres (PullbackElem H.right K.left)) :
+    IsBijective (chi S.toFunctor H K).map := by
+  let F := S.toFunctor
+  have bW := prodUnitToF_isBijective S pW
+  have bV := prodUnitToF_isBijective S pV
+  have bD := prodUnitToF_isBijective S pD
+  have bPB := prodUnitToF_isBijective S pPB
+  constructor
+  · intro u₁ u₂ heq
+    obtain ⟨⟨p₁, t₁⟩, hu₁⟩ := bPB.2 u₁
+    obtain ⟨⟨p₂, t₂⟩, hu₂⟩ := bPB.2 u₂
+    have hFst : F.map PullbackElem.fst u₁ = F.map PullbackElem.fst u₂ := congrArg PullbackElem.fst heq
+    have hSnd : F.map PullbackElem.snd u₁ = F.map PullbackElem.snd u₂ := congrArg PullbackElem.snd heq
+    have hFst' : prodUnitToF F H.W (p₁.fst, t₁) = prodUnitToF F H.W (p₂.fst, t₂) := by
+      have e1 : F.map PullbackElem.fst u₁ = prodUnitToF F H.W (p₁.fst, t₁) :=
+        (congrArg (F.map PullbackElem.fst) hu₁.symm).trans (prodUnitToF_natural F PullbackElem.fst p₁ t₁)
+      have e2 : F.map PullbackElem.fst u₂ = prodUnitToF F H.W (p₂.fst, t₂) :=
+        (congrArg (F.map PullbackElem.fst) hu₂.symm).trans (prodUnitToF_natural F PullbackElem.fst p₂ t₂)
+      exact e1.symm.trans (hFst.trans e2)
+    have hSnd' : prodUnitToF F K.W (p₁.snd, t₁) = prodUnitToF F K.W (p₂.snd, t₂) := by
+      have e1 : F.map PullbackElem.snd u₁ = prodUnitToF F K.W (p₁.snd, t₁) :=
+        (congrArg (F.map PullbackElem.snd) hu₁.symm).trans (prodUnitToF_natural F PullbackElem.snd p₁ t₁)
+      have e2 : F.map PullbackElem.snd u₂ = prodUnitToF F K.W (p₂.snd, t₂) :=
+        (congrArg (F.map PullbackElem.snd) hu₂.symm).trans (prodUnitToF_natural F PullbackElem.snd p₂ t₂)
+      exact e1.symm.trans (hSnd.trans e2)
+    have hEqW := bW.1 (p₁.fst, t₁) (p₂.fst, t₂) hFst'
+    have hEqV := bV.1 (p₁.snd, t₁) (p₂.snd, t₂) hSnd'
+    have hp : p₁ = p₂ := PullbackElem.ext (congrArg Prod.fst hEqW) (congrArg Prod.fst hEqV)
+    have ht : t₁ = t₂ := congrArg Prod.snd hEqW
+    subst hp
+    subst ht
+    exact hu₁.symm.trans hu₂
+  · intro q
+    obtain ⟨⟨w, t₁⟩, hw⟩ := bW.2 q.fst
+    obtain ⟨⟨v, t₂⟩, hv⟩ := bV.2 q.snd
+    have hMidD : prodUnitToF F D (H.right w, t₁) = prodUnitToF F D (K.left v, t₂) := by
+      have lhs := (prodUnitToF_natural F H.right w t₁).symm.trans (congrArg (F.map H.right) hw)
+      have rhs := (prodUnitToF_natural F K.left v t₂).symm.trans (congrArg (F.map K.left) hv)
+      exact lhs.trans (q.mid.trans rhs.symm)
+    have hPairD := bD.1 (H.right w, t₁) (K.left v, t₂) hMidD
+    have hMid : H.right w = K.left v := congrArg Prod.fst hPairD
+    have ht : t₁ = t₂ := congrArg Prod.snd hPairD
+    let pb : PullbackElem H.right K.left := ⟨w, v, hMid⟩
+    refine ⟨prodUnitToF F (PullbackElem H.right K.left) (pb, t₁), ?_⟩
+    apply PullbackElem.ext
+    · exact (prodUnitToF_natural F PullbackElem.fst pb t₁).trans hw
+    · exact (prodUnitToF_natural F PullbackElem.snd pb t₁).trans
+        ((congrArg (fun t => prodUnitToF F K.W (v, t)) ht).trans hv)
+
+/-- Concrete non-sum-preserving `SpanFunctor` (`X ↦ 1 + ‖X‖` using `Option (PLift (Nonempty X))`)
+witnessing finite Beck–Chevalley surjectivity failure with a nonempty source (`0` axioms). -/
+def inhabitedOptionFunctor : SpanFunctor where
+  obj X := Option (PLift (Nonempty X))
+  map f
+    | none => none
+    | some ⟨h⟩ => some ⟨match h with | ⟨x⟩ => ⟨f x⟩⟩
+  map_id
+    | none => rfl
+    | some ⟨_⟩ => rfl
+  map_comp _ _
+    | none => rfl
+    | some ⟨_⟩ => rfl
+  map_congr _
+    | none => rfl
+    | some ⟨_⟩ => rfl
+
+/-- Left and right finite spans over `Bool` with empty local pullback `false = true` yet two
+macro pullback witnesses `(none, none)` and `(some _, some _)` under `inhabitedOptionFunctor`. -/
+def inhabitedOptionLeftSpan : RelSpan Unit Bool where
+  W := Unit
+  left _ := ()
+  right _ := false
+
+def inhabitedOptionRightSpan : RelSpan Bool Unit where
+  W := Unit
+  left _ := true
+  right _ := ()
+
+/-- `inhabitedOptionFunctor` has a genuine `1 → 2` Beck–Chevalley defect on finite spans with a
+nonempty source (`none`), refuting surjectivity of `(chi inhabitedOptionFunctor ...).map`. -/
+theorem inhabitedOptionFunctor_chi_not_surjective :
+    ¬ Surj (chi inhabitedOptionFunctor inhabitedOptionLeftSpan inhabitedOptionRightSpan).map := by
+  intro hsurj
+  let target : PullbackElem
+      (inhabitedOptionFunctor.map inhabitedOptionLeftSpan.right)
+      (inhabitedOptionFunctor.map inhabitedOptionRightSpan.left) :=
+    ⟨some ⟨⟨()⟩⟩, some ⟨⟨()⟩⟩, rfl⟩
+  obtain ⟨u, hu⟩ := hsurj target
+  cases u with
+  | none =>
+    have hFst : (none : Option (PLift (Nonempty Unit))) = some ⟨⟨()⟩⟩ :=
+      congrArg PullbackElem.fst hu
+    exact (by cases hFst)
+  | some p =>
+    match p.down with
+    | ⟨q⟩ => exact Bool.noConfusion q.mid
 
 /-! ### BC-Guarded Interchange & 3D Concurrent Reconfiguration Guards (`PolyComposition.SerialReconfigProcess`) -/
 

@@ -1410,21 +1410,16 @@ theorem unit_balancesOn_iff_le {levelFn takeFn giving : Nat → Nat} {t : Nat}
     (step_eq : levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t)) :
     (StockFlowBridge.unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).BalancesOn
       (StockFlowBridge.unitWeb levelFn) [()] t ↔ takeFn t ≤ levelFn t := by
-  refine ⟨fun bal => ?_, StockFlowBridge.unitBalancesOn_of_le step_eq⟩
-  have hEq : levelFn (t + 1) + takeFn t = levelFn t + giving (levelFn t - takeFn t) := by
-    have b := bal () (.head [])
-    rw [StockFlowBridge.unitFlow_taken, StockFlowBridge.unitFlow_given] at b
-    exact b
-  rw [step_eq] at hEq
-  have hStep : (levelFn t - takeFn t) + takeFn t + giving (levelFn t - takeFn t) =
-      levelFn t + giving (levelFn t - takeFn t) := by
-    change (levelFn t - takeFn t) + giving (levelFn t - takeFn t) + takeFn t =
-        levelFn t + giving (levelFn t - takeFn t) at hEq
-    rw [Nat.add_right_comm] at hEq
-    exact hEq
-  have hCancel : (levelFn t - takeFn t) + takeFn t = levelFn t :=
-    add_right_cancel (giving (levelFn t - takeFn t)) hStep
-  exact Nat.le_trans (Nat.le_add_left (takeFn t) (levelFn t - takeFn t)) (Nat.le_of_eq hCancel)
+  have hBalIff := StockFlowBridge.clampedStep_balance_iff_le step_eq
+  constructor
+  · intro bal
+    have hEq := bal () (.head [])
+    rw [StockFlowBridge.unitFlow_taken, StockFlowBridge.unitFlow_given] at hEq
+    exact hBalIff.mp hEq
+  · intro hle c hc
+    cases c
+    rw [StockFlowBridge.unitFlow_taken, StockFlowBridge.unitFlow_given]
+    exact hBalIff.mpr hle
 
 /-- **Exact `Nat`-clamping overdraw separation (`unit_overdraw_separation`).** -/
 theorem unit_overdraw_separation {levelFn takeFn giving : Nat → Nat} {tStar : Nat}
@@ -1445,38 +1440,23 @@ theorem unit_overdraw_separation {levelFn takeFn giving : Nat → Nat} {tStar : 
         (StockFlowBridge.unitWeb levelFn) [()] tStar ∧
     ¬ (StockFlowBridge.unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).Balances
         (StockFlowBridge.unitWeb levelFn) := by
-  have hZeroSub : levelFn tStar - takeFn tStar = 0 := sub_eq_zero_of_le (Nat.le_of_lt first.1)
   have hClamp : levelFn (tStar + 1) = giving 0 := by
     rw [step_eq tStar]
     show (levelFn tStar - takeFn tStar) + giving (levelFn tStar - takeFn tStar) = giving 0
-    rw [hZeroSub, Nat.zero_add]
+    rw [sub_eq_zero_of_le (Nat.le_of_lt first.1), Nat.zero_add]
   have hPosDiff : 0 < takeFn tStar - levelFn tStar := SupportGated.sub_pos_of_lt first.1
-  have hDiscrep : levelFn (tStar + 1) + takeFn tStar =
-      (levelFn tStar + giving (levelFn tStar - takeFn tStar)) + (takeFn tStar - levelFn tStar) := by
-    rw [hClamp, hZeroSub]
-    calc giving 0 + takeFn tStar
-        = giving 0 + (levelFn tStar + (takeFn tStar - levelFn tStar)) :=
-          congrArg (giving 0 + ·) (add_sub_of_le (Nat.le_of_lt first.1)).symm
-      _ = levelFn tStar + ((takeFn tStar - levelFn tStar) + giving 0) := by
-          rw [Nat.add_comm (giving 0), Nat.add_assoc]
-      _ = levelFn tStar + giving 0 + (takeFn tStar - levelFn tStar) := by
-          rw [Nat.add_comm (takeFn tStar - levelFn tStar) (giving 0), ← Nat.add_assoc]
+  have hDiscrep := StockFlowBridge.clampedStep_balance_discrepancy (step_eq tStar)
   have hStrict : levelFn tStar +
         (StockFlowBridge.unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).given tStar () <
       levelFn (tStar + 1) +
         (StockFlowBridge.unitFlow takeFn (fun k => giving (levelFn k - takeFn k))).taken tStar () := by
     rw [StockFlowBridge.unitFlow_given, StockFlowBridge.unitFlow_taken, hDiscrep]
-    exact Nat.lt_of_lt_of_le
-      (Nat.add_lt_add_left hPosDiff (levelFn tStar + giving (levelFn tStar - takeFn tStar)))
-      (Nat.le_refl _)
+    exact Nat.lt_add_of_pos_right hPosDiff
   have hNotBalOn : ¬ (StockFlowBridge.unitFlow takeFn
       (fun k => giving (levelFn k - takeFn k))).BalancesOn (StockFlowBridge.unitWeb levelFn) [()] tStar :=
     fun bal => Nat.not_le_of_gt first.1 ((unit_balancesOn_iff_le (step_eq tStar)).mp bal)
-  have hNotBal : ¬ (StockFlowBridge.unitFlow takeFn
-      (fun k => giving (levelFn k - takeFn k))).Balances (StockFlowBridge.unitWeb levelFn) :=
-    fun bal => hNotBalOn (bal.on [()] tStar)
   exact ⟨fun t ht => (unit_balancesOn_iff_le (step_eq t)).mpr (first.2 t ht),
-    hClamp, ⟨hDiscrep, hPosDiff⟩, hStrict, hNotBalOn, hNotBal⟩
+    hClamp, ⟨hDiscrep, hPosDiff⟩, hStrict, hNotBalOn, fun bal => hNotBalOn (bal.on [()] tStar)⟩
 
 theorem line_overdraw_separation {U : Type} {need : U → Nat} {kids : U → List U}
     {giving : Nat → Nat} {use : U → Nat} {s : List U × Nat} {tStar : Nat}

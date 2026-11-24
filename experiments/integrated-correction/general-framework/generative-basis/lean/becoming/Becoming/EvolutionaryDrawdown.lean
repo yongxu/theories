@@ -619,28 +619,15 @@ theorem multiSite_balance_site_iff {st : Nat → (Ext → Nat) × S} {env : Nat 
       (multiSiteWeb C G envDraw st env).level t (.site k) +
         (multiSiteFlow C G envDraw st env).given t (.site k)) ↔
       multiSiteDrawAt C envDraw st env t k ≤ (st t).1 k := by
-  have hNext : (multiSiteWeb C G envDraw st env).level (t + 1) (.site k) =
+  have hStep : (multiSiteWeb C G envDraw st env).level (t + 1) (.site k) =
       ((st t).1 k - multiSiteDrawAt C envDraw st env t k) +
         (multiSiteFlow C G envDraw st env).given t (.site k) := by
     change (st (t + 1)).1 k = _
     rw [step_eq t]
     exact congrArg ((((st t).1 k - multiSiteDrawAt C envDraw st env t k) + ·))
       (multiSiteFlow_given_site C G envDraw st env t k).symm
-  have hLvl : (multiSiteWeb C G envDraw st env).level t (.site k) = (st t).1 k := rfl
-  have hTaken : (multiSiteFlow C G envDraw st env).taken t (.site k) =
-      multiSiteDrawAt C envDraw st env t k :=
-    multiSiteFlow_taken_site C G envDraw st env t k
-  rw [hNext, hLvl, hTaken]
-  constructor
-  · intro hEq
-    rw [Nat.add_right_comm ((st t).1 k - multiSiteDrawAt C envDraw st env t k) _
-        (multiSiteDrawAt C envDraw st env t k)] at hEq
-    have hCancel := add_right_cancel _ hEq
-    exact Nat.le_trans (Nat.le_add_left (multiSiteDrawAt C envDraw st env t k) _) (Nat.le_of_eq hCancel)
-  · intro hPre
-    rw [Nat.add_right_comm ((st t).1 k - multiSiteDrawAt C envDraw st env t k) _
-        (multiSiteDrawAt C envDraw st env t k),
-      Naturals.sub_add_cancel hPre]
+  rw [multiSiteFlow_taken_site C G envDraw st env t k]
+  exact StockFlowBridge.clampedStep_balance_iff_le hStep
 
 /-- **Exact Multi-Site `BalancesOn` Equivalence.** -/
 theorem multiSite_balancesOn_iff {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist}
@@ -783,43 +770,29 @@ theorem multiSite_overdraw_separation {st : Nat → (Ext → Nat) × S} {env : N
     ¬ L.Balances W ∧
     ¬ (multiSiteRel C G envDraw st env).Runs multiSitePresent (multiSiteLevel st) L := by
   intro H L W
-  have hEarlier : ∀ t, t < tStar → L.BalancesOn W (sites.map MultiSiteRelatum.site) t := fun t ht =>
-    multiSite_balancesOn_of_preOverdraw C obs channel G envDraw step_eq (earlier t ht)
-  have hOthers : ∀ k, k ∈ sites → k ≠ kStar →
-      W.level (tStar + 1) (.site k) + L.taken tStar (.site k) =
-        W.level tStar (.site k) + L.given tStar (.site k) := fun k hk hne =>
-    (multiSite_balance_site_iff C obs channel G envDraw step_eq tStar k).mpr (others_ok k hk hne)
-  have hNextStar : (st (tStar + 1)).1 kStar = L.given tStar (.site kStar) := by
+  have hStepStar : (st (tStar + 1)).1 kStar =
+      ((st tStar).1 kStar - H tStar kStar) + L.given tStar (.site kStar) := by
     rw [step_eq tStar]
-    have hClamp : (st tStar).1 kStar - H tStar kStar = 0 := sub_eq_zero_of_le (Nat.le_of_lt over)
-    change ((st tStar).1 kStar - H tStar kStar) + _ = _
-    rw [hClamp, Nat.zero_add]
-    exact (multiSiteFlow_given_site C G envDraw st env tStar kStar).symm
-  have hDiscrepEq : (st (tStar + 1)).1 kStar + H tStar kStar =
-      ((st tStar).1 kStar + L.given tStar (.site kStar)) + (H tStar kStar - (st tStar).1 kStar) := by
-    rw [hNextStar, Nat.add_comm (L.given tStar (.site kStar)) (H tStar kStar),
-      Nat.add_right_comm ((st tStar).1 kStar) (L.given tStar (.site kStar)) (H tStar kStar - (st tStar).1 kStar),
-      add_sub_of_le (Nat.le_of_lt over)]
+    exact congrArg ((((st tStar).1 kStar - H tStar kStar) + ·))
+      (multiSiteFlow_given_site C G envDraw st env tStar kStar).symm
+  have hDiscrepEq := StockFlowBridge.clampedStep_balance_discrepancy hStepStar
   have hDiscrepPos : 0 < H tStar kStar - (st tStar).1 kStar := SupportGated.sub_pos_of_lt over
   have hWebDiscrep : W.level (tStar + 1) (.site kStar) + L.taken tStar (.site kStar) =
       (W.level tStar (.site kStar) + L.given tStar (.site kStar)) + (H tStar kStar - (st tStar).1 kStar) := by
-    change (st (tStar + 1)).1 kStar + L.taken tStar (.site kStar) =
-      ((st tStar).1 kStar + L.given tStar (.site kStar)) + (H tStar kStar - (st tStar).1 kStar)
+    change (st (tStar + 1)).1 kStar + L.taken tStar (.site kStar) = _
     rw [multiSiteFlow_taken_site C G envDraw st env tStar kStar]
     exact hDiscrepEq
   have hStrictLt : W.level tStar (.site kStar) + L.given tStar (.site kStar) <
-      W.level (tStar + 1) (.site kStar) + L.taken tStar (.site kStar) := by
-    rw [hWebDiscrep]
-    exact Nat.lt_add_of_pos_right hDiscrepPos
+      W.level (tStar + 1) (.site kStar) + L.taken tStar (.site kStar) :=
+    hWebDiscrep ▸ Nat.lt_add_of_pos_right hDiscrepPos
   have hNotBalOn : ¬ L.BalancesOn W (sites.map MultiSiteRelatum.site) tStar := fun hBal =>
     Nat.lt_irrefl _ (Nat.lt_of_lt_of_le hStrictLt
       (Nat.le_of_eq (hBal (.site kStar) (ListTests.mem_map_of mem_kStar))))
-  have hNotBal : ¬ L.Balances W := fun hBal =>
-    Nat.lt_irrefl _ (Nat.lt_of_lt_of_le hStrictLt (Nat.le_of_eq (hBal tStar (.site kStar))))
-  have hNotRuns : ¬ (multiSiteRel C G envDraw st env).Runs multiSitePresent (multiSiteLevel st) L :=
-    fun hRuns => Nat.not_le_of_gt over ((hRuns tStar).2.2.2 kStar)
-  exact ⟨hEarlier, hOthers, ⟨hDiscrepEq, hDiscrepPos⟩, hStrictLt, hWebDiscrep,
-    hNotBalOn, hNotBal, hNotRuns⟩
+  exact ⟨fun t ht => multiSite_balancesOn_of_preOverdraw C obs channel G envDraw step_eq (earlier t ht),
+    fun k hk hne => (multiSite_balance_site_iff C obs channel G envDraw step_eq tStar k).mpr (others_ok k hk hne),
+    ⟨hDiscrepEq, hDiscrepPos⟩, hStrictLt, hWebDiscrep, hNotBalOn,
+    fun hBal => hNotBalOn (hBal.on (sites.map MultiSiteRelatum.site) tStar),
+    fun hRuns => Nat.not_le_of_gt over ((hRuns tStar).2.2.2 kStar)⟩
 
 end MultiSiteBridge
 

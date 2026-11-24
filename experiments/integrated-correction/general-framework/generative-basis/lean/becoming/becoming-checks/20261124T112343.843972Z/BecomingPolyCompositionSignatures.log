@@ -1,0 +1,1144 @@
+@Becoming.PolyComposition.sumPortDraws_cons : ∀ {α : Type} (a : α) (f : α → Nat) (rest : List α),
+  Becoming.PolyComposition.sumPortDraws (a :: rest) f = f a + Becoming.PolyComposition.sumPortDraws rest f
+@Becoming.PolyComposition.sumPortDraws_le : ∀ {α : Type} {f g : α → Nat} {ports : List α},
+  (∀ (a : α), a ∈ ports → f a ≤ g a) →
+    Becoming.PolyComposition.sumPortDraws ports f ≤ Becoming.PolyComposition.sumPortDraws ports g
+@Becoming.PolyComposition.sumPortDraws_map : ∀ {α β : Type} (g : α → β) (f : β → Nat) (ports : List α),
+  Becoming.PolyComposition.sumPortDraws (List.map g ports) f =
+    Becoming.PolyComposition.sumPortDraws ports fun a => f (g a)
+@Becoming.PolyComposition.sumPortDraws_append : ∀ {α : Type} (f : α → Nat) (xs ys : List α),
+  Becoming.PolyComposition.sumPortDraws (xs ++ ys) f =
+    Becoming.PolyComposition.sumPortDraws xs f + Becoming.PolyComposition.sumPortDraws ys f
+@Becoming.PolyComposition.le_sumPortDraws_of_mem : ∀ {α : Type} {a : α} (f : α → Nat) {ports : List α},
+  a ∈ ports → f a ≤ Becoming.PolyComposition.sumPortDraws ports f
+Becoming.PolyComposition.mul_add_nat : ∀ (a b c : Nat), a * (b + c) = a * b + a * c
+@Becoming.PolyComposition.div_mono_nat : ∀ {a b : Nat}, a ≤ b → ∀ (k : Nat), a / k ≤ b / k
+Becoming.PolyComposition.sub_add_le_add_sub_nat : ∀ (a b c d : Nat), a + c - (b + d) ≤ a - b + (c - d)
+Becoming.PolyComposition.distNat_add_le : ∀ (a b c d : Nat),
+  Becoming.distNat (a + c) (b + d) ≤ Becoming.distNat a b + Becoming.distNat c d
+Becoming.PolyComposition.sub_sub_le_add_sub_nat : ∀ (a b c d : Nat), a - c - (b - d) ≤ a - b + (d - c)
+Becoming.PolyComposition.distNat_sub_le : ∀ (a b c d : Nat),
+  Becoming.distNat (a - c) (b - d) ≤ Becoming.distNat a b + Becoming.distNat c d
+Becoming.PolyComposition.const_add_sub : ∀ (c a b : Nat), c + a - (c + b) = a - b
+Becoming.PolyComposition.distNat_const_add : ∀ (c a b : Nat), Becoming.distNat (c + a) (c + b) = Becoming.distNat a b
+Becoming.PolyComposition.natMin_sub_le : ∀ (a b c d : Nat),
+  Becoming.CoreHelpers.natMin a c - Becoming.CoreHelpers.natMin b d ≤ Becoming.CoreHelpers.natMax (a - b) (c - d)
+Becoming.PolyComposition.distNat_natMin_le : ∀ (a b c d : Nat),
+  Becoming.distNat (Becoming.CoreHelpers.natMin a c) (Becoming.CoreHelpers.natMin b d) ≤
+    Becoming.CoreHelpers.natMax (Becoming.distNat a b) (Becoming.distNat c d)
+Becoming.PolyComposition.distNat_natMin_const_le : ∀ (m a b : Nat),
+  Becoming.distNat (Becoming.CoreHelpers.natMin m a) (Becoming.CoreHelpers.natMin m b) ≤ Becoming.distNat a b
+Becoming.PolyComposition.natMax_sub_le : ∀ (a b c d : Nat),
+  Becoming.CoreHelpers.natMax a c - Becoming.CoreHelpers.natMax b d ≤ Becoming.CoreHelpers.natMax (a - b) (c - d)
+Becoming.PolyComposition.distNat_natMax_le : ∀ (a b c d : Nat),
+  Becoming.distNat (Becoming.CoreHelpers.natMax a c) (Becoming.CoreHelpers.natMax b d) ≤
+    Becoming.CoreHelpers.natMax (Becoming.distNat a b) (Becoming.distNat c d)
+Becoming.PolyComposition.distNat_natMax_const_le : ∀ (m a b : Nat),
+  Becoming.distNat (Becoming.CoreHelpers.natMax m a) (Becoming.CoreHelpers.natMax m b) ≤ Becoming.distNat a b
+@Becoming.PolyComposition.add_div_le_nat : ∀ {k : Nat}, 0 < k → ∀ (b d : Nat), (b + d) / k ≤ b / k + (d + (k - 1)) / k
+@Becoming.PolyComposition.div_sub_le_nat : ∀ {k : Nat},
+  0 < k → ∀ {a b : Nat}, b ≤ a → a / k - b / k ≤ (a - b + (k - 1)) / k
+Becoming.PolyComposition.distNat_div_le : ∀ (a b k : Nat),
+  Becoming.distNat (a / k) (b / k) ≤ (Becoming.distNat a b + (k - 1)) / k
+@Becoming.PolyComposition.ofOpenState_toOpenState : ∀ {S Ext : Type} (st : (Ext → Nat) × (_ : Unit) × S),
+  Becoming.PolyComposition.ofOpenState (Becoming.PolyComposition.toOpenState st) = st
+@Becoming.PolyComposition.ofOpenComponent_closedStep_eq : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (st : (Ext → Nat) × S)
+  (act : Env × Dist),
+  Becoming.PolyComposition.polyClosedStep (Becoming.PolyComposition.PolyComponent.ofOpenComponent C) (fun x k => [k])
+      (fun x => obs) channel G envDraw (Becoming.PolyComposition.ofOpenState st) act =
+    Becoming.PolyComposition.ofOpenState (Becoming.OpenComposition.closedStep C obs channel G envDraw st act)
+@Becoming.PolyComposition.ofOpenComponent_closedProcess_step_iff : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop)
+  (st st' : (Ext → Nat) × (_ : Unit) × S) (act : Env × (_ : Unit) × Dist),
+  (Becoming.PolyComposition.polyClosedProcess (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+          (fun x k => [k]) (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) (fun x => obs) channel G
+          envDraw jointAdm).step
+      st act st' ↔
+    (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm).step
+      (Becoming.PolyComposition.toOpenState st) (act.fst, act.snd.snd) (Becoming.PolyComposition.toOpenState st')
+@Becoming.PolyComposition.ofOpenComponent_trace_to_poly : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) {st st' : (Ext → Nat) × S}
+  {w : List (Env × Dist)},
+  Generative.Trace (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm) st w st' →
+    Generative.Trace
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+        (fun x k => [k]) (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) (fun x => obs) channel G envDraw
+        jointAdm)
+      (Becoming.PolyComposition.ofOpenState st) (List.map (fun a => (a.fst, ⟨(), a.snd⟩)) w)
+      (Becoming.PolyComposition.ofOpenState st')
+@Becoming.PolyComposition.ofOpenComponent_trace_from_poly : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop)
+  {st st' : (Ext → Nat) × (_ : Unit) × S} {w : List (Env × (_ : Unit) × Dist)},
+  Generative.Trace
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+        (fun x k => [k]) (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) (fun x => obs) channel G envDraw
+        jointAdm)
+      st w st' →
+    Generative.Trace (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+      (Becoming.PolyComposition.toOpenState st) (List.map (fun a => (a.fst, a.snd.snd)) w)
+      (Becoming.PolyComposition.toOpenState st')
+@Becoming.PolyComposition.ofOpenComponent_trace_iff : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) (st st' : (Ext → Nat) × S)
+  (w : List (Env × Dist)),
+  Generative.Trace (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm) st w st' ↔
+    Generative.Trace
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+        (fun x k => [k]) (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) (fun x => obs) channel G envDraw
+        jointAdm)
+      (Becoming.PolyComposition.ofOpenState st) (List.map (fun a => (a.fst, ⟨(), a.snd⟩)) w)
+      (Becoming.PolyComposition.ofOpenState st')
+@Becoming.PolyComposition.ofOpenComponent_guard_iff : ∀ {S Obs Dist Int Ext : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (x_crit : Ext → Nat) (st : (Ext → Nat) × (_ : Unit) × S),
+  Becoming.PolyComposition.polyClosedGuard (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+      (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) x_crit st ↔
+    Becoming.OpenComposition.closedGuard C c x_crit (Becoming.PolyComposition.toOpenState st)
+@Becoming.PolyComposition.ofOpenComponent_kernel_iff : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) (x_crit : Ext → Nat)
+  (st : (Ext → Nat) × S),
+  Becoming.Viability.Kernel (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+      (Becoming.OpenComposition.closedGuard C c x_crit) st ↔
+    Becoming.Viability.Kernel
+      (Becoming.PolyComposition.polyClosedProcess (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+        (fun x k => [k]) (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) (fun x => obs) channel G envDraw
+        jointAdm)
+      (Becoming.PolyComposition.polyClosedGuard (Becoming.PolyComposition.PolyComponent.ofOpenComponent C)
+        (Becoming.PolyComposition.PolyContract.ofInterfaceContract c) x_crit)
+      (Becoming.PolyComposition.ofOpenState st)
+@Becoming.PolyComposition.polySiteDraw_compose : ∀ {Mode₁ Mode₂ : Type} {S₁ Obs₁ Dist₁ Int₁ Ext₁ : Mode₁ → Type}
+  {S₂ Obs₂ Dist₂ Int₂ Ext₂ : Mode₂ → Type} {Site : Type}
+  (A : Becoming.PolyComposition.PolyComponent Mode₁ S₁ Obs₁ Dist₁ Int₁ Ext₁)
+  (B : Becoming.PolyComposition.PolyComponent Mode₂ S₂ Obs₂ Dist₂ Int₂ Ext₂)
+  (route₁ : (m₁ : Mode₁) → Site → List (Ext₁ m₁)) (route₂ : (m₂ : Mode₂) → Site → List (Ext₂ m₂)) (m : Mode₁ × Mode₂)
+  (s : S₁ m.fst × S₂ m.snd) (site : Site),
+  Becoming.PolyComposition.polySiteDraw (A.compose B) (Becoming.PolyComposition.composeRoute route₁ route₂) ⟨m, s⟩
+      site =
+    Becoming.PolyComposition.polySiteDraw A route₁ ⟨m.fst, s.fst⟩ site +
+      Becoming.PolyComposition.polySiteDraw B route₂ ⟨m.snd, s.snd⟩ site
+@Becoming.PolyComposition.poly_close_viable_on_K : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type} {Site Env : Type}
+  (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext) (route : (m : Mode) → Site → List (Ext m))
+  {init : (m : Mode) × S m} (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (s : S m) (site : Site),
+          c.K ⟨m, s⟩ → Becoming.PolyComposition.sumPortDraws (route m site) (c.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (s : S m) (site : Site),
+            c.K ⟨m, s⟩ →
+              Becoming.PolyComposition.sumPortDraws (route m site) (c.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode) (s : S m), c.K ⟨m, s⟩ → c.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode) (s : S m), c.K ⟨m, s⟩ → c.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat) (ModeGuard : (Site → Nat) → Mode → Prop),
+                ModeGuard x₀ init.fst →
+                  (∀ (x : Site → Nat) (p : (m : Mode) × S m) (env : Env) (d : Dist p.fst),
+                      Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit (x, p) →
+                        ModeGuard x p.fst →
+                          jointAdm env →
+                            (∀ (ob : Obs p.fst × Bool), c.tol p.fst ob d) →
+                              have st' :=
+                                Becoming.PolyComposition.polyClosedStep C route obs channel G envDraw (x, p) (env, d);
+                              ModeGuard st'.fst st'.snd.fst) →
+                    (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                        c.K ⟨m, s⟩ → ModeGuard x m → x site < warnLevel site → c.warnObs m (obs m x)) →
+                      (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                        (∀ (site : Site),
+                            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                          (∀ (site : Site),
+                              x_crit site ≤
+                                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                                  x_crit site) →
+                            (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                              (∀ (site : Site),
+                                  x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                                (∀ (site : Site),
+                                    x_crit site + c.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                                  Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit (x₀, init) ∧
+                                    ModeGuard x₀ init.fst ∧
+                                      Becoming.Viability.Certificate
+                                        (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw
+                                          jointAdm)
+                                        (Becoming.PolyComposition.polyClosedGuard C c x_crit) fun st =>
+                                        Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit st ∧
+                                          ModeGuard st.fst st.snd.fst
+@Becoming.PolyComposition.poly_close_viable : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type} {Site Env : Type}
+  (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext) (route : (m : Mode) → Site → List (Ext m))
+  {init : (m : Mode) × S m} (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route m site) (c.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route m site) (c.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode), c.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode), c.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat) (ModeGuard : (Site → Nat) → Mode → Prop),
+                ModeGuard x₀ init.fst →
+                  (∀ (x : Site → Nat) (p : (m : Mode) × S m) (env : Env) (d : Dist p.fst),
+                      Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit (x, p) →
+                        ModeGuard x p.fst →
+                          jointAdm env →
+                            (∀ (ob : Obs p.fst × Bool), c.tol p.fst ob d) →
+                              have st' :=
+                                Becoming.PolyComposition.polyClosedStep C route obs channel G envDraw (x, p) (env, d);
+                              ModeGuard st'.fst st'.snd.fst) →
+                    (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                        c.K ⟨m, s⟩ → ModeGuard x m → x site < warnLevel site → c.warnObs m (obs m x)) →
+                      (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                        (∀ (site : Site),
+                            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                          (∀ (site : Site),
+                              x_crit site ≤
+                                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                                  x_crit site) →
+                            (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                              (∀ (site : Site),
+                                  x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                                (∀ (site : Site),
+                                    x_crit site + c.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                                  Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit (x₀, init) ∧
+                                    ModeGuard x₀ init.fst ∧
+                                      Becoming.Viability.Certificate
+                                        (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw
+                                          jointAdm)
+                                        (Becoming.PolyComposition.polyClosedGuard C c x_crit) fun st =>
+                                        Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit st ∧
+                                          ModeGuard st.fst st.snd.fst
+@Becoming.PolyComposition.poly_close_kernel : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type} {Site Env : Type}
+  (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext) (route : (m : Mode) → Site → List (Ext m))
+  {init : (m : Mode) × S m} (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route m site) (c.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route m site) (c.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode), c.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode), c.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat) (ModeGuard : (Site → Nat) → Mode → Prop),
+                ModeGuard x₀ init.fst →
+                  (∀ (x : Site → Nat) (p : (m : Mode) × S m) (env : Env) (d : Dist p.fst),
+                      Becoming.PolyComposition.polyClosedInv c sitePreCap envCap x_crit (x, p) →
+                        ModeGuard x p.fst →
+                          jointAdm env →
+                            (∀ (ob : Obs p.fst × Bool), c.tol p.fst ob d) →
+                              have st' :=
+                                Becoming.PolyComposition.polyClosedStep C route obs channel G envDraw (x, p) (env, d);
+                              ModeGuard st'.fst st'.snd.fst) →
+                    (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                        c.K ⟨m, s⟩ → ModeGuard x m → x site < warnLevel site → c.warnObs m (obs m x)) →
+                      (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                        (∀ (site : Site),
+                            Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                          (∀ (site : Site),
+                              x_crit site ≤
+                                Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe
+                                  x_crit site) →
+                            (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                              (∀ (site : Site),
+                                  x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                                (∀ (site : Site),
+                                    x_crit site + c.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                                  Becoming.Viability.Kernel
+                                    (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw
+                                      jointAdm)
+                                    (Becoming.PolyComposition.polyClosedGuard C c x_crit) (x₀, init)
+@Becoming.PolyComposition.poly_close_kernel_allModes : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type}
+  {Site Env : Type} (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext)
+  (route : (m : Mode) → Site → List (Ext m)) {init : (m : Mode) × S m}
+  (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route m site) (c.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route m site) (c.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode), c.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode), c.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat),
+                (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                    c.K ⟨m, s⟩ → x site < warnLevel site → c.warnObs m (obs m x)) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + c.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard C c x_crit) (x₀, init)
+Becoming.PolyComposition.DynamicPortWitness.G_dyn_rises : ∀ (b : Bool),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.PolyComposition.DynamicPortWitness.G_dyn b)
+Becoming.PolyComposition.DynamicPortWitness.stayBlind_trace : ∀ (n : Nat),
+  Generative.Trace
+    (Becoming.PolyComposition.polyClosedProcess Becoming.PolyComposition.DynamicPortWitness.dynComp
+      Becoming.PolyComposition.DynamicPortWitness.dynRoute Becoming.PolyComposition.DynamicPortWitness.stayBlindContract
+      Becoming.PolyComposition.DynamicPortWitness.dynObsFn Becoming.PolyComposition.DynamicPortWitness.dynChannel
+      Becoming.PolyComposition.DynamicPortWitness.G_dyn (fun x x_1 => 0) fun x => True)
+    (Becoming.PolyComposition.DynamicPortWitness.x₀, Becoming.PolyComposition.DynamicPortWitness.dynInit)
+    (List.replicate n ((), ⟨Becoming.PolyComposition.DynamicPortWitness.DynMode.blind, false⟩))
+    (Becoming.PolyComposition.DynamicPortWitness.stayBlindOrbit n)
+Becoming.PolyComposition.DynamicPortWitness.stayBlind_crashes : (Becoming.PolyComposition.DynamicPortWitness.stayBlindOrbit
+          7).fst
+      false =
+    0 ∧
+  ¬Becoming.Viability.Kernel
+      (Becoming.PolyComposition.polyClosedProcess Becoming.PolyComposition.DynamicPortWitness.dynComp
+        Becoming.PolyComposition.DynamicPortWitness.dynRoute
+        Becoming.PolyComposition.DynamicPortWitness.stayBlindContract
+        Becoming.PolyComposition.DynamicPortWitness.dynObsFn Becoming.PolyComposition.DynamicPortWitness.dynChannel
+        Becoming.PolyComposition.DynamicPortWitness.G_dyn (fun x x_1 => 0) fun x => True)
+      (Becoming.PolyComposition.polyClosedGuard Becoming.PolyComposition.DynamicPortWitness.dynComp
+        Becoming.PolyComposition.DynamicPortWitness.stayBlindContract
+        Becoming.PolyComposition.DynamicPortWitness.x_crit)
+      (Becoming.PolyComposition.DynamicPortWitness.x₀, Becoming.PolyComposition.DynamicPortWitness.dynInit)
+Becoming.PolyComposition.DynamicPortWitness.dyn_viable_kernel : Becoming.Viability.Kernel
+  (Becoming.PolyComposition.polyClosedProcess Becoming.PolyComposition.DynamicPortWitness.dynComp
+    Becoming.PolyComposition.DynamicPortWitness.dynRoute Becoming.PolyComposition.DynamicPortWitness.dynContract
+    Becoming.PolyComposition.DynamicPortWitness.dynObsFn Becoming.PolyComposition.DynamicPortWitness.dynChannel
+    Becoming.PolyComposition.DynamicPortWitness.G_dyn (fun x x_1 => 0) fun x => True)
+  (Becoming.PolyComposition.polyClosedGuard Becoming.PolyComposition.DynamicPortWitness.dynComp
+    Becoming.PolyComposition.DynamicPortWitness.dynContract Becoming.PolyComposition.DynamicPortWitness.x_crit)
+  (Becoming.PolyComposition.DynamicPortWitness.x₀, Becoming.PolyComposition.DynamicPortWitness.dynInit)
+Becoming.PolyComposition.DynamicPortWitness.cycleRun_modes_and_viability : (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state
+          0).snd.fst =
+    Becoming.PolyComposition.DynamicPortWitness.DynMode.blind ∧
+  (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state 1).snd.fst =
+      Becoming.PolyComposition.DynamicPortWitness.DynMode.widened ∧
+    (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state 2).snd.fst =
+        Becoming.PolyComposition.DynamicPortWitness.DynMode.contracted ∧
+      (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state 3).snd.fst =
+          Becoming.PolyComposition.DynamicPortWitness.DynMode.widened ∧
+        (∀ (k : Nat),
+            (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state (2 * k + 1)).snd.fst =
+                Becoming.PolyComposition.DynamicPortWitness.DynMode.widened ∧
+              (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state (2 * k + 2)).snd.fst =
+                Becoming.PolyComposition.DynamicPortWitness.DynMode.contracted) ∧
+          ∀ (t : Nat) (site : Bool), 3 ≤ (Becoming.PolyComposition.DynamicPortWitness.cycleRun.state t).fst site
+@Becoming.PolyComposition.poly_poolRead_absent_invariant : ∀ {Mode A B R : Type} {S Obs Dist Int Ext : Mode → Type}
+  {present : A × B → Prop} {hA : A → R → R} {h : A × B → R → R},
+  Becoming.PoolFromCourse.ReadsThroughPresent present hA h →
+    ∀ (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext) (emit : Mode → R → Bool)
+      (cfg : (m : Mode) → S m → (A × B) × R),
+      (∀ (m : Mode) (s : S m) (o : Obs m), C.emitAlarm m s o = emit m (h (cfg m s).fst (cfg m s).snd)) →
+        ∀ {m : Mode} {s s' : S m} {p q : A × B} {g : R},
+          cfg m s = (p, g) →
+            cfg m s' = (q, g) →
+              ¬present p →
+                ¬present q → p.fst = q.fst → h p g = h q g ∧ ∀ (o o' : Obs m), C.emitAlarm m s o = C.emitAlarm m s' o'
+@Becoming.PolyComposition.poly_poolWindow_unregistered_stays_blind : ∀ {Mode A R : Type}
+  {S Obs Dist Int Ext : Mode → Type} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R} {hL : A × Nat → R → R}
+  {reads : Nat → Bool} {N K : Nat},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {c : (A × Nat) × R},
+      K ≤ c.fst.snd →
+        ∀ (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext) {m₀ : Mode} (mk : (A × Nat) × R → S m₀)
+          (emit : R → Bool),
+          (∀ (st : (A × Nat) × R) (o : Obs m₀), C.emitAlarm m₀ (mk st) o = emit st.snd) →
+            emit c.snd = false →
+              (∀ (a : A) (g : R), emit (hA a g) = false) →
+                ∀ (t : Nat),
+                  c.fst.snd + t ≤
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                            (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).fst.snd ∧
+                    ¬Becoming.PoolFromCourse.Stands K
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                              (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).fst ∧
+                      Becoming.PoolFromCourse.windowRead hA hL N K
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).fst
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).snd =
+                          hA
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).fst.fst
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).snd ∧
+                        emit
+                              (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t).snd =
+                            false ∧
+                          ∀ (o : Obs m₀),
+                            C.emitAlarm m₀
+                                (mk
+                                  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                    (Becoming.PoolFromCourse.windowRead hA hL N K) reads c t))
+                                o =
+                              false
+@Becoming.PolyComposition.anchored_selfMod_viable : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type} {Site Env : Type}
+  (base : Becoming.PolyComposition.AnchoredBase Mode S Obs Dist Int Ext) {init : (m : Mode) × S m}
+  (hInit : Becoming.PolyComposition.AnchoredInit base init)
+  (admitDec : (m : Mode) × S m → (m : Mode) × S m → Bool → Bool)
+  (fallback : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (hAdmit : Becoming.PolyComposition.AnchoredModeAdmit base admitDec fallback)
+  (propose : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (route : (m : Mode) → Site → List (Ext m)) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route m site) (base.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route m site) (base.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode), base.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode), base.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat),
+                (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                    base.K ⟨m, s⟩ → x site < warnLevel site → base.warnObs m (obs m x)) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + base.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  route
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  x_crit)
+                                (x₀, init)
+@Becoming.PolyComposition.poly_close_kernel_allModes_on_K : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type}
+  {Site Env : Type} (C : Becoming.PolyComposition.PolyComponent Mode S Obs Dist Int Ext)
+  (route : (m : Mode) → Site → List (Ext m)) {init : (m : Mode) × S m}
+  (c : Becoming.PolyComposition.PolyContract C init) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat),
+      (∀ (m : Mode) (s : S m) (site : Site),
+          c.K ⟨m, s⟩ → Becoming.PolyComposition.sumPortDraws (route m site) (c.preCapExt m) ≤ sitePreCap site) →
+        (∀ (m : Mode) (s : S m) (site : Site),
+            c.K ⟨m, s⟩ →
+              Becoming.PolyComposition.sumPortDraws (route m site) (c.postAllowanceExt m) ≤ sitePostCap site) →
+          (∀ (m : Mode) (s : S m), c.K ⟨m, s⟩ → c.maxLag m ≤ maxLagEnv) →
+            (∀ (m : Mode) (s : S m), c.K ⟨m, s⟩ → c.maxSilence m ≤ maxSilenceEnv) →
+              ∀ (x_crit warnLevel H_safe x₀ : Site → Nat),
+                (∀ (m : Mode) (s : S m) (x : Site → Nat) (site : Site),
+                    c.K ⟨m, s⟩ → x site < warnLevel site → c.warnObs m (obs m x)) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + c.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess C route c obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard C c x_crit) (x₀, init)
+@Becoming.PolyComposition.monotone_selfWidening_viable : ∀ {Mode : Type} {S Obs Dist Int Ext : Mode → Type}
+  {Site Env : Type} (base : Becoming.PolyComposition.AnchoredBase Mode S Obs Dist Int Ext) {init : (m : Mode) × S m}
+  (hInit : Becoming.PolyComposition.AnchoredInit base init)
+  (admitDec : (m : Mode) × S m → (m : Mode) × S m → Bool → Bool)
+  (fallback : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (hAdmit : Becoming.PolyComposition.AnchoredModeAdmit base admitDec fallback)
+  (propose : (p : (m : Mode) × S m) → Obs p.fst × Bool → Dist p.fst → (m' : Mode) × S m')
+  (route : (m : Mode) → Site → List (Ext m)) (obs : (m : Mode) → (Site → Nat) → Obs m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat) (envCap : Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (sitePreCap sitePostCap : Site → Nat) (maxLagEnv maxSilenceEnv : Nat) (x_crit warnLevel H_safe x₀ : Site → Nat),
+      (∀ (site : Site),
+          Becoming.PolyComposition.sumPortDraws (route init.fst site) (base.preCapExt init.fst) ≤ sitePreCap site) →
+        (∀ (site : Site),
+            Becoming.PolyComposition.sumPortDraws (route init.fst site) (base.postAllowanceExt init.fst) ≤
+              sitePostCap site) →
+          base.maxLag init.fst ≤ maxLagEnv →
+            base.maxSilence init.fst ≤ maxSilenceEnv →
+              (∀ (x : Site → Nat) (site : Site), x site < warnLevel site → base.warnObs init.fst (obs init.fst x)) →
+                (∀ (m : Mode) (s : S m),
+                    base.K ⟨m, s⟩ → Becoming.PolyComposition.ModeRefines base route obs warnLevel init.fst m) →
+                  (∀ (load : Nat) (env : Env), jointAdm env → load ≤ maxSilenceEnv → channel true load env = true) →
+                    (∀ (site : Site),
+                        Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G site)) →
+                      (∀ (site : Site),
+                          x_crit site ≤
+                            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                              site) →
+                        (∀ (site : Site), sitePostCap site + envCap site ≤ H_safe site) →
+                          (∀ (site : Site),
+                              x_crit site + (maxLagEnv + 1) * (sitePreCap site + envCap site) ≤ warnLevel site) →
+                            (∀ (site : Site), x_crit site + base.eta init * (sitePreCap site + envCap site) ≤ x₀ site) →
+                              Becoming.Viability.Kernel
+                                (Becoming.PolyComposition.polyClosedProcess
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  route
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  obs channel G envDraw jointAdm)
+                                (Becoming.PolyComposition.polyClosedGuard
+                                  (Becoming.PolyComposition.anchoredSelfModComponent base admitDec fallback propose)
+                                  (Becoming.PolyComposition.anchoredSelfModContract base hInit admitDec fallback hAdmit
+                                    propose)
+                                  x_crit)
+                                (x₀, init)
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb k)
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit_anchored : Becoming.PolyComposition.AnchoredInit
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbBase
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbAdmit_sound : Becoming.PolyComposition.AnchoredModeAdmit
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbBase
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbAdmitDec
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbFallback
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_accrues : Becoming.ClosedCapture.Accrues fun p x =>
+  p.snd + 1
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPool_stays_blind : ∀ (t : Nat),
+  ¬Becoming.PoolFromCourse.Stands 1
+        (Becoming.Pace.paced (Becoming.ClosedCapture.join (fun a x => a) fun p x => p.snd + 1)
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbWindowRule (fun x => true)
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPoolP0 t).fst ∧
+    (Becoming.Pace.paced (Becoming.ClosedCapture.join (fun a x => a) fun p x => p.snd + 1)
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbWindowRule (fun x => true)
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPoolP0 t).snd =
+        false ∧
+      ∀
+        (o :
+          Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObs
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfBlind),
+        (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredSelfModComp
+                Becoming.PolyComposition.SelfBlindingDichotomyWitness.proposeBlind).emitAlarm
+            Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfBlind
+            (1,
+              Becoming.Pace.paced (Becoming.ClosedCapture.join (fun a x => a) fun p x => p.snd + 1)
+                Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbWindowRule (fun x => true)
+                Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPoolP0 t)
+            o =
+          false
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_succ_selfBlind : ∀ (t : Nat),
+  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit (t + 1)).snd =
+    ⟨Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfBlind,
+      (1,
+        Becoming.Pace.paced (Becoming.ClosedCapture.join (fun a x => a) fun p x => p.snd + 1)
+          Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbWindowRule (fun x => true)
+          Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbPoolP0 t)⟩
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbDist_eq_unit : ∀
+  (m : Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode)
+  (d : Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbDist m),
+  d =
+    match m, d with
+    | Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.base, d => ()
+    | Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfBlind, d => ()
+    | Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfWiden, d => ()
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit_step_x : ∀ (t : Nat),
+  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit (t + 1)).fst () =
+    (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit t).fst () - 2 +
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb () fun x =>
+        (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit t).fst () - 2
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchored_crashes : (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit
+          0).fst
+      () =
+    5 ∧
+  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit 1).fst () = 4 ∧
+    (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit 2).fst () = 3 ∧
+      (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit 3).fst () = 1 ∧
+        (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit 4).fst () = 0 ∧
+          (∀ (t : Nat)
+              (o :
+                Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObs
+                  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit (t + 1)).snd.fst),
+              (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredSelfModComp
+                      Becoming.PolyComposition.SelfBlindingDichotomyWitness.proposeBlind).emitAlarm
+                  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit (t + 1)).snd.fst
+                  (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredOrbit (t + 1)).snd.snd o =
+                false) ∧
+            ¬Becoming.Viability.Kernel
+                (Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchoredProcess
+                  Becoming.PolyComposition.SelfBlindingDichotomyWitness.proposeBlind)
+                (fun st => 3 ≤ st.fst ())
+                (Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbX0,
+                  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit)
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_rejects_selfBlind : (Becoming.PolyComposition.polyClosedStep
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModBlindComp
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbRoute
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObsFn
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbChannel
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb (fun x x_1 => 0)
+        (Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbX0,
+          Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit)
+        ((), ())).snd =
+    ⟨Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.base, 0⟩ ∧
+  Becoming.Viability.Kernel
+    (Becoming.PolyComposition.polyClosedProcess
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModBlindComp
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbRoute
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModBlindContract
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObsFn
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbChannel
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb (fun x x_1 => 0) fun x => True)
+    (Becoming.PolyComposition.polyClosedGuard
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModBlindComp
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModBlindContract
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbXCrit)
+    (Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbX0,
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit)
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbModeRefines : ∀
+  (m : Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode)
+  (s : Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbS m),
+  Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbBase.K ⟨m, s⟩ →
+    Becoming.PolyComposition.ModeRefines Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbBase
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbRoute
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObsFn
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbWarnLevel
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.base m
+Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_admits_selfWiden : (Becoming.PolyComposition.polyClosedStep
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModWidenComp
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbRoute
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObsFn
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbChannel
+        Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb (fun x x_1 => 0)
+        (Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbX0,
+          Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit)
+        ((), ())).snd =
+    ⟨Becoming.PolyComposition.SelfBlindingDichotomyWitness.SBMode.selfWiden, 0⟩ ∧
+  Becoming.Viability.Kernel
+    (Becoming.PolyComposition.polyClosedProcess
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModWidenComp
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbRoute
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModWidenContract
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbObsFn
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbChannel
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.G_sb (fun x x_1 => 0) fun x => True)
+    (Becoming.PolyComposition.polyClosedGuard
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModWidenComp
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchoredSelfModWidenContract
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbXCrit)
+    (Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbX0,
+      Becoming.PolyComposition.SelfBlindingDichotomyWitness.sbInit)
+@Becoming.PolyComposition.serialReconfig_epoch_stale_on_step : ∀ {Mode₁ Mode₂ : Type}
+  {S₁ Obs₁ Dist₁ Int₁ Ext₁ : Mode₁ → Type} {S₂ Obs₂ Dist₂ Int₂ Ext₂ : Mode₂ → Type} {Site Env : Type}
+  {A : Becoming.PolyComposition.PolyComponent Mode₁ S₁ Obs₁ Dist₁ Int₁ Ext₁}
+  {routeA : (m : Mode₁) → Site → List (Ext₁ m)} {init₁ : (m : Mode₁) × S₁ m}
+  {cA : Becoming.PolyComposition.PolyContract A init₁}
+  {B : Becoming.PolyComposition.PolyComponent Mode₂ S₂ Obs₂ Dist₂ Int₂ Ext₂}
+  {routeB : (m : Mode₂) → Site → List (Ext₂ m)} {init₂ : (m : Mode₂) × S₂ m}
+  {cB : Becoming.PolyComposition.PolyContract B init₂} {sitePreCap₁ sitePreCap₂ postLimit : Site → Nat}
+  {obs₁ : (m : Mode₁) → (Site → Nat) → Obs₁ m} {obs₂ : (m : Mode₂) → (Site → Nat) → Obs₂ m}
+  {channel : Bool → Nat → Env → Bool} {G : Site → (Site → Nat) → Nat} {envDraw : Env → Site → Nat}
+  {jointAdm : Env → Prop} {st st' : Becoming.PolyComposition.SerialCoordState Mode₁ Mode₂ S₁ S₂ Site}
+  {act : Becoming.PolyComposition.SerialCoordAct Mode₁ Mode₂ Dist₁ Dist₂ S₁ S₂ Env},
+  ((∃ p, act = Becoming.PolyComposition.SerialCoordAct.reconfigA p) ∨
+      ∃ p, act = Becoming.PolyComposition.SerialCoordAct.reconfigB p) →
+    (Becoming.PolyComposition.SerialReconfigProcess A routeA cA B routeB cB sitePreCap₁ sitePreCap₂ postLimit obs₁ obs₂
+            channel G envDraw jointAdm).step
+        st act st' →
+      ∀ (staleReq : Becoming.Transactions.Request),
+        staleReq.epoch = st.managed.installation.state.epoch →
+          Becoming.Transactions.fresh st'.managed.installation staleReq = false
+@Becoming.PolyComposition.serialReconfig_viable : ∀ {Mode₁ Mode₂ : Type} {S₁ Obs₁ Dist₁ Int₁ Ext₁ : Mode₁ → Type}
+  {S₂ Obs₂ Dist₂ Int₂ Ext₂ : Mode₂ → Type} {Site Env : Type}
+  (A : Becoming.PolyComposition.PolyComponent Mode₁ S₁ Obs₁ Dist₁ Int₁ Ext₁)
+  (routeA : (m : Mode₁) → Site → List (Ext₁ m)) {init₁ : (m : Mode₁) × S₁ m}
+  (cA : Becoming.PolyComposition.PolyContract A init₁)
+  (B : Becoming.PolyComposition.PolyComponent Mode₂ S₂ Obs₂ Dist₂ Int₂ Ext₂)
+  (routeB : (m : Mode₂) → Site → List (Ext₂ m)) {init₂ : (m : Mode₂) × S₂ m}
+  (cB : Becoming.PolyComposition.PolyContract B init₂) (sitePreCap₁ sitePreCap₂ postLimit envCap : Site → Nat)
+  (obs₁ : (m : Mode₁) → (Site → Nat) → Obs₁ m) (obs₂ : (m : Mode₂) → (Site → Nat) → Obs₂ m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (maxLag₁ maxLag₂ maxSilence₁ maxSilence₂ : Nat) (x_crit warnLevel H_safe : Site → Nat),
+      (∀ (m₁ : Mode₁) (s₁ : S₁ m₁), cA.K ⟨m₁, s₁⟩ → cA.maxLag m₁ ≤ maxLag₁) →
+        (∀ (m₂ : Mode₂) (s₂ : S₂ m₂), cB.K ⟨m₂, s₂⟩ → cB.maxLag m₂ ≤ maxLag₂) →
+          (∀ (m₁ : Mode₁) (s₁ : S₁ m₁), cA.K ⟨m₁, s₁⟩ → cA.maxSilence m₁ ≤ maxSilence₁) →
+            (∀ (m₂ : Mode₂) (s₂ : S₂ m₂), cB.K ⟨m₂, s₂⟩ → cB.maxSilence m₂ ≤ maxSilence₂) →
+              (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (x : Site → Nat) (site : Site),
+                  cA.K ⟨m₁, s₁⟩ → x site < warnLevel site → cA.warnObs m₁ (obs₁ m₁ x)) →
+                (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (x : Site → Nat) (site : Site),
+                    cB.K ⟨m₂, s₂⟩ → x site < warnLevel site → cB.warnObs m₂ (obs₂ m₂ x)) →
+                  (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (ob₁ : Obs₁ ⟨m₁, s₁⟩.fst × Bool) (d₁ : Dist₁ m₁) (site : Site),
+                      cA.K ⟨m₁, s₁⟩ →
+                        (∀ (o : Obs₁ m₁ × Bool), cA.tol m₁ o d₁) →
+                          Becoming.PolyComposition.sumPortDraws (routeA (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst site)
+                              (cA.preCapExt (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst) ≤
+                            Becoming.PolyComposition.sumPortDraws (routeA m₁ site) (cA.preCapExt m₁)) →
+                    (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (ob₁ : Obs₁ ⟨m₁, s₁⟩.fst × Bool) (d₁ : Dist₁ m₁) (site : Site),
+                        cA.K ⟨m₁, s₁⟩ →
+                          (∀ (o : Obs₁ m₁ × Bool), cA.tol m₁ o d₁) →
+                            Becoming.PolyComposition.sumPortDraws (routeA (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst site)
+                                (cA.postAllowanceExt (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst) ≤
+                              Becoming.PolyComposition.sumPortDraws (routeA m₁ site) (cA.postAllowanceExt m₁)) →
+                      (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (ob₂ : Obs₂ ⟨m₂, s₂⟩.fst × Bool) (d₂ : Dist₂ m₂) (site : Site),
+                          cB.K ⟨m₂, s₂⟩ →
+                            (∀ (o : Obs₂ m₂ × Bool), cB.tol m₂ o d₂) →
+                              Becoming.PolyComposition.sumPortDraws (routeB (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst site)
+                                  (cB.preCapExt (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst) ≤
+                                Becoming.PolyComposition.sumPortDraws (routeB m₂ site) (cB.preCapExt m₂)) →
+                        (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (ob₂ : Obs₂ ⟨m₂, s₂⟩.fst × Bool) (d₂ : Dist₂ m₂) (site : Site),
+                            cB.K ⟨m₂, s₂⟩ →
+                              (∀ (o : Obs₂ m₂ × Bool), cB.tol m₂ o d₂) →
+                                Becoming.PolyComposition.sumPortDraws (routeB (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst site)
+                                    (cB.postAllowanceExt (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst) ≤
+                                  Becoming.PolyComposition.sumPortDraws (routeB m₂ site) (cB.postAllowanceExt m₂)) →
+                          (∀ (load : Nat) (env : Env),
+                              jointAdm env → load ≤ maxSilence₁ + maxSilence₂ → channel true load env = true) →
+                            (∀ (site : Site),
+                                Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+                                  (G site)) →
+                              (∀ (site : Site),
+                                  x_crit site ≤
+                                    Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G
+                                      H_safe x_crit site) →
+                                (∀ (site : Site), postLimit site + envCap site ≤ H_safe site) →
+                                  (∀ (site : Site),
+                                      x_crit site +
+                                          (Becoming.CoreHelpers.natMax maxLag₁ maxLag₂ + 1) *
+                                            (sitePreCap₁ site + sitePreCap₂ site + envCap site) ≤
+                                        warnLevel site) →
+                                    Becoming.Viability.Certificate
+                                      (Becoming.PolyComposition.SerialReconfigProcess A routeA cA B routeB cB
+                                        sitePreCap₁ sitePreCap₂ postLimit obs₁ obs₂ channel G envDraw jointAdm)
+                                      (Becoming.PolyComposition.serialReconfigGuard A routeA cA B routeB cB postLimit
+                                        x_crit)
+                                      (Becoming.PolyComposition.serialReconfigInv routeA cA routeB cB sitePreCap₁
+                                        sitePreCap₂ envCap postLimit x_crit)
+@Becoming.PolyComposition.serialReconfig_kernel : ∀ {Mode₁ Mode₂ : Type} {S₁ Obs₁ Dist₁ Int₁ Ext₁ : Mode₁ → Type}
+  {S₂ Obs₂ Dist₂ Int₂ Ext₂ : Mode₂ → Type} {Site Env : Type}
+  (A : Becoming.PolyComposition.PolyComponent Mode₁ S₁ Obs₁ Dist₁ Int₁ Ext₁)
+  (routeA : (m : Mode₁) → Site → List (Ext₁ m)) {init₁ : (m : Mode₁) × S₁ m}
+  (cA : Becoming.PolyComposition.PolyContract A init₁)
+  (B : Becoming.PolyComposition.PolyComponent Mode₂ S₂ Obs₂ Dist₂ Int₂ Ext₂)
+  (routeB : (m : Mode₂) → Site → List (Ext₂ m)) {init₂ : (m : Mode₂) × S₂ m}
+  (cB : Becoming.PolyComposition.PolyContract B init₂) (sitePreCap₁ sitePreCap₂ postLimit envCap : Site → Nat)
+  (obs₁ : (m : Mode₁) → (Site → Nat) → Obs₁ m) (obs₂ : (m : Mode₂) → (Site → Nat) → Obs₂ m)
+  (channel : Bool → Nat → Env → Bool) (G : Site → (Site → Nat) → Nat) (envDraw : Env → Site → Nat)
+  (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (site : Site), envDraw env site ≤ envCap site) →
+    ∀ (maxLag₁ maxLag₂ maxSilence₁ maxSilence₂ : Nat) (x_crit warnLevel H_safe : Site → Nat),
+      (∀ (m₁ : Mode₁) (s₁ : S₁ m₁), cA.K ⟨m₁, s₁⟩ → cA.maxLag m₁ ≤ maxLag₁) →
+        (∀ (m₂ : Mode₂) (s₂ : S₂ m₂), cB.K ⟨m₂, s₂⟩ → cB.maxLag m₂ ≤ maxLag₂) →
+          (∀ (m₁ : Mode₁) (s₁ : S₁ m₁), cA.K ⟨m₁, s₁⟩ → cA.maxSilence m₁ ≤ maxSilence₁) →
+            (∀ (m₂ : Mode₂) (s₂ : S₂ m₂), cB.K ⟨m₂, s₂⟩ → cB.maxSilence m₂ ≤ maxSilence₂) →
+              (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (x : Site → Nat) (site : Site),
+                  cA.K ⟨m₁, s₁⟩ → x site < warnLevel site → cA.warnObs m₁ (obs₁ m₁ x)) →
+                (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (x : Site → Nat) (site : Site),
+                    cB.K ⟨m₂, s₂⟩ → x site < warnLevel site → cB.warnObs m₂ (obs₂ m₂ x)) →
+                  (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (ob₁ : Obs₁ ⟨m₁, s₁⟩.fst × Bool) (d₁ : Dist₁ m₁) (site : Site),
+                      cA.K ⟨m₁, s₁⟩ →
+                        (∀ (o : Obs₁ m₁ × Bool), cA.tol m₁ o d₁) →
+                          Becoming.PolyComposition.sumPortDraws (routeA (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst site)
+                              (cA.preCapExt (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst) ≤
+                            Becoming.PolyComposition.sumPortDraws (routeA m₁ site) (cA.preCapExt m₁)) →
+                    (∀ (m₁ : Mode₁) (s₁ : S₁ m₁) (ob₁ : Obs₁ ⟨m₁, s₁⟩.fst × Bool) (d₁ : Dist₁ m₁) (site : Site),
+                        cA.K ⟨m₁, s₁⟩ →
+                          (∀ (o : Obs₁ m₁ × Bool), cA.tol m₁ o d₁) →
+                            Becoming.PolyComposition.sumPortDraws (routeA (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst site)
+                                (cA.postAllowanceExt (A.next ⟨m₁, s₁⟩ ob₁ d₁).fst) ≤
+                              Becoming.PolyComposition.sumPortDraws (routeA m₁ site) (cA.postAllowanceExt m₁)) →
+                      (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (ob₂ : Obs₂ ⟨m₂, s₂⟩.fst × Bool) (d₂ : Dist₂ m₂) (site : Site),
+                          cB.K ⟨m₂, s₂⟩ →
+                            (∀ (o : Obs₂ m₂ × Bool), cB.tol m₂ o d₂) →
+                              Becoming.PolyComposition.sumPortDraws (routeB (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst site)
+                                  (cB.preCapExt (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst) ≤
+                                Becoming.PolyComposition.sumPortDraws (routeB m₂ site) (cB.preCapExt m₂)) →
+                        (∀ (m₂ : Mode₂) (s₂ : S₂ m₂) (ob₂ : Obs₂ ⟨m₂, s₂⟩.fst × Bool) (d₂ : Dist₂ m₂) (site : Site),
+                            cB.K ⟨m₂, s₂⟩ →
+                              (∀ (o : Obs₂ m₂ × Bool), cB.tol m₂ o d₂) →
+                                Becoming.PolyComposition.sumPortDraws (routeB (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst site)
+                                    (cB.postAllowanceExt (B.next ⟨m₂, s₂⟩ ob₂ d₂).fst) ≤
+                                  Becoming.PolyComposition.sumPortDraws (routeB m₂ site) (cB.postAllowanceExt m₂)) →
+                          (∀ (load : Nat) (env : Env),
+                              jointAdm env → load ≤ maxSilence₁ + maxSilence₂ → channel true load env = true) →
+                            (∀ (site : Site),
+                                Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+                                  (G site)) →
+                              (∀ (site : Site),
+                                  x_crit site ≤
+                                    Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G
+                                      H_safe x_crit site) →
+                                (∀ (site : Site), postLimit site + envCap site ≤ H_safe site) →
+                                  (∀ (site : Site),
+                                      x_crit site +
+                                          (Becoming.CoreHelpers.natMax maxLag₁ maxLag₂ + 1) *
+                                            (sitePreCap₁ site + sitePreCap₂ site + envCap site) ≤
+                                        warnLevel site) →
+                                    ∀ (st₀ : Becoming.PolyComposition.SerialCoordState Mode₁ Mode₂ S₁ S₂ Site),
+                                      Becoming.PolyComposition.serialReconfigInv routeA cA routeB cB sitePreCap₁
+                                          sitePreCap₂ envCap postLimit x_crit st₀ →
+                                        Becoming.Viability.Kernel
+                                          (Becoming.PolyComposition.SerialReconfigProcess A routeA cA B routeB cB
+                                            sitePreCap₁ sitePreCap₂ postLimit obs₁ obs₂ channel G envDraw jointAdm)
+                                          (Becoming.PolyComposition.serialReconfigGuard A routeA cA B routeB cB
+                                            postLimit x_crit)
+                                          st₀
+Becoming.PolyComposition.ConcurrentSerialWitness.gSub_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.PolyComposition.ConcurrentSerialWitness.gSub k)
+Becoming.PolyComposition.ConcurrentSerialWitness.candidate_load_eq : Becoming.Reconfiguration.responseLoad
+    Becoming.PolyComposition.ConcurrentSerialWitness.candidate 0 =
+  Becoming.PolyComposition.ConcurrentSerialWitness.slack
+Becoming.PolyComposition.ConcurrentSerialWitness.w₀_reconfig_eq : Becoming.Reconfiguration.reconfigure
+    Becoming.PolyComposition.ConcurrentSerialWitness.reqA.opened
+    Becoming.PolyComposition.ConcurrentSerialWitness.reqA.amount
+    Becoming.PolyComposition.ConcurrentSerialWitness.reqA.depth
+    Becoming.PolyComposition.ConcurrentSerialWitness.reqA.candidate
+    Becoming.PolyComposition.ConcurrentSerialWitness.w₀ =
+  some Becoming.PolyComposition.ConcurrentSerialWitness.w₁
+Becoming.PolyComposition.ConcurrentSerialWitness.csKernel_of_inv : ∀
+  (st :
+    Becoming.PolyComposition.SerialCoordState Becoming.PolyComposition.ConcurrentSerialWitness.SideMode
+      Becoming.PolyComposition.ConcurrentSerialWitness.SideMode Becoming.PolyComposition.ConcurrentSerialWitness.sideS
+      Becoming.PolyComposition.ConcurrentSerialWitness.sideS Unit),
+  Becoming.PolyComposition.serialReconfigInv Becoming.PolyComposition.ConcurrentSerialWitness.sideRoute
+      (Becoming.PolyComposition.ConcurrentSerialWitness.sideContract
+        ⟨Becoming.PolyComposition.ConcurrentSerialWitness.SideMode.standby, ()⟩)
+      Becoming.PolyComposition.ConcurrentSerialWitness.sideRoute
+      (Becoming.PolyComposition.ConcurrentSerialWitness.sideContract
+        ⟨Becoming.PolyComposition.ConcurrentSerialWitness.SideMode.standby, ()⟩)
+      Becoming.PolyComposition.ConcurrentSerialWitness.sitePreCap₁
+      Becoming.PolyComposition.ConcurrentSerialWitness.sitePreCap₂ (fun x => 0)
+      Becoming.PolyComposition.ConcurrentSerialWitness.H_avail Becoming.PolyComposition.ConcurrentSerialWitness.x_crit
+      st →
+    Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.csProc
+      Becoming.PolyComposition.ConcurrentSerialWitness.csGuard st
+Becoming.PolyComposition.ConcurrentSerialWitness.concurrent_serial_dichotomy : (Becoming.PolyComposition.ConcurrentSerialWitness.csProc.step
+      Becoming.PolyComposition.ConcurrentSerialWitness.st₀
+      (Becoming.PolyComposition.SerialCoordAct.reconfigA Becoming.PolyComposition.ConcurrentSerialWitness.reqA)
+      Becoming.PolyComposition.ConcurrentSerialWitness.stA ∧
+    Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.csProc
+      Becoming.PolyComposition.ConcurrentSerialWitness.csGuard Becoming.PolyComposition.ConcurrentSerialWitness.stA) ∧
+  (Becoming.PolyComposition.ConcurrentSerialWitness.csProc.step Becoming.PolyComposition.ConcurrentSerialWitness.st₀
+        (Becoming.PolyComposition.SerialCoordAct.reconfigB Becoming.PolyComposition.ConcurrentSerialWitness.reqB)
+        Becoming.PolyComposition.ConcurrentSerialWitness.stB ∧
+      Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.csProc
+        Becoming.PolyComposition.ConcurrentSerialWitness.csGuard Becoming.PolyComposition.ConcurrentSerialWitness.stB) ∧
+    ((Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 0).fst () = 4 ∧
+        (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 1).fst () = 3 ∧
+          (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 2).fst () = 1 ∧
+            (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 3).fst () = 0 ∧
+              ¬Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.concurrentUnguardedProcess
+                  (fun st => 3 ≤ st.fst ()) (Becoming.PolyComposition.ConcurrentSerialWitness.concurrentOrbit 0)) ∧
+      Becoming.Transactions.fresh Becoming.PolyComposition.ConcurrentSerialWitness.w₁.installation
+            Becoming.PolyComposition.ConcurrentSerialWitness.reqB.req =
+          false ∧
+        Becoming.Reconfiguration.reconfigure Becoming.PolyComposition.ConcurrentSerialWitness.reqB'.opened
+              Becoming.PolyComposition.ConcurrentSerialWitness.reqB'.amount
+              Becoming.PolyComposition.ConcurrentSerialWitness.reqB'.depth
+              Becoming.PolyComposition.ConcurrentSerialWitness.reqB'.candidate
+              Becoming.PolyComposition.ConcurrentSerialWitness.w₁ =
+            none ∧
+          (∀
+              (st' :
+                Becoming.PolyComposition.SerialCoordState Becoming.PolyComposition.ConcurrentSerialWitness.SideMode
+                  Becoming.PolyComposition.ConcurrentSerialWitness.SideMode
+                  Becoming.PolyComposition.ConcurrentSerialWitness.sideS
+                  Becoming.PolyComposition.ConcurrentSerialWitness.sideS Unit),
+              ¬Becoming.PolyComposition.ConcurrentSerialWitness.csProc.step
+                  Becoming.PolyComposition.ConcurrentSerialWitness.stA
+                  (Becoming.PolyComposition.SerialCoordAct.reconfigB
+                    Becoming.PolyComposition.ConcurrentSerialWitness.reqB')
+                  st') ∧
+            Becoming.Viability.Kernel Becoming.PolyComposition.ConcurrentSerialWitness.csProc
+              Becoming.PolyComposition.ConcurrentSerialWitness.csGuard
+              Becoming.PolyComposition.ConcurrentSerialWitness.st₀
+@Becoming.PolyComposition.jointOneStepGain_mono : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {tolA : ObsA × Bool → DistA → Prop}
+  {obsA : (Ext → Nat) → ObsA} {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat}
+  {MA : Becoming.SlackDist QA} {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext}
+  {tolB : ObsB × Bool → DistB → Prop} {obsB : (Ext → Nat) → ObsB} {RB : Generative.Process QB (QX × BB)} {πB : SB → QB}
+  {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A tolA obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B tolB obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  {r₁ r₂ : Nat},
+  r₁ ≤ r₂ →
+    Becoming.PolyComposition.jointOneStepGain simX simA simB r₁ ≤
+      Becoming.PolyComposition.jointOneStepGain simX simA simB r₂
+@Becoming.PolyComposition.le_jointOneStepGain : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {tolA : ObsA × Bool → DistA → Prop}
+  {obsA : (Ext → Nat) → ObsA} {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat}
+  {MA : Becoming.SlackDist QA} {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext}
+  {tolB : ObsB × Bool → DistB → Prop} {obsB : (Ext → Nat) → ObsB} {RB : Generative.Process QB (QX × BB)} {πB : SB → QB}
+  {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A tolA obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B tolB obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  (r : Nat), r ≤ Becoming.PolyComposition.jointOneStepGain simX simA simB r
+@Becoming.PolyComposition.iterStepGain_mono_r : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {tolA : ObsA × Bool → DistA → Prop}
+  {obsA : (Ext → Nat) → ObsA} {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat}
+  {MA : Becoming.SlackDist QA} {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext}
+  {tolB : ObsB × Bool → DistB → Prop} {obsB : (Ext → Nat) → ObsB} {RB : Generative.Process QB (QX × BB)} {πB : SB → QB}
+  {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A tolA obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B tolB obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  {r₁ r₂ : Nat},
+  r₁ ≤ r₂ →
+    ∀ (n : Nat),
+      Becoming.PolyComposition.iterStepGain simX simA simB r₁ n ≤
+        Becoming.PolyComposition.iterStepGain simX simA simB r₂ n
+@Becoming.PolyComposition.iterStepGain_mono_n : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {tolA : ObsA × Bool → DistA → Prop}
+  {obsA : (Ext → Nat) → ObsA} {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat}
+  {MA : Becoming.SlackDist QA} {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext}
+  {tolB : ObsB × Bool → DistB → Prop} {obsB : (Ext → Nat) → ObsB} {RB : Generative.Process QB (QX × BB)} {πB : SB → QB}
+  {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A tolA obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B tolB obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  {n₁ n₂ r : Nat},
+  n₁ ≤ n₂ →
+    Becoming.PolyComposition.iterStepGain simX simA simB r n₁ ≤
+      Becoming.PolyComposition.iterStepGain simX simA simB r n₂
+@Becoming.PolyComposition.le_iterStepGain : ∀ {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type}
+  {G : Ext → (Ext → Nat) → Nat} {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop}
+  {RX : Generative.Process QX ((Ext → Nat) × BX)} {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {tolA : ObsA × Bool → DistA → Prop}
+  {obsA : (Ext → Nat) → ObsA} {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat}
+  {MA : Becoming.SlackDist QA} {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext}
+  {tolB : ObsB × Bool → DistB → Prop} {obsB : (Ext → Nat) → ObsB} {RB : Generative.Process QB (QX × BB)} {πB : SB → QB}
+  {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A tolA obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B tolB obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  (r n : Nat), r ≤ Becoming.PolyComposition.iterStepGain simX simA simB r n
+@Becoming.PolyComposition.closedTrace_proj : ∀ {SA ObsA DistA IntA SB ObsB DistB IntB Ext Env : Type}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext}
+  {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext} {initA : SA} {initB : SB}
+  (cA : Becoming.OpenComposition.InterfaceContract A initA) (cB : Becoming.OpenComposition.InterfaceContract B initB)
+  (obsA : (Ext → Nat) → ObsA) (obsB : (Ext → Nat) → ObsB) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) {st st' : (Ext → Nat) × SA × SB}
+  {w : List (Env × DistA × DistB)},
+  Generative.Trace
+      (Becoming.OpenComposition.closedProcess (A.compose B) (Becoming.OpenComposition.composeContract cA cB)
+        (fun x => (obsA x, obsB x)) channel G envDraw jointAdm)
+      st w st' →
+    ∃ wX wA wB,
+      wX.length = w.length ∧
+        wA.length = w.length ∧
+          wB.length = w.length ∧
+            Generative.Trace (Becoming.PolyComposition.SubstratePortProcess G envDraw jointAdm) st.fst wX st'.fst ∧
+              Generative.Trace (Becoming.PolyComposition.OpenPortProcess A cA.tol obsA) st.snd.fst wA st'.snd.fst ∧
+                Generative.Trace (Becoming.PolyComposition.OpenPortProcess B cB.tol obsB) st.snd.snd wB st'.snd.snd
+@Becoming.PolyComposition.coupled_excursion_bound : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {initA : SA}
+  (cA : Becoming.OpenComposition.InterfaceContract A initA) {obsA : (Ext → Nat) → ObsA}
+  {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat} {MA : Becoming.SlackDist QA}
+  {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext} {initB : SB}
+  (cB : Becoming.OpenComposition.InterfaceContract B initB) {obsB : (Ext → Nat) → ObsB}
+  {RB : Generative.Process QB (QX × BB)} {πB : SB → QB} {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A cA.tol obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B cB.tol obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  (channel : Bool → Nat → Env → Bool) {k t : Nat} {q : QX × QA × QB},
+  simX.EpochQX k q.fst →
+    simA.EpochQ k q.snd.fst →
+      simB.EpochQ k q.snd.snd →
+        ∀ {st st' : (Ext → Nat) × SA × SB} {w : List (Env × DistA × DistB)} {r : Nat},
+          simX.EpochX t st.fst →
+            simA.Epoch t st.snd.fst →
+              simB.Epoch t st.snd.snd →
+                cA.K st.snd.fst →
+                  cB.K st.snd.snd →
+                    (Becoming.OpenComposition.SlackDist.max MX (Becoming.OpenComposition.SlackDist.max MA MB)).d
+                          (πX st.fst, πA st.snd.fst, πB st.snd.snd) q ≤
+                        r →
+                      Generative.Trace
+                          (Becoming.OpenComposition.closedProcess (A.compose B)
+                            (Becoming.OpenComposition.composeContract cA cB) (fun x => (obsA x, obsB x)) channel G
+                            envDraw jointAdm)
+                          st w st' →
+                        ∃ wX wA wB, wX.length = w.length ∧ wA.length = w.length ∧ ⋯
+@Becoming.PolyComposition.laxSim_trace_epoch : ∀ {S A Q B : Type} {P : Generative.Process S A}
+  {R : Generative.Process Q B} {π : S → Q} {σ : Nat → Nat} {M : Becoming.SlackDist Q} (sim : Becoming.LaxSim P R π σ M)
+  {t : Nat} {s u : S} {w : List A}, sim.Epoch t s → Generative.Trace P s w u → sim.Epoch (t + w.length) u
+@Becoming.PolyComposition.coupled_closed_lax_kernel : ∀
+  {Ext Env QX BX SA ObsA DistA IntA QA BA SB ObsB DistB IntB QB BB : Type} {G : Ext → (Ext → Nat) → Nat}
+  {envDraw : Env → Ext → Nat} {jointAdm : Env → Prop} {RX : Generative.Process QX ((Ext → Nat) × BX)}
+  {πX : (Ext → Nat) → QX} {σ : Nat → Nat} (strict_σ : Becoming.Strict σ) (Mstride : Nat)
+  (stride_le : ∀ (k : Nat), σ (k + 1) - σ k ≤ Mstride) {MX : Becoming.SlackDist QX}
+  {A : Becoming.OpenComposition.OpenComponent SA ObsA DistA IntA Ext} {initA : SA}
+  (cA : Becoming.OpenComposition.InterfaceContract A initA) (obsA : (Ext → Nat) → ObsA)
+  {RA : Generative.Process QA (QX × BA)} {πA : SA → QA} {drawQA : QA → Ext → Nat} {MA : Becoming.SlackDist QA}
+  {B : Becoming.OpenComposition.OpenComponent SB ObsB DistB IntB Ext} {initB : SB}
+  (cB : Becoming.OpenComposition.InterfaceContract B initB) (obsB : (Ext → Nat) → ObsB)
+  {RB : Generative.Process QB (QX × BB)} {πB : SB → QB} {drawQB : QB → Ext → Nat} {MB : Becoming.SlackDist QB}
+  (channel : Bool → Nat → Env → Bool) (simX : Becoming.PolyComposition.SubstrateLaxSim G envDraw jointAdm RX πX σ MX)
+  (simA : Becoming.PolyComposition.OpenSubLaxSim A cA.tol obsA RA πA drawQA σ MA MX πX simX.EpochX simX.EpochQX)
+  (simB : Becoming.PolyComposition.OpenSubLaxSim B cB.tol obsB RB πB drawQB σ MB MX πX simX.EpochX simX.EpochQX)
+  {guardQ KQ : QX × QA × QB → Prop},
+  Becoming.Viability.Certificate (Becoming.PolyComposition.coupledMacroProcess RX RA RB drawQA drawQB) guardQ KQ →
+    ∀ (x_crit : Ext → Nat) (Δ : Nat),
+      (Becoming.PolyComposition.coupled_closed_laxSim strict_σ Mstride stride_le cA obsA cB obsB channel simX simA
+                  simB).α
+              Δ +
+            (Becoming.PolyComposition.coupled_closed_laxSim strict_σ Mstride stride_le cA obsA cB obsB channel simX simA
+                simB).ε ≤
+          Δ →
+        (∀ (q : QX × QA × QB) (u : (Ext → Nat) × SA × SB),
+            guardQ q →
+              (Becoming.OpenComposition.SlackDist.max MX (Becoming.OpenComposition.SlackDist.max MA MB)).d
+                    (πX u.fst, πA u.snd.fst, πB u.snd.snd) q ≤
+                  (Becoming.PolyComposition.coupled_closed_laxSim strict_σ Mstride stride_le cA obsA cB obsB channel
+                          simX simA simB).β
+                      Δ +
+                    (Becoming.PolyComposition.coupled_closed_laxSim strict_σ Mstride stride_le cA obsA cB obsB channel
+                        simX simA simB).η →
+                ∀ (k : Ext), x_crit k ≤ u.fst k) →
+          ∀ {x₀ : Ext → Nat},
+            simX.EpochX (σ 0) x₀ →
+              simA.Epoch (σ 0) initA →
+                simB.Epoch (σ 0) initB →
+                  KQ (πX x₀, πA initA, πB initB) →
+                    Becoming.Viability.Kernel
+                      (Becoming.OpenComposition.closedProcess (A.compose B)
+                        (Becoming.OpenComposition.composeContract cA cB) (fun x => (obsA x, obsB x)) channel G envDraw
+                        jointAdm)
+                      (Becoming.OpenComposition.closedGuard (A.compose B)
+                        (Becoming.OpenComposition.composeContract cA cB) x_crit)
+                      (x₀, initA, initB)
+Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24_bounds : ∀ (n : Nat),
+  16 ≤ Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24 n ∧
+    Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24 n ≤ 24
+Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24_lip : ∀ (a b : Nat),
+  Becoming.distNat (Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24 a)
+      (Becoming.PolyComposition.CoupledSmallGainWitness.clamp16_24 b) ≤
+    Becoming.distNat a b
+Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_eq_mul_two : ∀ (m : Nat), 2 * m = m * 2
+Becoming.PolyComposition.CoupledSmallGainWitness.two_mul_div_two_le : ∀ (n : Nat), 2 * (n / 2) ≤ n
+Becoming.PolyComposition.CoupledSmallGainWitness.succ_div2_le : ∀ (d : Nat), (d + 1) / 2 ≤ d
+Becoming.PolyComposition.CoupledSmallGainWitness.div2_add_div2_succ : ∀ (d : Nat), d = d / 2 + (d + 1) / 2
+@Becoming.PolyComposition.CoupledSmallGainWitness.distNat_le_of_le : ∀ {a b M : Nat},
+  a ≤ M → b ≤ M → Becoming.distNat a b ≤ M
+@Becoming.PolyComposition.CoupledSmallGainWitness.le_sub_of_distNat_le : ∀ {x c r : Nat},
+  r ≤ c → Becoming.distNat x c ≤ r → c - r ≤ x
+Becoming.PolyComposition.CoupledSmallGainWitness.half_const_step_lip : ∀ (a b : Nat),
+  a ≤ 24 → b ≤ 24 → Becoming.distNat (a + (24 - a) / 2) (b + (24 - b) / 2) ≤ (Becoming.distNat a b + 1) / 2
+Becoming.PolyComposition.CoupledSmallGainWitness.sgSubStep_within_24 : ∀ (x h : Nat),
+  x ≤ 24 → x - h + (24 - (x - h)) / 2 ≤ 24
+Becoming.PolyComposition.CoupledSmallGainWitness.no_reduced_law_coupled : have stepFn := fun st =>
+  Becoming.OpenComposition.closedStep
+    (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.compose
+      Becoming.PolyComposition.CoupledSmallGainWitness.compGood)
+    (fun x =>
+      (Becoming.PolyComposition.CoupledSmallGainWitness.sgObs x,
+        Becoming.PolyComposition.CoupledSmallGainWitness.sgObs x))
+    Becoming.PolyComposition.CoupledSmallGainWitness.sgChannel Becoming.PolyComposition.CoupledSmallGainWitness.G_sg
+    Becoming.PolyComposition.CoupledSmallGainWitness.sgEnvDraw st ((), (), ());
+have π := fun st => (st.fst (), st.snd.fst.fst, st.snd.snd.fst);
+have st₁ := (fun x => 20, (10, false), 10, false);
+have st₂ := (fun x => 20, (10, true), 10, true);
+π st₁ = π st₂ ∧
+  (π (stepFn st₁)).fst = 20 ∧
+    (π (stepFn st₂)).fst = 19 ∧
+      (π (stepFn st₁)).fst ≠ (π (stepFn st₂)).fst ∧
+        ¬∃ reduced, ∀ (st : (Unit → Nat) × (Nat × Bool) × Nat × Bool), π (stepFn st) = reduced (π st)
+Becoming.PolyComposition.CoupledSmallGainWitness.nonzero_bidirectional_coupling : (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.next
+        (10, false) (16, false) ()).fst =
+    9 ∧
+  (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.next (10, false) (24, false) ()).fst = 10 ∧
+    (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.next (10, false) (16, false) ()).fst ≠
+        (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.next (10, false) (24, false) ()).fst ∧
+      Becoming.PolyComposition.CoupledSmallGainWitness.compGood.drawExt (6, false) () = 1 ∧
+        Becoming.PolyComposition.CoupledSmallGainWitness.compGood.drawExt (14, false) () = 3 ∧
+          Becoming.PolyComposition.CoupledSmallGainWitness.compGood.drawExt (6, false) () ≠
+            Becoming.PolyComposition.CoupledSmallGainWitness.compGood.drawExt (14, false) ()
+Becoming.PolyComposition.CoupledSmallGainWitness.coupled_small_gain_viable : Becoming.Viability.Kernel
+    Becoming.PolyComposition.CoupledSmallGainWitness.sgComposedGood
+    (Becoming.OpenComposition.closedGuard
+      (Becoming.PolyComposition.CoupledSmallGainWitness.compGood.compose
+        Becoming.PolyComposition.CoupledSmallGainWitness.compGood)
+      (Becoming.OpenComposition.composeContract
+        (Becoming.PolyComposition.CoupledSmallGainWitness.compGoodContract
+          Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitA ⋯)
+        (Becoming.PolyComposition.CoupledSmallGainWitness.compGoodContract
+          Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitB ⋯))
+      fun x => 16)
+    (Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodX0,
+      Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitA,
+      Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitB) ∧
+  Becoming.Viability.Kernel Becoming.PolyComposition.CoupledSmallGainWitness.sgComposedGood
+    (fun st => 16 ≤ st.fst () ∧ 6 ≤ st.snd.fst.fst ∧ 6 ≤ st.snd.snd.fst)
+    (Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodX0,
+      Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitA,
+      Becoming.PolyComposition.CoupledSmallGainWitness.sgGoodInitB)
+Becoming.PolyComposition.CoupledSmallGainWitness.small_gain_violation_contrast : ((Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit
+            0).fst
+        () =
+      20 ∧
+    (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit 1).fst () = 19 ∧
+      (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit 2).fst () = 18 ∧
+        (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit 2).snd.fst = 9 ∧
+          (∀ (t : Nat),
+              (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit (t + 2)).fst () = 18 ∧
+                (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit (t + 2)).snd.fst = 9) ∧
+            Becoming.Viability.Kernel Becoming.PolyComposition.CoupledSmallGainWitness.soloBadProcess
+              (fun st => 16 ≤ st.fst ()) (Becoming.PolyComposition.CoupledSmallGainWitness.soloBadOrbit 0)) ∧
+  ((Becoming.PolyComposition.CoupledSmallGainWitness.coupledBadOrbit 0).fst () = 20 ∧
+      (Becoming.PolyComposition.CoupledSmallGainWitness.coupledBadOrbit 1).fst () = 16 ∧
+        (Becoming.PolyComposition.CoupledSmallGainWitness.coupledBadOrbit 2).fst () = 14 ∧
+          ¬Becoming.Viability.Kernel Becoming.PolyComposition.CoupledSmallGainWitness.coupledBadProcess
+              (fun st => 16 ≤ st.fst ()) (Becoming.PolyComposition.CoupledSmallGainWitness.coupledBadOrbit 0)) ∧
+    (∀ (Δ : Nat),
+        ¬Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX.gain Δ (Δ / 2 + 4 + (Δ / 2 + 4)) +
+              Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX.ε ≤
+            Δ) ∧
+      ∀ (drawMod : Nat → Nat),
+        (∀ {r₁ r₂ : Nat}, r₁ ≤ r₂ → drawMod r₁ ≤ drawMod r₂) →
+          (∀ (s : Nat × Bool) (q r : Nat),
+              Becoming.distNat s.fst q ≤ r →
+                Becoming.distNat (Becoming.PolyComposition.CoupledSmallGainWitness.compBad.drawExt s ())
+                    (Becoming.PolyComposition.CoupledSmallGainWitness.sgDrawQ q ()) ≤
+                  drawMod r) →
+            ∀ (Δ : Nat),
+              Δ ≤ 4 →
+                ¬Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX.gain Δ (drawMod Δ + drawMod Δ) +
+                      Becoming.PolyComposition.CoupledSmallGainWitness.sgSimX.ε ≤
+                    Δ

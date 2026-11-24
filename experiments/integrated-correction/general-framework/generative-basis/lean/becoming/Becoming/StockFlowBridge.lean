@@ -272,6 +272,59 @@ theorem unitBalances_of_stockRun {levelFn takeFn giving : Nat → Nat}
 
 end StockUnification
 
+/-- Single-step clamped-subtraction balance discrepancy identity:
+for any `x' = (x - d) + u`, `x' + d = (x + u) + (d - x)`. -/
+theorem clampedStep_balance_discrepancy {x' x d u : Nat}
+    (step_eq : x' = (x - d) + u) :
+    x' + d = (x + u) + (d - x) := by
+  rw [step_eq, Nat.add_comm (x - d + u) d, Becoming.add_sub_turn_add x d u,
+    Nat.add_comm (d - x) u, ← Nat.add_assoc]
+
+/-- Pointwise clamped-step conservation holds if and only if draw does not exceed stock. -/
+theorem clampedStep_balance_iff_le {x' x d u : Nat}
+    (step_eq : x' = (x - d) + u) :
+    x' + d = x + u ↔ d ≤ x := by
+  rw [clampedStep_balance_discrepancy step_eq]
+  constructor
+  · intro hEq
+    exact Becoming.le_of_sub_eq_zero
+      (Becoming.add_right_cancel (x + u)
+        (by rw [Nat.zero_add, Nat.add_comm (d - x) (x + u)]; exact hEq))
+  · intro hle
+    rw [Becoming.sub_eq_zero_of_le hle, Nat.add_zero]
+
+/-- Finite-list clamped-step aggregate discrepancy: over any list of sites `ks`, total
+`(x' k + d k)` equals total `(x k + u k)` plus total pointwise overdraws `(d k - x k)`,
+even when replenishment `u k` depends on all residual stocks. -/
+theorem list_clampedStep_imbalance_eq_sum_overdraw {Site : Type}
+    (x' x d u : Site → Nat)
+    (step_eq : ∀ k, x' k = (x k - d k) + u k) :
+    ∀ ks : List Site,
+      total ks (fun k => x' k + d k) =
+        total ks (fun k => x k + u k) + total ks (fun k => d k - x k) := fun ks =>
+  (total_congr (fun k => clampedStep_balance_discrepancy (step_eq k)) ks).trans
+    (total_add (fun k => x k + u k) (fun k => d k - x k) ks)
+
+/-- Exact aggregate conservation on a finite list `ks` holds if and only if every listed site
+is covered (`d k ≤ x k`), derived solely from `list_clampedStep_imbalance_eq_sum_overdraw`. -/
+theorem list_clampedStep_exact_balance_iff_all_covered {Site : Type}
+    (x' x d u : Site → Nat)
+    (step_eq : ∀ k, x' k = (x k - d k) + u k) (ks : List Site) :
+    total ks (fun k => x' k + d k) = total ks (fun k => x k + u k) ↔
+      ∀ k, k ∈ ks → d k ≤ x k := by
+  rw [list_clampedStep_imbalance_eq_sum_overdraw x' x d u step_eq ks]
+  constructor
+  · intro hEq k hk
+    have hSum0 : total ks (fun j => d j - x j) = 0 :=
+      Becoming.add_right_cancel (total ks (fun j => x j + u j))
+        (by
+          rw [Nat.zero_add, Nat.add_comm (total ks fun j => d j - x j) (total ks fun j => x j + u j)]
+          exact hEq)
+    exact Becoming.le_of_sub_eq_zero
+      (Nat.le_zero.mp (hSum0 ▸ Becoming.le_total_of_mem (q := fun j => d j - x j) hk))
+  · intro hCov
+    rw [total_eq_zero (fun k hk => Becoming.sub_eq_zero_of_le (hCov k hk)), Nat.add_zero]
+
 /-- Unclamped single-step conservation lemma shared by both `LineOnAStock` and `WayUnderARule`. -/
 theorem unitBalancesOn_of_le {levelFn takeFn giving : Nat → Nat} {t : Nat}
     (step_eq : levelFn (t + 1) = RegimeMargin.step giving (takeFn t) (levelFn t))

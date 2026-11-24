@@ -1,0 +1,463 @@
+Becoming.AdaptiveLoops.le_natMax_left : ∀ (a b : Nat), a ≤ Becoming.AdaptiveLoops.natMax a b
+Becoming.AdaptiveLoops.le_natMax_right : ∀ (a b : Nat), b ≤ Becoming.AdaptiveLoops.natMax a b
+@Becoming.AdaptiveLoops.natMax_le : ∀ {a b c : Nat}, a ≤ c → b ≤ c → Becoming.AdaptiveLoops.natMax a b ≤ c
+@Becoming.AdaptiveLoops.natBlt_true_iff : ∀ {a b : Nat}, a.blt b = true ↔ a < b
+@Becoming.AdaptiveLoops.natBlt_false_iff : ∀ {a b : Nat}, a.blt b = false ↔ b ≤ a
+@Becoming.AdaptiveLoops.natBeq_true_iff : ∀ {a b : Nat}, a.beq b = true ↔ a = b
+@Becoming.AdaptiveLoops.indexedStep_mono : ∀ {ι : Type} {G : ι → (ι → Nat) → Nat},
+  (∀ (i : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G i)) →
+    ∀ (H : ι → Nat) {x y : ι → Nat},
+      (∀ (i : ι), x i ≤ y i) →
+        ∀ (j : ι),
+          Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j ≤
+            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H y j
+@Becoming.AdaptiveLoops.indexedStep_antitone_H : ∀ {ι : Type} {G : ι → (ι → Nat) → Nat},
+  (∀ (i : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G i)) →
+    ∀ {H H' : ι → Nat},
+      (∀ (j : ι), H j ≤ H' j) →
+        ∀ (x : ι → Nat) (j : ι),
+          Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H' x j ≤
+            Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j
+@Becoming.AdaptiveLoops.indexedStep_ge_sub : ∀ {ι : Type} (G : ι → (ι → Nat) → Nat) (H x : ι → Nat) (j : ι),
+  x j - H j ≤ Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H x j
+@Becoming.AdaptiveLoops.sumDraws_le : ∀ {α ι : Type} {f g : α → ι → Nat} (j : ι) {agents : List α},
+  (∀ (i : α), i ∈ agents → f i j ≤ g i j) →
+    Becoming.AdaptiveLoops.sumDraws agents f j ≤ Becoming.AdaptiveLoops.sumDraws agents g j
+@Becoming.AdaptiveLoops.le_foldNatMax_of_mem : ∀ {α : Type} {f : α → Nat} {agents : List α} {i : α},
+  i ∈ agents → f i ≤ Becoming.AdaptiveLoops.foldNatMax agents f
+@Becoming.AdaptiveLoops.foldNatMax_le_of_all : ∀ {α : Type} {f : α → Nat} {M : Nat} {agents : List α},
+  (∀ (i : α), i ∈ agents → f i ≤ M) → Becoming.AdaptiveLoops.foldNatMax agents f ≤ M
+@Becoming.AdaptiveLoops.foldNatMax_eq_zero : ∀ {α : Type} {f : α → Nat} {agents : List α},
+  (∀ (i : α), i ∈ agents → f i = 0) → Becoming.AdaptiveLoops.foldNatMax agents f = 0
+@Becoming.AdaptiveLoops.foldNatMax_succ_le : ∀ {α : Type} {f : α → Nat} {M : Nat},
+  0 < M →
+    ∀ {agents : List α}, (∀ (i : α), i ∈ agents → f i + 1 ≤ M) → Becoming.AdaptiveLoops.foldNatMax agents f + 1 ≤ M
+@Becoming.AdaptiveLoops.assume_guarantee_joint_viable : ∀ {α ι Env : Type} {S Obs Dist : α → Type} (agents : List α)
+  (sites : List ι),
+  (∀ (j : ι), j ∈ sites) →
+    ∀ (L : (i : α) → Becoming.AdaptiveLoops.OpenLoop (S i) (Obs i) (Dist i) ι) (init : (i : α) → S i)
+      (certs : (i : α) → Becoming.AdaptiveLoops.LoopCertificate (L i) (init i)) (obs : (i : α) → (ι → Nat) → Obs i)
+      (channel : (α → Bool) → (α → Nat) → Env → Bool) (G : ι → (ι → Nat) → Nat) (envDraw : Env → ι → Nat)
+      (envCap : ι → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (j : ι), envDraw env j ≤ envCap j) →
+        ∀ (x_crit warnLevel H_safe x₀ : ι → Nat) (monitored : α → ι → Prop),
+          (∀ (i : α),
+              i ∈ agents → ∀ (x : ι → Nat) (j : ι), monitored i j → x j < warnLevel j → (certs i).warnObs (obs i x)) →
+            (∀ (j : ι), j ∈ sites → ∃ i, i ∈ agents ∧ monitored i j) →
+              (∀ (emit : α → Bool) (load : α → Nat) (env : Env),
+                  jointAdm env →
+                    (∃ i, i ∈ agents ∧ emit i = true ∧ load i ≤ (certs i).maxSilence) →
+                      (∀ (i : α), i ∈ agents → load i ≤ (certs i).maxSilence) → channel emit load env = true) →
+                (∀ (i : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G i)) →
+                  (∀ (j : ι),
+                      x_crit j ≤
+                        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                          j) →
+                    (∀ (j : ι),
+                        Becoming.AdaptiveLoops.sumDraws agents (fun i => (certs i).postBudget) j + envCap j ≤
+                          H_safe j) →
+                      (∀ (j : ι),
+                          x_crit j +
+                              (Becoming.AdaptiveLoops.globalMaxLag agents certs + 1) *
+                                Becoming.AdaptiveLoops.preTotal agents certs envCap j ≤
+                            warnLevel j) →
+                        (∀ (j : ι),
+                            x_crit j +
+                                Becoming.AdaptiveLoops.maxEta agents certs init *
+                                  Becoming.AdaptiveLoops.preTotal agents certs envCap j ≤
+                              x₀ j) →
+                          Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit (x₀, init) ∧
+                            Becoming.Viability.Certificate
+                              (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw jointAdm)
+                              (Becoming.AdaptiveLoops.jointGuard agents L certs x_crit)
+                              (Becoming.AdaptiveLoops.jointInv agents certs envCap x_crit)
+@Becoming.AdaptiveLoops.assume_guarantee_joint_kernel : ∀ {α ι Env : Type} {S Obs Dist : α → Type} (agents : List α)
+  (sites : List ι),
+  (∀ (j : ι), j ∈ sites) →
+    ∀ (L : (i : α) → Becoming.AdaptiveLoops.OpenLoop (S i) (Obs i) (Dist i) ι) (init : (i : α) → S i)
+      (certs : (i : α) → Becoming.AdaptiveLoops.LoopCertificate (L i) (init i)) (obs : (i : α) → (ι → Nat) → Obs i)
+      (channel : (α → Bool) → (α → Nat) → Env → Bool) (G : ι → (ι → Nat) → Nat) (envDraw : Env → ι → Nat)
+      (envCap : ι → Nat) (jointAdm : Env → Prop),
+      (∀ (env : Env), jointAdm env → ∀ (j : ι), envDraw env j ≤ envCap j) →
+        ∀ (x_crit warnLevel H_safe x₀ : ι → Nat) (monitored : α → ι → Prop),
+          (∀ (i : α),
+              i ∈ agents → ∀ (x : ι → Nat) (j : ι), monitored i j → x j < warnLevel j → (certs i).warnObs (obs i x)) →
+            (∀ (j : ι), j ∈ sites → ∃ i, i ∈ agents ∧ monitored i j) →
+              (∀ (emit : α → Bool) (load : α → Nat) (env : Env),
+                  jointAdm env →
+                    (∃ i, i ∈ agents ∧ emit i = true ∧ load i ≤ (certs i).maxSilence) →
+                      (∀ (i : α), i ∈ agents → load i ≤ (certs i).maxSilence) → channel emit load env = true) →
+                (∀ (i : ι), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G i)) →
+                  (∀ (j : ι),
+                      x_crit j ≤
+                        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit
+                          j) →
+                    (∀ (j : ι),
+                        Becoming.AdaptiveLoops.sumDraws agents (fun i => (certs i).postBudget) j + envCap j ≤
+                          H_safe j) →
+                      (∀ (j : ι),
+                          x_crit j +
+                              (Becoming.AdaptiveLoops.globalMaxLag agents certs + 1) *
+                                Becoming.AdaptiveLoops.preTotal agents certs envCap j ≤
+                            warnLevel j) →
+                        (∀ (j : ι),
+                            x_crit j +
+                                Becoming.AdaptiveLoops.maxEta agents certs init *
+                                  Becoming.AdaptiveLoops.preTotal agents certs envCap j ≤
+                              x₀ j) →
+                          Becoming.Viability.Kernel
+                            (Becoming.AdaptiveLoops.jointProcess agents L certs obs channel G envDraw jointAdm)
+                            (Becoming.AdaptiveLoops.jointGuard agents L certs x_crit) (x₀, init)
+Becoming.AdaptiveLoops.majorityBool_true_iff : ∀ (K_silence loss : Nat) (l : Nat → Unit → Nat),
+  Becoming.AdaptiveLoops.majorityBool K_silence loss l = true ↔
+    Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+      l
+@Becoming.AdaptiveLoops.race_pool_majority_of_lt : ∀ {K_silence loss : Nat},
+  loss < K_silence →
+    Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+        (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.low) ∧
+      ¬Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+          (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+          (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.mid)
+@Becoming.AdaptiveLoops.race_pool_silenced_via_majority_outvoted : ∀ {K_silence loss : Nat},
+  K_silence ≤ loss →
+    (Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+          (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+          (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.low) ↔
+        Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+          (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+          (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.mid)) ∧
+      ¬Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+          (Becoming.AdaptiveLoops.raceMemberRead K_silence loss)
+          (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.low)
+Becoming.AdaptiveLoops.postDraw_coordinated : Becoming.AdaptiveLoops.postDraw
+    Becoming.AdaptiveLoops.CoordMode.coordinated =
+  1
+Becoming.AdaptiveLoops.postDraw_uncoordinated : Becoming.AdaptiveLoops.postDraw
+    Becoming.AdaptiveLoops.CoordMode.uncoordinated =
+  2
+Becoming.AdaptiveLoops.coordinated_pool_leaves_one : ∀ (t : Nat),
+  Becoming.Optimum.AtOnce.pool Becoming.AdaptiveLoops.shorePortion
+      (Becoming.AdaptiveLoops.drawerRules Becoming.AdaptiveLoops.CoordMode.coordinated) 2 t 2 =
+    1
+Becoming.AdaptiveLoops.uncoordinated_drain_perfect : ∀ (c N : Nat),
+  Becoming.Optimum.Coupled.AtOnce.Perfect (fun x x_1 => x_1) Becoming.AdaptiveLoops.shorePortion (fun x x_1 x_2 => 0)
+      (Becoming.AdaptiveLoops.drawerRules Becoming.AdaptiveLoops.CoordMode.uncoordinated) 2 c 2 N ∧
+    Becoming.AdaptiveLoops.postDraw Becoming.AdaptiveLoops.CoordMode.uncoordinated = 2 ∧
+      1 < Becoming.AdaptiveLoops.postDraw Becoming.AdaptiveLoops.CoordMode.uncoordinated
+@Becoming.AdaptiveLoops.any_uncoupled_perfect_on_shore_drains : ∀ {rules : Nat → Nat → Nat → Nat} {N t : Nat},
+  t + 1 = N →
+    Becoming.Optimum.Coupled.AtOnce.Perfect (fun x x_1 => x_1) Becoming.AdaptiveLoops.shorePortion (fun x x_1 x_2 => 0)
+        rules 2 0 2 N →
+      Becoming.Optimum.AtOnce.sumTo
+          (fun d => Becoming.AdaptiveLoops.shorePortion d t 2 - rules d t (Becoming.AdaptiveLoops.shorePortion d t 2))
+          2 =
+        2
+Becoming.AdaptiveLoops.raceGiving_atMost : Becoming.RegimeMargin.AtMost Becoming.AdaptiveLoops.raceGiving 1
+Becoming.AdaptiveLoops.raceGiving_fromNothing : Becoming.RegimeMargin.FromNothing Becoming.AdaptiveLoops.raceGiving
+Becoming.AdaptiveLoops.raceGiving_short_two : Becoming.RegimeMargin.Short Becoming.AdaptiveLoops.raceGiving 2 4
+Becoming.AdaptiveLoops.raceGiving_short_three : Becoming.RegimeMargin.Short Becoming.AdaptiveLoops.raceGiving 3 4
+@Becoming.AdaptiveLoops.valueEq_true_iff : ∀ {a b : Becoming.ReadingLoop.Untested.Value},
+  Becoming.AdaptiveLoops.valueEq a b = true ↔ a = b
+Becoming.AdaptiveLoops.race_alarm_gate_iff : ∀ (K_silence loss : Nat) (sensed : Becoming.ReadingLoop.Untested.Value),
+  (Becoming.AdaptiveLoops.isLowVal sensed && loss.blt K_silence &&
+        Becoming.AdaptiveLoops.majorityBool K_silence loss (Becoming.AdaptiveLoops.signalLevel sensed)) =
+      true ↔
+    sensed = Becoming.ReadingLoop.Untested.Value.low ∧
+      Becoming.PoolFromCourse.Stands K_silence (0, loss) ∧
+        Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+          (Becoming.AdaptiveLoops.raceMemberRead K_silence loss) (Becoming.AdaptiveLoops.signalLevel sensed)
+Becoming.AdaptiveLoops.good_after_four : ∀ (k : Nat),
+  Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams (k + 4) =
+    { t := k + 4, kept := [Becoming.ReadingLoop.Untested.World.down], alarmed := true, rule := false, ruleWait := 0,
+      actWait := 0, stock := 5, loss := 4, share := 0 }
+Becoming.AdaptiveLoops.WitnessGood : (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 1).loss = 1 ∧
+  (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 1).alarmed = false ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 2).alarmed = true ∧
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 2).ruleWait = 1 ∧
+        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 2).stock = 9 ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 3).ruleWait = 0 ∧
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 3).stock = 7 ∧
+              (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 4).rule = false ∧
+                (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams 4).stock = 5 ∧
+                  ∀ (t : Nat), 5 ≤ (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams t).stock
+Becoming.AdaptiveLoops.noDisc_stays : ∀ (t : Nat),
+  Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t =
+      Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscBenignParams t ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t).kept =
+        [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down] ∧
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t).alarmed = false ∧
+        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t).rule = true
+Becoming.AdaptiveLoops.WitnessNoDiscovery : (∀ (t : Nat),
+    Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t =
+      Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscBenignParams t) ∧
+  (∀ (t : Nat),
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t).kept =
+          [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down] ∧
+        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t).rule = true) ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams 6).stock = 0
+@Becoming.AdaptiveLoops.raceStep_silenced_step : ∀ {st : Becoming.AdaptiveLoops.RaceState},
+  st.alarmed = false →
+    st.rule = true →
+      2 ≤ st.loss →
+        (Becoming.AdaptiveLoops.raceStep Becoming.AdaptiveLoops.silencedParams st).alarmed = false ∧
+          (Becoming.AdaptiveLoops.raceStep Becoming.AdaptiveLoops.silencedParams st).rule = true ∧
+            2 ≤ (Becoming.AdaptiveLoops.raceStep Becoming.AdaptiveLoops.silencedParams st).loss
+Becoming.AdaptiveLoops.silenced_never_alarms : ∀ (t : Nat),
+  (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams t).alarmed = false ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams t).rule = true ∧
+      (2 ≤ t → 2 ≤ (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams t).loss)
+Becoming.AdaptiveLoops.WitnessSilenced : (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams
+        2).stock =
+    9 ∧
+  (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 2).loss = 2 ∧
+    ¬Becoming.PoolFromCourse.Stands 2
+          ((Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 2).share,
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 2).loss) ∧
+      ¬Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers
+            (Becoming.AdaptiveLoops.raceMemberRead 2
+              (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 2).loss)
+            (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.low) ∧
+        (∀ (t : Nat),
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams t).alarmed = false ∧
+              (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams t).rule = true) ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 6).stock = 0
+Becoming.AdaptiveLoops.WitnessUncoordinated : (∀ (c N : Nat),
+    Becoming.Optimum.Coupled.AtOnce.Perfect (fun x x_1 => x_1) Becoming.AdaptiveLoops.shorePortion (fun x x_1 x_2 => 0)
+      (Becoming.AdaptiveLoops.drawerRules Becoming.AdaptiveLoops.CoordMode.uncoordinated) 2 c 2 N) ∧
+  Becoming.AdaptiveLoops.postDraw Becoming.AdaptiveLoops.CoordMode.uncoordinated = 2 ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 4).rule = false ∧
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 4).stock = 5 ∧
+        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 5).stock = 3 ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 6).stock = 1 ∧
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 7).stock = 0
+Becoming.AdaptiveLoops.WitnessTooSlow : (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 1).loss =
+    1 ∧
+  (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 2).alarmed = true ∧
+    (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 4).rule = true ∧
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 4).stock = 5 ∧
+        (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 5).rule = false ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 5).stock = 2 ∧
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 5).stock < 5 ∧
+              (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 7).stock = 0
+Becoming.AdaptiveLoops.coupled_race_theorem : (∀ (t : Nat),
+    5 ≤ (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.goodParams t).stock) ∧
+  ((∀ (t : Nat),
+        Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams t =
+          Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscBenignParams t) ∧
+      (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.noDiscParams 6).stock = 0) ∧
+    (∀ {K loss : Nat},
+        K ≤ loss →
+          ¬Becoming.Web.MajorityHolds Becoming.AdaptiveLoops.raceMembers (Becoming.AdaptiveLoops.raceMemberRead K loss)
+              (Becoming.AdaptiveLoops.signalLevel Becoming.ReadingLoop.Untested.Value.low)) ∧
+      ((Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 2).stock = 9 ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.silencedParams 6).stock = 0) ∧
+        ((∀ (c N : Nat),
+              Becoming.Optimum.Coupled.AtOnce.Perfect (fun x x_1 => x_1) Becoming.AdaptiveLoops.shorePortion
+                (fun x x_1 x_2 => 0) (Becoming.AdaptiveLoops.drawerRules Becoming.AdaptiveLoops.CoordMode.uncoordinated)
+                2 c 2 N) ∧
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.uncoordParams 7).stock = 0) ∧
+          (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 5).stock < 5 ∧
+            (Becoming.AdaptiveLoops.raceOrbit Becoming.AdaptiveLoops.tooSlowParams 7).stock = 0
+@Becoming.AdaptiveLoops.paced_fast_succ_local : ∀ {S R : Type} (f : S → R → S) (h : S → R → R) (reads : Nat → Bool)
+  (c : S × R) (t : Nat),
+  (Becoming.Pace.paced f h reads c (t + 1)).fst =
+    f (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd
+@Becoming.AdaptiveLoops.unread_orbit_le : ∀ {A R : Type} {f : A × Nat → R → A × Nat} {h : A × Nat → R → R}
+  {reads : Nat → Bool} {gSub : Nat → Nat},
+  (∀ (z₁ z₂ : Nat), z₁ ≤ z₂ → gSub z₁ ≤ gSub z₂) →
+    ∀ (jointDraw : A → R → Nat),
+      (∀ (a : A) (x : Nat) (r : R), (f (a, x) r).snd = Becoming.RegimeMargin.step gSub (jointDraw a r) x) →
+        ∀ {a₀ : A} {r₀ : R} {b₀ H_joint : Nat},
+          (∀ (t : Nat),
+              H_joint ≤
+                jointDraw (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).fst.fst
+                  (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).snd) →
+            ∀ (t : Nat),
+              (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).fst.snd ≤
+                (Becoming.Law.run (Becoming.RegimeMargin.step gSub H_joint) b₀).state t
+@Becoming.AdaptiveLoops.unread_adaptive_joint_collapse : ∀ {A R : Type} {f : A × Nat → R → A × Nat}
+  {h : A × Nat → R → R} (reads : Nat → Bool),
+  Becoming.ClosedCapture.Unread f h →
+    ∀ {gSub : Nat → Nat},
+      (∀ (z₁ z₂ : Nat), z₁ ≤ z₂ → gSub z₁ ≤ gSub z₂) →
+        ∀ (jointDraw : A → R → Nat),
+          (∀ (a : A) (x : Nat) (r : R), (f (a, x) r).snd = Becoming.RegimeMargin.step gSub (jointDraw a r) x) →
+            ∀ (a₀ : A) (r₀ : R) (b₀ b_big H_joint Y y n : Nat),
+              (∀ (t : Nat),
+                  H_joint ≤
+                    jointDraw (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).fst.fst
+                      (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).snd) →
+                Becoming.RegimeMargin.AtMost gSub Y →
+                  Y ≤ H_joint →
+                    Becoming.RegimeMargin.Short gSub H_joint y →
+                      Becoming.RegimeMargin.FromNothing gSub →
+                        b₀ < H_joint + y + (H_joint - Y) * n →
+                          (∀ (t : Nat),
+                              (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).fst.fst =
+                                  (Becoming.Pace.paced f h reads ((a₀, b_big), r₀) t).fst.fst ∧
+                                (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).snd =
+                                  (Becoming.Pace.paced f h reads ((a₀, b_big), r₀) t).snd) ∧
+                            (∀ (t : Nat),
+                                (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) t).fst.snd ≤
+                                  (Becoming.Law.run (Becoming.RegimeMargin.step gSub H_joint) b₀).state t) ∧
+                              ∃ T, T < n + (H_joint + y) ∧ (Becoming.Pace.paced f h reads ((a₀, b₀), r₀) T).fst.snd = 0
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_mono : ∀ (z₁ z₂ : Nat),
+  z₁ ≤ z₂ →
+    Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub z₁ ≤ Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub z₂
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_atMost : Becoming.RegimeMargin.AtMost
+  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 3
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_short_four : Becoming.RegimeMargin.Short
+  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 4 3
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub_fromNothing : Becoming.RegimeMargin.FromNothing
+  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_holds_true : (Becoming.Law.orbit
+        Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep (6, true) 0).fst =
+    6 ∧
+  (Becoming.Law.orbit Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep (6, true) 1).fst = 7 ∧
+    (Becoming.Law.orbit Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep (6, true) 2).fst = 7 ∧
+      ∀ (t : Nat), 6 ≤ (Becoming.Law.orbit Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep (6, true) t).fst
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_three : ∀ (t : Nat),
+  (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 3) 6).state t = 6
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.solo_const_two : (Becoming.Law.run
+          (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 2) 6).state
+      0 =
+    6 ∧
+  (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 2) 6).state 1 = 7 ∧
+    (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 2) 6).state 2 = 8 ∧
+      ∀ (t : Nat),
+        6 ≤
+          (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 2) 6).state t
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.joint_unread : Becoming.ClosedCapture.Unread
+  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw_ge_four : ∀ (a : Nat × Nat) (r : Bool × Bool),
+  4 ≤ Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointDraw a r
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.localOK_holds : ∀ (b : Nat) (r₀ : Bool × Bool) (t : Nat),
+  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK
+    ((Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+            Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), b), r₀) t).fst.fst,
+      (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+          Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), b), r₀) t).snd)
+Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.witness : ((∀ (t : Nat),
+      6 ≤ (Becoming.Law.orbit Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.soloStep (6, true) t).fst) ∧
+    ∀ (t : Nat),
+      (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.gSub 3) 6).state t =
+        6) ∧
+  ((Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+              Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, true)
+              0).fst.snd =
+        6 ∧
+      (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, true)
+                1).fst.snd =
+          2 ∧
+        (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, true)
+                  2).fst.snd =
+            0 ∧
+          (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                    Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, false)
+                    0).fst.snd =
+              6 ∧
+            (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                      Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, false)
+                      1).fst.snd =
+                1 ∧
+              (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                      Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), true, false)
+                      2).fst.snd =
+                0) ∧
+    (∀ (r₀ : Bool × Bool) (t : Nat),
+        (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), r₀) t).fst.fst =
+            (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 100), r₀) t).fst.fst ∧
+          (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), r₀) t).snd =
+              (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                  Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 100), r₀) t).snd ∧
+            Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.LocalOK
+              ((Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                      Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), r₀) t).fst.fst,
+                (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                    Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), r₀) t).snd)) ∧
+      (∀ (r₀ : Bool × Bool),
+          ∃ T,
+            T < 1 + 7 ∧
+              (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                      Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 6), r₀)
+                      T).fst.snd =
+                0) ∧
+        (Becoming.Pace.paced Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointF
+                Becoming.AdaptiveLoops.UnreadAdaptiveCollapse.jointH (fun x => true) (((6, 6), 100), true, true)
+                2).fst.snd =
+          96
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG_rises : ∀ (j : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG j)
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_determined : ∀ (oa : Bool × Bool),
+  Becoming.Determined (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt oa)
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt_rule_matters : ¬Becoming.GoAlike
+    (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt (false, false)) Prod.fst
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext_is_adaptive : ∀
+  (s : Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState) (oa : Bool × Bool),
+  (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAdapt oa).step s ()
+    (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogNext s oa ())
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_joint_viable : ∀
+  (init :
+    Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent →
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogState)
+  (x₀ : Unit → Nat),
+  6 +
+        Becoming.AdaptiveLoops.maxEta Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+            (fun i => Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i (init i)) init *
+          4 ≤
+      x₀ () →
+    Becoming.AdaptiveLoops.jointInv Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+        (fun i => Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i (init i)) (fun x => 0) (fun x => 6)
+        (x₀, init) ∧
+      Becoming.Viability.Certificate
+        (Becoming.AdaptiveLoops.jointProcess Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop
+          (fun i => Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i (init i))
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG (fun x x_1 => 0) fun x => True)
+        (Becoming.AdaptiveLoops.jointGuard Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop
+          (fun i => Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i (init i)) fun x => 6)
+        (Becoming.AdaptiveLoops.jointInv Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+          (fun i => Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i (init i)) (fun x => 0) fun x => 6)
+Becoming.AdaptiveLoops.EndogenousCompositeWitness.endog_bidirectional_adaptation : Becoming.Viability.Kernel
+    (Becoming.AdaptiveLoops.jointProcess Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop
+      (fun i =>
+        Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours)
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogObs
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogChannel
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogG (fun x x_1 => 0) fun x => True)
+    (Becoming.AdaptiveLoops.jointGuard Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogAgents
+      Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop
+      (fun i =>
+        Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogCert i
+          Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours)
+      fun x => 6)
+    (fun x => 10, fun x => Becoming.AdaptiveLoops.EndogenousCompositeWitness.initFavours) ∧
+  (∀ (i : Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent),
+      ¬(Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop i).favours
+          ((Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 0).snd i)) ∧
+    (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 0).fst () = 16 ∧
+      (∀ (i : Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent),
+          (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop i).favours
+            ((Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 1).snd i)) ∧
+        (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 1).fst () = 16 ∧
+          (∀ (i : Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent),
+              (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop i).favours
+                ((Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 2).snd i)) ∧
+            (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 2).fst () = 14 ∧
+              (∀ (i : Becoming.AdaptiveLoops.EndogenousCompositeWitness.EndogAgent),
+                  ¬(Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogOpenLoop i).favours
+                      ((Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 3).snd i)) ∧
+                (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state 3).fst () = 12 ∧
+                  ∀ (t : Nat), 6 ≤ (Becoming.AdaptiveLoops.EndogenousCompositeWitness.endogRun.state t).fst ()

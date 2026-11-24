@@ -1,0 +1,921 @@
+Becoming.ActiveInquiryLoop.explore_margin_step : ∀ (x_crit rem probeTot postSpan x H g_val : Nat),
+  H ≤ probeTot → x_crit + (rem + 1) * probeTot + postSpan ≤ x → x_crit + rem * probeTot + postSpan ≤ x - H + g_val
+@Becoming.ActiveInquiryLoop.sub_lt_of_lt_add : ∀ {x H d y : Nat}, H ≤ d → d ≤ x → x < H + y → x - d < y
+@Becoming.ActiveInquiryLoop.varDraw_falls_or_bound_while : ∀ {x d gain : Nat → Nat} {Y H_min b n : Nat},
+  (∀ (t : Nat), t < n → x (t + 1) = x t - d t + gain t) →
+    (∀ (t : Nat), t < n → gain t ≤ Y) →
+      (∀ (t : Nat), t < n → x t < d t → gain t = 0) →
+        Y ≤ H_min →
+          (∀ (t : Nat), t < n → (∀ (j : Nat), j ≤ t → b ≤ x j) → H_min ≤ d t) →
+            0 < b →
+              ∀ (m : Nat), m ≤ n → (∃ k, k ≤ m ∧ x k < b) ∨ x m + (H_min - Y) * m ≤ x 0 ∧ ∀ (j : Nat), j ≤ m → b ≤ x j
+@Becoming.ActiveInquiryLoop.varDraw_falls_within_while : ∀ {x d gain : Nat → Nat} {Y H_min b : Nat},
+  (∀ (t : Nat), x (t + 1) = x t - d t + gain t) →
+    (∀ (t : Nat), gain t ≤ Y) →
+      (∀ (t : Nat), x t < d t → gain t = 0) →
+        Y ≤ H_min →
+          ∀ (n : Nat),
+            (∀ (t : Nat), t < n → (∀ (j : Nat), j ≤ t → b ≤ x j) → H_min ≤ d t) →
+              0 < b → x 0 < b + (H_min - Y) * n → ∃ k, k ≤ n ∧ x k < b
+@Becoming.ActiveInquiryLoop.varDraw_short_collapses : ∀ {x d gain : Nat → Nat} {b_nr T : Nat},
+  (∀ (t : Nat), x (t + 1) = x t - d t + gain t) →
+    0 < b_nr →
+      (∀ (t : Nat), T ≤ t → x t < d t → x t < b_nr → gain t = 0) →
+        (∀ (t : Nat), T ≤ t → d t ≤ x t → x t < b_nr → gain t < d t) →
+          x T < b_nr →
+            (∀ (k : Nat), x (T + k) < b_nr ∧ x (T + k) ≤ x T - k) ∧ x (T + x T) = 0 ∧ ∀ (m : Nat), x (T + x T + m) = 0
+@Becoming.ActiveInquiryLoop.silent_drawdown_refutes_kernel : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C init) (obs : (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool)
+  (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) (x_crit x₀ : Ext → Nat)
+  (site_crit : Ext) {Y H_pre n : Nat},
+  (∀ (e : Ext → Nat), G site_crit e ≤ Y) →
+    Becoming.RegimeMargin.Coupled.Indexed.DependsOn Becoming.RegimeMargin.Drawn.whole G site_crit site_crit →
+      Y < H_pre →
+        0 < x_crit site_crit →
+          ∀ (env_adm : Env),
+            jointAdm env_adm →
+              ∀ (d₀ : Dist),
+                (∀ (ob : Obs × Bool), c.tol ob d₀) →
+                  (have orb :=
+                      Becoming.Law.orbit
+                        (fun st => Becoming.OpenComposition.closedStep C obs channel G envDraw st (env_adm, d₀))
+                        (x₀, init);
+                    ∀ (t : Nat),
+                      t < n →
+                        (∀ (j : Nat), j ≤ t → x_crit site_crit ≤ (orb j).fst site_crit) →
+                          H_pre ≤ C.drawExt (orb t).snd site_crit) →
+                    x₀ site_crit < x_crit site_crit + (H_pre - Y) * n →
+                      ¬Becoming.Viability.Kernel
+                          (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+                          (Becoming.OpenComposition.closedGuard C c x_crit) (x₀, init)
+@Becoming.ActiveInquiryLoop.probeTranscript_congr : ∀ {Θ Probe Outcome Obs_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env) (plan : Nat → Probe) (θ : Θ)
+  {xs₁ xs₂ : Nat → Site → Nat} (t : Nat),
+  (∀ (s : Nat), s < t → xs₁ s = xs₂ s) →
+    Becoming.ActiveInquiryLoop.probeTranscript W plan θ xs₁ t =
+      Becoming.ActiveInquiryLoop.probeTranscript W plan θ xs₂ t
+@Becoming.ActiveInquiryLoop.opContract_K_eta_congr : ∀ {Θ S_op Obs_op Dist_op Int_op Site : Type}
+  (opComp : Θ → Becoming.OpenComposition.OpenComponent S_op Obs_op Dist_op Int_op Site) (opInit : Θ → S_op)
+  (opContract : (θ : Θ) → Becoming.OpenComposition.InterfaceContract (opComp θ) (opInit θ)) {hat θ : Θ},
+  hat = θ → (opContract θ).K (opInit hat) ∧ (opContract θ).eta (opInit hat) = (opContract θ).eta (opInit θ)
+@Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable : ∀
+  {Θ Probe Outcome S_op Obs_op Dist_op Int_op Site Env : Type}
+  (W : Becoming.ActiveInquiryLoop.RegimeWorld Θ Probe Outcome Obs_op Site Env)
+  (spec : Becoming.ActiveInquiryLoop.ActiveInquirySpec Θ Probe Outcome S_op Obs_op Dist_op Int_op Site) (θ : Θ)
+  (channel : Bool → Nat → Env → Bool) (x_crit warnLevel H_safe x₀ : Site → Nat),
+  (∀ (xs : Nat → Site → Nat),
+      (∀ (t : Nat), t < spec.horizon → ∀ (site : Site), x_crit site ≤ xs t site) →
+        spec.infer (Becoming.ActiveInquiryLoop.probeTranscript W spec.plan θ xs spec.horizon) = θ) →
+    (∀ (x : Site → Nat) (site : Site), x site < warnLevel site → (spec.opContract θ).warnObs (W.opObs θ x)) →
+      (∀ (load : Nat) (env : Env),
+          W.jointAdm env → load ≤ (spec.opContract θ).maxSilence → channel true load env = true) →
+        (∀ (site : Site),
+            x_crit site ≤
+              Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole (W.G θ) H_safe x_crit site) →
+          (∀ (site : Site), (spec.opContract θ).postBudgetExt site + W.envCap site ≤ H_safe site) →
+            (∀ (site : Site),
+                x_crit site + ((spec.opContract θ).maxLag + 1) * ((spec.opContract θ).preCapExt site + W.envCap site) ≤
+                  warnLevel site) →
+              (∀ (site : Site),
+                  x_crit site + spec.horizon * (spec.probeDraw site + W.envCap site) +
+                      ((spec.opContract θ).maxLag + 1) * ((spec.opContract θ).preCapExt site + W.envCap site) ≤
+                    x₀ site) →
+                have proc :=
+                  Becoming.PolyComposition.polyClosedProcess (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+                    (fun x site => [site]) (Becoming.ActiveInquiryLoop.inquiryContract spec)
+                    (Becoming.ActiveInquiryLoop.inquiryWorldObs W spec θ) channel (W.G θ) (W.envDraw θ) W.jointAdm;
+                Becoming.Viability.Certificate proc
+                    (Becoming.PolyComposition.polyClosedGuard (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+                      (Becoming.ActiveInquiryLoop.inquiryContract spec) x_crit)
+                    (Becoming.ActiveInquiryLoop.ExploreMarginInv W spec θ x_crit) ∧
+                  Becoming.Viability.Kernel proc
+                    (Becoming.PolyComposition.polyClosedGuard (Becoming.ActiveInquiryLoop.inquiryPolyComponent spec)
+                      (Becoming.ActiveInquiryLoop.inquiryContract spec) x_crit)
+                    (x₀, Becoming.ActiveInquiryLoop.inquiryInit spec)
+@Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse : ∀ {S A I Q Obs P : Type}
+  {C₁ : Becoming.CausalSystem S A I} (C₂ : Becoming.CausalSystem Q A Bool) {π : S → Q} {ω : I → Bool},
+  C₂.obs = false →
+    ω C₁.obs = false →
+      (∃ j₀, ω j₀ = true) →
+        ∀ (r : Becoming.Run C₁.passive) (r_benign : Becoming.Run C₂.passive),
+          r_benign.state 0 = π (r.state 0) →
+            (∀ (s : Nat), r_benign.act s = r.act s) →
+              ∀ {t : Nat} {k_probe : Q} {a_probe : A},
+                (∃ Proc, Becoming.Determined Proc ∧ r.StepsThrough π Proc t) →
+                  ¬r.TakesThrough π t k_probe a_probe →
+                    Becoming.Determined C₂.passive →
+                      Becoming.Determined (C₂.proc true) →
+                        Becoming.FactorsThrough C₁.passive π C₂.passive →
+                          ∀ {κ₁ κ₂ : Q},
+                            κ₁ ≠ κ₂ →
+                              ∀ {Y H_pre H_safe y_safe n : Nat} (g_frag x_frag : Nat → Nat)
+                                (policy : Nat → (Nat → Obs) → P) (draw : P → Nat),
+                                (∀ (s : Nat) (o₁ o₂ : Nat → Obs),
+                                    (∀ (j : Nat), j ≤ s → o₁ j = o₂ j) → policy s o₁ = policy s o₂) →
+                                  ∀ (readObs : Q → Obs) (obsFrag : Nat → Obs),
+                                    (∀ (s : Nat), H_safe + y_safe ≤ x_frag s → obsFrag s = readObs (π (r.state s))) →
+                                      (∀ (s : Nat),
+                                          x_frag (s + 1) =
+                                            Becoming.RegimeMargin.step g_frag (draw (policy s obsFrag)) (x_frag s)) →
+                                        Becoming.RegimeMargin.AtMost g_frag Y →
+                                          Y < H_pre →
+                                            Becoming.RegimeMargin.Short g_frag H_safe y_safe →
+                                              Becoming.RegimeMargin.FromNothing g_frag →
+                                                0 < H_safe + y_safe →
+                                                  (∀ (s : Nat),
+                                                      H_pre ≤ draw (policy s fun k => readObs (r_benign.state k))) →
+                                                    (∀ (s : Nat),
+                                                        x_frag s < H_safe + y_safe → H_safe ≤ draw (policy s obsFrag)) →
+                                                      x_frag 0 < H_safe + y_safe + (H_pre - Y) * n →
+                                                        ((¬∃ κ, r.FixesThrough π t k_probe a_probe κ) ∧
+                                                            ∃ j₀ D₁ D₂,
+                                                              ω j₀ = true ∧
+                                                                (D₁.proc (ω j₀)).step k_probe a_probe κ₁ ∧
+                                                                  (D₂.proc (ω j₀)).step k_probe a_probe κ₂ ∧
+                                                                    r.StepsThrough π D₁.passive t ∧
+                                                                      r.StepsThrough π D₂.passive t) ∧
+                                                          ∃ T,
+                                                            T ≤ n ∧
+                                                              x_frag T < H_safe + y_safe ∧
+                                                                (∀ (k : Nat), x_frag (T + k) < H_safe + y_safe) ∧
+                                                                  x_frag (T + x_frag T) = 0 ∧
+                                                                    ∀ (m : Nat), x_frag (T + x_frag T + m) = 0
+@Becoming.ActiveInquiryLoop.learnable_passive_underdetermined : ∀ {S R V : Type} {next : S → S} {reg : S → R}
+  {val : S → V} (pred : List R → Option V) {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    (∀ (T : Nat), ∃ t, T ≤ t ∧ val (r.state t) ≠ val (r'.state t)) →
+      ∀ (g : Nat → Becoming.Run (Becoming.Law.process next) → Option V),
+        Becoming.LearnableRuns.FixedThrough reg g →
+          ¬(Becoming.LearnableRuns.Predicts reg val pred r ∧ Becoming.LearnableRuns.Predicts reg val pred r') ∧
+            ¬(Becoming.Learnable.Predicts next reg val pred (r.state 0) ∧
+                  Becoming.Learnable.Predicts next reg val pred (r'.state 0)) ∧
+              ¬Becoming.Limit.Tracks g fun k run => some (val (run.state k))
+@Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction : ∀ {S A Θ P : Type} [inst : DecidableEq Θ]
+  {Proc : Generative.Process S A} (g : Nat → Becoming.Run Proc → Option Θ) (H : Becoming.Run Proc → Θ),
+  (Becoming.Limit.Identifies g fun r => some (H r)) →
+    (∀ (k : Nat) (r r' : Becoming.Run Proc), Becoming.Run.AgreeUpTo k r r' → g k r = g k r') →
+      ∀ {D : Nat} (r_benign r_frag : Becoming.Run Proc),
+        Becoming.Run.AgreeUpTo D r_benign r_frag →
+          ∀ (g_frag x_frag : Nat → Nat) (policy : Nat → Option Θ → P) (draw : P → Nat) {Y H_pre H_safe y_safe : Nat},
+            (∀ (t : Nat),
+                x_frag (t + 1) = Becoming.RegimeMargin.step g_frag (draw (policy t (g t r_frag))) (x_frag t)) →
+              Becoming.RegimeMargin.AtMost g_frag Y →
+                Y < H_pre →
+                  Becoming.RegimeMargin.Short g_frag H_safe y_safe →
+                    Becoming.RegimeMargin.FromNothing g_frag →
+                      0 < H_safe + y_safe →
+                        (∀ (t : Nat), t < D → H_pre ≤ draw (policy t (g t r_benign))) →
+                          (∀ (t : Nat), x_frag t < H_safe + y_safe → H_safe ≤ draw (policy t (g t r_frag))) →
+                            x_frag 0 < H_safe + y_safe + (H_pre - Y) * D →
+                              (Becoming.Limit.Verifies (Becoming.Limit.says g (some (H r_benign))) fun r =>
+                                  some (H r) = some (H r_benign)) ∧
+                                (∀ (t : Nat), t ≤ D → g t r_frag = g t r_benign) ∧
+                                  ∃ T,
+                                    T ≤ D ∧
+                                      x_frag T < H_safe + y_safe ∧
+                                        x_frag (T + x_frag T) = 0 ∧ ∀ (m : Nat), x_frag (T + x_frag T + m) = 0
+@Becoming.ActiveInquiryLoop.exploration_deadline_impossibility : ∀ {F C Obs P : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs_web : F → C → Prop} {source : Nat → F → Prop} {g_mon : F} {D_probe : Nat},
+  (∀ (t : Nat), t < D_probe → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D_probe → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D_probe → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D_probe →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs_web h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            ∀ (readStep : (Nat → C → Nat) → Nat → Obs),
+              (∀ (t : Nat),
+                  t ≤ D_probe →
+                    ∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs_web g_mon l l' t → readStep l t = readStep l' t) →
+                ¬Becoming.TimedResponse.ReachedBy L L' W obs_web source g_mon D_probe →
+                  ∀ (g_frag x_frag : Nat → Nat) (policy : Nat → Obs → P) (draw : P → Nat)
+                    {Y H_explore H_safe y_safe : Nat},
+                    (∀ (t : Nat),
+                        x_frag (t + 1) =
+                          Becoming.RegimeMargin.step g_frag (draw (policy t (readStep W'.level t))) (x_frag t)) →
+                      Becoming.RegimeMargin.AtMost g_frag Y →
+                        Y < H_explore →
+                          Becoming.RegimeMargin.Short g_frag H_safe y_safe →
+                            Becoming.RegimeMargin.FromNothing g_frag →
+                              0 < H_safe + y_safe →
+                                (∀ (t : Nat), t < D_probe → H_explore ≤ draw (policy t (readStep W.level t))) →
+                                  (∀ (t : Nat), D_probe ≤ t → H_safe ≤ draw (policy t (readStep W'.level t))) →
+                                    x_frag 0 < H_safe + y_safe + (H_explore - Y) * D_probe →
+                                      (∀ (t : Nat), t ≤ D_probe → readStep W.level t = readStep W'.level t) ∧
+                                        ∃ T,
+                                          T ≤ D_probe ∧
+                                            x_frag T < H_safe + y_safe ∧
+                                              x_frag (T + x_frag T) = 0 ∧ ∀ (m : Nat), x_frag (T + x_frag T + m) = 0
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.gRegime_rises : ∀ (θ : Bool) (_site : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole fun e =>
+    Becoming.ActiveInquiryLoop.ActiveProbeWitness.gRegime θ (e ())
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both : ∀ (θ : Bool) (xs : Nat → Unit → Nat),
+  (∀ (t : Nat),
+      t < Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec.horizon →
+        ∀ (site : Unit), Becoming.ActiveInquiryLoop.ActiveProbeWitness.xCrit site ≤ xs t site) →
+    Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec.infer
+        (Becoming.ActiveInquiryLoop.probeTranscript Becoming.ActiveInquiryLoop.ActiveProbeWitness.world
+          Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec.plan θ xs
+          Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec.horizon) =
+      θ
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable : ∀ (θ : Bool),
+  Becoming.Viability.Kernel
+    (Becoming.PolyComposition.polyClosedProcess
+      (Becoming.ActiveInquiryLoop.inquiryPolyComponent Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec)
+      (fun x site => [site])
+      (Becoming.ActiveInquiryLoop.inquiryContract Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec)
+      (Becoming.ActiveInquiryLoop.inquiryWorldObs Becoming.ActiveInquiryLoop.ActiveProbeWitness.world
+        Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec θ)
+      Becoming.ActiveInquiryLoop.ActiveProbeWitness.channel (Becoming.ActiveInquiryLoop.ActiveProbeWitness.world.G θ)
+      (Becoming.ActiveInquiryLoop.ActiveProbeWitness.world.envDraw θ)
+      Becoming.ActiveInquiryLoop.ActiveProbeWitness.world.jointAdm)
+    (Becoming.PolyComposition.polyClosedGuard
+      (Becoming.ActiveInquiryLoop.inquiryPolyComponent Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec)
+      (Becoming.ActiveInquiryLoop.inquiryContract Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec)
+      Becoming.ActiveInquiryLoop.ActiveProbeWitness.xCrit)
+    (Becoming.ActiveInquiryLoop.ActiveProbeWitness.xStart20,
+      Becoming.ActiveInquiryLoop.inquiryInit Becoming.ActiveInquiryLoop.ActiveProbeWitness.spec)
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes : Becoming.ActiveInquiryLoop.ActiveProbeWitness.passiveFragOrbit
+    17 =
+  0
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes : (Becoming.ActiveInquiryLoop.ActiveProbeWitness.lowProbeFragOrbit
+      4).snd =
+  0
+Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_safe_holds : ∀ (n : Nat),
+  Becoming.Law.orbit (Becoming.RegimeMargin.step (Becoming.ActiveInquiryLoop.ActiveProbeWitness.gRegime false) 2) 9 n =
+    9
+@Becoming.ActiveInquiryLoop.composeList_warnObs_of_mem : ∀ {α S Obs Dist Int Ext : Type}
+  {comp : α → Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext} {init : α → S}
+  (contract : (i : α) → Becoming.OpenComposition.InterfaceContract (comp i) (init i)) {obsFn : α → (Ext → Nat) → Obs}
+  {x : Ext → Nat} (tail : List α) (head : α),
+  (∃ i, i ∈ head :: tail ∧ (contract i).warnObs (obsFn i x)) →
+    (Becoming.OpenComposition.composeListContract contract head tail).warnObs
+      (Becoming.ActiveInquiryLoop.composeListObsIndexed obsFn head tail x)
+@Becoming.ActiveInquiryLoop.composeList_viable_indexed : ∀ {α S Obs Dist Int Ext Env : Type}
+  (comp : α → Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (init : α → S)
+  (contract : (i : α) → Becoming.OpenComposition.InterfaceContract (comp i) (init i)) (head : α) (tail : List α)
+  (obsFn : α → (Ext → Nat) → Obs) (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → ∃ i, i ∈ head :: tail ∧ (contract i).warnObs (obsFn i x)) →
+        (∀ (load : Nat) (env : Env),
+            jointAdm env →
+              load ≤ Becoming.OpenComposition.listSum (fun i => (contract i).maxSilence) head tail →
+                channel true load env = true) →
+          (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+            (∀ (k : Ext),
+                x_crit k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+              (∀ (k : Ext),
+                  Becoming.OpenComposition.listSum (fun i => (contract i).postBudgetExt k) head tail + envCap k ≤
+                    H_safe k) →
+                (∀ (k : Ext),
+                    x_crit k +
+                        (Becoming.OpenComposition.listMax (fun i => (contract i).maxLag) head tail + 1) *
+                          (Becoming.OpenComposition.listSum (fun i => (contract i).preCapExt k) head tail + envCap k) ≤
+                      warnLevel k) →
+                  (∀ (k : Ext),
+                      x_crit k +
+                          Becoming.OpenComposition.listMax (fun i => (contract i).eta (init i)) head tail *
+                            (Becoming.OpenComposition.listSum (fun i => (contract i).preCapExt k) head tail +
+                              envCap k) ≤
+                        x₀ k) →
+                    Becoming.Viability.Kernel
+                      (Becoming.OpenComposition.closedProcess
+                        (Becoming.OpenComposition.composeListComponent comp head tail)
+                        (Becoming.OpenComposition.composeListContract contract head tail)
+                        (Becoming.ActiveInquiryLoop.composeListObsIndexed obsFn head tail) channel G envDraw jointAdm)
+                      (Becoming.OpenComposition.closedGuard
+                        (Becoming.OpenComposition.composeListComponent comp head tail)
+                        (Becoming.OpenComposition.composeListContract contract head tail) x_crit)
+                      (x₀, Becoming.OpenComposition.composeListInit init head tail)
+@Becoming.ActiveInquiryLoop.cascadeListObs_eq_of_act_eq : ∀ {O A Ext : Type} (T : Becoming.Turns (Ext → Nat) O A)
+  {x x_safe : Ext → Nat},
+  (∀ (i : Nat), T.act x i = T.act x_safe i) →
+    ∀ (tail : List Nat) (head : Nat),
+      Becoming.ActiveInquiryLoop.cascadeListObs T head tail x =
+        Becoming.ActiveInquiryLoop.cascadeListObs T head tail x_safe
+@Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike : ∀ {S Dist Int Ext O : Type}
+  (comp : Nat → Becoming.OpenComposition.OpenComponent S Bool Dist Int Ext) (T : Becoming.Turns (Ext → Nat) O Bool)
+  {k : Nat},
+  T.ReadsOnlyActsFrom k →
+    ∀ {x x_safe : Ext → Nat},
+      T.AlikeBefore k x x_safe →
+        ∀ (tail : List Nat) (head : Nat) (st : Becoming.OpenComposition.ListCarrier S tail),
+          (Becoming.OpenComposition.composeListComponent comp head tail).emitAlarm st
+              (Becoming.ActiveInquiryLoop.cascadeListObs T head tail x) =
+            (Becoming.OpenComposition.composeListComponent comp head tail).emitAlarm st
+              (Becoming.ActiveInquiryLoop.cascadeListObs T head tail x_safe)
+@Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike : ∀ {S Dist Int Ext O : Type}
+  (comp : Nat → Becoming.OpenComposition.OpenComponent S Bool Dist Int Ext) (T : Becoming.Turns (Ext → Nat) O Bool)
+  {k : Nat} {x x_safe : Ext → Nat},
+  T.LawAlikeAlong k x x_safe →
+    T.AlikeBefore k x x_safe →
+      ∀ (tail : List Nat) (head : Nat) (st : Becoming.OpenComposition.ListCarrier S tail),
+        (Becoming.OpenComposition.composeListComponent comp head tail).emitAlarm st
+            (Becoming.ActiveInquiryLoop.cascadeListObs T head tail x) =
+          (Becoming.OpenComposition.composeListComponent comp head tail).emitAlarm st
+            (Becoming.ActiveInquiryLoop.cascadeListObs T head tail x_safe)
+@Becoming.ActiveInquiryLoop.composeList_tol : ∀ {S Obs Dist Int Ext : Type}
+  {comp : Nat → Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext} {init : Nat → S}
+  (contract : (i : Nat) → Becoming.OpenComposition.InterfaceContract (comp i) (init i)) (d₀ : Nat → Dist),
+  (∀ (i : Nat) (ob : Obs × Bool), (contract i).tol ob (d₀ i)) →
+    ∀ (tail : List Nat) (head : Nat) (ob : Becoming.OpenComposition.ListCarrier Obs tail × Bool),
+      (Becoming.OpenComposition.composeListContract contract head tail).tol ob
+        (Becoming.ActiveInquiryLoop.composeListDist d₀ head tail)
+@Becoming.ActiveInquiryLoop.natMax_pos_cases : ∀ {a b : Nat}, 0 < Becoming.CoreHelpers.natMax a b → 0 < a ∨ 0 < b
+@Becoming.ActiveInquiryLoop.composeList_eta_kept_unwarned : ∀ {S Obs Dist Int Ext : Type}
+  {comp : Nat → Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext} {init : Nat → S}
+  (contract : (i : Nat) → Becoming.OpenComposition.InterfaceContract (comp i) (init i)),
+  (∀ (i : Nat) (s : S) (ob : Obs) (d : Dist),
+      (contract i).tol (ob, false) d → 0 < (contract i).eta s → 0 < (contract i).eta ((comp i).next s (ob, false) d)) →
+    ∀ (tail : List Nat) (head : Nat) (st : Becoming.OpenComposition.ListCarrier S tail)
+      (ob : Becoming.OpenComposition.ListCarrier Obs tail) (d : Becoming.OpenComposition.ListCarrier Dist tail),
+      (Becoming.OpenComposition.composeListContract contract head tail).tol (ob, false) d →
+        0 < (Becoming.OpenComposition.composeListContract contract head tail).eta st →
+          0 <
+            (Becoming.OpenComposition.composeListContract contract head tail).eta
+              ((Becoming.OpenComposition.composeListComponent comp head tail).next st (ob, false) d)
+@Becoming.ActiveInquiryLoop.cascade_list_capture_collapse : ∀ {Y : Nat} {S Dist Int Ext Env O : Type}
+  (comp : Nat → Becoming.OpenComposition.OpenComponent S Bool Dist Int Ext) (init : Nat → S)
+  (contract : (i : Nat) → Becoming.OpenComposition.InterfaceContract (comp i) (init i)) (head : Nat) (tail : List Nat)
+  (T : Becoming.Turns (Ext → Nat) O Bool) {k : Nat},
+  T.ReadsOnlyActsFrom k →
+    ∀ (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+      (jointAdm : Env → Prop) (x_crit x₀ x_safe : Ext → Nat) (site_crit : Ext) (env_adm : Env),
+      jointAdm env_adm →
+        ∀ (d₀ : Nat → Dist),
+          (∀ (i : Nat) (ob : Bool × Bool), (contract i).tol ob (d₀ i)) →
+            ∀ (P_inv : (Ext → Nat) × Becoming.OpenComposition.ListCarrier S tail → Prop),
+              P_inv (x₀, Becoming.OpenComposition.composeListInit init head tail) →
+                (∀ (x : Ext → Nat) (st : Becoming.OpenComposition.ListCarrier S tail),
+                    P_inv (x, st) →
+                      x_crit site_crit ≤ x site_crit →
+                        P_inv
+                          (Becoming.OpenComposition.closedStep
+                            (Becoming.OpenComposition.composeListComponent comp head tail)
+                            (Becoming.ActiveInquiryLoop.cascadeListObs T head tail) channel G envDraw (x, st)
+                            (env_adm, Becoming.ActiveInquiryLoop.composeListDist d₀ head tail))) →
+                  (∀ (load : Nat) (env : Env), channel false load env = false) →
+                    (∀ (st : Becoming.OpenComposition.ListCarrier S tail),
+                        (Becoming.OpenComposition.composeListComponent comp head tail).emitAlarm st
+                            (Becoming.ActiveInquiryLoop.cascadeListObs T head tail x_safe) =
+                          false) →
+                      (∀ (x : Ext → Nat) (st : Becoming.OpenComposition.ListCarrier S tail),
+                          P_inv (x, st) → x_crit site_crit ≤ x site_crit → T.AlikeBefore k x x_safe) →
+                        (∀ (e : Ext → Nat), G site_crit e ≤ Y) →
+                          Becoming.RegimeMargin.Coupled.Indexed.DependsOn Becoming.RegimeMargin.Drawn.whole G site_crit
+                              site_crit →
+                            ∀ (H_pre : Nat),
+                              Y < H_pre →
+                                (∀ (x : Ext → Nat) (st : Becoming.OpenComposition.ListCarrier S tail),
+                                    P_inv (x, st) →
+                                      (Becoming.OpenComposition.composeListContract contract head tail).K st →
+                                        0 < (Becoming.OpenComposition.composeListContract contract head tail).eta st →
+                                          H_pre ≤
+                                            (Becoming.OpenComposition.composeListComponent comp head tail).drawExt st
+                                              site_crit) →
+                                  (∀ (i : Nat) (s : S) (ob : Bool) (d : Dist),
+                                      (contract i).tol (ob, false) d →
+                                        0 < (contract i).eta s → 0 < (contract i).eta ((comp i).next s (ob, false) d)) →
+                                    0 <
+                                        (Becoming.OpenComposition.composeListContract contract head tail).eta
+                                          (Becoming.OpenComposition.composeListInit init head tail) →
+                                      ∀ (n : Nat),
+                                        x₀ site_crit < x_crit site_crit + (H_pre - Y) * n →
+                                          0 < x_crit site_crit →
+                                            ¬Becoming.Viability.Kernel
+                                                (Becoming.OpenComposition.closedProcess
+                                                  (Becoming.OpenComposition.composeListComponent comp head tail)
+                                                  (Becoming.OpenComposition.composeListContract contract head tail)
+                                                  (Becoming.ActiveInquiryLoop.cascadeListObs T head tail) channel G
+                                                  envDraw jointAdm)
+                                                (Becoming.OpenComposition.closedGuard
+                                                  (Becoming.OpenComposition.composeListComponent comp head tail)
+                                                  (Becoming.OpenComposition.composeListContract contract head tail)
+                                                  x_crit)
+                                                (x₀, Becoming.OpenComposition.composeListInit init head tail)
+@Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse : ∀ {Y : Nat} {SA SB DistA DistB IntA IntB Ext Env O : Type}
+  (A : Becoming.OpenComposition.OpenComponent SA Bool DistA IntA Ext)
+  (B : Becoming.OpenComposition.OpenComponent SB Bool DistB IntB Ext) {initA : SA} {initB : SB}
+  (cA : Becoming.OpenComposition.InterfaceContract A initA) (cB : Becoming.OpenComposition.InterfaceContract B initB)
+  (T : Becoming.Turns (Ext → Nat) O Bool),
+  T.ReadsOnlyActsFrom 1 →
+    ∀ (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+      (jointAdm : Env → Prop) (x_crit x₀ x_safe : Ext → Nat) (site_crit : Ext),
+      (∀ (load : Nat) (env : Env), channel false load env = false) →
+        (∀ (sA : SA) (sB : SB), (A.compose B).emitAlarm (sA, sB) (T.act x_safe 0, T.act x_safe 1) = false) →
+          (∀ (x : Ext → Nat), x_crit site_crit ≤ x site_crit → T.coupling 0 x = T.coupling 0 x_safe) →
+            (∀ (e : Ext → Nat), G site_crit e ≤ Y) →
+              Becoming.RegimeMargin.Coupled.Indexed.DependsOn Becoming.RegimeMargin.Drawn.whole G site_crit site_crit →
+                ∀ (H_pre : Nat),
+                  Y < H_pre →
+                    (∀ (sA : SA) (sB : SB),
+                        cA.K sA →
+                          cB.K sB →
+                            0 < cA.eta sA ∨ 0 < cB.eta sB → H_pre ≤ A.drawExt sA site_crit + B.drawExt sB site_crit) →
+                      (∀ (sA : SA) (sB : SB) (ob : Bool × Bool) (dA : DistA) (dB : DistB),
+                          cA.tol (ob.fst, false) dA →
+                            cB.tol (ob.snd, false) dB →
+                              0 < cA.eta sA ∨ 0 < cB.eta sB →
+                                0 < cA.eta (A.next sA (ob.fst, false) dA) ∨ 0 < cB.eta (B.next sB (ob.snd, false) dB)) →
+                        0 < cA.eta initA ∨ 0 < cB.eta initB →
+                          ∀ (env_adm : Env),
+                            jointAdm env_adm →
+                              ∀ (dA₀ : DistA) (dB₀ : DistB),
+                                (∀ (ob : Bool × Bool), cA.tol ob dA₀ ∧ cB.tol ob dB₀) →
+                                  ∀ (n : Nat),
+                                    x₀ site_crit < x_crit site_crit + (H_pre - Y) * n →
+                                      0 < x_crit site_crit →
+                                        ¬Becoming.Viability.Kernel
+                                            (Becoming.OpenComposition.closedProcess (A.compose B)
+                                              (Becoming.OpenComposition.composeContract cA cB)
+                                              (fun x => (T.act x 0, T.act x 1)) channel G envDraw jointAdm)
+                                            (Becoming.OpenComposition.closedGuard (A.compose B)
+                                              (Becoming.OpenComposition.composeContract cA cB) x_crit)
+                                            (x₀, initA, initB)
+Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_rises : ∀ (site : Bool),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool site)
+Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_dep_true : Becoming.RegimeMargin.Coupled.Indexed.DependsOn
+  Becoming.RegimeMargin.Drawn.whole Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool true true
+Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes : ¬Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      (Becoming.OpenComposition.composeListComponent Becoming.ActiveInquiryLoop.CascadePoolWitness.memberComp 0 [1, 2])
+      (Becoming.OpenComposition.composeListContract Becoming.ActiveInquiryLoop.CascadePoolWitness.memberContract 0
+        [1, 2])
+      (Becoming.ActiveInquiryLoop.cascadeListObs Becoming.ActiveInquiryLoop.CascadePoolWitness.cascadeTurns 0 [1, 2])
+      Becoming.ActiveInquiryLoop.CascadePoolWitness.channel Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool
+      (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard
+      (Becoming.OpenComposition.composeListComponent Becoming.ActiveInquiryLoop.CascadePoolWitness.memberComp 0 [1, 2])
+      (Becoming.OpenComposition.composeListContract Becoming.ActiveInquiryLoop.CascadePoolWitness.memberContract 0
+        [1, 2])
+      Becoming.ActiveInquiryLoop.CascadePoolWitness.xCrit)
+    (Becoming.ActiveInquiryLoop.CascadePoolWitness.xStart,
+      Becoming.OpenComposition.composeListInit (fun x => 1) 0 [1, 2])
+Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess
+    (Becoming.OpenComposition.composeListComponent Becoming.ActiveInquiryLoop.CascadePoolWitness.memberComp 0 [1, 2])
+    (Becoming.OpenComposition.composeListContract Becoming.ActiveInquiryLoop.CascadePoolWitness.memberContract 0 [1, 2])
+    (Becoming.ActiveInquiryLoop.independentListObs Becoming.ActiveInquiryLoop.CascadePoolWitness.cascadeTurns 0 [1, 2])
+    Becoming.ActiveInquiryLoop.CascadePoolWitness.channel Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool
+    (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard
+    (Becoming.OpenComposition.composeListComponent Becoming.ActiveInquiryLoop.CascadePoolWitness.memberComp 0 [1, 2])
+    (Becoming.OpenComposition.composeListContract Becoming.ActiveInquiryLoop.CascadePoolWitness.memberContract 0 [1, 2])
+    Becoming.ActiveInquiryLoop.CascadePoolWitness.xCrit)
+  (Becoming.ActiveInquiryLoop.CascadePoolWitness.xStart, Becoming.OpenComposition.composeListInit (fun x => 1) 0 [1, 2])
+@Becoming.ActiveInquiryLoop.coupling_distance_obs_alike : ∀ {F C Obs : Type} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {source : Nat → F → Prop} {S_src D : Nat} {g_mon : F},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            (∀ (t : Nat) (h : F), source t h → S_src ≤ t) →
+              ∀ (read : (Nat → C → Nat) → Obs),
+                (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs g_mon l l' D → read l = read l') →
+                  (∀ (n s : Nat) (c : C),
+                      s ≤ D →
+                        Becoming.TimedResponse.CoupledIntoAt W obs g_mon s c →
+                          Becoming.TimedResponse.Linked L L' W obs source n c → D < S_src + n) →
+                    read W.level = read W'.level
+@Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction : ∀ {F C S Obs Dist Int Ext Env : Type}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {obs_web : F → C → Prop} {source : Nat → F → Prop} {g_mon : F}
+  {S_src D : Nat} (C_comp : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract C_comp init) (ext_crit : Ext)
+  (readStep : (Nat → C → Nat) → Nat → Obs),
+  (∀ (t : Nat),
+      t ≤ D → ∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs_web g_mon l l' t → readStep l t = readStep l' t) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+      (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+        (∀ (t : Nat), t < D → L.present t = L'.present t) →
+          (∀ (c : C), W.level 0 c = W'.level 0 c) →
+            (∀ (t : Nat),
+                t < D →
+                  ∀ (h : F),
+                    ¬source t h →
+                      W.AlikeThroughUpTo obs_web h W.level W'.level t →
+                        ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+              (∀ (t : Nat) (h : F), source t h → S_src ≤ t) →
+                (∀ (n s : Nat) (c : C),
+                    s ≤ D →
+                      Becoming.TimedResponse.CoupledIntoAt W obs_web g_mon s c →
+                        Becoming.TimedResponse.Linked L L' W obs_web source n c → D < S_src + n) →
+                  (∀ (t : Nat) (s : S), t ≤ D → C_comp.emitAlarm s (readStep W.level t) = false) →
+                    ∀ (channel : Bool → Nat → Env → Bool),
+                      (∀ (load : Nat) (env : Env), channel false load env = false) →
+                        ∀ (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop)
+                          (x₀ x_crit : Ext → Nat) {Y H_pre H_safe y_safe : Nat},
+                          (∀ (e : Ext → Nat), G ext_crit e ≤ Y) →
+                            Becoming.RegimeMargin.Coupled.Indexed.DependsOn Becoming.RegimeMargin.Drawn.whole G ext_crit
+                                ext_crit →
+                              (∀ (e : Ext → Nat), e ext_crit < y_safe → G ext_crit e < H_safe) →
+                                Y < H_pre →
+                                  0 < H_safe + y_safe →
+                                    0 < x_crit ext_crit →
+                                      (∀ (s : S), c.K s → 0 < c.eta s → H_pre ≤ C_comp.drawExt s ext_crit) →
+                                        (∀ (s : S), c.K s → H_safe ≤ C_comp.drawExt s ext_crit) →
+                                          0 < c.eta init →
+                                            (∀ (s : S) (ob : Obs) (d : Dist),
+                                                c.tol (ob, false) d →
+                                                  0 < c.eta s → 0 < c.eta (C_comp.next s (ob, false) d)) →
+                                              ∀ (env_adm : Env),
+                                                jointAdm env_adm →
+                                                  ∀ (d₀ : Dist),
+                                                    (∀ (ob : Obs × Bool), c.tol ob d₀) →
+                                                      x₀ ext_crit < H_safe + y_safe + (H_pre - Y) * (D + 1) →
+                                                        (∀ (t : Nat),
+                                                            t ≤ D → readStep W'.level t = readStep W.level t) ∧
+                                                          (∃ T,
+                                                              T ≤ D + 1 ∧
+                                                                have orb :=
+                                                                  Becoming.Law.orbit (fun st => ⋯) (x₀, ⟨0, init⟩);
+                                                                (orb T).fst ext_crit < H_safe + y_safe ∧
+                                                                  (orb (T + (orb T).fst ext_crit)).fst ext_crit = 0 ∧
+                                                                    ⋯) ∧
+                                                            ¬Becoming.Viability.Kernel
+                                                                (Becoming.PolyComposition.polyClosedProcess
+                                                                  (Becoming.ActiveInquiryLoop.clockedPolyComponent
+                                                                    C_comp)
+                                                                  (fun x e => [e])
+                                                                  (Becoming.ActiveInquiryLoop.clockedPolyContract c)
+                                                                  (fun t x => readStep W'.level t) channel G envDraw
+                                                                  jointAdm)
+                                                                (Becoming.PolyComposition.polyClosedGuard
+                                                                  (Becoming.ActiveInquiryLoop.clockedPolyComponent
+                                                                    C_comp)
+                                                                  (Becoming.ActiveInquiryLoop.clockedPolyContract c)
+                                                                  x_crit)
+                                                                (x₀, ⟨0, init⟩)
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_rises : ∀ (site : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay site)
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_dep : Becoming.RegimeMargin.Coupled.Indexed.DependsOn
+  Becoming.RegimeMargin.Drawn.whole Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay () ()
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_balanced : ∀ (b : Bool) (t : Nat),
+  t < 2 →
+    ∀ (c : Becoming.TimedResponse.Relay.Spot),
+      (Becoming.TimedResponse.Relay.web b).level (t + 1) c + (Becoming.TimedResponse.Relay.flow b).taken t c =
+        (Becoming.TimedResponse.Relay.web b).level t c + (Becoming.TimedResponse.Relay.flow b).given t c
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_responds : ∀ (t : Nat),
+  t < 2 →
+    ∀ (h : Becoming.TimedResponse.Relay.Node),
+      ¬Becoming.TimedResponse.Relay.sourceAt t h →
+        (Becoming.TimedResponse.Relay.web false).AlikeThroughUpTo Becoming.TimedResponse.Relay.reads h
+            (Becoming.TimedResponse.Relay.web false).level (Becoming.TimedResponse.Relay.web true).level t →
+          ∀ (c : Becoming.TimedResponse.Relay.Spot),
+            (Becoming.TimedResponse.Relay.flow false).take t h c = (Becoming.TimedResponse.Relay.flow true).take t h c ∧
+              (Becoming.TimedResponse.Relay.flow false).give t h c = (Becoming.TimedResponse.Relay.flow true).give t h c
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes : (∀ (t : Nat),
+    t ≤ 2 →
+      Becoming.ActiveInquiryLoop.DelayObstructionWitness.readRelayStep (Becoming.TimedResponse.Relay.web true).level t =
+        Becoming.ActiveInquiryLoop.DelayObstructionWitness.readRelayStep (Becoming.TimedResponse.Relay.web false).level
+          t) ∧
+  ¬Becoming.Viability.Kernel
+      (Becoming.PolyComposition.polyClosedProcess
+        (Becoming.ActiveInquiryLoop.clockedPolyComponent Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayComp)
+        (fun x e => [e])
+        (Becoming.ActiveInquiryLoop.clockedPolyContract
+          Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayContract)
+        (fun t x =>
+          Becoming.ActiveInquiryLoop.DelayObstructionWitness.readRelayStep (Becoming.TimedResponse.Relay.web true).level
+            t)
+        Becoming.ActiveInquiryLoop.DelayObstructionWitness.channel
+        Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay (fun x x_1 => 0) fun x => True)
+      (Becoming.PolyComposition.polyClosedGuard
+        (Becoming.ActiveInquiryLoop.clockedPolyComponent Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayComp)
+        (Becoming.ActiveInquiryLoop.clockedPolyContract
+          Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayContract)
+        Becoming.ActiveInquiryLoop.DelayObstructionWitness.xCrit)
+      (Becoming.ActiveInquiryLoop.DelayObstructionWitness.xStart, ⟨0, 1⟩)
+Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayComp
+    Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayContract (fun x => (x ()).blt 8)
+    Becoming.ActiveInquiryLoop.DelayObstructionWitness.channel Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay
+    (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayComp
+    Becoming.ActiveInquiryLoop.DelayObstructionWitness.relayContract
+    Becoming.ActiveInquiryLoop.DelayObstructionWitness.xCrit)
+  (Becoming.ActiveInquiryLoop.DelayObstructionWitness.xStart, 1)
+@Becoming.ActiveInquiryLoop.network_threshold_blindness : ∀ {F C : Type} [DecidableEq C]
+  {law : Becoming.ExchangeLaw F C} {W_net W_net' : Becoming.Web F C} {obs_net : F → C → Prop} {part : F → Bool}
+  {L_net L_net' : Becoming.Flow F C} {c_stock : C} {θ_net : Nat → Nat},
+  law.Through W_net obs_net part →
+    (∀ (h : F), part h = false → ¬obs_net h c_stock) →
+      (∀ (h : F) (s : Nat), part h = false → W_net.requires s h c_stock → W_net.need s h c_stock ≤ θ_net s) →
+        L_net.Balances W_net →
+          L_net'.Balances W_net' →
+            (∀ (t : Nat), L_net.present t = L_net'.present t) →
+              L_net.ActsAlike L_net' part →
+                L_net.Follows law part W_net.level →
+                  L_net'.Follows law part W_net'.level →
+                    ∀ {d_res T_net : Nat},
+                      (∀ (s : Nat), s < T_net → θ_net s ≤ W_net.level s c_stock) →
+                        (∀ (e : C), e ≠ c_stock → W_net.level 0 e = W_net'.level 0 e) →
+                          W_net'.level 0 c_stock = W_net.level 0 c_stock + d_res →
+                            law.ReadsBelow part c_stock θ_net ∧
+                              (∀ (t : Nat),
+                                  t ≤ T_net →
+                                    (∀ (e : C), e ≠ c_stock → W_net.level t e = W_net'.level t e) ∧
+                                      W_net'.level t c_stock = W_net.level t c_stock + d_res) ∧
+                                ∀ (h : F) (cc : C) (s t_ev : Nat),
+                                  part h = false → ¬law.RespondsByLevel W_net t_ev h cc s c_stock
+@Becoming.ActiveInquiryLoop.threshold_blind_open_collapse : ∀ {S Obs Dist Int Ext Env : Type}
+  (comp : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+  (c : Becoming.OpenComposition.InterfaceContract comp init) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop)
+  (site_crit : Ext) (θ_sensor : Nat),
+  (∀ (x y : Ext → Nat), θ_sensor ≤ x site_crit → θ_sensor ≤ y site_crit → obs x = obs y) →
+    ∀ (x_safe_hi x₀ : Ext → Nat),
+      θ_sensor ≤ x_safe_hi site_crit →
+        (∀ (s : S), comp.emitAlarm s (obs x_safe_hi) = false) →
+          (∀ (load : Nat) (env : Env), channel false load env = false) →
+            ∀ {Y H_pre H_safe y_safe x_crit n : Nat},
+              θ_sensor ≤ H_safe + y_safe →
+                0 < H_safe + y_safe →
+                  x_crit ≤ H_safe + y_safe →
+                    0 < x_crit →
+                      (∀ (e : Ext → Nat), G site_crit e ≤ Y) →
+                        Becoming.RegimeMargin.Coupled.Indexed.DependsOn Becoming.RegimeMargin.Drawn.whole G site_crit
+                            site_crit →
+                          (∀ (e : Ext → Nat), e site_crit < y_safe → G site_crit e < H_safe) →
+                            Y < H_pre →
+                              (∀ (s : S), c.K s → 0 < c.eta s → H_pre ≤ comp.drawExt s site_crit) →
+                                (∀ (s : S), c.K s → H_safe ≤ comp.drawExt s site_crit) →
+                                  0 < c.eta init →
+                                    (∀ (s : S) (ob : Obs) (d : Dist),
+                                        c.tol (ob, false) d → 0 < c.eta s → 0 < c.eta (comp.next s (ob, false) d)) →
+                                      ∀ (env_adm : Env),
+                                        jointAdm env_adm →
+                                          ∀ (d₀ : Dist),
+                                            (∀ (ob : Obs × Bool), c.tol ob d₀) →
+                                              x₀ site_crit < H_safe + y_safe + (H_pre - Y) * n →
+                                                (∃ T,
+                                                    T ≤ n ∧
+                                                      have orb :=
+                                                        Becoming.Law.orbit
+                                                          (fun st =>
+                                                            Becoming.OpenComposition.closedStep comp obs channel G
+                                                              envDraw st (env_adm, d₀))
+                                                          (x₀, init);
+                                                      (orb T).fst site_crit < H_safe + y_safe ∧
+                                                        (orb (T + (orb T).fst site_crit)).fst site_crit = 0 ∧
+                                                          ∀ (m : Nat),
+                                                            (orb (T + (orb T).fst site_crit + m)).fst site_crit = 0) ∧
+                                                  ¬Becoming.Viability.Kernel
+                                                      (Becoming.OpenComposition.closedProcess comp c obs channel G
+                                                        envDraw jointAdm)
+                                                      (Becoming.OpenComposition.closedGuard comp c fun x => x_crit)
+                                                      (x₀, init)
+@Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse : ∀ {F C S Obs Dist Int Ext Env : Type}
+  [inst : DecidableEq C] {law : Becoming.ExchangeLaw F C} {W_net W_net' : Becoming.Web F C} {obs_net : F → C → Prop}
+  {part : F → Bool} {L_net L_net' : Becoming.Flow F C} {c_stock : C} {θ_sensor : Nat},
+  law.Through W_net obs_net part →
+    (∀ (h : F), part h = false → ¬obs_net h c_stock) →
+      (∀ (h : F) (s : Nat), part h = false → W_net.requires s h c_stock → W_net.need s h c_stock ≤ θ_sensor) →
+        L_net.Balances W_net →
+          L_net'.Balances W_net' →
+            (∀ (t : Nat), L_net.present t = L_net'.present t) →
+              L_net.ActsAlike L_net' part →
+                L_net.Follows law part W_net.level →
+                  L_net'.Follows law part W_net'.level →
+                    ∀ {d_res T_net : Nat},
+                      (∀ (s : Nat), s < T_net → θ_sensor ≤ W_net.level s c_stock) →
+                        (∀ (e : C), e ≠ c_stock → W_net.level 0 e = W_net'.level 0 e) →
+                          W_net'.level 0 c_stock = W_net.level 0 c_stock + d_res →
+                            ∀ (h_obs : F),
+                              part h_obs = false →
+                                ∀ (t_obs : Nat) (c_out : C) (base_level : C → Nat) (readout : Nat → Nat → Obs)
+                                  (comp : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) {init : S}
+                                  (c : Becoming.OpenComposition.InterfaceContract comp init)
+                                  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+                                  (envDraw : Env → Ext → Nat) (jointAdm : Env → Prop) (site_crit : Ext)
+                                  (x_safe_hi x₀ : Ext → Nat),
+                                  θ_sensor ≤ x_safe_hi site_crit →
+                                    (∀ (s : S),
+                                        comp.emitAlarm s
+                                            (readout
+                                              (law.take t_obs h_obs
+                                                (fun x e => if e = c_stock then x_safe_hi site_crit else base_level e)
+                                                c_out)
+                                              (law.give t_obs h_obs
+                                                (fun x e => if e = c_stock then x_safe_hi site_crit else base_level e)
+                                                c_out)) =
+                                          false) →
+                                      (∀ (load : Nat) (env : Env), channel false load env = false) →
+                                        ∀ {Y H_pre H_safe y_safe x_crit n : Nat},
+                                          θ_sensor ≤ H_safe + y_safe →
+                                            0 < H_safe + y_safe →
+                                              x_crit ≤ H_safe + y_safe →
+                                                0 < x_crit →
+                                                  (∀ (e : Ext → Nat), G site_crit e ≤ Y) →
+                                                    Becoming.RegimeMargin.Coupled.Indexed.DependsOn
+                                                        Becoming.RegimeMargin.Drawn.whole G site_crit site_crit →
+                                                      (∀ (e : Ext → Nat),
+                                                          e site_crit < y_safe → G site_crit e < H_safe) →
+                                                        Y < H_pre →
+                                                          (∀ (s : S), ⋯) →
+                                                            (∀ (s : S), c.K s → H_safe ≤ comp.drawExt s site_crit) → ⋯
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh_rises : ∀ (site : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh site)
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh_dep : Becoming.RegimeMargin.Coupled.Indexed.DependsOn
+  Becoming.RegimeMargin.Drawn.whole Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh () ()
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_through : ∀ (θ : Nat),
+  (Becoming.Thresholds.Draw.law θ).Through (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netWeb θ 0)
+    (fun x c => (!decide (c = true)) = true) fun x => false
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5 : (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netFlow
+      5).Balances
+  (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netWeb 5 0)
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5' : (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netFlow'
+      5).Balances
+  (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netWeb 5 1)
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes : have obs := fun x =>
+  decide (0 < (Becoming.Thresholds.Draw.law 5).give 0 () (fun x_1 e => if e = true then x () else 0) false);
+(∀ (h : Unit) (cc : Bool) (s t_ev : Nat),
+    false = false →
+      ¬(Becoming.Thresholds.Draw.law 5).RespondsByLevel
+          (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.netWeb 5 0) t_ev h cc s true) ∧
+  ¬Becoming.Viability.Kernel
+      (Becoming.OpenComposition.closedProcess Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+        Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract obs
+        Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.channel
+        Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh (fun x x_1 => 0) fun x => True)
+      (Becoming.OpenComposition.closedGuard Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+        Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract
+        Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xCrit)
+      (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xStart, 1)
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_5_hits_zero : (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.orbitWithTheta
+        5 7).fst
+    () =
+  0
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_also_crashes_under_lag1 : (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.orbitWithTheta
+        8 7).fst
+    () =
+  0
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel : ¬Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+      Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract (fun x => Nat.ble 8 (x ()))
+      Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.channel
+      Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+      Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract
+      Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xCrit)
+    (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xStart, 1)
+Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+    Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract (fun x => Nat.ble 10 (x ()))
+    Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.channel
+    Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshComp
+    Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.threshContract
+    Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xCrit)
+  (Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.xStart, 1)
+@Becoming.ActiveInquiryLoop.blanket_compose_closed_viable : ∀ {I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ Ext Env : Type}
+  (sp₁ : Becoming.ActiveInquiryLoop.BlanketContractSpec I₁ S₁ A₁ Ext Dist₁)
+  (sp₂ : Becoming.ActiveInquiryLoop.BlanketContractSpec I₂ S₂ A₂ Ext Dist₂) (obs₁ : (Ext → Nat) → S₁)
+  (obs₂ : (Ext → Nat) → S₂) (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+    ∀ (x_crit warnLevel H_safe x₀ : Ext → Nat),
+      (∀ (x : Ext → Nat) (k : Ext), x k < warnLevel k → sp₁.warnSensory (obs₁ x) ∨ sp₂.warnSensory (obs₂ x)) →
+        (∀ (load : Nat) (env : Env),
+            jointAdm env → load ≤ sp₁.maxSilence + sp₂.maxSilence → channel true load env = true) →
+          (∀ (k : Ext), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G k)) →
+            (∀ (k : Ext),
+                x_crit k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G H_safe x_crit k) →
+              (∀ (k : Ext), sp₁.postAllowanceExt k + sp₂.postAllowanceExt k + envCap k ≤ H_safe k) →
+                (∀ (k : Ext),
+                    x_crit k +
+                        (Becoming.CoreHelpers.natMax sp₁.maxLag sp₂.maxLag + 1) *
+                          (sp₁.preCapExt k + sp₂.preCapExt k + envCap k) ≤
+                      warnLevel k) →
+                  (∀ (k : Ext),
+                      x_crit k +
+                          Becoming.CoreHelpers.natMax (sp₁.eta (sp₁.initI, sp₁.initA))
+                              (sp₂.eta (sp₂.initI, sp₂.initA)) *
+                            (sp₁.preCapExt k + sp₂.preCapExt k + envCap k) ≤
+                        x₀ k) →
+                    Becoming.BlanketCouplings.BlanketDetermined
+                        (Becoming.BlanketCouplings.liftedClosedProcess
+                          ((Becoming.ActiveInquiryLoop.componentOfBlanket sp₁).compose
+                            (Becoming.ActiveInquiryLoop.componentOfBlanket sp₂))
+                          (Becoming.OpenComposition.composeContract (Becoming.ActiveInquiryLoop.contractOfBlanket sp₁)
+                            (Becoming.ActiveInquiryLoop.contractOfBlanket sp₂))
+                          (fun x => (obs₁ x, obs₂ x)) channel G envDraw jointAdm) ∧
+                      Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess
+                          ((Becoming.ActiveInquiryLoop.componentOfBlanket sp₁).compose
+                            (Becoming.ActiveInquiryLoop.componentOfBlanket sp₂))
+                          (Becoming.OpenComposition.composeContract (Becoming.ActiveInquiryLoop.contractOfBlanket sp₁)
+                            (Becoming.ActiveInquiryLoop.contractOfBlanket sp₂))
+                          (fun x => (obs₁ x, obs₂ x)) channel G envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard
+                          ((Becoming.ActiveInquiryLoop.componentOfBlanket sp₁).compose
+                            (Becoming.ActiveInquiryLoop.componentOfBlanket sp₂))
+                          (Becoming.OpenComposition.composeContract (Becoming.ActiveInquiryLoop.contractOfBlanket sp₁)
+                            (Becoming.ActiveInquiryLoop.contractOfBlanket sp₂))
+                          x_crit)
+                        (x₀, (sp₁.initI, sp₁.initA), sp₂.initI, sp₂.initA)
+@Becoming.ActiveInquiryLoop.blanket_compose_screening : ∀ {I₁ S₁ A₁ Dist₁ I₂ S₂ A₂ Dist₂ Ext Env : Type}
+  (sp₁ : Becoming.ActiveInquiryLoop.BlanketContractSpec I₁ S₁ A₁ Ext Dist₁)
+  (sp₂ : Becoming.ActiveInquiryLoop.BlanketContractSpec I₂ S₂ A₂ Ext Dist₂) (obs₁ : (Ext → Nat) → S₁)
+  (obs₂ : (Ext → Nat) → S₂) (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (env : Env) (d₁ : Dist₁) (d₂ : Dist₂),
+  have comp :=
+    (Becoming.ActiveInquiryLoop.componentOfBlanket sp₁).compose (Becoming.ActiveInquiryLoop.componentOfBlanket sp₂);
+  have obs := fun x => (obs₁ x, obs₂ x);
+  have stepFn := fun st => Becoming.OpenComposition.closedStep comp obs channel G envDraw st (env, d₁, d₂);
+  have b := Becoming.BlanketCouplings.closedBlanketLaw comp obs channel G envDraw env (d₁, d₂);
+  (∀ {x₀ : Ext → Nat} {p₁ p₂ : (I₁ × A₁) × I₂ × A₂} (n : Nat),
+      (∀ (k : Nat),
+          k < n →
+            comp.drawExt (Becoming.Law.orbit stepFn (x₀, p₁) k).snd =
+              comp.drawExt (Becoming.Law.orbit stepFn (x₀, p₂) k).snd) →
+        (Becoming.Law.orbit stepFn (x₀, p₁) n).fst = (Becoming.Law.orbit stepFn (x₀, p₂) n).fst) ∧
+    ∀ {x₁ x₂ : Ext → Nat} {p₀ : (I₁ × A₁) × I₂ × A₂} (n : Nat),
+      (∀ (k : Nat),
+          k < n →
+            (b.course (Becoming.BlanketCouplings.closedParts comp obs x₁ p₀) k).sensory =
+              (b.course (Becoming.BlanketCouplings.closedParts comp obs x₂ p₀) k).sensory) →
+        (Becoming.Law.orbit stepFn (x₁, p₀) n).snd = (Becoming.Law.orbit stepFn (x₂, p₀) n).snd
+@Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts : ∀ {I S A E M : Type}
+  (Q : Generative.Process (Becoming.Blanket.Parts I S A E) M),
+  (∃ p₁ p₂ m q₁ q₂,
+      p₁.internal = p₂.internal ∧
+        p₁.sensory = p₂.sensory ∧
+          p₁.active = p₂.active ∧
+            Q.step p₁ m q₁ ∧ Q.step p₂ m q₂ ∧ (q₁.internal ≠ q₂.internal ∨ q₁.active ≠ q₂.active)) →
+    ¬Becoming.BlanketCouplings.BlanketDetermined Q ∧
+      (¬∃ b,
+            ∀ (p : Becoming.Blanket.Parts I S A E) (m : M) (q : Becoming.Blanket.Parts I S A E),
+              Q.step p m q → q = b.step p) ∧
+        ∀ (H : (Nat → Becoming.Blanket.Parts I S A E) → (Nat → M) → Prop),
+          (∀ (p : Becoming.Blanket.Parts I S A E) (m : M) (q : Becoming.Blanket.Parts I S A E),
+              Q.step p m q → ∃ g ms i, H g ms ∧ g i = p ∧ ms i = m ∧ g (i + 1) = q) →
+            ¬Becoming.BlanketCouplings.BlanketConsistentFamily H
+@Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable : ∀ {S Obs Dist Int Ext Env : Type}
+  (Q : Generative.Process (Becoming.Blanket.Parts S Obs (Ext → Nat) (Ext → Nat)) (Env × Dist)),
+  (∃ p₁ p₂ m q₁ q₂,
+      p₁.internal = p₂.internal ∧
+        p₁.sensory = p₂.sensory ∧
+          p₁.active = p₂.active ∧
+            Q.step p₁ m q₁ ∧ Q.step p₂ m q₂ ∧ (q₁.internal ≠ q₂.internal ∨ q₁.active ≠ q₂.active)) →
+    ¬∃ C init c obs channel G envDraw jointAdm,
+        ∀ (s : Becoming.Blanket.Parts S Obs (Ext → Nat) (Ext → Nat)) (a : Env × Dist)
+          (t : Becoming.Blanket.Parts S Obs (Ext → Nat) (Ext → Nat)),
+          (Becoming.BlanketCouplings.liftedClosedProcess C c obs channel G envDraw jointAdm).step s a t ↔ Q.step s a t
+Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay_rises : ∀ (site : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay site)
+Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable : Becoming.BlanketCouplings.BlanketDetermined
+    (Becoming.BlanketCouplings.liftedClosedProcess
+      ((Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁).compose
+        (Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁)
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      (fun x => (false, (x ()).blt 9)) Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.channel
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay (fun x x_1 => 0) fun x => True) ∧
+  Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess
+      ((Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁).compose
+        (Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁)
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      (fun x => (false, (x ()).blt 9)) Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.channel
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay (fun x x_1 => 0) fun x => True)
+    (Becoming.OpenComposition.closedGuard
+      ((Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁).compose
+        (Becoming.ActiveInquiryLoop.componentOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      (Becoming.OpenComposition.composeContract
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁)
+        (Becoming.ActiveInquiryLoop.contractOfBlanket Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂))
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.xCrit)
+    (Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.xStart,
+      (Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁.initI,
+        Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₁.initA),
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂.initI,
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.sp₂.initA)
+Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined : ¬Becoming.BlanketCouplings.BlanketDetermined
+      Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breachProcess ∧
+  ¬∃ b,
+      ∀ (p : Becoming.Blanket.Parts Unit Bool Nat Bool) (m : Unit) (q : Becoming.Blanket.Parts Unit Bool Nat Bool),
+        Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breachProcess.step p m q → q = b.step p
+Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four : Becoming.Law.orbit
+    Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breachSubstrateStep 9 4 =
+  0

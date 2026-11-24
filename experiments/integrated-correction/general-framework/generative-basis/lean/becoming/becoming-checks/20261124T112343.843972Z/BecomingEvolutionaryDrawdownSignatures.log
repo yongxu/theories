@@ -1,0 +1,739 @@
+@Becoming.EvolutionaryDrawdown.length_mul_le_total : ∀ {α : Type} {xs : List α} {m : Nat} {q : α → Nat},
+  (∀ (x : α), x ∈ xs → m ≤ q x) → xs.length * m ≤ Becoming.total xs q
+@Becoming.EvolutionaryDrawdown.eq_zero_of_total_eq_zero : ∀ {α : Type} {q : α → Nat} {xs : List α},
+  Becoming.total xs q = 0 → ∀ (x : α), x ∈ xs → q x = 0
+@Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn : ∀ {X : Type} {L : Becoming.Flow X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X} {t : Nat},
+  L.DissipatesOn (ds ++ G.family (t + 1)) t →
+    (∀ (f k : X), f ∈ L.present t → k ∈ G.family (t + 1) → L.take t f k = 0) →
+      ∀ (f : X), f ∈ L.present t → Becoming.total (G.family (t + 1)) (L.give t f) ≤ Becoming.total ds (L.take t f)
+@Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X} {m : Nat},
+  Becoming.EvolutionaryDrawdown.EmbodiedConversion L W G ds m → ∀ (t : Nat), G.size (t + 1) * m ≤ L.uptake ds t
+@Becoming.EvolutionaryDrawdown.sum_eq_next_size_on : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {t : Nat},
+  (∀ (p : α), p ∈ G.family t → G.amount t p = G.offspringNumber t p) → G.sum t = G.size (t + 1)
+@Becoming.EvolutionaryDrawdown.sum_eq_next_size_of_byNumber : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  Becoming.Reproduction.Generations.ByNumber G → ∀ (t : Nat), G.sum t = G.size (t + 1)
+@Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          ∀ {T K : Nat},
+            T < K →
+              (∀ (t : Nat), t < K → ∀ (p : X), p ∈ G.family t → G.amount t p = G.offspringNumber t p) →
+                (∀ (t : Nat),
+                    t < K →
+                      ∀ (p : X),
+                        p ∈ G.family t → W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+                  (∀ (t : Nat),
+                      t < K → Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                    G.size 0 ≤ G.size 1 →
+                      G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                        (∃ t, t < T ∧ G.discordAt t < G.concordAt t) ∧
+                          0 < G.size T ∧
+                            (∀ (s : Nat), T ≤ s → s < K → G.size s < G.size (s + 1)) ∧
+                              ∀ (k : Nat), T + k ≤ K → G.size T + k ≤ G.size (T + k)
+@Becoming.EvolutionaryDrawdown.derived_surplus_of_selection : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          Becoming.Reproduction.Generations.ByNumber G →
+            (∀ (t : Nat) (p : X),
+                p ∈ G.family t → W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+              (∀ (t : Nat), Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                G.size 0 ≤ G.size 1 →
+                  ∀ {T : Nat},
+                    G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                      (∃ t, t < T ∧ G.discordAt t < G.concordAt t) ∧
+                        (∀ (s : Nat), T ≤ s → G.size s < G.size (s + 1)) ∧ ∀ (k : Nat), G.size T + k ≤ G.size (T + k)
+@Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {ds : List X} {m : Nat},
+  Becoming.EvolutionaryDrawdown.EmbodiedConversion L W G ds m →
+    ∀ {t : Nat},
+      G.size (t + 1) < G.size (t + 2) →
+        G.size (t + 1) * m < G.size (t + 2) * m ∧ G.size (t + 2) * m ≤ L.uptake ds (t + 1)
+@Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {G : Becoming.SelectionTerm.Generations X} {ds : List X} {m hi T : Nat},
+  Becoming.EvolutionaryDrawdown.EmbodiedConversion L W G ds m →
+    ∀ {giving x : Nat → Nat},
+      (∀ (t : Nat), x (t + 1) = Becoming.RegimeMargin.step giving (L.uptake ds t) (x t)) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Keeps giving 0 hi →
+            x T ≤ hi →
+              (∀ (j : Nat), j ≤ hi → G.size (T + j) < G.size (T + j + 1)) →
+                x (T + hi + 1) = 0 ∧ ∃ j, j ≤ hi ∧ x (T + j) ≤ L.uptake ds (T + j)
+@Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends : ∀ {U : Type} {need : U → Nat} {kids : U → List U}
+  {giving : Nat → Nat} {use : U → Nat} {m hi : Nat},
+  (∀ (u v : U), v ∈ kids u → m ≤ use v) →
+    (∀ (u : U), use u < (kids u).length * m) →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.Keeps giving 0 hi →
+          (∀ (u : U), 0 < need u) →
+            (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+              ∀ {w : List U} {x : Nat},
+                x ≤ hi →
+                  (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) ∧
+                    (∃ n,
+                        ¬Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) n)) ∧
+                      ¬Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» (w, x)
+@Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X} {ds : List X} {m R T : Nat},
+          Becoming.EvolutionaryDrawdown.EmbodiedConversion L W G ds m →
+            (∀ (t : Nat), L.replenishment ds t ≤ R) →
+              G.size 0 ≤ G.size 1 →
+                G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                  have T_ex := T + (R + 1);
+                  ¬∀ (t : Nat),
+                      t ≤ T_ex + W.stock ds T_ex →
+                        (∀ (p : X), p ∈ G.family t → G.amount t p = G.offspringNumber t p) ∧
+                          (∀ (p : X),
+                              p ∈ G.family t →
+                                W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) ∧
+                            Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))
+@Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X} {ds : List X} {m R m_need T n : Nat},
+          (∀ (t : Nat), L.replenishment ds t ≤ R) →
+            (∀ (p : X),
+                p ∈ G.family (T + (R + 1) + n) →
+                  W.active (T + (R + 1) + n) p →
+                    ∃ e, e ∈ ds ∧ W.requires (T + (R + 1) + n) p e ∧ m_need ≤ W.need (T + (R + 1) + n) p e) →
+              Becoming.EvolutionaryDrawdown.EmbodiedConversion L W G ds m →
+                (∀ (t : Nat), t < T + (R + 1) → ∀ (p : X), p ∈ G.family t → G.amount t p = G.offspringNumber t p) →
+                  (∀ (t : Nat),
+                      t < T + (R + 1) →
+                        ∀ (p : X),
+                          p ∈ G.family t → W.Supported t p → ∀ (q : X), q ∈ G.family t → G.amount t q ≤ G.amount t p) →
+                    (∀ (t : Nat),
+                        t < T + (R + 1) →
+                          Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) →
+                      G.size 0 ≤ G.size 1 →
+                        G.size 0 * G.sum T ≠ G.size T * G.sum 0 →
+                          (∀ (k : Nat), k < n → R + 1 ≤ G.size (T + (R + 1) + k + 1)) →
+                            W.stock ds (T + (R + 1)) < n + m_need →
+                              have T_ex := T + (R + 1);
+                              (∃ t, t < T ∧ G.discordAt t < G.concordAt t) ∧
+                                R + 2 ≤ G.size T_ex ∧
+                                  (∀ (k : Nat), k < n → L.replenishment ds (T_ex + k) < L.uptake ds (T_ex + k)) ∧
+                                    W.stock ds (T_ex + n) < m_need ∧
+                                      (∀ (p : X), p ∈ G.family (T_ex + n) → ¬W.active (T_ex + n) p) ∧
+                                        G.size (T_ex + n + 1) = 0
+@Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_site : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (st : Nat → (Ext → Nat) × S) (env : Nat → Env) (t : Nat) (k : Ext),
+  (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).taken t
+      (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) =
+    Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k
+@Becoming.EvolutionaryDrawdown.multiSiteFlow_given_site : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (st : Nat → (Ext → Nat) × S) (env : Nat → Env) (t : Nat) (k : Ext),
+  (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).given t
+      (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) =
+    G k
+      (Becoming.RegimeMargin.Coupled.Indexed.left Becoming.RegimeMargin.Drawn.whole
+        (Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t) (st t).fst)
+@Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_nonSite : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (st : Nat → (Ext → Nat) × S) (env : Nat → Env) (t : Nat),
+  (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).taken t
+        Becoming.EvolutionaryDrawdown.MultiSiteRelatum.component =
+      0 ∧
+    (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).taken t
+          Becoming.EvolutionaryDrawdown.MultiSiteRelatum.environment =
+        0 ∧
+      (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).taken t
+          Becoming.EvolutionaryDrawdown.MultiSiteRelatum.renewer =
+        0
+@Becoming.EvolutionaryDrawdown.multiSiteFlow_given_nonSite : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (G : Ext → (Ext → Nat) → Nat)
+  (envDraw : Env → Ext → Nat) (st : Nat → (Ext → Nat) × S) (env : Nat → Env) (t : Nat),
+  (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).given t
+        Becoming.EvolutionaryDrawdown.MultiSiteRelatum.component =
+      0 ∧
+    (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).given t
+          Becoming.EvolutionaryDrawdown.MultiSiteRelatum.environment =
+        0 ∧
+      (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).given t
+          Becoming.EvolutionaryDrawdown.MultiSiteRelatum.renewer =
+        0
+@Becoming.EvolutionaryDrawdown.multiSite_balance_site_iff : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+  {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist},
+  (∀ (t : Nat), st (t + 1) = Becoming.OpenComposition.closedStep C obs channel G envDraw (st t) (env t, dist t)) →
+    ∀ (t : Nat) (k : Ext),
+      (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env).level (t + 1)
+              (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) +
+            (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).taken t
+              (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) =
+          (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env).level t
+              (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) +
+            (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).given t
+              (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) ↔
+        Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k ≤ (st t).fst k
+@Becoming.EvolutionaryDrawdown.multiSite_balancesOn_iff : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+  {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist},
+  (∀ (t : Nat), st (t + 1) = Becoming.OpenComposition.closedStep C obs channel G envDraw (st t) (env t, dist t)) →
+    ∀ (sites : List Ext) (t : Nat),
+      (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).BalancesOn
+          (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env)
+          (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site sites) t ↔
+        ∀ (k : Ext), k ∈ sites → Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k ≤ (st t).fst k
+@Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+  {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist},
+  (∀ (t : Nat), st (t + 1) = Becoming.OpenComposition.closedStep C obs channel G envDraw (st t) (env t, dist t)) →
+    ∀ {sites : List Ext} {t : Nat},
+      (∀ (k : Ext), k ∈ sites → Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k ≤ (st t).fst k) →
+        (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).BalancesOn
+          (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env)
+          (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site sites) t
+@Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+  {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist},
+  (∀ (t : Nat), st (t + 1) = Becoming.OpenComposition.closedStep C obs channel G envDraw (st t) (env t, dist t)) →
+    (∀ (t : Nat) (k : Ext), Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k ≤ (st t).fst k) →
+      (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).Balances
+        (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env)
+@Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) {init : S}
+  {c : Becoming.OpenComposition.InterfaceContract C init} {jointAdm : Env → Prop}
+  (r : Becoming.Run (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)),
+  (∀ (t : Nat) (k : Ext),
+      Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw r.state (fun t => (r.act t).fst) t k ≤
+        (r.state t).fst k) →
+    have st := r.state;
+    have env := fun t => (r.act t).fst;
+    (Becoming.EvolutionaryDrawdown.multiSiteRel C G envDraw st env).Runs Becoming.EvolutionaryDrawdown.multiSitePresent
+        (Becoming.EvolutionaryDrawdown.multiSiteLevel st)
+        (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env) ∧
+      (Becoming.EvolutionaryDrawdown.multiSiteWorld C G envDraw st env).ReadOffExchange ∧
+        (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).Balances
+            (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env) ∧
+          ∀ (t : Nat) (k : Ext),
+            0 < C.drawExt (st t).snd k →
+              (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env).requires t
+                Becoming.EvolutionaryDrawdown.MultiSiteRelatum.component
+                (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k)
+@Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) {init : S}
+  {c : Becoming.OpenComposition.InterfaceContract C init} {jointAdm : Env → Prop} {envCap x_crit : Ext → Nat}
+  (r : Becoming.Run (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)),
+  (∀ (t : Nat), Becoming.OpenComposition.closedGuard C c x_crit (r.state t)) →
+    (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+      (∀ (k : Ext), c.preCapExt k + envCap k ≤ x_crit k) →
+        have st := r.state;
+        have env := fun t => (r.act t).fst;
+        (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).Balances
+            (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env) ∧
+          (Becoming.EvolutionaryDrawdown.multiSiteWorld C G envDraw st env).ReadOffExchange
+@Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat) {init : S}
+  {c : Becoming.OpenComposition.InterfaceContract C init} {jointAdm : Env → Prop} {envCap x_crit : Ext → Nat}
+  (r : Becoming.Run (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)),
+  Becoming.Viability.Kernel (Becoming.OpenComposition.closedProcess C c obs channel G envDraw jointAdm)
+      (Becoming.OpenComposition.closedGuard C c x_crit) (r.state 0) →
+    (∀ (env : Env), jointAdm env → ∀ (k : Ext), envDraw env k ≤ envCap k) →
+      (∀ (k : Ext), c.preCapExt k + envCap k ≤ x_crit k) →
+        have st := r.state;
+        have env := fun t => (r.act t).fst;
+        (Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env).Balances
+            (Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env) ∧
+          (Becoming.EvolutionaryDrawdown.multiSiteWorld C G envDraw st env).ReadOffExchange
+@Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation : ∀ {S Obs Dist Int Ext Env : Type}
+  (C : Becoming.OpenComposition.OpenComponent S Obs Dist Int Ext) (obs : (Ext → Nat) → Obs)
+  (channel : Bool → Nat → Env → Bool) (G : Ext → (Ext → Nat) → Nat) (envDraw : Env → Ext → Nat)
+  {st : Nat → (Ext → Nat) × S} {env : Nat → Env} {dist : Nat → Dist},
+  (∀ (t : Nat), st (t + 1) = Becoming.OpenComposition.closedStep C obs channel G envDraw (st t) (env t, dist t)) →
+    ∀ {sites : List Ext} {tStar : Nat} {kStar : Ext},
+      kStar ∈ sites →
+        (∀ (t : Nat),
+            t < tStar →
+              ∀ (k : Ext),
+                k ∈ sites → Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env t k ≤ (st t).fst k) →
+          (st tStar).fst kStar < Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env tStar kStar →
+            (∀ (k : Ext),
+                k ∈ sites →
+                  k ≠ kStar →
+                    Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env tStar k ≤ (st tStar).fst k) →
+              have H := Becoming.EvolutionaryDrawdown.multiSiteDrawAt C envDraw st env;
+              have L := Becoming.EvolutionaryDrawdown.multiSiteFlow C G envDraw st env;
+              have W := Becoming.EvolutionaryDrawdown.multiSiteWeb C G envDraw st env;
+              (∀ (t : Nat),
+                  t < tStar → L.BalancesOn W (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site sites) t) ∧
+                (∀ (k : Ext),
+                    k ∈ sites →
+                      k ≠ kStar →
+                        W.level (tStar + 1) (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) +
+                            L.taken tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) =
+                          W.level tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k) +
+                            L.given tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k)) ∧
+                  ((st (tStar + 1)).fst kStar + H tStar kStar =
+                        (st tStar).fst kStar +
+                            L.given tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                          (H tStar kStar - (st tStar).fst kStar) ∧
+                      0 < H tStar kStar - (st tStar).fst kStar) ∧
+                    W.level tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                          L.given tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) <
+                        W.level (tStar + 1) (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                          L.taken tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) ∧
+                      W.level (tStar + 1) (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                            L.taken tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) =
+                          W.level tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                              L.given tStar (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site kStar) +
+                            (H tStar kStar - (st tStar).fst kStar) ∧
+                        ¬L.BalancesOn W (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site sites) tStar ∧
+                          ¬L.Balances W ∧
+                            ¬(Becoming.EvolutionaryDrawdown.multiSiteRel C G envDraw st env).Runs
+                                Becoming.EvolutionaryDrawdown.multiSitePresent
+                                (Becoming.EvolutionaryDrawdown.multiSiteLevel st) L
+@Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X} {h h_fast ds_h : List X} {m T n : Nat},
+          Becoming.Founding.Flow.ConfinedRise L W G h_fast ds_h m T n →
+            Becoming.SelectionTerm.Flow.Descended L W G →
+              ∀ (k : Nat),
+                (∀ (p : X), p ∈ h → p ∈ G.family (T + n + k)) →
+                  (∀ (p : X), p ∈ h → ∃ e, e ∈ ds_h ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) →
+                    (∀ (j : Nat), Becoming.SelectionLevels.lineage G h_fast (T + n + j + 1) = []) ∧
+                      Becoming.total h (G.offspringNumber (T + n + k)) = 0
+@Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability : ∀
+  {S₁ S₂ Obs₁ Obs₂ ObsOuter Dist₁ Dist₂ Int₁ Int₂ ExtKeep ExtHide Env : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ (ExtKeep ⊕ ExtHide))
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ (ExtKeep ⊕ ExtHide)) {init₁ : S₁} {init₂ : S₂}
+  (cA : Becoming.OpenComposition.InterfaceContract A init₁) (cB : Becoming.OpenComposition.InterfaceContract B init₂)
+  (G_hide : ExtHide → (ExtHide → Nat) → Nat) (wireObs : ObsOuter → (ExtHide → Nat) → Obs₁ × Obs₂)
+  (tolOuter : ObsOuter × Bool → Dist₁ × Dist₂ → Prop) (warnOuter : ObsOuter → Prop)
+  (x_crit_hide warnHide H_safe_hide x₀_hide : ExtHide → Nat)
+  (tol_lifts :
+    ∀ (o : ObsOuter) (xh : ExtHide → Nat) (al b : Bool) (d : Dist₁ × Dist₂),
+      tolOuter (o, al) d → (Becoming.OpenComposition.composeContract cA cB).tol (wireObs o xh, b) d)
+  (G_hide_rises :
+    ∀ (k : ExtHide), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_hide k))
+  (wire_outer_warn :
+    ∀ (o : ObsOuter) (xh : ExtHide → Nat),
+      warnOuter o → (Becoming.OpenComposition.composeContract cA cB).warnObs (wireObs o xh))
+  (wire_hide_warn :
+    ∀ (o : ObsOuter) (xh : ExtHide → Nat),
+      (∃ k, xh k < warnHide k) → (Becoming.OpenComposition.composeContract cA cB).warnObs (wireObs o xh))
+  (hide_post_viable :
+    ∀ (k : ExtHide),
+      x_crit_hide k ≤
+        Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G_hide H_safe_hide x_crit_hide k)
+  (hide_post_allowance :
+    ∀ (k : ExtHide), (Becoming.OpenComposition.composeContract cA cB).postBudgetExt (Sum.inr k) ≤ H_safe_hide k)
+  (hide_warn_margin :
+    ∀ (k : ExtHide),
+      x_crit_hide k +
+          ((Becoming.OpenComposition.composeContract cA cB).maxLag + 1) *
+            (Becoming.OpenComposition.composeContract cA cB).preCapExt (Sum.inr k) ≤
+        warnHide k)
+  (hide_init_margin :
+    ∀ (k : ExtHide),
+      x_crit_hide k +
+          (Becoming.OpenComposition.composeContract cA cB).eta (init₁, init₂) *
+            (Becoming.OpenComposition.composeContract cA cB).preCapExt (Sum.inr k) ≤
+        x₀_hide k)
+  (obsOuter : (ExtKeep → Nat) → ObsOuter) (channel : Bool → Nat → Env → Bool) (G_keep : ExtKeep → (ExtKeep → Nat) → Nat)
+  (envDraw : Env → ExtKeep → Nat) (envCap : ExtKeep → Nat) (jointAdm : Env → Prop),
+  (∀ (env : Env), jointAdm env → ∀ (k : ExtKeep), envDraw env k ≤ envCap k) →
+    ∀ (x_crit_keep warnKeep H_safe_keep x₀_keep : ExtKeep → Nat),
+      (∀ (x : ExtKeep → Nat) (k : ExtKeep), x k < warnKeep k → warnOuter (obsOuter x)) →
+        (∀ (load : Nat) (env : Env),
+            jointAdm env →
+              load ≤ (Becoming.OpenComposition.composeContract cA cB).maxSilence → channel true load env = true) →
+          (∀ (k : ExtKeep), Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole (G_keep k)) →
+            (∀ (k : ExtKeep),
+                x_crit_keep k ≤
+                  Becoming.RegimeMargin.Coupled.Indexed.step Becoming.RegimeMargin.Drawn.whole G_keep H_safe_keep
+                    x_crit_keep k) →
+              (∀ (k : ExtKeep),
+                  cA.postBudgetExt (Sum.inl k) + cB.postBudgetExt (Sum.inl k) + envCap k ≤ H_safe_keep k) →
+                (∀ (k : ExtKeep),
+                    x_crit_keep k +
+                        (Becoming.CoreHelpers.natMax cA.maxLag cB.maxLag + 1) *
+                          (cA.preCapExt (Sum.inl k) + cB.preCapExt (Sum.inl k) + envCap k) ≤
+                      warnKeep k) →
+                  (∀ (k : ExtKeep),
+                      x_crit_keep k +
+                          Becoming.CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) *
+                            (cA.preCapExt (Sum.inl k) + cB.preCapExt (Sum.inl k) + envCap k) ≤
+                        x₀_keep k) →
+                    let AB := A.compose B;
+                    let cAB := Becoming.OpenComposition.composeContract cA cB;
+                    let H := AB.hide G_hide wireObs;
+                    have hC :=
+                      Becoming.OpenComposition.hideContract cAB G_hide wireObs tolOuter warnOuter x_crit_hide warnHide
+                        H_safe_hide x₀_hide tol_lifts G_hide_rises wire_outer_warn wire_hide_warn hide_post_viable
+                        hide_post_allowance hide_warn_margin hide_init_margin;
+                    Becoming.Viability.Kernel
+                        (Becoming.OpenComposition.closedProcess H hC obsOuter channel G_keep envDraw jointAdm)
+                        (Becoming.OpenComposition.closedGuard H hC x_crit_keep) (x₀_keep, (init₁, init₂), x₀_hide) ∧
+                      ∀
+                        (r :
+                          Becoming.Run
+                            (Becoming.OpenComposition.closedProcess H hC obsOuter channel G_keep envDraw jointAdm)),
+                        r.state 0 = (x₀_keep, (init₁, init₂), x₀_hide) →
+                          ∀ (t : Nat),
+                            (∀ (j : ExtKeep), x_crit_keep j ≤ (r.state t).fst j) ∧
+                              (∀ (k : ExtHide), x_crit_hide k ≤ (r.state t).snd.snd k) ∧
+                                ∀ (k : ExtHide),
+                                  A.drawExt ⋯.fst.fst (Sum.inr k) + B.drawExt ⋯.fst.snd (Sum.inr k) ≤
+                                    cA.preCapExt (Sum.inr k) + cB.preCapExt (Sum.inr k)
+@Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection : ∀ {α : Type}
+  (G : Becoming.SelectionTerm.Generations α) {t m : Nat} (gs : List (List α)),
+  Becoming.SelectionLevels.whole gs = G.family t →
+    (∀ (g : List α), g ∈ gs → g.length = m) →
+      Becoming.SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)) →
+        (∀ (g h : List α),
+            g ∈ gs →
+              h ∈ gs →
+                Becoming.total h (G.amount t) < Becoming.total g (G.amount t) →
+                  Becoming.total h (G.offspringNumber t) = 0) →
+          (∀ (g : List α),
+              g ∈ gs → 0 < Becoming.total g (G.offspringNumber t) → ∃ v, ∀ (p : α), p ∈ g → G.amount t p = v) →
+            (∃ g h,
+                g ∈ gs ∧
+                  h ∈ gs ∧
+                    Becoming.total h (G.amount t) < Becoming.total g (G.amount t) ∧
+                      0 < Becoming.total g (G.offspringNumber t)) →
+              Becoming.SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) = 0 ∧
+                Becoming.SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) = 0 ∧
+                  Becoming.SelectionLevels.discordAmong gs (G.offspringNumber t) (G.amount t) = 0 ∧
+                    0 < Becoming.SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t) ∧ G.Raises t
+@Becoming.EvolutionaryDrawdown.nested_transition_raises_among : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ (C : Becoming.Founding.Nested X),
+          C.Founded →
+            C.Sequestered →
+              Becoming.SelectionTerm.Flow.Descended L W C.wholes →
+                ∀ {ds : List X} {m T n k : Nat},
+                  (∀ (t : Nat) (f : X),
+                      f ∈ L.present t →
+                        ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                    (∀ (j : Nat), j < n → L.replenishment ds (T + j) < L.uptake ds (T + j)) →
+                      W.stock ds T < n + m →
+                        (∀ (g h : X),
+                            g ∈ C.wholes.family (T + n + k) →
+                              h ∈ C.wholes.family (T + n + k) →
+                                C.wholes.amount (T + n + k) h < C.wholes.amount (T + n + k) g →
+                                  ∃ e, e ∈ ds ∧ W.requires (T + n + k) h e ∧ m ≤ W.need (T + n + k) h e) →
+                          (∃ g h,
+                              g ∈ C.wholes.family (T + n + k) ∧
+                                h ∈ C.wholes.family (T + n + k) ∧
+                                  C.wholes.amount (T + n + k) h < C.wholes.amount (T + n + k) g ∧
+                                    0 < C.wholes.offspringNumber (T + n + k) g) →
+                            C.wholes.discordAt (T + n + k) = 0 ∧
+                              0 < C.wholes.concordAt (T + n + k) ∧
+                                (C.wholes.Raises (T + n + k) ↔
+                                    C.wholes.discordAt (T + n + k) < C.wholes.concordAt (T + n + k)) ∧
+                                  C.wholes.Raises (T + n + k)
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_from_nothing : Becoming.RegimeMargin.FromNothing
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_cap : ∀ (rem : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving rem ≤ 1
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_keeps : Becoming.RegimeMargin.Keeps
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving 0 14
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_pool_balance : ∀ (t : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.level (t + 1)
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.taken t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool =
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.level t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.given t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_member_balance : ∀ (t s i : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.level (t + 1)
+        (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member s i) +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.taken t
+        (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member s i) =
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.level t
+        (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member s i) +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.given t
+        (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member s i)
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_balances : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.Balances
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_acting : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.Acting
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_dependent : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.Dependent
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_0 : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family
+    0 =
+  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 0 0,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 0 1]
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_1 : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family
+    1 =
+  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 1 0,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 1 1]
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_2 : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family
+    2 =
+  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 2 0,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 2 1,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 2 2,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 2 3]
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_3 : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family
+    3 =
+  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 0,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 1,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 2,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 3,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 4,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 5,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 6,
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member 3 7]
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_4 : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family
+    4 =
+  []
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_later : ∀ (n : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family (4 + n) = []
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_conv : Becoming.EvolutionaryDrawdown.EmbodiedConversion
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen
+  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] 1
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_rep_cap : ∀ (t : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.replenishment
+      [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] t ≤
+    1
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified : (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size
+          1 *
+        1 ≤
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.uptake
+        [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] 0 ∧
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 2 * 1 ≤
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.uptake
+          [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] 1 ∧
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 3 * 1 ≤
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusFlow.uptake
+          [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] 2) ∧
+  (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 1 <
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 2 ∧
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 2 <
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 3) ∧
+    (¬∀ (t : Nat),
+          t ≤
+              1 + (1 + 1) +
+                Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.stock
+                  [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool] (1 + (1 + 1)) →
+            (∀ (p : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus),
+                p ∈ Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family t →
+                  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.amount t p =
+                    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.offspringNumber t p) ∧
+              (∀ (p : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus),
+                  p ∈ Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family t →
+                    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.Supported t p →
+                      ∀ (q : Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus),
+                        q ∈ Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family t →
+                          Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.amount t q ≤
+                            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.amount t p) ∧
+                Becoming.SelectionTerm.Exact
+                  (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.family t)
+                  (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.kids t)
+                  (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.amount t)
+                  (Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.amount (t + 1))) ∧
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusWeb.level 4
+            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool =
+          0 ∧
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplusGen.size 4 = 0
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_family_succ : ∀ (t : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyGen.family (t + 1) =
+    [Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.member (t + 1) 0]
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_balances_pool : ∀ (t : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyWeb.level (t + 1)
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyFlow.taken t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool =
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyWeb.level t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyFlow.given t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool
+Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified : ∀ (t : Nat),
+  Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyWeb.level t
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool =
+      13 ∧
+    Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyGen.size (t + 1) = 1 ∧
+      Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyWeb.level (t + 1)
+            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+          Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyFlow.taken t
+            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool =
+        Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyWeb.level t
+            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool +
+          Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steadyFlow.given t
+            Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.Locus.pool
+Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG_rises : ∀ (k : Bool),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG k)
+Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation : have L :=
+  Becoming.EvolutionaryDrawdown.multiSiteFlow Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0)
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt fun x => ();
+have W :=
+  Becoming.EvolutionaryDrawdown.multiSiteWeb Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0)
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt fun x => ();
+L.BalancesOn W (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site [false, true]) 0 ∧
+  W.level 2 (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site false) +
+        L.taken 1 (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site false) =
+      W.level 1 (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site false) +
+        L.given 1 (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site false) ∧
+    ((Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt 2).fst true +
+            Becoming.EvolutionaryDrawdown.multiSiteDrawAt
+              Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp (fun x x_1 => 0)
+              Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt (fun x => ()) 1 true =
+          (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt 1).fst true +
+              L.given 1 (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site true) +
+            (Becoming.EvolutionaryDrawdown.multiSiteDrawAt
+                Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp (fun x x_1 => 0)
+                Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt (fun x => ()) 1 true -
+              (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt 1).fst true) ∧
+        0 <
+          Becoming.EvolutionaryDrawdown.multiSiteDrawAt
+              Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp (fun x x_1 => 0)
+              Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt (fun x => ()) 1 true -
+            (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt 1).fst true) ∧
+      ¬L.BalancesOn W (List.map Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site [false, true]) 1 ∧
+        ¬L.Balances W ∧
+          ¬(Becoming.EvolutionaryDrawdown.multiSiteRel
+                  Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedComp
+                  Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0)
+                  Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt fun x => ()).Runs
+              Becoming.EvolutionaryDrawdown.multiSitePresent
+              (Becoming.EvolutionaryDrawdown.multiSiteLevel
+                Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.uncheckedSt)
+              L
+Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_kernel : Becoming.Viability.Kernel
+  (Becoming.OpenComposition.closedProcess Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeContract
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeObs Becoming.OpenComposition.zeroSilenceChannel
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0) fun x => True)
+  (Becoming.OpenComposition.closedGuard Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeContract
+    Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeCrit)
+  (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeX0, 1)
+Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified : ∀
+  (r :
+    Becoming.Run
+      (Becoming.OpenComposition.closedProcess Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+        Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeContract
+        Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeObs Becoming.OpenComposition.zeroSilenceChannel
+        Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0) fun x => True)),
+  r.state 0 = (Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeX0, 1) →
+    have L :=
+      Becoming.EvolutionaryDrawdown.multiSiteFlow Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+        Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0) r.state fun t => (r.act t).fst;
+    have W :=
+      Becoming.EvolutionaryDrawdown.multiSiteWeb Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+        Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0) r.state fun t => (r.act t).fst;
+    L.Balances W ∧
+      (Becoming.EvolutionaryDrawdown.multiSiteWorld Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safeComp
+            Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG (fun x x_1 => 0) r.state fun t =>
+            (r.act t).fst).ReadOffExchange ∧
+        ∀ (t : Nat) (k : Bool),
+          W.requires t Becoming.EvolutionaryDrawdown.MultiSiteRelatum.component
+            (Becoming.EvolutionaryDrawdown.MultiSiteRelatum.site k)
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.sharedG_rises : ∀ (k : Unit),
+  Becoming.RegimeMargin.Coupled.Indexed.Rises Becoming.RegimeMargin.Drawn.whole
+    (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.sharedG k)
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_balances : Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintFlow.Balances
+  Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintWeb
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_acting : Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintFlow.Acting
+  Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintWeb
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_dependent : Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintWeb.Dependent
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintFlow
+  Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintWeb
+  Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintGen
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_lineage_3 : Becoming.SelectionLevels.lineage
+    Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintGen
+    [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.fast0] 3 =
+  [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.fast3]
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_lineage_later : ∀ (k : Nat),
+  Becoming.SelectionLevels.lineage Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintGen
+      [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.fast0] (3 + k + 1) =
+    []
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends : (∀ (j : Nat),
+    Becoming.SelectionLevels.lineage Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintGen
+        [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.fast0] (2 + 1 + j + 1) =
+      []) ∧
+  Becoming.total
+      [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.coop3,
+        Becoming.EvolutionaryDrawdown.MajorTransitionWitness.UnintRelatum.fast3]
+      (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unintGen.offspringNumber (2 + 1 + 0)) =
+    0
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability : Becoming.Viability.Kernel
+    (Becoming.OpenComposition.closedProcess Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integComp
+      Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integContract (fun x => ())
+      Becoming.OpenComposition.zeroSilenceChannel (fun e => e.elim) (fun x e => e.elim) fun x => True)
+    (Becoming.OpenComposition.closedGuard Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integComp
+      Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integContract fun e => e.elim)
+    (fun e => e.elim, ((), 1), fun x => 9) ∧
+  ∀
+    (r :
+      Becoming.Run
+        (Becoming.OpenComposition.closedProcess Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integComp
+          Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integContract (fun x => ())
+          Becoming.OpenComposition.zeroSilenceChannel (fun e => e.elim) (fun x e => e.elim) fun x => True)),
+    r.state 0 = (fun e => e.elim, ((), 1), fun x => 9) →
+      ∀ (t : Nat),
+        6 ≤ (r.state t).snd.snd () ∧
+          Becoming.EvolutionaryDrawdown.MajorTransitionWitness.aPoliced.drawExt (r.state t).snd.fst.fst (Sum.inr ()) +
+              Becoming.EvolutionaryDrawdown.MajorTransitionWitness.bPoliced.drawExt (r.state t).snd.fst.snd
+                (Sum.inr ()) ≤
+            3
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check : (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integState
+            0).snd.snd
+      () =
+    9 ∧
+  (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integState 1).snd.snd () = 8 ∧
+    (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integState 2).snd.snd () = 8 ∧
+      (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integState 3).snd.snd () = 8
+Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift : have gs :=
+  [[Becoming.EvolutionaryDrawdown.MajorTransitionWitness.TransitionUnit.unint0,
+      Becoming.EvolutionaryDrawdown.MajorTransitionWitness.TransitionUnit.unint1],
+    [Becoming.EvolutionaryDrawdown.MajorTransitionWitness.TransitionUnit.integ0,
+      Becoming.EvolutionaryDrawdown.MajorTransitionWitness.TransitionUnit.integ1]];
+Becoming.SelectionLevels.concordWithin gs
+      (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.offspringNumber 3)
+      (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.amount 3) =
+    0 ∧
+  Becoming.SelectionLevels.discordWithin gs
+        (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.offspringNumber 3)
+        (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.amount 3) =
+      0 ∧
+    Becoming.SelectionLevels.discordAmong gs
+          (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.offspringNumber 3)
+          (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.amount 3) =
+        0 ∧
+      Becoming.SelectionLevels.concordAmong gs
+            (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.offspringNumber 3)
+            (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.amount 3) =
+          4 ∧
+        0 <
+            Becoming.SelectionLevels.concordAmong gs
+              (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.offspringNumber 3)
+              (Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.amount 3) ∧
+          Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transitionGen.Raises 3

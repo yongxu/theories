@@ -1131,6 +1131,107 @@ structure ContractRefines
   warn_preserved : ∀ x, cA.warnObs (obs₁ x) →
     (∃ k, x k < warnLevel k) → cA'.warnObs (obs₂ x)
 
+/-- Generic contract-refinement viability transport (`replace_contract_viable`):
+replacing any `(C, cC, obs)` with a refining `(C', cC', obs')` preserves `close_contract_kernel`. -/
+theorem replace_contract_viable
+    {S S' Obs Obs' Dist Dist' Int Int' Ext Env : Type}
+    (C : OpenComponent S Obs Dist Int Ext)
+    (C' : OpenComponent S' Obs' Dist' Int' Ext)
+    {init : S} {init' : S'}
+    (cC : InterfaceContract C init)
+    (cC' : InterfaceContract C' init')
+    (obs : (Ext → Nat) → Obs)
+    (obs' : (Ext → Nat) → Obs')
+    (channel : Bool → Nat → Env → Bool)
+    (G : Ext → (Ext → Nat) → Nat)
+    (envDraw : Env → Ext → Nat) (envCap : Ext → Nat) (jointAdm : Env → Prop)
+    (env_within : ∀ env, jointAdm env → ∀ k, envDraw env k ≤ envCap k)
+    (x_crit warnLevel H_safe x₀ : Ext → Nat)
+    (refines : ContractRefines cC cC' obs obs' warnLevel)
+    (obs_detects : ∀ x k, x k < warnLevel k → cC.warnObs (obs x))
+    (channel_fires : ∀ load env, jointAdm env → load ≤ cC.maxSilence →
+      channel true load env = true)
+    (G_rises : ∀ k, RegimeMargin.Coupled.Indexed.Rises RegimeMargin.Drawn.whole (G k))
+    (post_viable : ∀ k, x_crit k ≤
+      RegimeMargin.Coupled.Indexed.step RegimeMargin.Drawn.whole G H_safe x_crit k)
+    (post_allow : ∀ k, cC.postBudgetExt k + envCap k ≤ H_safe k)
+    (warn_margin : ∀ k, x_crit k + (cC.maxLag + 1) * (cC.preCapExt k + envCap k) ≤ warnLevel k)
+    (init_margin : ∀ k, x_crit k + cC.eta init * (cC.preCapExt k + envCap k) ≤ x₀ k) :
+    Viability.Kernel (closedProcess C' cC' obs' channel G envDraw jointAdm)
+      (closedGuard C' cC' x_crit) (x₀, init') :=
+  close_contract_kernel C' cC' obs' channel G envDraw envCap jointAdm env_within
+    x_crit warnLevel H_safe x₀
+    (fun x k lt => refines.warn_preserved x (obs_detects x k lt) ⟨k, lt⟩)
+    (fun load env adm le => channel_fires load env adm (Nat.le_trans le refines.maxSilence_le))
+    G_rises post_viable
+    (fun k => Nat.le_trans (Nat.add_le_add_right (refines.postBudgetExt_le k) _) (post_allow k))
+    (fun k => Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul
+      (Nat.succ_le_succ refines.maxLag_le) (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
+      (warn_margin k))
+    (fun k => Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul
+      refines.init_eta_le (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
+      (init_margin k))
+
+/-- Lift `ContractRefines` across the left slot of `composeContract`. -/
+theorem contractRefines_compose_left
+    {S₁ S₁' S₂ Obs₁ Obs₁' Obs₂ Dist₁ Dist₁' Dist₂ Int₁ Int₁' Int₂ Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {A' : OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {init₁ : S₁} {init₁' : S₁'} {init₂ : S₂}
+    {cA : InterfaceContract A init₁}
+    {cA' : InterfaceContract A' init₁'}
+    (cB : InterfaceContract B init₂)
+    {obs₁ : (Ext → Nat) → Obs₁} {obs₁' : (Ext → Nat) → Obs₁'}
+    (obs₂ : (Ext → Nat) → Obs₂) {warnLevel : Ext → Nat}
+    (ref : ContractRefines cA cA' obs₁ obs₁' warnLevel) :
+    ContractRefines
+      (composeContract cA cB)
+      (composeContract cA' cB)
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x)) warnLevel where
+  preCapExt_le k := Nat.add_le_add_right (ref.preCapExt_le k) (cB.preCapExt k)
+  postBudgetExt_le k := Nat.add_le_add_right (ref.postBudgetExt_le k) (cB.postBudgetExt k)
+  maxSilence_le := Nat.add_le_add_right ref.maxSilence_le cB.maxSilence
+  maxLag_le := CoreHelpers.natMax_le
+    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_left _ _))
+    (CoreHelpers.le_natMax_right _ _)
+  init_eta_le := CoreHelpers.natMax_le
+    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_left _ _))
+    (CoreHelpers.le_natMax_right _ _)
+  warn_preserved x hw hlt := match hw with
+    | .inl w₁ => Or.inl (ref.warn_preserved x w₁ hlt)
+    | .inr w₂ => Or.inr w₂
+
+/-- Lift `ContractRefines` across the right slot of `composeContract`. -/
+theorem contractRefines_compose_right
+    {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext : Type}
+    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+    {B' : OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext}
+    {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
+    (cA : InterfaceContract A init₁)
+    {cB : InterfaceContract B init₂}
+    {cB' : InterfaceContract B' init₂'}
+    (obs₁ : (Ext → Nat) → Obs₁)
+    {obs₂ : (Ext → Nat) → Obs₂} {obs₂' : (Ext → Nat) → Obs₂'} {warnLevel : Ext → Nat}
+    (ref : ContractRefines cB cB' obs₂ obs₂' warnLevel) :
+    ContractRefines
+      (composeContract cA cB)
+      (composeContract cA cB')
+      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x)) warnLevel where
+  preCapExt_le k := Nat.add_le_add_left (ref.preCapExt_le k) (cA.preCapExt k)
+  postBudgetExt_le k := Nat.add_le_add_left (ref.postBudgetExt_le k) (cA.postBudgetExt k)
+  maxSilence_le := Nat.add_le_add_left ref.maxSilence_le cA.maxSilence
+  maxLag_le := CoreHelpers.natMax_le
+    (CoreHelpers.le_natMax_left _ _)
+    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_right _ _))
+  init_eta_le := CoreHelpers.natMax_le
+    (CoreHelpers.le_natMax_left _ _)
+    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_right _ _))
+  warn_preserved x hw hlt := match hw with
+    | .inl w₁ => Or.inl w₁
+    | .inr w₂ => Or.inr (ref.warn_preserved x w₂ hlt)
+
 /-- **Heterogeneous left-component replacement (`replace_left_viable`)**: replacing `A` inside
 `A ⊕_K B` with any structurally different `A'` (`S₁ ≠ S₂`, `Int₁ ≠ Int₂`) satisfying
 `ContractRefines` preserves global `compose_close_interchange` `Viability.Kernel` without
@@ -1170,40 +1271,14 @@ theorem replace_left_viable
       (closedProcess (OpenComponent.compose A' B) (composeContract cA' cB)
         (fun x => (obs₁' x, obs₂ x)) channel G envDraw jointAdm)
       (closedGuard (OpenComponent.compose A' B) (composeContract cA' cB) x_crit)
-      (x₀, (init₁', init₂)) := by
-  refine compose_close_interchange A' B cA' cB obs₁' obs₂ channel G envDraw envCap jointAdm
-    env_within x_crit warnLevel H_safe x₀ ?_ ?_ G_rises post_viable ?_ ?_ ?_
-  · intro x k lt
-    cases obs_detects_orig x k lt with
-    | inl w1 => exact Or.inl (refines.warn_preserved x w1 ⟨k, lt⟩)
-    | inr w2 => exact Or.inr w2
-  · intro load env adm le
-    exact channel_fires load env adm (Nat.le_trans le (Nat.add_le_add_right refines.maxSilence_le _))
-  · intro k
-    exact Nat.le_trans
-      (Nat.add_le_add_right (Nat.add_le_add_right (refines.postBudgetExt_le k) _) _)
-      (post_budget k)
-  · intro k
-    have lagLe : CoreHelpers.natMax cA'.maxLag cB.maxLag + 1 ≤
-        CoreHelpers.natMax cA.maxLag cB.maxLag + 1 :=
-      Nat.succ_le_succ
-        (CoreHelpers.natMax_le
-          (Nat.le_trans refines.maxLag_le (CoreHelpers.le_natMax_left _ _))
-          (CoreHelpers.le_natMax_right _ _))
-    have capLe : (cA'.preCapExt k + cB.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_right (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul lagLe capLe) _) (warn_margin k)
-  · intro k
-    have etaLe : CoreHelpers.natMax (cA'.eta init₁') (cB.eta init₂) ≤
-        CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) :=
-      CoreHelpers.natMax_le
-        (Nat.le_trans refines.init_eta_le (CoreHelpers.le_natMax_left _ _))
-        (CoreHelpers.le_natMax_right _ _)
-    have capLe : (cA'.preCapExt k + cB.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_right (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul etaLe capLe) _) (init_margin k)
+      (x₀, (init₁', init₂)) :=
+  replace_contract_viable
+    (OpenComponent.compose A B) (OpenComponent.compose A' B)
+    (composeContract cA cB) (composeContract cA' cB)
+    (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x))
+    channel G envDraw envCap jointAdm env_within x_crit warnLevel H_safe x₀
+    (contractRefines_compose_left cB obs₂ refines)
+    obs_detects_orig channel_fires G_rises post_viable post_budget warn_margin init_margin
 
 /-! ### Algebraic Transport, Right Replacement, Boundary Hiding & Right-Associated List Composition -/
 
@@ -1391,100 +1466,14 @@ theorem replace_right_viable
       (closedProcess (OpenComponent.compose A B') (composeContract cA cB')
         (fun x => (obs₁ x, obs₂' x)) channel G envDraw jointAdm)
       (closedGuard (OpenComponent.compose A B') (composeContract cA cB') x_crit)
-      (x₀, (init₁, init₂')) := by
-  refine compose_close_interchange A B' cA cB' obs₁ obs₂' channel G envDraw
-    envCap jointAdm env_within x_crit warnLevel H_safe x₀ ?_ ?_ G_rises post_viable ?_ ?_ ?_
-  · intro x k lt
-    cases obs_detects_orig x k lt with
-    | inl w₁ => exact Or.inl w₁
-    | inr w₂ => exact Or.inr (refines.warn_preserved x w₂ ⟨k, lt⟩)
-  · intro load env adm le
-    exact channel_fires load env adm (Nat.le_trans le (Nat.add_le_add_left refines.maxSilence_le _))
-  · intro k
-    exact Nat.le_trans
-      (Nat.add_le_add_right (Nat.add_le_add_left (refines.postBudgetExt_le k) _) _)
-      (post_cap k)
-  · intro k
-    have lagLe : CoreHelpers.natMax cA.maxLag cB'.maxLag + 1 ≤
-        CoreHelpers.natMax cA.maxLag cB.maxLag + 1 :=
-      Nat.succ_le_succ
-        (CoreHelpers.natMax_le
-          (CoreHelpers.le_natMax_left _ _)
-          (Nat.le_trans refines.maxLag_le (CoreHelpers.le_natMax_right _ _)))
-    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul lagLe capLe) _) (warn_margin k)
-  · intro k
-    have etaLe : CoreHelpers.natMax (cA.eta init₁) (cB'.eta init₂') ≤
-        CoreHelpers.natMax (cA.eta init₁) (cB.eta init₂) :=
-      CoreHelpers.natMax_le
-        (CoreHelpers.le_natMax_left _ _)
-        (Nat.le_trans refines.init_eta_le (CoreHelpers.le_natMax_right _ _))
-    have capLe : (cA.preCapExt k + cB'.preCapExt k) + envCap k ≤
-        (cA.preCapExt k + cB.preCapExt k) + envCap k :=
-      Nat.add_le_add_right (Nat.add_le_add_left (refines.preCapExt_le k) _) _
-    exact Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul etaLe capLe) _) (init_margin k)
-
-/-- Lift `ContractRefines` across the left slot of `composeContract`. -/
-theorem contractRefines_compose_left
-    {S₁ S₁' S₂ Obs₁ Obs₁' Obs₂ Dist₁ Dist₁' Dist₂ Int₁ Int₁' Int₂ Ext : Type}
-    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
-    {A' : OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext}
-    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
-    {init₁ : S₁} {init₁' : S₁'} {init₂ : S₂}
-    {cA : InterfaceContract A init₁}
-    {cA' : InterfaceContract A' init₁'}
-    (cB : InterfaceContract B init₂)
-    {obs₁ : (Ext → Nat) → Obs₁} {obs₁' : (Ext → Nat) → Obs₁'}
-    (obs₂ : (Ext → Nat) → Obs₂) {warnLevel : Ext → Nat}
-    (ref : ContractRefines cA cA' obs₁ obs₁' warnLevel) :
-    ContractRefines
-      (composeContract cA cB)
-      (composeContract cA' cB)
-      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁' x, obs₂ x)) warnLevel where
-  preCapExt_le k := Nat.add_le_add_right (ref.preCapExt_le k) (cB.preCapExt k)
-  postBudgetExt_le k := Nat.add_le_add_right (ref.postBudgetExt_le k) (cB.postBudgetExt k)
-  maxSilence_le := Nat.add_le_add_right ref.maxSilence_le cB.maxSilence
-  maxLag_le := CoreHelpers.natMax_le
-    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_left _ _))
-    (CoreHelpers.le_natMax_right _ _)
-  init_eta_le := CoreHelpers.natMax_le
-    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_left _ _))
-    (CoreHelpers.le_natMax_right _ _)
-  warn_preserved x hw hlt := match hw with
-    | .inl w₁ => Or.inl (ref.warn_preserved x w₁ hlt)
-    | .inr w₂ => Or.inr w₂
-
-/-- Lift `ContractRefines` across the right slot of `composeContract`. -/
-theorem contractRefines_compose_right
-    {S₁ S₂ S₂' Obs₁ Obs₂ Obs₂' Dist₁ Dist₂ Dist₂' Int₁ Int₂ Int₂' Ext : Type}
-    {A : OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
-    {B : OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
-    {B' : OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext}
-    {init₁ : S₁} {init₂ : S₂} {init₂' : S₂'}
-    (cA : InterfaceContract A init₁)
-    {cB : InterfaceContract B init₂}
-    {cB' : InterfaceContract B' init₂'}
-    (obs₁ : (Ext → Nat) → Obs₁)
-    {obs₂ : (Ext → Nat) → Obs₂} {obs₂' : (Ext → Nat) → Obs₂'} {warnLevel : Ext → Nat}
-    (ref : ContractRefines cB cB' obs₂ obs₂' warnLevel) :
-    ContractRefines
-      (composeContract cA cB)
-      (composeContract cA cB')
-      (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x)) warnLevel where
-  preCapExt_le k := Nat.add_le_add_left (ref.preCapExt_le k) (cA.preCapExt k)
-  postBudgetExt_le k := Nat.add_le_add_left (ref.postBudgetExt_le k) (cA.postBudgetExt k)
-  maxSilence_le := Nat.add_le_add_left ref.maxSilence_le cA.maxSilence
-  maxLag_le := CoreHelpers.natMax_le
-    (CoreHelpers.le_natMax_left _ _)
-    (Nat.le_trans ref.maxLag_le (CoreHelpers.le_natMax_right _ _))
-  init_eta_le := CoreHelpers.natMax_le
-    (CoreHelpers.le_natMax_left _ _)
-    (Nat.le_trans ref.init_eta_le (CoreHelpers.le_natMax_right _ _))
-  warn_preserved x hw hlt := match hw with
-    | .inl w₁ => Or.inl w₁
-    | .inr w₂ => Or.inr (ref.warn_preserved x w₂ hlt)
+      (x₀, (init₁, init₂')) :=
+  replace_contract_viable
+    (OpenComponent.compose A B) (OpenComponent.compose A B')
+    (composeContract cA cB) (composeContract cA cB')
+    (fun x => (obs₁ x, obs₂ x)) (fun x => (obs₁ x, obs₂' x))
+    channel G envDraw envCap jointAdm env_within x_crit warnLevel H_safe x₀
+    (contractRefines_compose_right cA obs₁ refines)
+    obs_detects_orig channel_fires G_rises post_viable post_cap warn_margin init_margin
 
 /-- Augment any `(C, c)` on `Ext := Unit` with an exposed coupled site `.inr ()` whose draw switches
 from `preHide` (`0 < c.eta s`) to `postHide` (`c.eta s = 0`) cleanly inside `c`'s contract. -/
@@ -1756,20 +1745,9 @@ theorem composeList_replace_head_viable {α S Obs Dist Int Ext Env : Type}
       (x₀, composeListInit init head' tail) := by
   cases tail with
   | nil =>
-    exact close_contract_kernel (comp head') (contract head') obsFn channel G envDraw envCap
-      jointAdm env_within x_crit warnLevel H_safe x₀
-      (fun x k lt => refines.warn_preserved x (obs_detects x k lt) ⟨k, lt⟩)
-      (fun load env adm hLoad => channel_fires load env adm (Nat.le_trans hLoad refines.maxSilence_le))
-      G_rises post_viable
-      (fun k => Nat.le_trans (Nat.add_le_add_right (refines.postBudgetExt_le k) _) (post_cap k))
-      (fun k => Nat.le_trans
-        (Nat.add_le_add_left (Nat.mul_le_mul (Nat.succ_le_succ refines.maxLag_le)
-          (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
-        (warn_margin k))
-      (fun k => Nat.le_trans
-        (Nat.add_le_add_left (Nat.mul_le_mul refines.init_eta_le
-          (Nat.add_le_add_right (refines.preCapExt_le k) _)) _)
-        (init_margin k))
+    exact replace_contract_viable (comp head) (comp head') (contract head) (contract head')
+      obsFn obsFn channel G envDraw envCap jointAdm env_within x_crit warnLevel H_safe x₀
+      refines obs_detects channel_fires G_rises post_viable post_cap warn_margin init_margin
   | cons next rest =>
     exact replace_left_viable
       (comp head) (comp head') (composeListComponent comp next rest)

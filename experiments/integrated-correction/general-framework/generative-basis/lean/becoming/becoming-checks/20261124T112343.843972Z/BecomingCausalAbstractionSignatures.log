@@ -1,0 +1,366 @@
+@Becoming.withAct_self_next_pointwise : ∀ {F C : Type} (law : Becoming.ExchangeLaw F C) (present : Nat → List F)
+  (part : F → Bool) (x : Nat × (Nat → C → Nat)),
+  ((law.withAct part law).next present x).fst = (law.next present x).fst ∧
+    ∀ (s : Nat) (c : C), ((law.withAct part law).next present x).snd s c = (law.next present x).snd s c
+@Becoming.exactCausal_passive_factors : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q} {φ : A → B}
+  {ω : I → J}, Becoming.ExactCausalAbs C₁ C₂ π φ ω → Becoming.FactorsThroughMap C₁.passive C₂.passive π φ
+@Becoming.exactCausal_trace_map : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q} {φ : A → B}
+  {ω : I → J},
+  Becoming.ExactCausalAbs C₁ C₂ π φ ω →
+    ∀ (i : I) {s s' : S} {w : List A},
+      Generative.Trace (C₁.proc i) s w s' → Generative.Trace (C₂.proc (ω i)) (π s) (List.map φ w) (π s')
+@Becoming.exactCausal_trace_exact_iff : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q} {φ : A → B}
+  {ω : I → J} (abs : Becoming.ExactCausalAbs C₁ C₂ π φ ω),
+  abs.Lifts →
+    ∀ (i : I) {s : S} {wQ : List B} {q' : Q},
+      Generative.Trace (C₂.proc (ω i)) (π s) wQ q' ↔
+        ∃ w s', List.map φ w = wQ ∧ Generative.Trace (C₁.proc i) s w s' ∧ π s' = q'
+@Becoming.exactCausal_commuting_iff : ∀ {S : Type u_1} {I : Type u_2} {Q : Type u_3} {J : Type u_4}
+  {next₁ : I → S → Unit → S} {next₂ : J → Q → Unit → Q} {obs₁ : I} {obs₂ : J} {π : S → Q} {φ : Unit → Unit} {ω : I → J},
+  Becoming.ExactCausalAbs (Becoming.CausalSystem.ofMap next₁ obs₁) (Becoming.CausalSystem.ofMap next₂ obs₂) π φ ω ↔
+    ω obs₁ = obs₂ ∧ ∀ (i : I), Becoming.ProjectedLaws.Commuting (next₁ i) (next₂ (ω i)) π
+@Becoming.scheduledProcess_trace_block : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3}
+  {C : Becoming.CausalSystem S A I} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ (sched : Nat → I) {k t₀ : Nat} {s : S} {w : List A} {ts' : Nat × S},
+      σ k ≤ t₀ →
+        t₀ + w.length ≤ σ (k + 1) →
+          Generative.Trace (C.scheduledProcess σ sched) (t₀, s) w ts' →
+            ts'.fst = t₀ + w.length ∧ Generative.Trace (C.proc (sched k)) s w ts'.snd
+@Becoming.laxCausal_openLoop_kernel_transfer : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {ω : I → J} {σ : Nat → Nat} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω σ M) (sched : Nat → I)
+  {guardQ : Nat × Q → Prop} {guardS : Nat × S → Prop} (Δ : Nat),
+  lc.α Δ + lc.ε ≤ Δ →
+    (∀ (kq : Nat × Q) (u : Nat × S), guardQ kq → M.d (π u.snd) kq.snd ≤ lc.β Δ + lc.η → guardS u) →
+      ∀ {s₀ : S},
+        lc.Epoch (σ 0) s₀ →
+          Becoming.Viability.Kernel (C₂.scheduledProcess id fun k => ω (sched k)) guardQ (0, π s₀) →
+            Becoming.Viability.Kernel (C₁.scheduledProcess σ sched) guardS (σ 0, s₀)
+@Becoming.laxCausal_openLoop_keptFor_linear : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {ω : I → J} {σ : Nat → Nat} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω σ M),
+  lc.α = id →
+    ∀ (sched : Nat → I) {guardQ : Nat × Q → Prop} {guardS : Nat × S → Prop} (N : Nat),
+      0 < N →
+        (∀ (kq : Nat × Q) (u : Nat × S), guardQ kq → M.d (π u.snd) kq.snd ≤ lc.β ((N - 1) * lc.ε) + lc.η → guardS u) →
+          ∀ {s₀ : S},
+            lc.Epoch (σ 0) s₀ →
+              Becoming.Viability.Kernel (C₂.scheduledProcess id fun k => ω (sched k)) guardQ (0, π s₀) →
+                ∀ (w : List A) (t : Nat × S),
+                  w.length < σ N - σ 0 → Generative.Trace (C₁.scheduledProcess σ sched) (σ 0, s₀) w t → guardS t
+@Becoming.exactCausal_feedback_trace_map : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q} {φ : A → B}
+  {ω : I → J},
+  Becoming.ExactCausalAbs C₁ C₂ π φ ω →
+    ∀ (κ : Q → I) {s s' : S} {w : List A},
+      Generative.Trace (C₁.feedbackProcess fun x => κ (π x)) s w s' →
+        Generative.Trace (C₂.feedbackProcess fun q => ω (κ q)) (π s) (List.map φ w) (π s')
+@Becoming.exactCausal_feedback_kernel_transfer : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {φ : A → B} {ω : I → J},
+  Becoming.ExactCausalAbs C₁ C₂ π φ ω →
+    ∀ (κ : Q → I) {guardQ : Q → Prop} {guardS : S → Prop},
+      (∀ (s : S), guardQ (π s) → guardS s) →
+        ∀ {s₀ : S},
+          Becoming.Viability.Kernel (C₂.feedbackProcess fun q => ω (κ q)) guardQ (π s₀) →
+            Becoming.Viability.Kernel (C₁.feedbackProcess fun s => κ (π s)) guardS s₀
+@Becoming.laxCausal_feedback_kernel_transfer : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {ω : I → J} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω id M) (κ : Q → I) {guardQ K : Q → Prop}
+  {guardS : S → Prop} (Δ : Nat),
+  lc.α Δ + lc.ε ≤ Δ →
+    (∀ (q : Q), K q → guardQ q) →
+      (∀ (q₁ q₂ : Q) (b : B) (q₂' : Q), K q₂ → M.d q₁ q₂ ≤ Δ → (C₂.proc (ω (κ q₁))).step q₂ b q₂' → K q₂') →
+        (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ lc.β Δ + lc.η → guardS u) →
+          ∀ {s₀ : S},
+            lc.Epoch 0 s₀ → K (π s₀) → Becoming.Viability.Kernel (C₁.feedbackProcess fun s => κ (π s)) guardS s₀
+@Becoming.laxCausal_feedback_kernel_transfer_of_ball_invariant : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3}
+  {Q : Type u_4} {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J}
+  {π : S → Q} {ω : I → J} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω id M) (κ : Q → I)
+  {guardQ K : Q → Prop} {guardS : S → Prop},
+  Becoming.Viability.Certificate (C₂.feedbackProcess fun q => ω (κ q)) guardQ K →
+    ∀ (Δ : Nat),
+      lc.α Δ + lc.ε ≤ Δ →
+        (∀ (q₁ q₂ : Q), K q₂ → M.d q₁ q₂ ≤ Δ → ω (κ q₁) = ω (κ q₂)) →
+          (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ lc.β Δ + lc.η → guardS u) →
+            ∀ {s₀ : S},
+              lc.Epoch 0 s₀ → K (π s₀) → Becoming.Viability.Kernel (C₁.feedbackProcess fun s => κ (π s)) guardS s₀
+@Becoming.laxCausal_feedback_keptFor_linear : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {ω : I → J} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω id M),
+  lc.α = id →
+    ∀ (κ : Q → I) {guardQ K : Q → Prop} {guardS : S → Prop} (N : Nat),
+      0 < N →
+        (∀ (q : Q), K q → guardQ q) →
+          (∀ (q₁ q₂ : Q) (b : B) (q₂' : Q),
+              K q₂ → M.d q₁ q₂ ≤ (N - 1) * lc.ε → (C₂.proc (ω (κ q₁))).step q₂ b q₂' → K q₂') →
+            (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ lc.β ((N - 1) * lc.ε) + lc.η → guardS u) →
+              ∀ {s₀ : S},
+                lc.Epoch 0 s₀ →
+                  K (π s₀) →
+                    ∀ (w : List A) (t : S),
+                      w.length < N → Generative.Trace (C₁.feedbackProcess fun s => κ (π s)) s₀ w t → guardS t
+@Becoming.length_snoc : ∀ {α : Type u_1} (w : List α) (a : α), (w ++ [a]).length = w.length + 1
+@Becoming.trace_snoc : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t u : S} {w : List A} {a : A},
+  Generative.Trace P s w t → P.step t a u → Generative.Trace P s (w ++ [a]) u
+@Becoming.sampledFeedbackProcess_trace_block : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {C : Becoming.CausalSystem S A I} {σ : Nat → Nat},
+  Becoming.Strict σ →
+    ∀ (π : S → Q) (κ : Q → I) {k t₀ : Nat} {i₀ : I} {s : S} {w : List A} {st' : Nat × I × S},
+      σ k ≤ t₀ →
+        t₀ + w.length ≤ σ (k + 1) →
+          Generative.Trace (Becoming.sampledFeedbackProcess C σ π κ) (t₀, i₀, s) w st' →
+            st'.fst = t₀ + w.length ∧
+              Generative.Trace (C.proc i₀) s w st'.snd.snd ∧
+                (t₀ + w.length < σ (k + 1) → st'.snd.fst = i₀) ∧
+                  (w ≠ [] → t₀ + w.length = σ (k + 1) → st'.snd.fst = κ (π st'.snd.snd))
+@Becoming.laxCausal_sampledFeedback_kernel_transfer : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {B : Type u_5} {J : Type u_6} {C₁ : Becoming.CausalSystem S A I} {C₂ : Becoming.CausalSystem Q B J} {π : S → Q}
+  {ω : I → J} {σ : Nat → Nat} {M : Becoming.SlackDist Q} (lc : Becoming.LaxCausalAbs C₁ C₂ π ω σ M) (κ : Q → I)
+  {guardQ K : Q → Prop} {guardS : S → Prop} (Δ : Nat),
+  lc.α Δ + lc.ε ≤ Δ →
+    (∀ (q : Q), K q → guardQ q) →
+      (∀ (q₁ q₂ : Q) (b : B) (q₂' : Q), K q₂ → M.d q₁ q₂ ≤ Δ → (C₂.proc (ω (κ q₁))).step q₂ b q₂' → K q₂') →
+        (∀ (q : Q) (u : S), guardQ q → M.d (π u) q ≤ lc.β Δ + lc.η → guardS u) →
+          ∀ {s₀ : S},
+            lc.Epoch (σ 0) s₀ →
+              K (π s₀) →
+                Becoming.Viability.Kernel (Becoming.sampledFeedbackProcess C₁ σ π κ) (fun st => guardS st.snd.snd)
+                  (σ 0, κ (π s₀), s₀)
+@Becoming.ExactCausalAbs.comp : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {R : Type u_7} {D : Type u_8} {K : Type u_9} {C₁ : Becoming.CausalSystem S A I}
+  {C₂ : Becoming.CausalSystem Q B J} {C₃ : Becoming.CausalSystem R D K} {π₁ : S → Q} {φ₁ : A → B} {ω₁ : I → J}
+  {π₂ : Q → R} {φ₂ : B → D} {ω₂ : J → K},
+  Becoming.ExactCausalAbs C₁ C₂ π₁ φ₁ ω₁ →
+    Becoming.ExactCausalAbs C₂ C₃ π₂ φ₂ ω₂ →
+      Becoming.ExactCausalAbs C₁ C₃ (fun s => π₂ (π₁ s)) (fun a => φ₂ (φ₁ a)) fun i => ω₂ (ω₁ i)
+@Becoming.ExactCausalAbs.Lifts.comp : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} {R : Type u_7} {D : Type u_8} {K : Type u_9} {C₁ : Becoming.CausalSystem S A I}
+  {C₂ : Becoming.CausalSystem Q B J} {C₃ : Becoming.CausalSystem R D K} {π₁ : S → Q} {φ₁ : A → B} {ω₁ : I → J}
+  {π₂ : Q → R} {φ₂ : B → D} {ω₂ : J → K} {abs₁ : Becoming.ExactCausalAbs C₁ C₂ π₁ φ₁ ω₁}
+  {abs₂ : Becoming.ExactCausalAbs C₂ C₃ π₂ φ₂ ω₂}, abs₁.Lifts → abs₂.Lifts → ⋯.Lifts
+@Becoming.ExactCausalAbs.prod : ∀ {S₁ : Type u_1} {A₁ : Type u_2} {I₁ : Type u_3} {S₂ : Type u_4} {A₂ : Type u_5}
+  {I₂ : Type u_6} {Q₁ : Type u_7} {B₁ : Type u_8} {J₁ : Type u_9} {Q₂ B₂ J₂ : Type}
+  {C₁ : Becoming.CausalSystem S₁ A₁ I₁} {C₂ : Becoming.CausalSystem S₂ A₂ I₂} {D₁ : Becoming.CausalSystem Q₁ B₁ J₁}
+  {D₂ : Becoming.CausalSystem Q₂ B₂ J₂} {π₁ : S₁ → Q₁} {φ₁ : A₁ → B₁} {ω₁ : I₁ → J₁} {π₂ : S₂ → Q₂} {φ₂ : A₂ → B₂}
+  {ω₂ : I₂ → J₂},
+  Becoming.ExactCausalAbs C₁ D₁ π₁ φ₁ ω₁ →
+    Becoming.ExactCausalAbs C₂ D₂ π₂ φ₂ ω₂ →
+      Becoming.ExactCausalAbs (C₁.prod C₂) (D₁.prod D₂) (fun s => (π₁ s.fst, π₂ s.snd)) (fun a => (φ₁ a.fst, φ₂ a.snd))
+        fun i => (ω₁ i.fst, ω₂ i.snd)
+@Becoming.ofOpenComposite_step_iff : ∀ {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) (tol₁ : Obs₁ × Bool → Dist₁ → Prop)
+  (tol₂ : Obs₂ × Bool → Dist₂ → Prop) (ov : (Option Obs₁ × Option Obs₂) × Option Bool) (s s' : S₁ × S₂)
+  (m : ((Obs₁ × Obs₂) × Bool) × Dist₁ × Dist₂),
+  ((Becoming.CausalSystem.ofOpenComposite A B tol₁ tol₂).proc ov).step s m s' ↔
+    ((Becoming.CausalSystem.ofOpenComponent A tol₁).proc (ov.fst.fst, ov.snd)).step s.fst
+        ((m.fst.fst.fst, m.fst.snd), m.snd.fst) s'.fst ∧
+      ((Becoming.CausalSystem.ofOpenComponent B tol₂).proc (ov.fst.snd, ov.snd)).step s.snd
+        ((m.fst.fst.snd, m.fst.snd), m.snd.snd) s'.snd
+@Becoming.ofOpenComposite_boundary_local : ∀ {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext : Type}
+  (A : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext)
+  (B : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext) (tol₁ : Obs₁ × Bool → Dist₁ → Prop)
+  (tol₂ : Obs₂ × Bool → Dist₂ → Prop) (ov₂ : Option Obs₂) (s s' : S₁ × S₂) (m : ((Obs₁ × Obs₂) × Bool) × Dist₁ × Dist₂),
+  ((Becoming.CausalSystem.ofOpenComposite A B tol₁ tol₂).proc ((none, ov₂), none)).step s m s' →
+    (A.process tol₁).step s.fst ((m.fst.fst.fst, m.fst.snd), m.snd.fst) s'.fst
+@Becoming.ExactCausalAbs.composeOpen : ∀
+  {S₁ S₂ Obs₁ Obs₂ Dist₁ Dist₂ Int₁ Int₂ Ext S₁' S₂' Obs₁' Obs₂' Dist₁' Dist₂' Int₁' Int₂' Ext' : Type}
+  {A₁ : Becoming.OpenComposition.OpenComponent S₁ Obs₁ Dist₁ Int₁ Ext}
+  {A₂ : Becoming.OpenComposition.OpenComponent S₂ Obs₂ Dist₂ Int₂ Ext}
+  {B₁ : Becoming.OpenComposition.OpenComponent S₁' Obs₁' Dist₁' Int₁' Ext'}
+  {B₂ : Becoming.OpenComposition.OpenComponent S₂' Obs₂' Dist₂' Int₂' Ext'} {tol₁ : Obs₁ × Bool → Dist₁ → Prop}
+  {tol₂ : Obs₂ × Bool → Dist₂ → Prop} {tol₁' : Obs₁' × Bool → Dist₁' → Prop} {tol₂' : Obs₂' × Bool → Dist₂' → Prop}
+  {π₁ : S₁ → S₁'} {π₂ : S₂ → S₂'} {φ₁ : (Obs₁ × Bool) × Dist₁ → (Obs₁' × Bool) × Dist₁'}
+  {φ₂ : (Obs₂ × Bool) × Dist₂ → (Obs₂' × Bool) × Dist₂'} {ω₁ : Option Obs₁ × Option Bool → Option Obs₁' × Option Bool}
+  {ω₂ : Option Obs₂ × Option Bool → Option Obs₂' × Option Bool},
+  Becoming.ExactCausalAbs (Becoming.CausalSystem.ofOpenComponent A₁ tol₁)
+      (Becoming.CausalSystem.ofOpenComponent B₁ tol₁') π₁ φ₁ ω₁ →
+    Becoming.ExactCausalAbs (Becoming.CausalSystem.ofOpenComponent A₂ tol₂)
+        (Becoming.CausalSystem.ofOpenComponent B₂ tol₂') π₂ φ₂ ω₂ →
+      ∀ (ω : (Option Obs₁ × Option Obs₂) × Option Bool → (Option Obs₁' × Option Obs₂') × Option Bool),
+        (∀ (ov : (Option Obs₁ × Option Obs₂) × Option Bool), ((ω ov).fst.fst, (ω ov).snd) = ω₁ (ov.fst.fst, ov.snd)) →
+          (∀ (ov : (Option Obs₁ × Option Obs₂) × Option Bool), ((ω ov).fst.snd, (ω ov).snd) = ω₂ (ov.fst.snd, ov.snd)) →
+            (∀ (o₁ : Obs₁) (o₂ : Obs₂) (al : Bool) (d₁ : Dist₁) (d₂ : Dist₂),
+                (φ₁ ((o₁, al), d₁)).fst.snd = (φ₂ ((o₂, al), d₂)).fst.snd) →
+              Becoming.ExactCausalAbs (Becoming.CausalSystem.ofOpenComposite A₁ A₂ tol₁ tol₂)
+                (Becoming.CausalSystem.ofOpenComposite B₁ B₂ tol₁' tol₂') (fun s => (π₁ s.fst, π₂ s.snd))
+                (fun m =>
+                  have b₁ := φ₁ ((m.fst.fst.fst, m.fst.snd), m.snd.fst);
+                  have b₂ := φ₂ ((m.fst.fst.snd, m.fst.snd), m.snd.snd);
+                  (((b₁.fst.fst, b₂.fst.fst), b₁.fst.snd), b₁.snd, b₂.snd))
+                ω
+Becoming.HorizontalLeakageWitness.exact_on_obs : Becoming.FactorsThrough
+  Becoming.HorizontalLeakageWitness.microSys.passive id Becoming.HorizontalLeakageWitness.macroInd.passive
+Becoming.HorizontalLeakageWitness.exact_marginal_A : Becoming.ExactCausalAbs Becoming.HorizontalLeakageWitness.microSys
+  Becoming.HorizontalLeakageWitness.macroA Prod.fst id Prod.fst
+Becoming.HorizontalLeakageWitness.exact_passive_A_marginal_B : Becoming.ExactCausalAbs
+  (Becoming.CausalSystem.ofMap (fun ob s x => Becoming.HorizontalLeakageWitness.microNext (none, ob) s) none)
+  Becoming.HorizontalLeakageWitness.macroB Prod.snd id id
+Becoming.HorizontalLeakageWitness.no_exact_causal_abs : ∀ (φ : Unit → Unit)
+  (ω : Option Bool × Option Bool → Option Bool × Option Bool),
+  ¬Becoming.ExactCausalAbs Becoming.HorizontalLeakageWitness.microSys Becoming.HorizontalLeakageWitness.macroInd id φ ω
+@Becoming.HorizontalLeakageWitness.no_zero_slack_lax_abs : ∀ {σ : Nat → Nat},
+  σ 0 = 0 →
+    ∀
+      (lc :
+        Becoming.LaxCausalAbs Becoming.HorizontalLeakageWitness.microSys Becoming.HorizontalLeakageWitness.macroInd id
+          id σ Becoming.HorizontalLeakageWitness.boolPairDist),
+      ¬(lc.Epoch 0 (false, false) ∧ lc.α 0 = 0 ∧ lc.ε = 0)
+Becoming.CausalGoodhartWitness.stepObs_nonexpansive : ∀ (q₁ q₂ : Becoming.CausalGoodhartWitness.Level),
+  Becoming.CausalGoodhartWitness.levelDist.d (Becoming.CausalGoodhartWitness.stepObs q₁)
+      (Becoming.CausalGoodhartWitness.stepObs q₂) ≤
+    Becoming.CausalGoodhartWitness.levelDist.d q₁ q₂
+Becoming.CausalGoodhartWitness.passive_commuting_all : Becoming.ProjectedLaws.Commuting
+  (fun s x => Becoming.CausalGoodhartWitness.stepMicro false s)
+  (fun q x => Becoming.CausalGoodhartWitness.stepMacro false q) Becoming.CausalGoodhartWitness.π
+Becoming.CausalGoodhartWitness.passive_micro_kernel : Becoming.Viability.Kernel
+  Becoming.CausalGoodhartWitness.micro.passive Becoming.CausalGoodhartWitness.guardS Becoming.CausalGoodhartWitness.s₀
+Becoming.CausalGoodhartWitness.passive_macro_kernel : Becoming.Viability.Kernel
+  Becoming.CausalGoodhartWitness.macroSys.passive Becoming.CausalGoodhartWitness.guardQ
+  (Becoming.CausalGoodhartWitness.π Becoming.CausalGoodhartWitness.s₀)
+Becoming.CausalGoodhartWitness.macro_boost_kernel : Becoming.Viability.Kernel
+    (Becoming.CausalGoodhartWitness.macroSys.proc true) Becoming.CausalGoodhartWitness.guardQ
+    (Becoming.CausalGoodhartWitness.π Becoming.CausalGoodhartWitness.s₀) ∧
+  (Becoming.CausalGoodhartWitness.π Becoming.CausalGoodhartWitness.s₀).toNat <
+    (Becoming.CausalGoodhartWitness.stepMacro true
+        (Becoming.CausalGoodhartWitness.π Becoming.CausalGoodhartWitness.s₀)).toNat
+Becoming.CausalGoodhartWitness.micro_boost_guardS_collapses : ∃ s₂,
+  Generative.Trace (Becoming.CausalGoodhartWitness.micro.proc true) Becoming.CausalGoodhartWitness.s₀ [(), ()] s₂ ∧
+    ¬Becoming.CausalGoodhartWitness.guardS s₂ ∧
+      Becoming.CausalGoodhartWitness.guardQ (Becoming.CausalGoodhartWitness.π s₂)
+Becoming.CausalGoodhartWitness.micro_boost_proxy_collapses : ∃ s₃,
+  Generative.Trace (Becoming.CausalGoodhartWitness.micro.proc true) Becoming.CausalGoodhartWitness.s₀ [(), (), ()] s₃ ∧
+    ¬Becoming.CausalGoodhartWitness.guardQ (Becoming.CausalGoodhartWitness.π s₃)
+Becoming.CausalGoodhartWitness.no_exact_causal_abs_any_omega : ∀ (φ : Unit → Unit) (ω : Bool → Bool),
+  ¬Becoming.ExactCausalAbs Becoming.CausalGoodhartWitness.micro Becoming.CausalGoodhartWitness.macroSys
+      Becoming.CausalGoodhartWitness.π φ ω
+@Becoming.CausalGoodhartWitness.no_zero_slack_lax_causal_abs : ∀ {ω : Bool → Bool} {σ : Nat → Nat},
+  σ 0 = 0 →
+    ∀
+      (lc :
+        Becoming.LaxCausalAbs Becoming.CausalGoodhartWitness.micro Becoming.CausalGoodhartWitness.macroSys
+          Becoming.CausalGoodhartWitness.π ω σ Becoming.CausalGoodhartWitness.levelDist),
+      ¬(lc.Epoch 0 Becoming.CausalGoodhartWitness.s₀ ∧ lc.α 0 = 0 ∧ lc.ε = 0)
+@Becoming.CausalGoodhartWitness.no_small_slack_lax_causal_abs : ∀ {ω : Bool → Bool}
+  (lc :
+    Becoming.LaxCausalAbs Becoming.CausalGoodhartWitness.micro Becoming.CausalGoodhartWitness.macroSys
+      Becoming.CausalGoodhartWitness.π ω id Becoming.CausalGoodhartWitness.levelDist),
+  ¬((∀ (s : Becoming.CausalGoodhartWitness.Level × Becoming.CausalGoodhartWitness.Level), lc.Epoch 0 s) ∧
+      lc.α 0 + lc.ε ≤ 1)
+@Becoming.«因像定当且仅当因同行» : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {J : Type u_5}
+  (C : Becoming.CausalSystem S A I) (π : S → Q) (ω : I → J),
+  (∀ (j : J), Becoming.Determined ((Becoming.CausalImage C π ω).proc j)) ↔ Becoming.CausalGoAlike C π ω
+@Becoming.exactCausal_exists_iff_causalGoAlike : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {J : Type u_5} (C : Becoming.CausalSystem S A I) (π : S → Q) (ω : I → J),
+  (∃ D, (∀ (j : J), Becoming.Determined (D.proc j)) ∧ Becoming.ExactCausalAbs C D π id ω) ↔ Becoming.CausalGoAlike C π ω
+@Becoming.imageMap_iff_grammar : ∀ {S : Type u_1} {A : Type u_2} {Q : Type u_3} {B : Type u_4}
+  (P : Generative.Process S A) (π : S → Q) (φ : A → B) (q q' : Q) (b : B),
+  (Becoming.ImageMap P π φ).step q b q' ↔ Becoming.«像» π (fun s s' => ∃ a, φ a = b ∧ P.step s a s') q q'
+@Becoming.exactCausalMap_exists_iff : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4} {B : Type u_5}
+  {J : Type u_6} (C : Becoming.CausalSystem S A I) (π : S → Q) (φ : A → B) (ω : I → J),
+  (∃ D, (∀ (j : J), Becoming.Determined (D.proc j)) ∧ Becoming.ExactCausalAbs C D π φ ω) ↔
+    Becoming.CausalGoAlikeMap C π φ ω
+@Becoming.keepRow_eq_iff : ∀ {C : Type} (keep : C → Bool) (r r' : C → Nat) (cs : List C),
+  Becoming.keepRow keep r cs = Becoming.keepRow keep r' cs ↔ ∀ (c : C), c ∈ cs → keep c = true → r c = r' c
+@Becoming.keepHist_eq_iff : ∀ {C : Type} (keep : C → Bool) (cs : List C) (l l' : Nat → C → Nat) (t : Nat),
+  Becoming.keepHist keep cs l t = Becoming.keepHist keep cs l' t ↔
+    ∀ (s : Nat), s ≤ t → ∀ (c : C), c ∈ cs → keep c = true → l s c = l' s c
+@Becoming.projectHistList_eq_iff : ∀ {C : Type} (keep : C → Bool) (cs : List C) (x x' : Nat × (Nat → C → Nat)),
+  Becoming.projectHistList keep cs x = Becoming.projectHistList keep cs x' ↔
+    x.fst = x'.fst ∧ ∀ (s : Nat), s ≤ x.fst → ∀ (c : C), c ∈ cs → keep c = true → x.snd s c = x'.snd s c
+@Becoming.withAct_sensitive_iff : ∀ {F C : Type} (law act : Becoming.ExchangeLaw F C) (part : F → Bool) {h : F} {c : C},
+  (law.withAct part act).Sensitive h c ↔ part h = false ∧ law.Sensitive h c ∨ part h = true ∧ act.Sensitive h c
+@Becoming.exchange_givesAlike_iff_sensitive_in : ∀ {F C : Type} [DecidableEq C] (law : Becoming.ExchangeLaw F C),
+  law.Nonanticipating →
+    ∀ (cs : List C),
+      (∀ (c : C), c ∈ cs) →
+        ∀ (keep : C → Bool) (h : F),
+          (∀ (t : Nat) (l l' : Nat → C → Nat),
+              Becoming.keepHist keep cs l t = Becoming.keepHist keep cs l' t → law.GivesAlike t h l l') ↔
+            ∀ (c : C), law.Sensitive h c → keep c = true
+@Becoming.exactCausal_of_exchange_sensitive_in : ∀ {F C : Type} [DecidableEq C] (law : Becoming.ExchangeLaw F C)
+  (present : Nat → List F) (part : F → Bool) (cs : List C),
+  (∀ (c : C), c ∈ cs) →
+    ∀ (keep : C → Bool) (ω : Option (Becoming.ExchangeLaw F C) → Option (Becoming.ExchangeLaw F C)),
+      (∀ (j : Option (Becoming.ExchangeLaw F C)), (Becoming.effectiveLaw law part (ω j)).Nonanticipating) →
+        (∀ (j : Option (Becoming.ExchangeLaw F C)) (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+            h ∈ present t →
+              (Becoming.effectiveLaw law part j).take t h l c = (Becoming.effectiveLaw law part (ω j)).take t h l c ∧
+                (Becoming.effectiveLaw law part j).give t h l c = (Becoming.effectiveLaw law part (ω j)).give t h l c) →
+          (∀ (j : Option (Becoming.ExchangeLaw F C)) (t : Nat) (h : F) (c : C),
+              h ∈ present t → (Becoming.effectiveLaw law part (ω j)).Sensitive h c → keep c = true) →
+            ∃ D,
+              (∀ (j : Option (Becoming.ExchangeLaw F C)), Becoming.Determined (D.proc j)) ∧
+                Becoming.ExactCausalAbs (Becoming.CausalSystem.ofExchangeLaw law present part) D
+                  (Becoming.projectHistList keep cs) id ω
+@Becoming.withAct_self_next_projectHistList : ∀ {F C : Type} (law : Becoming.ExchangeLaw F C) (present : Nat → List F)
+  (part : F → Bool) (keep : C → Bool) (cs : List C) (x : Nat × (Nat → C → Nat)),
+  Becoming.projectHistList keep cs ((law.withAct part law).next present x) =
+    Becoming.projectHistList keep cs (law.next present x)
+@Becoming.sensitive_in_of_through : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  law.Through W obs part →
+    ∀ {h : F},
+      part h = false →
+        ∀ (keep : C → Bool),
+          (∀ (c : C), W.CoupledInto obs h c → keep c = true) → ∀ (c : C), law.Sensitive h c → keep c = true
+@Becoming.causal_underdetermined_of_untaken : ∀ {S : Type u_1} {A : Type u_2} {I : Type u_3} {Q : Type u_4}
+  {C₁ : Becoming.CausalSystem S A I} (C₂ : Becoming.CausalSystem Q A Bool) {π : S → Q} {ω : I → Bool},
+  C₂.obs = false →
+    ω C₁.obs = false →
+      (∃ j₀, ω j₀ = true) →
+        ∀ (r : Becoming.Run C₁.passive) {t : Nat} {k : Q} {a : A},
+          (∃ P, Becoming.Determined P ∧ r.StepsThrough π P t) →
+            ¬r.TakesThrough π t k a →
+              Becoming.Determined C₂.passive →
+                Becoming.Determined (C₂.proc true) →
+                  Becoming.FactorsThrough C₁.passive π C₂.passive →
+                    ∀ {κ₁ κ₂ : Q},
+                      κ₁ ≠ κ₂ →
+                        (¬∃ κ, r.FixesThrough π t k a κ) ∧
+                          ∃ j₀ D₁ D₂,
+                            ω j₀ = true ∧
+                              (∀ (j : Bool), Becoming.Determined (D₁.proc j)) ∧
+                                (∀ (j : Bool), Becoming.Determined (D₂.proc j)) ∧
+                                  Becoming.FactorsThrough C₁.passive π D₁.passive ∧
+                                    Becoming.FactorsThrough C₁.passive π D₂.passive ∧
+                                      r.StepsThrough π D₁.passive t ∧
+                                        r.StepsThrough π D₂.passive t ∧
+                                          (D₁.proc (ω j₀)).step k a κ₁ ∧
+                                            (D₂.proc (ω j₀)).step k a κ₂ ∧ ω C₁.obs = D₁.obs ∧ ω C₁.obs = D₂.obs
+@Becoming.mechanism_intervention_underdetermined : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} (F : X → U → E → X)
+  (r : Becoming.Run (Becoming.CausalSystem.ofMechanism F).passive) {t : Nat} {x : X} {u' : U} {e' : E},
+  ¬r.Takes t x (u', e') →
+    ∀ {y z : X},
+      y ≠ z →
+        (¬∃ w, r.Fixes t x (u', e') w) ∧
+          ((Becoming.CausalSystem.ofMechanism F).proc (some u')).step x (u', e') (F x u' e') ∧
+            ∀ (w : X), ((Becoming.CausalSystem.ofMechanism F).proc (some u')).step x (u', e') w → w = F x u' e'
+@Becoming.exactCausal_refuted_of_confound_varied : ∀ {J : Type u_1}
+  (D : Becoming.CausalSystem Bool Becoming.Confound.Move J),
+  (∀ (j : J), Becoming.Determined (D.proc j)) →
+    ∀ (ω : Unit → J),
+      (∀ (t : Nat),
+          (Becoming.Confound.run Becoming.Confound.aligned).StepsThrough Becoming.Confound.outcome
+            Becoming.Confound.moveDecides t) ∧
+        ¬Becoming.ExactCausalAbs { proc := fun x => Becoming.Confound.process, obs := () } D Becoming.Confound.outcome
+            id ω
+Becoming.PositiveCoupledFeedbackWitness.no_exact_causal_abs : ∀ (φ : Unit → Unit) (ω : Bool → Bool),
+  ¬Becoming.ExactCausalAbs Becoming.PositiveCoupledFeedbackWitness.micro
+      Becoming.PositiveCoupledFeedbackWitness.macroSys Becoming.PositiveCoupledFeedbackWitness.π φ ω
+Becoming.PositiveCoupledFeedbackWitness.step_projection_err : ∀ (i : Bool) (s : Nat × Bool),
+  Becoming.distNat ((Becoming.PositiveCoupledFeedbackWitness.nextMicro i s).fst / 2)
+      (Becoming.PositiveCoupledFeedbackWitness.nextMacro i (Becoming.PositiveCoupledFeedbackWitness.π s)) ≤
+    1
+Becoming.PositiveCoupledFeedbackWitness.feedback_viability_kernel : Becoming.Viability.Kernel
+  (Becoming.PositiveCoupledFeedbackWitness.micro.feedbackProcess fun s =>
+    Becoming.PositiveCoupledFeedbackWitness.κ (Becoming.PositiveCoupledFeedbackWitness.π s))
+  Becoming.PositiveCoupledFeedbackWitness.guardS Becoming.PositiveCoupledFeedbackWitness.s₀
+Becoming.PositiveCoupledFeedbackWitness.openLoop_viability_kernel : Becoming.Viability.Kernel
+  (Becoming.PositiveCoupledFeedbackWitness.micro.scheduledProcess id fun x => true)
+  (fun ts => Becoming.PositiveCoupledFeedbackWitness.guardS ts.snd) (0, Becoming.PositiveCoupledFeedbackWitness.s₀)

@@ -30,11 +30,12 @@ directly into `Becoming.OplaxHistory`:
   (`T9`), an explicit irreversible 3D witness `strict_2d_3d_noncollapse_witness` proved via a
   monotone 2-cell tally invariant, and `StrictTripleCat` soundness (`T8`).
 * **Part 4 — Guarded Oplax Double Syntax into `Becoming.OplaxHistory`:**
-  `GuardedExpr` and `GuardedProof` (`⊕` parallel distribution `parSeqDist`, `SumPreservingFunctor`
-  compatibility `parStrongInj`, one-way oplax `chiStep`, and `BC`-guarded `chiInv`), sound evaluation
-  `evalGuardedProof_sound` into `Becoming.OplaxHistory`, and `strict_vs_guarded_separation_witness`
-  showing why unguarded interchange fails on `EmergentCrossSeamWitness` and `C2RelativeLossWitness`
-  while guarded upgrades hold iff `BC` / `FImageIsPullback` holds.
+  `GuardedExpr` and `GuardedProof` (`⊕` parallel distribution `parSeqDist`, general `SpanFunctor`
+  macro assembly `assemble`, one-way oplax `chiStep`, and `BC`-guarded `chiInv`), sound evaluation
+  `evalGuardedProof` / `guarded_oplax_sound` into `Becoming.OplaxHistory`,
+  `finite_non_invertible_chiStep_witness`, and `strict_vs_guarded_separation_witness` showing why
+  unguarded interchange fails on `EmergentCrossSeamWitness`, `C2RelativeLossWitness`, and
+  `inhabitedOptionFunctor` while guarded upgrades hold iff `BC` / `FImageIsPullback` holds.
 
 What is not shown: a quadratic decision procedure for free 2D equivalence (`Delpeuch 2020`); checking
 `EqCert` verifies supplied derivations and rejects uncertified terms without deciding non-equivalence
@@ -1588,15 +1589,15 @@ theorem free_3d_eval_sound {G : Double3Sig} {K : StrictTripleCat} (I : Sig3Inter
 /-! ## Part 4: Guarded Oplax Double Syntax Interpreting into `Becoming.OplaxHistory` -/
 
 /-- Guarded oplax syntax pairing sequential pullback composition (`seq` `⋆`), strong disjoint
-parallel coproduct (`par` `⊕`), and sum-preserving macro assembly (`assemble` `Q`). -/
+parallel coproduct (`par` `⊕`), and general `SpanFunctor` macro assembly (`assemble` `Q`). -/
 inductive GuardedExpr : Type → Type → Type 1 where
   | atom {A B : Type} (H : OplaxHistory.RelSpan A B) : GuardedExpr A B
   | idExpr (A : Type) : GuardedExpr A A
   | seq {A D C : Type} (e₁ : GuardedExpr A D) (e₂ : GuardedExpr D C) : GuardedExpr A C
   | par {A A' B B' : Type} (e₁ : GuardedExpr A B) (e₂ : GuardedExpr A' B') :
       GuardedExpr (Sum A A') (Sum B B')
-  | assemble (S : OplaxHistory.SumPreservingFunctor) {A B : Type} (e : GuardedExpr A B) :
-      GuardedExpr (S.toFunctor.obj A) (S.toFunctor.obj B)
+  | assemble (F : OplaxHistory.SpanFunctor) {A B : Type} (e : GuardedExpr A B) :
+      GuardedExpr (F.obj A) (F.obj B)
 
 /-- Evaluate a `GuardedExpr A B` cleanly into a concrete `OplaxHistory.RelSpan A B`. -/
 def evalGuardedExpr : {A B : Type} → GuardedExpr A B → OplaxHistory.RelSpan A B
@@ -1604,7 +1605,7 @@ def evalGuardedExpr : {A B : Type} → GuardedExpr A B → OplaxHistory.RelSpan 
   | _, _, .idExpr A => OplaxHistory.idSpan A
   | _, _, .seq e₁ e₂ => OplaxHistory.compSpan (evalGuardedExpr e₁) (evalGuardedExpr e₂)
   | _, _, .par e₁ e₂ => OplaxHistory.coprodSpan (evalGuardedExpr e₁) (evalGuardedExpr e₂)
-  | _, _, .assemble S e => S.toFunctor.onSpan (evalGuardedExpr e)
+  | _, _, .assemble F e => F.onSpan (evalGuardedExpr e)
 
 /-- Constructive guarded derivation terms (`GuardedProof e₁ e₂`):
 * Disjoint parallel `⊕` vs sequential `⋆` is ALWAYS two-sided (`parSeqDistLR` / `parSeqDistRL`);
@@ -1621,8 +1622,8 @@ inductive GuardedProof : {A B : Type} → GuardedExpr A B → GuardedExpr A B �
   | parCong {A A' B B' : Type} {e₁ e₁' : GuardedExpr A B} {e₂ e₂' : GuardedExpr A' B'}
       (p : GuardedProof e₁ e₁') (q : GuardedProof e₂ e₂') :
       GuardedProof (.par e₁ e₂) (.par e₁' e₂')
-  | assembleCong (S : OplaxHistory.SumPreservingFunctor) {A B : Type} {e₁ e₂ : GuardedExpr A B}
-      (p : GuardedProof e₁ e₂) : GuardedProof (.assemble S e₁) (.assemble S e₂)
+  | assembleCong (F : OplaxHistory.SpanFunctor) {A B : Type} {e₁ e₂ : GuardedExpr A B}
+      (p : GuardedProof e₁ e₂) : GuardedProof (.assemble F e₁) (.assemble F e₂)
   | parSeqDistLR {A D C A' D' C' : Type}
       (e₁ : GuardedExpr A D) (e₂ : GuardedExpr D C)
       (e₁' : GuardedExpr A' D') (e₂' : GuardedExpr D' C') :
@@ -1631,18 +1632,18 @@ inductive GuardedProof : {A B : Type} → GuardedExpr A B → GuardedExpr A B �
       (e₁ : GuardedExpr A D) (e₂ : GuardedExpr D C)
       (e₁' : GuardedExpr A' D') (e₂' : GuardedExpr D' C') :
       GuardedProof (.seq (.par e₁ e₁') (.par e₂ e₂')) (.par (.seq e₁ e₂) (.seq e₁' e₂'))
-  | chiStep (S : OplaxHistory.SumPreservingFunctor) {A D C : Type}
+  | chiStep (F : OplaxHistory.SpanFunctor) {A D C : Type}
       (e₁ : GuardedExpr A D) (e₂ : GuardedExpr D C) :
-      GuardedProof (.assemble S (.seq e₁ e₂)) (.seq (.assemble S e₁) (.assemble S e₂))
-  | chiInv (S : OplaxHistory.SumPreservingFunctor) {A D C : Type}
+      GuardedProof (.assemble F (.seq e₁ e₂)) (.seq (.assemble F e₁) (.assemble F e₂))
+  | chiInv (F : OplaxHistory.SpanFunctor) {A D C : Type}
       (e₁ : GuardedExpr A D) (e₂ : GuardedExpr D C)
       (b : OplaxHistory.Bij
-        (S.toFunctor.obj (OplaxHistory.PullbackElem (evalGuardedExpr e₁).right (evalGuardedExpr e₂).left))
+        (F.obj (OplaxHistory.PullbackElem (evalGuardedExpr e₁).right (evalGuardedExpr e₂).left))
         (OplaxHistory.PullbackElem
-          (S.toFunctor.map (evalGuardedExpr e₁).right)
-          (S.toFunctor.map (evalGuardedExpr e₂).left)))
-      (hb : ∀ u, b.toFun u = (OplaxHistory.chi S.toFunctor (evalGuardedExpr e₁) (evalGuardedExpr e₂)).map u) :
-      GuardedProof (.seq (.assemble S e₁) (.assemble S e₂)) (.assemble S (.seq e₁ e₂))
+          (F.map (evalGuardedExpr e₁).right)
+          (F.map (evalGuardedExpr e₂).left)))
+      (hb : ∀ u, b.toFun u = (OplaxHistory.chi F (evalGuardedExpr e₁) (evalGuardedExpr e₂)).map u) :
+      GuardedProof (.seq (.assemble F e₁) (.assemble F e₂)) (.assemble F (.seq e₁ e₂))
 
 /-- Helper: `(H ⋆ K) ⊕ (H' ⋆ K') → (H ⊕ H') ⋆ (K ⊕ K')` as a `SpanHom`. -/
 def parSeqDistHomLR {A D C A' D' C' : Type}
@@ -1726,43 +1727,73 @@ def evalGuardedProof {A B : Type} : {e₁ e₂ : GuardedExpr A B} →
   | _, _, .trans p q => OplaxHistory.SpanHom.comp (evalGuardedProof q) (evalGuardedProof p)
   | _, _, .seqCong p q => OplaxHistory.compSpanHom (evalGuardedProof p) (evalGuardedProof q)
   | _, _, .parCong p q => parSpanHom (evalGuardedProof p) (evalGuardedProof q)
-  | _, _, .assembleCong S p => S.toFunctor.onHom (evalGuardedProof p)
+  | _, _, .assembleCong F p => F.onHom (evalGuardedProof p)
   | _, _, .parSeqDistLR e₁ e₂ e₁' e₂' =>
       parSeqDistHomLR (evalGuardedExpr e₁) (evalGuardedExpr e₂) (evalGuardedExpr e₁') (evalGuardedExpr e₂')
   | _, _, .parSeqDistRL e₁ e₂ e₁' e₂' =>
       parSeqDistHomRL (evalGuardedExpr e₁) (evalGuardedExpr e₂) (evalGuardedExpr e₁') (evalGuardedExpr e₂')
-  | _, _, .chiStep S e₁ e₂ => OplaxHistory.chi S.toFunctor (evalGuardedExpr e₁) (evalGuardedExpr e₂)
-  | _, _, .chiInv S e₁ e₂ b hb =>
-      chiInvSpanHom S.toFunctor (evalGuardedExpr e₁) (evalGuardedExpr e₂) b hb
+  | _, _, .chiStep F e₁ e₂ => OplaxHistory.chi F (evalGuardedExpr e₁) (evalGuardedExpr e₂)
+  | _, _, .chiInv F e₁ e₂ b hb =>
+      chiInvSpanHom F (evalGuardedExpr e₁) (evalGuardedExpr e₂) b hb
 
 /-- **Guarded-Oplax Soundness & `chiInv` BC Certification (`guarded_oplax_sound`):**
-1. Disjoint `parSeqDistLR` / `parSeqDistRL` form an exact two-sided inverse pair;
-2. Every `chiInv S e₁ e₂ b hb` guard certifies BOTH `FImageIsPullback S.toFunctor H K` AND
+1. Every `GuardedProof` evaluates to an endpoint-preserving `SpanHom` (`parSeqDistLR` /
+   `parSeqDistRL` construct disjoint coproduct distribution homomorphisms);
+2. Every `chiInv`-type `Bij` witness `(H, K, F, b, hb)` certifies BOTH `FImageIsPullback F H K` AND
    fiberwise Beck–Chevalley bijectivity `∀ E v, IsBijective (bcMap ...)` via `guarded_interchange_upgrades_iff_bc`. -/
 theorem guarded_oplax_sound {A B : Type} {e₁ e₂ : GuardedExpr A B} (p : GuardedProof e₁ e₂) :
     (∀ w, ((evalGuardedExpr e₂).left ((evalGuardedProof p).map w) = (evalGuardedExpr e₁).left w) ∧
           ((evalGuardedExpr e₂).right ((evalGuardedProof p).map w) = (evalGuardedExpr e₁).right w)) ∧
     (∀ {X Y Z : Type} (H : OplaxHistory.RelSpan X Y) (K : OplaxHistory.RelSpan Y Z)
-      (S : OplaxHistory.SumPreservingFunctor)
+      (F : OplaxHistory.SpanFunctor)
       (b : OplaxHistory.Bij
-        (S.toFunctor.obj (OplaxHistory.PullbackElem H.right K.left))
-        (OplaxHistory.PullbackElem (S.toFunctor.map H.right) (S.toFunctor.map K.left))),
-      (∀ u, b.toFun u = (OplaxHistory.chi S.toFunctor H K).map u) →
-      OplaxHistory.FImageIsPullback S.toFunctor H K ∧
-      ∀ (E : S.toFunctor.obj H.W → Type) (v : S.toFunctor.obj K.W),
-        OplaxHistory.IsBijective (OplaxHistory.bcMap S.toFunctor H K E v)) := by
+        (F.obj (OplaxHistory.PullbackElem H.right K.left))
+        (OplaxHistory.PullbackElem (F.map H.right) (F.map K.left))),
+      (∀ u, b.toFun u = (OplaxHistory.chi F H K).map u) →
+      OplaxHistory.FImageIsPullback F H K ∧
+      ∀ (E : F.obj H.W → Type) (v : F.obj K.W),
+        OplaxHistory.IsBijective (OplaxHistory.bcMap F H K E v)) := by
   constructor
   · intro w
     exact ⟨(evalGuardedProof p).left_eq w, (evalGuardedProof p).right_eq w⟩
-  · intro X Y Z H K S b hb
-    have hbij : OplaxHistory.IsBijective (OplaxHistory.chi S.toFunctor H K).map := by
+  · intro X Y Z H K F b hb
+    have hbij : OplaxHistory.IsBijective (OplaxHistory.chi F H K).map := by
       have hbIso := OplaxHistory.isBijective_of_bij b
       refine ⟨fun u₁ u₂ heq => hbIso.1 u₁ u₂ ((hb u₁).trans (heq.trans (hb u₂).symm)),
               fun y => ?_⟩
       obtain ⟨u, hu⟩ := hbIso.2 y
       exact ⟨u, (hb u).symm.trans hu⟩
-    have hg := OplaxHistory.guarded_interchange_upgrades_iff_bc S.toFunctor H K
+    have hg := OplaxHistory.guarded_interchange_upgrades_iff_bc F H K
     exact ⟨hg.1.mp hbij, hg.2.mp hbij⟩
+
+/-- Genuine finite non-invertible `GuardedProof.chiStep` over `OplaxHistory.inhabitedOptionFunctor`:
+exhibits the forward `chiStep` derivation while refuting any `chiInv` bijection guard on that pair. -/
+theorem finite_non_invertible_chiStep_witness :
+    Nonempty (GuardedProof
+      (.assemble OplaxHistory.inhabitedOptionFunctor
+        (.seq (.atom OplaxHistory.inhabitedOptionLeftSpan)
+              (.atom OplaxHistory.inhabitedOptionRightSpan)))
+      (.seq (.assemble OplaxHistory.inhabitedOptionFunctor (.atom OplaxHistory.inhabitedOptionLeftSpan))
+            (.assemble OplaxHistory.inhabitedOptionFunctor (.atom OplaxHistory.inhabitedOptionRightSpan)))) ∧
+    ¬ ∃ b : OplaxHistory.Bij
+        (OplaxHistory.inhabitedOptionFunctor.obj
+          (OplaxHistory.PullbackElem OplaxHistory.inhabitedOptionLeftSpan.right
+            OplaxHistory.inhabitedOptionRightSpan.left))
+        (OplaxHistory.PullbackElem
+          (OplaxHistory.inhabitedOptionFunctor.map OplaxHistory.inhabitedOptionLeftSpan.right)
+          (OplaxHistory.inhabitedOptionFunctor.map OplaxHistory.inhabitedOptionRightSpan.left)),
+      ∀ u, b.toFun u =
+        (OplaxHistory.chi OplaxHistory.inhabitedOptionFunctor
+          OplaxHistory.inhabitedOptionLeftSpan OplaxHistory.inhabitedOptionRightSpan).map u := by
+  refine ⟨⟨GuardedProof.chiStep OplaxHistory.inhabitedOptionFunctor
+      (.atom OplaxHistory.inhabitedOptionLeftSpan)
+      (.atom OplaxHistory.inhabitedOptionRightSpan)⟩, ?_⟩
+  intro ⟨b, hb⟩
+  have hbij := OplaxHistory.isBijective_of_bij b
+  apply OplaxHistory.inhabitedOptionFunctor_chi_not_surjective
+  intro y
+  obtain ⟨u, hu⟩ := hbij.2 y
+  exact ⟨u, (hb u).symm.trans hu⟩
 
 /-- **Strict-vs-Guarded Separation Witness (`strict_vs_guarded_separation_witness`):**
 Unifying our `EmergentCrossSeamWitness`, `C2RelativeLossWitness`, and `guarded_interchange_upgrades_iff_bc`:
