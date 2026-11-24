@@ -1,0 +1,92 @@
+{
+  "module": "TrackBKrylovBridge",
+  "source_file": "TrackBKrylovBridge.lean",
+  "source_sha256": "7ac29b75150a147660541a81eb3b4a19a219462ebcb0a4f6c70257ca546d435a",
+  "imported_unmodified_sha256": {
+    "DualityBridges": "854def026f25eac5745dc1ba11de7c786f981d67556bc70ad75f08ed2459712f",
+    "SurvivalDistinguishability": "393c05f4480bf68e0dd11cbb35e51072f4a16c317f6ba2480cfd452ec1329154"
+  },
+  "track_b_inherited_modules": 126,
+  "verified_at_utc": "2026-11-24T15:40:23.788040+00:00",
+  "ai_written": true,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "status": "passed",
+  "standard_axioms_allowed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_axioms_used": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sorry_ax_count": 0,
+  "static_checks": {
+    "private_declarations": [],
+    "unnamed_instances": [],
+    "forbidden_tokens": [],
+    "market_word_hits": [],
+    "missing_required_declarations": []
+  },
+  "declaration_count": 5,
+  "theorem_count": 5,
+  "definition_count": 0,
+  "structure_count": 0,
+  "required_declarations_verified": [
+    "TrackBKrylovBridge.stepOp_eq",
+    "TrackBKrylovBridge.survVec_eq",
+    "TrackBKrylovBridge.trackB_finite_krylov_zero_minimax_radius",
+    "TrackBKrylovBridge.short_word_agreement_lifts",
+    "TrackBKrylovBridge.countdown_zero_minimax_radius"
+  ],
+  "declarations": [
+    {
+      "kind": "theorem",
+      "name": "TrackBKrylovBridge.stepOp_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "TrackBKrylovBridge.survVec_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "TrackBKrylovBridge.trackB_finite_krylov_zero_minimax_radius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "TrackBKrylovBridge.short_word_agreement_lifts",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "TrackBKrylovBridge.countdown_zero_minimax_radius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

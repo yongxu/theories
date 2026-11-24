@@ -2,7 +2,7 @@
   "module": "DualityBridges",
   "source_file": "DualityBridges.lean",
   "source_sha256": "854def026f25eac5745dc1ba11de7c786f981d67556bc70ad75f08ed2459712f",
-  "verified_at_utc": "2026-11-24T14:16:38.311830+00:00",
+  "verified_at_utc": "2026-11-24T15:37:39.628381+00:00",
   "ai_written": true,
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
