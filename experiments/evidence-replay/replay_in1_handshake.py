@@ -37,6 +37,7 @@ def replay_single_run(json_path: Path) -> Dict[str, Any]:
     assert len(months_raw) == len(calls_raw), (json_path, len(months_raw), len(calls_raw))
 
     lake = Lake()
+    opening_stock = lake.stock
     month_rows: List[Dict[str, Any]] = []
     for idx, (m_rec, c_rec) in enumerate(zip(months_raw, calls_raw), start=1):
         assert m_rec["month"] == idx
@@ -46,6 +47,10 @@ def replay_single_run(json_path: Path) -> Dict[str, Any]:
 
         bed_alive_before = lake.bed_alive
         stock_before = lake.stock
+        # Apply the round's clamp and lake rationing as if these announcements were executed.
+        announced_requests = [min(max(r, 0), stock_before) for r in said_catches]
+        counterfactual = Lake(stock=stock_before, bed_alive=bed_alive_before, collapsed=lake.collapsed)
+        counterfactual_left = counterfactual.step(announced_requests).left
         step_m = lake.step(decided_req)
         assert step_m.stock == stock_before
         assert step_m.stock == m_rec["stock"]
@@ -55,7 +60,6 @@ def replay_single_run(json_path: Path) -> Dict[str, Any]:
         assert step_m.bed_alive_after == m_rec["bed_alive_after"]
         assert step_m.next_stock == m_rec["next_stock"]
 
-        counterfactual_left = stock_before - sum(said_catches)
         month_rows.append(
             {
                 "month": idx,
@@ -76,21 +80,29 @@ def replay_single_run(json_path: Path) -> Dict[str, Any]:
 
     violations = check_identities(lake.history)
     assert violations == [], (json_path, violations)
-    return {
+    run = {
         "model": raw["model"],
         "cell": raw["cell"],
         "seed": int(raw["seed"]),
         "valid": bool(raw["valid"]),
+        "opening_stock": opening_stock,
         "n_months": len(month_rows),
         "bed_kept": bool(lake.bed_alive and len(month_rows) == MONTHS),
         "lake_kept": bool(not lake.collapsed),
         "identity_violations": violations,
         "months": month_rows,
     }
+    for k, saved in enumerate(months_raw, start=1):
+        view = _view2_prefix(run, k)
+        endpoint_passes = saved["next_stock"] >= NEED
+        assert view["pass1"] == endpoint_passes, (json_path, k, "Pass₁")
+        assert view["pass2"] == (endpoint_passes and saved["bed_alive_after"]), (json_path, k, "Pass₂")
+    return run
 
 
-def _view1_prefix(run: Dict[str, Any], k: int) -> List[Dict[str, Any]]:
-    return [
+def _monthly_trace(run: Dict[str, Any], k: int) -> Dict[str, Any]:
+    """The month-by-month public trace and its historical threshold check."""
+    observations = [
         {
             "month": m["month"],
             "opening_stock": m["opening_stock"],
@@ -99,16 +111,33 @@ def _view1_prefix(run: Dict[str, Any], k: int) -> List[Dict[str, Any]]:
         }
         for m in run["months"][:k]
     ]
+    return {
+        "observations": observations,
+        "all_next_stocks_ge_need": all(m["next_stock"] >= NEED for m in observations),
+    }
+
+
+def _view1_prefix(run: Dict[str, Any], k: int) -> Dict[str, Any]:
+    """BecomingSpec.V2.q₁ uses only the final stock and preserves every announcement."""
+    months = run["months"][:k]
+    opening_stock = run["opening_stock"]
+    return {
+        "opening_stock": opening_stock,
+        "announcements": [m["announcements"] for m in months],
+        "next_stock": months[-1]["next_stock"] if months else opening_stock,
+    }
 
 
 def _view2_prefix(run: Dict[str, Any], k: int) -> Dict[str, Any]:
     v1 = _view1_prefix(run, k)
-    alive_all = all(m["bed_alive_after"] for m in run["months"][:k])
+    months = run["months"][:k]
+    alive_all = months[-1]["bed_alive_after"] if months else True
+    pass1 = v1["next_stock"] >= NEED
     return {
         "view1": v1,
         "bed_alive_throughout": alive_all,
-        "pass1": all(row["next_stock"] >= NEED for row in v1),
-        "pass2": all(row["next_stock"] >= NEED for row in v1) and alive_all,
+        "pass1": pass1,
+        "pass2": pass1 and alive_all,
     }
 
 
@@ -344,6 +373,8 @@ def generate_in1_replay_table(write: bool = True) -> Dict[str, Any]:
     v2_s0 = _view2_prefix(s0, 8)
     v2_s4 = _view2_prefix(s4, 8)
     assert v1_s0 == v1_s4
+    trace_s0 = _monthly_trace(s0, 8)
+    assert trace_s0 == _monthly_trace(s4, 8)
     assert v2_s0["pass1"] and v2_s4["pass1"]
     assert v2_s0["pass2"] and not v2_s4["pass2"]
 
@@ -384,6 +415,7 @@ def generate_in1_replay_table(write: bool = True) -> Dict[str, Any]:
         "seed0_vs_seed4_view_separation": {
             "view1_prefix8_equal": v1_s0 == v1_s4,
             "view1_prefix8": v1_s0,
+            "monthly_trace_prefix8": trace_s0,
             "seed0_view2": v2_s0,
             "seed4_view2": v2_s4,
             "seed4_month8_actual": s4["months"][7],
@@ -402,7 +434,7 @@ def generate_in1_replay_table(write: bool = True) -> Dict[str, Any]:
             {
                 k: v
                 for k, v in r.items()
-                if k != "months"
+                if k not in ("opening_stock", "months")
             }
             | {
                 "first_bed_dead_month": next(

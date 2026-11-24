@@ -86,90 +86,54 @@
   },
   "seed0_vs_seed4_view_separation": {
     "view1_prefix8_equal": true,
-    "view1_prefix8": [
-      {
-        "month": 1,
-        "opening_stock": 100,
-        "announcements": [
+    "view1_prefix8": {
+      "opening_stock": 100,
+      "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 2,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 3,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 4,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 5,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 6,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 7,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
         ],
-        "next_stock": 100
-      },
-      {
-        "month": 8,
-        "opening_stock": 100,
-        "announcements": [
+        [
           10,
           10,
           10
-        ],
-        "next_stock": 100
-      }
-    ],
-    "seed0_view2": {
-      "view1": [
+        ]
+      ],
+      "next_stock": 100
+    },
+    "monthly_trace_prefix8": {
+      "observations": [
         {
           "month": 1,
           "opening_stock": 100,
@@ -251,93 +215,106 @@
           "next_stock": 100
         }
       ],
+      "all_next_stocks_ge_need": true
+    },
+    "seed0_view2": {
+      "view1": {
+        "opening_stock": 100,
+        "announcements": [
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ]
+        ],
+        "next_stock": 100
+      },
       "bed_alive_throughout": true,
       "pass1": true,
       "pass2": true
     },
     "seed4_view2": {
-      "view1": [
-        {
-          "month": 1,
-          "opening_stock": 100,
-          "announcements": [
+      "view1": {
+        "opening_stock": 100,
+        "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 2,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 3,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 4,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 5,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 6,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 7,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
           ],
-          "next_stock": 100
-        },
-        {
-          "month": 8,
-          "opening_stock": 100,
-          "announcements": [
+          [
             10,
             10,
             10
-          ],
-          "next_stock": 100
-        }
-      ],
+          ]
+        ],
+        "next_stock": 100
+      },
       "bed_alive_throughout": false,
       "pass1": true,
       "pass2": false

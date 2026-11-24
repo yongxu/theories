@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 import unittest
 from fractions import Fraction
 from pathlib import Path
@@ -27,6 +28,59 @@ import verify_duality_handshake as dual  # noqa: E402
 
 
 class TestIN1ReplayHandshake(unittest.TestCase):
+    def test_v2_views_and_monthly_trace_on_all_saved_prefixes(self) -> None:
+        prefixes = 0
+        endpoint_passed_after_breach = 0
+        for path in sorted(in1.RESULTS_ROOT.glob("*/DIR_SEEN_TALK/*.json")):
+            raw = json.loads(path.read_text(encoding="utf-8"))
+            run = in1.replay_single_run(path)
+            for k in range(1, len(raw["months"]) + 1):
+                with self.subTest(run=path, k=k):
+                    months = raw["months"][:k]
+                    announcements = [[s["intended_catch"] for s in call["said"]] for call in raw["calls"][:k]]
+                    expected_view1 = {
+                        "opening_stock": months[0]["stock"],
+                        "announcements": announcements,
+                        "next_stock": months[-1]["next_stock"],
+                    }
+                    pass1 = months[-1]["next_stock"] >= in1.NEED
+                    bed_alive = all(m["left"] >= in1.NEED for m in months)
+                    view2 = in1._view2_prefix(run, k)
+                    self.assertEqual(view2["view1"], expected_view1)
+                    self.assertEqual(view2["bed_alive_throughout"], bed_alive)
+                    self.assertEqual(view2["pass1"], pass1)
+                    self.assertEqual(view2["pass2"], pass1 and bed_alive)
+                    historical = all(m["next_stock"] >= in1.NEED for m in months)
+                    self.assertEqual(in1._monthly_trace(run, k)["all_next_stocks_ge_need"], historical)
+                    prefixes += 1
+                    endpoint_passed_after_breach += pass1 and not historical
+        self.assertEqual(prefixes, 229)
+        self.assertEqual(endpoint_passed_after_breach, 18)
+
+    def test_empty_v2_history_uses_its_opening_stock(self) -> None:
+        for opening in (69, 70):
+            run = {"opening_stock": opening, "months": []}
+            view2 = in1._view2_prefix(run, 0)
+            self.assertEqual(view2["view1"], {"opening_stock": opening, "announcements": [], "next_stock": opening})
+            self.assertTrue(view2["bed_alive_throughout"])
+            self.assertEqual(view2["pass1"], opening >= in1.NEED)
+            self.assertEqual(view2["pass2"], opening >= in1.NEED)
+            self.assertTrue(in1._monthly_trace(run, 0)["all_next_stocks_ge_need"])
+
+    def test_oversubscribed_announcements_use_the_current_lake(self) -> None:
+        path = in1.RESULTS_ROOT / "gpt-4.1-mini" / "DIR_SEEN_TALK" / "2.json"
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        for said, intended in zip(raw["calls"][1]["said"], [80, 50, 1]):
+            said["intended_catch"] = intended
+        with tempfile.TemporaryDirectory() as tmp:
+            synthetic = Path(tmp) / "announced.json"
+            synthetic.write_text(json.dumps(raw), encoding="utf-8")
+            month = in1.replay_single_run(synthetic)["months"][1]
+        # At 50 tons, [80, 50, 1] clips to [50, 50, 1] and is rationed to [24, 24, 0].
+        self.assertEqual(month["opening_stock"], 50)
+        self.assertEqual(month["counterfactual_announced_left"], 2)
+        self.assertEqual(month["left"], 25)
+
     def test_in1_229_months_and_target_contrasts(self) -> None:
         table = in1.generate_in1_replay_table(write=False)
         self.assertEqual(table["total_runs"], 20)
