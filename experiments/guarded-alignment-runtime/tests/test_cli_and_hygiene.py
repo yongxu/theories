@@ -48,6 +48,7 @@ class TestCLIAndHygiene(unittest.TestCase):
             "proposal_constitutional_ai_closed": Verdict.OBSTRUCTED,
             "proposal_scalable_oversight_lagged": Verdict.OBSTRUCTED,
             "proposal_multi_agent_governance_unserialized": Verdict.OBSTRUCTED,
+            "proposal_finite_mode_switching_blind": Verdict.OBSTRUCTED,
             "proposal_guarded_open_alignment": Verdict.GUARDED,
         }
         specs = builtin_example_specs()

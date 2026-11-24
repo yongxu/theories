@@ -1,7 +1,7 @@
-"""Five-test structural diagnostic grammar for alignment proposals.
+"""Six-test structural diagnostic grammar for alignment proposals.
 
 AI-written (24 November 2026). Pure Python 3 standard library using exact
-``int`` and ``fractions.Fraction`` arithmetic. Mirrors five verified
+``int`` and ``fractions.Fraction`` arithmetic. Mirrors six verified
 Lean obstruction-and-safeguard seams from ``Becoming`` and periphery modules:
 
 1. ``coupling_closure``: unread sustaining substrates beyond the selection
@@ -526,8 +526,200 @@ def check_concurrent_reserve(spec: Mapping[str, Any]) -> CheckItem:
     )
 
 
+def _is_in_span_and_insert(
+    echelon: list[tuple[int, list[Fraction]]], vec: Sequence[Fraction]
+) -> bool:
+    """Return ``True`` and insert pivot row iff ``vec`` is linearly independent of ``echelon``."""
+    row = list(vec)
+    for pcol, prow in echelon:
+        factor = row[pcol]
+        if factor != 0:
+            for j in range(pcol, len(row)):
+                row[j] -= factor * prow[j]
+    for j, val in enumerate(row):
+        if val != 0:
+            inv = Fraction(1) / val
+            echelon.append((j, [x * inv for x in row]))
+            return True
+    return False
+
+
+def _step_op(
+    matrix: Mapping[str, Mapping[str, Fraction]], states: tuple[str, ...], vec: Sequence[Fraction]
+) -> tuple[Fraction, ...]:
+    """Compute exact ``stepOp K v``: ``(stepOp K v)(s) = sum_{s'} K[s][s'] * v[s']``."""
+    out: list[Fraction] = []
+    for s in states:
+        row = matrix.get(s, {})
+        acc = Fraction(0)
+        for idx, s_next in enumerate(states):
+            w = row.get(s_next, Fraction(0))
+            if w != 0 and vec[idx] != 0:
+                acc += w * vec[idx]
+        out.append(acc)
+    return tuple(out)
+
+
+def check_survival_distinguishability(spec: Mapping[str, Any]) -> CheckItem:
+    """Test finite-mode survival distinguishability up to the Krylov cutoff ``|S| - 1``."""
+    states = _as_str_tuple(spec.get("states"), "states")
+    if not states:
+        raise FidelityError("survival_distinguishability requires non-empty 'states'")
+    n = len(states)
+    state_idx = {s: i for i, s in enumerate(states)}
+
+    state_a = str(spec["state_a"])
+    state_b = str(spec["state_b"])
+    if state_a not in state_idx or state_b not in state_idx:
+        raise FidelityError("state_a and state_b must both appear in 'states'")
+    idx_a, idx_b = state_idx[state_a], state_idx[state_b]
+
+    raw_modes = spec.get("modes")
+    if not isinstance(raw_modes, Mapping) or not raw_modes:
+        raise FidelityError("survival_distinguishability requires non-empty 'modes' mapping")
+
+    parsed_modes: dict[str, dict[str, dict[str, Fraction]]] = {}
+    for mode_name, mat in raw_modes.items():
+        if not isinstance(mat, Mapping):
+            raise FidelityError(f"Mode matrix for {mode_name!r} must be a mapping")
+        p_mat: dict[str, dict[str, Fraction]] = {}
+        for src, row in mat.items():
+            src_s = str(src)
+            if src_s not in state_idx:
+                raise FidelityError(f"Unknown source state {src_s!r} in mode {mode_name!r}")
+            if not isinstance(row, Mapping):
+                raise FidelityError(f"Row for {src_s!r} in mode {mode_name!r} must be a mapping")
+            p_row: dict[str, Fraction] = {}
+            for tgt, weight in row.items():
+                tgt_s = str(tgt)
+                if tgt_s not in state_idx:
+                    raise FidelityError(f"Unknown target state {tgt_s!r} in mode {mode_name!r}")
+                p_row[tgt_s] = to_fraction(weight)
+            p_mat[src_s] = p_row
+        parsed_modes[str(mode_name)] = p_mat
+
+    krylov_cutoff = n - 1
+    audit_horizon = int(spec.get("audit_horizon", krylov_cutoff))
+    if audit_horizon < 0:
+        raise FidelityError(f"audit_horizon must be >= 0, got {audit_horizon}")
+    allow_switching = bool(spec.get("allow_mode_switching", True))
+
+    mode_names = tuple(parsed_modes.keys())
+    v_init = tuple(Fraction(1) for _ in range(n))
+    echelon: list[tuple[int, list[Fraction]]] = []
+    _is_in_span_and_insert(echelon, v_init)
+
+    frontier: list[tuple[tuple[str, ...], tuple[Fraction, ...]]] = [((), v_init)]
+    stabilized_depth = 0
+    sep_word: tuple[str, ...] | None = None
+    sep_vals: tuple[Fraction, Fraction] | None = None
+
+    for depth in range(1, krylov_cutoff + 1):
+        next_frontier: list[tuple[tuple[str, ...], tuple[Fraction, ...]]] = []
+        for word, vec in frontier:
+            for m in mode_names:
+                w_next = (m,) + word
+                v_next = _step_op(parsed_modes[m], states, vec)
+                if sep_word is None and v_next[idx_a] != v_next[idx_b]:
+                    sep_word = w_next
+                    sep_vals = (v_next[idx_a], v_next[idx_b])
+                if _is_in_span_and_insert(echelon, v_next):
+                    next_frontier.append((w_next, v_next))
+        if next_frontier:
+            stabilized_depth = depth
+        frontier = next_frontier
+        if not frontier:
+            break
+
+    const_sep_word: tuple[str, ...] | None = None
+    const_sep_vals: tuple[Fraction, Fraction] | None = None
+    for depth in range(1, krylov_cutoff + 1):
+        if const_sep_word is not None:
+            break
+        for m in mode_names:
+            vec = v_init
+            for _ in range(depth):
+                vec = _step_op(parsed_modes[m], states, vec)
+            if vec[idx_a] != vec[idx_b]:
+                const_sep_word = (m,) * depth
+                const_sep_vals = (vec[idx_a], vec[idx_b])
+                break
+
+    indistinguishable = sep_word is None
+    if indistinguishable:
+        verdict = Verdict.OBSTRUCTED
+        missing_guard = "add_state_separating_mode_or_interventional_probe"
+        detail = (
+            f"States {state_a!r} and {state_b!r} agree on all mode words up to Krylov cutoff "
+            f"|S|-1={krylov_cutoff}, hence agree on all finite horizons "
+            "(survival_indistinguishable_iff_le_card_pred)."
+        )
+        active_vals = (v_init[idx_a], v_init[idx_b])
+        active_horizon: int | None = None
+    elif (not allow_switching) and (const_sep_word is None):
+        verdict = Verdict.OBSTRUCTED
+        missing_guard = "enable_mode_switching_probes_up_to_krylov_horizon"
+        detail = (
+            f"Constant-mode probing fails to separate {state_a!r} and {state_b!r}, while switching "
+            f"word {list(sep_word)} separates them at horizon {len(sep_word)} <= {krylov_cutoff} "
+            "(three_state_mode_switch_counterexample)."
+        )
+        active_vals = sep_vals
+        active_horizon = len(sep_word)
+    else:
+        chosen_word = sep_word if allow_switching else const_sep_word
+        chosen_vals = sep_vals if allow_switching else const_sep_vals
+        assert chosen_word is not None and chosen_vals is not None
+        active_horizon = len(chosen_word)
+        active_vals = chosen_vals
+        if audit_horizon < active_horizon:
+            verdict = Verdict.OBSTRUCTED
+            missing_guard = "extend_audit_horizon_to_krylov_separating_depth"
+            detail = (
+                f"Audit horizon {audit_horizon} stops short of shortest separating horizon "
+                f"{active_horizon} <= |S|-1={krylov_cutoff} ({list(chosen_word)})."
+            )
+        else:
+            verdict = Verdict.GUARDED
+            missing_guard = None
+            detail = (
+                f"Separated {state_a!r} ({active_vals[0]}) vs {state_b!r} ({active_vals[1]}) via "
+                f"word {list(chosen_word)} within audit_horizon={audit_horizon} and Krylov cutoff "
+                f"|S|-1={krylov_cutoff}."
+            )
+
+    witness: dict[str, Any] = {
+        "krylov_cutoff": krylov_cutoff,
+        "stabilized_depth": stabilized_depth,
+        "audit_horizon": audit_horizon,
+        "allow_mode_switching": allow_switching,
+        "indistinguishable_all_horizons": indistinguishable,
+        "shortest_separating_word": list(sep_word) if sep_word is not None else None,
+        "shortest_separating_horizon": active_horizon,
+        "constant_mode_separating_word": (
+            list(const_sep_word) if const_sep_word is not None else None
+        ),
+        "state_a_survival": active_vals[0],
+        "state_b_survival": active_vals[1],
+        "lean_refs": [
+            "SurvivalDistinguishability.survival_indistinguishable_iff_le_card_pred",
+            "SurvivalDistinguishability.countdown_attains_card_pred",
+            "SurvivalDistinguishability.three_state_mode_switch_counterexample",
+            "SurvivalDistinguishability.c2_coupled_survival_separation",
+        ],
+    }
+
+    return CheckItem(
+        label="survival_distinguishability",
+        verdict=verdict,
+        detail=detail,
+        missing_guard=missing_guard,
+        witness=witness,
+    )
+
+
 def evaluate_alignment_proposal(spec: Mapping[str, Any]) -> DiagnosticReport:
-    """Run up to all 5 structural failure tests over an alignment proposal JSON spec."""
+    """Run up to all 6 structural failure tests over an alignment proposal JSON spec."""
     name = str(spec.get("name", "alignment_proposal"))
     proposal_family = str(spec.get("proposal_family", "unspecified"))
     checks: list[CheckItem] = []
@@ -542,11 +734,14 @@ def evaluate_alignment_proposal(spec: Mapping[str, Any]) -> DiagnosticReport:
         checks.append(check_pace_margin_deadline(spec["pace_margin_deadline"]))
     if "concurrent_reserve" in spec:
         checks.append(check_concurrent_reserve(spec["concurrent_reserve"]))
+    if "survival_distinguishability" in spec:
+        checks.append(check_survival_distinguishability(spec["survival_distinguishability"]))
 
     if not checks:
         raise FidelityError(
             "alignment_proposal spec must supply at least one of: "
-            "coupling_closure, self_refit_lock, fiber_split, pace_margin_deadline, concurrent_reserve"
+            "coupling_closure, self_refit_lock, fiber_split, pace_margin_deadline, "
+            "concurrent_reserve, survival_distinguishability"
         )
 
     tup = tuple(checks)

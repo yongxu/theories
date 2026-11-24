@@ -17,6 +17,7 @@ from guarded_alignment import (
     check_pace_margin_deadline,
     check_proposal_fiber_split,
     check_self_refit_lock,
+    check_survival_distinguishability,
     evaluate_alignment_proposal,
     evaluate_pipeline_spec,
     run_builtin_example,
@@ -253,7 +254,100 @@ class TestProposalAuditGrammar(unittest.TestCase):
 
         open_al = run_builtin_example("proposal_guarded_open_alignment")
         self.assertEqual(open_al.verdict, Verdict.GUARDED)
-        self.assertEqual([c.verdict for c in open_al.checks], [Verdict.GUARDED] * 5)
+        self.assertEqual([c.verdict for c in open_al.checks], [Verdict.GUARDED] * 6)
+
+        sw_blind = run_builtin_example("proposal_finite_mode_switching_blind")
+        self.assertEqual(sw_blind.verdict, Verdict.OBSTRUCTED)
+        self.assertEqual(sw_blind.checks[0].label, "survival_distinguishability")
+        self.assertEqual(
+            sw_blind.checks[0].missing_guard, "enable_mode_switching_probes_up_to_krylov_horizon"
+        )
+
+    def test_survival_distinguishability_krylov_countdown_and_switching(self) -> None:
+        indist = check_survival_distinguishability(
+            {
+                "states": ["a", "b", "c"],
+                "state_a": "a",
+                "state_b": "b",
+                "modes": {
+                    "m": {
+                        "a": {"c": "1"},
+                        "b": {"c": "1"},
+                        "c": {"c": "1"},
+                    }
+                },
+            }
+        )
+        self.assertEqual(indist.verdict, Verdict.OBSTRUCTED)
+        self.assertTrue(indist.witness["indistinguishable_all_horizons"])
+        self.assertEqual(indist.witness["krylov_cutoff"], 2)
+
+        countdown_short = check_survival_distinguishability(
+            {
+                "states": ["s0", "s1", "s2", "s3"],
+                "state_a": "s0",
+                "state_b": "s1",
+                "modes": {
+                    "step": {
+                        "s0": {"s1": "1"},
+                        "s1": {"s2": "1"},
+                        "s2": {"s3": "1"},
+                        "s3": {},
+                    }
+                },
+                "audit_horizon": 2,
+            }
+        )
+        self.assertEqual(countdown_short.verdict, Verdict.OBSTRUCTED)
+        self.assertEqual(countdown_short.witness["shortest_separating_horizon"], 3)
+
+        countdown_exact = check_survival_distinguishability(
+            {
+                "states": ["s0", "s1", "s2", "s3"],
+                "state_a": "s0",
+                "state_b": "s1",
+                "modes": {
+                    "step": {
+                        "s0": {"s1": "1"},
+                        "s1": {"s2": "1"},
+                        "s2": {"s3": "1"},
+                        "s3": {},
+                    }
+                },
+                "audit_horizon": 3,
+            }
+        )
+        self.assertEqual(countdown_exact.verdict, Verdict.GUARDED)
+        self.assertEqual(countdown_exact.witness["krylov_cutoff"], 3)
+
+        switched = check_survival_distinguishability(
+            {
+                "states": ["s0", "s1", "s2"],
+                "state_a": "s0",
+                "state_b": "s1",
+                "modes": {
+                    "A": {"s0": {"s0": "1"}, "s1": {"s2": "1"}, "s2": {"s2": "1"}},
+                    "B": {"s0": {"s0": "1"}, "s1": {"s1": "1"}, "s2": {}},
+                },
+                "audit_horizon": 2,
+                "allow_mode_switching": True,
+            }
+        )
+        self.assertEqual(switched.verdict, Verdict.GUARDED)
+        self.assertEqual(switched.witness["shortest_separating_word"], ["A", "B"])
+        self.assertIsNone(switched.witness["constant_mode_separating_word"])
+
+        c2_sep = check_survival_distinguishability(
+            {
+                "states": ["in_phase", "anti_phase"],
+                "state_a": "in_phase",
+                "state_b": "anti_phase",
+                "modes": {"step": {"in_phase": {"in_phase": "1"}, "anti_phase": {}}},
+                "audit_horizon": 1,
+            }
+        )
+        self.assertEqual(c2_sep.verdict, Verdict.GUARDED)
+        self.assertEqual(c2_sep.witness["shortest_separating_horizon"], 1)
 
     def test_empty_proposal_rejected_and_cli_round_trip(self) -> None:
         with self.assertRaises(FidelityError):
@@ -273,7 +367,7 @@ class TestProposalAuditGrammar(unittest.TestCase):
             self.assertEqual(rc_chk, 0)
             rep = json.loads(buf_chk.getvalue())
             self.assertEqual(rep["verdict"], "GUARDED")
-            self.assertEqual(len(rep["checks"]), 5)
+            self.assertEqual(len(rep["checks"]), 6)
 
             direct = evaluate_pipeline_spec(json.loads(buf_dump.getvalue()))
             self.assertEqual(direct.verdict, Verdict.GUARDED)

@@ -440,10 +440,34 @@ def builtin_example_specs() -> dict[str, dict[str, Any]]:
                 "observe_relative_phase": False,
             },
         },
+        "proposal_finite_mode_switching_blind": {
+            "name": "proposal_finite_mode_switching_blind",
+            "kind": "alignment_proposal",
+            "proposal_family": "Finite-mode audit restricted to single constant-mode probes",
+            "survival_distinguishability": {
+                "states": ["s0", "s1", "s2"],
+                "state_a": "s0",
+                "state_b": "s1",
+                "modes": {
+                    "A": {
+                        "s0": {"s0": "1"},
+                        "s1": {"s2": "1"},
+                        "s2": {"s2": "1"},
+                    },
+                    "B": {
+                        "s0": {"s0": "1"},
+                        "s1": {"s1": "1"},
+                        "s2": {},
+                    },
+                },
+                "audit_horizon": 2,
+                "allow_mode_switching": False,
+            },
+        },
         "proposal_guarded_open_alignment": {
             "name": "proposal_guarded_open_alignment",
             "kind": "alignment_proposal",
-            "proposal_family": "Guarded Open Alignment (all 5 safeguards active)",
+            "proposal_family": "Guarded Open Alignment (all 6 safeguards active)",
             "coupling_closure": {
                 "sustained_substrates": ["human_agency", "ecological_reserve", "oversight_channel"],
                 "read_substrates": ["human_agency", "ecological_reserve", "oversight_channel"],
@@ -495,6 +519,19 @@ def builtin_example_specs() -> dict[str, dict[str, Any]]:
                 "renewal_per_step": "1",
                 "serialized_or_gated": True,
                 "observe_relative_phase": True,
+            },
+            "survival_distinguishability": {
+                "states": ["s_viable_in_phase", "s_unsafe_drain"],
+                "state_a": "s_viable_in_phase",
+                "state_b": "s_unsafe_drain",
+                "modes": {
+                    "step": {
+                        "s_viable_in_phase": {"s_viable_in_phase": "1"},
+                        "s_unsafe_drain": {},
+                    },
+                },
+                "audit_horizon": 1,
+                "allow_mode_switching": True,
             },
         },
     }

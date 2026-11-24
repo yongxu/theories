@@ -72,6 +72,7 @@ from .proposal_audit import (
     check_pace_margin_deadline,
     check_proposal_fiber_split,
     check_self_refit_lock,
+    check_survival_distinguishability,
     evaluate_alignment_proposal,
 )
 
@@ -118,6 +119,7 @@ __all__ = [
     "check_pace_margin_deadline",
     "check_proposal_fiber_split",
     "check_self_refit_lock",
+    "check_survival_distinguishability",
     "check_weight_separation",
     "comp_span",
     "contractive_tube_bound",
