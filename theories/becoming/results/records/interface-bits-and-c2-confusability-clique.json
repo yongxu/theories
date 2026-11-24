@@ -1,0 +1,217 @@
+{
+  "schema_version": 2,
+  "id": "interface-bits-and-c2-confusability-clique",
+  "title": {
+    "en": "Confusability strong powers, C7 bounds, and the C2 collapse clique"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T22:46:49+00:00",
+  "statement": {
+    "en": "InterfaceBits proves CC2 factor-2 sandwiches (n > 0 log2 gap <= 1/n), triangle-free lifts, C7/C7^2/C7^3 bounds, and joins Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse (in Becoming/RelSpan.lean) on 2^n finite K2 representatives."
+  },
+  "laws": [
+    {
+      "en": "General strong-product laws give indep_strongProd, clique_strongProd, coloring_strongProd, k3free_strongProd, indep_strongProd_K2, cc2_is_two_colorable, and cc_sandwich (with 0..1/n normalized log2 gap on nonempty finite carriers for n > 0).",
+      "declarations": [
+        "Becoming.InterfaceBits.Conf",
+        "Becoming.InterfaceBits.confOfRaw",
+        "Becoming.InterfaceBits.strongProd",
+        "Becoming.InterfaceBits.strongPow",
+        "Becoming.InterfaceBits.IsIndepSet",
+        "Becoming.InterfaceBits.IsClique",
+        "Becoming.InterfaceBits.IsColoring",
+        "Becoming.InterfaceBits.IsCC2Partition",
+        "Becoming.InterfaceBits.IsK3FreePartition",
+        "Becoming.InterfaceBits.indepNum",
+        "Becoming.InterfaceBits.minColors",
+        "Becoming.InterfaceBits.chi",
+        "Becoming.InterfaceBits.chiCC2",
+        "Becoming.InterfaceBits.chiK3Free",
+        "Becoming.InterfaceBits.indep_strongProd",
+        "Becoming.InterfaceBits.clique_strongProd",
+        "Becoming.InterfaceBits.coloring_strongProd",
+        "Becoming.InterfaceBits.chi_strongProd_le",
+        "Becoming.InterfaceBits.indep_times_triangleFree",
+        "Becoming.InterfaceBits.k3free_strongProd",
+        "Becoming.InterfaceBits.cc2_is_two_colorable",
+        "Becoming.InterfaceBits.cc_sandwich",
+        "Becoming.InterfaceBits.cc_pow_log_gap",
+        "Becoming.InterfaceBits.indep_strongProd_K2"
+      ]
+    },
+    {
+      "en": "Cyclic double counting (cyclic_translate_bound, c7_indep_adjacent_bound, c7Pow_k3free_card_bound) with small reflected decide witnesses establishes C7 (alpha=3, chi=3, chiCC2<=2, chiK3Free=1), C7^2 (alpha=10, chi=5, chiCC2<=4, chiK3Free=3), C7^3 (30<=alpha<=35, chiK3Free=5), and log2 chi(C7^n)/n <= (1/2)log2 5 + log2 3 / n (for n > 0).",
+      "declarations": [
+        "Becoming.InterfaceBits.K2",
+        "Becoming.InterfaceBits.C7",
+        "Becoming.InterfaceBits.cyclic_translate_bound",
+        "Becoming.InterfaceBits.c7_indep_adjacent_bound",
+        "Becoming.InterfaceBits.c7Pow_k3free_card_bound",
+        "Becoming.InterfaceBits.c7_indepNum_eq",
+        "Becoming.InterfaceBits.c7_chi_eq",
+        "Becoming.InterfaceBits.c7_chiCC2_le",
+        "Becoming.InterfaceBits.c7_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Sq_indepNum_eq",
+        "Becoming.InterfaceBits.c7Sq_chi_eq",
+        "Becoming.InterfaceBits.c7Sq_chiCC2_le",
+        "Becoming.InterfaceBits.c7Sq_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Cube_indepNum_bounds",
+        "Becoming.InterfaceBits.c7Cube_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Pow_chi_le",
+        "Becoming.InterfaceBits.log2",
+        "Becoming.InterfaceBits.c7Pow_log_rate_le"
+      ]
+    },
+    {
+      "en": "Finite restriction rep maps each Fin (powTwo n) vertex injectively into a 2^n-element K2 strong-power clique sharing the same Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi collapsed value inside the infinite unrestricted fiber over Nat -> Bool (c2_collapse_clique).",
+      "declarations": [
+        "Becoming.InterfaceBits.rep",
+        "Becoming.InterfaceBits.powTwo_eq",
+        "Becoming.InterfaceBits.c2_collapse_clique"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 Mathlib periphery module InterfaceBits importing core Becoming.RelSpan under [Classical.choice, Quot.sound, propext] with zero native_decide, zero private/opaque source declarations, zero n=3,4 brute-force search, and environment-wide audit of all 156 module constants."
+    },
+    {
+      "en": "Confusability R includes equality reflexively and assumes symmetric pairwise confusability rather than an arbitrary channel output hypergraph."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "The module establishes only 30 <= alpha(C7^3) <= 35 locally; published packing alpha(C7^3) = 33 and chi(C7^3) >= 11 stand external in the literature."
+    },
+    {
+      "kind": "scope",
+      "en": "c7Sq_chiCC2_le proves chiCC2(C7^2) <= 4 via a concrete witness; 3-class UNSAT evidence belongs to external probe records rather than Lean."
+    },
+    {
+      "kind": "correspondence",
+      "en": "Triangle-free classes give list size <= 2 when common outputs form triangles; pairwise confusability permits 3 distinct outputs, so the converse needs every relevant triangle to admit a common output (Rule 2)."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+      "detail": {
+        "en": "c7Sq_chi_eq drops chi(C7^2) = 5 strictly below 3^2 = 9 while c7Sq_chiCC2_le achieves 4 CC2 classes; c2_collapse_clique exhibits 2^n distinguishable finite representatives inside one C2 collapsed fiber."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written (Wave 4 B4, 25 Nov 2026); -O Lean 4.30.0-rc2 check passed (receipt 20261124T223913.429973Z; prior 20261124T210541.724594Z kept): all 83 source decls (51 thms, 404 lines) and 156 env constants (zero source-private declarations; 3 compiler-private match/splitter auxiliaries) pass under standard axioms, inheriting Becoming.RelSpan. Unread."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; extend formal list-coding lower bounds if Witsenhausen rate tightness at n >= 3 is pursued."
+  },
+  "correspondence": {
+    "en": "Joins zero-error Witsenhausen strong-power source-coding bounds with Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse (physically in Becoming/RelSpan.lean) on finite 2^n-element representatives."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+  "aliases": [
+    "Becoming.InterfaceBits.c2_collapse_clique",
+    "Becoming.InterfaceBits.c7Pow_log_rate_le"
+  ],
+  "dependencies": [
+    {
+      "id": "oplax-history-comparison-and-relational-loss",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Instantiates Becoming.OplaxHistory.powTwo, Becoming.OplaxHistory.C2RelativeLossWitness.nthBits, Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi, and Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse (in Becoming/RelSpan.lean) inside c2_collapse_clique."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.InterfaceBits.Conf",
+        "Becoming.InterfaceBits.confOfRaw",
+        "Becoming.InterfaceBits.strongProd",
+        "Becoming.InterfaceBits.strongPow",
+        "Becoming.InterfaceBits.IsIndepSet",
+        "Becoming.InterfaceBits.IsClique",
+        "Becoming.InterfaceBits.IsColoring",
+        "Becoming.InterfaceBits.IsCC2Partition",
+        "Becoming.InterfaceBits.IsK3FreePartition",
+        "Becoming.InterfaceBits.indepNum",
+        "Becoming.InterfaceBits.minColors",
+        "Becoming.InterfaceBits.chi",
+        "Becoming.InterfaceBits.chiCC2",
+        "Becoming.InterfaceBits.chiK3Free",
+        "Becoming.InterfaceBits.indep_strongProd",
+        "Becoming.InterfaceBits.clique_strongProd",
+        "Becoming.InterfaceBits.coloring_strongProd",
+        "Becoming.InterfaceBits.chi_strongProd_le",
+        "Becoming.InterfaceBits.indep_times_triangleFree",
+        "Becoming.InterfaceBits.k3free_strongProd",
+        "Becoming.InterfaceBits.cc2_is_two_colorable",
+        "Becoming.InterfaceBits.cc_sandwich",
+        "Becoming.InterfaceBits.cc_pow_log_gap",
+        "Becoming.InterfaceBits.indep_strongProd_K2",
+        "Becoming.InterfaceBits.K2",
+        "Becoming.InterfaceBits.C7",
+        "Becoming.InterfaceBits.cyclic_translate_bound",
+        "Becoming.InterfaceBits.c7_indep_adjacent_bound",
+        "Becoming.InterfaceBits.c7Pow_k3free_card_bound",
+        "Becoming.InterfaceBits.c7_indepNum_eq",
+        "Becoming.InterfaceBits.c7_chi_eq",
+        "Becoming.InterfaceBits.c7_chiCC2_le",
+        "Becoming.InterfaceBits.c7_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Sq_indepNum_eq",
+        "Becoming.InterfaceBits.c7Sq_chi_eq",
+        "Becoming.InterfaceBits.c7Sq_chiCC2_le",
+        "Becoming.InterfaceBits.c7Sq_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Cube_indepNum_bounds",
+        "Becoming.InterfaceBits.c7Cube_chiK3Free_eq",
+        "Becoming.InterfaceBits.c7Pow_chi_le",
+        "Becoming.InterfaceBits.log2",
+        "Becoming.InterfaceBits.c7Pow_log_rate_le",
+        "Becoming.InterfaceBits.rep",
+        "Becoming.InterfaceBits.powTwo_eq",
+        "Becoming.InterfaceBits.c2_collapse_clique"
+      ],
+      "sha256": "193918a7fa4ab01da6769b198b4333551ad056fe198493538f9877888ea04de0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/check_interface_bits.py",
+      "role": "integration",
+      "sha256": "a005428f14864318e8e7e1684bdbfbfc7ba9ad4279656a5fbf5f90f070b6a041"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/interface-bits-checks/20261124T223913.429973Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dbe5501ad2394823bec43a222ecef017a51f03a73567b1bc1a77b73cdbb3a86",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/InterfaceBits.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/interface-bits/interface-bits-checks/20261124T223913.429973Z/verification.json",
+      "sha256_pointer": "/source_sha256/InterfaceBits",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "25 November 2026 (Wave 4 Track B4): added InterfaceBits (Mathlib v4.30.0-rc2, historical receipt 20261124T210541.724594Z, hardened env-audit receipt 20261124T223913.429973Z, 51 theorems / 83 decls / 156 env constants, 0 native_decide) proving C7 strong-power bounds and joining Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse (in Becoming/RelSpan.lean) via c2_collapse_clique. AI-written."
+    }
+  ]
+}

@@ -2990,6 +2990,16 @@
       "region": "map",
       "base": "periphery",
       "note": "QuantitativeTransfer (Frontier 3, Mathlib periphery #15): Rank-1 pool ceiling vs anchor, aliasing floor, lag wall, and trust-region contraction paired with B5"
+    },
+    "interface-bits-and-c2-confusability-clique": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "InterfaceBits (Track B4, Mathlib v4.30.0-rc2 periphery): confusability strong-power C7/C7^2/C7^3 bounds, CC2 sandwich, and c2_collapse_clique onto Becoming.RelSpan"
+    },
+    "moving-feature-cone-and-delay-headroom": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "MovingFeatureCone (Track B3, Mathlib v4.30.0-rc2 periphery): top_cone_iff, fp_sandwich, and AlignmentReals delay headroom/hysteresis paired with Schur/BBP LDL check"
     }
   },
   "modules": {
@@ -5247,6 +5257,16 @@
       "region": "map",
       "base": "periphery",
       "note": "Mathlib v4.30.0-rc2 periphery #15: Rank-1 correlated pool ceiling, aliased readout/mixture floors, continuous lag horizon, and trust-region MetricLaxSim contraction"
+    },
+    "InterfaceBits": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "Mathlib v4.30.0-rc2 periphery #17 (Track B4): strong-power confusability bounds on C7/C7^2/C7^3, CC2 sandwich, and c2_collapse_clique joining Becoming.RelSpan"
+    },
+    "MovingFeatureCone": {
+      "region": "knowing",
+      "base": "periphery",
+      "note": "Mathlib v4.30.0-rc2 periphery #18 (Track B3): axis-safe 2D cone equivalence, rolling first-passage decomposition, and AlignmentReals delay headroom bridges"
     }
   }
 }

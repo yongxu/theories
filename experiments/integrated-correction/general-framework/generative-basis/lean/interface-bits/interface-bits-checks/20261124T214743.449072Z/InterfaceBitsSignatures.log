@@ -1,0 +1,172 @@
+Becoming.InterfaceBits.c7_iff_diff : ∀ (x y : Fin 7),
+  Becoming.InterfaceBits.C7.R x y ↔ ∃ d, y = x + Becoming.InterfaceBits.c7Diffs d
+Becoming.InterfaceBits.c7_step : ∀ (v : Fin 7), Becoming.InterfaceBits.C7.R v (v + 1)
+Becoming.InterfaceBits.c7BitVal_inj : Function.Injective Becoming.InterfaceBits.c7BitVal
+Becoming.InterfaceBits.c7BitVal_adj : ∀ (a : Fin 7) (x y : Fin 2),
+  Becoming.InterfaceBits.C7.R (a + Becoming.InterfaceBits.c7BitVal x) (a + Becoming.InterfaceBits.c7BitVal y)
+Becoming.InterfaceBits.c7Indep_ok : Becoming.InterfaceBits.IsIndepSet Becoming.InterfaceBits.C7
+  Becoming.InterfaceBits.c7Indep
+Becoming.InterfaceBits.c7Color_ok : Becoming.InterfaceBits.IsColoring Becoming.InterfaceBits.C7
+  Becoming.InterfaceBits.c7Color
+Becoming.InterfaceBits.c7CC2_ok : Becoming.InterfaceBits.IsCC2Partition Becoming.InterfaceBits.C7
+  Becoming.InterfaceBits.c7CC2
+Becoming.InterfaceBits.c7_triangleFree : ∀ (x y z : Fin 7),
+  Becoming.InterfaceBits.C7.R x y →
+    Becoming.InterfaceBits.C7.R x z → Becoming.InterfaceBits.C7.R y z → x = y ∨ x = z ∨ y = z
+Becoming.InterfaceBits.c7SqPts_nodup : Becoming.InterfaceBits.c7SqPts.Nodup
+Becoming.InterfaceBits.c7SqPts_ok : ∀ p ∈ Becoming.InterfaceBits.c7SqPts,
+  ∀ q ∈ Becoming.InterfaceBits.c7SqPts,
+    (Becoming.InterfaceBits.strongProd Becoming.InterfaceBits.C7 Becoming.InterfaceBits.C7).R p q → p = q
+Becoming.InterfaceBits.c7SqColor_offsets : ∀ (i j : Fin 7) (d₁ d₂ : Fin 3),
+  (d₁, d₂) ≠ (0, 0) →
+    Becoming.InterfaceBits.c7SqColorVec i j ≠
+      Becoming.InterfaceBits.c7SqColorVec (i + Becoming.InterfaceBits.c7Diffs d₁)
+        (j + Becoming.InterfaceBits.c7Diffs d₂)
+Becoming.InterfaceBits.c7SqCC2_offsets : ∀ (i j : Fin 7) (a₁ a₂ b₁ b₂ : Fin 3),
+  (a₁, a₂) ≠ (0, 0) →
+    (b₁, b₂) ≠ (0, 0) →
+      (a₁, a₂) ≠ (b₁, b₂) →
+        Becoming.InterfaceBits.c7SqCC2Vec (i + Becoming.InterfaceBits.c7Diffs a₁)
+              (j + Becoming.InterfaceBits.c7Diffs a₂) =
+            Becoming.InterfaceBits.c7SqCC2Vec i j →
+          Becoming.InterfaceBits.c7SqCC2Vec (i + Becoming.InterfaceBits.c7Diffs b₁)
+                (j + Becoming.InterfaceBits.c7Diffs b₂) =
+              Becoming.InterfaceBits.c7SqCC2Vec i j →
+            False
+@Becoming.InterfaceBits.le_indepNum : ∀ {V : Type u_1} [inst : Fintype V] {G : Becoming.InterfaceBits.Conf V}
+  {A : Finset V}, Becoming.InterfaceBits.IsIndepSet G A → A.card ≤ Becoming.InterfaceBits.indepNum G
+@Becoming.InterfaceBits.indepNum_le : ∀ {V : Type u_1} [inst : Fintype V] {G : Becoming.InterfaceBits.Conf V} {m : ℕ},
+  (∀ (A : Finset V), Becoming.InterfaceBits.IsIndepSet G A → A.card ≤ m) → Becoming.InterfaceBits.indepNum G ≤ m
+@Becoming.InterfaceBits.exists_maxIndep : ∀ {V : Type u_1} [inst : Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  ∃ A, Becoming.InterfaceBits.IsIndepSet G A ∧ A.card = Becoming.InterfaceBits.indepNum G
+@Becoming.InterfaceBits.equivFin_isColoring : ∀ {V : Type u_1} [inst : Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  Becoming.InterfaceBits.IsColoring G ⇑(Fintype.equivFin V)
+@Becoming.InterfaceBits.coloring_isCC2 : ∀ {V : Type u_1} {G : Becoming.InterfaceBits.Conf V} {k : ℕ} {c : V → Fin k},
+  Becoming.InterfaceBits.IsColoring G c → Becoming.InterfaceBits.IsCC2Partition G c
+@Becoming.InterfaceBits.coloring_isK3Free : ∀ {V : Type u_1} {G : Becoming.InterfaceBits.Conf V} {k : ℕ}
+  {c : V → Fin k}, Becoming.InterfaceBits.IsColoring G c → Becoming.InterfaceBits.IsK3FreePartition G c
+@Becoming.InterfaceBits.chi_spec : ∀ {V : Type u_1} [Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  ∃ c, Becoming.InterfaceBits.IsColoring G c
+@Becoming.InterfaceBits.chiCC2_spec : ∀ {V : Type u_1} [Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  ∃ c, Becoming.InterfaceBits.IsCC2Partition G c
+@Becoming.InterfaceBits.chiK3Free_spec : ∀ {V : Type u_1} [Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  ∃ c, Becoming.InterfaceBits.IsK3FreePartition G c
+@Becoming.InterfaceBits.card_le_mul_of_fiber : ∀ {V : Type u_1} [inst : Fintype V] {k : ℕ} (m : ℕ) (c : V → Fin k),
+  (∀ (i : Fin k), {v | c v = i}.card ≤ m) → Fintype.card V ≤ k * m
+@Becoming.InterfaceBits.indep_strongProd : ∀ {U : Type u_1} {V : Type u_2} {G : Becoming.InterfaceBits.Conf U}
+  {H : Becoming.InterfaceBits.Conf V} {A : Finset U} {B : Finset V},
+  Becoming.InterfaceBits.IsIndepSet G A →
+    Becoming.InterfaceBits.IsIndepSet H B →
+      Becoming.InterfaceBits.IsIndepSet (Becoming.InterfaceBits.strongProd G H) (A ×ˢ B)
+@Becoming.InterfaceBits.clique_strongProd : ∀ {U : Type u_1} {V : Type u_2} {G : Becoming.InterfaceBits.Conf U}
+  {H : Becoming.InterfaceBits.Conf V} {A : Finset U} {B : Finset V},
+  Becoming.InterfaceBits.IsClique G A →
+    Becoming.InterfaceBits.IsClique H B →
+      Becoming.InterfaceBits.IsClique (Becoming.InterfaceBits.strongProd G H) (A ×ˢ B)
+@Becoming.InterfaceBits.coloring_strongProd : ∀ {U : Type u_1} {V : Type u_2} {G : Becoming.InterfaceBits.Conf U}
+  {H : Becoming.InterfaceBits.Conf V} {k m : ℕ} {c : U → Fin k} {e : V → Fin m},
+  Becoming.InterfaceBits.IsColoring G c →
+    Becoming.InterfaceBits.IsColoring H e →
+      Becoming.InterfaceBits.IsColoring (Becoming.InterfaceBits.strongProd G H) fun p => finProdFinEquiv (c p.1, e p.2)
+@Becoming.InterfaceBits.chi_strongProd_le : ∀ {U : Type u_1} {V : Type u_2} [Fintype U] [Fintype V]
+  (G : Becoming.InterfaceBits.Conf U) (H : Becoming.InterfaceBits.Conf V),
+  Becoming.InterfaceBits.chi (Becoming.InterfaceBits.strongProd G H) ≤
+    Becoming.InterfaceBits.chi G * Becoming.InterfaceBits.chi H
+@Becoming.InterfaceBits.indep_times_triangleFree : ∀ {U : Type u_1} {V : Type u_2} {G : Becoming.InterfaceBits.Conf U}
+  {H : Becoming.InterfaceBits.Conf V} {A : Finset U},
+  Becoming.InterfaceBits.IsIndepSet G A →
+    (∀ (x y z : V), H.R x y → H.R x z → H.R y z → x = y ∨ x = z ∨ y = z) →
+      ∀ {p q r : U × V},
+        p.1 ∈ A →
+          q.1 ∈ A →
+            r.1 ∈ A →
+              (Becoming.InterfaceBits.strongProd G H).R p q →
+                (Becoming.InterfaceBits.strongProd G H).R p r →
+                  (Becoming.InterfaceBits.strongProd G H).R q r → p = q ∨ p = r ∨ q = r
+@Becoming.InterfaceBits.k3free_strongProd : ∀ {U : Type u_1} {V : Type u_2} {G : Becoming.InterfaceBits.Conf U}
+  {H : Becoming.InterfaceBits.Conf V} {k m : ℕ} {c : U → Fin k} {h : V → Fin m},
+  Becoming.InterfaceBits.IsColoring G c →
+    Becoming.InterfaceBits.IsK3FreePartition H h →
+      Becoming.InterfaceBits.IsK3FreePartition (Becoming.InterfaceBits.strongProd G H) fun p =>
+        finProdFinEquiv (c p.1, h p.2)
+@Becoming.InterfaceBits.cc2_is_two_colorable : ∀ {V : Type u_1} [Fintype V] {G : Becoming.InterfaceBits.Conf V} {k : ℕ}
+  {c : V → Fin k},
+  Becoming.InterfaceBits.IsCC2Partition G c →
+    ∃ b, Becoming.InterfaceBits.IsColoring G fun v => finProdFinEquiv (c v, b v)
+@Becoming.InterfaceBits.cc_sandwich : ∀ {V : Type u_1} [Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  Becoming.InterfaceBits.chiCC2 G ≤ Becoming.InterfaceBits.chi G ∧
+    Becoming.InterfaceBits.chi G ≤ 2 * Becoming.InterfaceBits.chiCC2 G
+@Becoming.InterfaceBits.cc_pow_log_gap : ∀ {V : Type u_1} [Fintype V] [Nonempty V] (G : Becoming.InterfaceBits.Conf V)
+  {n : ℕ},
+  0 < n →
+    0 ≤
+        Becoming.InterfaceBits.log2 ↑(Becoming.InterfaceBits.chi (Becoming.InterfaceBits.strongPow G n)) / ↑n -
+          Becoming.InterfaceBits.log2 ↑(Becoming.InterfaceBits.chiCC2 (Becoming.InterfaceBits.strongPow G n)) / ↑n ∧
+      Becoming.InterfaceBits.log2 ↑(Becoming.InterfaceBits.chi (Becoming.InterfaceBits.strongPow G n)) / ↑n -
+          Becoming.InterfaceBits.log2 ↑(Becoming.InterfaceBits.chiCC2 (Becoming.InterfaceBits.strongPow G n)) / ↑n ≤
+        1 / ↑n
+@Becoming.InterfaceBits.indep_strongProd_K2 : ∀ {V : Type u_1} [inst : Fintype V] (G : Becoming.InterfaceBits.Conf V),
+  Becoming.InterfaceBits.indepNum (Becoming.InterfaceBits.strongProd G Becoming.InterfaceBits.K2) =
+    Becoming.InterfaceBits.indepNum G
+@Becoming.InterfaceBits.chi_le_of_equiv : ∀ {U : Type u_1} {V : Type u_2} [Fintype V]
+  (G : Becoming.InterfaceBits.Conf U) (H : Becoming.InterfaceBits.Conf V) (e : U ≃ V),
+  (∀ (x y : U), G.R x y ↔ H.R (e x) (e y)) → Becoming.InterfaceBits.chi G ≤ Becoming.InterfaceBits.chi H
+@Becoming.InterfaceBits.chiK3Free_le_of_equiv : ∀ {U : Type u_1} {V : Type u_2} [Fintype V]
+  (G : Becoming.InterfaceBits.Conf U) (H : Becoming.InterfaceBits.Conf V) (e : U ≃ V),
+  (∀ (x y : U), G.R x y ↔ H.R (e x) (e y)) → Becoming.InterfaceBits.chiK3Free G ≤ Becoming.InterfaceBits.chiK3Free H
+@Becoming.InterfaceBits.cyclic_translate_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  [inst_2 : AddCommGroup V] (A B : Finset V) (m : ℕ),
+  (∀ (v : V), {b ∈ B | v + b ∈ A}.card ≤ m) → B.card * A.card ≤ Fintype.card V * m
+@Becoming.InterfaceBits.c7_indep_adjacent_bound : ∀ {W : Type u_1} [inst : Fintype W]
+  (H : Becoming.InterfaceBits.Conf W) (I : Finset (Fin 7 × W)),
+  Becoming.InterfaceBits.IsIndepSet (Becoming.InterfaceBits.strongProd Becoming.InterfaceBits.C7 H) I →
+    2 * I.card ≤ 7 * Becoming.InterfaceBits.indepNum H
+Becoming.InterfaceBits.c7Pow_k3free_card_bound : ∀ (n : ℕ) {A : Finset (Fin n → Fin 7)},
+  (∀ x ∈ A,
+      ∀ y ∈ A,
+        ∀ z ∈ A,
+          (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 n).R x y →
+            (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 n).R x z →
+              (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 n).R y z → x = y ∨ x = z ∨ y = z) →
+    2 ^ n * A.card ≤ 7 ^ n * 2
+Becoming.InterfaceBits.c7_indepNum_eq : Becoming.InterfaceBits.indepNum Becoming.InterfaceBits.C7 = 3
+Becoming.InterfaceBits.c7_chi_eq : Becoming.InterfaceBits.chi Becoming.InterfaceBits.C7 = 3
+Becoming.InterfaceBits.c7_chiCC2_le : Becoming.InterfaceBits.chiCC2 Becoming.InterfaceBits.C7 ≤ 2
+Becoming.InterfaceBits.c7_chiK3Free_eq : Becoming.InterfaceBits.chiK3Free Becoming.InterfaceBits.C7 = 1
+Becoming.InterfaceBits.c7Sq_indepNum_eq : Becoming.InterfaceBits.indepNum
+    (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 2) =
+  10
+Becoming.InterfaceBits.c7Sq_chi_eq : Becoming.InterfaceBits.chi
+    (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 2) =
+  5
+Becoming.InterfaceBits.c7Sq_chiCC2_le : Becoming.InterfaceBits.chiCC2
+    (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 2) ≤
+  4
+Becoming.InterfaceBits.c7Sq_chiK3Free_eq : Becoming.InterfaceBits.chiK3Free
+    (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 2) =
+  3
+Becoming.InterfaceBits.c7Cube_indepNum_bounds : 30 ≤
+    Becoming.InterfaceBits.indepNum (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 3) ∧
+  Becoming.InterfaceBits.indepNum (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 3) ≤ 35
+Becoming.InterfaceBits.c7Cube_chiK3Free_eq : Becoming.InterfaceBits.chiK3Free
+    (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 3) =
+  5
+Becoming.InterfaceBits.c7Pow_chi_le : ∀ (n : ℕ),
+  Becoming.InterfaceBits.chi (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 n) ≤ 5 ^ (n / 2) * 3 ^ (n % 2)
+@Becoming.InterfaceBits.c7Pow_log_rate_le : ∀ {n : ℕ},
+  0 < n →
+    Becoming.InterfaceBits.log2
+          ↑(Becoming.InterfaceBits.chi (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.C7 n)) /
+        ↑n ≤
+      1 / 2 * Becoming.InterfaceBits.log2 5 + Becoming.InterfaceBits.log2 3 / ↑n
+Becoming.InterfaceBits.powTwo_eq : ∀ (n : ℕ), Becoming.OplaxHistory.powTwo n = 2 ^ n
+Becoming.InterfaceBits.c2_collapse_clique : ∀ (n : ℕ),
+  Function.Injective (Becoming.InterfaceBits.rep n) ∧
+    Becoming.InterfaceBits.IsClique (Becoming.InterfaceBits.strongPow Becoming.InterfaceBits.K2 n)
+        (Finset.image (Becoming.InterfaceBits.rep n) Finset.univ) ∧
+      (Finset.image (Becoming.InterfaceBits.rep n) Finset.univ).card = 2 ^ n ∧
+        ∀ (i j : Fin (Becoming.OplaxHistory.powTwo n)),
+          Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi n
+              (Becoming.OplaxHistory.C2RelativeLossWitness.nthBits n ↑i) =
+            Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi n
+              (Becoming.OplaxHistory.C2RelativeLossWitness.nthBits n ↑j)

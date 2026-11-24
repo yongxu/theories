@@ -161,6 +161,26 @@
       "receipt": "quantitative-transfer/quantitative-transfer-verification.json",
       "checker": "quantitative-transfer/check_quantitative_transfer.py",
       "record": "quantitative-transfer-of-four-guard-failure-regimes"
+    },
+    {
+      "module": "InterfaceBits",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "interface-bits/InterfaceBits.lean",
+      "receipt": "interface-bits/interface-bits-verification.json",
+      "checker": "interface-bits/check_interface_bits.py",
+      "record": "interface-bits-and-c2-confusability-clique"
+    },
+    {
+      "module": "MovingFeatureCone",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "moving-feature-cone/MovingFeatureCone.lean",
+      "receipt": "moving-feature-cone/moving-feature-cone-verification.json",
+      "checker": "moving-feature-cone/check_moving_feature_cone.py",
+      "record": "moving-feature-cone-and-delay-headroom"
     }
   ]
 }

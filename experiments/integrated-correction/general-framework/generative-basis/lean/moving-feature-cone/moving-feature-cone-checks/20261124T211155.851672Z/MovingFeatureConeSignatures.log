@@ -1,0 +1,38 @@
+@Becoming.MovingFeatureCone.ep_implies_fp : ∀ {g : ℕ → ℝ} {B : ℕ},
+  1 ≤ B → Becoming.MovingFeatureCone.EP g B → Becoming.MovingFeatureCone.FP g B
+Becoming.MovingFeatureCone.top_cone_iff : ∀ (a c d μ x y : ℝ),
+  x ^ 2 + y ^ 2 = 1 →
+    a * x + c * y = μ * x → c * x + d * y = μ * y → a + d < 2 * μ → (3 * x ^ 2 ≤ y ^ 2 ↔ 2 / √3 * |c| ≤ d - a)
+Becoming.MovingFeatureCone.fp_sandwich : ∀ (drift z : ℕ → ℝ) (l B : ℕ),
+  Monotone drift →
+    have g := fun t => drift t + z t;
+    Becoming.MovingFeatureCone.FP g B →
+      Becoming.MovingFeatureCone.EP g B ∨
+        Becoming.MovingFeatureCone.Early g l ∨ Becoming.MovingFeatureCone.Intra g z l B
+Becoming.MovingFeatureCone.intra_boundary_or_osc : ∀ (g z : ℕ → ℝ) (l B : ℕ) (η : ℝ),
+  ¬Becoming.MovingFeatureCone.EP g B →
+    Becoming.MovingFeatureCone.Intra g z l B → -η ≤ g B ∨ ∃ t, l ≤ t ∧ t ≤ B ∧ η ≤ |z t - z B|
+Becoming.MovingFeatureCone.feature_delay_headroom : ∀ (H₁ H₂ Y L τ : ℕ) (α floor x₀ : ℝ),
+  0 < α →
+    α < 1 →
+      Y ≤ H₁ →
+        H₂ < H₁ →
+          floor + ↑(L + τ) * (↑H₁ - ↑Y) + (1 - α) / α * (↑H₁ - ↑H₂) ≤ x₀ →
+            ∀ (t : ℕ), floor ≤ Becoming.AlignmentReals.inertiaStock (↑H₁) (↑H₂) (↑Y) (L + τ) α x₀ t
+Becoming.MovingFeatureCone.feature_delay_extra_headroom : ∀ (H₁ Y : ℝ) (L τ : ℕ),
+  ↑(L + τ) * (H₁ - Y) - ↑L * (H₁ - Y) = ↑τ * (H₁ - Y)
+@Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse : ∀ {d : ℕ} (φ_safe φ_warn : Fin d → ℝ)
+  (η p_max v_rest d_agg d_rest R x_warn x_crit : ℝ),
+  0 ≤ η →
+    0 ≤ p_max →
+      ∀ (δ p : ℕ → ℝ),
+        (∀ (k : ℕ), p k ≤ p_max) →
+          ∀ (θ₀ : Fin d → ℝ) (T_safe τ : ℕ),
+            0 < τ →
+              v_rest <
+                  θ₀ ⬝ᵥ φ_warn + η * φ_safe ⬝ᵥ φ_warn * ∑ k ∈ Finset.range T_safe, δ k -
+                    ↑(τ - 1) * (η * p_max * φ_warn ⬝ᵥ φ_warn) →
+                x_warn - x_crit < (d_agg - R) * ↑τ →
+                  Becoming.AlignmentReals.warnStock d_agg d_rest R φ_warn v_rest η p
+                      (Becoming.AlignmentReals.faSafeUpdate φ_safe η δ θ₀ T_safe) x_warn τ <
+                    x_crit

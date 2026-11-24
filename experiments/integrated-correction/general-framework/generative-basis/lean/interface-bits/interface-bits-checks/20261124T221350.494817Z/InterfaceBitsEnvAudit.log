@@ -1,0 +1,158 @@
+ENV_CONST	Becoming.InterfaceBits.cyclic_translate_bound	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finTwoEquiv._proof_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.coloring_strongProd	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk.inj	[]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.refl	[]	false
+ENV_CONST	Becoming.InterfaceBits.confOfRaw	[]	false
+ENV_CONST	Becoming.InterfaceBits.indep_strongProd	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.strongPow._proof_2	[]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk._flat_ctor	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7_chiCC2_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_indep_adjacent_bound	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Adj._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_6	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_2	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.le_indepNum	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.IsColoring	[]	false
+ENV_CONST	Becoming.InterfaceBits.chiK3Free_le_of_equiv	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.recOn	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Indep_ok	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	_private.InterfaceBits.0.Becoming.OplaxHistory.powTwo.match_1.eq_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.IsClique	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqColorVec	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk.noConfusion	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_chi_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.confOfRaw._proof_2	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7_indepNum_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_step	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finOneEquiv	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.strongProd._proof_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chi_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.indep_strongProd_K2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqPts_ok	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_indepNum_eq._proof_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_chi_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.OplaxHistory.powTwo.eq_def	[]	false
+ENV_CONST	Becoming.InterfaceBits.exists_maxIndep	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chiK3Free_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.ctorIdx	[]	false
+ENV_CONST	Becoming.InterfaceBits.cc2_is_two_colorable	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chiCC2_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.C7._proof_2	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.indepNum_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_triangleFree	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.minColors	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.OplaxHistory.powTwo.eq_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Color	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Adj.eq_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.powTwo_eq	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Cube_indepNum_bounds._proof_1_3	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.rec	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_3	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.indep_times_triangleFree	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7CC2_ok	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.log2.eq_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.strongProd._proof_2	[]	false
+ENV_CONST	Becoming.InterfaceBits.IsCC2Partition	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqCC2Vec	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.finAddEquiv	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.chi_strongProd_le	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	_private.InterfaceBits.0.Becoming.OplaxHistory.powTwo.match_1.splitter	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqCC2Vec._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.chi	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.chiCC2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Color._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.IsIndepSet	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finTwoEquiv._proof_2	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7CC2	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.strongPow	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chiK3Free_eq._proof_1_2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_chi_le._proof_1_4	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.C7._proof_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	_private.InterfaceBits.0.Becoming.OplaxHistory.powTwo.match_1.eq_2	[]	false
+ENV_CONST	Becoming.InterfaceBits.IsK3FreePartition	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_chi_le._proof_1_3	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chiK3Free_eq._proof_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_chi_eq._proof_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk.injEq	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.equivFin_isColoring	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqPts_nodup	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7BitVal	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_chi_eq._proof_1_2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c2_collapse_clique	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.C7	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.chiCC2_spec	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Color_ok	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finAddEquiv._proof_1	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finAddEquiv.eq_1	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.instDecProdR	[]	true
+ENV_CONST	Becoming.InterfaceBits.confOfRaw._proof_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.instDecC7R	[propext, Classical.choice, Quot.sound]	true
+ENV_CONST	Becoming.InterfaceBits.c7_chiK3Free_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Diffs.eq_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.noConfusion	[]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk	[]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.noConfusionType	[]	false
+ENV_CONST	Becoming.InterfaceBits.finOneEquiv._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.Conf._sizeOf_inst	[]	true
+ENV_CONST	Becoming.InterfaceBits.indepNum	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Cube_chiK3Free_eq._proof_1_2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.mk.sizeOf_spec	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7BitVal_inj	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqColor_offsets	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Cube_chiK3Free_eq._proof_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.coloring_isCC2	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_chi_le._f	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.coloring_isK3Free	[]	false
+ENV_CONST	Becoming.InterfaceBits.cc_pow_log_gap	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.OplaxHistory.powTwo.eq_2	[]	false
+ENV_CONST	Becoming.InterfaceBits.chiK3Free	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.log2._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Indep	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf	[]	false
+ENV_STRUCT	Becoming.InterfaceBits.Conf	[R, refl, symm]
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_4	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.chiK3Free_spec	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finAddEquiv._proof_2	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.K2	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Sq_indepNum_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.instDecProdR._aux_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7Cube_indepNum_bounds	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.R	[]	false
+ENV_CONST	Becoming.InterfaceBits.cc_sandwich	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqPts	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_5	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.finOneEquiv._proof_2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Adj	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.casesOn	[]	false
+ENV_CONST	Becoming.InterfaceBits.rep	[]	false
+ENV_CONST	Becoming.InterfaceBits.clique_strongProd	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_k3free_card_bound	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.strongProd	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqCC2_offsets	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.finTwoEquiv	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_log_rate_le._simp_1_7	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Pow_chi_le.match_1_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.card_le_mul_of_fiber	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.chi_le_of_equiv	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.finOneEquiv.eq_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.log2	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_indep_adjacent_bound._proof_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf.symm	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7_chiK3Free_eq.match_1_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7BitVal_adj	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7Diffs	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.strongPow._proof_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.k3free_strongProd	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7_indepNum_eq._proof_1_1	[propext, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.instDecC7R._aux_1	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.c7SqColorVec._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.finOneEquiv._proof_3	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7_iff_diff	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.chi_spec	[propext, Classical.choice, Quot.sound]	false
+ENV_CONST	Becoming.InterfaceBits.Conf._sizeOf_1	[]	false
+ENV_CONST	Becoming.InterfaceBits.c7BitVal._proof_1	[propext]	false
+ENV_CONST	Becoming.InterfaceBits.c7Cube_chiK3Free_eq	[propext, Classical.choice, Quot.sound]	false
+ENV_AUDIT_DONE COUNT=156

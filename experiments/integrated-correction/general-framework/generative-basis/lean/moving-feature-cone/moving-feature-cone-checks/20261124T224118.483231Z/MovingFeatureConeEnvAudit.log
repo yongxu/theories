@@ -1,0 +1,13 @@
+ENV_CONST	Becoming.MovingFeatureCone.FP	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.Intra	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.fp_sandwich.match_1_1	[propext, Classical.choice, Quot.sound]	false	false	false
+ENV_CONST	Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.intra_boundary_or_osc	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.fp_sandwich	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.ep_implies_fp	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.top_cone_iff	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.feature_delay_extra_headroom	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.Early	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.feature_delay_headroom	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_CONST	Becoming.MovingFeatureCone.EP	[propext, Classical.choice, Quot.sound]	false	true	false
+ENV_AUDIT_DONE COUNT=12

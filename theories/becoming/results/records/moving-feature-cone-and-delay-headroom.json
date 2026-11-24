@@ -1,0 +1,164 @@
+{
+  "schema_version": 2,
+  "id": "moving-feature-cone-and-delay-headroom",
+  "title": {
+    "en": "Moving-feature cone characterization, path sandwich, and delay headroom"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T22:46:49+00:00",
+  "statement": {
+    "en": "MovingFeatureCone characterizes 2D top-eigenvector cones via top_cone_iff, proves deterministic path-wise event inclusions fp_sandwich and intra_boundary_or_osc, and connects AlignmentReals delay headroom and hysteresis to a Schur/BBP endpoint derivation and 0.414607s LDL check."
+  },
+  "laws": [
+    {
+      "en": "Any unit top eigenpair (x, y) with a + d < 2*mu satisfies 3*x^2 <= y^2 iff (2 / sqrt 3) * |c| <= d - a (top_cone_iff) without dividing by c, x, or y, and for 1 <= B endpoint EP g B implies FP g B (ep_implies_fp).",
+      "declarations": [
+        "Becoming.MovingFeatureCone.EP",
+        "Becoming.MovingFeatureCone.FP",
+        "Becoming.MovingFeatureCone.ep_implies_fp",
+        "Becoming.MovingFeatureCone.top_cone_iff"
+      ]
+    },
+    {
+      "en": "For g t = drift t + z t under monotone nondecreasing drift, FP g B satisfies the deterministic inclusion EP g B or Early g l or Intra g z l B (fp_sandwich), and an endpoint miss with Intra g z l B implies boundary strip -eta <= g B or window oscillation >= eta (intra_boundary_or_osc).",
+      "declarations": [
+        "Becoming.MovingFeatureCone.Early",
+        "Becoming.MovingFeatureCone.Intra",
+        "Becoming.MovingFeatureCone.fp_sandwich",
+        "Becoming.MovingFeatureCone.intra_boundary_or_osc"
+      ]
+    },
+    {
+      "en": "For supplied lag L + tau (not identified as a first hit), feature_delay_headroom gives sufficient initial stock via inertia_lag_headroom_penalty, feature_delay_extra_headroom equates the diff to tau * (H_1 - Y), and feature_delay_linear_fa_collapse yields warnStock < x_crit at M_delay := tau under linear_fa_leakage_hysteresis margin premises and strict hshort.",
+      "declarations": [
+        "Becoming.MovingFeatureCone.feature_delay_headroom",
+        "Becoming.MovingFeatureCone.feature_delay_extra_headroom",
+        "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean v4.30.0-rc2 Mathlib periphery module MovingFeatureCone importing AlignmentReals under [Classical.choice, Quot.sound, propext] with an environment-wide audit across all 12 module constants."
+    },
+    {
+      "en": "feature_delay_linear_fa_collapse retains all fixed-feature phi_safe, phi_warn, score-margin, bounded-update, and strict stock-shortfall (hshort) premises of AlignmentReals.linear_fa_leakage_hysteresis; the moving-feature Schur/BBP experiment tests single-endpoint covariance angles at b = 0 rather than supplying those fixed-feature premises."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "scope",
+      "en": "Fixed-d bounds (fp_sandwich, intra_boundary_or_osc) give deterministic event inclusions only, not a probabilistic maximal inequality or high-d rolling limit outside Schur/BBP endpoints."
+    },
+    {
+      "kind": "scope",
+      "en": "At 32 trials/cell, mean mass falls across gamma while Wilson 95% CIs cover cone-hit rates (widths 0.2885-0.3268; n=64, gamma=1 [0.3645, 0.6913] misses 0.3598), unable to resolve 0.0038 (1/16 vs 1/4)."
+    },
+    {
+      "kind": "correspondence",
+      "en": "Applying feature_delay_headroom requires identifying stock recursion, supplied delay, and initial-stock threshold; feature_delay_linear_fa_collapse further requires strict shortfall hshort (Rule 2)."
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written (Wave 4 B3, 25 Nov 2026); MovingFeatureCone (124 lines, 7 thms/11 decls, 12 env consts) passed -O Lean 4.30.0-rc2 check (receipt 20261124T224118.483231Z; prior 20261124T211155.851672Z kept) under standard axioms. run_ldl_check.py took 0.414607s CPU (sampled <=12s cutoff checked per-endpoint/finish; 320 endpoints, 0 fails, max res 2.82e-11, brk 1.17e-13; n=32 Jacobi dims [2,2,8,8,32,32,72,72,128,128], diff ~8.88e-15). Unread by humans."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; develop high-dimensional rolling first-passage or critical-edge scaling analysis if required."
+  },
+  "correspondence": {
+    "en": "Connects 2x2 top-eigenvector cone geometry and supercritical Schur/BBP endpoint mass degradation to AlignmentReals headroom and linear FA leakage delay bounds."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean",
+  "aliases": [
+    "Becoming.MovingFeatureCone.top_cone_iff",
+    "Becoming.MovingFeatureCone.fp_sandwich",
+    "Becoming.MovingFeatureCone.feature_delay_headroom",
+    "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse"
+  ],
+  "dependencies": [
+    {
+      "id": "continuous-stochastic-alignment-reals",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Applies inertia_lag_headroom_penalty and linear_fa_leakage_hysteresis from Becoming.AlignmentReals."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.MovingFeatureCone.EP",
+        "Becoming.MovingFeatureCone.FP",
+        "Becoming.MovingFeatureCone.Early",
+        "Becoming.MovingFeatureCone.Intra",
+        "Becoming.MovingFeatureCone.ep_implies_fp",
+        "Becoming.MovingFeatureCone.top_cone_iff",
+        "Becoming.MovingFeatureCone.fp_sandwich",
+        "Becoming.MovingFeatureCone.intra_boundary_or_osc",
+        "Becoming.MovingFeatureCone.feature_delay_headroom",
+        "Becoming.MovingFeatureCone.feature_delay_extra_headroom",
+        "Becoming.MovingFeatureCone.feature_delay_linear_fa_collapse"
+      ],
+      "sha256": "e30f0e55e85218fd786a0462a45b37478cbb7563ea42cb04b9300ba50043f923"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/check_moving_feature_cone.py",
+      "role": "integration",
+      "sha256": "12c979d55e937e7aa3d5fbec92de66d266bb1a6acbd42fe4627204b762579bbc"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/moving-feature-cone-checks/20261124T224118.483231Z/verification.json",
+      "role": "receipt",
+      "sha256": "c70f7014113c654e0e2fcc8be0cb8fddcaada1ba2b689f4aa63bfe35aa43b9b7",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/b3-schur-ldl/DERIVATION.md",
+      "role": "review",
+      "sha256": "4150f3cef0dc52ab33a1be9f113e59c02cae43d114e6020556622c13e5369db5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/b3-schur-ldl/run_ldl_check.py",
+      "role": "provenance",
+      "sha256": "ab1afebe9432d0311435bb11ac245447aec408eb2c71abe9481612ed4d00bf01"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/b3-schur-ldl/RESULTS.md",
+      "role": "review",
+      "sha256": "3bdf614ad65583cee9d887f65cb3e95a4a75977bb6fd5ca76bd58b0c06c63f54"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/b3-schur-ldl/results.json",
+      "role": "provenance",
+      "sha256": "a27e7996cba278f2d2482f48a5633a2758518c6f5487fc50786ca9dcf30d9a8c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/MovingFeatureCone.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/moving-feature-cone/moving-feature-cone-checks/20261124T224118.483231Z/verification.json",
+      "sha256_pointer": "/source_sha256/MovingFeatureCone",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "25 November 2026 (Wave 4 Track B3): added MovingFeatureCone (Mathlib v4.30.0-rc2, historical receipt 20261124T211155.851672Z, hardened env-audit receipt 20261124T224118.483231Z, 7 theorems / 11 decls / 12 env constants joining AlignmentReals) paired with Schur/BBP DERIVATION.md and 0.414607s Dumitriu-Edelman LDL check. AI-written."
+    }
+  ]
+}
