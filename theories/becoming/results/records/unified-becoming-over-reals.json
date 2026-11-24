@@ -1,0 +1,209 @@
+{
+  "schema_version": 2,
+  "id": "unified-becoming-over-reals",
+  "title": {
+    "en": "Unified real-valued periphery joining all nine Mathlib becoming modules"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T06:25:00+00:00",
+  "statement": {
+    "en": "BecomingReals unites all nine Mathlib v4.30.0-rc2 periphery modules across slowing-down inertia collapse, exergy fluctuation survival, exchangeable Gibbs variational optimality, operator-norm linear blanket runaway versus hysteresis, and one concrete witness."
+  },
+  "laws": [
+    {
+      "en": "Iterated AR(1) variance equals metricSlack and tends to SlowingDown.stationaryVariance, while policy-inertia headroom shortfall drives AlignmentReals.inertiaStock below threshold and into RegimeMargin.Drawn.Falls.",
+      "declarations": [
+        "Becoming.Reals.iterVar_eq_metricSlack",
+        "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+        "Becoming.Reals.slowingDown_inertia_regime_collapse"
+      ]
+    },
+    {
+      "en": "Finite probability measures embed as FiniteLaw distributions joining pathwise and expected Flow balance, exergy destruction floors with Markov survival bounds, and integral fluctuation upper bounds.",
+      "declarations": [
+        "Becoming.Reals.finiteLawOfMeasure",
+        "Becoming.Reals.fluctuation_complement_survival_ge",
+        "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival"
+      ]
+    },
+    {
+      "en": "Under permutation-symmetric energy, normalized Gibbs weights coincide with FreeEnergy.posterior and ExpectedFreeEnergy.softmax, uniquely minimize variational free energy, satisfy Exchangeable marginal symmetry, and share coarse-split blindness.",
+      "declarations": [
+        "Becoming.Reals.gibbsWeight",
+        "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable"
+      ]
+    },
+    {
+      "en": "Under a self-contained L_infinity matrix operator norm (LocalMatrixOpNorm), Euler iterates equal matrix powers, reduce in 1D to SlowingDown.drawnMultiplier, show rate < 1 on Autonomous.emA despite internal-external precision failure, alongside linear FA leakage hysteresis and one cross-module witness.",
+      "declarations": [
+        "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+        "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+        "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+        "Becoming.Reals.emA_pow_four_norm_lt_one",
+        "Becoming.Reals.emA_rate_lt_one",
+        "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+        "Becoming.Reals.becoming_reals_cross_module_witness"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Lean 4.30.0-rc2 + Mathlib standard axioms only (propext, Classical.choice, Quot.sound) through the Mathlib periphery workspace; finite Fintype state/sample spaces, discrete-time Euler steps, and scoped PiLp L_infinity matrix operator norm."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "correspondence",
+      "en": "Showing real-valued bridges in Mathlib hold under Gaussian independence, exchangeable energies, or linear Euler steps never verifies those assumptions in empirical ML or physical systems (Rule 2)."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+      "detail": {
+        "en": "linear_blanket_vs_fa_leakage_and_damped_runaway contrasts em_loses_internal_external (nonzero boundary matrix entry with zero sparse-coupling precision entry) and FA leakage hysteresis breach against convergent tabular updates."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T062021.570166Z): all 39 declarations (31 theorems, 0 private) pass under standard axioms using scoped LocalMatrixOpNorm; audited PASS in Wave U5 Commit A (6180e3f6). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; continuous-time stochastic differential and empirical neural-network norm calibrations if moved beyond periphery."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): shows the 9 real-valued periphery modules are mutually compatible inside one Mathlib Lean file without touching the 0-axiom core."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+  "aliases": [],
+  "dependencies": [
+    {
+      "id": "continuous-stochastic-alignment-reals",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Couples metricSlack, inertia_lag_headroom_penalty, markov_survival_sufficient, spike_threshold_survival_upper, and linear_fa_leakage_hysteresis."
+      }
+    },
+    {
+      "id": "free-energy-bounds-surprisal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Identifies gibbsWeight with posterior as unique minimizer of FreeEnergy.freeEnergy."
+      }
+    },
+    {
+      "id": "expected-free-energy-and-its-terms",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Identifies gibbsWeight with softmax and applies seeking_blind_to_split."
+      }
+    },
+    {
+      "id": "identical-cells-under-noise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Derives Exchangeable symmetry, equal cell marginals, and distinct_le under symmetric energy."
+      }
+    },
+    {
+      "id": "the-blanket-in-a-linear-steady-state",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects Euler iteration, Autonomous.emA, mode_unread_iff, and precision_zero_of_footnote13."
+      }
+    },
+    {
+      "id": "least-loss-from-entropy-production",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Joins ExpectedDissipatesOn.of_exergy, expected_takers_within, and gain_probability_le to FiniteLaw survival."
+      }
+    },
+    {
+      "id": "regime-in-any-amounts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Routes NNReal inertiaStock breaches into Becoming.RegimeMargin.Drawn.falls_of_below."
+      }
+    },
+    {
+      "id": "what-discrete-steps-and-whole-amounts-represent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses Representation.expected_balance and Representation.rate convergence/unboundedness criteria."
+      }
+    },
+    {
+      "id": "slowing-down-before-an-own-end",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Couples stationaryVariance, drawnMultiplier, drawnRest, drawn_level_read, and need_not_read."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reals.iterVar_eq_metricSlack",
+        "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+        "Becoming.Reals.slowingDown_inertia_regime_collapse",
+        "Becoming.Reals.finiteLawOfMeasure",
+        "Becoming.Reals.fluctuation_complement_survival_ge",
+        "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival",
+        "Becoming.Reals.gibbsWeight",
+        "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable",
+        "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+        "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+        "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+        "Becoming.Reals.emA_pow_four_norm_lt_one",
+        "Becoming.Reals.emA_rate_lt_one",
+        "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+        "Becoming.Reals.becoming_reals_cross_module_witness"
+      ],
+      "sha256": "82fa900a24584df46035f58d9d77589698efda357089f72e9b54c98c76fec795"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/check_becoming_reals.py",
+      "role": "integration",
+      "sha256": "c57e0e3fad912e2af5c2954c9fbde86d5cccc7189482a146a726da55a5e438ef"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/becoming-reals-checks/20261124T062021.570166Z/verification.json",
+      "role": "receipt",
+      "sha256": "fb757534396764b1b21be8eb1dda8668734a935c476c6f9b8d4f1384c50d2f92",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u5-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "0388ab898f86671feefe33a7ba81c670e9035154a779287b5bef5b8ef4e210cb"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/BecomingReals.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming-reals/becoming-reals-checks/20261124T062021.570166Z/verification.json",
+      "sha256_pointer": "/source_sha256/BecomingReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U5): added BecomingReals (Mathlib periphery #11) uniting all 9 Mathlib reals modules via LocalMatrixOpNorm without modifying the shared Mathlib clone. AI-written."
+    }
+  ]
+}

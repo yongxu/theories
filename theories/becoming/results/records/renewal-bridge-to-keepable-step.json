@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "id": "renewal-bridge-to-keepable-step",
+  "title": {
+    "en": "October renewal histories coincide by field renaming with keepable-step runs"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T06:25:00+00:00",
+  "statement": {
+    "en": "With zero added premises, October conditional renewal histories under ChannelLaw rename definitionally onto runs of channelProcess, making Renewable c equivalent to Keepable (channelProcess law) Live c and deriving October's step and non-generation laws from KeepableStep."
+  },
+  "laws": [
+    {
+      "en": "historyRun and runHistory biject October History law with Run (channelProcess law) definitionally, so Renewable law c holds identically when Keepable (channelProcess law) Live c holds.",
+      "declarations": [
+        "Becoming.Viability.RenewalBridge.historyRun",
+        "Becoming.Viability.RenewalBridge.runHistory",
+        "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+        "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+        "Becoming.Viability.RenewalBridge.renewable_iff_keepable"
+      ]
+    },
+    {
+      "en": "October's renewable_iff_step and renewability_not_generated are proved through keepable_step_iff and not_keepable_run with dead_stays_dead, matching October's exact theorem types by reflexivity without calling October's proofs.",
+      "declarations": [
+        "Becoming.Viability.RenewalBridge.renewable_iff_step",
+        "Becoming.Viability.RenewalBridge.renewability_not_generated",
+        "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+        "Becoming.Viability.RenewalBridge.renewability_not_generated_same"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Constructive Lean 4.29.1 over Becoming.KeepableStep and October's RenewalConfigurations (conditional/renewal/) with 0 axioms and 0 added hypotheses; Live is not assumed decidable."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "correspondence",
+      "en": "Joining the two formal definitions in Lean shows equivalence between the mathematical structures and does not show when a concrete process satisfies a ChannelLaw (Rule 2)."
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by standalone Lean 4.29.1 checker check_renewal_bridge.py (receipt 20261124T062107.825558Z): all 9 declarations (7 theorems) check at 0 axioms while leaving October conditional/renewal/check.py and verification.json untouched; audited PASS in Wave U5 Commit A (6180e3f6). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; decide whether October's conditional/renewal archive should stay separate alongside this bridge or retire behind it."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): lands board row DJ/FM's ScratchRenewalBridge directly into the verified periphery manifest without altering October receipts."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean",
+  "aliases": [],
+  "dependencies": [
+    {
+      "id": "conditions-kept-together",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Imports Becoming.KeepableStep (keepable_step_iff and not_keepable_run) to derive both October theorems as instances."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Viability.RenewalBridge.historyRun",
+        "Becoming.Viability.RenewalBridge.runHistory",
+        "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+        "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+        "Becoming.Viability.RenewalBridge.renewable_iff_keepable",
+        "Becoming.Viability.RenewalBridge.renewable_iff_step",
+        "Becoming.Viability.RenewalBridge.renewability_not_generated",
+        "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+        "Becoming.Viability.RenewalBridge.renewability_not_generated_same"
+      ],
+      "sha256": "9ce13a8456d982686f76dfc5c6dd1701ebbed3b370402420f25c2216494d37b9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/check_renewal_bridge.py",
+      "role": "integration",
+      "sha256": "7115ff7457f483b5da4416cb58a810fbf582c69e9cc22656c4a7efd6b675a65f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/renewal-bridge-checks/20261124T062107.825558Z/verification.json",
+      "role": "receipt",
+      "sha256": "9cca3104b41f463af4b1e0929743530f211527b495961967fe4e70117c2408a8",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u5-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "0388ab898f86671feefe33a7ba81c670e9035154a779287b5bef5b8ef4e210cb"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalBridge.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/renewal-bridge-checks/20261124T062107.825558Z/verification.json",
+      "sha256_pointer": "/source_sha256/RenewalBridge",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U5): landed RenewalBridge (periphery #12, 0 axioms) from ScratchRenewalBridge, bridging RenewalConfigurations to Becoming.KeepableStep without modifying October receipts. AI-written."
+    }
+  ]
+}

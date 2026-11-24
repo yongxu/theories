@@ -1,12 +1,12 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T040228.916780Z",
- "core_sources_sha256": "4c511a2773a7bc50440b4738b6694f62c1ea9fd7aa040fced51f653735cfbaa7",
+ "core_receipt": "20261124T061916.734612Z",
+ "core_sources_sha256": "59bdd868da98877cc8538767783500fe43191c640986d60b4ab5155d44bb7d93",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "fe55563b8bf5cf5e306b56370f9a5b58df49c16e804bd41bad7581751f1dec56",
+  "theories/becoming/results/completion/COVERAGE.json": "6e7ad191e0cce8e35566875896ae99ee5dd2de5d95a5ed29dcbdea94d51d6e8a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4505,
+  "laws": 4515,
   "no_declarations": 9,
-  "outside": 396,
-  "grammar": 1166,
+  "outside": 402,
+  "grammar": 1169,
   "balance, represented": 642,
   "anchor, not reached": 99,
-  "no shared law": 2193,
+  "no shared law": 2194,
   "vocabulary_only": 106,
-  "closure": 643,
-  "balance": 932,
-  "return": 258,
-  "lumping": 98,
-  "order": 115
+  "closure": 646,
+  "balance": 935,
+  "return": 260,
+  "lumping": 101,
+  "order": 118
  },
  "counts_at_model": {
   "laws": 23,
@@ -43002,6 +43002,40 @@
     "dependence": "balance, represented"
    }
   ],
+  "renewal-bridge-to-keepable-step": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Viability.RenewalBridge.historyRun",
+     "Becoming.Viability.RenewalBridge.runHistory",
+     "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+     "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+     "Becoming.Viability.RenewalBridge.renewable_iff_keepable"
+    ],
+    "outside": [
+     "Becoming.Viability.RenewalBridge.historyRun",
+     "Becoming.Viability.RenewalBridge.runHistory",
+     "Becoming.Viability.RenewalBridge.runHistory_historyRun",
+     "Becoming.Viability.RenewalBridge.historyRun_runHistory",
+     "Becoming.Viability.RenewalBridge.renewable_iff_keepable"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Viability.RenewalBridge.renewable_iff_step",
+     "Becoming.Viability.RenewalBridge.renewability_not_generated",
+     "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+     "Becoming.Viability.RenewalBridge.renewability_not_generated_same"
+    ],
+    "outside": [
+     "Becoming.Viability.RenewalBridge.renewable_iff_step",
+     "Becoming.Viability.RenewalBridge.renewability_not_generated",
+     "Becoming.Viability.RenewalBridge.renewable_iff_step_same",
+     "Becoming.Viability.RenewalBridge.renewability_not_generated_same"
+    ]
+   }
+  ],
   "renewing-consuming-formation": [
    {
     "law": 1,
@@ -58507,6 +58541,66 @@
     "dependence": "no shared law"
    }
   ],
+  "unified-becoming-over-reals": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Reals.iterVar_eq_metricSlack",
+     "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+     "Becoming.Reals.slowingDown_inertia_regime_collapse"
+    ],
+    "outside": [
+     "Becoming.Reals.iterVar_eq_metricSlack",
+     "Becoming.Reals.metricSlack_stationaryVariance_bridge",
+     "Becoming.Reals.slowingDown_inertia_regime_collapse"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Reals.finiteLawOfMeasure",
+     "Becoming.Reals.fluctuation_complement_survival_ge",
+     "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival"
+    ],
+    "outside": [
+     "Becoming.Reals.finiteLawOfMeasure",
+     "Becoming.Reals.fluctuation_complement_survival_ge",
+     "Becoming.Reals.finiteLawOfMeasure_exergy_fluctuation_survival"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Reals.gibbsWeight",
+     "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable"
+    ],
+    "outside": [
+     "Becoming.Reals.gibbsWeight",
+     "Becoming.Reals.gibbs_minimizes_freeEnergy_exchangeable"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+     "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+     "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+     "Becoming.Reals.emA_pow_four_norm_lt_one",
+     "Becoming.Reals.emA_rate_lt_one",
+     "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+     "Becoming.Reals.becoming_reals_cross_module_witness"
+    ],
+    "outside": [
+     "Becoming.Reals.LocalMatrixOpNorm.linftyOpNormedRing",
+     "Becoming.Reals.euler_iterate_eq_pow_mulVec",
+     "Becoming.Reals.euler_unit_iterate_eq_drawnMultiplier",
+     "Becoming.Reals.emA_pow_four_norm_lt_one",
+     "Becoming.Reals.emA_rate_lt_one",
+     "Becoming.Reals.linear_blanket_vs_fa_leakage_and_damped_runaway",
+     "Becoming.Reals.becoming_reals_cross_module_witness"
+    ]
+   }
+  ],
   "unified-drawdown-overdraw-and-aliasing": [
    {
     "law": 1,
@@ -67795,6 +67889,81 @@
     "dependence": "no shared law"
    }
   ],
+  "whole-becoming-master-spine": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.MasterSpine.polyUniformToOpenComponent",
+     "Becoming.MasterSpine.wholeSealedLeft",
+     "Becoming.MasterSpine.wholeScopeOpen",
+     "Becoming.MasterSpine.wholeOp",
+     "Becoming.MasterSpine.wholeInquirySpec",
+     "Becoming.MasterSpine.postProbeRun",
+     "Becoming.MasterSpine.postProbeRun_opInvariants"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.MasterSpine.WholeArchitecture",
+     "Becoming.MasterSpine.WholeArchitectureViableProp",
+     "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+     "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable",
+     "Becoming.MasterSpine.whole_architecture_scopeMode_bridge"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "lumping",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.MasterSpine.MasterSpineGrammarLiftsProp",
+     "Becoming.MasterSpine.masterSpine_grammar_lifts",
+     "Becoming.MasterSpine.FullObstructionPanoramaProp",
+     "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "return",
+     "lumping",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.MasterSpine.masterSpine_readsOnlyDynamics",
+     "Becoming.MasterSpine.masterSpine_admits_rival",
+     "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted",
+     "Becoming.MasterSpine.K6EthicsFirewallProp",
+     "Becoming.MasterSpine.k6_ethics_chain_and_firewall",
+     "Becoming.MasterSpine.whole_becoming_master_theorem",
+     "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture",
+     "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "return",
+     "lumping",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "whole-drawing-beyond-renewal-ends": [
    {
     "law": 1,
@@ -69664,7 +69833,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "e6a4999fb2c03f74398711a7325ff844e9c811fcebc37e865e81e79bf0737502",
+   "modules_sha256": "f47fcc9c582c5b2787462fcbb5115fcefaea3f8c3c37a4b01680dd139a09dd3c",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

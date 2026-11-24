@@ -1,0 +1,166 @@
+{"name": "Becoming.MasterSpine.WholeArchitecture.G_hide_rises", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.absorb", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.adds_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.agree_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.apart_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_acting", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_balances", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_dependent", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_descended", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_stock_bounded", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.bad_stock_noninc", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.cap_within", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.causal_goAlike", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.causal_nonconst", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.certQ", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.channel_fires", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.coupled_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.cr_tracks_substrate", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.dMem_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.drawExt_pos", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.drop₁_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.drop₂_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.enough_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.epA₀", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.epB₀", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.epX₀", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.evo_acting", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.evo_descended", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.exact_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.excess_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.founded_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.gated_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.gdd_cut₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.gdd_cut₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.gdr_adm₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.gdr_cut₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.grd_adm₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.grd_cut₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.grr_adm₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.grr_adm₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hAdmitR", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hInitR", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hide_init_margin", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hide_post_allowance", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hide_post_viable", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.hide_warn_margin", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.inactive_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.initQ", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.init_margin", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.invAll", "uses": ["Becoming.MasterSpine.WholeArchitecture.init_margin", "Becoming.MasterSpine.WholeArchitecture.probe_identifies", "Becoming.MasterSpine.WholeArchitecture.r_full_start", "Becoming.MasterSpine.exploreMarginInv_along_run", "Becoming.MasterSpine.exploreMarginInv_init"]}
+{"name": "Becoming.MasterSpine.WholeArchitecture.less_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.listed_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.marginQ", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.maxLagR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.maxSilenceR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.mg_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.mh_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.mp_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.mq_evo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.narrow_spec_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.obs_detects", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.offBase_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.opObs_eq", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.overtaken₁_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.overtaken₂_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.ownBase_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.ownEq_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.phaseInv", "uses": ["Becoming.MasterSpine.WholeArchitecture.r_full_start", "Becoming.MasterSpine.inquiry_phase_inv"]}
+{"name": "Becoming.MasterSpine.WholeArchitecture.postAllowanceExtR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.postAllowanceIntR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta", "uses": ["Becoming.MasterSpine.WholeArchitecture.G_hide_rises", "Becoming.MasterSpine.WholeArchitecture.hAdmitR", "Becoming.MasterSpine.WholeArchitecture.hInitR", "Becoming.MasterSpine.WholeArchitecture.hide_init_margin", "Becoming.MasterSpine.WholeArchitecture.hide_post_allowance", "Becoming.MasterSpine.WholeArchitecture.hide_post_viable", "Becoming.MasterSpine.WholeArchitecture.hide_warn_margin", "Becoming.MasterSpine.WholeArchitecture.invAll", "Becoming.MasterSpine.WholeArchitecture.maxLagR_le", "Becoming.MasterSpine.WholeArchitecture.maxSilenceR_le", "Becoming.MasterSpine.WholeArchitecture.phaseInv", "Becoming.MasterSpine.WholeArchitecture.postAllowanceExtR_le", "Becoming.MasterSpine.WholeArchitecture.postAllowanceIntR_le", "Becoming.MasterSpine.WholeArchitecture.preCapExtR_le", "Becoming.MasterSpine.WholeArchitecture.preCapIntR_le", "Becoming.MasterSpine.WholeArchitecture.probeDraw_le", "Becoming.MasterSpine.WholeArchitecture.tolL_lifts", "Becoming.MasterSpine.WholeArchitecture.tolR_lifts", "Becoming.MasterSpine.WholeArchitecture.warnR_lifts", "Becoming.MasterSpine.WholeArchitecture.wire_hide_warn", "Becoming.MasterSpine.WholeArchitecture.wire_outer_warn", "Becoming.MasterSpine.postProbe_isOpTheta"]}
+{"name": "Becoming.MasterSpine.WholeArchitecture.post_allowance", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.post_viable", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.preCapExtR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.preCapIntR_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.probeDraw_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.probe_identifies", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.probed_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.rMem_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.rOp_kernel", "uses": ["Becoming.ActiveInquiryLoop.RegimeWorld.G_rises", "Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "Becoming.MasterSpine.WholeArchitecture.channel_fires", "Becoming.MasterSpine.WholeArchitecture.invAll", "Becoming.MasterSpine.WholeArchitecture.obs_detects", "Becoming.MasterSpine.WholeArchitecture.opObs_eq", "Becoming.MasterSpine.WholeArchitecture.phaseInv", "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta", "Becoming.MasterSpine.WholeArchitecture.post_allowance", "Becoming.MasterSpine.WholeArchitecture.post_viable", "Becoming.MasterSpine.WholeArchitecture.warn_margin", "Becoming.MasterSpine.postProbeRun_opInvariants", "Becoming.OpenComposition.close_contract_kernel"]}
+{"name": "Becoming.MasterSpine.WholeArchitecture.r_full_start", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.reads_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.reproduces_when_viable", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.restored₁_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.restored₂_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.start_ord", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.strict_σ", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.stride_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.substrate_tracks", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tc_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tempt₁_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tempt₂_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tolL_lifts", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tolR_lifts", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tu1_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.tu2_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udd_adm₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udd_adm₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udd_cut₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udd_cut₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udr_adm₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.udr_cut₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.urd_adm₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.urd_cut₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.urr_adm₁", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.urr_adm₂", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.warnR_lifts", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.warn_margin", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.wide_spec_cr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.wireObs_coupled", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.wire_hide_warn", "uses": []}
+{"name": "Becoming.MasterSpine.WholeArchitecture.wire_outer_warn", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_eq_of_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_le", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.cappedDistNat_zero_iff", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero", "Becoming.distNat_self"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wAdmBool_iff", "uses": ["Becoming.ListTests.and_left", "Becoming.ListTests.and_right"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_acting", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_balances", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wBad_dependent", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_acting", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_balances", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep", "Becoming.Naturals.sub_add_cancel"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_dependent", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCR_tracks_rOp", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr", "Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_goAlike", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wCausal_nonconst", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wDefaultTol", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wBaseR._proof_1"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wDrawExt_pos", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1", "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wEq_of_distNat_zero", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_acting", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_descended", "uses": ["Becoming.CoreHelpers.natBeq_true_iff", "Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_exact", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq", "Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wEvo_family_eq", "uses": ["Becoming.Naturals.succ_ne_zero"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_descended", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wGBad_family"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wGBad_family", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wG_hide_rises", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wG_rises", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_or_ge16", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_gated_ro_ge16", "uses": ["Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_oo", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_rr", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_or", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolStep_ungated_ro", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wPoolTake_le_wPoolStep", "uses": []}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.wROp_level_eq", "uses": ["Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_1", "Becoming.MasterSpine.WholeBecomingWitness.wOrbitFull_ge_2"]}
+{"name": "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem", "uses": ["Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted", "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted", "Becoming.MasterSpine.whole_becoming_master_theorem"]}
+{"name": "Becoming.MasterSpine.exploreMarginInv_along_run", "uses": ["Becoming.Run.step", "Becoming.Viability.Certificate.closed"]}
+{"name": "Becoming.MasterSpine.exploreMarginInv_init", "uses": ["Becoming.OpenComposition.InterfaceContract.eta_bound", "Becoming.OpenComposition.InterfaceContract.init_in"]}
+{"name": "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama", "uses": ["Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable", "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes", "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_safe_holds", "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes", "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both", "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes", "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable", "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes", "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable", "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four", "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined", "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel", "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined", "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction", "Becoming.AlignmentSpine.AlignmentDichotomy.pre_overdraw_and_aliasing_boundaries", "Becoming.AlignmentSpine.AlignmentDichotomy.structural_failure_atlas", "Becoming.AlignmentSpine.SharpnessSuite.master_sharpness_suite_complete", "Becoming.CausalGoodhartWitness.macro_boost_kernel", "Becoming.CausalGoodhartWitness.micro_boost_guardS_collapses", "Becoming.CausalGoodhartWitness.micro_boost_proxy_collapses", "Becoming.CausalGoodhartWitness.no_exact_causal_abs_any_omega", "Becoming.CausalGoodhartWitness.no_small_slack_lax_causal_abs", "Becoming.CausalGoodhartWitness.no_zero_slack_lax_causal_abs", "Becoming.CausalGoodhartWitness.passive_commuting_all", "Becoming.CausalGoodhartWitness.passive_macro_kernel", "Becoming.CausalGoodhartWitness.passive_micro_kernel", "Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds", "Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds", "Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds", "Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall", "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds", "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds", "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.witness_holds", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends", "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_kernel", "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation", "Becoming.HorizontalLeakageWitness.exact_marginal_A", "Becoming.HorizontalLeakageWitness.exact_on_obs", "Becoming.HorizontalLeakageWitness.exact_passive_A_marginal_B", "Becoming.HorizontalLeakageWitness.no_exact_causal_abs", "Becoming.HorizontalLeakageWitness.no_zero_slack_lax_abs", "Becoming.MasterSpine.EndogenousOrderPanoramaProp._proof_1", "Becoming.MasterSpine.EndogenousOrderPanoramaProp._proof_2", "Becoming.MasterSpine.EndogenousOrderPanoramaProp._proof_3", "Becoming.MasterSpine.PolyPanoramaProp._proof_1", "Becoming.MasterSpine.PolyPanoramaProp._proof_2", "Becoming.PolyComposition.ConcurrentSerialWitness.concurrent_serial_dichotomy", "Becoming.PolyComposition.CoupledSmallGainWitness.coupled_small_gain_viable", "Becoming.PolyComposition.CoupledSmallGainWitness.small_gain_violation_contrast", "Becoming.PolyComposition.DynamicPortWitness.cycleRun_modes_and_viability", "Becoming.PolyComposition.DynamicPortWitness.dyn_viable_kernel", "Becoming.PolyComposition.DynamicPortWitness.stayBlind_crashes", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_admits_selfWiden", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.anchored_rejects_selfBlind", "Becoming.PolyComposition.SelfBlindingDichotomyWitness.unanchored_crashes", "Becoming.PositiveCoupledFeedbackWitness.feedback_viability_kernel", "Becoming.PositiveCoupledFeedbackWitness.no_exact_causal_abs", "Becoming.PositiveCoupledFeedbackWitness.openLoop_viability_kernel", "Becoming.PositiveCoupledFeedbackWitness.step_projection_err", "Becoming.causal_underdetermined_of_untaken", "Becoming.exactCausal_refuted_of_confound_varied"]}
+{"name": "Becoming.MasterSpine.inquiry_phase_inv", "uses": ["Becoming.MasterSpine.inquiry_step_phase", "Becoming.Naturals.succ_ne_zero", "Becoming.Run.step"]}
+{"name": "Becoming.MasterSpine.inquiry_step_phase", "uses": []}
+{"name": "Becoming.MasterSpine.k6_ethics_chain_and_firewall", "uses": ["Becoming.AlignmentSpine.AlignmentDichotomy.alignmentSpine_cannot_entail_unrestricted", "Becoming.Clearing.center_not_derived", "Becoming.Clearing.direction", "Becoming.Direction.extension_iff_widens", "Becoming.Direction.grounded_widening_selected", "Becoming.Direction.widening_selected_by_pool", "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted", "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted", "Becoming.ReadsNoOrder.not_entails", "Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted", "Becoming.Valuation.significant_iff", "Becoming.Web.paths_one_object", "Becoming.Web.unrestricted_iff_grounds_beyond", "Becoming.unrestricted_iff_livingSignificance"]}
+{"name": "Becoming.MasterSpine.masterSpine_admits_rival", "uses": ["Becoming.dynamicsLaw_admits_rival"]}
+{"name": "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted", "uses": ["Becoming.ScopeDynamics.scopeLaw_cannot_entail_unrestricted"]}
+{"name": "Becoming.MasterSpine.masterSpine_grammar_lifts", "uses": ["Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "Becoming.Amounts.falls_end", "Becoming.Amounts.whole_within", "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction", "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange", "Becoming.MasterSpine.WholeArchitecture.apart_cr", "Becoming.MasterSpine.WholeArchitecture.bad_stock_noninc", "Becoming.MasterSpine.WholeArchitecture.cap_within", "Becoming.MasterSpine.WholeArchitecture.causal_goAlike", "Becoming.MasterSpine.WholeArchitecture.dMem_cr", "Becoming.MasterSpine.WholeArchitecture.drop₁_cr", "Becoming.MasterSpine.WholeArchitecture.drop₂_cr", "Becoming.MasterSpine.WholeArchitecture.narrow_spec_cr", "Becoming.MasterSpine.WholeArchitecture.overtaken₁_cr", "Becoming.MasterSpine.WholeArchitecture.overtaken₂_cr", "Becoming.MasterSpine.WholeArchitecture.rMem_cr", "Becoming.MasterSpine.WholeArchitecture.rOp_kernel", "Becoming.MasterSpine.WholeArchitecture.tc_le", "Becoming.MasterSpine.WholeArchitecture.tempt₁_cr", "Becoming.MasterSpine.WholeArchitecture.tempt₂_cr", "Becoming.MasterSpine.WholeArchitecture.tu1_le", "Becoming.MasterSpine.WholeArchitecture.tu2_le", "Becoming.MasterSpine.WholeArchitecture.udd_adm₁", "Becoming.MasterSpine.WholeArchitecture.udd_adm₂", "Becoming.MasterSpine.WholeArchitecture.udd_cut₁", "Becoming.MasterSpine.WholeArchitecture.udd_cut₂", "Becoming.MasterSpine.WholeArchitecture.udr_adm₁", "Becoming.MasterSpine.WholeArchitecture.udr_cut₂", "Becoming.MasterSpine.WholeArchitecture.urd_adm₂", "Becoming.MasterSpine.WholeArchitecture.urd_cut₁", "Becoming.MasterSpine.WholeArchitecture.urr_adm₁", "Becoming.MasterSpine.WholeArchitecture.urr_adm₂", "Becoming.MasterSpine.WholeArchitecture.wide_spec_cr", "Becoming.Viability.kernel_iff_held", "Becoming.Weighting.widensOn_iff", "Becoming.«像定后当且仅当同行»", "Becoming.«全三域之周»", "Becoming.«全生成有终不并»", "Becoming.«因像定当且仅当因同行»", "Becoming.«守数当且仅当可对»", "Becoming.«尽则不屡»", "Becoming.«广不可逆»", "Becoming.«广之传递»"]}
+{"name": "Becoming.MasterSpine.masterSpine_readsOnlyDynamics", "uses": ["Becoming.readsOnlyDynamics_of"]}
+{"name": "Becoming.MasterSpine.polyUniformToOpen_closedStep_eq", "uses": []}
+{"name": "Becoming.MasterSpine.postProbeRun_opInvariants", "uses": ["Becoming.OpenComposition.InterfaceContract.cert", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.MasterSpine.postProbe_isOpTheta", "uses": []}
+{"name": "Becoming.MasterSpine.postProbe_step_lemma", "uses": []}
+{"name": "Becoming.MasterSpine.wholeGSum_rises", "uses": []}
+{"name": "Becoming.MasterSpine.whole_architecture_scopeMode_bridge", "uses": ["Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence", "Becoming.EndogenousOrder.scopeAdmit_sound", "Becoming.MasterSpine.WholeArchitecture.evo_acting", "Becoming.MasterSpine.WholeArchitecture.evo_descended", "Becoming.MasterSpine.WholeArchitecture.exact_evo", "Becoming.MasterSpine.WholeArchitecture.founded_evo", "Becoming.MasterSpine.WholeArchitecture.inactive_evo", "Becoming.MasterSpine.WholeArchitecture.less_evo", "Becoming.MasterSpine.WholeArchitecture.listed_evo", "Becoming.MasterSpine.WholeArchitecture.mg_evo", "Becoming.MasterSpine.WholeArchitecture.mh_evo", "Becoming.MasterSpine.WholeArchitecture.mp_evo", "Becoming.MasterSpine.WholeArchitecture.mq_evo", "Becoming.MasterSpine.WholeArchitecture.rOp_kernel"]}
+{"name": "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable", "uses": ["Becoming.ActiveInquiryLoop.RegimeWorld.G_rises", "Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right", "Becoming.CoreHelpers.natMax_le", "Becoming.MasterSpine.WholeArchitecture.channel_fires", "Becoming.MasterSpine.WholeArchitecture.init_margin", "Becoming.MasterSpine.WholeArchitecture.obs_detects", "Becoming.MasterSpine.WholeArchitecture.post_allowance", "Becoming.MasterSpine.WholeArchitecture.post_viable", "Becoming.MasterSpine.WholeArchitecture.warn_margin", "Becoming.OpenComposition.InterfaceContract.eta_bound", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.OpenComposition.replace_right_viable"]}
+{"name": "Becoming.MasterSpine.whole_architecture_viable_and_coupled", "uses": ["Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding", "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction", "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash", "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange", "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange", "Becoming.GroupEnding.Flow.lineages_raises", "Becoming.MasterSpine.WholeArchitecture.G_hide_rises", "Becoming.MasterSpine.WholeArchitecture.absorb", "Becoming.MasterSpine.WholeArchitecture.adds_ord", "Becoming.MasterSpine.WholeArchitecture.agree_ord", "Becoming.MasterSpine.WholeArchitecture.apart_cr", "Becoming.MasterSpine.WholeArchitecture.bad_acting", "Becoming.MasterSpine.WholeArchitecture.bad_balances", "Becoming.MasterSpine.WholeArchitecture.bad_dependent", "Becoming.MasterSpine.WholeArchitecture.bad_descended", "Becoming.MasterSpine.WholeArchitecture.cap_within", "Becoming.MasterSpine.WholeArchitecture.causal_goAlike", "Becoming.MasterSpine.WholeArchitecture.causal_nonconst", "Becoming.MasterSpine.WholeArchitecture.certQ", "Becoming.MasterSpine.WholeArchitecture.coupled_ord", "Becoming.MasterSpine.WholeArchitecture.cr_tracks_substrate", "Becoming.MasterSpine.WholeArchitecture.dMem_cr", "Becoming.MasterSpine.WholeArchitecture.drawExt_pos", "Becoming.MasterSpine.WholeArchitecture.drop₁_cr", "Becoming.MasterSpine.WholeArchitecture.drop₂_cr", "Becoming.MasterSpine.WholeArchitecture.enough_ord", "Becoming.MasterSpine.WholeArchitecture.epA₀", "Becoming.MasterSpine.WholeArchitecture.epB₀", "Becoming.MasterSpine.WholeArchitecture.epX₀", "Becoming.MasterSpine.WholeArchitecture.evo_acting", "Becoming.MasterSpine.WholeArchitecture.evo_descended", "Becoming.MasterSpine.WholeArchitecture.exact_evo", "Becoming.MasterSpine.WholeArchitecture.excess_ord", "Becoming.MasterSpine.WholeArchitecture.founded_evo", "Becoming.MasterSpine.WholeArchitecture.gated_ord", "Becoming.MasterSpine.WholeArchitecture.gdd_cut₁", "Becoming.MasterSpine.WholeArchitecture.gdd_cut₂", "Becoming.MasterSpine.WholeArchitecture.gdr_adm₂", "Becoming.MasterSpine.WholeArchitecture.gdr_cut₁", "Becoming.MasterSpine.WholeArchitecture.grd_adm₁", "Becoming.MasterSpine.WholeArchitecture.grd_cut₂", "Becoming.MasterSpine.WholeArchitecture.grr_adm₁", "Becoming.MasterSpine.WholeArchitecture.grr_adm₂", "Becoming.MasterSpine.WholeArchitecture.hAdmitR", "Becoming.MasterSpine.WholeArchitecture.hInitR", "Becoming.MasterSpine.WholeArchitecture.hide_init_margin", "Becoming.MasterSpine.WholeArchitecture.hide_post_allowance", "Becoming.MasterSpine.WholeArchitecture.hide_post_viable", "Becoming.MasterSpine.WholeArchitecture.hide_warn_margin", "Becoming.MasterSpine.WholeArchitecture.inactive_evo", "Becoming.MasterSpine.WholeArchitecture.initQ", "Becoming.MasterSpine.WholeArchitecture.invAll", "Becoming.MasterSpine.WholeArchitecture.less_evo", "Becoming.MasterSpine.WholeArchitecture.listed_evo", "Becoming.MasterSpine.WholeArchitecture.marginQ", "Becoming.MasterSpine.WholeArchitecture.maxLagR_le", "Becoming.MasterSpine.WholeArchitecture.maxSilenceR_le", "Becoming.MasterSpine.WholeArchitecture.mg_evo", "Becoming.MasterSpine.WholeArchitecture.mh_evo", "Becoming.MasterSpine.WholeArchitecture.mp_evo", "Becoming.MasterSpine.WholeArchitecture.mq_evo", "Becoming.MasterSpine.WholeArchitecture.narrow_spec_cr", "Becoming.MasterSpine.WholeArchitecture.offBase_ord", "Becoming.MasterSpine.WholeArchitecture.overtaken₁_cr", "Becoming.MasterSpine.WholeArchitecture.overtaken₂_cr", "Becoming.MasterSpine.WholeArchitecture.ownBase_ord", "Becoming.MasterSpine.WholeArchitecture.ownEq_ord", "Becoming.MasterSpine.WholeArchitecture.phaseInv", "Becoming.MasterSpine.WholeArchitecture.postAllowanceExtR_le", "Becoming.MasterSpine.WholeArchitecture.postAllowanceIntR_le", "Becoming.MasterSpine.WholeArchitecture.postIsOpTheta", "Becoming.MasterSpine.WholeArchitecture.preCapExtR_le", "Becoming.MasterSpine.WholeArchitecture.preCapIntR_le", "Becoming.MasterSpine.WholeArchitecture.probeDraw_le", "Becoming.MasterSpine.WholeArchitecture.probed_ord", "Becoming.MasterSpine.WholeArchitecture.rMem_cr", "Becoming.MasterSpine.WholeArchitecture.rOp_kernel", "Becoming.MasterSpine.WholeArchitecture.reads_ord", "Becoming.MasterSpine.WholeArchitecture.reproduces_when_viable", "Becoming.MasterSpine.WholeArchitecture.restored₁_cr", "Becoming.MasterSpine.WholeArchitecture.restored₂_cr", "Becoming.MasterSpine.WholeArchitecture.start_ord", "Becoming.MasterSpine.WholeArchitecture.strict_σ", "Becoming.MasterSpine.WholeArchitecture.stride_le", "Becoming.MasterSpine.WholeArchitecture.substrate_tracks", "Becoming.MasterSpine.WholeArchitecture.tc_le", "Becoming.MasterSpine.WholeArchitecture.tempt₁_cr", "Becoming.MasterSpine.WholeArchitecture.tempt₂_cr", "Becoming.MasterSpine.WholeArchitecture.tolL_lifts", "Becoming.MasterSpine.WholeArchitecture.tolR_lifts", "Becoming.MasterSpine.WholeArchitecture.tu1_le", "Becoming.MasterSpine.WholeArchitecture.tu2_le", "Becoming.MasterSpine.WholeArchitecture.udd_adm₁", "Becoming.MasterSpine.WholeArchitecture.udd_adm₂", "Becoming.MasterSpine.WholeArchitecture.udd_cut₁", "Becoming.MasterSpine.WholeArchitecture.udd_cut₂", "Becoming.MasterSpine.WholeArchitecture.udr_adm₁", "Becoming.MasterSpine.WholeArchitecture.udr_cut₂", "Becoming.MasterSpine.WholeArchitecture.urd_adm₂", "Becoming.MasterSpine.WholeArchitecture.urd_cut₁", "Becoming.MasterSpine.WholeArchitecture.urr_adm₁", "Becoming.MasterSpine.WholeArchitecture.urr_adm₂", "Becoming.MasterSpine.WholeArchitecture.warnR_lifts", "Becoming.MasterSpine.WholeArchitecture.wide_spec_cr", "Becoming.MasterSpine.WholeArchitecture.wire_hide_warn", "Becoming.MasterSpine.WholeArchitecture.wire_outer_warn", "Becoming.MasterSpine.postProbeRun_opInvariants", "Becoming.PolyComposition.coupled_closed_lax_kernel", "Becoming.Run.step", "Becoming.exactCausal_exists_iff_causalGoAlike"]}
+{"name": "Becoming.MasterSpine.whole_becoming_master_theorem", "uses": ["Becoming.AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy", "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama", "Becoming.MasterSpine.k6_ethics_chain_and_firewall", "Becoming.MasterSpine.masterSpine_grammar_lifts", "Becoming.MasterSpine.whole_architecture_viable_and_coupled"]}

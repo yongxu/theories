@@ -1,0 +1,243 @@
+{
+  "schema_version": 2,
+  "id": "whole-becoming-master-spine",
+  "title": {
+    "en": "Unified zero-axiom Becoming master spine, grammar lifts, and K6 firewall"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T06:25:00+00:00",
+  "statement": {
+    "en": "On a single WholeArchitecture, Becoming.MasterSpine unites inquiry, open polynomial contracts, causal lumping, multi-site exchange, lineage persistence, endogenous order, grammar lifts, U1-U4 sharpness obstructions, K6 ethics compatibility, and the non-entailment firewall."
+  },
+  "laws": [
+    {
+      "en": "Lifting uniform-carrier PolyComponent contracts into OpenComposition, hiding internal coupling inside a blanket pair, and composing an anchored ScopeMode controller inside an active-inquiry specification preserves coupled closed-loop viability kernels after probing.",
+      "declarations": [
+        "Becoming.MasterSpine.polyUniformToOpenComponent",
+        "Becoming.MasterSpine.wholeSealedLeft",
+        "Becoming.MasterSpine.wholeScopeOpen",
+        "Becoming.MasterSpine.wholeOp",
+        "Becoming.MasterSpine.wholeInquirySpec",
+        "Becoming.MasterSpine.postProbeRun",
+        "Becoming.MasterSpine.postProbeRun_opInvariants"
+      ]
+    },
+    {
+      "en": "Any WholeArchitecture simultaneously realizes inquiry and post-probe viability kernels, non-vacuous multi-site ReadOffExchange balance, small-gain lax simulation stability, non-constant CausalGoAlike abstraction, lineage persistence, adaptive OrderUpdater ranking, and reciprocal-gate Nash restoration.",
+      "declarations": [
+        "Becoming.MasterSpine.WholeArchitecture",
+        "Becoming.MasterSpine.WholeArchitectureViableProp",
+        "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+        "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable",
+        "Becoming.MasterSpine.whole_architecture_scopeMode_bridge"
+      ]
+    },
+    {
+      "en": "Every WholeArchitecture lifts onto all five shared grammar law families (closure, balance, return, lumping, and widening order) alongside GrammarMap trichotomy and mutual exclusion, while bundling the full U1-U4 obstruction and sharpness panorama.",
+      "declarations": [
+        "Becoming.MasterSpine.MasterSpineGrammarLiftsProp",
+        "Becoming.MasterSpine.masterSpine_grammar_lifts",
+        "Becoming.MasterSpine.FullObstructionPanoramaProp",
+        "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama"
+      ]
+    },
+    {
+      "en": "Becoming.MasterSpine proves full K6 ethics-chain compatibility alongside the unconditional firewall showing purely dynamical laws never entail unrestricted significance, instantiates both inside whole_becoming_master_theorem, and exhibits an arithmetic WholeBecomingWitness.",
+      "declarations": [
+        "Becoming.MasterSpine.masterSpine_readsOnlyDynamics",
+        "Becoming.MasterSpine.masterSpine_admits_rival",
+        "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted",
+        "Becoming.MasterSpine.K6EthicsFirewallProp",
+        "Becoming.MasterSpine.k6_ethics_chain_and_firewall",
+        "Becoming.MasterSpine.whole_becoming_master_theorem",
+        "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture",
+        "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Pure constructive Nat arithmetic in Lean Init with 0 axioms and 0 private declarations; all structural invariants sit explicitly inside WholeArchitecture (warning margins, post-allowance, observation lag bounds, monotone G_rises, causal lumping, and gated yields)."
+    },
+    {
+      "en": "Applied upgrade (whole_architecture_upgrade_mode_viable) requires an explicit ContractRefines witness preserving warnLevel detection and initial reserve margin; ScopeMode switching requires timely modeSwitch before lag reserve exhaustion."
+    }
+  ],
+  "does_not_show": [
+    {
+      "kind": "correspondence",
+      "en": "Showing an architecture is internally consistent in Lean never shows that any actual AI training pipeline, exchange, or institution satisfies WholeArchitecture's alarm, cap_within, or G_rises premises (Rule 2 recognition boundary)."
+    },
+    {
+      "kind": "non-implication",
+      "en": "Purely dynamical invariants leave unrestricted ethical significance unforced: masterSpine_cannot_entail_unrestricted holds unconditionally on every dynamical law of MasterSpine."
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+      "detail": {
+        "en": "full_obstruction_and_sharpness_panorama and AlignmentSpine.AlignmentDichotomy.master_alignment_dichotomy exhibit exact finite witnesses failing whenever silence summation, monotonicity, causal non-leakage, cadence slack, or reciprocal gating is dropped."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T061916.734612Z): all 189 declarations (58 theorems, 0 private) in Becoming.MasterSpine compile from prelude with non-empty axiom dependencies {}, classified L2 direct by layers.py, and audited PASS in Wave U5 Commit A (6180e3f6). No person has read it."
+  },
+  "next_delta": {
+    "en": "Human read by Ren; empirical testing of where real multi-agent systems break individual WholeArchitecture assumptions."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): serves as the single top-level culmination of the 0-axiom Init core, joining composition, causality, active inquiry, evolution, endogenous order, grammar laws, and the K6 firewall over one system."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+  "aliases": [],
+  "dependencies": [
+    {
+      "id": "master-alignment-spine-and-sharpness",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Incorporates AlignmentSpine master_alignment_dichotomy and CE01-CE15 sharpness counter-models."
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses OpenComposition compose, hide, closedProcess viability, and replace_right_viable."
+      }
+    },
+    {
+      "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Lifts uniform PolyComponent contracts to OpenComposition and applies coupled_closed_lax_kernel."
+      }
+    },
+    {
+      "id": "interventional-causal-abstraction-and-goodhart",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Instantiates exactCausal_exists_iff_causalGoAlike and lifts CausalImage onto the grammar."
+      }
+    },
+    {
+      "id": "active-inquiry-deadline-cascade-and-blankets",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Wraps operational component inside ActiveInquiryLoop exploration-margin sandwich and probe transition."
+      }
+    },
+    {
+      "id": "derived-evolutionary-drawdown-and-transitions",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects closedProcess runs to multi-site ReadOffExchange and GroupEnding.Flow.lineages_raises."
+      }
+    },
+    {
+      "id": "endogenous-order-scope-coevolution-and-nash",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Embeds OrderUpdater, ScopeMode co-evolution, and reciprocal-gate Nash restoration tracking rOp."
+      }
+    },
+    {
+      "id": "unified-drawdown-overdraw-and-aliasing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Bundles UnifiedDrawdown overdraw and aliasing obstructions into full_obstruction_and_sharpness_panorama."
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Instantiates all five shared grammar law families directly on WholeArchitecture."
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Verifies full K6 compatibility chain from Valuation.significant_iff to grounded_widening_selected."
+      }
+    },
+    {
+      "id": "what-the-dynamics-leave-open",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Establishes unconditional ReadsOnlyDynamics and scopeLaw_cannot_entail_unrestricted firewalls."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.MasterSpine.polyUniformToOpenComponent",
+        "Becoming.MasterSpine.wholeSealedLeft",
+        "Becoming.MasterSpine.wholeScopeOpen",
+        "Becoming.MasterSpine.wholeOp",
+        "Becoming.MasterSpine.wholeInquirySpec",
+        "Becoming.MasterSpine.postProbeRun",
+        "Becoming.MasterSpine.postProbeRun_opInvariants",
+        "Becoming.MasterSpine.WholeArchitecture",
+        "Becoming.MasterSpine.WholeArchitectureViableProp",
+        "Becoming.MasterSpine.whole_architecture_viable_and_coupled",
+        "Becoming.MasterSpine.whole_architecture_upgrade_mode_viable",
+        "Becoming.MasterSpine.whole_architecture_scopeMode_bridge",
+        "Becoming.MasterSpine.MasterSpineGrammarLiftsProp",
+        "Becoming.MasterSpine.masterSpine_grammar_lifts",
+        "Becoming.MasterSpine.FullObstructionPanoramaProp",
+        "Becoming.MasterSpine.full_obstruction_and_sharpness_panorama",
+        "Becoming.MasterSpine.masterSpine_readsOnlyDynamics",
+        "Becoming.MasterSpine.masterSpine_admits_rival",
+        "Becoming.MasterSpine.masterSpine_cannot_entail_unrestricted",
+        "Becoming.MasterSpine.K6EthicsFirewallProp",
+        "Becoming.MasterSpine.k6_ethics_chain_and_firewall",
+        "Becoming.MasterSpine.whole_becoming_master_theorem",
+        "Becoming.MasterSpine.WholeBecomingWitness.witnessArchitecture",
+        "Becoming.MasterSpine.WholeBecomingWitness.witness_holds_master_theorem"
+      ],
+      "sha256": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T061916.734612Z/verification.json",
+      "role": "receipt",
+      "sha256": "05d2857f579dedd73f2dbba6eed806e872a3de8267c85cb9744189e34ffcb8d4",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u5-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "0388ab898f86671feefe33a7ba81c670e9035154a779287b5bef5b8ef4e210cb"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MasterSpine.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T061916.734612Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.MasterSpine",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U5): added Becoming.MasterSpine (L2 direct, 0 axioms) integrating all U1-U4 pillars, all 5 shared_laws families, U1-U4 sharpness obstructions, K6 ethics firewall, and constructive WholeBecomingWitness. AI-written."
+    }
+  ]
+}

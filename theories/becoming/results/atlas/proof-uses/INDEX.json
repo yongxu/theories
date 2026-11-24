@@ -4,13 +4,13 @@
  "printer_sha256": "0fc888421a6cee8283a8e74f7622eeb0e9fb96a77bbeaee4cfb2cb9d5b4d48a6",
  "toolchain": "leanprover/lean4:v4.29.1",
  "printed_from": {
-  "commit": "e85b85e18cc4f86a98959ecc57efb94c0e96acf8",
-  "core_run": "20261124T040228.916780Z"
+  "commit": "eec67dfc705e250ee3a3e0f70a027f299f2e6288",
+  "core_run": "20261124T061916.734612Z"
  },
- "core_sources_sha256": "4c511a2773a7bc50440b4738b6694f62c1ea9fd7aa040fced51f653735cfbaa7",
+ "core_sources_sha256": "59bdd868da98877cc8538767783500fe43191c640986d60b4ab5155d44bb7d93",
  "modules": {
   "Becoming": {
-   "source_sha256": "db3cf482429ef18a45c529385c0b1d3d74d52f4a3d37c1a862f6db9540375b2a",
+   "source_sha256": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75",
    "theorems": 0
   },
   "Becoming.Acceptance": {
@@ -929,6 +929,10 @@
    "source_sha256": "38fbdabaed8ca6396b323d6c23b3f7578e57af33c262e5f81d8421e75b28e0db",
    "theorems": 36
   },
+  "Becoming.MasterSpine": {
+   "source_sha256": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
+   "theorems": 166
+  },
   "Becoming.MatchedCourses": {
    "source_sha256": "0b7433345d7bd4e09685525bd0dd524bdf12ef4096ff6e3fe32e5f6f75a11171",
    "theorems": 36
@@ -1739,8 +1743,8 @@
   }
  },
  "counts": {
-  "modules": 432,
-  "theorems": 22239,
-  "uses_without_row": 42
+  "modules": 433,
+  "theorems": 22405,
+  "uses_without_row": 48
  }
 }

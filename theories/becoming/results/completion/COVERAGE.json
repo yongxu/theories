@@ -52,7 +52,10 @@
         "supported-renewal-recovery",
         "more-needs-renewers",
         "restoring-giving-from-the-worst-start",
-        "conditions-kept-together"
+        "conditions-kept-together",
+        "open-interface-composition-and-replacement",
+        "polynomial-dynamic-interfaces-and-coupled-laxity",
+        "renewal-bridge-to-keepable-step"
       ],
       "declarations": [
         "Becoming.Flow.restores",
@@ -78,7 +81,8 @@
         "recurrence-without-premise",
         "laws-of-one-step",
         "identity-across-steps",
-        "how-fast-a-rule-may-change"
+        "how-fast-a-rule-may-change",
+        "transformative-viability-order"
       ],
       "declarations": [
         "Becoming.Law.drawn_iff_not_returns",
@@ -125,7 +129,10 @@
         "a-step-coupling-keeps-at-every-horizon",
         "a-weighting-faster-than-renewal-ends-the-base",
         "optima-rebuild-a-depleted-base",
-        "others-drawing-first-end-the-base"
+        "others-drawing-first-end-the-base",
+        "unified-drawdown-overdraw-and-aliasing",
+        "unclamped-stock-flow-bridge",
+        "paced-stock-and-cadence-margin-sandwich"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -266,7 +273,10 @@
         "what-a-finite-stretch-verifies",
         "learnable-through-a-map",
         "observation-is-a-route",
-        "what-dependence-alone-carries-of-a-level"
+        "what-dependence-alone-carries-of-a-level",
+        "lax-multi-scale-viability",
+        "interventional-causal-abstraction-and-goodhart",
+        "active-inquiry-deadline-cascade-and-blankets"
       ],
       "declarations": [
         "Becoming.Flow.unexcluded_beyond_coupling",
@@ -342,7 +352,9 @@
         "becoming-finite-horizon",
         "comparison-by-widening",
         "significance-retained-within-margin",
-        "own-widening-within-the-margin"
+        "own-widening-within-the-margin",
+        "open-interface-composition-and-replacement",
+        "polynomial-dynamic-interfaces-and-coupled-laxity"
       ],
       "declarations": [
         "Becoming.WithinMoves.after_course",
@@ -440,7 +452,9 @@
         "drift-offspring-sampled",
         "fixation-by-drift",
         "fixation-with-selection",
-        "transmission-is-inheritance-and-need"
+        "transmission-is-inheritance-and-need",
+        "derived-evolutionary-drawdown-and-transitions",
+        "the-selection-term-and-a-lineages-fate"
       ],
       "declarations": [
         "Becoming.Flow.selection_within",
@@ -492,7 +506,8 @@
       "records": [
         "generalization-through-lumping",
         "learnable-through-a-map",
-        "learning-through-a-map-is-tracking-in-the-limit"
+        "learning-through-a-map-is-tracking-in-the-limit",
+        "interventional-causal-abstraction-and-goodhart"
       ],
       "declarations": [
         "Becoming.Learning.goAlike_iff_lumped",
@@ -533,7 +548,10 @@
         "relative-position-is-zero-sum",
         "capture-through-the-rule",
         "closed-capture",
-        "whole-drawing-beyond-renewal-ends"
+        "whole-drawing-beyond-renewal-ends",
+        "coupled-adaptive-loops-and-race",
+        "dynamical-scope-and-reciprocal-stability",
+        "reviewers-count-by-independent-causes"
       ],
       "declarations": [
         "Becoming.Flow.mutuallyDependent_iff_reach",
@@ -568,7 +586,8 @@
         "significance-retained-within-margin",
         "comparison-by-widening",
         "continuation-condition-decomposition",
-        "widening-as-what-every-positive-weighting-ranks"
+        "widening-as-what-every-positive-weighting-ranks",
+        "endogenous-order-scope-coevolution-and-nash"
       ],
       "declarations": [
         "Becoming.unrestricted_iff_livingSignificance",
@@ -616,7 +635,11 @@
         "reading-anothers-couplings-is-pooling",
         "alignment-direction-under-widening",
         "own-widening-within-the-margin",
-        "alignment-approaches-under-the-selection-laws"
+        "alignment-approaches-under-the-selection-laws",
+        "endogenous-turning-and-clearing-margin",
+        "master-alignment-spine-and-sharpness",
+        "whole-becoming-master-spine",
+        "unified-becoming-over-reals"
       ],
       "declarations": [
         "Becoming.Flow.unselected_beyond_coupling",
