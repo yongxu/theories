@@ -77,7 +77,7 @@ Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents
 - related, not a proved adapter: [how-much-difference-arrives](how-much-difference-arrives.md). Answers the measure in its next step: the coupling strengths measure sensitivity, strength zero being exactly insensitivity for a law of what has stood (ExchangeLaw.insensitiveAt_iff_strength_zero); how much difference arrives is at most the carried amount, which is attained.
 - related, not a proved adapter: [what-a-law-of-the-whole-and-no-part-takes](what-a-law-of-the-whole-and-no-part-takes.md). Answers the first item of its next step: with the conditions numbered, a counterexample exists exactly where a rule decides, of every Boolean sequence, whether it is false throughout (the weak limited principle as a rule), attained by the law of levels that never vanish, built from the rule alone; the decision of vanishing the tail law takes is exactly the limited principle as a rule.
 
-**Used by:** [what-a-law-of-the-whole-and-no-part-takes](what-a-law-of-the-whole-and-no-part-takes.md)
+**Used by:** [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md) · [what-a-law-of-the-whole-and-no-part-takes](what-a-law-of-the-whole-and-no-part-takes.md)
 
 <a id="sources--来源"></a>
 ### Sources

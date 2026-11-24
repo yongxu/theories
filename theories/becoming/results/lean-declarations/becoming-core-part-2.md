@@ -11,6 +11,34 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 2 of 7
 
+<a id="module-e19181a02e96"></a>
+
+<details>
+<summary>CounterfactualRuns.lean — 9 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean`
+
+Imports: `Becoming.Runs`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ExchangeLaw.act_not_taken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L38) | 38 |
+| [Becoming.ExchangeLaw.world_exchange_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L54) | 54 |
+| [Becoming.Run.beyond_shown_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L72) | 72 |
+| [Becoming.ExchangeLaw.counterfactual_beyond_shown](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L88) | 88 |
+| [Becoming.ExchangeLaw.closedBy_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L104) | 104 |
+| [Becoming.CounterfactualRuns.inputs_run_state](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L135) | 135 |
+| [Becoming.CounterfactualRuns.course_runs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L148) | 148 |
+| [Becoming.CounterfactualRuns.courseWorld_level_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L159) | 159 |
+
+Definitions and types:
+
+- `def` [Becoming.ExchangeLaw.worldRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CounterfactualRuns.lean#L63) (L63)
+
+</details>
+
 <a id="module-ba004a622923"></a>
 
 <details>

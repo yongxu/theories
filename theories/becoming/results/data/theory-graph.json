@@ -3153,6 +3153,18 @@
    "page": "theories/becoming/results/records/inherited-structural-copying.md"
   },
   {
+   "id": "record:interventional-causal-abstraction-and-goodhart",
+   "type": "result",
+   "record": "interventional-causal-abstraction-and-goodhart",
+   "title": "Exact and lax interventional causal abstraction, composition, and Causal Goodhart",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md"
+  },
+  {
    "id": "record:joining-open-map-factor",
    "type": "result",
    "record": "joining-open-map-factor",
@@ -4219,6 +4231,18 @@
    "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/place-transition-nets-on-the-spine.md"
+  },
+  {
+   "id": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "type": "result",
+   "record": "polynomial-dynamic-interfaces-and-coupled-laxity",
+   "title": "Polynomial dynamic interfaces, serialized reconfiguration, and coupled laxity",
+   "title_zh": "",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/polynomial-dynamic-interfaces-and-coupled-laxity.md"
   },
   {
    "id": "record:positioned-positive-reason",
@@ -11913,6 +11937,28 @@
    "region": "map",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PolyComposition",
+   "type": "module",
+   "name": "Becoming.PolyComposition",
+   "level": "L1",
+   "theorems": 88,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.CausalAbstraction",
+   "type": "module",
+   "name": "Becoming.CausalAbstraction",
+   "level": "L1",
+   "theorems": 57,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -33271,6 +33317,46 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.CoreHelpers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.Counterfactual",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.Mechanism",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.MultiScaleViability",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.ProjectedLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CausalAbstraction",
+   "to": "module:Becoming.Viability",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.CausalGrowth",
    "to": "module:Becoming.HeldPossible",
    "type": "imports"
@@ -35968,6 +36054,21 @@
   {
    "from": "module:Becoming.PlaceTransitionNets",
    "to": "module:Becoming.Reading",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PolyComposition",
+   "to": "module:Becoming.OpenComposition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PolyComposition",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PolyComposition",
+   "to": "module:Becoming.Reconfiguration",
    "type": "imports"
   },
   {
@@ -48347,6 +48448,61 @@
    "interface": true
   },
   {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "module:Becoming.CausalAbstraction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:causal-models-as-processes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:counterfactual-is-the-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:determinacy-up-to-likeness",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:joint-correlation-reduced-dynamics",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:projection-carrying-a-law",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:sensitivity-is-the-least-coupling",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:interventional-causal-abstraction-and-goodhart",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:joining-open-map-factor",
    "to": "module:Becoming.Joining",
    "type": "proved-in"
@@ -52393,6 +52549,41 @@
    "to": "record:rising-and-falling-in-one-exchange",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "module:Becoming.PolyComposition",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:conditions-kept-together",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:lax-multi-scale-viability",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:open-interface-composition-and-replacement",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:reviewers-count-by-independent-causes",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:polynomial-dynamic-interfaces-and-coupled-laxity",
+   "to": "record:the-lock-draws-its-readers-out",
+   "type": "formal-reuse"
   },
   {
    "from": "record:positioned-positive-reason",

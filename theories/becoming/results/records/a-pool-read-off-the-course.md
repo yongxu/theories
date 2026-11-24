@@ -66,7 +66,7 @@ Reading (the AI's, from its knowledge): a rule whose critics or auditors are rem
 - related, not a proved adapter: [a-selection-removing-its-readers](a-selection-removing-its-readers.md). The same shape with persistence as the selection; here selection by share through a rule.
 - related, not a proved adapter: [a-pool-that-recruits-through-itself](a-pool-that-recruits-through-itself.md). Not readmitting a reader is an analogue of recruiting through the pool, supplied here.
 
-**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [on-whom-the-loss-falls](on-whom-the-loss-falls.md) · [the-lock-draws-its-readers-out](the-lock-draws-its-readers-out.md)
+**Used by:** [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [on-whom-the-loss-falls](on-whom-the-loss-falls.md) · [polynomial-dynamic-interfaces-and-coupled-laxity](polynomial-dynamic-interfaces-and-coupled-laxity.md) · [the-lock-draws-its-readers-out](the-lock-draws-its-readers-out.md)
 
 <a id="sources--来源"></a>
 ### Sources

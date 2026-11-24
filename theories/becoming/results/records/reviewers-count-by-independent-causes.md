@@ -61,6 +61,8 @@ Distributed systems: the envelope the bounds induce plays the role of a fail-pro
 - **formal-reuse**: [open-interface-composition-and-replacement](open-interface-composition-and-replacement.md). Reuses OpenComposition (InterfaceContract, ReconfigProcess, ContractRefines, replace_left_viable) in Option 2 B1-B3 bridges lifting fault-envelope readiness and replacement onto open contracts.
 - related, not a proved adapter: [copied-witnesses-change-nothing](copied-witnesses-change-nothing.md). A witness copying one on the roster changes no inspection; here a reviewer under the same cause as another adds nothing to readiness.
 
+**Used by:** [polynomial-dynamic-interfaces-and-coupled-laxity](polynomial-dynamic-interfaces-and-coupled-laxity.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

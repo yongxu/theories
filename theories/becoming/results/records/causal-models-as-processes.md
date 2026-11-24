@@ -78,7 +78,7 @@ On 12 October 2026 Ren asked how a cause–effect system compares with the theor
 - related, not a proved adapter: [scientific-inquiry-foundation](scientific-inquiry-foundation.md). One part of this open target: where the standard causal model's inputs, interventions and noise sit on the spine; it does not establish the whole target, and identification of causes from observation is not stated.
 - related, not a proved adapter: [counterfactual-is-the-course](counterfactual-is-the-course.md). An instance: with the part's move as the input and the rest following a law of exchange, the course is a trajectory of inputs, and an act not taken is an intervention.
 
-**Used by:** [counterfactual-is-the-course](counterfactual-is-the-course.md) · [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [where-a-move-is-formed](where-a-move-is-formed.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [counterfactual-is-the-course](counterfactual-is-the-course.md) · [coupled-adaptive-loops-and-race](coupled-adaptive-loops-and-race.md) · [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md) · [where-a-move-is-formed](where-a-move-is-formed.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

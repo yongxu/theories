@@ -68,6 +68,8 @@ Two coordinates differentiate operation roles within one preparation. Phase chan
 - related, not a proved adapter: [effective-capacity-and-eventual-reachability](effective-capacity-and-eventual-reachability.md). Distinct scopes in the same change study: preparation bounds and joint transformation with unchanged local states; no formal proof dependency.
 - related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Connects a concrete relational transformation within Becoming as a whole; it does not establish the whole theory’s deductive necessity.
 
+**Used by:** [interventional-causal-abstraction-and-goodhart](interventional-causal-abstraction-and-goodhart.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
