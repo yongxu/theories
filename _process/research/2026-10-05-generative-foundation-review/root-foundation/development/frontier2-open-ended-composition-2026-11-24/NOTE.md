@@ -232,7 +232,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-f
 2. **Part 6b — Endogenous discovery of an unmodelled site before floor breach (`EndogenousSiteDiscoveryWitness`):**
    - Over `Site2 := SiteExpansionBlindnessWitness.Site2`, defines `family : EpochFamily Bool Site2 Unit` where epoch `false` tracks only `.sOld` (`pre .sNew = 2`, `post .sNew = 2`, `crit .sNew = 0`) and epoch `true` tracks both `.sOld` and `.sNew` (`crit = 3`, `pre = 1`, `warn = 5`), with `cert`, `total`, `anchor_false_true`, and the exact intra orbit `xDrain` (`xDrain_sOld`, `xDrain_step`, `xDrain_reach`, `xDrain_orbit_values`: `.sNew` goes `9 → 8 → 7 → 6 → 5 → 4 → 3 → 1` while `.sOld` remains `7`).
    - `endogenous_site_discovery_protects_both`: pairs the `t = 2` drop of the extra scalar state readout `obsResidual x := CoreHelpers.natMin (x .sNew) 8` (`9 → 8 → 7` in `.sNew`, `obsResidual` `8 → 7`, `residualDrop 8 7 = true`) with an admissible gated `.upgrade true ⟨(), 1⟩` through `EpochHandoffGate`, entering `Viability.Kernel` for `epochClosedGuard family true` so every subsequent reachable state satisfies `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`.
-   - `silent_unmodelled_site_impossibility`: under the extra scalar state readout `obsSilent x := if Nat.blt (x .sNew) 3 then 0 else 8`, `xDrain` and the external counterfactual stock trajectory `xIntact` (`7, 9`, outside `family`) produce `obsSilent = 8` at every `t ≤ 6` (`obsSilent_agree_le_6`), so no prefix-only detector `D : (Nat → Nat) → Bool` reading `0..t` (`t ≤ 6`) separates `xDrain` from `xIntact` (`¬ (D ... = true ∧ D ... = false)`); any `Obs`-only rule must therefore either trigger blindly without separation or wait past refusal (`headroom` already fails from `t = 6` at `x .sNew = 3 < 4`, and floor `x_crit = 3` is breached at `t = 7` at `x .sNew = 1 < 3`, where `gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`).
+   - `silent_unmodelled_site_impossibility`: under the extra scalar state readout `obsSilent x := if Nat.blt (x .sNew) 3 then 0 else 8`, `xDrain` and the external counterfactual stock trajectory `xIntact` (`7, 9`, outside `family`) produce `obsSilent = 8` at every `t ≤ 6` (`obsSilent_agree_le_6`), so no prefix-only detector `D : (Nat → Nat) → Bool` reading `0..t` (`t ≤ 6`) separates `xDrain` from `xIntact` (`¬ (D ... = true ∧ D ... = false)`); any `Obs`-only rule must therefore either trigger blindly without separation or wait past the `t = 7` floor breach (`x .sNew = 1 < 3`), where `gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`.
 
 ### 8.2 What Part 6 does not show (Rule 2)
 
@@ -267,10 +267,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-f
     }
   },
   "seconds": {
-    "Becoming.OpenEndedComposition": 2.618,
-    "BecomingOpenEndedCompositionAxiomAudit": 0.994,
-    "BecomingOpenEndedCompositionSignatures": 0.671,
-    "Becoming.OpenEndedComposition.PreludeOnly": 2.443
+    "Becoming.OpenEndedComposition": 4.564,
+    "BecomingOpenEndedCompositionAxiomAudit": 1.079,
+    "BecomingOpenEndedCompositionSignatures": 0.816,
+    "Becoming.OpenEndedComposition.PreludeOnly": 3.895
   }
 }
 ```

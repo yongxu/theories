@@ -80,8 +80,8 @@ change across epochs and what must not.
    `Viability.Kernel` and protecting both sites, whereas `obsSilent` equals `8` on both `xDrain`
    and an external counterfactual stock sequence `xIntact` (not an orbit of `family`) for every
    `t ≤ 6` — so no prefix-only detector separates `xDrain` from `xIntact` up to `t ≤ 6` — while
-   `headroom` already fails by `t = 6` (`3 < 4`) and floor `x_crit = 3` is breached at `t = 7`
-   (`1 < 3`), where `gate_rejects_infeasible_entry` refuses `.upgrade true`.
+   floor `x_crit = 3` is breached at `t = 7` (`1 < 3`), where `gate_rejects_infeasible_entry` refuses
+   `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`.
 
 ## What stays fixed, and what this does not show (`AGENTS.md` Rule 2)
 
@@ -94,7 +94,8 @@ state readouts outside `family.obs` (`sensor`), and `endogenous_site_discovery_p
 the `t = 2` drop with an admissible `.upgrade` step rather than embedding an automatic controller in
 `EpochStep`. Under `obsSilent`, no prefix-only detector separates `xDrain` from the external
 reference `xIntact` for `t ≤ 6`, so any `Obs`-only rule must either trigger blindly without
-separation or wait past refusal (`headroom` fails at `t = 6`, floor breach at `t = 7`).
+separation or wait past the `t = 7` floor breach (`1 < 3`), where `.upgrade true` is refused for
+every `anchored`, `p`, `p'`, and `st'`.
 -/
 
 namespace Becoming.OpenEndedComposition
@@ -2628,9 +2629,8 @@ theorem obsSilent_agree_le_6 :
 /-- **Negative separation impossibility under silent readout:** under `obsSilent`, `xDrain` and the
 external reference `xIntact` give identical value `8` for every `t ≤ 6`, so no prefix-only
 detector reading `0..t` (`t ≤ 6`) separates them (any `Obs`-only rule must either trigger blindly
-without separation or wait past refusal, as `headroom` already fails from `t = 6` at `.sNew = 3 < 4`
-and floor `x_crit = 3` is breached at `t = 7` at `.sNew = 1 < 3`, where `gate_rejects_infeasible_entry`
-refuses `.upgrade true`). -/
+without separation or wait past the `t = 7` floor breach at `.sNew = 1 < 3`, where
+`gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`). -/
 theorem silent_unmodelled_site_impossibility :
     (∀ t, xIntact t .sOld = 7 ∧ xIntact t .sNew = 9) ∧
     Reach (epochClosedProcess family allow)
