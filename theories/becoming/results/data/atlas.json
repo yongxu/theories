@@ -62339,7 +62339,7 @@
      },
      "law": "Becoming.PolyComposition.coupled_closed_lax_kernel",
      "edge": {
-      "en": "Given coupled SubstrateLaxSim and OpenSubLaxSim simulations, macro certificate certQ, block-gain absorption alpha * Delta + eps <= Delta, guard margin d <= beta * Delta + eta implying x_crit <= u.1, and initial epoch membership in KQ, closedProcess (A ⊕ B) keeps Viability.Kernel."
+      "en": "Given coupled SubstrateLaxSim and OpenSubLaxSim simulations, macro certificate certQ, block-gain absorption α Δ + ε ≤ Δ, guard margin d ≤ β Δ + η implying x_crit ≤ u.1, the three initial epoch conditions (epX₀, epA₀, epB₀) at σ 0, and initial projected macro membership KQ (πX x₀, (πA initA, πB initB)), closedProcess (A ⊕ B) keeps Viability.Kernel."
      },
      "strength": "sufficient",
      "records": [
@@ -62790,7 +62790,7 @@
      },
      "law": "Becoming.laxCausal_openLoop_kernel_transfer",
      "edge": {
-      "en": "Under LaxCausalAbs, fixed schedule sched, absorption lc.alpha * Delta + lc.eps <= Delta, guard margin M.d <= lc.beta * Delta + lc.eta -> guardS, initial epoch₀, and macro open-loop Viability.Kernel, the scheduled micro process keeps Viability.Kernel."
+      "en": "Under LaxCausalAbs, fixed schedule sched, absorption lc.α Δ + lc.ε ≤ Δ, guard margin M.d ≤ lc.β Δ + lc.η → guardS, initial epoch₀ at σ 0, and macro open-loop Viability.Kernel, the scheduled micro process keeps Viability.Kernel."
      },
      "strength": "sufficient",
      "records": [
@@ -62811,7 +62811,7 @@
      },
      "law": "Becoming.laxCausal_feedback_kernel_transfer",
      "edge": {
-      "en": "For 1-step LaxCausalAbs (sigma = id) with alpha * Delta + eps <= Delta, invariant K inside guardQ closed under Delta-ball perturbations, guard margin M.d <= beta * Delta + eta -> guardS, epoch₀, and K (pi s₀), closed-loop macro feedback keeps micro Viability.Kernel."
+      "en": "For 1-step LaxCausalAbs (σ = id) with lc.α Δ + lc.ε ≤ Δ, invariant K inside guardQ closed under Δ-ball perturbations, guard margin M.d ≤ lc.β Δ + lc.η → guardS, initial epoch₀ at 0, and K (π s₀), closed-loop macro feedback keeps micro Viability.Kernel."
      },
      "strength": "sufficient",
      "records": [
@@ -62862,7 +62862,7 @@
    ],
    "valence": "none asserted",
    "beyond": {
-    "en": "0-axiom Init core; open-loop LaxCausalAbs kernel transfer requires alpha * Delta + eps <= Delta (or identity over finite horizon), and horizontal composition requires boundary-local intervention alignment."
+    "en": "0-axiom Init core; open-loop LaxCausalAbs kernel transfer requires α Δ + ε ≤ Δ (or α = id over finite horizon), and horizontal composition requires boundary-local intervention alignment."
    },
    "sources": [
     "theories/becoming/results/records/interventional-causal-abstraction-and-goodhart.md#laws--规律"
@@ -63673,7 +63673,7 @@
      },
      "law": "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
      "edge": {
-      "en": "On a gated CourseRealization with widened binary menu wide = {r0, d0}, mutual-cooperation admissibility, and partner-port cutoffs past T_gate against defection d0, (r0, r0) is restored as the unique PureNash."
+      "en": "On a gated CourseRealization with widened binary menu wide = {r0, d0}, full-horizon admissibility for (r0, r0) on both players and for the cooperator in mixed profiles ((r0, d0) on form1, (d0, r0) on form2), partner-port cutoffs past T_gate against defection d0 (dr_cut1, rd_cut2, dd_cut1, dd_cut2), and per-player strict yield comparisons (T_gate + 1) * stepYield_i(d0) < (horizon + 1) * stepYield_i(r0), (r0, r0) is restored as the unique PureNash."
      },
      "strength": "sufficient",
      "records": [
@@ -66851,7 +66851,7 @@
      },
      "law": "Becoming.EndogenousDetectionRace.mark_turned_admits_iff",
      "edge": {
-      "en": "At a reading step r >= tau where mark holds and carrier <= other at r, permanent disfavouring and alternative admission from step r + 1 on hold iff carrier <= other at r + 1."
+      "en": "Given persistent registration from tau (mark = true iff tau <= t), mirrored reader weights (w.carrier = u.other, w.other = u.carrier) with u.other < u.carrier, and a reading step r >= tau where carrier <= other at r, permanent disfavouring and alternative admission from step r + 1 on hold iff carrier <= other at r + 1."
      },
      "strength": "exact",
      "records": [
@@ -66872,7 +66872,7 @@
      },
      "law": "Becoming.EndogenousDetectionRace.mark_kept_locks_out",
      "edge": {
-      "en": "At a reading step r >= tau where mark holds, the active rule favours carriers, other <= carrier at r, and other < carrier at r + 1, alternatives stay locked out (admits = false) at every step from r + 1 on."
+      "en": "Given persistent registration from tau (mark = true iff tau <= t), mirrored reader weights (w.carrier = u.other, w.other = u.carrier) with u.other < u.carrier, and a reading step r >= tau where the active rule favours carriers, other <= carrier at r, and other < carrier at r + 1, alternatives stay locked out (admits = false) at every step from r + 1 on."
      },
      "strength": "sufficient",
      "records": [
@@ -67374,7 +67374,7 @@
    },
    "family": "H",
    "mechanism": {
-    "en": "Proves exact quantitative walls and remedies in the Mathlib ℝ periphery for four guarded-runtime failure modes: (1) rank-1 pool drift caps disagreement at 1 - gamma while an uncoupled anchor detects drift; (2) aliased probes separate fibers iff 2 * eps < (1 - alpha) * gap with irreducible mixture floors inside; (3) continuous drawdown >= H1 hits x_crit past lag (x0 - x_crit)/H1 and leakage raises switching lag monotonically; (4) trust-region projection sustains a MetricLaxSim contraction tube while unprojected steps overshoot."
+    "en": "Proves exact quantitative walls and remedies in the Mathlib ℝ periphery for four guarded-runtime failure modes: (1) rank-1 pool drift caps disagreement at 1 - gamma while an uncoupled anchor detects drift; (2) aliased probes separate fibers iff 2 * eps < (1 - alpha) * gap with irreducible finite-mixture and nonzero-variance Gaussian Youden J aliasing floors (gaussian_aliased_youdenJ_wall, v != 0) inside; (3) continuous drawdown >= H1 hits x_crit past lag (x0 - x_crit)/H1 at J = 0 and leakage raises switching lag monotonically; (4) trust-region projection sustains a MetricLaxSim contraction tube while unprojected steps overshoot."
    },
    "records": [
     "quantitative-transfer-of-four-guard-failure-regimes"
@@ -67412,7 +67412,14 @@
     "QuantitativeTransfer.trust_region_tube_attained",
     "QuantitativeTransfer.trust_region_viability",
     "QuantitativeTransfer.unprojected_step_overshoots",
-    "QuantitativeTransfer.trust_region_lab_witness"
+    "QuantitativeTransfer.trust_region_lab_witness",
+    "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+    "QuantitativeTransfer.lag_wall_youdenJ_zero",
+    "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+    "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+    "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+    "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+    "QuantitativeTransfer.gaussian_aliased_lab_witness"
    ],
    "base": "periphery",
    "hypotheses": [
@@ -67517,7 +67524,7 @@
    "tests": [],
    "open": [
     {
-     "en": "Does not prove a floor for Gaussian additive aliasing; the bounded-noise wall and the finite mixture floor are the statements proved.",
+     "en": "Gaussian aliasing bounds cover single-sample measurable events with nonzero variance (v != 0), not multi-step closed-loop threshold adaptation or zero-variance Dirac laws.",
      "source": "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#does-not-show--未表明"
     },
     {
@@ -67527,7 +67534,7 @@
    ],
    "valence": "none asserted",
    "beyond": {
-    "en": "Mathlib v4.30.0-rc2 periphery; bounded-noise and finite-mixture aliasing floors are proved rather than Gaussian additive noise, and stress-lab assumption fit remains Rule 2."
+    "en": "Mathlib v4.30.0-rc2 periphery; bounded-noise, finite-mixture, and single-sample nonzero-variance Gaussian aliasing floors are proved, while zero-variance laws, adaptive multi-step thresholds, and stress-lab assumption fit (Rule 2) remain open."
    },
    "sources": [
     "theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md#laws--规律"
@@ -67568,7 +67575,14 @@
       "QuantitativeTransfer.trust_region_tube_attained",
       "QuantitativeTransfer.trust_region_viability",
       "QuantitativeTransfer.unprojected_step_overshoots",
-      "QuantitativeTransfer.trust_region_lab_witness"
+      "QuantitativeTransfer.trust_region_lab_witness",
+      "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+      "QuantitativeTransfer.lag_wall_youdenJ_zero",
+      "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+      "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+      "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+      "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+      "QuantitativeTransfer.gaussian_aliased_lab_witness"
      ]
     },
     "no_row": {
