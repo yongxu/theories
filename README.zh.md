@@ -46,7 +46,7 @@
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 81–105 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
-| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–170 分钟 |
+| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 132–171 分钟 |
 | [检验](TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](TESTS.md)为英文） | 约 17–22 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，在现行的本论中各读作什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
 | [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 84–109 分钟 |

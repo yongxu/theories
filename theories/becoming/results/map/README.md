@@ -1,8 +1,10 @@
-# Frozen Sheet and Web Snapshot (`results/map/`)
+# Archived Snapshot Redirect (`results/map/`)
 
-*AI-written note.*
+*AI-written redirect note (24 November 2026).*
 
-This directory holds the curated role/tie web (`web.json`, `cards.json`, `cases.json`) and one-sheet map (`sheet.json`, `passages.json`, `paths.json`, `laid.json`) **frozen at 186 dynamics and 66 tests** (`"frozen": true` in [web.json](web.json) and [sheet.json](sheet.json), corresponding to the RW pause on `_process/BECOMING-WORKBOARD.md`).
+The frozen 186-dynamic / 66-test one-sheet map and role/tie ledger snapshot formerly kept in this folder was archived byte-for-byte to [`../../history/results-map-2026-11-23/README.md`](../../history/results-map-2026-11-23/README.md) under Ren's 24 November `4A` decision ([his words](../../../../sources/15-codex-theory-conversations/2026-11-24-approve-five-full-picture-decisions.md)).
 
-- Post-freeze dynamics (`WayUnderARule`, `PacedStock`, `AdaptiveLoops`, `MultiScaleViability`, `TransformativeViability`, `StockFlowBridge`, and empirical/formal additions) and all time-indexed alignment situations and test bindings live in [the atlas](../atlas/ATLAS.md) and `theories/becoming/results/data/`.
-- Automated checks (`tools/research/the_map.py`, `tools/research/map_sheet.py`) keep validating every card, case, passage, and rendered file inside this directory against valid IDs in the atlas without requiring hand-built cards or cases for post-freeze dynamics.
+For live views of the theory:
+- **Cold-read synthesis:** [`CANONICAL-MAP.md`](../../CANONICAL-MAP.md)
+- **Live atlas of dynamics, premises, exits, bindings, and situations:** [`ATLAS.md`](../atlas/ATLAS.md)
+- **Reusable rendering tools (kept intact for any future release):** `tools/research/map_sheet.py`, `tools/research/the_map.py`

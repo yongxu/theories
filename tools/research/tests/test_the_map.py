@@ -243,29 +243,40 @@ class JoinTests(unittest.TestCase):
 
 
 class RepositoryTests(unittest.TestCase):
-    """The repository's own map."""
+    """The repository's own map (or archive disposition when results/map/ is archived)."""
 
     @classmethod
     def setUpClass(cls):
+        cls.archived = not (ROOT / the_map.WEB).is_file()
+        if cls.archived:
+            return
         loaded, errors = the_map.load()
         assert not errors, errors
         cls.web, cls.cards, cls.cases, cls.dyn, cls.ledger, cls.folders = loaded
         cls.model = the_map.join(cls.web, cls.cards, cls.cases, cls.dyn, cls.ledger)
         cls.pages, cls.errors = the_map.render()
 
+    def _require_live(self):
+        if self.archived:
+            self.skipTest('results/map/ archived to theories/becoming/history/results-map-2026-11-23/')
+
     def test_the_data_passes_and_six_views_are_written(self):
+        self._require_live()
         self.assertEqual(the_map.validate(self.web, self.cards, self.cases, self.dyn, set(self.folders), set(self.ledger)), [])
         self.assertEqual(self.errors, [])
         self.assertEqual(set(self.pages), {the_map.PAGE, the_map.LAWS_PAGE, the_map.DYNAMICS_PAGE, the_map.CASES_PAGE, the_map.PICTURE, the_map.INTERACTIVE})
 
     def test_the_views_are_the_same_bytes_each_time(self):
+        self._require_live()
         again, errors = the_map.render()
         self.assertEqual((errors, again), ([], self.pages))
 
     def test_the_inputs_exist(self):
+        self._require_live()
         self.assertEqual([str(p) for p in the_map.inputs() if not p.is_file()], [])
 
     def test_a_tie_is_drawn_by_one_rule(self):
+        self._require_live()
         by_kind = {}
         for e in self.model['edges'].values():
             by_kind.setdefault(e['tie'], []).append(e)
@@ -281,6 +292,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(drawn, {k for k, e in self.model['edges'].items() if e['drawn']})
 
     def test_the_counts_agree_with_one_another(self):
+        self._require_live()
         c, grid = self.model['counts'], self.model['grid']
         self.assertEqual(c['agreed'] + c['disagreed'] + c['notrej'] + c['cant'] + c['noverdict'], c['preds_frozen'])
         self.assertEqual(c['preds_frozen'] + c['preds_unfrozen'], c['preds'])
@@ -309,6 +321,7 @@ class RepositoryTests(unittest.TestCase):
             self.assertEqual(len({self.model['laws'][i]['lean'] for i in e['laws']}), len(e['laws']), e['id'])
 
     def test_every_theorem_keeps_its_conditions(self):
+        self._require_live()
         named = [l['main_ifs'] for c in self.cards for l in c['laws']]
         rows = {}  # a Lean theorem, and whether some premise row of the atlas gives it a premise
         for e in self.dyn.values():
@@ -325,6 +338,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual([i for i, s in self.model['prem'].items() if not s], [])
 
     def test_the_page_is_short_and_points_to_every_drawn_tie(self):
+        self._require_live()
         page = self.pages[the_map.PAGE]
         self.assertTrue(page.startswith('# The theorems and tests behind the map\n'))
         self.assertIn(the_map.GENERATED, page)
@@ -343,6 +357,7 @@ class RepositoryTests(unittest.TestCase):
             self.assertIn(f']({name.rsplit("/", 1)[1]}', page, name)
 
     def test_the_laws_page_gives_each_theorem_with_its_conditions(self):
+        self._require_live()
         laws = self.pages[the_map.LAWS_PAGE]
         quoted = [line for line in laws.split('\n') if re.match(r'- \*\*[^*]+\*\*.*`[^`]+`', line)]
         self.assertGreater(len(quoted), 150)
@@ -356,6 +371,7 @@ class RepositoryTests(unittest.TestCase):
                               f'{the_map._n(len(e["laws"]), "theorem")}):', laws, e['id'])
 
     def test_every_dynamic_and_every_test_is_listed_once(self):
+        self._require_live()
         linked = re.findall(r'^\| \[[^\]]*\]\(\.\./atlas/families/[a-h]\.md#([^)]+)\)', self.pages[the_map.DYNAMICS_PAGE], re.M)
         anchors = re.findall(r'^<a id="(case-[^"]+)"></a>$', self.pages[the_map.CASES_PAGE], re.M)
         if self.web.get('frozen'):
@@ -384,6 +400,7 @@ class RepositoryTests(unittest.TestCase):
                 self.assertEqual(on.count(d['home']), max(on.count(k) for k in set(on)), d['id'])
 
     def test_the_pages_link_one_another_at_anchors_that_exist(self):
+        self._require_live()
         from tools.research import reading_catalogue, research
         self.assertEqual(research.check_links(self.pages, set(self.pages) | {the_map.FRONT}), [])  # the render's own check, the script and the picture included
         pages = {p.rsplit('/', 1)[1]: body for p, body in self.pages.items() if p.endswith('.md')}
@@ -397,6 +414,7 @@ class RepositoryTests(unittest.TestCase):
                 self.assertEqual('tie-' + e['id'].replace('|', '-') in anchors[name], e['drawn'], (name, e['id']))
 
     def test_the_picture_is_one_drawing_that_stands_alone(self):
+        self._require_live()
         svg = ElementTree.fromstring(self.pages[the_map.PICTURE])
         ns = '{http://www.w3.org/2000/svg}'
         self.assertEqual((svg.find(ns + 'title') is not None, svg.find(ns + 'desc') is not None), (True, True))
@@ -407,6 +425,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertNotRegex(self.pages[the_map.PICTURE], r'var\(|class=|<style|href="http')
 
     def test_the_map_to_operate_is_one_document_the_site_takes(self):
+        self._require_live()
         from tools.publishing import build_site
         document = self.pages[the_map.INTERACTIVE]
         self.assertLess(len(document.encode('utf-8')), the_map.MAX_INTERACTIVE)
@@ -427,6 +446,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(data['labels']['questions'], [list(q) for q in the_map.QUESTIONS])  # the views share one list of words
 
     def test_a_map_to_operate_too_large_for_the_site_stops_the_render(self):
+        self._require_live()
         with mock.patch.object(the_map, 'MAX_INTERACTIVE', 1000):
             pages, errors = the_map.render()
         self.assertEqual(pages, {})
@@ -434,12 +454,30 @@ class RepositoryTests(unittest.TestCase):
 
     def test_the_site_publishes_the_views(self):
         site = json.loads((ROOT / '_process/research-config.json').read_text(encoding='utf-8'))['site']
+        if self.archived:
+            self.assertIn('theories/becoming/CANONICAL-MAP.md', site['pages'])
+            self.assertIn(['theories/becoming/CANONICAL-MAP.md', 'Map'], site['nav'])
+            for page in (the_map.PAGE, the_map.LAWS_PAGE, the_map.DYNAMICS_PAGE, the_map.CASES_PAGE):
+                self.assertNotIn(page, site['pages'])
+            for asset in (the_map.PICTURE, the_map.INTERACTIVE):
+                self.assertNotIn(asset, site['assets'])
+            self.assertTrue(any(w['path'] == 'theories/becoming/CANONICAL-MAP.md' for w in site['ways_in']))
+            return
         for page in (the_map.PAGE, the_map.LAWS_PAGE, the_map.DYNAMICS_PAGE, the_map.CASES_PAGE):
             self.assertIn(page, site['pages'])
         self.assertLessEqual({the_map.PICTURE, the_map.INTERACTIVE}, set(site['assets']))
         self.assertIn([the_map.FRONT, 'Map'], site['nav'])  # the navigation names the map itself; these views are the layer under it
 
     def test_frozen_views_match_disk(self):
+        if self.archived:
+            archive = ROOT / 'theories/becoming/history/results-map-2026-11-23'
+            self.assertTrue((archive / 'README.md').is_file())
+            self.assertTrue((archive / 'web.json').is_file())
+            redirect = (ROOT / 'theories/becoming/results/map/README.md').read_text(encoding='utf-8')
+            self.assertIn('../../history/results-map-2026-11-23/README.md', redirect)
+            self.assertIn('CANONICAL-MAP.md', redirect)
+            self.assertIn('ATLAS.md', redirect)
+            return
         if self.web.get('frozen'):
             for path, body in self.pages.items():
                 self.assertEqual((ROOT / path).read_text(encoding='utf-8'), body, path)
