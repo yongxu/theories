@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T162330.082121Z",
- "core_sources_sha256": "e2aface5196c50dfd96f5cdcc262858f86e30502fdc611ccf3359c1d9df4ccaa",
+ "core_receipt": "20261124T184422.177368Z",
+ "core_sources_sha256": "56397775957e65a3ba5c2d6e2572dcc4d734838e184f1bc4ce3d3992fc8c597e",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,15 +58,15 @@
   ]
  },
  "counts": {
-  "laws": 4553,
+  "laws": 4556,
   "no_declarations": 9,
-  "outside": 421,
-  "grammar": 1179,
+  "outside": 423,
+  "grammar": 1180,
   "balance, represented": 642,
   "anchor, not reached": 99,
   "no shared law": 2203,
   "vocabulary_only": 106,
-  "closure": 656,
+  "closure": 657,
   "balance": 936,
   "return": 260,
   "lumping": 103,
@@ -17994,6 +17994,34 @@
    {
     "law": 3,
     "declarations": [
+     "Becoming.EndogenousDetectionRace.mirror_strict_disfavours_iff",
+     "Becoming.EndogenousDetectionRace.mirror_strict_favours_iff",
+     "Becoming.EndogenousDetectionRace.MiddleMinus",
+     "Becoming.EndogenousDetectionRace.MiddlePlus",
+     "Becoming.EndogenousDetectionRace.reading_state_four_way",
+     "Becoming.EndogenousDetectionRace.middle_disjoint_locked",
+     "Becoming.EndogenousDetectionRace.mark_middle_minus_span",
+     "Becoming.EndogenousDetectionRace.mark_middle_plus_span",
+     "Becoming.EndogenousDetectionRace.mark_middle_band_trichotomy",
+     "Becoming.EndogenousDetectionRace.select_order_mono",
+     "Becoming.EndogenousDetectionRace.paced_post_order_mono",
+     "Becoming.EndogenousDetectionRace.mark_post_order_mono",
+     "Becoming.EndogenousDetectionRace.mark_middle_band_monotone_partition",
+     "Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd",
+     "Becoming.EndogenousDetectionRace.race_middle_exits_to_lock",
+     "Becoming.EndogenousDetectionRace.race_middle_alternates_and_turns",
+     "Becoming.EndogenousDetectionRace.race_middle_short_oscillation_turns",
+     "Becoming.EndogenousDetectionRace.race_middle_span_recovery_turns"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
      "Becoming.EndogenousDetectionRace.race_in_time",
      "Becoming.EndogenousDetectionRace.race_late_after_registration",
      "Becoming.EndogenousDetectionRace.race_probe_blocked",
@@ -18011,7 +18039,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 4,
+    "law": 5,
     "declarations": [
      "Becoming.EndogenousDetectionRace.retag_symmetry",
      "Becoming.EndogenousDetectionRace.count_view_invariant",
@@ -18030,7 +18058,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 5,
+    "law": 6,
     "declarations": [
      "Becoming.EndogenousEmergence.endogenous_emergence_sufficiency",
      "Becoming.EndogenousEmergence.silent_cliff_universal_collapse",
@@ -36854,7 +36882,19 @@
      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.concurrent_evolve_collapses",
      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.no_local_gate_soloComplete_and_concurrentSafe",
      "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.bounded_supremum_local_gate_composes",
-     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11"
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.reciprocal_evolve_rejects_8_and_certifies_11",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_cert",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_total",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_anchor",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_headroom_iff",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointEpochFamily_gate_iff_reciprocalGate",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBoolFamily",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_A_upgrade_and_viable",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_solo_B_upgrade_and_viable",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_refused_at_8",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_simultaneous_certified_at_11",
+     "Becoming.OpenEndedComposition.SimultaneousUpgradeObstruction.jointBool_no_local_gate_admits_solo_and_matches_joint_gate"
     ],
     "shared_laws": [
      "closure"
@@ -40838,6 +40878,68 @@
      "QuantitativeTransfer.trust_region_viability",
      "QuantitativeTransfer.unprojected_step_overshoots",
      "QuantitativeTransfer.trust_region_lab_witness"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "QuantitativeTransfer.youdenJ",
+     "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
+     "QuantitativeTransfer.youdenJ_const_zero",
+     "QuantitativeTransfer.youdenJ_le_tvDist",
+     "QuantitativeTransfer.abs_youdenJ_le_tvDist",
+     "QuantitativeTransfer.youdenJ_tvDist_attained",
+     "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+     "QuantitativeTransfer.youdenJ_mixture_attained",
+     "QuantitativeTransfer.lag_wall_youdenJ_zero"
+    ],
+    "outside": [
+     "QuantitativeTransfer.youdenJ",
+     "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
+     "QuantitativeTransfer.youdenJ_const_zero",
+     "QuantitativeTransfer.youdenJ_le_tvDist",
+     "QuantitativeTransfer.abs_youdenJ_le_tvDist",
+     "QuantitativeTransfer.youdenJ_tvDist_attained",
+     "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+     "QuantitativeTransfer.youdenJ_mixture_attained",
+     "QuantitativeTransfer.lag_wall_youdenJ_zero"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "QuantitativeTransfer.measYoudenJ",
+     "QuantitativeTransfer.measErrorSum",
+     "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
+     "QuantitativeTransfer.measYoudenJ_const_zero",
+     "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+     "QuantitativeTransfer.gaussianAliasedLaw",
+     "QuantitativeTransfer.integral_cauchy_schwarz",
+     "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+     "QuantitativeTransfer.gaussian_tv_le_hellinger",
+     "QuantitativeTransfer.gaussian_tv_ge_hellinger",
+     "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
+     "QuantitativeTransfer.gaussian_midpoint_attains_tv",
+     "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+     "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+     "QuantitativeTransfer.gaussian_aliased_lab_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.measYoudenJ",
+     "QuantitativeTransfer.measErrorSum",
+     "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
+     "QuantitativeTransfer.measYoudenJ_const_zero",
+     "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+     "QuantitativeTransfer.gaussianAliasedLaw",
+     "QuantitativeTransfer.integral_cauchy_schwarz",
+     "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+     "QuantitativeTransfer.gaussian_tv_le_hellinger",
+     "QuantitativeTransfer.gaussian_tv_ge_hellinger",
+     "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
+     "QuantitativeTransfer.gaussian_midpoint_attains_tv",
+     "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+     "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+     "QuantitativeTransfer.gaussian_aliased_lab_witness"
     ]
    }
   ],
@@ -70528,7 +70630,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "346a27befdea6ed03138b0348528bdef6cf90d834a7f4d0e8dc1a5ed89e087c5",
+   "modules_sha256": "91a8398a3f32fd4799e1eb67f5cc7c6ebe8a7364ba6dab502f9f7f1fe9eff417",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

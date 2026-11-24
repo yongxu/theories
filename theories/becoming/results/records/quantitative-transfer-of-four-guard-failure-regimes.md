@@ -5,7 +5,7 @@
 
 `quantitative-transfer-of-four-guard-failure-regimes` · **recorded-checked** · theorem · F01 · [record](quantitative-transfer-of-four-guard-failure-regimes.json) · [register](../../../../RESULTS.md)
 
-> Rank-1 drift caps pool disagreement at 1 - gamma while an uncoupled anchor detects it; aliased probes separate fibers iff 2*eps < (1 - alpha) * gap; drawdown crosses x_crit past lag (x0 - x_crit)/H1; projected steps stay in a contraction tube while unprojected steps exit.
+> Rank-1 drift caps pool disagreement at 1 - gamma while an external anchor detects it; aliased readout gives |Youden J| <= (1 - alpha) tvDist <= 1 - alpha (and <= sqrt(1 - exp(-Delta^2/(4v))) for Gaussian noise); drawdown crosses x_crit at lag J = 0; trust-region steps stay in a contraction tube.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -18,17 +18,21 @@
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Trust-region steps after an α-Lipschitz guard form a MetricLaxSim (α, 1, Δ, 0), giving the tube α^n d₀ + Δ(1 - α^n)/(1 - α) (attained on ℝ) and a Viability.Kernel for bands B ≥ max d₀ (Δ/(1 - α)); unprojected steps leave every band in one step. (`QuantitativeTransfer.trustRegionMetricLaxSim`, `QuantitativeTransfer.trust_region_tube`, `QuantitativeTransfer.trust_region_tube_attained`, `QuantitativeTransfer.trust_region_viability`, `QuantitativeTransfer.unprojected_step_overshoots`, `QuantitativeTransfer.trust_region_lab_witness`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+5. Finite Youden J = 1 - errorSum obeys |J| <= tvDist (attained), caps same-fiber aliased mixtures at (1 - alpha) tvDist <= 1 - alpha (attained at 1 - alpha on Bool), and vanishes up to x_crit crossing under delayed channel equality. (`QuantitativeTransfer.youdenJ`, `QuantitativeTransfer.youdenJ_eq_one_sub_errorSum`, `QuantitativeTransfer.youdenJ_const_zero`, `QuantitativeTransfer.youdenJ_le_tvDist`, `QuantitativeTransfer.abs_youdenJ_le_tvDist`, `QuantitativeTransfer.youdenJ_tvDist_attained`, `QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling`, `QuantitativeTransfer.youdenJ_mixture_attained`, `QuantitativeTransfer.lag_wall_youdenJ_zero`)
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+6. Over Measure R with ProbabilityTheory.gaussianReal (v != 0), 1 - exp(-Delta^2/(8v)) <= TV <= sqrt(1 - exp(-Delta^2/(4v))) bounds |measYoudenJ| (attained at midpoint); same-fiber aliased Gaussians give positive error floor, linear J ceiling, midpoint sharpness, alpha = 1 zero J, and lab witness. (`QuantitativeTransfer.measYoudenJ`, `QuantitativeTransfer.measErrorSum`, `QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum`, `QuantitativeTransfer.measYoudenJ_const_zero`, `QuantitativeTransfer.lag_wall_measYoudenJ_zero`, `QuantitativeTransfer.gaussianAliasedLaw`, `QuantitativeTransfer.integral_cauchy_schwarz`, `QuantitativeTransfer.gaussian_bhattacharyya_integral`, `QuantitativeTransfer.gaussian_tv_le_hellinger`, `QuantitativeTransfer.gaussian_tv_ge_hellinger`, `QuantitativeTransfer.gaussian_measYoudenJ_le_tv`, `QuantitativeTransfer.gaussian_midpoint_attains_tv`, `QuantitativeTransfer.gaussian_aliased_youdenJ_wall`, `QuantitativeTransfer.gaussian_aliased_midpoint_sharp`, `QuantitativeTransfer.gaussian_aliased_lab_witness`)
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity; bounded residuals in [0, 1]; bounded observation noise; continuity and a derivative bound on [0, L]; an α-Lipschitz guard map with 0 ≤ α < 1.
+- Lean v4.30.0-rc2 + Mathlib standard axioms (propext, Classical.choice, Quot.sound), Mathlib periphery #15 importing ObservationalFidelity and Gaussian.Real; residuals in [0, 1]; bounded or nonzero-variance Gaussian noise; continuous drawdown on [0, L]; alpha-Lipschitz guard (0 <= alpha < 1).
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Does not prove a floor for Gaussian additive aliasing; the bounded-noise wall and the finite mixture floor are the statements proved.
-- Does not show that the stress lab's judges share one drift weight, that its guard is an α-Lipschitz map, or that its drawdown keeps rate H₁ through the lag; in B5 an aliased anchor helped as much as a clear one, so the anchor's information premise was not what mattered there.
+- Gaussian aliasing bounds cover single-sample measurable events with nonzero variance (v != 0), not multi-step closed-loop threshold adaptation or zero-variance Dirac laws.
+- Does not show the stress lab meets the drift-weight, alpha-Lipschitz, or constant-H1 hypotheses; in B5 an aliased anchor helped as much as a clear one, so its information premise did not decide.
 - A collapse rate does not identify a wall: survival under a throttled guard is not separation. Witness: `QuantitativeTransfer.aliased_separable_iff`.
 
 **Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
@@ -36,21 +40,21 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T170732.006215Z): 59 declarations (45 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1–P7 held, P8–P11 failed, kept).
+AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T184556.666960Z): 85 declarations (67 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1-P7 held, P8-P11 failed, kept).
 
 Canonical source: [QuantitativeTransfer.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-Human read by Ren; state the walls as bounds on detector advantage (Youden J), and prove a Gaussian-additive aliasing floor once measure-theoretic laws are admitted to the periphery.
+Human read by Ren; investigate closed-loop multi-step guard thresholding beyond single-sample Gaussian Youden bounds.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_long_lag and FAIL_high_lr onto ObservationalFidelity.fiber_split_readout_floor, tvDist, AlignmentReals.MetricLaxSim and metric_laxSim_contraction_tube.
+Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_long_lag and FAIL_high_lr onto ObservationalFidelity.fiber_split_readout_floor, tvDist, AlignmentReals.MetricLaxSim, metric_laxSim_contraction_tube, and ProbabilityTheory.gaussianReal.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -63,8 +67,8 @@ Reads RESULTS.md §4.2 FAIL_correlated_pool_drift, FAIL_severe_aliasing, FAIL_lo
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [QuantitativeTransfer.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean) | `QuantitativeTransfer.aliased_fiber_gap`, `QuantitativeTransfer.aliased_lab_witness`, `QuantitativeTransfer.aliased_readout_floor`, `QuantitativeTransfer.aliased_separable_iff`, `QuantitativeTransfer.anchor_detects_shared_drift`, `QuantitativeTransfer.b1_headroom_witness`, `QuantitativeTransfer.correlated_pool_blindness_vs_anchor`, `QuantitativeTransfer.correlated_pool_lab_witness`, `QuantitativeTransfer.lag_horizon_wall`, `QuantitativeTransfer.lag_wall_iff_linear`, `QuantitativeTransfer.leakage_lag_wall`, `QuantitativeTransfer.mixture_aliasing_test_floor`, `QuantitativeTransfer.mixture_floor_attained`, `QuantitativeTransfer.pool_ceiling_attained`, `QuantitativeTransfer.pool_disagreement_ceiling`, `QuantitativeTransfer.pool_shared_bias_floor`, `QuantitativeTransfer.switchLag_nonpos_tabular`, `QuantitativeTransfer.switchLag_strictMono_rho`, `QuantitativeTransfer.switching_score_persists`, `QuantitativeTransfer.trustRegionMetricLaxSim`, `QuantitativeTransfer.trust_region_lab_witness`, `QuantitativeTransfer.trust_region_tube`, `QuantitativeTransfer.trust_region_tube_attained`, `QuantitativeTransfer.trust_region_viability`, `QuantitativeTransfer.two_point_test_floor`, `QuantitativeTransfer.unprojected_step_overshoots` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T170732.006215Z/verification.json) | — |
+| proof | [QuantitativeTransfer.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean) | `QuantitativeTransfer.abs_youdenJ_le_tvDist`, `QuantitativeTransfer.aliased_fiber_gap`, `QuantitativeTransfer.aliased_lab_witness`, `QuantitativeTransfer.aliased_readout_floor`, `QuantitativeTransfer.aliased_separable_iff`, `QuantitativeTransfer.anchor_detects_shared_drift`, `QuantitativeTransfer.b1_headroom_witness`, `QuantitativeTransfer.correlated_pool_blindness_vs_anchor`, `QuantitativeTransfer.correlated_pool_lab_witness`, `QuantitativeTransfer.gaussianAliasedLaw`, `QuantitativeTransfer.gaussian_aliased_lab_witness`, `QuantitativeTransfer.gaussian_aliased_midpoint_sharp`, `QuantitativeTransfer.gaussian_aliased_youdenJ_wall`, `QuantitativeTransfer.gaussian_bhattacharyya_integral`, `QuantitativeTransfer.gaussian_measYoudenJ_le_tv`, `QuantitativeTransfer.gaussian_midpoint_attains_tv`, `QuantitativeTransfer.gaussian_tv_ge_hellinger`, `QuantitativeTransfer.gaussian_tv_le_hellinger`, `QuantitativeTransfer.integral_cauchy_schwarz`, `QuantitativeTransfer.lag_horizon_wall`, `QuantitativeTransfer.lag_wall_iff_linear`, `QuantitativeTransfer.lag_wall_measYoudenJ_zero`, `QuantitativeTransfer.lag_wall_youdenJ_zero`, `QuantitativeTransfer.leakage_lag_wall`, `QuantitativeTransfer.measErrorSum`, `QuantitativeTransfer.measYoudenJ`, `QuantitativeTransfer.measYoudenJ_const_zero`, `QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum`, `QuantitativeTransfer.mixture_aliasing_test_floor`, `QuantitativeTransfer.mixture_floor_attained`, `QuantitativeTransfer.pool_ceiling_attained`, `QuantitativeTransfer.pool_disagreement_ceiling`, `QuantitativeTransfer.pool_shared_bias_floor`, `QuantitativeTransfer.switchLag_nonpos_tabular`, `QuantitativeTransfer.switchLag_strictMono_rho`, `QuantitativeTransfer.switching_score_persists`, `QuantitativeTransfer.trustRegionMetricLaxSim`, `QuantitativeTransfer.trust_region_lab_witness`, `QuantitativeTransfer.trust_region_tube`, `QuantitativeTransfer.trust_region_tube_attained`, `QuantitativeTransfer.trust_region_viability`, `QuantitativeTransfer.two_point_test_floor`, `QuantitativeTransfer.unprojected_step_overshoots`, `QuantitativeTransfer.youdenJ`, `QuantitativeTransfer.youdenJ_const_zero`, `QuantitativeTransfer.youdenJ_eq_one_sub_errorSum`, `QuantitativeTransfer.youdenJ_le_tvDist`, `QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling`, `QuantitativeTransfer.youdenJ_mixture_attained`, `QuantitativeTransfer.youdenJ_tvDist_attained` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T184556.666960Z/verification.json) | — |
 | integration | [b5_walls.py](../../../../experiments/neural-alignment-stress-lab/b5_walls.py) | — |
 | review | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/frontier3-quantitative-transfer-2026-11-24/NOTE.md) | — |
 
@@ -75,7 +79,8 @@ Aliases: —
 
 - 24 November 2026: added as Mathlib periphery #15 (Frontier 3), paired with neural stress-lab B5. AI-written.
 - 24 November 2026 (Wave 1): refreshed FiniteProb.tvDist and FiniteProb.diracDist unfoldings onto FiniteProbKrylov (receipt 20261124T170732.006215Z). AI-written.
+- 24 November 2026 UTC (Frontier 3 delta): added Parts 5-6 finite/lag Youden J bounds and Gaussian-additive aliasing floor over Measure R (85 declarations, 67 theorems, receipt 20261124T184556.666960Z). AI-written.
 
 </details>
 
-Documentary review UTC: `2026-11-24T17:13:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-24T18:50:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -4711,29 +4711,5 @@ Definitions and types:
 
 </details>
 
-<a id="module-122ecfb273f5"></a>
-
-<details>
-<summary>Renewal.lean — 5 explicit declarations</summary>
-
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/002.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
-
-`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean`
-
-Imports: `Becoming.Amounts`
-
-| Theorem or lemma | Line |
-|---|---:|
-| [Becoming.falls_not_recurring](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean#L58) | 58 |
-
-Definitions and types:
-
-- `structure` [Becoming.Conditions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean#L46) (L46)
-- `inductive` [Becoming.Renewable.Formation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean#L68) (L68)
-- `def` [Becoming.Renewable.conditions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean#L74) (L74)
-- `def` [Becoming.Renewable.beyondRenewalState](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean#L89) (L89)
-
-</details>
-
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 5](../lean-declarations/becoming-core-part-5.md) · [part 7](../lean-declarations/becoming-core-part-7.md)
 

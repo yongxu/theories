@@ -2895,7 +2895,7 @@ Definitions and types:
 <a id="module-9b652381f80e"></a>
 
 <details>
-<summary>EndogenousDetectionRace.lean — 105 explicit declarations</summary>
+<summary>EndogenousDetectionRace.lean — 137 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/alignment-foundation-pack-2026-11-24/ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -2905,114 +2905,146 @@ Imports: `Becoming.EndogenousEmergence`, `Becoming.ClosedCapture`, `Becoming.Pac
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.EndogenousDetectionRace.gate_extract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L87) | 87 |
-| [Becoming.EndogenousDetectionRace.gate_of_admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L90) | 90 |
-| [Becoming.EndogenousDetectionRace.gatedStep_eq_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L95) | 95 |
-| [Becoming.EndogenousDetectionRace.gated_eq_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L106) | 106 |
-| [Becoming.EndogenousDetectionRace.lockout_pure_extract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L120) | 120 |
-| [Becoming.EndogenousDetectionRace.lockout_learner_irrelevant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L136) | 136 |
-| [Becoming.EndogenousDetectionRace.turn_fst](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L153) | 153 |
-| [Becoming.EndogenousDetectionRace.turn_sim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L160) | 160 |
-| [Becoming.EndogenousDetectionRace.turn_sim_plain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L169) | 169 |
-| [Becoming.EndogenousDetectionRace.select_keeps_admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L178) | 178 |
-| [Becoming.EndogenousDetectionRace.not_admits_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L183) | 183 |
-| [Becoming.EndogenousDetectionRace.region_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L195) | 195 |
-| [Becoming.EndogenousDetectionRace.rule_kept_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L202) | 202 |
-| [Becoming.EndogenousDetectionRace.mark_beyond_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L238) | 238 |
-| [Becoming.EndogenousDetectionRace.mark_reads_beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L247) | 247 |
-| [Becoming.EndogenousDetectionRace.markRead_eq_lossPool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L255) | 255 |
-| [Becoming.EndogenousDetectionRace.mark_eq_thinned](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L269) | 269 |
-| [Becoming.EndogenousDetectionRace.mark_never_eq_pre](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L312) | 312 |
-| [Becoming.EndogenousDetectionRace.closed_trap_outlives_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L342) | 342 |
-| [Becoming.EndogenousDetectionRace.mark_kept_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L399) | 399 |
-| [Becoming.EndogenousDetectionRace.mark_kept_locks_out](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L425) | 425 |
-| [Becoming.EndogenousDetectionRace.mark_turned_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L453) | 453 |
-| [Becoming.EndogenousDetectionRace.mark_turned_admits_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L512) | 512 |
-| [Becoming.EndogenousDetectionRace.race_reads_beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L582) | 582 |
-| [Becoming.EndogenousDetectionRace.race_stock_is_gated](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L589) | 589 |
-| [Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L601) | 601 |
-| [Becoming.EndogenousDetectionRace.registers_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L613) | 613 |
-| [Becoming.EndogenousDetectionRace.resolved_unregistered_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L621) | 621 |
-| [Becoming.EndogenousDetectionRace.registers_from_of_resolved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L632) | 632 |
-| [Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L652) | 652 |
-| [Becoming.EndogenousDetectionRace.cadence3_mod](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L697) | 697 |
-| [Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L710) | 710 |
-| [Becoming.EndogenousDetectionRace.hi_lo_hc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L730) | 730 |
-| [Becoming.EndogenousDetectionRace.hi_lo_ho](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L731) | 731 |
-| [Becoming.EndogenousDetectionRace.hi_strict](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L732) | 732 |
-| [Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L734) | 734 |
-| [Becoming.EndogenousDetectionRace.reg4_of_race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L741) | 741 |
-| [Becoming.EndogenousDetectionRace.unreg_of_race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L761) | 761 |
-| [Becoming.EndogenousDetectionRace.race_in_time](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L796) | 796 |
-| [Becoming.EndogenousDetectionRace.race_late_after_registration](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L828) | 828 |
-| [Becoming.EndogenousDetectionRace.race_probe_blocked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L868) | 868 |
-| [Becoming.EndogenousDetectionRace.race_masked_strain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L905) | 905 |
-| [Becoming.EndogenousDetectionRace.race_slow_cadence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L961) | 961 |
-| [Becoming.EndogenousDetectionRace.race_fast_cadence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1004) | 1004 |
-| [Becoming.EndogenousDetectionRace.race_exo_no_false_turn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1033) | 1033 |
-| [Becoming.EndogenousDetectionRace.mask_involutive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1063) | 1063 |
-| [Becoming.EndogenousDetectionRace.mask_comm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1066) | 1066 |
-| [Becoming.EndogenousDetectionRace.mask_assoc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1069) | 1069 |
-| [Becoming.EndogenousDetectionRace.mask_cancel_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1072) | 1072 |
-| [Becoming.EndogenousDetectionRace.feedList_snoc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1101) | 1101 |
-| [Becoming.EndogenousDetectionRace.streamPrefix_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1107) | 1107 |
-| [Becoming.EndogenousDetectionRace.feedList_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1112) | 1112 |
-| [Becoming.EndogenousDetectionRace.viewBList_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1124) | 1124 |
-| [Becoming.EndogenousDetectionRace.feed_lockstep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1136) | 1136 |
-| [Becoming.EndogenousDetectionRace.retag_symmetry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1146) | 1146 |
-| [Becoming.EndogenousDetectionRace.split_two_of_two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1157) | 1157 |
-| [Becoming.EndogenousDetectionRace.count_view_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1165) | 1165 |
-| [Becoming.EndogenousDetectionRace.split_marginal_count_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1189) | 1189 |
-| [Becoming.EndogenousDetectionRace.split_marginal_impossibility](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1199) | 1199 |
-| [Becoming.EndogenousDetectionRace.silencing_consensus](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1221) | 1221 |
-| [Becoming.EndogenousDetectionRace.verdict_leak](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1237) | 1237 |
-| [Becoming.EndogenousDetectionRace.exchange_detects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1248) | 1248 |
-| [Becoming.EndogenousDetectionRace.markCourse_feedStep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1259) | 1259 |
-| [Becoming.EndogenousDetectionRace.feed_pairLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1279) | 1279 |
-| [Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1295) | 1295 |
-| [Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1324) | 1324 |
-| [Becoming.EndogenousDetectionRace.split_silenced_trapped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1335) | 1335 |
-| [Becoming.EndogenousDetectionRace.split_exchange_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1376) | 1376 |
-| [Becoming.EndogenousDetectionRace.split_witness_endo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1439) | 1439 |
+| [Becoming.EndogenousDetectionRace.gate_extract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L93) | 93 |
+| [Becoming.EndogenousDetectionRace.gate_of_admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L96) | 96 |
+| [Becoming.EndogenousDetectionRace.gatedStep_eq_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L101) | 101 |
+| [Becoming.EndogenousDetectionRace.gated_eq_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L112) | 112 |
+| [Becoming.EndogenousDetectionRace.lockout_pure_extract](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L126) | 126 |
+| [Becoming.EndogenousDetectionRace.lockout_learner_irrelevant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L142) | 142 |
+| [Becoming.EndogenousDetectionRace.turn_fst](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L159) | 159 |
+| [Becoming.EndogenousDetectionRace.turn_sim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L166) | 166 |
+| [Becoming.EndogenousDetectionRace.turn_sim_plain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L175) | 175 |
+| [Becoming.EndogenousDetectionRace.select_keeps_admitted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L184) | 184 |
+| [Becoming.EndogenousDetectionRace.not_admits_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L189) | 189 |
+| [Becoming.EndogenousDetectionRace.region_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L201) | 201 |
+| [Becoming.EndogenousDetectionRace.rule_kept_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L208) | 208 |
+| [Becoming.EndogenousDetectionRace.mark_beyond_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L244) | 244 |
+| [Becoming.EndogenousDetectionRace.mark_reads_beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L253) | 253 |
+| [Becoming.EndogenousDetectionRace.markRead_eq_lossPool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L261) | 261 |
+| [Becoming.EndogenousDetectionRace.mark_eq_thinned](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L275) | 275 |
+| [Becoming.EndogenousDetectionRace.mark_never_eq_pre](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L318) | 318 |
+| [Becoming.EndogenousDetectionRace.closed_trap_outlives_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L348) | 348 |
+| [Becoming.EndogenousDetectionRace.mark_kept_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L405) | 405 |
+| [Becoming.EndogenousDetectionRace.mark_kept_locks_out](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L431) | 431 |
+| [Becoming.EndogenousDetectionRace.mark_turned_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L459) | 459 |
+| [Becoming.EndogenousDetectionRace.mark_turned_admits_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L518) | 518 |
+| [Becoming.EndogenousDetectionRace.mirror_strict_disfavours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L572) | 572 |
+| [Becoming.EndogenousDetectionRace.mirror_strict_favours_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L593) | 593 |
+| [Becoming.EndogenousDetectionRace.reading_state_four_way](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L624) | 624 |
+| [Becoming.EndogenousDetectionRace.middle_disjoint_locked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L643) | 643 |
+| [Becoming.EndogenousDetectionRace.mark_rule_at_next_read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L655) | 655 |
+| [Becoming.EndogenousDetectionRace.mark_middle_minus_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L683) | 683 |
+| [Becoming.EndogenousDetectionRace.mark_middle_plus_span](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L743) | 743 |
+| [Becoming.EndogenousDetectionRace.nat_even_or_odd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L787) | 787 |
+| [Becoming.EndogenousDetectionRace.seq_ge_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L793) | 793 |
+| [Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L798) | 798 |
+| [Becoming.EndogenousDetectionRace.nat_le_of_two_mul_succ_le_two_mul_succ_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L807) | 807 |
+| [Becoming.EndogenousDetectionRace.nat_le_of_two_mul_le_two_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L817) | 817 |
+| [Becoming.EndogenousDetectionRace.mark_middle_band_trichotomy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L825) | 825 |
+| [Becoming.EndogenousDetectionRace.select_order_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L917) | 917 |
+| [Becoming.EndogenousDetectionRace.paced_post_order_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L922) | 922 |
+| [Becoming.EndogenousDetectionRace.mark_post_order_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L932) | 932 |
+| [Becoming.EndogenousDetectionRace.mark_middle_band_monotone_partition](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L994) | 994 |
+| [Becoming.EndogenousDetectionRace.race_reads_beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1055) | 1055 |
+| [Becoming.EndogenousDetectionRace.race_stock_is_gated](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1062) | 1062 |
+| [Becoming.EndogenousDetectionRace.closed_race_registration_irrelevant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1074) | 1074 |
+| [Becoming.EndogenousDetectionRace.registers_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1086) | 1086 |
+| [Becoming.EndogenousDetectionRace.resolved_unregistered_stays](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1094) | 1094 |
+| [Becoming.EndogenousDetectionRace.registers_from_of_resolved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1105) | 1105 |
+| [Becoming.EndogenousDetectionRace.unregistered_forever_of_resolved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1125) | 1125 |
+| [Becoming.EndogenousDetectionRace.cadence3_mod](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1170) | 1170 |
+| [Becoming.EndogenousDetectionRace.cadence3_readAtSpanEnd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1183) | 1183 |
+| [Becoming.EndogenousDetectionRace.hi_lo_hc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1203) | 1203 |
+| [Becoming.EndogenousDetectionRace.hi_lo_ho](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1204) | 1204 |
+| [Becoming.EndogenousDetectionRace.hi_strict](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1205) | 1205 |
+| [Becoming.EndogenousDetectionRace.emergentRace_eq_closedOrbit_before](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1207) | 1207 |
+| [Becoming.EndogenousDetectionRace.reg4_of_race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1214) | 1214 |
+| [Becoming.EndogenousDetectionRace.unreg_of_race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1234) | 1234 |
+| [Becoming.EndogenousDetectionRace.race_in_time](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1269) | 1269 |
+| [Becoming.EndogenousDetectionRace.race_late_after_registration](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1301) | 1301 |
+| [Becoming.EndogenousDetectionRace.race_probe_blocked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1341) | 1341 |
+| [Becoming.EndogenousDetectionRace.race_masked_strain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1378) | 1378 |
+| [Becoming.EndogenousDetectionRace.race_slow_cadence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1434) | 1434 |
+| [Becoming.EndogenousDetectionRace.race_fast_cadence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1477) | 1477 |
+| [Becoming.EndogenousDetectionRace.race_exo_no_false_turn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1506) | 1506 |
+| [Becoming.EndogenousDetectionRace.cadence2_mod](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1537) | 1537 |
+| [Becoming.EndogenousDetectionRace.cadence2_readAtSpanEnd](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1548) | 1548 |
+| [Becoming.EndogenousDetectionRace.wEndo_stepStock_safe_ge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1561) | 1561 |
+| [Becoming.EndogenousDetectionRace.emergentRace_stabilizes_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1577) | 1577 |
+| [Becoming.EndogenousDetectionRace.race_middle_exits_to_lock](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1656) | 1656 |
+| [Becoming.EndogenousDetectionRace.race_middle_alternates_and_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1713) | 1713 |
+| [Becoming.EndogenousDetectionRace.race_middle_short_oscillation_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1801) | 1801 |
+| [Becoming.EndogenousDetectionRace.race_middle_span_recovery_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1865) | 1865 |
+| [Becoming.EndogenousDetectionRace.mask_involutive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1926) | 1926 |
+| [Becoming.EndogenousDetectionRace.mask_comm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1929) | 1929 |
+| [Becoming.EndogenousDetectionRace.mask_assoc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1932) | 1932 |
+| [Becoming.EndogenousDetectionRace.mask_cancel_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1935) | 1935 |
+| [Becoming.EndogenousDetectionRace.feedList_snoc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1964) | 1964 |
+| [Becoming.EndogenousDetectionRace.streamPrefix_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1970) | 1970 |
+| [Becoming.EndogenousDetectionRace.feedList_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1975) | 1975 |
+| [Becoming.EndogenousDetectionRace.viewBList_prefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1987) | 1987 |
+| [Becoming.EndogenousDetectionRace.feed_lockstep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1999) | 1999 |
+| [Becoming.EndogenousDetectionRace.retag_symmetry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2009) | 2009 |
+| [Becoming.EndogenousDetectionRace.split_two_of_two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2020) | 2020 |
+| [Becoming.EndogenousDetectionRace.count_view_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2028) | 2028 |
+| [Becoming.EndogenousDetectionRace.split_marginal_count_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2052) | 2052 |
+| [Becoming.EndogenousDetectionRace.split_marginal_impossibility](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2062) | 2062 |
+| [Becoming.EndogenousDetectionRace.silencing_consensus](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2084) | 2084 |
+| [Becoming.EndogenousDetectionRace.verdict_leak](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2100) | 2100 |
+| [Becoming.EndogenousDetectionRace.exchange_detects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2111) | 2111 |
+| [Becoming.EndogenousDetectionRace.markCourse_feedStep_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2122) | 2122 |
+| [Becoming.EndogenousDetectionRace.feed_pairLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2142) | 2142 |
+| [Becoming.EndogenousDetectionRace.exchangeLoop_eq_of_d01](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2158) | 2158 |
+| [Becoming.EndogenousDetectionRace.exchangeLoop_never_of_safe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2187) | 2187 |
+| [Becoming.EndogenousDetectionRace.split_silenced_trapped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2198) | 2198 |
+| [Becoming.EndogenousDetectionRace.split_exchange_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2239) | 2239 |
+| [Becoming.EndogenousDetectionRace.split_witness_endo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2302) | 2302 |
 
 Definitions and types:
 
-- `def` [Becoming.EndogenousDetectionRace.gate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L70) (L70)
-- `def` [Becoming.EndogenousDetectionRace.gatedStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L76) (L76)
-- `def` [Becoming.EndogenousDetectionRace.gatedOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L82) (L82)
-- `def` [Becoming.EndogenousDetectionRace.admits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L148) (L148)
-- `def` [Becoming.EndogenousDetectionRace.registers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L151) (L151)
-- `def` [Becoming.EndogenousDetectionRace.markRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L223) (L223)
-- `abbrev` [Becoming.EndogenousDetectionRace.markCourse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L229) (L229)
-- `def` [Becoming.EndogenousDetectionRace.raceStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L566) (L566)
-- `abbrev` [Becoming.EndogenousDetectionRace.raceCourse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L572) (L572)
-- `abbrev` [Becoming.EndogenousDetectionRace.emergentRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L675) (L675)
-- `def` [Becoming.EndogenousDetectionRace.wMasked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L682) (L682)
-- `def` [Becoming.EndogenousDetectionRace.cadence3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L691) (L691)
-- `def` [Becoming.EndogenousDetectionRace.w1Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L783) (L783)
-- `def` [Becoming.EndogenousDetectionRace.w2Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L784) (L784)
-- `def` [Becoming.EndogenousDetectionRace.w3Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L785) (L785)
-- `def` [Becoming.EndogenousDetectionRace.w4Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L786) (L786)
-- `def` [Becoming.EndogenousDetectionRace.w5SlowRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L787) (L787)
-- `def` [Becoming.EndogenousDetectionRace.w5FastRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L788) (L788)
-- `def` [Becoming.EndogenousDetectionRace.w6Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L789) (L789)
-- `def` [Becoming.EndogenousDetectionRace.mask](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1059) (L1059)
-- `def` [Becoming.EndogenousDetectionRace.viewA](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1075) (L1075)
-- `def` [Becoming.EndogenousDetectionRace.viewB](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1078) (L1078)
-- `def` [Becoming.EndogenousDetectionRace.retag](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1081) (L1081)
-- `def` [Becoming.EndogenousDetectionRace.exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1084) (L1084)
-- `def` [Becoming.EndogenousDetectionRace.feed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1087) (L1087)
-- `def` [Becoming.EndogenousDetectionRace.feedList](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1092) (L1092)
-- `def` [Becoming.EndogenousDetectionRace.streamPrefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1097) (L1097)
-- `def` [Becoming.EndogenousDetectionRace.viewBList](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1120) (L1120)
-- `def` [Becoming.EndogenousDetectionRace.countTags](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1131) (L1131)
-- `def` [Becoming.EndogenousDetectionRace.feedStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1255) (L1255)
-- `def` [Becoming.EndogenousDetectionRace.pairLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1273) (L1273)
-- `def` [Becoming.EndogenousDetectionRace.exchangeLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1290) (L1290)
-- `def` [Becoming.EndogenousDetectionRace.s20](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1367) (L1367)
-- `def` [Becoming.EndogenousDetectionRace.thinnedExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1369) (L1369)
-- `def` [Becoming.EndogenousDetectionRace.dEndo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1431) (L1431)
-- `def` [Becoming.EndogenousDetectionRace.dSafe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1434) (L1434)
+- `def` [Becoming.EndogenousDetectionRace.gate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L76) (L76)
+- `def` [Becoming.EndogenousDetectionRace.gatedStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L82) (L82)
+- `def` [Becoming.EndogenousDetectionRace.gatedOrbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L88) (L88)
+- `def` [Becoming.EndogenousDetectionRace.admits](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L154) (L154)
+- `def` [Becoming.EndogenousDetectionRace.registers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L157) (L157)
+- `def` [Becoming.EndogenousDetectionRace.markRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L229) (L229)
+- `abbrev` [Becoming.EndogenousDetectionRace.markCourse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L235) (L235)
+- `def` [Becoming.EndogenousDetectionRace.MiddleMinus](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L614) (L614)
+- `def` [Becoming.EndogenousDetectionRace.MiddlePlus](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L619) (L619)
+- `def` [Becoming.EndogenousDetectionRace.raceStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1039) (L1039)
+- `abbrev` [Becoming.EndogenousDetectionRace.raceCourse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1045) (L1045)
+- `abbrev` [Becoming.EndogenousDetectionRace.emergentRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1148) (L1148)
+- `def` [Becoming.EndogenousDetectionRace.wMasked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1155) (L1155)
+- `def` [Becoming.EndogenousDetectionRace.cadence3](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1164) (L1164)
+- `def` [Becoming.EndogenousDetectionRace.w1Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1256) (L1256)
+- `def` [Becoming.EndogenousDetectionRace.w2Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1257) (L1257)
+- `def` [Becoming.EndogenousDetectionRace.w3Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1258) (L1258)
+- `def` [Becoming.EndogenousDetectionRace.w4Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1259) (L1259)
+- `def` [Becoming.EndogenousDetectionRace.w5SlowRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1260) (L1260)
+- `def` [Becoming.EndogenousDetectionRace.w5FastRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1261) (L1261)
+- `def` [Becoming.EndogenousDetectionRace.w6Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1262) (L1262)
+- `def` [Becoming.EndogenousDetectionRace.cadence2](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1532) (L1532)
+- `def` [Becoming.EndogenousDetectionRace.wMiddleLockRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1647) (L1647)
+- `def` [Becoming.EndogenousDetectionRace.wMiddleAlt5Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1648) (L1648)
+- `def` [Becoming.EndogenousDetectionRace.wMiddleAlt3Race](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1649) (L1649)
+- `def` [Becoming.EndogenousDetectionRace.wMiddleSpanRecoveryRace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1650) (L1650)
+- `def` [Becoming.EndogenousDetectionRace.mask](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1922) (L1922)
+- `def` [Becoming.EndogenousDetectionRace.viewA](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1938) (L1938)
+- `def` [Becoming.EndogenousDetectionRace.viewB](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1941) (L1941)
+- `def` [Becoming.EndogenousDetectionRace.retag](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1944) (L1944)
+- `def` [Becoming.EndogenousDetectionRace.exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1947) (L1947)
+- `def` [Becoming.EndogenousDetectionRace.feed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1950) (L1950)
+- `def` [Becoming.EndogenousDetectionRace.feedList](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1955) (L1955)
+- `def` [Becoming.EndogenousDetectionRace.streamPrefix](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1960) (L1960)
+- `def` [Becoming.EndogenousDetectionRace.viewBList](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1983) (L1983)
+- `def` [Becoming.EndogenousDetectionRace.countTags](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L1994) (L1994)
+- `def` [Becoming.EndogenousDetectionRace.feedStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2118) (L2118)
+- `def` [Becoming.EndogenousDetectionRace.pairLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2136) (L2136)
+- `def` [Becoming.EndogenousDetectionRace.exchangeLoop](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2153) (L2153)
+- `def` [Becoming.EndogenousDetectionRace.s20](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2230) (L2230)
+- `def` [Becoming.EndogenousDetectionRace.thinnedExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2232) (L2232)
+- `def` [Becoming.EndogenousDetectionRace.dEndo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2294) (L2294)
+- `def` [Becoming.EndogenousDetectionRace.dSafe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousDetectionRace.lean#L2297) (L2297)
 
 </details>
 

@@ -12,9 +12,9 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 420 | 21,126 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 420 | 21,161 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 16 | 617 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 16 | 639 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -609,7 +609,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [MarketDiagnosis.lean](lean-declarations/other.md#module-e2732406feff) | Other formal studies |
 | [MarketGenerativity.lean](lean-declarations/other.md#module-e2e5c347dc5a) | Other formal studies |
 | [MarketInstances.lean](lean-declarations/other.md#module-96b312116575) | Other formal studies |
-| [MasterSpine.lean](lean-declarations/becoming-core-part-4.md#module-77367a71bc04) | Becoming pure core |
+| [MasterSpine.lean](lean-declarations/becoming-core-part-5.md#module-77367a71bc04) | Becoming pure core |
 | [MatchedCourses.lean](lean-declarations/becoming-core-part-5.md#module-7e62abf919a9) | Becoming pure core |
 | [MaterialMaturation.lean](lean-declarations/ethics-part-1.md#module-e4e9dd7ab622) | The ethics and the generative direction |
 | [MeasuredFeedback.lean](lean-declarations/learning.md#module-99c139232337) | Learning, prediction and dynamics |
@@ -854,7 +854,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Relevance.lean](lean-declarations/becoming-core-part-6.md#module-c2adebdbf900) | Becoming pure core |
 | [Remainder.lean](lean-declarations/becoming-core-part-6.md#module-1146fda0cc0e) | Becoming pure core |
 | [RemainingDependency.lean](lean-declarations/abstraction.md#module-c1c11c83ec55) | Abstraction, applicability and constitution |
-| [Renewal.lean](lean-declarations/becoming-core-part-6.md#module-122ecfb273f5) | Becoming pure core |
+| [Renewal.lean](lean-declarations/becoming-core-part-7.md#module-122ecfb273f5) | Becoming pure core |
 | [RenewalAccounting.lean](lean-declarations/renewal.md#module-b8df4e3120cc) | Support and renewal |
 | [RenewalBasics.lean](lean-declarations/renewal.md#module-77ecd2c775da) | Support and renewal |
 | [RenewalBound.lean](lean-declarations/becoming-core-part-7.md#module-ab5b430904ea) | Becoming pure core |
