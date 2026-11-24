@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261124T014702.078186Z",
- "core_sources_sha256": "888d379b528a2fb520757fe7fc731819651613a4e80b95b815403eeac0f24051",
+ "core_receipt": "20261124T040228.916780Z",
+ "core_sources_sha256": "4c511a2773a7bc50440b4738b6694f62c1ea9fd7aa040fced51f653735cfbaa7",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4494,
+  "laws": 4505,
   "no_declarations": 9,
   "outside": 396,
-  "grammar": 1155,
+  "grammar": 1166,
   "balance, represented": 642,
   "anchor, not reached": 99,
   "no shared law": 2193,
   "vocabulary_only": 106,
-  "closure": 634,
-  "balance": 924,
+  "closure": 643,
+  "balance": 932,
   "return": 258,
   "lumping": 98,
-  "order": 111
+  "order": 115
  },
  "counts_at_model": {
   "laws": 23,
@@ -5682,6 +5682,93 @@
      "CommonTaskRevision.unencoded_replacement_fails",
      "CommonTaskRevision.stale_conditions_defeat_the_new_practice"
     ]
+   }
+  ],
+  "active-inquiry-deadline-cascade-and-blankets": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ActiveInquiryLoop.ExploreMarginInv",
+     "Becoming.ActiveInquiryLoop.inquiryPolyComponent",
+     "Becoming.ActiveInquiryLoop.inquiryContract",
+     "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+     "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse",
+     "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined",
+     "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction",
+     "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility",
+     "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both",
+     "Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable",
+     "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes",
+     "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ActiveInquiryLoop.cascadeListObs",
+     "Becoming.ActiveInquiryLoop.composeListObsIndexed",
+     "Becoming.ActiveInquiryLoop.independentListObs",
+     "Becoming.ActiveInquiryLoop.composeList_viable_indexed",
+     "Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike",
+     "Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike",
+     "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse",
+     "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+     "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes",
+     "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ActiveInquiryLoop.coupling_distance_obs_alike",
+     "Becoming.ActiveInquiryLoop.clockedPolyComponent",
+     "Becoming.ActiveInquiryLoop.clockedPolyContract",
+     "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction",
+     "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes",
+     "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable",
+     "Becoming.ActiveInquiryLoop.network_threshold_blindness",
+     "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse",
+     "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse",
+     "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes",
+     "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel",
+     "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ActiveInquiryLoop.BlanketContractSpec",
+     "Becoming.ActiveInquiryLoop.componentOfBlanket",
+     "Becoming.ActiveInquiryLoop.contractOfBlanket",
+     "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable",
+     "Becoming.ActiveInquiryLoop.blanket_compose_screening",
+     "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts",
+     "Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable",
+     "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable",
+     "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined",
+     "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "acts-alike-from-a-model-or-from-an-order": [
@@ -16136,6 +16223,72 @@
     "dependence": "no shared law"
    }
   ],
+  "derived-evolutionary-drawdown-and-transitions": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.EvolutionaryDrawdown.EmbodiedConversion",
+     "Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn",
+     "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge",
+     "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within",
+     "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection",
+     "Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises",
+     "Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within",
+     "Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends",
+     "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past",
+     "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+     "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified",
+     "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.EvolutionaryDrawdown.MultiSiteRelatum",
+     "Becoming.EvolutionaryDrawdown.multiSiteFlow",
+     "Becoming.EvolutionaryDrawdown.multiSiteWeb",
+     "Becoming.EvolutionaryDrawdown.multiSiteWorld",
+     "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw",
+     "Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw",
+     "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange",
+     "Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange",
+     "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange",
+     "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation",
+     "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation",
+     "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends",
+     "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+     "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection",
+     "Becoming.EvolutionaryDrawdown.nested_transition_raises_among",
+     "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends",
+     "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability",
+     "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check",
+     "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "derived-extent-limits": [
    {
     "law": 1,
@@ -17808,6 +17961,94 @@
     ],
     "shared_laws": [
      "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "endogenous-order-scope-coevolution-and-nash": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.EndogenousOrder.OrderUpdater",
+     "Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn",
+     "Becoming.EndogenousOrder.adaptive_ranks_converges",
+     "Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding",
+     "Becoming.EndogenousOrder.online_off_support_reversal",
+     "Becoming.EndogenousOrder.online_weight_learner_reverses_off_support",
+     "Becoming.EndogenousOrder.uncoupled_zero_weight_forever",
+     "Becoming.EndogenousOrder.uncoupled_blindness_firewall",
+     "Becoming.EndogenousOrder.adaptive_order_ranks_horizon",
+     "Becoming.EndogenousOrder.macroAdmits_restores_comparability",
+     "Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll_converges",
+     "Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall",
+     "Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds"
+    ],
+    "shared_laws": [
+     "balance",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.EndogenousOrder.ScopeMode",
+     "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+     "Becoming.EndogenousOrder.wide_modeRefines_narrow",
+     "Becoming.EndogenousOrder.timely_modeRefines_viability_kernel",
+     "Becoming.EndogenousOrder.falls_iff_kept",
+     "Becoming.EndogenousOrder.assorted_wide_scope_emerges",
+     "Becoming.EndogenousOrder.unassorted_myopic_trap",
+     "Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_modeSwitch_raises_lineage",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_gatedGen_persists",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_gatedGen_extinguishes",
+     "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_gatedGen_extinguishes"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.EndogenousOrder.CourseRealization",
+     "Becoming.EndogenousOrder.PureNash",
+     "Becoming.EndogenousOrder.sym_pureNash_iff_mutualBest",
+     "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction",
+     "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+     "Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_matches_gated_or",
+     "Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.EndogenousOrder.EndogenousOrderSystem",
+     "Becoming.EndogenousOrder.endogenousOrder_admits_rival",
+     "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted",
+     "Becoming.EndogenousOrder.EndogenousFirewallWitness.system",
+     "Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance",
+     "order"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -69423,7 +69664,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "545b24e6f4ece91d9e98ab3ca559d516a0e5d000bc02cefb52970e793b097619",
+   "modules_sha256": "e6a4999fb2c03f74398711a7325ff844e9c811fcebc37e865e81e79bf0737502",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

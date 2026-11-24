@@ -1,0 +1,69 @@
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_cap", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_from_nothing", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_keeps", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_cap"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_balances_pool", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_family_succ", "uses": ["Becoming.beq_self"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_balances_pool", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_family_succ"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_acting", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_balances", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_member_balance", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_pool_balance"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_conv", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_balances", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_1", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_2", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_3", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_4", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_later", "Becoming.Flow.Balances.on", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_dependent", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_0", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_1", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_2", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_3", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_4", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_later", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_family_4"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_member_balance", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_pool_balance", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_rep_cap", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.giving_cap"]}
+{"name": "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified", "uses": ["Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_acting", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_balances", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_conv", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_dependent", "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_rep_cap", "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past"]}
+{"name": "Becoming.EvolutionaryDrawdown.EmbodiedConversion.balances_offspring", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.EmbodiedConversion.conversion", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.EmbodiedConversion.descended", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.EmbodiedConversion.embodied_floor", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.EmbodiedConversion.pos_floor", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability", "uses": ["Becoming.EvolutionaryDrawdown.MajorTransitionWitness.sharedG_rises", "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability"]}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.sharedG_rises", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift", "uses": ["Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_acting", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_balances", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_dependent", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_descended", "uses": ["Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_lineage_3", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_lineage_later", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends", "uses": ["Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_acting", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_balances", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_dependent", "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_descended", "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_kernel", "uses": ["Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG_rises", "Becoming.OpenComposition.close_contract_kernel"]}
+{"name": "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified", "uses": ["Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_kernel", "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.twoSiteG_rises", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation", "Becoming.mem_cons_cases"]}
+{"name": "Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange", "Becoming.Run.step"]}
+{"name": "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange", "uses": ["Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange", "Becoming.Viability.Kernel.run"]}
+{"name": "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection", "uses": ["Becoming.EvolutionaryDrawdown.eq_zero_of_total_eq_zero", "Becoming.GroupEnding.among_not_against", "Becoming.GroupEnding.excess_pos_of_lt", "Becoming.GroupEnding.pairs_pos", "Becoming.SelectionLevels.rises_exact_iff_levels", "Becoming.SelectionTerm.concord_alike", "Becoming.SelectionTerm.concord_uniform", "Becoming.SelectionTerm.discord_alike", "Becoming.SelectionTerm.discord_uniform", "Becoming.total_eq_zero"]}
+{"name": "Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn", "uses": ["Becoming.total_append", "Becoming.total_eq_zero"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "uses": ["Becoming.EvolutionaryDrawdown.EmbodiedConversion.balances_offspring", "Becoming.EvolutionaryDrawdown.EmbodiedConversion.conversion", "Becoming.EvolutionaryDrawdown.EmbodiedConversion.descended", "Becoming.EvolutionaryDrawdown.EmbodiedConversion.embodied_floor", "Becoming.EvolutionaryDrawdown.length_mul_le_total", "Becoming.ListTests.mem_flatMap_iff", "Becoming.eq_zero_of_not_pos", "Becoming.total_le", "Becoming.total_swap"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends", "uses": ["Becoming.EvolutionaryDrawdown.length_mul_le_total", "Becoming.LineOnAStock.way_ends"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within", "uses": ["Becoming.EvolutionaryDrawdown.EmbodiedConversion.pos_floor", "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "Becoming.TurningInTime.kept_within", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse", "uses": ["Becoming.EvolutionaryDrawdown.EmbodiedConversion.descended", "Becoming.EvolutionaryDrawdown.EmbodiedConversion.pos_floor", "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within", "Becoming.Flow.Balances.on", "Becoming.Flow.below_of_excess_within", "Becoming.GroupEnding.Flow.all_end", "Becoming.le_total_of_mem"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection", "uses": ["Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within", "uses": ["Becoming.EvolutionaryDrawdown.sum_eq_next_size_on", "Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.lt_of_mul_lt_mul_left", "Becoming.Naturals.mul_lt_mul_of_pos", "Becoming.SelectionTerm.Flow.support_not_against", "Becoming.SelectionTerm.Generations.empty_sum", "Becoming.SelectionTerm.Generations.mean_step", "Becoming.SelectionTerm.Generations.moved_by_selection", "Becoming.SelectionTerm.Generations.not_lower", "Becoming.SelectionTerm.Generations.not_lower_step", "Becoming.SelectionTerm.lowered_exact"]}
+{"name": "Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises", "uses": ["Becoming.EvolutionaryDrawdown.EmbodiedConversion.pos_floor", "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "Becoming.Naturals.mul_lt_mul_of_pos"]}
+{"name": "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past", "uses": ["Becoming.EvolutionaryDrawdown.EmbodiedConversion.descended", "Becoming.EvolutionaryDrawdown.EmbodiedConversion.pos_floor", "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge", "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within", "Becoming.Flow.Balances.on", "Becoming.Flow.deficit_bounded_prefix", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.two_mul"]}
+{"name": "Becoming.EvolutionaryDrawdown.eq_zero_of_total_eq_zero", "uses": ["Becoming.total_pos_of_mem"]}
+{"name": "Becoming.EvolutionaryDrawdown.length_mul_le_total", "uses": ["Becoming.total_const", "Becoming.total_le"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSiteFlow_given_nonSite", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.multiSiteFlow_given_site", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_nonSite", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_site", "uses": []}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_balance_site_iff", "uses": ["Becoming.EvolutionaryDrawdown.multiSiteFlow_given_site", "Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_site", "Becoming.Naturals.sub_add_cancel", "Becoming.add_right_cancel"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_iff", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_balance_site_iff", "Becoming.ListTests.mem_map_of", "Becoming.preimage_of_mem_map"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_balancesOn_iff"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_balance_site_iff"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation", "uses": ["Becoming.EvolutionaryDrawdown.multiSiteFlow_given_site", "Becoming.EvolutionaryDrawdown.multiSiteFlow_taken_site", "Becoming.EvolutionaryDrawdown.multiSite_balance_site_iff", "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw", "Becoming.ListTests.mem_map_of", "Becoming.SupportGated.sub_pos_of_lt", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange", "uses": ["Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw", "Becoming.ExchangeRelation.Runs.readOffExchange", "Becoming.Run.step"]}
+{"name": "Becoming.EvolutionaryDrawdown.nested_transition_raises_among", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.Founding.Nested.raises_iff_among", "Becoming.GroupEnding.Flow.offspring_zero", "Becoming.GroupEnding.excess_pos_of_lt", "Becoming.GroupEnding.pairs_pos", "Becoming.SelectionTerm.discord_zero_of_below"]}
+{"name": "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability", "uses": ["Becoming.OpenComposition.close_contract_viable", "Becoming.OpenComposition.hideContract_keeps_hidden", "Becoming.Run.step", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.EvolutionaryDrawdown.sum_eq_next_size_of_byNumber", "uses": ["Becoming.Reproduction.Generations.ByNumber.sum_eq"]}
+{"name": "Becoming.EvolutionaryDrawdown.sum_eq_next_size_on", "uses": ["Becoming.SelectionTerm.Generations.born_eq", "Becoming.total_congr_on"]}
+{"name": "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends", "uses": ["Becoming.Flow.family_excess_ends", "Becoming.Founding.Flow.ConfinedRise.ends", "Becoming.Founding.Flow.ConfinedRise.toRise", "Becoming.Founding.Flow.Rise.excess", "Becoming.Founding.Flow.Rise.gated", "Becoming.Founding.Flow.Rise.start", "Becoming.GroupEnding.Flow.group_childless"]}

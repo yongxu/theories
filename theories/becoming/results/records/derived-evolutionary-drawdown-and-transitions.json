@@ -1,0 +1,257 @@
+{
+  "schema_version": 2,
+  "id": "derived-evolutionary-drawdown-and-transitions",
+  "title": {
+    "en": "Derived selection-to-drawdown collapse, multi-site exchange bridges, and compositional transitions"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T04:02:28+00:00",
+  "statement": {
+    "en": "EvolutionaryDrawdown (L2 through UnifiedDrawdown, 0 axioms) derives embodied drawdown from positive selection via EmbodiedConversion, bridges multi-site OpenComponent runs over arbitrary Ext to Flow/ReadOffExchange, and proves compositional transition selection shifts."
+  },
+  "laws": [
+    {
+      "en": "EmbodiedConversion derives rising uptake floors (derived_surplus_of_selection_within, derived_uptake_floor_rises), regime exhaustion (derived_regime_exhausts_within), bounded impossibility (embodied_selection_surplus_impossible_past), and finite drawdown collapse (derived_surplus_drawdown_collapse).",
+      "declarations": [
+        "Becoming.EvolutionaryDrawdown.EmbodiedConversion",
+        "Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn",
+        "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection",
+        "Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises",
+        "Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within",
+        "Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends",
+        "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+        "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified",
+        "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified"
+      ]
+    },
+    {
+      "en": "MultiSiteRelatum constructs Flow.BalancesOn/Balances and substantive World.ReadOffExchange bridges for OpenComponent over arbitrary Ext without DecidableEq (multiSite_run_readOffExchange, closedProcess_kernel_readOffExchange) while separating overdraw clamping (multiSite_overdraw_separation).",
+      "declarations": [
+        "Becoming.EvolutionaryDrawdown.MultiSiteRelatum",
+        "Becoming.EvolutionaryDrawdown.multiSiteFlow",
+        "Becoming.EvolutionaryDrawdown.multiSiteWeb",
+        "Becoming.EvolutionaryDrawdown.multiSiteWorld",
+        "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw",
+        "Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw",
+        "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation",
+        "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation",
+        "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified"
+      ]
+    },
+    {
+      "en": "unintegrated_confined_takeover_ends and openComponent_hide_seals_internal_viability separate confined collapse from hide/hideContract sealing; compositional_transition_shifts_selection and nested_transition_raises_among prove selection shifts across SelectionLevels and Founding.Nested.",
+      "declarations": [
+        "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends",
+        "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+        "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection",
+        "Becoming.EvolutionaryDrawdown.nested_transition_raises_among",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom (Init-only L2 core via UnifiedDrawdown, zero Unrestricted/Valuation). EmbodiedConversion derives uptake from dissipative/unit reproduction lower bounds under upper-bounded replenishment."
+    },
+    {
+      "en": "Multi-site World.ReadOffExchange requires non-zero draw admissibility on all active sites and pre-overdraw positivity for Flow balance equality; nested_transition_raises_among assumes Founding.Nested Founded and Sequestered."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That real biological lineages satisfy EmbodiedConversion unit-uptake floors or Founding.Nested sequestration (empirical recognition under AGENTS.md Rule 2).",
+      "kind": "scope"
+    },
+    {
+      "en": "Stochastic mutation-selection PDEs beyond discrete finite-cohort Nat generation models.",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
+      "detail": {
+        "en": "DerivedEmbodiedDrawWitness & MultiSiteBridgeWitness: SurplusRun drops 13->12->9->1->0 from selection surplus while SteadyRun persists at 13; UncheckedTwoSite overdraws site true (Nat clamping vs pre-overdraw balance) while SafeTwoSite holds."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
+      "detail": {
+        "en": "MajorTransitionWitness: unintegrated fast drawers collapse 9->8->3->0 (unint_takeover_ends), whereas OpenComposition hide/hideContract holds internal site viable 9->8->8... and shifts concordAmong = 4 (concordWithin = 0)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T040228.916780Z): all 123 declarations (64 theorems, 0 private) in Becoming.EvolutionaryDrawdown compile from prelude with non-empty core_axioms: {}, classified L2 through UnifiedDrawdown by layers.py, and audited PASS in Wave U4 (72501bec). No person has read it."
+  },
+  "next_delta": {
+    "en": "Compose EvolutionaryDrawdown into the Wave U5 whole-Becoming MasterSpine."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): connects multi-level evolutionary dynamics (SelectionLevels, Founding.Nested major transitions) directly to open compositional substrates and pre-overdraw Flow drawdown bounds."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
+  "aliases": [
+    "Becoming.EvolutionaryDrawdown.EmbodiedConversion",
+    "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within",
+    "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past",
+    "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+    "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange",
+    "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange",
+    "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation",
+    "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+    "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection",
+    "Becoming.EvolutionaryDrawdown.nested_transition_raises_among"
+  ],
+  "dependencies": [
+    {
+      "id": "unclamped-stock-flow-bridge",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses StockFlowBridge pre-overdraw balances and Flow drawdown links."
+      }
+    },
+    {
+      "id": "unified-drawdown-overdraw-and-aliasing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "L2 layer witness importing UnifiedDrawdown overdraw separation and fleet drawdown."
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses OpenComponent, hide, hideContract, and close_contract_viable across Targets 2 and 3."
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects EmbodiedConversion to SelectionTerm.Generations and Flow.Descended."
+      }
+    },
+    {
+      "id": "selection-with-returns-to-groupmates",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Derives concordAmong/discordAmong shifts via SelectionLevels."
+      }
+    },
+    {
+      "id": "confined-rise-within-a-whole",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Joins Founding.Flow.ConfinedRise and Founding.Nested.raises_iff_among in Target 3."
+      }
+    },
+    {
+      "id": "central-laws-over-every-exchange",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Bridges multiSiteWorld to World.ReadOffExchange and Flow.Balances."
+      }
+    },
+    {
+      "id": "a-line-on-a-stock",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects LineOnAStock growth and exhaustion to derived_line_grows_and_ends."
+      }
+    },
+    {
+      "id": "conditions-kept-together",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Viability.Kernel for closedProcess_kernel_readOffExchange and SafeTwoSite."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.EvolutionaryDrawdown.EmbodiedConversion",
+        "Becoming.EvolutionaryDrawdown.conversion_of_dissipatesOn",
+        "Becoming.EvolutionaryDrawdown.derived_cohort_uptake_ge",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection_within",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_of_selection",
+        "Becoming.EvolutionaryDrawdown.derived_uptake_floor_rises",
+        "Becoming.EvolutionaryDrawdown.derived_regime_exhausts_within",
+        "Becoming.EvolutionaryDrawdown.derived_line_grows_and_ends",
+        "Becoming.EvolutionaryDrawdown.embodied_selection_surplus_impossible_past",
+        "Becoming.EvolutionaryDrawdown.derived_surplus_drawdown_collapse",
+        "Becoming.EvolutionaryDrawdown.MultiSiteRelatum",
+        "Becoming.EvolutionaryDrawdown.multiSiteFlow",
+        "Becoming.EvolutionaryDrawdown.multiSiteWeb",
+        "Becoming.EvolutionaryDrawdown.multiSiteWorld",
+        "Becoming.EvolutionaryDrawdown.multiSite_balancesOn_of_preOverdraw",
+        "Becoming.EvolutionaryDrawdown.multiSite_balances_of_global_preOverdraw",
+        "Becoming.EvolutionaryDrawdown.multiSite_run_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.closedProcess_guard_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.closedProcess_kernel_readOffExchange",
+        "Becoming.EvolutionaryDrawdown.multiSite_overdraw_separation",
+        "Becoming.EvolutionaryDrawdown.unintegrated_confined_takeover_ends",
+        "Becoming.EvolutionaryDrawdown.openComponent_hide_seals_internal_viability",
+        "Becoming.EvolutionaryDrawdown.compositional_transition_shifts_selection",
+        "Becoming.EvolutionaryDrawdown.nested_transition_raises_among",
+        "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.surplus_run_verified",
+        "Becoming.EvolutionaryDrawdown.DerivedEmbodiedDrawWitness.steady_run_verified",
+        "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.unchecked_overdraw_separation",
+        "Becoming.EvolutionaryDrawdown.MultiSiteBridgeWitness.safe_run_certified",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.unint_takeover_ends",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_sealed_viability",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.integ_steps_check",
+        "Becoming.EvolutionaryDrawdown.MajorTransitionWitness.transition_levels_shift"
+      ],
+      "sha256": "6e8cd6d9f93938acd0880b2fb2c20a0382f683983f2facd0e1b13397299a059b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "role": "receipt",
+      "sha256": "1153220f72736cd77aea46dfa060b27b36450042b3dc0db9f632e2ccaf3d0ad0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u4-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "7803192d4bfa5d14f9f02f47e42a8848a241403749cf69a4e218638ee244c724"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EvolutionaryDrawdown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EvolutionaryDrawdown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U4): added Becoming.EvolutionaryDrawdown (L2 through UnifiedDrawdown, 0 axioms) closing Priority P5 across derived EmbodiedConversion drawdown, DecidableEq-free multi-site ReadOffExchange bridges, and hide/Nested evolutionary transitions. AI-written."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{"name": "Becoming.ActiveInquiryLoop.ActiveInquirySpec.opLag_le", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveInquirySpec.probeDraw_le", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable", "uses": ["Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both", "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable", "Becoming.Naturals.ble_false_of_lt"]}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.gRegime_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_safe_holds", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.Naturals.le_sub_of_add_le"]}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.closed", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.emits_on_warn", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.eta_alarm_step", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.eta_alarm_zero", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.eta_bound", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.init_in", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.BlanketContractSpec.within", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes", "uses": ["Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_dep_true", "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse", "Becoming.Naturals.ble_false_of_lt", "Becoming.Turns.Copying.readsOnlyActs"]}
+{"name": "Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_dep_true", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable", "uses": ["Becoming.ActiveInquiryLoop.CascadePoolWitness.gPool_rises", "Becoming.ActiveInquiryLoop.composeList_viable_indexed"]}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes", "uses": ["Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_dep", "Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_balanced", "Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_responds", "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction", "Becoming.TimedResponse.Relay.late", "Becoming.TimedResponse.Relay.reader_far"]}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable", "uses": ["Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_rises", "Becoming.OpenComposition.close_contract_kernel"]}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_dep", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.gDelay_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_balanced", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.DelayObstructionWitness.relay_responds", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.RegimeWorld.G_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined", "uses": ["Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts"]}
+{"name": "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable", "uses": ["Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.gDelay_rises", "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable"]}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes", "uses": ["Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh_dep", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5'", "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_through", "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse"]}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh_dep", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.gThresh_rises", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_bal5'", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.net_through", "uses": ["Becoming.ble_eq_of_iff"]}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable", "uses": ["Becoming.Naturals.ble_false_of_lt", "Becoming.Naturals.le_sub_of_add_le", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Certificate.within", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_5_hits_zero", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_also_crashes_under_lag1", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel", "uses": ["Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_also_crashes_under_lag1", "Becoming.Viability.history_reach"]}
+{"name": "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable", "uses": ["Becoming.BlanketCouplings.closedProcess_blanketDetermined", "Becoming.OpenComposition.compose_close_interchange"]}
+{"name": "Becoming.ActiveInquiryLoop.blanket_compose_screening", "uses": ["Becoming.Blanket.Blanketed.agent_through_sensory", "Becoming.BlanketCouplings.closedComponent_blanketed_course"]}
+{"name": "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts", "uses": ["Becoming.Blanket.congr3"]}
+{"name": "Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable", "uses": ["Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts", "Becoming.BlanketCouplings.BlanketDetermined.of_le", "Becoming.BlanketCouplings.closedProcess_blanketDetermined"]}
+{"name": "Becoming.ActiveInquiryLoop.cascadeListObs_eq_of_act_eq", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse", "uses": ["Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike", "Becoming.ActiveInquiryLoop.composeList_eta_kept_unwarned", "Becoming.ActiveInquiryLoop.composeList_tol", "Becoming.ActiveInquiryLoop.silent_drawdown_refutes_kernel", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.Viability.Certificate.closed"]}
+{"name": "Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike", "uses": ["Becoming.ActiveInquiryLoop.cascadeListObs_eq_of_act_eq", "Becoming.Turns.act_alike_of_cascade"]}
+{"name": "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse", "uses": ["Becoming.ActiveInquiryLoop.silent_drawdown_refutes_kernel", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.Turns.act_alike_of_cascade", "Becoming.Viability.Certificate.closed"]}
+{"name": "Becoming.ActiveInquiryLoop.composeList_eta_kept_unwarned", "uses": ["Becoming.ActiveInquiryLoop.natMax_pos_cases", "Becoming.CoreHelpers.le_natMax_left", "Becoming.CoreHelpers.le_natMax_right"]}
+{"name": "Becoming.ActiveInquiryLoop.composeList_tol", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.composeList_viable_indexed", "uses": ["Becoming.ActiveInquiryLoop.composeList_warnObs_of_mem", "Becoming.OpenComposition.close_contract_kernel", "Becoming.OpenComposition.composeList_eta_eq_max", "Becoming.OpenComposition.composeList_maxLag_eq_max", "Becoming.OpenComposition.composeList_maxSilence_eq_sum", "Becoming.OpenComposition.composeList_postBudgetExt_eq_sum", "Becoming.OpenComposition.composeList_preCapExt_eq_sum"]}
+{"name": "Becoming.ActiveInquiryLoop.composeList_warnObs_of_mem", "uses": ["Becoming.ListTests.mem_cons_iff", "Becoming.ListTests.mem_singleton_iff"]}
+{"name": "Becoming.ActiveInquiryLoop.coupling_distance_obs_alike", "uses": ["Becoming.TimedResponse.answer_alike_far"]}
+{"name": "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction", "uses": ["Becoming.ActiveInquiryLoop.coupling_distance_obs_alike", "Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.Viability.Certificate.closed", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility", "uses": ["Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "Becoming.TimedResponse.answer_alike_before", "Becoming.TimedResponse.reachedBy_mono", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable", "uses": ["Becoming.ActiveInquiryLoop.ActiveInquirySpec.probeDraw_le", "Becoming.ActiveInquiryLoop.RegimeWorld.G_rises", "Becoming.ActiveInquiryLoop.RegimeWorld.env_within", "Becoming.ActiveInquiryLoop.explore_margin_step", "Becoming.ActiveInquiryLoop.opContract_K_eta_congr", "Becoming.ActiveInquiryLoop.probeTranscript_congr", "Becoming.CoreHelpers.sub_eq_sub_succ_add_one", "Becoming.Naturals.le_sub_of_add_le", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.emits_on_warn", "Becoming.OpenComposition.InterfaceContract.eta_alarm_step", "Becoming.OpenComposition.InterfaceContract.eta_alarm_zero", "Becoming.OpenComposition.InterfaceContract.eta_bound", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.OpenComposition.substrate_margin_step", "Becoming.Viability.Certificate.closed", "Becoming.Viability.Certificate.kernel", "Becoming.Viability.Certificate.within"]}
+{"name": "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse", "uses": ["Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "Becoming.Run.step", "Becoming.causal_underdetermined_of_untaken", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.explore_margin_step", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_antitone", "Becoming.add_mul_split"]}
+{"name": "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined", "uses": ["Becoming.LearnableRuns.agree_of_tracks", "Becoming.LearnableRuns.not_predicts_on_both", "Becoming.LearnableRuns.predicts_iff"]}
+{"name": "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction", "uses": ["Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "Becoming.Limit.identifies_verifies", "Becoming.Run.AgreeUpTo.mono", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.natMax_pos_cases", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse", "uses": ["Becoming.ActiveInquiryLoop.network_threshold_blindness", "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse"]}
+{"name": "Becoming.ActiveInquiryLoop.network_threshold_blindness", "uses": ["Becoming.ExchangeLaw.Through.not_respondsByLevel", "Becoming.ExchangeLaw.Through.readsBelow", "Becoming.break_carried_nowhere"]}
+{"name": "Becoming.ActiveInquiryLoop.opContract_K_eta_congr", "uses": ["Becoming.OpenComposition.InterfaceContract.init_in"]}
+{"name": "Becoming.ActiveInquiryLoop.probeTranscript_congr", "uses": []}
+{"name": "Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike", "uses": ["Becoming.ActiveInquiryLoop.cascadeListObs_eq_of_act_eq", "Becoming.Turns.act_alike_along"]}
+{"name": "Becoming.ActiveInquiryLoop.silent_drawdown_refutes_kernel", "uses": ["Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "uses": ["Becoming.Naturals.add_sub_of_le", "Becoming.Naturals.le_of_add_le_add_left", "Becoming.Naturals.sub_antitone"]}
+{"name": "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse", "uses": ["Becoming.ActiveInquiryLoop.sub_lt_of_lt_add", "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "Becoming.OpenComposition.InterfaceContract.cert", "Becoming.OpenComposition.InterfaceContract.init_in", "Becoming.Reach.of_step", "Becoming.Reach.refl", "Becoming.Reach.trans", "Becoming.Viability.Certificate.closed", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.varDraw_falls_or_bound_while", "uses": ["Becoming.Naturals.sub_add_cancel", "Becoming.add_sub_of_le", "Becoming.sub_eq_zero_of_le"]}
+{"name": "Becoming.ActiveInquiryLoop.varDraw_falls_within_while", "uses": ["Becoming.ActiveInquiryLoop.varDraw_falls_or_bound_while"]}
+{"name": "Becoming.ActiveInquiryLoop.varDraw_short_collapses", "uses": ["Becoming.Naturals.le_sub_of_add_le", "Becoming.Naturals.sub_add_cancel", "Becoming.Naturals.sub_sub", "Becoming.sub_eq_zero_of_le"]}

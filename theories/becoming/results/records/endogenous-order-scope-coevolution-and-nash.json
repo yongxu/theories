@@ -1,0 +1,276 @@
+{
+  "schema_version": 2,
+  "id": "endogenous-order-scope-coevolution-and-nash",
+  "title": {
+    "en": "Endogenous order formation, scope co-evolution, course Nash obstruction, and firewall"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T04:02:28+00:00",
+  "statement": {
+    "en": "EndogenousOrder (L2, 0 axioms) proves online OrderUpdater convergence and three structural limits, bridges dynamic ScopeMode switching to substrate-coupled SelectionLevels/GroupEnding persistence, derives Web/Flow course-menu Nash obstruction and gate restoration, and closes the firewall."
+  },
+  "laws": [
+    {
+      "en": "adaptive_order_converges_increasingInOwn converges to Weighting.IncreasingInOwn and joins Flow.coupled_ending_ranked_below, bounded by off-support reversal (online_off_support_reversal), uncoupled blindness (uncoupled_zero_weight_forever), and horizon/MacroAdmits comparability (OnlineWeightWitness).",
+      "declarations": [
+        "Becoming.EndogenousOrder.OrderUpdater",
+        "Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn",
+        "Becoming.EndogenousOrder.adaptive_ranks_converges",
+        "Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding",
+        "Becoming.EndogenousOrder.online_off_support_reversal",
+        "Becoming.EndogenousOrder.online_weight_learner_reverses_off_support",
+        "Becoming.EndogenousOrder.uncoupled_zero_weight_forever",
+        "Becoming.EndogenousOrder.uncoupled_blindness_firewall",
+        "Becoming.EndogenousOrder.adaptive_order_ranks_horizon",
+        "Becoming.EndogenousOrder.macroAdmits_restores_comparability",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll_converges",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds"
+      ]
+    },
+    {
+      "en": "timely_modeSwitch_viability_kernel and timely_modeRefines_viability_kernel govern dynamic ScopeMode switching, while falls_iff_kept, assorted_wide_scope_emerges, and substrate-coupled modeSwitch_enables_assorted_persistence separate wide-lineage growth from unswitched collapse (LagSplit).",
+      "declarations": [
+        "Becoming.EndogenousOrder.ScopeMode",
+        "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+        "Becoming.EndogenousOrder.wide_modeRefines_narrow",
+        "Becoming.EndogenousOrder.timely_modeRefines_viability_kernel",
+        "Becoming.EndogenousOrder.falls_iff_kept",
+        "Becoming.EndogenousOrder.assorted_wide_scope_emerges",
+        "Becoming.EndogenousOrder.unassorted_myopic_trap",
+        "Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_modeSwitch_raises_lineage",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_gatedGen_persists",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_gatedGen_extinguishes",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_gatedGen_extinguishes"
+      ]
+    },
+    {
+      "en": "Over Web/Flow-grounded CourseRealization (sym_pureNash_iff_mutualBest), course_menu_widening_nash_obstruction shows menu widening destroys restrained Nash stability whereas reciprocal_gate_restores_viable_nash restores it alongside OpenComposition trajectories (CourseNashObstructionWitness).",
+      "declarations": [
+        "Becoming.EndogenousOrder.CourseRealization",
+        "Becoming.EndogenousOrder.PureNash",
+        "Becoming.EndogenousOrder.sym_pureNash_iff_mutualBest",
+        "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction",
+        "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+        "Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_matches_gated_or",
+        "Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds"
+      ]
+    },
+    {
+      "en": "endogenousOrder_admits_rival and endogenousOrder_cannot_entail_unrestricted compose EndogenousOrderSystem with ScopeDynamics.scopeLaw_cannot_entail_unrestricted and Clearing.center_not_derived (EndogenousFirewallWitness), keeping Unrestricted unforced from dynamics.",
+      "declarations": [
+        "Becoming.EndogenousOrder.EndogenousOrderSystem",
+        "Becoming.EndogenousOrder.endogenousOrder_admits_rival",
+        "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted",
+        "Becoming.EndogenousOrder.EndogenousFirewallWitness.system",
+        "Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom (Init-only L2 core directly naming Unrestricted). Convergence requires positive feedback hits on every coupled pair below the horizon bound relative to base headroom."
+    },
+    {
+      "en": "modeSwitch_enables_assorted_persistence requires a PolyComposition run tracking substrate level W.level s c_sub plus viability-sustained wide reproduction and inactive inferior lineages; Nash restoration requires reciprocal withholding."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any empirical selection or weighting rule learns true world structure off-support or derives Unrestricted significance without a separate normative recognition (AGENTS.md Rule 2).",
+      "kind": "scope"
+    },
+    {
+      "en": "Continuous utility equilibrium uniqueness beyond discrete finite CourseRealization over downFrom horizon.",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+      "detail": {
+        "en": "OnlineWeightWitness: partial probing reverses ShownOrder (cNone ranked below cOff) and keeps .victim at weight 0 forever; ScopeCoEvolutionWitness.LagSplit contrasts timely L=1 persistence [13,11,11,...] against delayed L=3 collapse and extinction of gatedGen."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+      "detail": {
+        "en": "CourseNashObstructionWitness: widening from narrowMenu to ungated wideMenu flips unique PureNash from (.restrain,.restrain) at 6 to (.overdraw,.overdraw) at 5; Withholding.waitsAll gating restores (.restrain,.restrain) at 6 matching ocRun_matches_gated_or."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T040228.916780Z): all 231 declarations (122 theorems, 0 private) in Becoming.EndogenousOrder compile from prelude with non-empty core_axioms: {}, classified L2 (direct) by layers.py, and audited PASS in Wave U4 (72501bec). No person has read it."
+  },
+  "next_delta": {
+    "en": "Include EndogenousOrder and its firewall theorems in the Wave U5 whole-Becoming MasterSpine."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): formalizes how preferences/weights update endogenously from coupled feedback yet fail off-support, how reciprocal scope switching stabilizes multi-level selection, and why dynamic order never entails Unrestricted."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+  "aliases": [
+    "Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn",
+    "Becoming.EndogenousOrder.online_off_support_reversal",
+    "Becoming.EndogenousOrder.uncoupled_blindness_firewall",
+    "Becoming.EndogenousOrder.macroAdmits_restores_comparability",
+    "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+    "Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence",
+    "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction",
+    "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+    "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted"
+  ],
+  "dependencies": [
+    {
+      "id": "dynamical-scope-and-reciprocal-stability",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses ScopeDynamics coalitions, Withholding gates, and scopeLaw_cannot_entail_unrestricted."
+      }
+    },
+    {
+      "id": "what-persisting-shows-of-an-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses PersistingChoices, Weighting, ChoiceOccasions.reversed_off_met, and ShownOrder.Accords."
+      }
+    },
+    {
+      "id": "a-narrowing-above-its-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Relies on Flow.persists_not_listsAdmitted and coupled_ending_ranked_below."
+      }
+    },
+    {
+      "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses PolyComposition anchored self-modification and ModeRefines viability theorems."
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Matches gated Web/Flow orbits step-for-step with OpenComposition closedProcess."
+      }
+    },
+    {
+      "id": "transformative-viability-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Restores comparability across micro-turnover via MacroAdmits and TransformsViably."
+      }
+    },
+    {
+      "id": "what-would-give-c",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects MutualBest and clearing examples to symmetric PureNash and center_not_derived."
+      }
+    },
+    {
+      "id": "selection-with-returns-to-groupmates",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Derives assortment symmetry and threshold emergence from SelectionLevels."
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Applies GroupEnding.Flow.lineages_raises to substrate-coupled lineage dynamics."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.EndogenousOrder.OrderUpdater",
+        "Becoming.EndogenousOrder.adaptive_order_converges_increasingInOwn",
+        "Becoming.EndogenousOrder.adaptive_ranks_converges",
+        "Becoming.EndogenousOrder.adaptive_order_joins_coupledEnding",
+        "Becoming.EndogenousOrder.online_off_support_reversal",
+        "Becoming.EndogenousOrder.online_weight_learner_reverses_off_support",
+        "Becoming.EndogenousOrder.uncoupled_zero_weight_forever",
+        "Becoming.EndogenousOrder.uncoupled_blindness_firewall",
+        "Becoming.EndogenousOrder.adaptive_order_ranks_horizon",
+        "Becoming.EndogenousOrder.macroAdmits_restores_comparability",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.feedbackAll_converges",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.partial_reverses_and_firewall",
+        "Becoming.EndogenousOrder.OnlineWeightWitness.OWPersist.witness_holds",
+        "Becoming.EndogenousOrder.ScopeMode",
+        "Becoming.EndogenousOrder.timely_modeSwitch_viability_kernel",
+        "Becoming.EndogenousOrder.wide_modeRefines_narrow",
+        "Becoming.EndogenousOrder.timely_modeRefines_viability_kernel",
+        "Becoming.EndogenousOrder.falls_iff_kept",
+        "Becoming.EndogenousOrder.assorted_wide_scope_emerges",
+        "Becoming.EndogenousOrder.unassorted_myopic_trap",
+        "Becoming.EndogenousOrder.modeSwitch_enables_assorted_persistence",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentSplit.witness_holds",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.AssortmentLineage.witness_holds",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_modeSwitch_raises_lineage",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.timely_gatedGen_persists",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.delayed_gatedGen_extinguishes",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.unswitched_gatedGen_extinguishes",
+        "Becoming.EndogenousOrder.ScopeCoEvolutionWitness.LagSplit.witness_holds",
+        "Becoming.EndogenousOrder.CourseRealization",
+        "Becoming.EndogenousOrder.PureNash",
+        "Becoming.EndogenousOrder.sym_pureNash_iff_mutualBest",
+        "Becoming.EndogenousOrder.course_menu_widening_nash_obstruction",
+        "Becoming.EndogenousOrder.reciprocal_gate_restores_viable_nash",
+        "Becoming.EndogenousOrder.CourseNashObstructionWitness.ocRun_matches_gated_or",
+        "Becoming.EndogenousOrder.CourseNashObstructionWitness.witness_holds",
+        "Becoming.EndogenousOrder.EndogenousOrderSystem",
+        "Becoming.EndogenousOrder.endogenousOrder_admits_rival",
+        "Becoming.EndogenousOrder.endogenousOrder_cannot_entail_unrestricted",
+        "Becoming.EndogenousOrder.EndogenousFirewallWitness.system",
+        "Becoming.EndogenousOrder.EndogenousFirewallWitness.firewall_holds"
+      ],
+      "sha256": "8e03226f29101afce5ca456ee2786aa31d1fb558399d2ef3d69c2e003b94cb34"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "role": "receipt",
+      "sha256": "1153220f72736cd77aea46dfa060b27b36450042b3dc0db9f632e2ccaf3d0ad0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u4-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "7803192d4bfa5d14f9f02f47e42a8848a241403749cf69a4e218638ee244c724"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EndogenousOrder.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.EndogenousOrder",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U4): added Becoming.EndogenousOrder (L2, 0 axioms) closing Priority P3 across online OrderUpdater limits, substrate-coupled ScopeMode co-evolution, Web/Flow course-menu Nash obstruction/restoration, and not_entails firewall. AI-written."
+    }
+  ]
+}

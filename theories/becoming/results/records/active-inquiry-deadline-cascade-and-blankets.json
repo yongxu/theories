@@ -1,0 +1,295 @@
+{
+  "schema_version": 2,
+  "id": "active-inquiry-deadline-cascade-and-blankets",
+  "title": {
+    "en": "Active inquiry margin sandwich, cascade alarm capture, delay obstructions, and blanket screening"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-24T04:02:28+00:00",
+  "statement": {
+    "en": "ActiveInquiryLoop (L1, 0 axioms) establishes the exploration-margin sandwich, untaken/learnability/deadline impossibilities, cascade pool capture, coupling-distance and ReadsBelow threshold obstructions, and sensory-alarm blanket screening."
+  },
+  "laws": [
+    {
+      "en": "ExploreMarginInv sustains active probing until recovery in exploration_margin_sandwich_viable, whereas passive/insufficient headroom hits exploration_untaken_silence_collapse, learnable_passive_underdetermined, limit_passive_delay_obstruction, and exploration_deadline_impossibility (ActiveProbeWitness).",
+      "declarations": [
+        "Becoming.ActiveInquiryLoop.ExploreMarginInv",
+        "Becoming.ActiveInquiryLoop.inquiryPolyComponent",
+        "Becoming.ActiveInquiryLoop.inquiryContract",
+        "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+        "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse",
+        "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined",
+        "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction",
+        "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes"
+      ]
+    },
+    {
+      "en": "composeList_viable_indexed preserves pool viability under independent alarms, whereas Cascade.emitAlarm and ReachedCascade.emitAlarm synchronize observations across members and force cascade_list_capture_collapse and cascade_pool_capture_collapse (CascadePoolWitness).",
+      "declarations": [
+        "Becoming.ActiveInquiryLoop.cascadeListObs",
+        "Becoming.ActiveInquiryLoop.composeListObsIndexed",
+        "Becoming.ActiveInquiryLoop.independentListObs",
+        "Becoming.ActiveInquiryLoop.composeList_viable_indexed",
+        "Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike",
+        "Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike",
+        "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse",
+        "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+        "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes",
+        "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable"
+      ]
+    },
+    {
+      "en": "clockedPolyComponent coupling delay induces indistinguishable observations and turning failure (coupling_distance_turning_obstruction), while ExchangeLaw.ReadsBelow feeds open-loop threshold collapse (network_readsBelow_feeds_open_collapse, ThresholdBlindnessWitness).",
+      "declarations": [
+        "Becoming.ActiveInquiryLoop.coupling_distance_obs_alike",
+        "Becoming.ActiveInquiryLoop.clockedPolyComponent",
+        "Becoming.ActiveInquiryLoop.clockedPolyContract",
+        "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction",
+        "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes",
+        "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable",
+        "Becoming.ActiveInquiryLoop.network_threshold_blindness",
+        "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse",
+        "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable"
+      ]
+    },
+    {
+      "en": "BlanketContractSpec embeds blanket coupling guarantees into OpenComponent (componentOfBlanket, contractOfBlanket), proving blanket_compose_closed_viable and blanket_compose_screening while blanket_isolation_necessary_for_determined_parts shows determined dynamics require isolated parts.",
+      "declarations": [
+        "Becoming.ActiveInquiryLoop.BlanketContractSpec",
+        "Becoming.ActiveInquiryLoop.componentOfBlanket",
+        "Becoming.ActiveInquiryLoop.contractOfBlanket",
+        "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable",
+        "Becoming.ActiveInquiryLoop.blanket_compose_screening",
+        "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts",
+        "Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom (Init-only L1 core). exploration_margin_sandwich_viable requires initial reserve headroom above exploration plus post-probe lag margins, causal prefix determination of probeTranscript, and recovery growth G_rises once the regime is identified."
+    },
+    {
+      "en": "Cascade collapse assumes homogeneous unwarned silent-step headroom below total pool drawdown; blanket_compose_screening requires pairwise blanket isolation (BlanketCouplings) with matching sensory alarm ports."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Continuous-time or probabilistic Bayesian exploration regret bounds beyond discrete Nat margins and finite-horizon lag bounds.",
+      "kind": "scope"
+    },
+    {
+      "en": "Empirical identification of physical sensors or cascades satisfying BlanketContractSpec or Cascade.emitAlarm.",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveInquiryLoop.lean",
+      "detail": {
+        "en": "ActiveProbeWitness: from reserve 20 active probing identifies the hidden regime in step 0 and recovers inside Viability.Kernel, whereas passive exploitation crashes; from reserve 9 active probing also crashes before recovery."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveInquiryLoop.lean",
+      "detail": {
+        "en": "ThresholdBlindnessWitness & SparseRelayBreachWitness: θ_sensor = 5 or 8 collapses under lag 1 while θ_sensor = 10 stays viable; cross-boundary breach breaks Determined on parts and crashes at step 4."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "AI-written; machine-checked by Lean 4.29.1 checker (receipt 20261124T040228.916780Z): all 143 declarations (62 theorems, 0 private) in Becoming.ActiveInquiryLoop compile from prelude with non-empty core_axioms: {}, classified L1 by layers.py, and audited PASS in Wave U4 (72501bec). No person has read it."
+  },
+  "next_delta": {
+    "en": "Join ActiveInquiryLoop probe/blanket safety theorems into the Wave U5 whole-Becoming MasterSpine."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written): formalizes exploration-exploitation headroom, multi-agent information-cascade blindness, observation latency/threshold collapse, and Markov blanket screening bounds in L1."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveInquiryLoop.lean",
+  "aliases": [
+    "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+    "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse",
+    "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility",
+    "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+    "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction",
+    "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse",
+    "Becoming.ActiveInquiryLoop.blanket_compose_screening",
+    "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts"
+  ],
+  "dependencies": [
+    {
+      "id": "polynomial-dynamic-interfaces-and-coupled-laxity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses PolyComponent, PolyContract, polyClosedProcess, and poly_close_kernel to represent adaptive probe-vs-operate mode transitions."
+      }
+    },
+    {
+      "id": "interventional-causal-abstraction-and-goodhart",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Relies on CausalSystem intervention families and passive underdetermination bounds for regime probing."
+      }
+    },
+    {
+      "id": "open-interface-composition-and-replacement",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses OpenComponent, composeList, close_kernel, and compose_close_interchange across pool and blanket theorems."
+      }
+    },
+    {
+      "id": "readers-reading-readers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Embeds Cascade, ReachedCascade, and emitAlarm into list-pool composition for cascade_pool_capture_collapse."
+      }
+    },
+    {
+      "id": "timely-response-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses TimedResponse and Latency delay bounds in coupling_distance_turning_obstruction."
+      }
+    },
+    {
+      "id": "what-a-center-can-know-by-a-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Bridges ExchangeLaw.ReadsBelow, Thresholds, and LevelCoupling to open-loop collapse."
+      }
+    },
+    {
+      "id": "loops-within-what-a-law-reads",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects LimitVerification asymptotic bounds to limit_passive_delay_obstruction."
+      }
+    },
+    {
+      "id": "a-formations-couplings-as-its-blanket",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Constructs componentOfBlanket and isolation necessity over Blanket and BlanketCouplings."
+      }
+    },
+    {
+      "id": "learnable-through-a-map",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Connects Learnable and LearnableRuns identification bounds to learnable_passive_underdetermined."
+      }
+    },
+    {
+      "id": "conditions-kept-together",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Viability.Kernel, Viability.Certificate, and guard invariants."
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveInquiryLoop.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ActiveInquiryLoop.explore_margin_step",
+        "Becoming.ActiveInquiryLoop.varDraw_short_collapses",
+        "Becoming.ActiveInquiryLoop.silent_drawdown_refutes_kernel",
+        "Becoming.ActiveInquiryLoop.ActiveInquirySpec",
+        "Becoming.ActiveInquiryLoop.inquiryPolyComponent",
+        "Becoming.ActiveInquiryLoop.inquiryContract",
+        "Becoming.ActiveInquiryLoop.ExploreMarginInv",
+        "Becoming.ActiveInquiryLoop.exploration_margin_sandwich_viable",
+        "Becoming.ActiveInquiryLoop.exploration_untaken_silence_collapse",
+        "Becoming.ActiveInquiryLoop.learnable_passive_underdetermined",
+        "Becoming.ActiveInquiryLoop.limit_passive_delay_obstruction",
+        "Becoming.ActiveInquiryLoop.exploration_deadline_impossibility",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.probe_identifies_both",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.active_probing_viable",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.passive_exploit_crashes",
+        "Becoming.ActiveInquiryLoop.ActiveProbeWitness.low_headroom_probe_crashes",
+        "Becoming.ActiveInquiryLoop.cascadeListObs",
+        "Becoming.ActiveInquiryLoop.composeListObsIndexed",
+        "Becoming.ActiveInquiryLoop.independentListObs",
+        "Becoming.ActiveInquiryLoop.composeList_viable_indexed",
+        "Becoming.ActiveInquiryLoop.cascade_list_emitAlarm_alike",
+        "Becoming.ActiveInquiryLoop.reachedCascade_list_emitAlarm_alike",
+        "Becoming.ActiveInquiryLoop.cascade_list_capture_collapse",
+        "Becoming.ActiveInquiryLoop.cascade_pool_capture_collapse",
+        "Becoming.ActiveInquiryLoop.CascadePoolWitness.cascade_pool_crashes",
+        "Becoming.ActiveInquiryLoop.CascadePoolWitness.independent_pool_viable",
+        "Becoming.ActiveInquiryLoop.coupling_distance_obs_alike",
+        "Becoming.ActiveInquiryLoop.clockedPolyComponent",
+        "Becoming.ActiveInquiryLoop.clockedPolyContract",
+        "Becoming.ActiveInquiryLoop.coupling_distance_turning_obstruction",
+        "Becoming.ActiveInquiryLoop.DelayObstructionWitness.delayed_relay_crashes",
+        "Becoming.ActiveInquiryLoop.DelayObstructionWitness.direct_monitor_viable",
+        "Becoming.ActiveInquiryLoop.network_threshold_blindness",
+        "Becoming.ActiveInquiryLoop.threshold_blind_open_collapse",
+        "Becoming.ActiveInquiryLoop.network_readsBelow_feeds_open_collapse",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.blind_5_crashes",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_8_crashes_kernel",
+        "Becoming.ActiveInquiryLoop.ThresholdBlindnessWitness.theta_10_viable",
+        "Becoming.ActiveInquiryLoop.BlanketContractSpec",
+        "Becoming.ActiveInquiryLoop.componentOfBlanket",
+        "Becoming.ActiveInquiryLoop.contractOfBlanket",
+        "Becoming.ActiveInquiryLoop.blanket_compose_closed_viable",
+        "Becoming.ActiveInquiryLoop.blanket_compose_screening",
+        "Becoming.ActiveInquiryLoop.blanket_isolation_necessary_for_determined_parts",
+        "Becoming.ActiveInquiryLoop.blanket_parts_not_openComponent_realizable",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.honest_blanket_compose_viable",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_not_blanketDetermined",
+        "Becoming.ActiveInquiryLoop.SparseRelayBreachWitness.breach_crashes_at_four"
+      ],
+      "sha256": "7a5103b1c5069896182bf846d27bfd27b732902380f1d2f711df5cd3f48cb6f1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "role": "receipt",
+      "sha256": "1153220f72736cd77aea46dfa060b27b36450042b3dc0db9f632e2ccaf3d0ad0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lean-unification-u4-2026-11-24/NOTE.md",
+      "role": "review",
+      "sha256": "7803192d4bfa5d14f9f02f47e42a8848a241403749cf69a4e218638ee244c724"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveInquiryLoop.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T040228.916780Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ActiveInquiryLoop",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "24 November 2026 (Wave U4): added Becoming.ActiveInquiryLoop (L1, 0 axioms) closing Priority P4 across active probe headroom, cascade capture, coupling latency/threshold blindness, and OpenComponent blanket screening. AI-written."
+    }
+  ]
+}

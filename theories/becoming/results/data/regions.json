@@ -2881,6 +2881,11 @@
    "base": "general",
    "note": "CausalAbstraction L1 (Wave U3): exact and lax interventional causal abstraction, Viability.Kernel policy transfer, vertical/horizontal composition vs. leakage, Causal Goodhart separation, and GrammarLaws/ExchangeLaw.Sensitive bridges"
   },
+  "active-inquiry-deadline-cascade-and-blankets": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ActiveInquiryLoop L1 (Wave U4): exploration-margin sandwich, untaken/learnability/deadline impossibilities, cascade alarm capture, coupling-distance/ReadsBelow obstructions, and OpenComponent blanket screening"
+  },
   "transformative-viability-order": {
    "region": "map",
    "base": "general",
@@ -2900,6 +2905,16 @@
    "region": "map",
    "base": "general",
    "note": "UnifiedDrawdown L2: parametric local-accuracy depletion, inductive OpenComposition fleet folds and upgrades, pre-overdraw Flow transfer vs. overdraw break, and non-trivial temporal aliasing (CadenceErasureWitness)"
+  },
+  "derived-evolutionary-drawdown-and-transitions": {
+   "region": "map",
+   "base": "general",
+   "note": "EvolutionaryDrawdown L2 (Wave U4): derived EmbodiedConversion selection-to-drawdown collapse, DecidableEq-free multi-site OpenComponent to Flow/ReadOffExchange bridge, and hide/Nested evolutionary transitions"
+  },
+  "endogenous-order-scope-coevolution-and-nash": {
+   "region": "significance",
+   "base": "general",
+   "note": "EndogenousOrder L2 (Wave U4): online OrderUpdater convergence and limits, dynamic ScopeMode co-evolution coupled to SelectionLevels/GroupEnding, Web/Flow course-menu Nash obstruction/restoration, and not_entails firewall"
   },
   "dynamical-scope-and-reciprocal-stability": {
    "region": "map",
@@ -5052,6 +5067,21 @@
    "region": "knowing",
    "base": "general",
    "note": "L1 (Wave U3): exact and lax interventional causal abstraction, kernel policy transfer, vertical/horizontal composition, Causal Goodhart witness, and GrammarLaws/ExchangeLaw.Sensitive bridges"
+  },
+  "Becoming.ActiveInquiryLoop": {
+   "region": "knowing",
+   "base": "general",
+   "note": "L1 (Wave U4): exploration-margin sandwich, untaken/learnability/deadline impossibilities, cascade alarm capture, coupling-distance/ReadsBelow obstructions, and OpenComponent blanket screening"
+  },
+  "Becoming.EvolutionaryDrawdown": {
+   "region": "map",
+   "base": "general",
+   "note": "L2 (Wave U4, through UnifiedDrawdown): derived EmbodiedConversion selection-to-drawdown collapse, DecidableEq-free multi-site OpenComponent to Flow/ReadOffExchange bridge, and hide/Nested transitions"
+  },
+  "Becoming.EndogenousOrder": {
+   "region": "significance",
+   "base": "general",
+   "note": "L2 (Wave U4, direct): online OrderUpdater limits, dynamic ScopeMode co-evolution coupled to SelectionLevels/GroupEnding, Web/Flow course-menu Nash obstruction/restoration, and not_entails firewall"
   },
   "AlignmentReals": {
    "region": "map",
