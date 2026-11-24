@@ -1,0 +1,527 @@
+{
+  "module": "ConsequenceDuality",
+  "source_file": "ConsequenceDuality.lean",
+  "source_sha256": "4a8acf2067c986f3d03e7755aaac7d8173f503b6e617937c6ef32f9586803d8d",
+  "verified_at_utc": "2026-11-24T12:10:51.082371+00:00",
+  "ai_written": true,
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
+  "status": "passed",
+  "standard_axioms_allowed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_axioms_used": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sorry_ax_count": 0,
+  "static_checks": {
+    "private_declarations": [],
+    "unnamed_instances": [],
+    "forbidden_tokens": [],
+    "market_word_hits": [],
+    "missing_required_declarations": []
+  },
+  "declaration_count": 50,
+  "theorem_count": 30,
+  "definition_count": 19,
+  "structure_count": 1,
+  "required_declarations_verified": [
+    "ConsequenceDuality.FinDist",
+    "ConsequenceDuality.FinDist.ext",
+    "ConsequenceDuality.diracDist",
+    "ConsequenceDuality.pushforward",
+    "ConsequenceDuality.pushforward_comp",
+    "ConsequenceDuality.tvDist",
+    "ConsequenceDuality.tvDist_nonneg",
+    "ConsequenceDuality.tvDist_self",
+    "ConsequenceDuality.tvDist_symm",
+    "ConsequenceDuality.tvDist_triangle",
+    "ConsequenceDuality.tvDist_pushforward_le",
+    "ConsequenceDuality.massOutside",
+    "ConsequenceDuality.massOutside_nonneg",
+    "ConsequenceDuality.optimal_query_tv_floor",
+    "ConsequenceDuality.empty_source_infeasible",
+    "ConsequenceDuality.PrimalFeasible",
+    "ConsequenceDuality.primalGap",
+    "ConsequenceDuality.dualBound",
+    "ConsequenceDuality.primalGap_le_dualBound",
+    "ConsequenceDuality.dualBound_attained",
+    "ConsequenceDuality.consequence_minimax_duality",
+    "ConsequenceDuality.multiQueryTvError",
+    "ConsequenceDuality.multiQueryDualObj",
+    "ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError",
+    "ConsequenceDuality.common_history_tv_duality",
+    "ConsequenceDuality.one_query_tv_floor_via_duality",
+    "ConsequenceDuality.two_query_diagonal_three_fifths_witness",
+    "ConsequenceDuality.joint_distribution_one_half_witness",
+    "ConsequenceDuality.policyMargin",
+    "ConsequenceDuality.fiberActionMargin",
+    "ConsequenceDuality.fiberBestMargin",
+    "ConsequenceDuality.policyMargin_le_fiberBestMargin",
+    "ConsequenceDuality.decision_margin_minimax",
+    "ConsequenceDuality.decision_margin_pos_iff_common_action",
+    "ConsequenceDuality.two_state_exact_minimax",
+    "ConsequenceDuality.public_port_vs_recipient_exact",
+    "ConsequenceDuality.b2_aliasing_08_exact_certificate",
+    "ConsequenceDuality.diagSurvivalProb",
+    "ConsequenceDuality.diagSurvivalProb_eq",
+    "ConsequenceDuality.noisy_short_word_amplification"
+  ],
+  "declarations": [
+    {
+      "kind": "structure",
+      "name": "ConsequenceDuality.FinDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.FinDist.ext",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.diracDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.pushforward",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.pushforward_comp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.tvDist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.tvDist_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.tvDist_self",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.tvDist_symm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.tvDist_triangle",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.tvDist_pushforward_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.massOutside",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.massOutside_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.optimal_query_tv_floor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.empty_source_infeasible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.PrimalFeasible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.primalGap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.dualBound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.primalGap_le_dualBound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.continuous_finset_sup'",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.pi_norm_eq_sup'",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.dualBound_attained",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.finDistPair_of_zeroSum_l1Le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.consequence_minimax_duality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.multiQueryTvError",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.multiQueryDualObj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.multiQueryDualObj_le_multiQueryTvError",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.common_history_tv_duality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.one_query_tv_floor_via_duality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.diagSupport",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.diagSupport_fst_eq_snd",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.fourFifthsBool",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.oneFifthBool",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.diagLift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.two_query_diagonal_three_fifths_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.uniformPairBool",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.fairBool",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.joint_distribution_one_half_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.policyMargin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.fiberActionMargin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.fiberBestMargin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.policyMargin_le_fiberBestMargin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.decision_margin_minimax",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.decision_margin_pos_iff_common_action",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.two_state_exact_minimax",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.public_port_vs_recipient_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.b2_aliasing_08_exact_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "def",
+      "name": "ConsequenceDuality.diagSurvivalProb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.diagSurvivalProb_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "kind": "theorem",
+      "name": "ConsequenceDuality.noisy_short_word_amplification",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}
