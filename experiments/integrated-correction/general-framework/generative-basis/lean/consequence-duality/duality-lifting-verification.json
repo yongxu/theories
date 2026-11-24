@@ -2,7 +2,7 @@
   "module": "DualityLifting",
   "source_file": "DualityLifting.lean",
   "source_sha256": "cac323a74f9c9421c317e674880ad312da0638f4472735aa586b91888df16f32",
-  "verified_at_utc": "2026-11-24T14:14:49.525248+00:00",
+  "verified_at_utc": "2026-11-24T14:17:02.922635+00:00",
   "ai_written": true,
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
