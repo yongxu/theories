@@ -96,7 +96,7 @@ Each item names the declarations; every statement is the theorem's own, premises
   "title": {"en": "Epoch handoff: what may change across epochs, what must not"},
   "kind": "theorem",
   "status": "draft",
-  "statement": {"en": "Over one substrate law G and environment draw, an epoch process whose upgrades pass an EpochHandoffGate (allowed, anchored by AnchorStep, target epoch certified and total, target state in K, live lag margin at the current reserve) keeps the original effective floor, the current floor and the current runtime guard over every run, for any upgrade relation; single-epoch cases are exactly anchored_selfMod_viable and monotone_selfWidening_viable. Dropping only the anchor clause admits a floor-lowering upgrade after which the reserve drains to 0 inside the run's own current-floor kernel."},
+  "statement": {"en": "Upgrades passing an EpochHandoffGate (anchored, target certified and total, live headroom) keep the original floor and current guard over every run; one epoch gives anchored_selfMod_viable exactly; dropping only the anchor lets a floor-lowering run drain to 0 inside its own kernel."},
   "hypotheses": [{"en": "No axiom. RegimeMargin.Coupled.Indexed.Rises for G; EpochCert of the starting epoch; starting state in its K; lag margin x_crit + eta * (sitePreCap + envCap) <= x0 on in-scope sites. Non-deadlock: EpochTotal of the starting epoch and the starting state in K."}],
   "laws": [
     {"en": "Capabilities across epochs, exact reduction, Horn 1a, Horn 2.", "declarations": [
