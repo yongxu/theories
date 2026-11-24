@@ -1823,16 +1823,17 @@ theorem concurrent_evolve_collapses (wA wB : Nat) :
     Nat.not_succ_le_zero 2 ((kern _ (Reach.of_step step)).1 ())
 
 /-- **No local gate.** No gate reading only `(x, own new draw, partner's current draw)` both admits
-every viable solo upgrade and makes every pair it admits viable. -/
+every viable solo upgrade and makes every pair it admits viable under some choice of sensors. -/
 theorem no_local_gate_soloComplete_and_concurrentSafe (LocalGate : Nat → Nat → Nat → Prop)
     (soloComplete : ∀ x₀ own partner wA wB,
       Viability.Kernel (pairProcess own partner wA wB) (pairGuard own partner)
         (pairStart x₀) → LocalGate x₀ own partner)
-    (concurrentSafe : ∀ x₀ preA preB wA wB, LocalGate x₀ preA 1 → LocalGate x₀ preB 1 →
-      Viability.Kernel (pairProcess preA preB wA wB) (pairGuard preA preB)
+    (concurrentSafe : ∀ x₀ preA preB, LocalGate x₀ preA 1 → LocalGate x₀ preB 1 →
+      ∃ wA wB, Viability.Kernel (pairProcess preA preB wA wB) (pairGuard preA preB)
         (pairStart x₀)) : False :=
   let gate := soloComplete 8 4 1 13 7 solo_A_evolve_viable.1
-  concurrent_evolve_collapses 13 13 (concurrentSafe 8 4 4 13 13 gate gate)
+  match concurrentSafe 8 4 4 gate gate with
+  | ⟨wA, wB, kern⟩ => concurrent_evolve_collapses wA wB kern
 
 /-- **Declared bounds compose.** Where each agent's draw stays below a declared bound and the
 headroom and sensors cover the sum of the bounds, the pair is viable. -/

@@ -11,8 +11,8 @@
 ```text
 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/scratch_build.py \
     /Users/ren/tmp/f2-scratch Becoming.OpenEndedComposition
-modules 160 (159 reused from the shared cache), ran: Becoming.OpenEndedComposition 2.232 s,
-BecomingOpenEndedCompositionAxiomAudit 0.866 s; unclean []; wall 8.4 s
+modules 160 (159 reused from the shared cache), ran: Becoming.OpenEndedComposition 1.653 s,
+BecomingOpenEndedCompositionAxiomAudit 0.733 s; unclean []; wall 7.8 s
 audits: Becoming.OpenEndedComposition  theorems 90  declarations 178  with_axioms {}
 ```
 
@@ -65,7 +65,7 @@ Each item names the declarations; every statement is the theorem's own, premises
 - `pair_viable_of_headroom`: headroom `3 + (preA + preB) ≤ x₀` and one agent's sensor covering `3 + 2 * (preA + preB)` give viability.
 - `solo_A_evolve_viable`, `solo_B_evolve_viable`: at `x₀ = 8` each solo upgrade to draw `4` (partner at `1`) is viable, and the upgraded agent draws `4` on the first tick.
 - `concurrent_evolve_collapses`: at the same `x₀ = 8`, both at `4` leave `0` after one step, whatever the sensors.
-- `no_local_gate_soloComplete_and_concurrentSafe`: no gate reading only `(x, own new draw, partner's current draw)` both admits every viable solo upgrade and makes every pair it admits viable.
+- `no_local_gate_soloComplete_and_concurrentSafe`: no gate reading only `(x, own new draw, partner's current draw)` both admits every viable solo upgrade and makes every pair it admits viable under some choice of sensors (sharpened at `f2-critic`'s suggestion, board #26).
 - `bounded_supremum_local_gate_composes`: with declared bounds on each draw, headroom and a sensor covering the sum of the bounds, the pair is viable.
 - `reciprocalGate_sound`, `reciprocal_evolve_rejects_8_and_certifies_11`: the composed gate `3 + (preA + preB) ≤ x₀` refuses `(4, 4)` at `8`, admits it at `11`; there, with joint sensors at `19`, no run leaves the floor, both draw `4` on the first tick, and the reserve goes `11 → 4 → 5`.
 
