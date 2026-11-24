@@ -223,6 +223,8 @@ The patch and its neighbour are the scope prediction of the commons test with ga
 
 Hypotheses: balance, only active formations giving, activity needing support, descent, the coupled gate and *n* steps of excess from below *n* + *m*; confinement for the lineage theorem; one founder per whole for the founding theorems. These restate known results on cancer and the germ line (Buss 1987; Michod 1999; Michod and Roze 2001; Aktipis et al. 2015) with the flow; that a given tumour meets the clauses, or a germ line is sequestered, is empirical. [Record](../results/records/confined-rise-within-a-whole.md); [Founding.lean][founding].
 
+For derived `EmbodiedConversion` collapse and `Founding.Nested` evolutionary transitions joined to drawdown dynamics (`Becoming.EvolutionaryDrawdown`), see [derived-evolutionary-drawdown-and-transitions](../results/records/derived-evolutionary-drawdown-and-transitions.md).
+
 <a id="drift"></a>
 ## 6. Drift, fixation and mutation
 
@@ -291,6 +293,8 @@ Counts of offspring see only what the selection couples into: with the rest of t
 
 Required organization under a strict comparison with improvement witnesses, a conditional result on building shared capacity, is stated in [05](05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison).
 
+For transformative viability separating constructive evolution from zero-loss widening and unguarded churn (`Becoming.TransformativeViability`), see [transformative-viability-order](../results/records/transformative-viability-order.md); for `EmbodiedConversion` collapse and `Founding.Nested` transitions, see [derived-evolutionary-drawdown-and-transitions](../results/records/derived-evolutionary-drawdown-and-transitions.md); and for substrate-coupled `ScopeMode` co-evolution (`Becoming.EndogenousOrder`), see [endogenous-order-scope-coevolution-and-nash](../results/records/endogenous-order-scope-coevolution-and-nash.md) ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).
+
 <a id="empirical"></a>
 ## 9. Empirical correspondences
 
@@ -332,6 +336,7 @@ For the developmental reconstruction mechanism, an authored conventional dynamic
 - The programme's six requirements: formation of evolving organization; recovery of established explanations (on the spine still: inexact transmission across groups, drift with selection in sampled cohorts, rational amounts); evolution of the conditions of evolution (lineages open to inflow, read with what they draw from beyond); novel organization and changed units; comparative strength against an equally informed rival; evolved evaluation joined to its recognition, calibration and implementation; completing one does not complete the whole, and none is weakened to fit results ([programme](../history/THE-THEORY-OF-EVOLUTION.md)).
 - For the pace of selection within what flows in (§4): the carriers' joint law for an amount above one, in layers; the cap laws asked of the carriers alone; the least standing tied to need beyond one lemma; how long exact transmission of offspring number with growth can last within a bounded inflow; a frozen test of the whole-level form.
 - Moving a row past its standing in the boundary record. `GroupEnding.Flow.all_end` stands under a stated hypothesis: it is a root form at one step, whose hypotheses its model meets by definitions alone. `Flow.no_new_dependence`, whose relational part is a root form, meets that form's first hypothesis only through amount reasoning and stands, for now, among the rows with balance in their statements ([08 §7](08-METHOD.md#r-one-root-to-its-edge)). Which rows can move, and how, is open. The World premises stay hypotheses.
+- Constructive turnover separating transformative viability from unguarded churn (`Becoming.TransformativeViability`, [transformative-viability-order](../results/records/transformative-viability-order.md)) and continuous exergy fluctuation survival (`BecomingReals`, [unified-becoming-over-reals](../results/records/unified-becoming-over-reals.md)) are now formalized; empirical biological bindings (including `UE31b`'s failure on the flour-beetle archive) remain open ([CANONICAL-MAP.md](../CANONICAL-MAP.md)).
 
 [roles]: ../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean
 [labelledroles]: ../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LabelledRoles.lean
