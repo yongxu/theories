@@ -74,11 +74,14 @@ change across epochs and what must not.
    reduces identically to `EpochHandoffGate` / `EpochStep` at zero draw, and exhibits
    `SwitchoverDrawWitness` (at reserve `7` zero-draw accepts while switchover draw `5` leaves
    `2 < 3` and is refused; reserve `12` certifies and stays `≥ 3`). Part 6b
-   (`EndogenousSiteDiscoveryWitness`) contrasts two scalar `Obs` readouts of an initially
-   unmodelled site `.sNew`: `obsResidual` triggers `residualDrop` before breach so `.upgrade true`
-   enters `Viability.Kernel` protecting both sites, whereas `obsSilent` is indistinguishable from an
-   intact trajectory for every prefix detector up to `t ≤ 6` and `.upgrade true` is refused once
-   `.sNew < 3` at `t = 7`.
+   (`EndogenousSiteDiscoveryWitness`) contrasts two extra scalar state readouts (`Site2 → Nat`,
+   outside `family.obs`) of an initially unmodelled site `.sNew`: `obsResidual` drops `8 → 7` at
+   `t = 2` before breach (`residualDrop 8 7 = true`), paired with a gated `.upgrade true` entering
+   `Viability.Kernel` and protecting both sites, whereas `obsSilent` equals `8` on both `xDrain`
+   and an external counterfactual stock sequence `xIntact` (not an orbit of `family`) for every
+   `t ≤ 6` — so no prefix-only detector separates `xDrain` from `xIntact` up to `t ≤ 6` — while
+   `headroom` already fails by `t = 6` (`3 < 4`) and floor `x_crit = 3` is breached at `t = 7`
+   (`1 < 3`), where `gate_rejects_infeasible_entry` refuses `.upgrade true`.
 
 ## What stays fixed, and what this does not show (`AGENTS.md` Rule 2)
 
@@ -86,9 +89,12 @@ Fixed for all epochs: the site type and substrate law `G`, the environment draw 
 shape of `AnchorStep` (a floor once set too high cannot be lowered by the system itself), and the
 gate's checks. `epochProcess` models atomic zero-draw upgrades; `switchoverEpochProcess` models a
 known per-transition draw `switchDraw e e' site` (unknown or stochastic switchover draws remain
-outside the model). Pullback protects sites once entered; `obsResidual` shows endogenous discovery
-when the `Obs` stream reflects pre-breach drift, while `obsSilent` shows no prefix-only detector
-can trigger timely discovery when `Obs` stays silent until breach.
+outside the model). Pullback protects sites once entered; `obsResidual` and `obsSilent` are scalar
+state readouts outside `family.obs` (`sensor`), and `endogenous_site_discovery_protects_both` pairs
+the `t = 2` drop with an admissible `.upgrade` step rather than embedding an automatic controller in
+`EpochStep`. Under `obsSilent`, no prefix-only detector separates `xDrain` from the external
+reference `xIntact` for `t ≤ 6`, so any `Obs`-only rule must either trigger blindly without
+separation or wait past refusal (`headroom` fails at `t = 6`, floor breach at `t = 7`).
 -/
 
 namespace Becoming.OpenEndedComposition
@@ -2504,6 +2510,8 @@ def x₀ : Site2 → Nat
   | .sOld => 7
   | .sNew => 9
 
+/-- External intact counterfactual stock sequence (`7, 9` at every step; not an orbit of `family`,
+whose epoch `false` deterministically drains `.sNew`). -/
 def xIntact (_ : Nat) : Site2 → Nat := x₀
 
 /-- Exact epoch-`false` intra orbit starting from `(x₀, ⟨(), 1⟩)`. -/
@@ -2558,19 +2566,21 @@ theorem xDrain_orbit_values :
     xDrain 7 .sOld = 7 ∧ xDrain 7 .sNew = 1 :=
   ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
 
-/-- Scalar `Obs` stream with saturation plateau `8`, dropping before `crit = 3`. -/
+/-- Extra scalar state readout (`Site2 → Nat`, outside `family.obs`) with saturation plateau `8`,
+dropping before `crit = 3`. -/
 def obsResidual (x : Site2 → Nat) : Nat := CoreHelpers.natMin (x .sNew) 8
 
-/-- Scalar `Obs` stream constant at `8` until `x .sNew < 3`. -/
+/-- Extra scalar state readout (`Site2 → Nat`, outside `family.obs`) constant at `8` until
+`x .sNew < 3`. -/
 def obsSilent (x : Site2 → Nat) : Nat := if Nat.blt (x .sNew) 3 then 0 else 8
 
-/-- Blind residual detector reading only successive scalar `Obs` values. -/
+/-- Blind residual detector reading only successive scalar readout values. -/
 def residualDrop (prev cur : Nat) : Bool := Nat.blt cur prev
 
-/-- **Positive endogenous discovery:** under `obsResidual`, two certified intra steps drop
-`.sNew` `9 → 8 → 7`, shifting `obsResidual` `8 → 7` (`residualDrop 8 7 = true`), triggering a
-gated `.upgrade true ⟨(), 1⟩` that passes `EpochHandoffGate` and enters `Viability.Kernel` so
-every subsequent reachable state keeps `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`. -/
+/-- **Positive endogenous discovery witness:** under the scalar readout `obsResidual`, two certified
+intra steps drop `.sNew` `9 → 8 → 7`, shifting `obsResidual` `8 → 7` (`residualDrop 8 7 = true`),
+paired with a gated `.upgrade true ⟨(), 1⟩` that passes `EpochHandoffGate` and enters
+`Viability.Kernel` so every subsequent reachable state keeps `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`. -/
 theorem endogenous_site_discovery_protects_both :
     x₀ .sNew = 9 ∧
     obsResidual x₀ = 8 ∧
@@ -2615,10 +2625,12 @@ theorem obsSilent_agree_le_6 :
     exact absurd ht
       (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (by decide : 6 < 7) (Nat.le_add_left 7 n)))
 
-/-- **Negative impossibility under silent `Obs`:** under `obsSilent`, `xDrain` and `xIntact` give
-identical `obsSilent` value `8` for every `t ≤ 6`, so every `Obs`-only detector reading prefix
-`0..t` (`t ≤ 6`) returns identical output on both trajectories; and once `xDrain` crosses `< 3`
-at `t = 7`, `gate_rejects_infeasible_entry` refuses `.upgrade true`. -/
+/-- **Negative separation impossibility under silent readout:** under `obsSilent`, `xDrain` and the
+external reference `xIntact` give identical value `8` for every `t ≤ 6`, so no prefix-only
+detector reading `0..t` (`t ≤ 6`) separates them (any `Obs`-only rule must either trigger blindly
+without separation or wait past refusal, as `headroom` already fails from `t = 6` at `.sNew = 3 < 4`
+and floor `x_crit = 3` is breached at `t = 7` at `.sNew = 1 < 3`, where `gate_rejects_infeasible_entry`
+refuses `.upgrade true`). -/
 theorem silent_unmodelled_site_impossibility :
     (∀ t, xIntact t .sOld = 7 ∧ xIntact t .sNew = 9) ∧
     Reach (epochClosedProcess family allow)

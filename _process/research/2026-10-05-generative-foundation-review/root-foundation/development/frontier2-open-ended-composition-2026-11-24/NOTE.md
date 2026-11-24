@@ -231,13 +231,15 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-f
      - `switchover_certifies_12`: at reserve `12`, `switchoverClosedProcess` steps via `.upgrade true ⟨(), 1⟩` to `(fun _ => 7, ⟨true, ⟨(), 1⟩⟩)`, lies in `Viability.Kernel` for `epochClosedGuard BlindSensorUpgradeWitness.family false`, and keeps `3 ≤ st.1 ()` for every reachable state.
 2. **Part 6b — Endogenous discovery of an unmodelled site before floor breach (`EndogenousSiteDiscoveryWitness`):**
    - Over `Site2 := SiteExpansionBlindnessWitness.Site2`, defines `family : EpochFamily Bool Site2 Unit` where epoch `false` tracks only `.sOld` (`pre .sNew = 2`, `post .sNew = 2`, `crit .sNew = 0`) and epoch `true` tracks both `.sOld` and `.sNew` (`crit = 3`, `pre = 1`, `warn = 5`), with `cert`, `total`, `anchor_false_true`, and the exact intra orbit `xDrain` (`xDrain_sOld`, `xDrain_step`, `xDrain_reach`, `xDrain_orbit_values`: `.sNew` goes `9 → 8 → 7 → 6 → 5 → 4 → 3 → 1` while `.sOld` remains `7`).
-   - `endogenous_site_discovery_protects_both`: under `obsResidual x := CoreHelpers.natMin (x .sNew) 8` and `residualDrop prev cur := Nat.blt cur prev`, two certified intra steps drop `.sNew` `9 → 8 → 7` (`obsResidual` drops `8 → 7`, `residualDrop 8 7 = true`), triggering `.upgrade true ⟨(), 1⟩` through `EpochHandoffGate` and entering `Viability.Kernel` for `epochClosedGuard family true` so every subsequent reachable state satisfies `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`.
-   - `silent_unmodelled_site_impossibility`: under `obsSilent x := if Nat.blt (x .sNew) 3 then 0 else 8`, `xDrain` and the intact counterfactual `xIntact` (`7, 9`) produce `obsSilent = 8` at every `t ≤ 6` (`obsSilent_agree_le_6`), so every `Obs`-only detector `D : (Nat → Nat) → Bool` reading prefix `0..t` (`t ≤ 6`) gives identical output on both runs (`¬ (D ... = true ∧ D ... = false)`), and once `.sNew` drops to `1 < 3` at `t = 7`, `gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`.
+   - `endogenous_site_discovery_protects_both`: pairs the `t = 2` drop of the extra scalar state readout `obsResidual x := CoreHelpers.natMin (x .sNew) 8` (`9 → 8 → 7` in `.sNew`, `obsResidual` `8 → 7`, `residualDrop 8 7 = true`) with an admissible gated `.upgrade true ⟨(), 1⟩` through `EpochHandoffGate`, entering `Viability.Kernel` for `epochClosedGuard family true` so every subsequent reachable state satisfies `3 ≤ st.1 .sOld ∧ 3 ≤ st.1 .sNew`.
+   - `silent_unmodelled_site_impossibility`: under the extra scalar state readout `obsSilent x := if Nat.blt (x .sNew) 3 then 0 else 8`, `xDrain` and the external counterfactual stock trajectory `xIntact` (`7, 9`, outside `family`) produce `obsSilent = 8` at every `t ≤ 6` (`obsSilent_agree_le_6`), so no prefix-only detector `D : (Nat → Nat) → Bool` reading `0..t` (`t ≤ 6`) separates `xDrain` from `xIntact` (`¬ (D ... = true ∧ D ... = false)`); any `Obs`-only rule must therefore either trigger blindly without separation or wait past refusal (`headroom` already fails from `t = 6` at `x .sNew = 3 < 4`, and floor `x_crit = 3` is breached at `t = 7` at `x .sNew = 1 < 3`, where `gate_rejects_infeasible_entry` refuses `.upgrade true` for every `anchored`, `p`, `p'`, and `st'`).
 
 ### 8.2 What Part 6 does not show (Rule 2)
 
 - `SwitchoverHandoffGate` assumes a known deterministic bound `switchDraw e e' site`; unknown or stochastic switchover draws are outside the model.
-- `endogenous_site_discovery_protects_both` relies on the scalar `Obs` stream (`obsResidual`) already reflecting pre-breach drift in `.sNew`; as `silent_unmodelled_site_impossibility` proves, when `Obs` stays flat until floor breach (`obsSilent`), no prefix-only detector can separate draining from intact runs in time.
+- `obsResidual` and `obsSilent` are extra scalar state readouts (`Site2 → Nat`) outside `family.obs` (`sensor`), and `endogenous_site_discovery_protects_both` pairs the `t = 2` pre-breach drop (`8 → 7`) with an admissible `.upgrade` step rather than embedding an automatic controller inside `EpochStep`.
+- `xIntact` is an external counterfactual stock trajectory outside `family` (not an orbit of `family`, whose epoch `false` deterministically drains `.sNew`).
+- `silent_unmodelled_site_impossibility` rules out separating `xDrain` from `xIntact` on prefixes `0..t` (`t ≤ 6`); it does not rule out a trivial constant-`true` rule that triggers blindly without separation.
 
 ### 8.3 Updated counts and verification
 
@@ -265,11 +267,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/integrated-correction/general-f
     }
   },
   "seconds": {
-    "Becoming.OpenEndedComposition": 1.828,
-    "BecomingOpenEndedCompositionAxiomAudit": 0.976,
-    "BecomingOpenEndedCompositionSignatures": 0.714,
-    "Becoming.OpenEndedComposition.PreludeOnly": 1.679
+    "Becoming.OpenEndedComposition": 2.618,
+    "BecomingOpenEndedCompositionAxiomAudit": 0.994,
+    "BecomingOpenEndedCompositionSignatures": 0.671,
+    "Becoming.OpenEndedComposition.PreludeOnly": 2.443
   }
 }
-```
 ```
