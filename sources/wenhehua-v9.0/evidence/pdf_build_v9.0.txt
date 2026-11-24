@@ -1,0 +1,7 @@
+v9.0 final PDF build, 2026-11-24
+Engine: Pandoc + XeLaTeX; Noto Serif CJK SC / Noto Sans CJK SC
+Final books: 44, 128, 67 pages; total 239.
+Final warning logs: all empty.
+Build commands: python3 make_v9_books.py monograph|theory|lexicon
+Environment note: this execution image needed a scratch XeLaTeX format generated from its installed TeX sources, plus explicit TEXMF search paths. A normally configured TeX installation can run the documented commands directly.
+CJK paragraph line breaking uses XeTeX's built-in zh line-break locale, without requiring xeCJK.

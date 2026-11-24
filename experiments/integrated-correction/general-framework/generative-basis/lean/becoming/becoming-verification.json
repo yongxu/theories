@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261124T061916.734612Z",
+  "utc": "20261124T083850.553338Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261124T061916.734612Z",
+  "retained_run": "becoming-checks/20261124T083850.553338Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -415,6 +415,8 @@
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
     "Becoming.MasterSpine",
+    "Becoming.OplaxHistory",
+    "Becoming.DoubleKernel",
     "Becoming",
     "Becoming.Hexagrams",
     "Becoming.HexagramPlaces",
@@ -847,6 +849,8 @@
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
     "Becoming.MasterSpine",
+    "Becoming.OplaxHistory",
+    "Becoming.DoubleKernel",
     "Becoming"
   ],
   "foundation_modules": [
@@ -1293,6 +1297,8 @@
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
     "Becoming.MasterSpine",
+    "Becoming.OplaxHistory",
+    "Becoming.DoubleKernel",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -1728,6 +1734,8 @@
     "Becoming.EndogenousOrder",
     "Becoming.AlignmentSpine",
     "Becoming.MasterSpine",
+    "Becoming.OplaxHistory",
+    "Becoming.DoubleKernel",
     "Becoming.SeedReach",
     "Becoming.ScopedReach",
     "Becoming.Hexagrams",
@@ -2163,6 +2171,8 @@
     "Becoming.EndogenousOrder": "becoming/Becoming/EndogenousOrder.lean",
     "Becoming.AlignmentSpine": "becoming/Becoming/AlignmentSpine.lean",
     "Becoming.MasterSpine": "becoming/Becoming/MasterSpine.lean",
+    "Becoming.OplaxHistory": "becoming/Becoming/OplaxHistory.lean",
+    "Becoming.DoubleKernel": "becoming/Becoming/DoubleKernel.lean",
     "Becoming.SeedReach": "becoming/Becoming/SeedReach.lean",
     "Becoming.ScopedReach": "becoming/Becoming/ScopedReach.lean",
     "Becoming.Hexagrams": "becoming/Becoming/Hexagrams.lean",
@@ -2598,6 +2608,8 @@
     "Becoming.EndogenousOrder": "8e03226f29101afce5ca456ee2786aa31d1fb558399d2ef3d69c2e003b94cb34",
     "Becoming.AlignmentSpine": "934bb44b4a6a5203a7659ba186d6f8b63e5002d6465afd113ad9031f3d536f9c",
     "Becoming.MasterSpine": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
+    "Becoming.OplaxHistory": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6",
+    "Becoming.DoubleKernel": "6b6d1a8e143454ba6612e4303a963f22cf806da10ed2469c34485afddef44c47",
     "Becoming.SeedReach": "6c21f636369688b6247052cb7434aebdd1669dc2dc0ff3a906a2032193deb066",
     "Becoming.ScopedReach": "0432efe6bf31ceff196a4d058a6b77710871ed130eb562dc0ad05d00a873e5ae",
     "Becoming.Hexagrams": "7bcc1ca10eb46afc25efe9c5d8c54ce9840c0be831b8427f0dc3b024117786a3",
@@ -2616,17 +2628,18 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75"
+    "Becoming": "cac1037c8d19726577de13f3c07aed857e3ea3e601e386ace17b5e6d523b3e25"
   },
   "checker_sha256": {
-    "check_becoming.py": "efd4803977c41c9ccc3f929e02c78947feb289706fedff57c09c3c5cb1bfce8b",
+    "check_becoming.py": "4743c40605e77668915759f1d15131b933566648dbf21a7e1aa70ad820356149",
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "runner_sha256": "cdc5b2e9fe6915233f5e39ec1b4ad30b615e15dbbea393adda2effba0e7c7de2",
   "source_commit": {
-    "main": "8490bba3641b5c391bddf49ef0224fbd54425ba4",
+    "main": "25a0de25cbf7f7c81f9876786ff676f1b475044a",
     "copied": [
-      "Becoming.MasterSpine.lean",
+      "Becoming.DoubleKernel.lean",
+      "Becoming.OplaxHistory.lean",
       "Becoming.lean",
       "check_becoming.py"
     ]
@@ -2637,12 +2650,15 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "BecomingMasterSpineSignatures.log",
+      "BecomingOplaxHistorySignatures.log",
+      "BecomingDoubleKernelSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
       "EnvironmentAudit.log",
       "Controls.log",
+      "Becoming.OplaxHistory.PreludeOnly.log",
+      "Becoming.DoubleKernel.PreludeOnly.log",
       "Becoming.PreludeOnly.log"
     ],
     "reused": {
@@ -7598,6 +7614,26 @@
         "utc": "20261124T061457.033356Z",
         "retained": "scratch build, not retained: /Users/ren/.gemini/antigravity/brain/e447f583-8be1-44bd-9dbc-7f74e7e1cdd6/scratch/tree"
       },
+      "BecomingMasterSpineSignatures.log": {
+        "utc": "20261124T061916.734612Z",
+        "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261124T061916.734612Z"
+      },
+      "Becoming.OplaxHistory.log": {
+        "utc": "20261124T082311.407869Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/u6-scratch"
+      },
+      "BecomingOplaxHistoryAxiomAudit.log": {
+        "utc": "20261124T082311.407869Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/u6-scratch"
+      },
+      "Becoming.DoubleKernel.log": {
+        "utc": "20261124T083733.882558Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/u6-scratch"
+      },
+      "BecomingDoubleKernelAxiomAudit.log": {
+        "utc": "20261124T083733.882558Z",
+        "retained": "scratch build, not retained: /Users/ren/tmp/u6-scratch"
+      },
       "Becoming.SeedReach.log": {
         "utc": "20261123T234229.023849Z",
         "retained": "/Users/ren/tmp/work-wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261123T234229.023849Z"
@@ -10783,6 +10819,12 @@
       "Becoming.MasterSpine.log": "a16e2cee04b7cbadb8f19bc30372bac28095aa62b2212e37e2e2ccfb6e1b4496",
       "BecomingMasterSpineAxiomAudit.log": "873014d8d44048585a3db72ffde7c0ff1b1d0ae2a80d3b18808d9e1b477d20cd",
       "BecomingMasterSpineSignatures.log": "2cd3b269430f0c6f5cbe2b974e5a2e270306e98f598733d98bf6e7e86156b625",
+      "Becoming.OplaxHistory.log": "ec24d8ffb49be063e0203c4a231870bfc9d028b1f89072f63cb98c28cf4e168e",
+      "BecomingOplaxHistoryAxiomAudit.log": "b1b67eb9fa4b9ef6757655c9e53581b73029f1ad9f181b00790b500e2256823b",
+      "BecomingOplaxHistorySignatures.log": "84d1df6001e4e2e13b6b3827f2af2a25e70254dca82ad0ffeeef5ab237a838da",
+      "Becoming.DoubleKernel.log": "bd1cb7d87a2d740a5c927e2c135911ed5b722a84249c86f966a1757e523cc558",
+      "BecomingDoubleKernelAxiomAudit.log": "27cac75532a1fa5cbde8fb4ae93687ea24533e7deb533d6ba919f1efa6e14203",
+      "BecomingDoubleKernelSignatures.log": "7e0f4e121224e0b0d6c72463de07e1447ac5cde9de4d2da75a710699dcfd2f34",
       "Becoming.SeedReach.log": "cf9eb2713c746bcf5f5fd59b861f73d117197f8561bccf7819db09a8a01c0754",
       "BecomingSeedReachAxiomAudit.log": "70e943984f6d846910ab8a8ba2613993549f8f1e17321c78d6e9753adef89f02",
       "BecomingSeedReachSignatures.log": "c6473f5e4d2ea119627f0dec2ab5ea51e787e1e8056ee3593095bdefef7a9f0a",
@@ -10837,11 +10879,11 @@
       "Becoming.ResponseLearning.log": "1a17665f5c5768e139a04cfd95a69b8740edbf8eb4c8996ca97876d8e5d60137",
       "BecomingResponseLearningAxiomAudit.log": "01c055930301ca704665e4d34a2ebd9569b3a2df3f79d419c578e9bc71370a99",
       "BecomingResponseLearningSignatures.log": "556b1621184f75a2371f3f0b8bb8288680e97a2aa14584fe51fda7442c215b18",
-      "Becoming.log": "891d1cef3069857f948f81e2bdc4d4a06af40120ddc783326797c21dbd9b9aa3",
-      "BecomingAxiomAudit.log": "2f9f50de4bf31047f6db20f0d343271d04f7ba9745090b3ef8abece88fe3b81a",
-      "BecomingSignatures.log": "aef7b164ddb78feba27d0f16104520e1d76ca1a1d7bcd72042ecbf08f50cabde",
-      "EnvironmentAudit.log": "a65fc15cb0359fc8629e7631c678295f5eec93e919069f4765963000ce06cea2",
-      "Controls.log": "d34e572f0571a5d67b3b0d45dad36359f2ab82e25b5e90de7e7d5f9a4975ba04",
+      "Becoming.log": "07a6c1d4320842c0ad7cd3936ba11131a8e4ed7795b5f8c1432b9c14c4cf4536",
+      "BecomingAxiomAudit.log": "815a33057e0bbe0b822e156d5c66488c7d753454dd034151f572d0c42a34f44c",
+      "BecomingSignatures.log": "9e81cd340d001a58497781fff6a2a560eb89543b757b6fe875bc4379bf0783f3",
+      "EnvironmentAudit.log": "918bc72c22c355f0c93b6c3bd18628a0814e85de4237eb5dedd7857a91db198d",
+      "Controls.log": "e891346e4b09b153c07abf745d33013438eb9b7997e921b49d764c49d36a7f34",
       "Becoming.Grammar.PreludeOnly.log": "76d3cd6879ccdfaed9db9cc98947cb68fe604b6ec9c632c3569df134642978a0",
       "Becoming.GrammarReadings.PreludeOnly.log": "96d3eaac03a03246c68b669a66e92565f381f028768625af72b0ecd42c10d168",
       "Becoming.GrammarMap.PreludeOnly.log": "57b332119ea3feae52717dc0b9c6e6a8461bd8fd25ec4a4b45ba5bbf5e0d743b",
@@ -11256,6 +11298,8 @@
       "Becoming.EndogenousOrder.PreludeOnly.log": "e32c1ef1e9e775c8168265c51d97b1fa78117be624194d997dad26a75b13f210",
       "Becoming.AlignmentSpine.PreludeOnly.log": "60df843f22ce3a4c4b741a254f399d6bbf268abcefee1718fbf370a021dbb130",
       "Becoming.MasterSpine.PreludeOnly.log": "6cd1f240674a3e2288632f562c775941fe321c4c426f9fba7b338b67fd604eda",
+      "Becoming.OplaxHistory.PreludeOnly.log": "043d33425376b19b961b9fe30b0a1ec0905eacc87fb459107650feea71618f4e",
+      "Becoming.DoubleKernel.PreludeOnly.log": "61d11a3095bbeae0ea061bbd3889a1d44ea06c56f7f33b9b226e55603def21bf",
       "Becoming.SeedReach.PreludeOnly.log": "7e04a6d8b67d6f20b37825cb985a826beca383e22fddc30fcef1c24761cb2de1",
       "Becoming.ScopedReach.PreludeOnly.log": "61c4ec26936ea37d90b16cd0691ac396824562ea6f90f9d0a7f8d72b2a6b2301",
       "Becoming.Hexagrams.PreludeOnly.log": "a28cc0c497c7a60e4c4cb2d1994079fee9ffa3ee44c56f5b4cc946a5fcda47da",
@@ -11274,19 +11318,22 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "c666414c0d47f431ba3c3ff5d5f96f1d473ab4bc867fcea08a8aa3dff90a9526",
       "Becoming.RuleRebuilding.PreludeOnly.log": "45867368e3275e934e74d8d0eaaec1ae15900222483070f9e34af25882c4b13d",
       "Becoming.ResponseLearning.PreludeOnly.log": "80cf26ffe53e097b90b10e96f1ac2681f491877019a10afda5e0c877896a0a31",
-      "Becoming.PreludeOnly.log": "1ed8c690dd2465a5827c555f142c2824bcc0d6cf29e01a785c861d8a0b4e89f6"
+      "Becoming.PreludeOnly.log": "0bc5b6feced91ea6864732f326722651f9c06c8826fbff25307b35623908ce3b"
     },
     "seconds": {
-      "version.log": 0.904,
-      "BecomingMasterSpineSignatures.log": 2.077,
-      "Becoming.log": 2.461,
-      "BecomingAxiomAudit.log": 0.613,
-      "BecomingSignatures.log": 0.604,
-      "EnvironmentAudit.log": 44.566,
-      "Controls.log": 0.663,
-      "Becoming.PreludeOnly.log": 1.493
+      "version.log": 0.252,
+      "BecomingOplaxHistorySignatures.log": 1.764,
+      "BecomingDoubleKernelSignatures.log": 1.732,
+      "Becoming.log": 2.178,
+      "BecomingAxiomAudit.log": 0.53,
+      "BecomingSignatures.log": 0.52,
+      "EnvironmentAudit.log": 41.913,
+      "Controls.log": 0.523,
+      "Becoming.OplaxHistory.PreludeOnly.log": 2.997,
+      "Becoming.DoubleKernel.PreludeOnly.log": 4.633,
+      "Becoming.PreludeOnly.log": 0.303
     },
-    "wall_seconds": 50.387
+    "wall_seconds": 46.076
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -11856,6 +11903,8 @@
       "alignment-reals/alignment-reals-checks/20261123T212649.960965Z/verification.json",
       "alignment-reals/alignment-reals-checks/20261123T234535.045613Z/verification.json",
       "alignment-reals/alignment-reals-verification.json",
+      "becoming-reals/becoming-reals-checks/20261124T062021.570166Z/verification.json",
+      "becoming-reals/becoming-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -11874,6 +11923,8 @@
       "becoming/fallible-inquiry-checks/20261123T213115.489029Z/verification.json",
       "becoming/fallible-inquiry-checks/20261123T235037.872769Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
+      "conditional/renewal/renewal-bridge-checks/20261124T062107.825558Z/verification.json",
+      "conditional/renewal/renewal-bridge-verification.json",
       "deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json",
       "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json",
@@ -12090,6 +12141,8 @@
       "alignment-reals/alignment-reals-checks/20261123T212649.960965Z/verification.json",
       "alignment-reals/alignment-reals-checks/20261123T234535.045613Z/verification.json",
       "alignment-reals/alignment-reals-verification.json",
+      "becoming-reals/becoming-reals-checks/20261124T062021.570166Z/verification.json",
+      "becoming-reals/becoming-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -12109,6 +12162,8 @@
       "becoming/fallible-inquiry-checks/20261123T235037.872769Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
       "conditional/native-port/verification.json",
+      "conditional/renewal/renewal-bridge-checks/20261124T062107.825558Z/verification.json",
+      "conditional/renewal/renewal-bridge-verification.json",
       "conditional/renewal/verification.json",
       "conditional/verification.json",
       "deeper/acquired-support-use-checks/20261008T112000.799032Z/receipt.json",
@@ -12583,6 +12638,8 @@
       "alignment-reals/alignment-reals-checks/20261123T212649.960965Z/verification.json",
       "alignment-reals/alignment-reals-checks/20261123T234535.045613Z/verification.json",
       "alignment-reals/alignment-reals-verification.json",
+      "becoming-reals/becoming-reals-checks/20261124T062021.570166Z/verification.json",
+      "becoming-reals/becoming-reals-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T125020.784849Z/verification.json",
@@ -12594,6 +12651,8 @@
       "becoming/fallible-inquiry-checks/20261018T102455.825667Z/verification.json",
       "becoming/fallible-inquiry-checks/20261018T174801.206046Z/verification.json",
       "becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+      "conditional/renewal/renewal-bridge-checks/20261124T062107.825558Z/verification.json",
+      "conditional/renewal/renewal-bridge-verification.json",
       "deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json",
       "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json",
@@ -13636,6 +13695,8 @@
     "Becoming.EndogenousOrder": 709,
     "Becoming.AlignmentSpine": 294,
     "Becoming.MasterSpine": 756,
+    "Becoming.OplaxHistory": 525,
+    "Becoming.DoubleKernel": 751,
     "Becoming.SeedReach": 31,
     "Becoming.ScopedReach": 60,
     "Becoming.Hexagrams": 199,
@@ -14582,6 +14643,132 @@
       "propext"
     ],
     "Becoming.MasterSpine.WholeBecomingWitness.BadPlace.badAgent.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.SpanHom.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.RelSpan.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.BCRight.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.PullbackElem.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.BCLeft.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.ProcessStepWitness.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.SpanFunctor.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamObj.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.SumPreservingFunctor.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.EmergentCrossSeamWitness.PushoutSpec.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.Bij.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.OplaxHistory.BracketTree.split.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.compR.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedExpr.par.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Sig3Interp.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SqTerm.idV.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SqTerm.gen.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedExpr.seq.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SqTerm.idH.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.StrictDoubleCat.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.compH3.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.transport.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SigInterp.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.compV3.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedExpr.atom.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedProof.seqCong.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.gen3.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedProof.parCong.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.StrictTripleCat.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.DoubleSig.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedExpr.assemble.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SqTerm.compV.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Double3Sig.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedProof.assembleCong.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Frame.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.FunctorialSqEval.mk.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.SqTerm.compH.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedProof.chiInv.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.TypedPath.cons.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.GuardedProof.trans.injEq": [
+      "propext"
+    ],
+    "Becoming.DoubleKernel.Cell3Term.id3.injEq": [
       "propext"
     ],
     "Becoming.Hexagram.mk.injEq": [
@@ -163901,6 +164088,1053 @@
       "kernel_checked": true
     },
     {
+      "module": "Becoming.OplaxHistory",
+      "spine": true,
+      "layer": "core",
+      "theorems": 52,
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.Bij"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.Bij.refl"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.Bij.trans"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.Bij.symm"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.Inj"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.Surj"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.IsBijective"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.isBijective_of_bij"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.powTwo"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.powTwo_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.eqRec_inj"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.RelSpan"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.SpanHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanHom.id"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanHom.comp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanHomEq"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.idSpan"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.PullbackElem"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.PullbackElem.ext"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.compSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.compSpanHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.unitLeftHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.unitRightHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.assocHom"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.SpanFunctor"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanFunctor.id"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanFunctor.comp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanFunctor.onSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.SpanFunctor.onHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.chi"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_natural"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.idLiftHom"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_unit_left"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_unit_right"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_assoc_coherence"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_comp_functor"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.RelSpan.castRight"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.map_castRight"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.flatSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.flatProj"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.stepCast_inj"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.flatSpan_proj_unique"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.chiFlat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chiFlat_proj"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.OplaxHistory.BracketTree"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.BracketTree.eval"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.BracketTree.mapF"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.BracketTree.chiEval"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.BracketTree.proj"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bracketTree_coherence_all_n"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.sumBlockLens"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.blockStart"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.blockLenAt"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.evalPartition"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.partBlockProj"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.evalPartition_proj_unique"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.macro_refinement_functorial"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.BCLeft"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.BCRight"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.BCLeft.ext_sameU"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bcRight_val_eq_of_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bcLeft_mk_ext"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bcRight_mk_ext"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.bcMap"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.FImageIsPullback"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_bijective_iff_pullback"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.chi_bijective_iff_bc_all"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.eqRec_symm_cancel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bc_isBijective_of_chi_bij"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamObj"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.seamPullback"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.PushoutSpec"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.midD"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.stepW"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.stepV"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.rW"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.lV"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.qMid"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.qW"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.qV"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.qLoc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip_invol"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_invariant"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.singleOrbit"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2ChiTwoToOne"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.sub_lt_of_ge_lt_double"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_above"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_inj"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.ProcessStepWitness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.processStepSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.constFlatSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.chiConstFlat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.flatSpanToTrace"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.traceToFlatSpan"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.trace_equiv_flatChain"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.exactAbsChainWithEnds"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.exactAbsChainMap"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.exactAbsChainMap_endpoints"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.FiberViabilitySplit"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.CoupledState"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.stepFn"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.coprodSpan"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.OplaxHistory.coprod_pullback_iso"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.OplaxHistory.SumPreservingFunctor"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.coprod_strong_vs_time_oplax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.OplaxHistory.span_step_grammar_lumping"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.OplaxHistory.Bij": [],
+        "Becoming.OplaxHistory.Bij.refl": [],
+        "Becoming.OplaxHistory.Bij.trans": [],
+        "Becoming.OplaxHistory.Bij.symm": [],
+        "Becoming.OplaxHistory.Inj": [],
+        "Becoming.OplaxHistory.Surj": [],
+        "Becoming.OplaxHistory.IsBijective": [],
+        "Becoming.OplaxHistory.isBijective_of_bij": [],
+        "Becoming.OplaxHistory.powTwo": [],
+        "Becoming.OplaxHistory.powTwo_pos": [],
+        "Becoming.OplaxHistory.eqRec_inj": [],
+        "Becoming.OplaxHistory.RelSpan": [],
+        "Becoming.OplaxHistory.SpanHom": [],
+        "Becoming.OplaxHistory.SpanHom.id": [],
+        "Becoming.OplaxHistory.SpanHom.comp": [],
+        "Becoming.OplaxHistory.SpanHomEq": [],
+        "Becoming.OplaxHistory.idSpan": [],
+        "Becoming.OplaxHistory.PullbackElem": [],
+        "Becoming.OplaxHistory.PullbackElem.ext": [],
+        "Becoming.OplaxHistory.compSpan": [],
+        "Becoming.OplaxHistory.compSpanHom": [],
+        "Becoming.OplaxHistory.unitLeftHom": [],
+        "Becoming.OplaxHistory.unitRightHom": [],
+        "Becoming.OplaxHistory.assocHom": [],
+        "Becoming.OplaxHistory.SpanFunctor": [],
+        "Becoming.OplaxHistory.SpanFunctor.id": [],
+        "Becoming.OplaxHistory.SpanFunctor.comp": [],
+        "Becoming.OplaxHistory.SpanFunctor.onSpan": [],
+        "Becoming.OplaxHistory.SpanFunctor.onHom": [],
+        "Becoming.OplaxHistory.chi": [],
+        "Becoming.OplaxHistory.chi_left": [],
+        "Becoming.OplaxHistory.chi_right": [],
+        "Becoming.OplaxHistory.chi_natural": [],
+        "Becoming.OplaxHistory.idLiftHom": [],
+        "Becoming.OplaxHistory.chi_unit_left": [],
+        "Becoming.OplaxHistory.chi_unit_right": [],
+        "Becoming.OplaxHistory.chi_assoc_coherence": [],
+        "Becoming.OplaxHistory.chi_comp_functor": [],
+        "Becoming.OplaxHistory.RelSpan.castRight": [],
+        "Becoming.OplaxHistory.map_castRight": [],
+        "Becoming.OplaxHistory.flatSpan": [],
+        "Becoming.OplaxHistory.flatProj": [],
+        "Becoming.OplaxHistory.stepCast_inj": [],
+        "Becoming.OplaxHistory.flatSpan_proj_unique": [],
+        "Becoming.OplaxHistory.chiFlat": [],
+        "Becoming.OplaxHistory.chiFlat_proj": [],
+        "Becoming.OplaxHistory.BracketTree": [],
+        "Becoming.OplaxHistory.BracketTree.eval": [],
+        "Becoming.OplaxHistory.BracketTree.mapF": [],
+        "Becoming.OplaxHistory.BracketTree.chiEval": [],
+        "Becoming.OplaxHistory.BracketTree.proj": [],
+        "Becoming.OplaxHistory.bracketTree_coherence_all_n": [],
+        "Becoming.OplaxHistory.sumBlockLens": [],
+        "Becoming.OplaxHistory.blockStart": [],
+        "Becoming.OplaxHistory.blockLenAt": [],
+        "Becoming.OplaxHistory.evalPartition": [],
+        "Becoming.OplaxHistory.partBlockProj": [],
+        "Becoming.OplaxHistory.evalPartition_proj_unique": [],
+        "Becoming.OplaxHistory.macro_refinement_functorial": [],
+        "Becoming.OplaxHistory.BCLeft": [],
+        "Becoming.OplaxHistory.BCRight": [],
+        "Becoming.OplaxHistory.BCLeft.ext_sameU": [],
+        "Becoming.OplaxHistory.bcRight_val_eq_of_eq": [],
+        "Becoming.OplaxHistory.bcLeft_mk_ext": [],
+        "Becoming.OplaxHistory.bcRight_mk_ext": [],
+        "Becoming.OplaxHistory.bcMap": [],
+        "Becoming.OplaxHistory.FImageIsPullback": [],
+        "Becoming.OplaxHistory.chi_bijective_iff_pullback": [],
+        "Becoming.OplaxHistory.chi_bijective_iff_bc_all": [],
+        "Becoming.OplaxHistory.eqRec_symm_cancel": [],
+        "Becoming.OplaxHistory.bc_isBijective_of_chi_bij": [],
+        "Becoming.OplaxHistory.bc_empty_family_trivial_counterexample": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamObj": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.SeamHom": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.seamPullback": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.PushoutSpec": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.midD": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.stepW": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.stepV": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.rW": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.lV": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.qMid": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.qW": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.qV": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.qLoc": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne_not_surjective": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour": [],
+        "Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour_not_surjective": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.diagFlip_invol": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_invariant": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.pairOrbit_universal": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.singleOrbit": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2ChiTwoToOne": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_chi_two_to_one": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.sub_lt_of_ge_lt_double": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_above": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.nthBits_inj": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2ChainChi": [],
+        "Becoming.OplaxHistory.C2RelativeLossWitness.c2_n_step_collapse": [],
+        "Becoming.OplaxHistory.ProcessStepWitness": [],
+        "Becoming.OplaxHistory.processStepSpan": [],
+        "Becoming.OplaxHistory.constFlatSpan": [],
+        "Becoming.OplaxHistory.chiConstFlat": [],
+        "Becoming.OplaxHistory.flatSpanToTrace": [],
+        "Becoming.OplaxHistory.traceToFlatSpan": [],
+        "Becoming.OplaxHistory.trace_equiv_flatChain": [],
+        "Becoming.OplaxHistory.exactAbsChainWithEnds": [],
+        "Becoming.OplaxHistory.exactAbsChainMap": [],
+        "Becoming.OplaxHistory.exactAbsChainMap_endpoints": [],
+        "Becoming.OplaxHistory.exactCausal_lifts_implies_chi_surjective": [],
+        "Becoming.OplaxHistory.causalGoodhart_chi_non_surjective": [],
+        "Becoming.OplaxHistory.FiberViabilitySplit": [],
+        "Becoming.OplaxHistory.fiberSplit_refutes_macro_viability_soundness": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.CoupledState": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.stepFn": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.proc": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.guardS": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2ProjMicro": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uInPhase_kernel": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.uAntiPhase_not_kernel": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_fiber_split": [],
+        "Becoming.OplaxHistory.C2CoupledAlignmentWitness.c2_coupled_no_macro_soundness": [],
+        "Becoming.OplaxHistory.coprodSpan": [],
+        "Becoming.OplaxHistory.coprod_pullback_iso": [],
+        "Becoming.OplaxHistory.SumPreservingFunctor": [],
+        "Becoming.OplaxHistory.coprod_strong_vs_time_oplax": [],
+        "Becoming.OplaxHistory.guarded_interchange_upgrades_iff_bc": [],
+        "Becoming.OplaxHistory.reserve_disjoint_vs_serial_reconfig": [],
+        "Becoming.OplaxHistory.span_step_grammar_lumping": []
+      },
+      "kernel_checked": true
+    },
+    {
+      "module": "Becoming.DoubleKernel",
+      "spine": true,
+      "layer": "core",
+      "theorems": 35,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.congrArg2"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.TypedPath"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.pathComp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.pathComp_nil_l"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.pathComp_nil_r"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.pathComp_assoc"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.Frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.frame_eq_components"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.frame_ext"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.DoubleSig"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.SqTerm"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.HasFrame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.pathComp_subst"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.hasFrame_unique"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.EqCert"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_preserves_frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_frame_eq"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.StrictDoubleCat"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalHPathRaw"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalVPathRaw"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.SigInterp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalHPath"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalVPath"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalHPath_endpoints"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalVPath_endpoints"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalHPath_comp"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalVPath_comp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalSqTerm"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalSqTerm_frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_sound"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.FunctorialSqEval"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.free_double_eval_unique"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.natTallyDoubleCat"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.weightInterp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.termWeight"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalSqTerm_weight_eq"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_preserves_weight"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.Double3Sig"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.Cell3Term"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.HasEndpoints3"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.hasEndpoints3_common_frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.hasEndpoints3_unique_mod_2d"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.Eq3Cert"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_assocH_of_frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.eqCert_assocV_of_frame"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.cell3_eq_preserves_endpoints"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.conservative_over_base_2d"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.hasEndpoints3_weight_mono"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.directedNonCollapse2Sig"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.directedNonCollapse3Sig"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.StrictTripleCat"
+        },
+        {
+          "kind": "structure",
+          "name": "Becoming.DoubleKernel.Sig3Interp"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalCell3Term"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalCell3Term_endpoints"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalCell3Term_compH3_compat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalCell3Term_compV3_compat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.evalCell3Term_compR_compat"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.free_3d_eval_sound"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.GuardedExpr"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalGuardedExpr"
+        },
+        {
+          "kind": "inductive",
+          "name": "Becoming.DoubleKernel.GuardedProof"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.parSeqDistHomLR"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.parSeqDistHomRL"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.parSpanHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.chiInvSpanHom"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.DoubleKernel.evalGuardedProof"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.guarded_oplax_sound"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.DoubleKernel.strict_vs_guarded_separation_witness"
+        }
+      ],
+      "axiom_dependencies": {
+        "Becoming.DoubleKernel.congrArg2": [],
+        "Becoming.DoubleKernel.TypedPath": [],
+        "Becoming.DoubleKernel.pathComp": [],
+        "Becoming.DoubleKernel.pathComp_nil_l": [],
+        "Becoming.DoubleKernel.pathComp_nil_r": [],
+        "Becoming.DoubleKernel.pathComp_assoc": [],
+        "Becoming.DoubleKernel.Frame": [],
+        "Becoming.DoubleKernel.frame_eq_components": [],
+        "Becoming.DoubleKernel.frame_ext": [],
+        "Becoming.DoubleKernel.DoubleSig": [],
+        "Becoming.DoubleKernel.SqTerm": [],
+        "Becoming.DoubleKernel.HasFrame": [],
+        "Becoming.DoubleKernel.pathComp_subst": [],
+        "Becoming.DoubleKernel.hasFrame_unique": [],
+        "Becoming.DoubleKernel.EqCert": [],
+        "Becoming.DoubleKernel.eqCert_preserves_frame": [],
+        "Becoming.DoubleKernel.eqCert_frame_eq": [],
+        "Becoming.DoubleKernel.StrictDoubleCat": [],
+        "Becoming.DoubleKernel.evalHPathRaw": [],
+        "Becoming.DoubleKernel.evalVPathRaw": [],
+        "Becoming.DoubleKernel.SigInterp": [],
+        "Becoming.DoubleKernel.evalHPath": [],
+        "Becoming.DoubleKernel.evalVPath": [],
+        "Becoming.DoubleKernel.evalHPath_endpoints": [],
+        "Becoming.DoubleKernel.evalVPath_endpoints": [],
+        "Becoming.DoubleKernel.evalHPath_comp": [],
+        "Becoming.DoubleKernel.evalVPath_comp": [],
+        "Becoming.DoubleKernel.evalSqTerm": [],
+        "Becoming.DoubleKernel.evalSqTerm_frame": [],
+        "Becoming.DoubleKernel.eqCert_sound": [],
+        "Becoming.DoubleKernel.FunctorialSqEval": [],
+        "Becoming.DoubleKernel.free_double_eval_unique": [],
+        "Becoming.DoubleKernel.natTallyDoubleCat": [],
+        "Becoming.DoubleKernel.weightInterp": [],
+        "Becoming.DoubleKernel.termWeight": [],
+        "Becoming.DoubleKernel.evalSqTerm_weight_eq": [],
+        "Becoming.DoubleKernel.eqCert_preserves_weight": [],
+        "Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq": [],
+        "Becoming.DoubleKernel.Double3Sig": [],
+        "Becoming.DoubleKernel.Cell3Term": [],
+        "Becoming.DoubleKernel.HasEndpoints3": [],
+        "Becoming.DoubleKernel.hasEndpoints3_common_frame": [],
+        "Becoming.DoubleKernel.hasEndpoints3_unique_mod_2d": [],
+        "Becoming.DoubleKernel.Eq3Cert": [],
+        "Becoming.DoubleKernel.eqCert_assocH_of_frame": [],
+        "Becoming.DoubleKernel.eqCert_assocV_of_frame": [],
+        "Becoming.DoubleKernel.cell3_eq_preserves_endpoints": [],
+        "Becoming.DoubleKernel.conservative_over_base_2d": [],
+        "Becoming.DoubleKernel.hasEndpoints3_weight_mono": [],
+        "Becoming.DoubleKernel.directedNonCollapse2Sig": [],
+        "Becoming.DoubleKernel.directedNonCollapse3Sig": [],
+        "Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness": [],
+        "Becoming.DoubleKernel.StrictTripleCat": [],
+        "Becoming.DoubleKernel.Sig3Interp": [],
+        "Becoming.DoubleKernel.evalCell3Term": [],
+        "Becoming.DoubleKernel.evalCell3Term_endpoints": [],
+        "Becoming.DoubleKernel.evalCell3Term_compH3_compat": [],
+        "Becoming.DoubleKernel.evalCell3Term_compV3_compat": [],
+        "Becoming.DoubleKernel.evalCell3Term_compR_compat": [],
+        "Becoming.DoubleKernel.free_3d_eval_sound": [],
+        "Becoming.DoubleKernel.GuardedExpr": [],
+        "Becoming.DoubleKernel.evalGuardedExpr": [],
+        "Becoming.DoubleKernel.GuardedProof": [],
+        "Becoming.DoubleKernel.parSeqDistHomLR": [],
+        "Becoming.DoubleKernel.parSeqDistHomRL": [],
+        "Becoming.DoubleKernel.parSpanHom": [],
+        "Becoming.DoubleKernel.chiInvSpanHom": [],
+        "Becoming.DoubleKernel.evalGuardedProof": [],
+        "Becoming.DoubleKernel.guarded_oplax_sound": [],
+        "Becoming.DoubleKernel.strict_vs_guarded_separation_witness": []
+      },
+      "kernel_checked": true
+    },
+    {
       "module": "Becoming.SeedReach",
       "spine": true,
       "layer": "application",
@@ -171844,21 +173078,26 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.MasterSpine.lean": "3de1b89e2be57711514754cf5bfadadabca6c58cd9d4f93bde35934703d54fc4",
+    "Becoming.DoubleKernel.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.DoubleKernel.lean": "6b6d1a8e143454ba6612e4303a963f22cf806da10ed2469c34485afddef44c47",
+    "Becoming.OplaxHistory.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.OplaxHistory.lean": "081056d6a70430869482adf3fd0346d31c0926eee2545bcbc9febb40e002b6c6",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "f9f17eb722c7432c7c0fbdf4b5994ca8d92eddaa3757646e7ec8e862de023c75",
+    "Becoming.lean": "cac1037c8d19726577de13f3c07aed857e3ea3e601e386ace17b5e6d523b3e25",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingMasterSpineSignatures.lean": "7816da8ddcff1d375f232e8de60444e2dbafbcc85b186b5ea7253642511118e2",
-    "BecomingMasterSpineSignatures.log": "026170b66a6ff6fd1bab1e4b33d8b8b46d7945b8cfe86e4383c1287108ccbbfa",
+    "BecomingDoubleKernelSignatures.lean": "9d3cf767eb0d3fbba8c5c70061e8f464ae2cfc60941e2705fd409e6432a8115a",
+    "BecomingDoubleKernelSignatures.log": "183c92b2f91cd1da6f03468a846cc5667c7349cad9994d335247b3b347a5dcec",
+    "BecomingOplaxHistorySignatures.lean": "d3e080fe85986590e979249728e742dfb4c394f0dfc78eaaa0697d66c2619aa4",
+    "BecomingOplaxHistorySignatures.log": "73545be65ff9ba20e342578223a5f20af43fb17b3b380a3d850025de77038d9d",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "EnvironmentAudit.lean": "8ac5c446e4182b31d653fc707bd15b085d60d683e837bf1a76c7945d96cffae2",
-    "EnvironmentAudit.log": "fbc70e9f980cfefe36d0098148ff1055d4733fc38b3bfcbd14a6591d5d932a01",
-    "check_becoming.py": "efd4803977c41c9ccc3f929e02c78947feb289706fedff57c09c3c5cb1bfce8b",
+    "EnvironmentAudit.lean": "6105b85d90829f1ccbacd167cc2712f94c5420c298ab94f1917d307069078db0",
+    "EnvironmentAudit.log": "9acceaff2b4c9f72276c7f75dbc50443c3c61463323446cb676d88a2c7a56be8",
+    "check_becoming.py": "4743c40605e77668915759f1d15131b933566648dbf21a7e1aa70ad820356149",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

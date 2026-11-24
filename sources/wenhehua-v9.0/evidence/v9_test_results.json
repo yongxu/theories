@@ -1,0 +1,33 @@
+{
+  "schema": "wenhehua.v9.test_run",
+  "started_utc": "2026-11-24T07:07:21.529197+00:00",
+  "completed_utc": "2026-11-24T07:07:23.233149+00:00",
+  "working_directory": "/workspace/scratch/4d585e40cdc3/WenHeHua_Research_v9.0/software",
+  "command_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "reproduction_command": "PYTHONPATH=/workspace/scratch/4d585e40cdc3/tmp/test_dependencies python3 -m unittest discover -s tests -v",
+  "environment": {
+    "python_version": "3.12.14",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "networkx_version": "3.7",
+    "networkx_module": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies/networkx/__init__.py",
+    "PYTHONPATH": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies"
+  },
+  "exit_code": 0,
+  "tests_run": 313,
+  "unittest_reported_seconds": 1.311,
+  "wall_seconds": 1.703927,
+  "status": "passed",
+  "complete_output_file": "tests_v9.0.txt",
+  "identical_output_copy": "v9_test_results.txt",
+  "counting_scope": "unittest test methods only; demonstration bracketing instances are reported separately",
+  "discovery_note": "Explicit -s tests is needed because default discovery did not recurse into this non-package test directory; the zero-test discovery attempt is retained in v9_test_discovery_default.txt/json."
+}

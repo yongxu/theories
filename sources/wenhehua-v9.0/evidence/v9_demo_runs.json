@@ -1,0 +1,42 @@
+{
+  "environment": {
+    "python_version": "3.12.14",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "networkx_version": "3.7",
+    "networkx_module": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies/networkx/__init__.py",
+    "PYTHONPATH": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies"
+  },
+  "working_directory": "/workspace/scratch/4d585e40cdc3/WenHeHua_Research_v9.0/software",
+  "runs": [
+    {
+      "script": "demo_v9_kernel.py",
+      "command_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "demo_v9_kernel.py"
+      ],
+      "started_utc": "2026-11-24T07:06:46.104377+00:00",
+      "completed_utc": "2026-11-24T07:06:46.192011+00:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "v9_demo_kernel.json",
+      "status": "passed_valid_json"
+    },
+    {
+      "script": "demo_v9_semantics.py",
+      "command_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "demo_v9_semantics.py"
+      ],
+      "started_utc": "2026-11-24T07:06:46.192388+00:00",
+      "completed_utc": "2026-11-24T07:06:46.969118+00:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "v9_demo_semantics.json",
+      "status": "passed_valid_json",
+      "example_count": 6,
+      "checked_four_stage_bracketings": 30,
+      "all_instance_checks_passed": true
+    }
+  ]
+}

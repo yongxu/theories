@@ -1,0 +1,6 @@
+Generating 文合化_v8.0_合化同源高阶生成专论 text-length 14537
+OK 295551 bytes
+Generating 文合化_v8.0_理论全集 text-length 112526
+OK 1601048 bytes
+Generating 文合化_v8.0_概念词林 text-length 70136
+OK 505799 bytes

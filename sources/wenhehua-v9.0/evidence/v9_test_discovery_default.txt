@@ -1,0 +1,19 @@
+WenHeHua v9.0 complete unittest discovery evidence
+Started (UTC): 2026-11-24T07:06:45.981980+00:00
+Completed (UTC): 2026-11-24T07:06:46.103151+00:00
+Working directory: /workspace/scratch/4d585e40cdc3/WenHeHua_Research_v9.0/software
+Command: PYTHONPATH=/workspace/scratch/4d585e40cdc3/tmp/test_dependencies python3 -m unittest discover -v
+Actual argv: ["/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3", "-m", "unittest", "discover", "-v"]
+Environment (selected): {"PYTHONPATH": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies", "networkx_module": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies/networkx/__init__.py", "networkx_version": "3.7", "platform": "Linux-6.18.57-x86_64-with-glibc2.41", "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3", "python_version": "3.12.14"}
+Exit code: 5
+Parsed test count: 0
+Wall seconds: 0.121138
+
+=== STDOUT ===
+
+=== STDERR ===
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+NO TESTS RAN

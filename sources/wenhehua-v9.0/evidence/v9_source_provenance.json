@@ -1,0 +1,7 @@
+{
+  "baseline": "WenHeHua_Research_v8.0.zip",
+  "baseline_size_bytes": 91639944,
+  "baseline_sha256": "be7f7dbf2706c5cc758a70cd6a568cf74b4c3d008e46b13678c37ee9292e5dae",
+  "release_date": "2026-11-24",
+  "assembly": "expanded v8 baseline retained, with revised navigation and lineage module; originals of replaced v8 files preserved under historical_metadata/v8; the complete v8 archive is not recursively duplicated"
+}

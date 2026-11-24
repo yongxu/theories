@@ -1,0 +1,893 @@
+{
+  "schema": "wenhehua.v9.span_colimit_examples",
+  "version": "9.0",
+  "comparison_direction": "colim(local pullback histories) -> pullback(colim(each step))",
+  "identifier_scope": "local_* and global_* are display indices for finite witnesses, not physical identities",
+  "verification_scope": "Computed finite examples; universal statements are proved separately in the report",
+  "example_count": 6,
+  "checked_four_stage_bracketings": 30,
+  "all_instance_checks_passed": true,
+  "examples": [
+    {
+      "id": "exact_common_witness",
+      "title_zh": "完整共同见证：1→1",
+      "meaning_zh": "两步均记录左右见证与共同接缝见证；这一个实例中，先合成历史与先拼合给出等价记录。",
+      "conditional_application_zh": "若模块接口及其持续见证被完整记录，这类模型可以验证两种装配计算是否一致；不能由单个例子推断所有接口都会一致。",
+      "two_stage_chi": {
+        "source_count": 1,
+        "target_count": 1,
+        "image_count": 1,
+        "injective": true,
+        "surjective": true,
+        "bijective": true,
+        "uncovered_target_count": 0,
+        "nontrivial_fiber_sizes": [],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": [
+              "local_0"
+            ]
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 1,
+            "target_count": 1,
+            "image_count": 1,
+            "injective": true,
+            "surjective": true,
+            "bijective": true,
+            "uncovered_target_count": 0,
+            "nontrivial_fiber_sizes": []
+          }
+        ],
+        "every_fiber_bijective": true,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 1,
+          "target_count": 1,
+          "image_count": 1,
+          "injective": true,
+          "surjective": true,
+          "bijective": true,
+          "uncovered_target_count": 0,
+          "nontrivial_fiber_sizes": []
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    },
+    {
+      "id": "missing_local_handoff",
+      "title_zh": "局部无延续、全局出现接续：0→1",
+      "meaning_zh": "第一步只有左侧事件，第二步只有右侧事件；中间状态被拼合后，两事件可以全局接续，但局部没有对应的连续历史。",
+      "conditional_application_zh": "如果机器人模块或软件服务的聚合状态识别了不同来源，聚合后的可接续性需要额外的来源见证检查。",
+      "two_stage_chi": {
+        "source_count": 0,
+        "target_count": 1,
+        "image_count": 0,
+        "injective": true,
+        "surjective": false,
+        "bijective": false,
+        "uncovered_target_count": 1,
+        "nontrivial_fiber_sizes": [],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": []
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 0,
+            "target_count": 1,
+            "image_count": 0,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 1,
+            "nontrivial_fiber_sizes": []
+          }
+        ],
+        "every_fiber_bijective": false,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 0,
+          "target_count": 1,
+          "image_count": 0,
+          "injective": true,
+          "surjective": false,
+          "bijective": false,
+          "uncovered_target_count": 1,
+          "nontrivial_fiber_sizes": []
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    },
+    {
+      "id": "two_local_events",
+      "title_zh": "两侧事件与混合历史：2→4",
+      "meaning_zh": "局部连续历史只能一直在左侧或一直在右侧；每步先聚合后还允许两种换侧配对。",
+      "conditional_application_zh": "若调度或服务路由采用聚合状态，应明确允许换侧的条件；本例只计算记录系统中的可配对性。",
+      "two_stage_chi": {
+        "source_count": 2,
+        "target_count": 4,
+        "image_count": 2,
+        "injective": true,
+        "surjective": false,
+        "bijective": false,
+        "uncovered_target_count": 2,
+        "nontrivial_fiber_sizes": [],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": [
+              "local_0"
+            ]
+          },
+          {
+            "target_id": "global_1",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_2",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_3",
+            "source_ids": [
+              "local_1"
+            ]
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 1,
+            "target_count": 2,
+            "image_count": 1,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 1,
+            "nontrivial_fiber_sizes": []
+          },
+          {
+            "second_step_class": 1,
+            "source_count": 1,
+            "target_count": 2,
+            "image_count": 1,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 1,
+            "nontrivial_fiber_sizes": []
+          }
+        ],
+        "every_fiber_bijective": false,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 2,
+          "target_count": 16,
+          "image_count": 2,
+          "injective": true,
+          "surjective": false,
+          "bijective": false,
+          "uncovered_target_count": 14,
+          "nontrivial_fiber_sizes": []
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    },
+    {
+      "id": "merged_seam_histories",
+      "title_zh": "不同局部历史被合并：2→1",
+      "meaning_zh": "逐分量匹配保留两个局部历史类；各步分别拼合后，它们映为同一个全局历史。因此一般比较并非历史集合的包含映射。",
+      "conditional_application_zh": "若接缝标识记录了不同连接来源，过早合并这些标识可能隐藏不同的重构过程。是否必须保留，应由选定观察任务决定。",
+      "two_stage_chi": {
+        "source_count": 2,
+        "target_count": 1,
+        "image_count": 1,
+        "injective": false,
+        "surjective": true,
+        "bijective": false,
+        "uncovered_target_count": 0,
+        "nontrivial_fiber_sizes": [
+          2
+        ],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": [
+              "local_0",
+              "local_1"
+            ]
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 2,
+            "target_count": 1,
+            "image_count": 1,
+            "injective": false,
+            "surjective": true,
+            "bijective": false,
+            "uncovered_target_count": 0,
+            "nontrivial_fiber_sizes": [
+              2
+            ]
+          }
+        ],
+        "every_fiber_bijective": false,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 4,
+          "target_count": 1,
+          "image_count": 1,
+          "injective": false,
+          "surjective": true,
+          "bijective": false,
+          "uncovered_target_count": 0,
+          "nontrivial_fiber_sizes": [
+            4
+          ]
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    },
+    {
+      "id": "c2_relative_phase",
+      "title_zh": "群作用与相对关系：2→1；四步8→1",
+      "meaning_zh": "同步翻转两个二值标签保留同向与反向两个轨道；分别取轨道后两者合并。四个标签同步翻转有八个轨道，分别取轨道后只有一个。",
+      "conditional_application_zh": "若二值标签代表部件的抽象朝向，整体共同对称与逐部件独立忽略标签是不同操作。本例不包含几何、力学或控制模型。",
+      "two_stage_chi": {
+        "source_count": 2,
+        "target_count": 1,
+        "image_count": 1,
+        "injective": false,
+        "surjective": true,
+        "bijective": false,
+        "uncovered_target_count": 0,
+        "nontrivial_fiber_sizes": [
+          2
+        ],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": [
+              "local_0",
+              "local_1"
+            ]
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 2,
+            "target_count": 1,
+            "image_count": 1,
+            "injective": false,
+            "surjective": true,
+            "bijective": false,
+            "uncovered_target_count": 0,
+            "nontrivial_fiber_sizes": [
+              2
+            ]
+          }
+        ],
+        "every_fiber_bijective": false,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 8,
+          "target_count": 1,
+          "image_count": 1,
+          "injective": false,
+          "surjective": true,
+          "bijective": false,
+          "uncovered_target_count": 0,
+          "nontrivial_fiber_sizes": [
+            8
+          ]
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    },
+    {
+      "id": "three_components_two_seams",
+      "title_zh": "三部件、两接缝：3→9",
+      "meaning_zh": "三个局部部件通过两个状态接缝聚合；两步中没有接缝历史见证。局部只保留三种同部件延续，聚合后允许九种配对。",
+      "conditional_application_zh": "这是多模块装配或多服务组合的有限记录模型，用于展示一般图式方法已超出二块一缝；物理与业务合法性仍由额外约束给定。",
+      "two_stage_chi": {
+        "source_count": 3,
+        "target_count": 9,
+        "image_count": 3,
+        "injective": true,
+        "surjective": false,
+        "bijective": false,
+        "uncovered_target_count": 6,
+        "nontrivial_fiber_sizes": [],
+        "fibers": [
+          {
+            "target_id": "global_0",
+            "source_ids": [
+              "local_0"
+            ]
+          },
+          {
+            "target_id": "global_1",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_2",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_3",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_4",
+            "source_ids": [
+              "local_1"
+            ]
+          },
+          {
+            "target_id": "global_5",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_6",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_7",
+            "source_ids": []
+          },
+          {
+            "target_id": "global_8",
+            "source_ids": [
+              "local_2"
+            ]
+          }
+        ]
+      },
+      "beck_chevalley_singleton_family": {
+        "family": "one element over every class of the first witness colimit",
+        "canonical_direction": "Sigma_Fq (Fp)^* E -> (Fs)^* Sigma_Fr E",
+        "element_rule": "(u,e) -> (Fp(u),e)",
+        "fibers": [
+          {
+            "second_step_class": 0,
+            "source_count": 1,
+            "target_count": 3,
+            "image_count": 1,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 2,
+            "nontrivial_fiber_sizes": []
+          },
+          {
+            "second_step_class": 1,
+            "source_count": 1,
+            "target_count": 3,
+            "image_count": 1,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 2,
+            "nontrivial_fiber_sizes": []
+          },
+          {
+            "second_step_class": 2,
+            "source_count": 1,
+            "target_count": 3,
+            "image_count": 1,
+            "injective": true,
+            "surjective": false,
+            "bijective": false,
+            "uncovered_target_count": 2,
+            "nontrivial_fiber_sizes": []
+          }
+        ],
+        "every_fiber_bijective": false,
+        "agrees_with_chi_bijectivity": true
+      },
+      "four_stage": {
+        "step_count": 4,
+        "chi": {
+          "source_count": 3,
+          "target_count": 81,
+          "image_count": 3,
+          "injective": true,
+          "surjective": false,
+          "bijective": false,
+          "uncovered_target_count": 78,
+          "nontrivial_fiber_sizes": []
+        },
+        "bracketing_count": 5,
+        "bracketings": [
+          {
+            "tree": [
+              0,
+              [
+                1,
+                [
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "notation": "(h1 ; (h2 ; (h3 ; h4)))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              0,
+              [
+                [
+                  1,
+                  2
+                ],
+                3
+              ]
+            ],
+            "notation": "(h1 ; ((h2 ; h3) ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "notation": "((h1 ; h2) ; (h3 ; h4))",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                0,
+                [
+                  1,
+                  2
+                ]
+              ],
+              3
+            ],
+            "notation": "((h1 ; (h2 ; h3)) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          },
+          {
+            "tree": [
+              [
+                [
+                  0,
+                  1
+                ],
+                2
+              ],
+              3
+            ],
+            "notation": "(((h1 ; h2) ; h3) ; h4)",
+            "commutes_after_explicit_reassociation": true
+          }
+        ],
+        "all_five_commute": true
+      }
+    }
+  ]
+}

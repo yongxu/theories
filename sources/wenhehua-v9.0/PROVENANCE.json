@@ -1,0 +1,1776 @@
+{
+  "about": "Frozen pure UTF-8 text, specs, reviews, lexicons, vector figures, build/verification scripts, and pure-Python stdlib/test sources of WenHeHua_Research_v9.0 (24 November 2026, external AI-assisted side research built for our direction), imported byte-for-byte replacing wenhehua-v7.0 (preserved in git history at ac7e53a1e). Generated PDFs/HTMLs/TeX/Logs, concatenated book markdowns under export/, raster PNG/JPG figures/contact sheets, __pycache__ bytecode, and historical_release_zips/ stay outside the repository; all 120 excluded release artifacts are bound by SHA-256 below.",
+  "source_directory": "/Users/ren/Downloads/WenHeHua_Research_v9.0",
+  "imported_at": "2026-11-24",
+  "sha256sums_entries_verified": 351,
+  "local_verification_summary": "verify_release_v9.py passed (350 payload / 352 total release files, errors: []); demo_v9_kernel.py & demo_v9_semantics.py pass (30 four-stage bracketing checks); 81/81 v8+v9 stdlib unit tests pass and 276/276 all-stdlib unit tests pass (PYTHONPATH=.:tests); 2 legacy v1.2 test files (test_core.py, test_revision_rounds.py) require optional networkx; 0 Lean/Rocq/Agda formal proofs in source package.",
+  "supersedes_in_sources": "sources/wenhehua-v7.0 (git ac7e53a1e)",
+  "imported_file_count": 232,
+  "imported_total_bytes": 2595862,
+  "excluded_release_artifact_count": 120,
+  "excluded_pycache_files_skipped": 0,
+  "files": [
+    {
+      "file": "00_一页导读.md",
+      "bytes": 2724,
+      "sha256": "c2f2a7969dbf44c1bc784672bb92aedd223fa36660122734cf78f6ef09d307ae"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "bytes": 2553,
+      "sha256": "e1e0a0ed2f96904b1aa8378a7edc0843211672de02f202495117002cdde41c4c"
+    },
+    {
+      "file": "LATEST_FILES.md",
+      "bytes": 2177,
+      "sha256": "17c466b227e12e8e7e9d64d0fe5e9557418d577743326586c35b52da09eb0234"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4713,
+      "sha256": "0e8a35e6a27c156f37b453bb5a8699b73dbdedf752e5a01b53ef4b191420b2e7"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "bytes": 36013,
+      "sha256": "6883cd0a422801c6a0fbba57169a4925e917d7d6c6d3dedc7ae37b9eb0eb7a96"
+    },
+    {
+      "file": "check_v9_pdfs.py",
+      "bytes": 4268,
+      "sha256": "493674003a2a765677488d593720bd51672ae61b98a58d28f6acad142786df76"
+    },
+    {
+      "file": "evidence/QA_REPORT_v8.0.md",
+      "bytes": 705,
+      "sha256": "1bfe9f9167d9bccf2e434e51246a940a6be679abcb24c0f0856abc0cc3662790"
+    },
+    {
+      "file": "evidence/QA_REPORT_v9.0.md",
+      "bytes": 3345,
+      "sha256": "b0ed78d856887ae9ebbd3cc3c7a96b65f8f993a822d8cb0001ba85d83b4250e7"
+    },
+    {
+      "file": "evidence/QC_REPORT_v3.0.md",
+      "bytes": 2259,
+      "sha256": "44def1679fd0968aa1bcd8b267b0232f3e1a3d95f0b1de3b09ac1ad0bd8b232d"
+    },
+    {
+      "file": "evidence/QC_REPORT_v4.0.md",
+      "bytes": 1150,
+      "sha256": "60f44cd2d4ae335b5ecdd4424d7443494217cf8065f47a47db511827aa158410"
+    },
+    {
+      "file": "evidence/QC_REPORT_v5.0.md",
+      "bytes": 616,
+      "sha256": "fb6a978d39e4fa6ab78f8239b0a6f6cd39e2086c6db63eb7631ad1ddd864bd10"
+    },
+    {
+      "file": "evidence/QC_REPORT_v6.0.md",
+      "bytes": 1196,
+      "sha256": "5691426c48dee6cb7e28f47b1804c2e8d2eb1ab80913384c070d28edf9b3b1b6"
+    },
+    {
+      "file": "evidence/QC_REPORT_v7.0.md",
+      "bytes": 1411,
+      "sha256": "ba506d2c766a391d3182f09afed66b90da016c5214317480974d3a6964283912"
+    },
+    {
+      "file": "evidence/demo_v1.2.txt",
+      "bytes": 298,
+      "sha256": "7b424b86f8391e6d9f9a62885f56dc7fc7a4fdda84a4b3ad51250e31a9bebd2f"
+    },
+    {
+      "file": "evidence/demo_v2.0.txt",
+      "bytes": 168,
+      "sha256": "e474b1b2542140d2fb20b4938fe57df2fb2421d68eb5328d229e8a20c2d1caa6"
+    },
+    {
+      "file": "evidence/demo_v3.0.txt",
+      "bytes": 554,
+      "sha256": "6af343adc89b3498438519e9f376b3fd74f24c8f250edfcb034baccd561d73c5"
+    },
+    {
+      "file": "evidence/demo_v4.0.json",
+      "bytes": 445,
+      "sha256": "9a1bce7b06e7108665eb6f32304759405c3ba2b967d94751e4026a9f7d75a8fd"
+    },
+    {
+      "file": "evidence/demo_v5.0.json",
+      "bytes": 852,
+      "sha256": "41a0ba4a5930ae4adcd6da2b77db78e4dfe599c314d21f899998b44e0fd8f12a"
+    },
+    {
+      "file": "evidence/demo_v6.0.json",
+      "bytes": 667,
+      "sha256": "a55601763d81cbf3335629ec48521bd72660778bb5ace3e4ad56a87f99d7b5c8"
+    },
+    {
+      "file": "evidence/demo_v7.0.json",
+      "bytes": 1193,
+      "sha256": "64dd4f665378a835676e8a364cf3f40e8135592cd3b18daa7566200b25f95579"
+    },
+    {
+      "file": "evidence/pdf_build_v8.0.txt",
+      "bytes": 239,
+      "sha256": "62a5eae4a82329531e488c18a1e34c1b2629b58a759084843b0818f43751749a"
+    },
+    {
+      "file": "evidence/pdf_build_v9.0.txt",
+      "bytes": 561,
+      "sha256": "4005897bee1b7d1426d5e0cc1ce5f44c1bb391b1ae50b553d7897fe925ba03d7"
+    },
+    {
+      "file": "evidence/pdf_qc/report.json",
+      "bytes": 804,
+      "sha256": "4b3e214a0847767a7b1a7fd96cf6a4239b0ed5e18312428155be93fda5d0bd48"
+    },
+    {
+      "file": "evidence/pdf_v9/automatic_checks.json",
+      "bytes": 1296,
+      "sha256": "056fa0a744b07316c3b6bcf97a02259c913484b8faf43cdbbbf5d723d23fbd69"
+    },
+    {
+      "file": "evidence/tests_v1.2.txt",
+      "bytes": 4904,
+      "sha256": "b3cec1da4e247b8f5c54eb575dfd34239039b88b67981361aefe3311a302e677"
+    },
+    {
+      "file": "evidence/tests_v2.0.txt",
+      "bytes": 7073,
+      "sha256": "590bf91edadaf81cdba65fb8707b7f869fd9865b8824dc06e39bad387b65e910"
+    },
+    {
+      "file": "evidence/tests_v3.0.txt",
+      "bytes": 10671,
+      "sha256": "ced821ee540dcd358f4830d2c604e0e23ebb0e811f684b1d60b4be692c4af65a"
+    },
+    {
+      "file": "evidence/tests_v4.0.txt",
+      "bytes": 13230,
+      "sha256": "ab16871dfe2b1707441d5eacd5b2e86affa2a8e64f918698168fdc04c6017098"
+    },
+    {
+      "file": "evidence/tests_v5.0.txt",
+      "bytes": 15714,
+      "sha256": "993c43e27ac78a1c3040e179c63128719c7daf4183a9947b9d74f40f12c1e44a"
+    },
+    {
+      "file": "evidence/tests_v5.0_final.txt",
+      "bytes": 99,
+      "sha256": "d654ffe95d5b10ae572214aebfae82868d94e67be2626c72823850f305c62256"
+    },
+    {
+      "file": "evidence/tests_v6.0.txt",
+      "bytes": 22231,
+      "sha256": "221925f69170b5fbfc0bfafbc97b1f34f8d771bae68908fd090f796aa0522ede"
+    },
+    {
+      "file": "evidence/tests_v7.0.txt",
+      "bytes": 28031,
+      "sha256": "43388a5af17967a08936e26a2c75198b870c969a5a69c04d42469e329c990884"
+    },
+    {
+      "file": "evidence/tests_v8.0.txt",
+      "bytes": 99,
+      "sha256": "967b405077ba6dcd21c37f22da0e3ede37a74938279f5b79b3d26d219946eb8d"
+    },
+    {
+      "file": "evidence/tests_v9.0.txt",
+      "bytes": 40732,
+      "sha256": "4d64f091e48fb7385594aba3329ec0c8abf06293c300d4ea5c63a174cc9e8d01"
+    },
+    {
+      "file": "evidence/v9_demo_kernel.json",
+      "bytes": 1994,
+      "sha256": "0e6964fec10aa28c1af00cb4e0c1b746e130e9af66cd6f6e5bbe01b155e22c5e"
+    },
+    {
+      "file": "evidence/v9_demo_runs.json",
+      "bytes": 1518,
+      "sha256": "cf6211789f727d96e242196e47d74c4455bc2afdcb1a4c60c2f7e8516f0280bc"
+    },
+    {
+      "file": "evidence/v9_demo_semantics.json",
+      "bytes": 24388,
+      "sha256": "aac0c04b0fc16b28b6f18a6996d4bb7dd961e70289247efbf9efd873b5f3c6d3"
+    },
+    {
+      "file": "evidence/v9_proof_ledger.json",
+      "bytes": 4997,
+      "sha256": "219a90186f708eed0ec10fedc24e5501ef5f1a5c2215ee8b2d7e3c3bfb7335c0"
+    },
+    {
+      "file": "evidence/v9_reproduction.md",
+      "bytes": 4263,
+      "sha256": "9907471dfff8cfdff538a24cb68b17966a8adc21703f146cf34a83b06ad7c9a5"
+    },
+    {
+      "file": "evidence/v9_source_provenance.json",
+      "bytes": 420,
+      "sha256": "949b8b35994fe12c50a5f444a105fe80157ad3f9d19cbc2406c4076a278bee49"
+    },
+    {
+      "file": "evidence/v9_test_discovery_default.json",
+      "bytes": 1233,
+      "sha256": "b99d0791c64514731c7075e96d1298df942b67ecec2b5d96a53823212afc201c"
+    },
+    {
+      "file": "evidence/v9_test_discovery_default.txt",
+      "bytes": 1060,
+      "sha256": "19cdd1a300ec0d7dae985facdcc3eeab719aa1d7a99caed2f7882f13ac52375a"
+    },
+    {
+      "file": "evidence/v9_test_results.json",
+      "bytes": 1516,
+      "sha256": "b67609fa4b790486c91a5243595af5fe0987a1a24d6976fd8ec6d9fa77e8eec6"
+    },
+    {
+      "file": "evidence/v9_test_results.txt",
+      "bytes": 40732,
+      "sha256": "4d64f091e48fb7385594aba3329ec0c8abf06293c300d4ea5c63a174cc9e8d01"
+    },
+    {
+      "file": "examples/03_可复现示例与证据.md",
+      "bytes": 5230,
+      "sha256": "b8d9c347b60c02e069287c7a4cf7f7f20eb750d73431fbb6bb6ebd7f4342a121"
+    },
+    {
+      "file": "examples/09_第二轮_实验与复现.md",
+      "bytes": 4655,
+      "sha256": "42e008dce65e80f307d913db2e2660aa4918ccd81154cd51293b60a45523af3d"
+    },
+    {
+      "file": "examples/13_高阶实验与复现.md",
+      "bytes": 4364,
+      "sha256": "7bc3ad02ee85513dba9ec5eb8a3dee4ccd6a920439cd03b27d493a0fae0e96a4"
+    },
+    {
+      "file": "examples/21_界变时流观守_实验与实例.md",
+      "bytes": 5623,
+      "sha256": "2183c39c28b8a3a726deadb8528f7152a04f60390c3ce0abc7277be3627c003f"
+    },
+    {
+      "file": "examples/27_共享界变_运行示例与反例.md",
+      "bytes": 6142,
+      "sha256": "5dd12ffb30910c4a7e2f2ce998a51e00b1459de2c08eb4c97fcdc7d2fe58fb8d"
+    },
+    {
+      "file": "examples/33_弱交换_程序与最小反例.md",
+      "bytes": 2396,
+      "sha256": "d2f0b5c51323daadbc046798ccf72dda89c1fa1212203fc670aa8797b00fbfad"
+    },
+    {
+      "file": "examples/40_语义连接_可复现实验.md",
+      "bytes": 3620,
+      "sha256": "b00573d9dc947f0a8f5f9ae7ef1ad9fc569d137defb297f83caa3743e2d8c8ac"
+    },
+    {
+      "file": "examples/47_依观判守_复现实验与证据.md",
+      "bytes": 5182,
+      "sha256": "c3a60470dad11c06ed6eb6724cbe8022ec5b7130a557fe0a4e122ffcb876c7c3"
+    },
+    {
+      "file": "examples/54_高阶拼接与基变换_复现.md",
+      "bytes": 2640,
+      "sha256": "415099648b4d40332849cdb864b440825b87e2b00dea45d8ea4c2f71e300472f"
+    },
+    {
+      "file": "examples/62_v9_构造与反例.md",
+      "bytes": 10479,
+      "sha256": "72e192b32351017dbd16ee7372754184f340055ac7babed9a9e1d11ae31e3ea0"
+    },
+    {
+      "file": "figures/v9_c2_relative_information.svg",
+      "bytes": 44713,
+      "sha256": "d683c6567fd828ed95eab551a450ef6737ec2c215b53fdcdb56608f6b5120db6"
+    },
+    {
+      "file": "figures/v9_comparison_types.svg",
+      "bytes": 42860,
+      "sha256": "612863df307fb0db85dcdf24207cb32d109ed7e080b0c37f0a2f654e6a8d81c4"
+    },
+    {
+      "file": "figures/v9_comparison_universal_property.svg",
+      "bytes": 16586,
+      "sha256": "ded4cc440edc426e52a891e55ad19eb267a26b99114aaa5fe4209f4a4834a249"
+    },
+    {
+      "file": "figures/依观判守_语义图.dot",
+      "bytes": 1176,
+      "sha256": "74199acfd011ecff1709c9669fa7f0473e1054f553645947dee297ed6ffc5a74"
+    },
+    {
+      "file": "figures/共界新生.svg",
+      "bytes": 1760,
+      "sha256": "646997aab999b11850c76ec6929d734ad0349b98288a1954384ea7bf5d4f7fd5"
+    },
+    {
+      "file": "figures/暂合复分_身份冲突.svg",
+      "bytes": 1672,
+      "sha256": "b25234e75ab99da8cccff9a5a589792f10d035e5962e8fe9dcb2ce1204d79cb7"
+    },
+    {
+      "file": "figures/查询粗化_反例.dot",
+      "bytes": 1088,
+      "sha256": "5c5ba4d6905ec59ea9b59bd9d564a20d212b6a2b5f3f1cd311ba0da8c8399f40"
+    },
+    {
+      "file": "figures/界变稳定接缝.svg",
+      "bytes": 59714,
+      "sha256": "f7dfd6494df670a72f84d6c48400fd2bf3a4de06004c36d55760a1c4fb64d051"
+    },
+    {
+      "file": "figures/观守接口反例.svg",
+      "bytes": 40227,
+      "sha256": "d219ea19aab231a262dc391fa983ce5bd741ccdd49638db9314c5de6b6fc2ddb"
+    },
+    {
+      "file": "figures/语义连接总图.dot",
+      "bytes": 1674,
+      "sha256": "f41555a25d15ed825d7ce9ae25463d0a74ced4a9320d740bf9b2661f5b667a07"
+    },
+    {
+      "file": "formal/02_形式定义与命题.md",
+      "bytes": 12107,
+      "sha256": "2eaba17913fa741a3f81c0f903e073683ebd2108578e820cf4c7adcbb0b2e3e7"
+    },
+    {
+      "file": "formal/07_第二轮_公理语义与同异.md",
+      "bytes": 11249,
+      "sha256": "48308bac6fba18dbd6567fd390d341a5284e16d431e9b8adf4fe03d153e7532b"
+    },
+    {
+      "file": "formal/11_高阶形式规格.md",
+      "bytes": 9746,
+      "sha256": "59b1dca8f506a560202ca615a058bc7df7d690abba8117e85d0ea56cdb199fa8"
+    },
+    {
+      "file": "formal/12_二维相容_定理证据与失败条件.md",
+      "bytes": 4785,
+      "sha256": "a394af14a31ebe7a34baccbc27f2de8479f2686476ea643ada0a00cfbace8f6a"
+    },
+    {
+      "file": "formal/19_界变与稳定接缝的形式规格.md",
+      "bytes": 6893,
+      "sha256": "20625229986f5eee75f390b0680a95d4e1906a5b6093218cb8e7b3b8c7971ea0"
+    },
+    {
+      "file": "formal/20_时流与观守_多语义规格.md",
+      "bytes": 7029,
+      "sha256": "a79dbe5c4c129c5719f844ffddda0925c42e9bc3928e35839459f0eb537807c5"
+    },
+    {
+      "file": "formal/26_共享界变_定义判据与命题.md",
+      "bytes": 8015,
+      "sha256": "5cb136b682413f3854580e338d9755788abe9e989117557bdbc78269bb6750e1"
+    },
+    {
+      "file": "formal/32_带谱系共界与弱交换_形式规格.md",
+      "bytes": 7897,
+      "sha256": "1d62960cd94ec65f1a2debb2f8fe414e4d81326a8a530ccf37ecd08e3e1ee5b5"
+    },
+    {
+      "file": "formal/39_语义连接_形式规格与证明义务.md",
+      "bytes": 10261,
+      "sha256": "7c0f02c050d8c6032aa12f1711e5ca756214419f6470e69a0b27cc801343054b"
+    },
+    {
+      "file": "formal/46_依观判守_形式规格与定理.md",
+      "bytes": 11859,
+      "sha256": "3ade0714e5b20e5e502167ba8f596c179dd6279ff0ed9febb0e242e777931bdf"
+    },
+    {
+      "file": "formal/53_双向生成与基变换_形式规格.md",
+      "bytes": 5545,
+      "sha256": "72148d58f7c4597f63a3d0bed8252d14a40d727dc8828b254dd6a5dd09f64fc5"
+    },
+    {
+      "file": "formal/59_v9_自由双范畴与相对三维生成.md",
+      "bytes": 27958,
+      "sha256": "84e4d782ea77ae0f00eb497960fd857a7a1758d83fe9d382d181cf5542d9aaa5"
+    },
+    {
+      "file": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "bytes": 24206,
+      "sha256": "fbd075f5bdbe444181632907f72727eaa6551e2582fbda0d9221ed4b61daf34a"
+    },
+    {
+      "file": "formal/61_v9_基变换与观察保真.md",
+      "bytes": 7736,
+      "sha256": "d46094949950572580bb31269c762b63f651d7eb737abaa05382c98fd71f6242"
+    },
+    {
+      "file": "formal/66_v9_并排组合与任意有限阶.md",
+      "bytes": 8467,
+      "sha256": "9fdbd354095420f53fc5dfc166856cee01ac29c928a62858e6687a862153dc0e"
+    },
+    {
+      "file": "formal/67_v9_生成历史的语法语义接口.md",
+      "bytes": 9087,
+      "sha256": "bf14e36419e1d5632f53e7c95440433f9222b2d948de3c61bb0176d14da47e95"
+    },
+    {
+      "file": "historical_metadata/v8/00_一页导读.md",
+      "bytes": 1957,
+      "sha256": "ced2f5bf7f0eb53e890e5c9e8c32aee4bf38f981a50ea318c730c9e0a67506b1"
+    },
+    {
+      "file": "historical_metadata/v8/CHANGELOG.md",
+      "bytes": 1112,
+      "sha256": "2d0d1168afc12a29c218b8fd8ec7b3ab2fb24cddaec5d88225e33ba96721af3c"
+    },
+    {
+      "file": "historical_metadata/v8/LATEST_FILES.md",
+      "bytes": 741,
+      "sha256": "2e43a7a04aed8e96b58083d01a765920c2e7ac4de502e770e18e5f6e4a75ea52"
+    },
+    {
+      "file": "historical_metadata/v8/README.md",
+      "bytes": 2356,
+      "sha256": "b90eb27a5dc925b5668210bb24b654c5b71c75374897fb06e5242cfda60b0c78"
+    },
+    {
+      "file": "historical_metadata/v8/SHA256SUMS.txt",
+      "bytes": 28005,
+      "sha256": "7d050e83f9723306d91deccd684a7b821e30ce1c518b37b3838c78b37e5916b8"
+    },
+    {
+      "file": "historical_metadata/v8/manifest.json",
+      "bytes": 54590,
+      "sha256": "924b9146ca54fba8ace61a6c747198396b4a076449e7b736ae666b196374b3be"
+    },
+    {
+      "file": "historical_metadata/v8/software_lineage_v8.py",
+      "bytes": 12668,
+      "sha256": "c2da75be9c0e5401237ee8056bbd7b127983cde2dffa92327f08106de39366b0"
+    },
+    {
+      "file": "lexicon/01_核心概念精注.md",
+      "bytes": 9300,
+      "sha256": "60d1ea0f39227151735ec7b503fc43a514551114965c1edf0850d8c747f4c046"
+    },
+    {
+      "file": "lexicon/02_词库使用指南.md",
+      "bytes": 1807,
+      "sha256": "d73f104eb2f342a20e427fd83488f1366d0005e29f2c846133243481d69fddac"
+    },
+    {
+      "file": "lexicon/03_文之构造图谱.md",
+      "bytes": 11548,
+      "sha256": "f5c7849f1530996ed38b9e0b8e25eb87bbf40ab6609f4efbf02052aae4767444"
+    },
+    {
+      "file": "lexicon/04_广义词库389条_原稿.md",
+      "bytes": 40195,
+      "sha256": "8fe31d7eed5863729b0b61065649d4a2dd2d9afafe516c8f23f6a448dc7cb414"
+    },
+    {
+      "file": "lexicon/05_同异_精辨与概念谱系.md",
+      "bytes": 5813,
+      "sha256": "38eb289825aec6071c79213c5754fe4bbd18fded5d48b5b06ebdae038190c5cb"
+    },
+    {
+      "file": "lexicon/06_高阶统一概念增注.csv",
+      "bytes": 9148,
+      "sha256": "69b53a3be27a93b6cdfc16018e7ce8806424c0889362638ed0f3bcc061226272"
+    },
+    {
+      "file": "lexicon/06_高阶统一概念增注.md",
+      "bytes": 10992,
+      "sha256": "47ea4eb11ccf3e0e07ea45d463094525a386e19e090e852b8f8be7df977a965e"
+    },
+    {
+      "file": "lexicon/07_界变时流观守_概念增注.csv",
+      "bytes": 10332,
+      "sha256": "3cd8a50ddb4f8f5c4775223254db45c7ee18be0f3670f966b73e9b3110c58e9a"
+    },
+    {
+      "file": "lexicon/07_界变时流观守_概念增注.md",
+      "bytes": 12408,
+      "sha256": "ed782cf7dfbdff0a4f7e591322799b1aa4dc533716be65cb0e538194f79435ff"
+    },
+    {
+      "file": "lexicon/08_共界变化_术语底稿.psv",
+      "bytes": 9062,
+      "sha256": "f2bead12ec46a1ae0212008e59ff1b437435b32f90a34c80719a4d811a26a90d"
+    },
+    {
+      "file": "lexicon/08_共界变化_概念增注.csv",
+      "bytes": 9211,
+      "sha256": "5d5f3232dcb00e944b7212a77ef9091d6dbb057f015c22dc80958f6ea9f69773"
+    },
+    {
+      "file": "lexicon/08_共界变化_概念增注.json",
+      "bytes": 18928,
+      "sha256": "12a802da29984c28de480e1f6966adf11202afa96404d507c913305e8350d311"
+    },
+    {
+      "file": "lexicon/08_共界变化_概念增注.md",
+      "bytes": 10436,
+      "sha256": "3c5254c67c3bbfcfe1cd365917c501a66401b695e87d0ac5fddaf0d76db43b39"
+    },
+    {
+      "file": "lexicon/08_共界变化_概念增注_阅读版.md",
+      "bytes": 9197,
+      "sha256": "bfb81236d1638e9495d5568fbd03a1ac1856866f7db033d9c57dc6d6ff2780e1"
+    },
+    {
+      "file": "lexicon/09_谱系弱交换_概念增注.csv",
+      "bytes": 11121,
+      "sha256": "3724ea0d25c38542fb4648693eb93ba98357a8d578f1f96818c4cba5ce358991"
+    },
+    {
+      "file": "lexicon/09_谱系弱交换_概念增注.json",
+      "bytes": 21089,
+      "sha256": "f199137411f4363e3f0b88b9ce7f580b55a94619507eedc257c25a203bfbf3f8"
+    },
+    {
+      "file": "lexicon/09_谱系弱交换_概念增注.md",
+      "bytes": 8573,
+      "sha256": "c65b809eeb9de13fdae75160ee4405be6d472771efab3384c28adab99b0a4292"
+    },
+    {
+      "file": "lexicon/10_语义连接_概念增注.csv",
+      "bytes": 19765,
+      "sha256": "6233f5d50aee549667b10ef8457e3c2da349ae14d5d5dd8a6cca2e00bc0052bc"
+    },
+    {
+      "file": "lexicon/10_语义连接_概念增注.json",
+      "bytes": 39955,
+      "sha256": "85476bd2dc172540262340a69fedb799be4fa53792dbf33dbbb2cdc5dea32256"
+    },
+    {
+      "file": "lexicon/10_语义连接_概念增注.md",
+      "bytes": 18689,
+      "sha256": "87c66ae065b8ec9c7e781159bee65dcead6f1ca267541fb52b08d87523a92dcb"
+    },
+    {
+      "file": "lexicon/11_依观判守_概念增注.csv",
+      "bytes": 10639,
+      "sha256": "fd47023e711f15833f98ab9af4206d02398a979032d39689c64876a24e5cad48"
+    },
+    {
+      "file": "lexicon/11_依观判守_概念增注.json",
+      "bytes": 18890,
+      "sha256": "047acde29076c4c950fa6f7f1abcc9b6c5875e183d89f84d0820b4168407e610"
+    },
+    {
+      "file": "lexicon/11_依观判守_概念增注.md",
+      "bytes": 9973,
+      "sha256": "d0102ae36a49fec1fa145447846270f494bc84b188fd2e1830d408c8ed3df4a9"
+    },
+    {
+      "file": "lexicon/12_高维粘合_概念精注.md",
+      "bytes": 1837,
+      "sha256": "4877e179e15f48f80459aecb1930ecd1cb128117b4aa48a3b4cb0fcfa6b76eeb"
+    },
+    {
+      "file": "lexicon/13_v9_严格生成词谱.json",
+      "bytes": 37560,
+      "sha256": "821e1bdddd7aa511408ef84ea16f68e85e5765d037c6574b6bcc6ecd11bb635d"
+    },
+    {
+      "file": "lexicon/13_v9_严格生成词谱.md",
+      "bytes": 29013,
+      "sha256": "bd45637623de2a9f27189850491cf5a66e7699fa3b3045d6b0ad59c3c174e9ee"
+    },
+    {
+      "file": "lexicon/_build_lexicon.py",
+      "bytes": 13078,
+      "sha256": "7b5f3c5976717630849beff75e9760d437653ece34a2673560ef9dc1d1822e24"
+    },
+    {
+      "file": "lexicon/_build_v3_lexicon.py",
+      "bytes": 12322,
+      "sha256": "278e2f0e8334ad8008b6ef6640be8c37edf75ae4035d920ee8422fbd87ea99a7"
+    },
+    {
+      "file": "lexicon/_build_v6_lexicon.py",
+      "bytes": 16280,
+      "sha256": "5fbb762f4aff95a1a155f578d45f1fa61235c1179bcf26624727f35804fe2a8e"
+    },
+    {
+      "file": "lexicon/_build_v7_lexicon.py",
+      "bytes": 9957,
+      "sha256": "f1bc77aa45be07a3efd9cc07f60bae280f138ff6b8b71637f6096a4ddd8cb940"
+    },
+    {
+      "file": "lexicon/原始389词.csv",
+      "bytes": 78041,
+      "sha256": "aadc66c3ff75bf3ebeea16799546a6a323c26423e9894eb0e10b3575117fca6f"
+    },
+    {
+      "file": "lexicon/原始389词.json",
+      "bytes": 145608,
+      "sha256": "e27a43514ad88f96d33f792ede593997a06a86044a542a2f9467fb8aab80e4e8"
+    },
+    {
+      "file": "lexicon/完整词库389_增注.csv",
+      "bytes": 124809,
+      "sha256": "b95686f74cf083807ab4e3b7711ce498394e49b1c8a2f523d65de6b520fb6d0a"
+    },
+    {
+      "file": "lexicon/完整词库389_增注.json",
+      "bytes": 219178,
+      "sha256": "0c11701fed95445cb466543d81a757f20b153e07908520adc5aed83cf7fc06fc"
+    },
+    {
+      "file": "lexicon/核心概念精注.csv",
+      "bytes": 7903,
+      "sha256": "07ebf302298410426aa50ec96d2ad9293067b2f6ebe26791baa2214dab210691"
+    },
+    {
+      "file": "lexicon/核心概念精注.json",
+      "bytes": 17420,
+      "sha256": "639f7124e533e80ec677cb347837878baf109a9a6c4e8747af3cbc5063e17e8e"
+    },
+    {
+      "file": "make_books.py",
+      "bytes": 6424,
+      "sha256": "202c0bcec292d300e32a1bbfe83ba21e4ea56cabdf923b50d1ad512d7936c576"
+    },
+    {
+      "file": "make_v2_books.py",
+      "bytes": 4322,
+      "sha256": "323442a32cb1335fc947dd5ed1aa39b5dc6361044fc4c0825c31be91d318dc4b"
+    },
+    {
+      "file": "make_v3_books.py",
+      "bytes": 4158,
+      "sha256": "27e9ff8deca556912e091451742303449c553e4bbde061d08a6b9ba2d7d59cad"
+    },
+    {
+      "file": "make_v3_figures.py",
+      "bytes": 3318,
+      "sha256": "5ee3d189f979dc4a710531d0a4f3a08734dce28d69f234d7aeab51138a2487f2"
+    },
+    {
+      "file": "make_v4_books.py",
+      "bytes": 4997,
+      "sha256": "3c49a003a40e9bcd6fa9994f14849ba7924effa950a0f4f6be49dd4f761b49fd"
+    },
+    {
+      "file": "make_v4_figures.py",
+      "bytes": 3817,
+      "sha256": "bcfddaad035a8fc8b06144a0c7e5319c52d25664f460ad5ff02cf636a79293c7"
+    },
+    {
+      "file": "make_v5_books.py",
+      "bytes": 4350,
+      "sha256": "f47ddaef17021ae4331da43ce57f4cafc1b2ea08dfc3aff3364776b6ead114aa"
+    },
+    {
+      "file": "make_v5_figures.py",
+      "bytes": 1662,
+      "sha256": "cb41e5b0453bea005dff0357c776b28c9f29a56af170c418c7a237bc72e4925b"
+    },
+    {
+      "file": "make_v6_books.py",
+      "bytes": 3944,
+      "sha256": "8bd2dfcca97e9d5cbccce5f3ab3c59cc1ea2053661b50e7cd99cf03e8686af92"
+    },
+    {
+      "file": "make_v7_books.py",
+      "bytes": 4842,
+      "sha256": "3d1935498bdc5596f0e45200751c6cdbcd3b597108fb4f545a78eb1c29ba229c"
+    },
+    {
+      "file": "make_v8_books.py",
+      "bytes": 3270,
+      "sha256": "9246e4b1a6918bcbca29eebbd411f899dca23a0b53605638443425f0351b74e8"
+    },
+    {
+      "file": "make_v9_books.py",
+      "bytes": 4895,
+      "sha256": "61e0b6b74da53b96104dd16749b3389b0d839b35b509ea969c44a4dfcedd860c"
+    },
+    {
+      "file": "make_v9_figures.py",
+      "bytes": 4325,
+      "sha256": "6abb044b208ad05e5f422d4e792d9ef00b55c8a03eb6093f191249a0744f8c56"
+    },
+    {
+      "file": "make_v9_release.py",
+      "bytes": 3437,
+      "sha256": "fe53b38fe13497e17db49e26da7caff8213dd61862e047365a7605c8b271df1e"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 62081,
+      "sha256": "2816dce9c232ac23b7c76bf6623170c4410620f4f49165b88aaad9e3fdea2029"
+    },
+    {
+      "file": "planning/05_路线图与验收.md",
+      "bytes": 5048,
+      "sha256": "c6d56d0ede7c7fc78f6f432a916374d689c637dcefab52c5234a3a47f871e894"
+    },
+    {
+      "file": "planning/16_高阶统一后_下一阶段路线.md",
+      "bytes": 3309,
+      "sha256": "aa9789ac89410193274bd5ec395a8e2cee9405df0f2e17070df4cda8b28a9944"
+    },
+    {
+      "file": "planning/23_后续严格化路线_v3.0.md",
+      "bytes": 3451,
+      "sha256": "80e2c495abec71a7d76c6ba44df78b636ab1a9b0e3cc0b70b9ed75ca1d63a811"
+    },
+    {
+      "file": "planning/29_严格化路线_v4.0.md",
+      "bytes": 3187,
+      "sha256": "b5af3d32c3d7a1b78561eee964084d1c73bc58085790ff8e76844885e5c825b9"
+    },
+    {
+      "file": "planning/35_高阶完备性与语义路线.md",
+      "bytes": 3432,
+      "sha256": "455b10bd9878d9f23ae75869d026a7302f5afd76900705b91e93de57c7346040"
+    },
+    {
+      "file": "planning/43_语义网络下一步路线.md",
+      "bytes": 3640,
+      "sha256": "516a00c72d37d585a00131968ec8279e42d05964ae72f5e922e360f8be05d10c"
+    },
+    {
+      "file": "planning/50_第八阶段_形式解释与端到端路线.md",
+      "bytes": 4332,
+      "sha256": "9e31777e37de1ec31090a904d3a5206ce533ee6701410d69749600fd687033c9"
+    },
+    {
+      "file": "planning/56_高阶统一下一阶段_形式化路线.md",
+      "bytes": 2291,
+      "sha256": "1a07e53dbfaa3cd04250545e0c3c3d7555d36eb5ee4a84bf58399a4f844b82f3"
+    },
+    {
+      "file": "planning/64_v9_形式化与应用路线.md",
+      "bytes": 5009,
+      "sha256": "b77a978ff34e9d7c1d934f880e218c1a9a0542817a20dc772877d434bd336ade"
+    },
+    {
+      "file": "research/01_文法总论.md",
+      "bytes": 18781,
+      "sha256": "8d6939db9b8abb5e4d1d3c061a26106bb1065b444683351d34c1fed65628e0c9"
+    },
+    {
+      "file": "research/10_合化同体_高阶统一论.md",
+      "bytes": 18257,
+      "sha256": "11a07e179137136e9fbd73ab91f83415c44e178827fa60ae4e97dbeacc391832"
+    },
+    {
+      "file": "research/15_文言精稿与概念释义.md",
+      "bytes": 2501,
+      "sha256": "516b96008d0066f92a0d27a0759c2dcbd5495bfc6d0dcf326b55df808fb2c5d9"
+    },
+    {
+      "file": "research/18_界生时流观守_第三阶段总论.md",
+      "bytes": 14502,
+      "sha256": "68479e0f8aad3dd75ef9e0a0b48afdd39755ec8792208c6b2f07bdf528b04fed"
+    },
+    {
+      "file": "research/25_共界重构_第四阶段总论.md",
+      "bytes": 7489,
+      "sha256": "0180c9be0086156d7c012e6fd4d573110c4c6d8a732f0a47267d53411033a7c0"
+    },
+    {
+      "file": "research/31_续迹而不强同_第五阶段总论.md",
+      "bytes": 9873,
+      "sha256": "587484365144f29b876065417b97757457fa9885a5eb449f8d8eb0870f85c316"
+    },
+    {
+      "file": "research/37_文言精稿_v5.md",
+      "bytes": 2073,
+      "sha256": "b9508a3ba9e88edb38f4b17fb910ae92b031d2e8d9d69e1eba7025a6353fb238"
+    },
+    {
+      "file": "research/38_从合化到诸语义_第六阶段总论.md",
+      "bytes": 10686,
+      "sha256": "97700ca4d302c2e8a0771187d7b12a8174d6a45a292c88a2eb00230962d48ac5"
+    },
+    {
+      "file": "research/42_文言精稿_诸观相通.md",
+      "bytes": 2574,
+      "sha256": "6652f9a5a4e22d18ba8df98cd1201c591dea86fbf9e9e6e0a8e153173c392023"
+    },
+    {
+      "file": "research/45_依观判守_第七阶段总论.md",
+      "bytes": 15698,
+      "sha256": "8671310a82a89fdd4a704bb98455c4fd69362cf35a0369ecd9c54e17327781b7"
+    },
+    {
+      "file": "research/49_文言精稿_依观判守.md",
+      "bytes": 2107,
+      "sha256": "6f7fe2ba4639e9edd3481ee9d3db8ac2e16399f1c9b00311b20f361bbc74133f"
+    },
+    {
+      "file": "research/52_合化同源_高阶生成总论.md",
+      "bytes": 11297,
+      "sha256": "53b4b266ccecd2028fdb2a0896745bd64cd84a068d0aa40edf8a282b1c38216a"
+    },
+    {
+      "file": "research/58_v9_严格高阶生成框架.md",
+      "bytes": 11648,
+      "sha256": "33668e81a6eefbcc94033d91e9794ac7296d07e53fa5e136bee282e7ef9ed922"
+    },
+    {
+      "file": "review/04_反例与审查结论.md",
+      "bytes": 3956,
+      "sha256": "e2d4252f75798a51c7bee9d43ce72b24e1a48145fee945877d9e0b83cfc53863"
+    },
+    {
+      "file": "review/06_第一轮_破缺审查.md",
+      "bytes": 7467,
+      "sha256": "4b237a9185445d91d8aad2dcbd10275bf3285d5dd5332601fd24073d1f54588a"
+    },
+    {
+      "file": "review/14_高阶统一_严谨性审查.md",
+      "bytes": 4736,
+      "sha256": "f808061fb2a578e12aedfba48daa46f08a3c09a8c621b37ad354708d2c5b1af8"
+    },
+    {
+      "file": "review/22_第三阶段严格审查与最小反例.md",
+      "bytes": 5757,
+      "sha256": "08512c758d5f5da365e6bd60ec1ec2e2b3f855d1576909a590229fc61e2cf646"
+    },
+    {
+      "file": "review/28_第四阶段_严格审查.md",
+      "bytes": 4870,
+      "sha256": "6da1a7c5395ce1ba882b7daa76103672b6685928f91ac500224f08f16030468d"
+    },
+    {
+      "file": "review/34_第五阶段_反例与结论强度.md",
+      "bytes": 3594,
+      "sha256": "78a4e454482e032086c3988bcbdd0be4987ea9b6ea6ba27477b4d8ef26e4f2b1"
+    },
+    {
+      "file": "review/41_第六阶段严格审查_反例及边界.md",
+      "bytes": 4187,
+      "sha256": "0199951663ac8b5431ec2707b3750b9b7360348c4c2fc77fc424c4aa9a0828b2"
+    },
+    {
+      "file": "review/48_依观判守_反例审查与边界.md",
+      "bytes": 6459,
+      "sha256": "c6aa5d12728b3112342e946956bb98a4a61e87f6d208b0239575cc635aa88e40"
+    },
+    {
+      "file": "review/55_高阶统一_批判审查.md",
+      "bytes": 3286,
+      "sha256": "10c25e30bf9c44df0e3fb18e98873548c107796cffcedbdf69f9f83152832a0c"
+    },
+    {
+      "file": "review/63_v9_证明状态与交叉审查.md",
+      "bytes": 6832,
+      "sha256": "4e60337245994e26c4e03d79a9a19f798f7b719b01939461c81821491e14fc45"
+    },
+    {
+      "file": "software/README.md",
+      "bytes": 4901,
+      "sha256": "37d4867e170a1df7cee917775fabd4d153e93b2ed2f23cce889f33057c60fb98"
+    },
+    {
+      "file": "software/demo.py",
+      "bytes": 1266,
+      "sha256": "e22a66081d2a6328d91ffc0e91af8feb5a70a8ad4f4a263f5283f42690dc3fd9"
+    },
+    {
+      "file": "software/demo_higher.py",
+      "bytes": 971,
+      "sha256": "da73283c7b1ff76bdbc3caed409cb3579d8f7651fb9070ffcff601c9f9c5476d"
+    },
+    {
+      "file": "software/demo_v3.py",
+      "bytes": 3386,
+      "sha256": "68f6f46ec8972007103eaf6c311d235a4ee07fe4d338b89c340ef401cb30b223"
+    },
+    {
+      "file": "software/demo_v4.py",
+      "bytes": 2565,
+      "sha256": "d79023d56265ecad828a83e428e6f87d2ae7f156572882ecdf4602b2d8884e5b"
+    },
+    {
+      "file": "software/demo_v5.py",
+      "bytes": 1484,
+      "sha256": "87265932f9b918491caeccf50ab7486cd9b500ffb4a745413ea56421bcf3b55f"
+    },
+    {
+      "file": "software/demo_v6.py",
+      "bytes": 730,
+      "sha256": "83fdf9eb9a40fddc75fbc6302ef2af84807a1a197ca0b1d9dd3148ebe602d6d7"
+    },
+    {
+      "file": "software/demo_v7.py",
+      "bytes": 3882,
+      "sha256": "36f4390ffc1d54dfd8585920ca7dd8ec697a27ed5e382be8839b3a5cae28ae92"
+    },
+    {
+      "file": "software/demo_v9_kernel.py",
+      "bytes": 4967,
+      "sha256": "f97898c552b70657b6c445c027d517da0cba3619ef499f7bce9bc7214fbdb483"
+    },
+    {
+      "file": "software/demo_v9_semantics.py",
+      "bytes": 15700,
+      "sha256": "ca685cc49192b6a7e1565378953eebf7d52907abdc43ea44a87fe2f604375b4f"
+    },
+    {
+      "file": "software/requirements-test.txt",
+      "bytes": 92,
+      "sha256": "8e9d11d360389b2f9c3aba7867397cff52355b3d95413973569e2ad8742206ae"
+    },
+    {
+      "file": "software/tests/test_adapters.py",
+      "bytes": 2904,
+      "sha256": "c94539b4e418c63b87d8cc846b2c30b0c9deab9fa62e68c03dfc51130bf43a7c"
+    },
+    {
+      "file": "software/tests/test_core.py",
+      "bytes": 5838,
+      "sha256": "a3ed0d616c501e6adb5799659ea36b0918d0c53c875a007db0005fb68c805ce9"
+    },
+    {
+      "file": "software/tests/test_diagrammatic_v9.py",
+      "bytes": 19632,
+      "sha256": "954e6ed8f7cb25f609ede37925355d13fe5acdd4ea7fbcb4e9da81e055bb02b6"
+    },
+    {
+      "file": "software/tests/test_evolving.py",
+      "bytes": 8862,
+      "sha256": "490e6254b2565fba9c73d811c65e436ce7cbad3f4a87b727d04e11cde7d39f43"
+    },
+    {
+      "file": "software/tests/test_generative_v9.py",
+      "bytes": 14283,
+      "sha256": "26bb035dc07fc0fbf03cc8f96eefee5f3e77d34e171e27468886de86b0b5d664"
+    },
+    {
+      "file": "software/tests/test_higher.py",
+      "bytes": 8357,
+      "sha256": "ee62893deedbe5127e479c80b6e2192067f653e9ffb9795e343ef622ae51318d"
+    },
+    {
+      "file": "software/tests/test_higher_cells_v9.py",
+      "bytes": 6712,
+      "sha256": "144b64e3b06802660a1a4fc8e1d76debdf4034bc1fc957be34fa464253482761"
+    },
+    {
+      "file": "software/tests/test_higher_comparison_v6.py",
+      "bytes": 1950,
+      "sha256": "116194a5b0bc9300b49a6cfa167db6ddf251d3b5154159f5fed85ea880e5faaf"
+    },
+    {
+      "file": "software/tests/test_higher_pasting_v8.py",
+      "bytes": 4027,
+      "sha256": "403454634e7e67e2f958f1a8ac36819a65fe6c9ccdf8e6906deac3579109bffc"
+    },
+    {
+      "file": "software/tests/test_legacy_integrity_v9.py",
+      "bytes": 995,
+      "sha256": "717fa7b90cdd48686cbe8cf011d887fd4989c91cd944fe729b455c7b9d6d1e6e"
+    },
+    {
+      "file": "software/tests/test_lineage.py",
+      "bytes": 8304,
+      "sha256": "50afecd7b05bc7da341984deb0af21b4856c886782aee1fdf8bf23102f8eaca0"
+    },
+    {
+      "file": "software/tests/test_new_semantics.py",
+      "bytes": 4299,
+      "sha256": "d4083826124efa4cf751d52ba68830ede7fff67bfb533240d0e75e160150d384"
+    },
+    {
+      "file": "software/tests/test_observational_v7.py",
+      "bytes": 12165,
+      "sha256": "a876eac6c7f48a034bb38449a91a74539b9677613b4fcd2cdf59abfdb9535711"
+    },
+    {
+      "file": "software/tests/test_pasting_v7.py",
+      "bytes": 4523,
+      "sha256": "78953f08ec68ab82050625927d2b764d110df0037bd9dfd9695a85e16f0bc6e5"
+    },
+    {
+      "file": "software/tests/test_process_semantics.py",
+      "bytes": 1827,
+      "sha256": "4c1a0ce9500b78753ba5df2f38db740cf827d8e1d2b3ba7fc1f09482a5697572"
+    },
+    {
+      "file": "software/tests/test_revision_rounds.py",
+      "bytes": 8396,
+      "sha256": "53934f147923c1caf96d8572012929941f7812911a318a1f133aea7a462be5bf"
+    },
+    {
+      "file": "software/tests/test_seam_properties.py",
+      "bytes": 3652,
+      "sha256": "99fa4d198e3ce03a2ceb534e41090fa02d42ea7326fb70a99597f567d51098e2"
+    },
+    {
+      "file": "software/tests/test_seams.py",
+      "bytes": 9748,
+      "sha256": "33cf69737b85a0a57ea0e91bb567dab19381ed05db510c4679dcd43d00cde922"
+    },
+    {
+      "file": "software/tests/test_semantic_bridges.py",
+      "bytes": 11438,
+      "sha256": "056b1febf9361c0a38eacbbb4bc15bb050a638531d03057a0e396daaabdd7262"
+    },
+    {
+      "file": "software/tests/test_semantics.py",
+      "bytes": 1109,
+      "sha256": "2fd3df5754c96e2b46a677f4315e4fe2fe9c73b3fd399429bce7c65979ada4a2"
+    },
+    {
+      "file": "software/wenhehua/__init__.py",
+      "bytes": 916,
+      "sha256": "6bda70501611d5fbe4364b00e175a271c05dd6fe4234e3a0ae8a8b9222c66f59"
+    },
+    {
+      "file": "software/wenhehua/adapters.py",
+      "bytes": 1857,
+      "sha256": "4684394d5ee75af7825632246b1fe0eadfdbc09eff544c28520b26dd66ed2ab8"
+    },
+    {
+      "file": "software/wenhehua/core.py",
+      "bytes": 15390,
+      "sha256": "a8509632bf50f8f3cad2d4d4aa02b119c03f6b7075d9cfa37371951eb094f4cd"
+    },
+    {
+      "file": "software/wenhehua/diagrammatic_v9.py",
+      "bytes": 23401,
+      "sha256": "becc1a965b168ae2547cd7b6fb951acc118ad110f0107273bc1c4414e61fcd9a"
+    },
+    {
+      "file": "software/wenhehua/evolving.py",
+      "bytes": 9456,
+      "sha256": "d20e4e73b0d6d021a4cc1e51049b669545486eff0025e81668f993535faa504d"
+    },
+    {
+      "file": "software/wenhehua/flow.py",
+      "bytes": 2158,
+      "sha256": "a1b850747b0da528080d35364de3f23d895abebc846c1347af96843a03c98029"
+    },
+    {
+      "file": "software/wenhehua/generative_v9.py",
+      "bytes": 24308,
+      "sha256": "efa0fbfce2b37d9ec7e88ce8ab2cd27348b69dbb9f0f5b44c9da2b8088421a8c"
+    },
+    {
+      "file": "software/wenhehua/higher.py",
+      "bytes": 14631,
+      "sha256": "c27e64237bdce35a4092901e7ef16bc4dc9ed65384004d7105a0555521214e7a"
+    },
+    {
+      "file": "software/wenhehua/higher_cells_v9.py",
+      "bytes": 8589,
+      "sha256": "b1c0d64ec29bb8bdbcf2510f7551e66e9b01871cf45b9d57b9df750fbd5428bb"
+    },
+    {
+      "file": "software/wenhehua/higher_comparison_v6.py",
+      "bytes": 2204,
+      "sha256": "720afe11d102d8817cffd7730e2bb52310359e9bd1757909e3f8874f2d8a7af0"
+    },
+    {
+      "file": "software/wenhehua/higher_pasting_v8.py",
+      "bytes": 4217,
+      "sha256": "13e37c0db47f300e1d79701ad668883b265f9b090dc725c7abbc57570ab8f129"
+    },
+    {
+      "file": "software/wenhehua/lineage.py",
+      "bytes": 13212,
+      "sha256": "827c96ebd07f7b5ba99b2bafa2066e8fe2f92e5b8a6a51c69deed2af681f6b39"
+    },
+    {
+      "file": "software/wenhehua/modes.py",
+      "bytes": 2511,
+      "sha256": "5ff6dd7829d7ac06066cb637210165aa3f2f058e6cc615b6f1beb3f2b592d3b9"
+    },
+    {
+      "file": "software/wenhehua/observational_v7.py",
+      "bytes": 13051,
+      "sha256": "7791df7511b77db359dd523271eb0e3bb2ad048e37301fe7c216c6dc925bb649"
+    },
+    {
+      "file": "software/wenhehua/probability.py",
+      "bytes": 3887,
+      "sha256": "abfbfcb55d81c074ad6d16bb92e0d71d470d702b5eddd8cf0d6cae131766e5ed"
+    },
+    {
+      "file": "software/wenhehua/process_semantics.py",
+      "bytes": 1518,
+      "sha256": "39e90a30d5b20cd35f6dde81c9fe497c4dc6442ad1980ab2d4a32dabb81fc418"
+    },
+    {
+      "file": "software/wenhehua/seams.py",
+      "bytes": 6453,
+      "sha256": "4439162fae1818244cf6dab61de2dc3587020d455991c5eb229965bde7cba081"
+    },
+    {
+      "file": "software/wenhehua/semantic_bridges.py",
+      "bytes": 15808,
+      "sha256": "34404bc726534304fcba4d55eacf05026307dd2e73200f9a770e2898e9e0c941"
+    },
+    {
+      "file": "software/wenhehua/semantics.py",
+      "bytes": 4196,
+      "sha256": "c86040871fd656a79caa04433826a370b6607829fda6bbc315f24d992ddb2c3f"
+    },
+    {
+      "file": "sources/08_二轮来源核对.md",
+      "bytes": 3086,
+      "sha256": "4e5286d3cb04198181a570077dbdf93b7d4903d98a923fe66d8f6e3b93f85b70"
+    },
+    {
+      "file": "sources/17_高阶统一文献核对.md",
+      "bytes": 2528,
+      "sha256": "79ca96bb36188f0ac1347f32acac545a9ae2675d41cf0c52afeabc6920bc307a"
+    },
+    {
+      "file": "sources/24_第三阶段来源核对.md",
+      "bytes": 3602,
+      "sha256": "2a9a8e2869db729307ac8b04ff25499558d4c68c5e476df64943c78e589bb798"
+    },
+    {
+      "file": "sources/30_第四阶段_来源与归属.md",
+      "bytes": 3709,
+      "sha256": "e2089f1140faf129f65d4b57a18a2db949cca041733aa6ba520d699024f99a3d"
+    },
+    {
+      "file": "sources/36_第五阶段_文献与归属.md",
+      "bytes": 3301,
+      "sha256": "8e435169b1872a265af27ea7fec892cfa87d94c7277f6feb4f655fb8a8679dd8"
+    },
+    {
+      "file": "sources/44_语义桥_文献依据与归属.md",
+      "bytes": 3681,
+      "sha256": "e905899dea53d5521be498564068ec3ee6444efaf63b9ee35367a00f97846415"
+    },
+    {
+      "file": "sources/51_第七阶段文献与数学归属.md",
+      "bytes": 4105,
+      "sha256": "aae712db15318ac0b235a19e295a2286b9016d92057c6ddab676be9cbffa9c1f"
+    },
+    {
+      "file": "sources/57_高阶统一_最新文献归属.md",
+      "bytes": 2482,
+      "sha256": "c0dd1f90d7a7cea463c9d8560be47b11ce1d5a7d182b0f36487ea69d01e48d47"
+    },
+    {
+      "file": "sources/65_v9_原始文献与归属.md",
+      "bytes": 6340,
+      "sha256": "548b5de5c8d4782f2245eec43d0339f8974e1d4f1b6fa93e960a8b27842cad68"
+    },
+    {
+      "file": "sources/参考文献与考据.md",
+      "bytes": 5299,
+      "sha256": "3ac5e96c7992bab677141aff6edd3665f63028a767a1ed0972e858147bb54497"
+    },
+    {
+      "file": "verify_release_v6.py",
+      "bytes": 4565,
+      "sha256": "480394f95a35b60c5a3d8fc1ec0e8f0c0ce8a404ca45cb2ebb70bc423d223ca7"
+    },
+    {
+      "file": "verify_release_v9.py",
+      "bytes": 3006,
+      "sha256": "16d81719474d0ad8de6430458e0afe31cb8be4d14e87c7765e6ba455568e125c"
+    }
+  ],
+  "excluded_release_artifacts": [
+    {
+      "file": "evidence/contact_dedicated.jpg",
+      "bytes": 217445,
+      "sha256": "a021aa2fd015dd0241d7d6f1221376efb7e7252bf26ff7a8f70bb6d38eb71077"
+    },
+    {
+      "file": "evidence/contact_lexicon.jpg",
+      "bytes": 206701,
+      "sha256": "58c1b9cc6352ebe1da63922ecddc72cc0f0f7a85a4d1badab9b097c71bdd3c76"
+    },
+    {
+      "file": "evidence/contact_theory.jpg",
+      "bytes": 209796,
+      "sha256": "47939b3ef9eac0d7ebf49829540348005afa32562031a4f31d9f7b6ed27e2519"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v5.0_概念词林_contact.png",
+      "bytes": 364117,
+      "sha256": "6c3325de9da774f6071d55031ca90179aee847e2c37b4c193b4829b6d57093ba"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v5.0_理论全集_contact.png",
+      "bytes": 446474,
+      "sha256": "386bf32f00ea3e1ea7e5c18d180892d74c36b1976ff807e09ea448bd7d2bdb12"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v5.0_续迹弱交换专论_contact.png",
+      "bytes": 447758,
+      "sha256": "10750d4d7083e99bbff4623ae01f5cdf692fa9340f2427eb0950894d68ed963c"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v6.0_概念词林_contact.png",
+      "bytes": 566532,
+      "sha256": "5b3e53d49f7aaf70d93950b190b228a8c4445a5156079bbf26163d35f4ab4f5d"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v6.0_理论全集_contact.png",
+      "bytes": 580183,
+      "sha256": "c0fe0e6f6890ca33cb6f43ec299615108292676351debcf3b6f42e130409f58f"
+    },
+    {
+      "file": "evidence/pdf_qc/文合化_v6.0_逐一连接专论_contact.png",
+      "bytes": 647165,
+      "sha256": "86263ad60e413be46b481925472c6b7e5e2f2398e260fa9bc2cb4636ded57c37"
+    },
+    {
+      "file": "evidence/pdf_v9/lexicon_p005.png",
+      "bytes": 230483,
+      "sha256": "75c04d243c74141197d09a9aaa9c720e6a62da7e7ebb44f4c1819fc2c52dd701"
+    },
+    {
+      "file": "evidence/pdf_v9/lexicon_selected_1.png",
+      "bytes": 507922,
+      "sha256": "f85d57b0b3247fa5a313fdc660fbec7a961fdd61220d3b6fa195e1d632c04a51"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_001_016.png",
+      "bytes": 719033,
+      "sha256": "69773f49d4f1bb235ab63098bed232c6258dd3afd478550587cead3e2ab11875"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_017_032.png",
+      "bytes": 722339,
+      "sha256": "90d25b89b8a7bcd72b8f7347530f757665426e818c27bb89d61c2e2637e612b2"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_033_044.png",
+      "bytes": 526965,
+      "sha256": "51b22d4dde0b3196b23fffe399a6c80f5f92070076cc974b9afc6e4d4107734b"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_p012.png",
+      "bytes": 234493,
+      "sha256": "f686ce5ecb23872a92591f99553a127657c6cfeb83acc4d063a5983d909eec4b"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_p027.png",
+      "bytes": 287391,
+      "sha256": "c0f305e845f6283d672babb8af6f23024f322fdc5aa0c683dc6a999d18492b1a"
+    },
+    {
+      "file": "evidence/pdf_v9/monograph_p036.png",
+      "bytes": 88442,
+      "sha256": "415b79e98c7d0a16b5ee19c01b9926a5fcf1b3290307781ca0f0f546530a370e"
+    },
+    {
+      "file": "evidence/pdf_v9/theory_p085.png",
+      "bytes": 280923,
+      "sha256": "c3bfceda32e17e10b612b4ade804faf241f71a9acdbd3e0b2818a8c1cf4b9640"
+    },
+    {
+      "file": "evidence/pdf_v9/theory_selected_1.png",
+      "bytes": 583789,
+      "sha256": "a76b1b5d325436d537dc9acf95972092337b208e9eadc20835bd7e223504e1d5"
+    },
+    {
+      "file": "evidence/rendered_v8/page-01.png",
+      "bytes": 200982,
+      "sha256": "93f303a35540892c1c81afbc845d2c809e283a486db572dfce64ca887e0a4c48"
+    },
+    {
+      "file": "evidence/rendered_v8/page-02.png",
+      "bytes": 304293,
+      "sha256": "14f7cefaca80645f56e6100cd65ec877a052ea41a19f57879c539a769f03de79"
+    },
+    {
+      "file": "evidence/rendered_v8/page-03.png",
+      "bytes": 282630,
+      "sha256": "d38b23ecbac5f3d68683cb67de754420b8cdf4a422445c6cc0bb3bb40cd21a11"
+    },
+    {
+      "file": "evidence/rendered_v8/page-04.png",
+      "bytes": 259376,
+      "sha256": "926589994e3356d23ce32e911de66dd0589d993116a3d04125b53229faae4540"
+    },
+    {
+      "file": "evidence/rendered_v8/page-05.png",
+      "bytes": 300519,
+      "sha256": "602c550f3de8e9a2e02d817280590cfe2f961763cfccabf633d167127eb28f2e"
+    },
+    {
+      "file": "evidence/rendered_v8/page-06.png",
+      "bytes": 243200,
+      "sha256": "282f03deccd57af5998d1a61701b0092e61ecc91a57db8af5bfd7712ac5bd608"
+    },
+    {
+      "file": "evidence/rendered_v8/page-07.png",
+      "bytes": 233057,
+      "sha256": "2c2c5075ed320a79a6d7fab85bb257d9f96b4cad96fa5255171111b41013fcdc"
+    },
+    {
+      "file": "evidence/rendered_v8/page-08.png",
+      "bytes": 325521,
+      "sha256": "8f1366a34361fdf214a9b7ea83a9ab5e2f009fd716ec8677ef10e2a0286b2f72"
+    },
+    {
+      "file": "evidence/rendered_v8/page-09.png",
+      "bytes": 362806,
+      "sha256": "6991d1964306bdd9abf9463715fa3518cbae015e7c315171d863e264af0803c9"
+    },
+    {
+      "file": "evidence/rendered_v8/page-10.png",
+      "bytes": 80520,
+      "sha256": "8fea89fb1e57b45b5137c4d5cd7b1f1fb3970cede3cddf9391c1d2086371b7d7"
+    },
+    {
+      "file": "evidence/v7_contact_all.jpg",
+      "bytes": 370449,
+      "sha256": "80956802b65b42ff47d91f640eab97ffd98de36efa9ae7c68a19f3fea48248ff"
+    },
+    {
+      "file": "evidence/v7_contact_lex.jpg",
+      "bytes": 293256,
+      "sha256": "f42a4f58f37c6959142a19b3cfc279a28a7865944b0e990c04113d7ab4354f7e"
+    },
+    {
+      "file": "evidence/v7_contact_new.jpg",
+      "bytes": 305776,
+      "sha256": "5f42e495625794cb78183f56ab7fa012cb1f28d39bccebf42daec5fe946a5277"
+    },
+    {
+      "file": "export/unicode_map.tex",
+      "bytes": 1928,
+      "sha256": "37f66dae43ae2fa8ad8dbb2cadd02124f651fcae714ea70b830223fb28cbd000"
+    },
+    {
+      "file": "export/v8_header.tex",
+      "bytes": 40,
+      "sha256": "aa7b8f494c0e5ee2478dc00e8da6d648edc6940105ba610bbd48a170b1d434e0"
+    },
+    {
+      "file": "export/v9_header.tex",
+      "bytes": 1661,
+      "sha256": "4ae388b63a0028fa50749eebb943661de3740e34d03aaf9e53621810643769d0"
+    },
+    {
+      "file": "export/v9_unicode.tex",
+      "bytes": 3636,
+      "sha256": "218fab8b047cae1e566df357530e00fcbdff81586434558d6e0fc110616f99a7"
+    },
+    {
+      "file": "export/v9_wrap.lua",
+      "bytes": 674,
+      "sha256": "845d4755898f45d5b02a985b6211b6763615a2b61bcbfc40922b2e3c7fa42716"
+    },
+    {
+      "file": "export/文合化_v2.0_概念词林.md",
+      "bytes": 79873,
+      "sha256": "560c898d9753ba8a3bc2db34ba85227b1ceae27157ffa5496d815440735ca7df"
+    },
+    {
+      "file": "export/文合化_v2.0_概念词林.pdf",
+      "bytes": 388594,
+      "sha256": "9ccc75b99d98c4b354efde9bbd73b8acfb8b2ac2d7296b46b001c5ac2c4bf208"
+    },
+    {
+      "file": "export/文合化_v2.0_理论全集.md",
+      "bytes": 107936,
+      "sha256": "be571031c2da65472c5a3d223f0875fd972feb07599559ed19f410a2ee32c715"
+    },
+    {
+      "file": "export/文合化_v2.0_理论全集.pdf",
+      "bytes": 624325,
+      "sha256": "2a5d8f87308c31782e9f6a8b2f0048b0ffe7cd247bde3d424445b7b0003222c3"
+    },
+    {
+      "file": "export/文合化_v2.0_高阶统一专论.md",
+      "bytes": 47084,
+      "sha256": "42804360fb4361727e3bc557b1fe49739f68d1ec8ae5d7ec68bf7fbcb4bc72d3"
+    },
+    {
+      "file": "export/文合化_v2.0_高阶统一专论.pdf",
+      "bytes": 445892,
+      "sha256": "9fb64efbd11e9de9494925632172827033e7c9b48dfd14b39f66d6803ebecd85"
+    },
+    {
+      "file": "export/文合化_v3.0_概念词林.md",
+      "bytes": 92242,
+      "sha256": "32871ecc941d70014160fcb695f3c4625b382af46fa7b816891affb90e01766b"
+    },
+    {
+      "file": "export/文合化_v3.0_概念词林.pdf",
+      "bytes": 422277,
+      "sha256": "ab53610819de6deb0e01119d2c1fcc9e8ece0cf97f42d2839fb60b179abd0372"
+    },
+    {
+      "file": "export/文合化_v3.0_理论全集.md",
+      "bytes": 127196,
+      "sha256": "ec48242ea896d532871efcd718bc06a5c0db7a4dae9bfa7c4004c59f6d2a8e9d"
+    },
+    {
+      "file": "export/文合化_v3.0_理论全集.pdf",
+      "bytes": 824191,
+      "sha256": "de3771c0eea2d561067288032f34384592466f18e2c8a840c55ebc090ade196b"
+    },
+    {
+      "file": "export/文合化_v3.0_界变时流观守专论.md",
+      "bytes": 47031,
+      "sha256": "86a4d36763c74832b338166960c9bd685cd630f33d871d71078da33c626e99c1"
+    },
+    {
+      "file": "export/文合化_v3.0_界变时流观守专论.pdf",
+      "bytes": 552155,
+      "sha256": "d827d65914a517fd0e96465a202c053ad2905c6e8c18dad0dee839009c495605"
+    },
+    {
+      "file": "export/文合化_v4.0_共界变化专论.md",
+      "bytes": 33590,
+      "sha256": "196fac38f63d4ca0992e2d9bf0d57c5bd5f503f71c733f2aae81ef036e1b6126"
+    },
+    {
+      "file": "export/文合化_v4.0_共界变化专论.pdf",
+      "bytes": 457367,
+      "sha256": "3b0edb8b79d226ee735be09b99d2baa9e12198382c8de1d3ad287c07b2a1b36e"
+    },
+    {
+      "file": "export/文合化_v4.0_概念词林.md",
+      "bytes": 101442,
+      "sha256": "041856ba97288325ca9b5ab57f56eb534b597f73870d6b0adaa2aabea582a7f4"
+    },
+    {
+      "file": "export/文合化_v4.0_概念词林.pdf",
+      "bytes": 436812,
+      "sha256": "20ee2e30c6028d0b9696b5e2c4a28fe9e52ee3cdfb5d697d5eb950406a4ec9dd"
+    },
+    {
+      "file": "export/文合化_v4.0_理论全集.md",
+      "bytes": 139441,
+      "sha256": "4c7d7fdfa4c11a74d272eb7952c45417c6e7bf2d672f4d7490d1610ed2b217c8"
+    },
+    {
+      "file": "export/文合化_v4.0_理论全集.pdf",
+      "bytes": 978586,
+      "sha256": "bc0a7b6b23ea1445f4af7b8b97c74ea343c7f58efbbcb9fea176dfb0ef7c7fef"
+    },
+    {
+      "file": "export/文合化_v5.0_概念词林.md",
+      "bytes": 110020,
+      "sha256": "230243ccc0e1706cdd014737c55dc675eb9b2beb171d51bf2f2d25da291841c5"
+    },
+    {
+      "file": "export/文合化_v5.0_概念词林.pdf",
+      "bytes": 451157,
+      "sha256": "68d07551a45af886e6f441f5b654392ad095c320ba2d52808c72fffe89d1ecb7"
+    },
+    {
+      "file": "export/文合化_v5.0_理论全集.md",
+      "bytes": 154153,
+      "sha256": "43219127ae0706cff2a4a99733a959a8251fe6c8620185cc41c89218829032c2"
+    },
+    {
+      "file": "export/文合化_v5.0_理论全集.pdf",
+      "bytes": 1110177,
+      "sha256": "97093ecbf487d4f3e7e7f1707989f2a4bc143d481685208d77bee13b1370f905"
+    },
+    {
+      "file": "export/文合化_v5.0_续迹弱交换专论.md",
+      "bytes": 32741,
+      "sha256": "c574dad4330da5de361110f289b2bd57f620fd447f3c71ad4f39e4f8f95f00cd"
+    },
+    {
+      "file": "export/文合化_v5.0_续迹弱交换专论.pdf",
+      "bytes": 429981,
+      "sha256": "ba84ed9d714e446ba288d8fcc77420e774293499693df58f9fb7f8af7b9a58e5"
+    },
+    {
+      "file": "export/文合化_v6.0_概念词林.md",
+      "bytes": 126890,
+      "sha256": "128374b30feba5d8fd87b6bfd863f34c09ce0e074e846a62a1c760e7e5bb9431"
+    },
+    {
+      "file": "export/文合化_v6.0_概念词林.pdf",
+      "bytes": 479896,
+      "sha256": "e2bb308dd2b8ae099f0d1dd685eb6a37931f66f09e69cbf8d8724cfc92484cfa"
+    },
+    {
+      "file": "export/文合化_v6.0_理论全集.md",
+      "bytes": 159166,
+      "sha256": "9d17656368188237c9f1f7ae74e5e9602ad7cd3a1d4f1de6ea4f7346e10094e1"
+    },
+    {
+      "file": "export/文合化_v6.0_理论全集.pdf",
+      "bytes": 1235739,
+      "sha256": "6d4784706e387351d0d21c44adf96b265d59882d9e33cdbb167131d9ec8371af"
+    },
+    {
+      "file": "export/文合化_v6.0_逐一连接专论.md",
+      "bytes": 38826,
+      "sha256": "a3a61c200fc7d939cf97c43d6b2be3b4b139e278607db55ebd89c8093aba20d0"
+    },
+    {
+      "file": "export/文合化_v6.0_逐一连接专论.pdf",
+      "bytes": 552671,
+      "sha256": "5997e4da3e41bf75c63e43f65c008d965471fa5b89f88ae2a71ace73bd1a0266"
+    },
+    {
+      "file": "export/文合化_v7.0_依观判守专论.md",
+      "bytes": 49919,
+      "sha256": "9a22250ba7259b3f104adfd29293b4bcc101e60bacb559b83a9d864d5a9e21b1"
+    },
+    {
+      "file": "export/文合化_v7.0_依观判守专论.pdf",
+      "bytes": 622640,
+      "sha256": "becd7b9bb1714a3a40c37c0e8b10711fadfd56cef978da1a1eece0f9bb6aef65"
+    },
+    {
+      "file": "export/文合化_v7.0_概念词林.md",
+      "bytes": 136875,
+      "sha256": "5da41fe5960fb36d6363f02d725c10f330e54c3eabf820f18ac932844c952d52"
+    },
+    {
+      "file": "export/文合化_v7.0_概念词林.pdf",
+      "bytes": 499845,
+      "sha256": "ef8c78e6c9bf0319bac86fc34ab3b9238d4a6150e215cb9734ef70497ed27d2d"
+    },
+    {
+      "file": "export/文合化_v7.0_理论全集.md",
+      "bytes": 208907,
+      "sha256": "4135701fe3a0dfe62240313fee2671e7fe004829e3cd850dadd3ebd7be50a965"
+    },
+    {
+      "file": "export/文合化_v7.0_理论全集.pdf",
+      "bytes": 1546031,
+      "sha256": "432780b80f22c7a1c01f879fc91a9e6e4714485cef327e611b093990e3508cc8"
+    },
+    {
+      "file": "export/文合化_v8.0_合化同源高阶生成专论.md",
+      "bytes": 27702,
+      "sha256": "fefd565e8d5119f7e2ca5cd7d9e66eab01041b00dc4d6813b00765457def10bb"
+    },
+    {
+      "file": "export/文合化_v8.0_合化同源高阶生成专论.pdf",
+      "bytes": 295551,
+      "sha256": "8716ec45728af43a5640401c23f24c04919e002c2659bd7da3209984afc09794"
+    },
+    {
+      "file": "export/文合化_v8.0_合化同源高阶生成专论.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_v8.0_概念词林.md",
+      "bytes": 138873,
+      "sha256": "d717d6326843174adf9dbfc23d801d17249e4e46f256a9248395d069cbe3a460"
+    },
+    {
+      "file": "export/文合化_v8.0_概念词林.pdf",
+      "bytes": 505799,
+      "sha256": "e04f6b115fb7b24c0d70ddd0f98c1d29313adff16000192cdb1756bea2754ffb"
+    },
+    {
+      "file": "export/文合化_v8.0_概念词林.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_v8.0_理论全集.md",
+      "bytes": 238588,
+      "sha256": "44ca6fc32202f0a662307c1b9f1ce8bc01d4caebd8a142dc321451abe74e49f2"
+    },
+    {
+      "file": "export/文合化_v8.0_理论全集.pdf",
+      "bytes": 1601048,
+      "sha256": "93e7608385201912005dec16476a7f01806d07470f617bf43850d2c734860655"
+    },
+    {
+      "file": "export/文合化_v8.0_理论全集.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_v9.0_严格高阶生成专论.md",
+      "bytes": 122141,
+      "sha256": "79fc8ab00ef759da51a912c0b434a2e82e41ac8d42c31c61f56650dc6d2d8019"
+    },
+    {
+      "file": "export/文合化_v9.0_严格高阶生成专论.pdf",
+      "bytes": 577264,
+      "sha256": "098ca7d5949c488250d0d1b0de1f2ba10df8bb9ee18c65becc59f4d33535a675"
+    },
+    {
+      "file": "export/文合化_v9.0_严格高阶生成专论.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_v9.0_概念词林.md",
+      "bytes": 168183,
+      "sha256": "742f69e9e8dbf46478054354f2709784379356b27b78f646edeba7e3fb7d73a9"
+    },
+    {
+      "file": "export/文合化_v9.0_概念词林.pdf",
+      "bytes": 589397,
+      "sha256": "737eda4feaf209391af517e056cfdb83c9a6f5b8a1c4c97f5852556f0782c9bf"
+    },
+    {
+      "file": "export/文合化_v9.0_概念词林.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_v9.0_理论全集.md",
+      "bytes": 363542,
+      "sha256": "79a3f96b714f619947744c06862e52b683aacd40bca78d53c261c857d5c26d32"
+    },
+    {
+      "file": "export/文合化_v9.0_理论全集.pdf",
+      "bytes": 1879390,
+      "sha256": "e7be161562d1b4ba744f55bd46cd9bac0331ce1837c27ef4ab662686ae4ae7fc"
+    },
+    {
+      "file": "export/文合化_v9.0_理论全集.texwarnings.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "export/文合化_两轮审查精读_v1.2.html",
+      "bytes": 50924,
+      "sha256": "1060786a028003a0a184c9aaae072992918c64fe16705c784538d83e31cf79e9"
+    },
+    {
+      "file": "export/文合化_两轮审查精读_v1.2.pdf",
+      "bytes": 1161717,
+      "sha256": "06070a83171c0f541a9c53db94045d6c8d6558bae68945561f4121b44eda97cb"
+    },
+    {
+      "file": "export/文合化_概念词林_v1.2.html",
+      "bytes": 109236,
+      "sha256": "534518c3c9a5753e7aa911ec90d960ce608c875653a5ff743698824cfe6529e1"
+    },
+    {
+      "file": "export/文合化_概念词林_v1.2.pdf",
+      "bytes": 1120842,
+      "sha256": "023673939a55ab6a1c00c320b4fdf2fd7aa78968aad99e2b7cf2ade6b17d84c2"
+    },
+    {
+      "file": "export/文合化_理论全集_v1.2.html",
+      "bytes": 107608,
+      "sha256": "7dac000a14cceea3a0609c4c11a554f309d3bbf030fdb2121566bb332f820d44"
+    },
+    {
+      "file": "export/文合化_理论全集_v1.2.pdf",
+      "bytes": 1392606,
+      "sha256": "010194161308fd3e7f65553b39adcad1a00d36f25d090b2490b5665c343a92ce"
+    },
+    {
+      "file": "figures/v9_c2_relative_information.pdf",
+      "bytes": 24982,
+      "sha256": "4685604eaeae0da13217da87bc9f9b48973621bd16d9493f9563a6305f8d4009"
+    },
+    {
+      "file": "figures/v9_c2_relative_information.png",
+      "bytes": 78342,
+      "sha256": "3d51f2f6fba5da8edd86443dc748b41b77337d30588c5ed96453e18c743f2f6b"
+    },
+    {
+      "file": "figures/v9_comparison_types.pdf",
+      "bytes": 21016,
+      "sha256": "de1cdacf258500db360d6a9c84383a96aba2c9e96ed6886e26a2e1569203e668"
+    },
+    {
+      "file": "figures/v9_comparison_types.png",
+      "bytes": 64962,
+      "sha256": "b4df94c9cb7937b8bcf88fbc5c41e09c67b59a7a13b0a9b5a1577e7a6bb4b10d"
+    },
+    {
+      "file": "figures/v9_comparison_universal_property.pdf",
+      "bytes": 10904,
+      "sha256": "bcc17eb1483b91768dc9aa09509e8e1d24ccf8851e288a6eb7ef2a6a20510fbe"
+    },
+    {
+      "file": "figures/v9_comparison_universal_property.png",
+      "bytes": 65161,
+      "sha256": "99230dd3557e635381d087443b5a63aca3641e7ad2746690d1112486ac4c67cd"
+    },
+    {
+      "file": "figures/二维相容方格.png",
+      "bytes": 84378,
+      "sha256": "031e4dbe09c90440770a58e1328d40b4eaf5fea3609d8761f70677505431795f"
+    },
+    {
+      "file": "figures/依观判守_语义图.png",
+      "bytes": 158789,
+      "sha256": "56558b456a32bee4bd875569cf34292f2e936aef321ab3926bb199daa35ac67a"
+    },
+    {
+      "file": "figures/共界新生.png",
+      "bytes": 53775,
+      "sha256": "f4cde33113b2ad3527a70f0300b2c9bd892336bdc467d9213f63ebbd7dd11e7b"
+    },
+    {
+      "file": "figures/合化比较_双路径.png",
+      "bytes": 110195,
+      "sha256": "f9af66a9d25e3fcf91672cc0007f8cee96fec928ec7a6621a04f3619cb7254f3"
+    },
+    {
+      "file": "figures/暂合复分_身份冲突.png",
+      "bytes": 73733,
+      "sha256": "1dbce0aa9d923204c7cb05c89b68e461e95201f51d03604362c6ccdd44d511ca"
+    },
+    {
+      "file": "figures/查询粗化_反例.png",
+      "bytes": 85651,
+      "sha256": "f334e75bf38642a0ca1eec00415664bc4dd8886f05a71eba1c9b2a98436e0772"
+    },
+    {
+      "file": "figures/界变稳定接缝.png",
+      "bytes": 96997,
+      "sha256": "f3b1806c70f0966a5e9c4fd7ef2c9f9207a7d3ddbb6c66fbe8a9191b76750064"
+    },
+    {
+      "file": "figures/观守接口反例.png",
+      "bytes": 69040,
+      "sha256": "cba32a75a5a5d39cd274a57bbafb1b5dae3d971bea3f4ed18f3c17b6669117e5"
+    },
+    {
+      "file": "figures/语义连接总图.png",
+      "bytes": 181066,
+      "sha256": "ac1157181afd330e4d3f160f50d7f3aea3e16393120e00f5817caf986d6a606c"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v0.3.zip",
+      "bytes": 2334400,
+      "sha256": "2542a9dfd296465c7849e9d510a921c22c4104783ddf3a2b1a39dacd3359b72e"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v1.0.zip",
+      "bytes": 3130403,
+      "sha256": "9647cf9ef0297626d052b3d947a27636768edaefef0d3ac9ce564b2809d082eb"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v1.2.zip",
+      "bytes": 4418968,
+      "sha256": "80536965cca8e5098e2a4066f1296790590d5ea17081b9e52ec2f195a6e61910"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v2.0.zip",
+      "bytes": 5409937,
+      "sha256": "ff982fc94e5c2fb22daa83fdd724c65163c4238f0350d04680eabfd6e5bc7804"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v3.0.zip",
+      "bytes": 8197954,
+      "sha256": "8fedd92a2f6b3578587480aa0fd01fb819c088219ebeed1bd82cb8df77256208"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v4.0.zip",
+      "bytes": 10322538,
+      "sha256": "16f0cee74ae446643cf7189155235412551b6227f32bb00f5bf5b6f67aeda929"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v5.0.zip",
+      "bytes": 13704134,
+      "sha256": "05355b4ac9c025b8033ce493fd5fae73ab371067ad1b62dd47c712e9a52c93ea"
+    },
+    {
+      "file": "historical_release_zips/WenHeHua_Research_v6.0.zip",
+      "bytes": 17295274,
+      "sha256": "a437d4d1d8256a8891feb162c122fcbba9d2a486ec74f298bcb6b2aecbd53ede"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+@Becoming.DoubleKernel.congrArg2 : ∀ {α β γ : Type} (f : α → β → γ) {a₁ a₂ : α} {b₁ b₂ : β},
+  a₁ = a₂ → b₁ = b₂ → f a₁ b₁ = f a₂ b₂
+@Becoming.DoubleKernel.pathComp_nil_l : ∀ {Obj Edge : Type} {src tgt : Edge → Obj} {x y : Obj}
+  (p : Becoming.DoubleKernel.TypedPath src tgt x y),
+  Becoming.DoubleKernel.pathComp (Becoming.DoubleKernel.TypedPath.nil x) p = p
+@Becoming.DoubleKernel.pathComp_nil_r : ∀ {Obj Edge : Type} {src tgt : Edge → Obj} {x y : Obj}
+  (p : Becoming.DoubleKernel.TypedPath src tgt x y),
+  Becoming.DoubleKernel.pathComp p (Becoming.DoubleKernel.TypedPath.nil y) = p
+@Becoming.DoubleKernel.pathComp_assoc : ∀ {Obj Edge : Type} {src tgt : Edge → Obj} {w x y z : Obj}
+  (p : Becoming.DoubleKernel.TypedPath src tgt w x) (q : Becoming.DoubleKernel.TypedPath src tgt x y)
+  (r : Becoming.DoubleKernel.TypedPath src tgt y z),
+  Becoming.DoubleKernel.pathComp (Becoming.DoubleKernel.pathComp p q) r =
+    Becoming.DoubleKernel.pathComp p (Becoming.DoubleKernel.pathComp q r)
+@Becoming.DoubleKernel.frame_eq_components : ∀ {Obj HEdge VEdge : Type} {hSrc hTgt : HEdge → Obj}
+  {vSrc vTgt : VEdge → Obj} {f₁ f₂ : Becoming.DoubleKernel.Frame hSrc hTgt vSrc vTgt},
+  f₁ = f₂ →
+    ∃ htl htr hbl hbr,
+      htl ▸ htr ▸ f₁.top = f₂.top ∧
+        hbl ▸ hbr ▸ f₁.bot = f₂.bot ∧ htl ▸ hbl ▸ f₁.left = f₂.left ∧ htr ▸ hbr ▸ f₁.right = f₂.right
+@Becoming.DoubleKernel.frame_ext : ∀ {Obj HEdge VEdge : Type} {hSrc hTgt : HEdge → Obj} {vSrc vTgt : VEdge → Obj}
+  (f₁ f₂ : Becoming.DoubleKernel.Frame hSrc hTgt vSrc vTgt) (htl : f₁.tl = f₂.tl) (htr : f₁.tr = f₂.tr)
+  (hbl : f₁.bl = f₂.bl) (hbr : f₁.br = f₂.br),
+  htl ▸ htr ▸ f₁.top = f₂.top →
+    hbl ▸ hbr ▸ f₁.bot = f₂.bot → htl ▸ hbl ▸ f₁.left = f₂.left → htr ▸ hbr ▸ f₁.right = f₂.right → f₁ = f₂
+@Becoming.DoubleKernel.pathComp_subst : ∀ {Obj Edge : Type} {src tgt : Edge → Obj} {x₁ y₁ z₁ x₂ y₂ z₂ : Obj}
+  (hx : x₁ = x₂) (hy : y₁ = y₂) (hz : z₁ = z₂) {p₁ : Becoming.DoubleKernel.TypedPath src tgt x₁ y₁}
+  {p₂ : Becoming.DoubleKernel.TypedPath src tgt x₂ y₂} {q₁ : Becoming.DoubleKernel.TypedPath src tgt y₁ z₁}
+  {q₂ : Becoming.DoubleKernel.TypedPath src tgt y₂ z₂},
+  hx ▸ hy ▸ p₁ = p₂ →
+    hy ▸ hz ▸ q₁ = q₂ → hx ▸ hz ▸ Becoming.DoubleKernel.pathComp p₁ q₁ = Becoming.DoubleKernel.pathComp p₂ q₂
+@Becoming.DoubleKernel.hasFrame_unique : ∀ {G : Becoming.DoubleKernel.DoubleSig} {P : Becoming.DoubleKernel.SqTerm G}
+  {φ₁ φ₂ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.HasFrame G P φ₁ → Becoming.DoubleKernel.HasFrame G P φ₂ → φ₁ = φ₂
+@Becoming.DoubleKernel.eqCert_preserves_frame : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {P Q : Becoming.DoubleKernel.SqTerm G},
+  Becoming.DoubleKernel.EqCert G P Q → ∃ φ, Becoming.DoubleKernel.HasFrame G P φ ∧ Becoming.DoubleKernel.HasFrame G Q φ
+@Becoming.DoubleKernel.eqCert_frame_eq : ∀ {G : Becoming.DoubleKernel.DoubleSig} {P Q : Becoming.DoubleKernel.SqTerm G}
+  {φ₁ φ₂ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.EqCert G P Q →
+    Becoming.DoubleKernel.HasFrame G P φ₁ → Becoming.DoubleKernel.HasFrame G Q φ₂ → φ₁ = φ₂
+@Becoming.DoubleKernel.evalHPath_endpoints : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M) {x y : G.Obj}
+  (p : Becoming.DoubleKernel.TypedPath G.hSrc G.hTgt x y),
+  M.hSrc (Becoming.DoubleKernel.evalHPath I p) = I.onObj x ∧ M.hTgt (Becoming.DoubleKernel.evalHPath I p) = I.onObj y
+@Becoming.DoubleKernel.evalVPath_endpoints : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M) {x y : G.Obj}
+  (u : Becoming.DoubleKernel.TypedPath G.vSrc G.vTgt x y),
+  M.vSrc (Becoming.DoubleKernel.evalVPath I u) = I.onObj x ∧ M.vTgt (Becoming.DoubleKernel.evalVPath I u) = I.onObj y
+@Becoming.DoubleKernel.evalHPath_comp : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M) {x y z : G.Obj}
+  (p : Becoming.DoubleKernel.TypedPath G.hSrc G.hTgt x y) (q : Becoming.DoubleKernel.TypedPath G.hSrc G.hTgt y z),
+  Becoming.DoubleKernel.evalHPath I (Becoming.DoubleKernel.pathComp p q) =
+    M.hComp (Becoming.DoubleKernel.evalHPath I p) (Becoming.DoubleKernel.evalHPath I q)
+@Becoming.DoubleKernel.evalVPath_comp : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M) {x y z : G.Obj}
+  (u : Becoming.DoubleKernel.TypedPath G.vSrc G.vTgt x y) (v : Becoming.DoubleKernel.TypedPath G.vSrc G.vTgt y z),
+  Becoming.DoubleKernel.evalVPath I (Becoming.DoubleKernel.pathComp u v) =
+    M.vComp (Becoming.DoubleKernel.evalVPath I u) (Becoming.DoubleKernel.evalVPath I v)
+@Becoming.DoubleKernel.evalSqTerm_frame : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M)
+  {P : Becoming.DoubleKernel.SqTerm G} {φ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.HasFrame G P φ →
+    M.top (Becoming.DoubleKernel.evalSqTerm I P) = Becoming.DoubleKernel.evalHPath I φ.top ∧
+      M.bot (Becoming.DoubleKernel.evalSqTerm I P) = Becoming.DoubleKernel.evalHPath I φ.bot ∧
+        M.left (Becoming.DoubleKernel.evalSqTerm I P) = Becoming.DoubleKernel.evalVPath I φ.left ∧
+          M.right (Becoming.DoubleKernel.evalSqTerm I P) = Becoming.DoubleKernel.evalVPath I φ.right
+@Becoming.DoubleKernel.eqCert_sound : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} (I : Becoming.DoubleKernel.SigInterp G M)
+  {P Q : Becoming.DoubleKernel.SqTerm G},
+  Becoming.DoubleKernel.EqCert G P Q → Becoming.DoubleKernel.evalSqTerm I P = Becoming.DoubleKernel.evalSqTerm I Q
+@Becoming.DoubleKernel.free_double_eval_unique : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {M : Becoming.DoubleKernel.StrictDoubleCat} {I : Becoming.DoubleKernel.SigInterp G M}
+  (E : Becoming.DoubleKernel.FunctorialSqEval I) {P : Becoming.DoubleKernel.SqTerm G}
+  {φ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.HasFrame G P φ → E.eval P = Becoming.DoubleKernel.evalSqTerm I P
+@Becoming.DoubleKernel.evalSqTerm_weight_eq : ∀ {G : Becoming.DoubleKernel.DoubleSig} (w : G.SqGen → Nat)
+  (P : Becoming.DoubleKernel.SqTerm G),
+  Becoming.DoubleKernel.evalSqTerm (Becoming.DoubleKernel.weightInterp G w) P = Becoming.DoubleKernel.termWeight G w P
+@Becoming.DoubleKernel.eqCert_preserves_weight : ∀ {G : Becoming.DoubleKernel.DoubleSig} (w : G.SqGen → Nat)
+  {P Q : Becoming.DoubleKernel.SqTerm G},
+  Becoming.DoubleKernel.EqCert G P Q → Becoming.DoubleKernel.termWeight G w P = Becoming.DoubleKernel.termWeight G w Q
+@Becoming.DoubleKernel.distinct_same_frame_gens_not_cert_eq : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  (w : G.SqGen → Nat) {P Q : Becoming.DoubleKernel.SqTerm G},
+  Becoming.DoubleKernel.termWeight G w P ≠ Becoming.DoubleKernel.termWeight G w Q → ¬Becoming.DoubleKernel.EqCert G P Q
+@Becoming.DoubleKernel.hasEndpoints3_common_frame : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {Γ : Becoming.DoubleKernel.Cell3Term G} {P Q : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G Γ P Q →
+    ∃ φ, Becoming.DoubleKernel.HasFrame G.toDoubleSig P φ ∧ Becoming.DoubleKernel.HasFrame G.toDoubleSig Q φ
+@Becoming.DoubleKernel.hasEndpoints3_unique_mod_2d : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {Γ : Becoming.DoubleKernel.Cell3Term G} {P₁ Q₁ P₂ Q₂ : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G Γ P₁ Q₁ →
+    Becoming.DoubleKernel.HasEndpoints3 G Γ P₂ Q₂ →
+      Becoming.DoubleKernel.EqCert G.toDoubleSig P₁ P₂ ∧ Becoming.DoubleKernel.EqCert G.toDoubleSig Q₁ Q₂
+@Becoming.DoubleKernel.eqCert_assocH_of_frame : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {P₁ P₂ P₃ : Becoming.DoubleKernel.SqTerm G} {φ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.HasFrame G ((P₁.compH P₂).compH P₃) φ →
+    Becoming.DoubleKernel.EqCert G ((P₁.compH P₂).compH P₃) (P₁.compH (P₂.compH P₃))
+@Becoming.DoubleKernel.eqCert_assocV_of_frame : ∀ {G : Becoming.DoubleKernel.DoubleSig}
+  {P₁ P₂ P₃ : Becoming.DoubleKernel.SqTerm G} {φ : Becoming.DoubleKernel.Frame G.hSrc G.hTgt G.vSrc G.vTgt},
+  Becoming.DoubleKernel.HasFrame G ((P₁.compV P₂).compV P₃) φ →
+    Becoming.DoubleKernel.EqCert G ((P₁.compV P₂).compV P₃) (P₁.compV (P₂.compV P₃))
+@Becoming.DoubleKernel.cell3_eq_preserves_endpoints : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {Γ Δ : Becoming.DoubleKernel.Cell3Term G},
+  Becoming.DoubleKernel.Eq3Cert G Γ Δ →
+    ∃ P₁ Q₁ P₂ Q₂,
+      Becoming.DoubleKernel.HasEndpoints3 G Γ P₁ Q₁ ∧
+        Becoming.DoubleKernel.HasEndpoints3 G Δ P₂ Q₂ ∧
+          Becoming.DoubleKernel.EqCert G.toDoubleSig P₁ P₂ ∧ Becoming.DoubleKernel.EqCert G.toDoubleSig Q₁ Q₂
+@Becoming.DoubleKernel.conservative_over_base_2d : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {P Q : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.Eq3Cert G (Becoming.DoubleKernel.Cell3Term.id3 P) (Becoming.DoubleKernel.Cell3Term.id3 Q) →
+    Becoming.DoubleKernel.EqCert G.toDoubleSig P Q
+@Becoming.DoubleKernel.hasEndpoints3_weight_mono : ∀ {G : Becoming.DoubleKernel.Double3Sig} (w : G.SqGen → Nat),
+  (∀ (ρ : G.Cell3Gen),
+      Becoming.DoubleKernel.termWeight G.toDoubleSig w (G.c3Src ρ) ≤
+        Becoming.DoubleKernel.termWeight G.toDoubleSig w (G.c3Tgt ρ)) →
+    ∀ {Γ : Becoming.DoubleKernel.Cell3Term G} {P Q : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+      Becoming.DoubleKernel.HasEndpoints3 G Γ P Q →
+        Becoming.DoubleKernel.termWeight G.toDoubleSig w P ≤ Becoming.DoubleKernel.termWeight G.toDoubleSig w Q
+Becoming.DoubleKernel.strict_2d_3d_noncollapse_witness : Becoming.DoubleKernel.HasEndpoints3
+    Becoming.DoubleKernel.directedNonCollapse3Sig (Becoming.DoubleKernel.Cell3Term.gen3 ())
+    (Becoming.DoubleKernel.SqTerm.gen false) (Becoming.DoubleKernel.SqTerm.gen true) ∧
+  ¬Becoming.DoubleKernel.EqCert Becoming.DoubleKernel.directedNonCollapse2Sig (Becoming.DoubleKernel.SqTerm.gen false)
+        (Becoming.DoubleKernel.SqTerm.gen true) ∧
+    ∀ (Γ : Becoming.DoubleKernel.Cell3Term Becoming.DoubleKernel.directedNonCollapse3Sig),
+      ¬Becoming.DoubleKernel.HasEndpoints3 Becoming.DoubleKernel.directedNonCollapse3Sig Γ
+          (Becoming.DoubleKernel.SqTerm.gen true) (Becoming.DoubleKernel.SqTerm.gen false)
+@Becoming.DoubleKernel.evalCell3Term_endpoints : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {K : Becoming.DoubleKernel.StrictTripleCat} (I : Becoming.DoubleKernel.Sig3Interp G K)
+  {Γ : Becoming.DoubleKernel.Cell3Term G} {P Q : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G Γ P Q →
+    K.c3Src (Becoming.DoubleKernel.evalCell3Term I Γ) = Becoming.DoubleKernel.evalSqTerm I.base P ∧
+      K.c3Tgt (Becoming.DoubleKernel.evalCell3Term I Γ) = Becoming.DoubleKernel.evalSqTerm I.base Q
+@Becoming.DoubleKernel.evalCell3Term_compH3_compat : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {K : Becoming.DoubleKernel.StrictTripleCat} (I : Becoming.DoubleKernel.Sig3Interp G K)
+  {Γ Δ : Becoming.DoubleKernel.Cell3Term G} {P₁ P₂ Q₁ Q₂ : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G (Γ.compH3 Δ) (P₁.compH P₂) (Q₁.compH Q₂) →
+    K.right (K.c3Src (Becoming.DoubleKernel.evalCell3Term I Γ)) =
+      K.left (K.c3Src (Becoming.DoubleKernel.evalCell3Term I Δ))
+@Becoming.DoubleKernel.evalCell3Term_compV3_compat : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {K : Becoming.DoubleKernel.StrictTripleCat} (I : Becoming.DoubleKernel.Sig3Interp G K)
+  {Γ Δ : Becoming.DoubleKernel.Cell3Term G} {P₁ P₂ Q₁ Q₂ : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G (Γ.compV3 Δ) (P₁.compV P₂) (Q₁.compV Q₂) →
+    K.bot (K.c3Src (Becoming.DoubleKernel.evalCell3Term I Γ)) =
+      K.top (K.c3Src (Becoming.DoubleKernel.evalCell3Term I Δ))
+@Becoming.DoubleKernel.evalCell3Term_compR_compat : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {K : Becoming.DoubleKernel.StrictTripleCat} (I : Becoming.DoubleKernel.Sig3Interp G K)
+  {Γ Δ : Becoming.DoubleKernel.Cell3Term G} {P Q Q' R : Becoming.DoubleKernel.SqTerm G.toDoubleSig},
+  Becoming.DoubleKernel.HasEndpoints3 G Γ P Q →
+    Becoming.DoubleKernel.EqCert G.toDoubleSig Q Q' →
+      Becoming.DoubleKernel.HasEndpoints3 G Δ Q' R →
+        K.c3Tgt (Becoming.DoubleKernel.evalCell3Term I Γ) = K.c3Src (Becoming.DoubleKernel.evalCell3Term I Δ)
+@Becoming.DoubleKernel.free_3d_eval_sound : ∀ {G : Becoming.DoubleKernel.Double3Sig}
+  {K : Becoming.DoubleKernel.StrictTripleCat} (I : Becoming.DoubleKernel.Sig3Interp G K)
+  {Γ Δ : Becoming.DoubleKernel.Cell3Term G},
+  Becoming.DoubleKernel.Eq3Cert G Γ Δ →
+    Becoming.DoubleKernel.evalCell3Term I Γ = Becoming.DoubleKernel.evalCell3Term I Δ
+@Becoming.DoubleKernel.guarded_oplax_sound : ∀ {A B : Type} {e₁ e₂ : Becoming.DoubleKernel.GuardedExpr A B}
+  (p : Becoming.DoubleKernel.GuardedProof e₁ e₂),
+  (∀ (w : (Becoming.DoubleKernel.evalGuardedExpr e₁).W),
+      (Becoming.DoubleKernel.evalGuardedExpr e₂).left ((Becoming.DoubleKernel.evalGuardedProof p).map w) =
+          (Becoming.DoubleKernel.evalGuardedExpr e₁).left w ∧
+        (Becoming.DoubleKernel.evalGuardedExpr e₂).right ((Becoming.DoubleKernel.evalGuardedProof p).map w) =
+          (Becoming.DoubleKernel.evalGuardedExpr e₁).right w) ∧
+    ∀ {X Y Z : Type} (H : Becoming.OplaxHistory.RelSpan X Y) (K : Becoming.OplaxHistory.RelSpan Y Z)
+      (S : Becoming.OplaxHistory.SumPreservingFunctor)
+      (b :
+        Becoming.OplaxHistory.Bij (S.toFunctor.obj (Becoming.OplaxHistory.PullbackElem H.right K.left))
+          (Becoming.OplaxHistory.PullbackElem (S.toFunctor.map H.right) (S.toFunctor.map K.left))),
+      (∀ (u : S.toFunctor.obj (Becoming.OplaxHistory.PullbackElem H.right K.left)),
+          b.toFun u = (Becoming.OplaxHistory.chi S.toFunctor H K).map u) →
+        Becoming.OplaxHistory.FImageIsPullback S.toFunctor H K ∧
+          ∀ (E : S.toFunctor.obj H.W → Type) (v : S.toFunctor.obj K.W),
+            Becoming.OplaxHistory.IsBijective (Becoming.OplaxHistory.bcMap S.toFunctor H K E v)
+Becoming.DoubleKernel.strict_vs_guarded_separation_witness : (¬Becoming.OplaxHistory.Surj
+        Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne ∧
+    Becoming.OplaxHistory.Inj Becoming.OplaxHistory.EmergentCrossSeamWitness.chiZeroToOne ∧
+      ¬Becoming.OplaxHistory.Surj Becoming.OplaxHistory.EmergentCrossSeamWitness.chiTwoToFour) ∧
+  (¬Becoming.OplaxHistory.Inj Becoming.OplaxHistory.C2RelativeLossWitness.c2ChiTwoToOne ∧
+      Becoming.OplaxHistory.Surj Becoming.OplaxHistory.C2RelativeLossWitness.c2ChiTwoToOne) ∧
+    (∀ (F : Becoming.OplaxHistory.SpanFunctor) {A D C : Type} (H : Becoming.OplaxHistory.RelSpan A D)
+        (K : Becoming.OplaxHistory.RelSpan D C) (v : F.obj K.W),
+        Becoming.OplaxHistory.IsBijective (Becoming.OplaxHistory.bcMap F H K (fun x => Empty) v)) ∧
+      ∀ (F : Becoming.OplaxHistory.SpanFunctor) {A D C : Type} (H : Becoming.OplaxHistory.RelSpan A D)
+        (K : Becoming.OplaxHistory.RelSpan D C),
+        (Becoming.OplaxHistory.IsBijective (Becoming.OplaxHistory.chi F H K).map ↔
+            Becoming.OplaxHistory.FImageIsPullback F H K) ∧
+          (Becoming.OplaxHistory.IsBijective (Becoming.OplaxHistory.chi F H K).map ↔
+            ∀ (E : F.obj H.W → Type) (v : F.obj K.W),
+              Becoming.OplaxHistory.IsBijective (Becoming.OplaxHistory.bcMap F H K E v))

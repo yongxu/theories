@@ -1,0 +1,41 @@
+[
+  {
+    "file": "文合化_v9.0_严格高阶生成专论.pdf",
+    "pages": 44,
+    "size_bytes": 577264,
+    "sha256": "098ca7d5949c488250d0d1b0de1f2ba10df8bb9ee18c65becc59f4d33535a675",
+    "rendered_pages": 44,
+    "outside_page_spans": [],
+    "near_edge_spans": [],
+    "replacement_character_pages": [],
+    "empty_text_pages": [],
+    "pandoc_warning_text": "",
+    "visual_review": "recorded separately in QA_REPORT_v9.0.md"
+  },
+  {
+    "file": "文合化_v9.0_理论全集.pdf",
+    "pages": 128,
+    "size_bytes": 1879390,
+    "sha256": "e7be161562d1b4ba744f55bd46cd9bac0331ce1837c27ef4ab662686ae4ae7fc",
+    "rendered_pages": 128,
+    "outside_page_spans": [],
+    "near_edge_spans": [],
+    "replacement_character_pages": [],
+    "empty_text_pages": [],
+    "pandoc_warning_text": "",
+    "visual_review": "recorded separately in QA_REPORT_v9.0.md"
+  },
+  {
+    "file": "文合化_v9.0_概念词林.pdf",
+    "pages": 67,
+    "size_bytes": 589397,
+    "sha256": "737eda4feaf209391af517e056cfdb83c9a6f5b8a1c4c97f5852556f0782c9bf",
+    "rendered_pages": 67,
+    "outside_page_spans": [],
+    "near_edge_spans": [],
+    "replacement_character_pages": [],
+    "empty_text_pages": [],
+    "pandoc_warning_text": "",
+    "visual_review": "recorded separately in QA_REPORT_v9.0.md"
+  }
+]

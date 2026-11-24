@@ -1,0 +1,73 @@
+{
+  "scope": "typed square terms, structural equality certificates, directed contextual rewrites",
+  "signature": {
+    "objects": 9,
+    "h_edges": 6,
+    "v_edges": 6,
+    "square_generators": 5
+  },
+  "exchange": {
+    "raw_terms_identical": false,
+    "certificate_accepted": true,
+    "finite_function_semantics_preserved": true,
+    "named_event_counts_preserved": true,
+    "top_word": [
+      "h00",
+      "h01"
+    ],
+    "bottom_word": [
+      "h20",
+      "h21"
+    ],
+    "left_word": [
+      "v00",
+      "v10"
+    ],
+    "right_word": [
+      "v02",
+      "v12"
+    ]
+  },
+  "directed_rewrite": {
+    "rule": "choose_fast",
+    "context_address": [
+      0
+    ],
+    "trace_valid": true,
+    "boundary_preserved": true,
+    "thin_observation_identifies_events": true,
+    "syntactic_events_remain_distinct": true,
+    "count_semantics_separates_events": true
+  },
+  "third_dimension": {
+    "contextual_rewrite_lifted": true,
+    "named_events": [
+      [
+        "choose_fast",
+        1
+      ]
+    ],
+    "transport_adds_no_directed_events": true,
+    "constructors": [
+      "identity",
+      "generator",
+      "h",
+      "v",
+      "z",
+      "certified_endpoint_transport"
+    ],
+    "full_quotient_equality_algorithm_implemented": false
+  },
+  "rejections": {
+    "wrong_complete_seam": "horizontal paste requires equal complete vertical seams",
+    "same_frame_is_not_structural_equality": "certificate does not instantiate its named rule",
+    "directed_step_is_not_equality": "directed rewrites are not equality certificates",
+    "reverse_rewrite_not_declared": "rewrite left side does not match at the address"
+  },
+  "limitations": [
+    "No general equality-search or normalization algorithm is implemented.",
+    "No complete 3-dimensional quotient equality algorithm is implemented.",
+    "The finite-function observation is thin and is not a faithful semantics.",
+    "Typed directed rewrites alone do not certify behavior preservation in richer models."
+  ]
+}

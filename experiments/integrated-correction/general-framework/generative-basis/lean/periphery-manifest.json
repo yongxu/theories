@@ -121,6 +121,16 @@
       "receipt": "conditional/renewal/renewal-bridge-verification.json",
       "checker": "conditional/renewal/check_renewal_bridge.py",
       "record": "renewal-bridge-to-keepable-step"
+    },
+    {
+      "module": "ObservationalFidelity",
+      "region": "knowing",
+      "toolchain": "leanprover/lean4:v4.30.0-rc2",
+      "mathlib": true,
+      "source": "observational-fidelity/ObservationalFidelity.lean",
+      "receipt": "observational-fidelity/observational-fidelity-verification.json",
+      "checker": "observational-fidelity/check_observational_fidelity.py",
+      "record": "observational-fidelity-and-multi-regime-error"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "schema": "wenhehua.v9.test_run",
+  "started_utc": "2026-11-24T07:06:45.981980+00:00",
+  "completed_utc": "2026-11-24T07:06:46.103151+00:00",
+  "working_directory": "/workspace/scratch/4d585e40cdc3/WenHeHua_Research_v9.0/software",
+  "command_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-v"
+  ],
+  "reproduction_command": "PYTHONPATH=/workspace/scratch/4d585e40cdc3/tmp/test_dependencies python3 -m unittest discover -v",
+  "environment": {
+    "python_version": "3.12.14",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "networkx_version": "3.7",
+    "networkx_module": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies/networkx/__init__.py",
+    "PYTHONPATH": "/workspace/scratch/4d585e40cdc3/tmp/test_dependencies"
+  },
+  "exit_code": 5,
+  "tests_run": 0,
+  "unittest_reported_seconds": 0.0,
+  "wall_seconds": 0.121138,
+  "status": "failed_or_unparsed",
+  "complete_output_file": "v9_test_results.txt",
+  "counting_scope": "unittest test methods only; demonstration bracketing instances are reported separately"
+}

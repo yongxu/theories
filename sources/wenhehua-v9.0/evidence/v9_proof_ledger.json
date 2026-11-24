@@ -1,0 +1,112 @@
+{
+  "schema": "wenhehua.v9.proof_ledger",
+  "release_date": "2026-11-24",
+  "machine_checked_in_proof_assistant": false,
+  "status_meaning": "paper proofs with independent mathematical review; software evidence is separate and finite",
+  "claims": [
+    {
+      "id": "T1-T4",
+      "claim": "二维项形成、最小同余、自由严格双范畴与唯一解释",
+      "source": "formal/59_v9_自由双范畴与相对三维生成.md",
+      "scope": "任意合法双向签名；严格目标",
+      "evidence": "paper proof and cross-review",
+      "implementation": "二维生成和证书检查已实现"
+    },
+    {
+      "id": "T5",
+      "claim": "所列二维结构证书的可靠性",
+      "source": "formal/59_v9_自由双范畴与相对三维生成.md",
+      "scope": "十类结构规则及证书推理规则",
+      "evidence": "paper proof and cross-review",
+      "implementation": "检查器已实现；不是证书搜索或完整判等算法"
+    },
+    {
+      "id": "T6-T9",
+      "claim": "相对三维内部范畴、自由性与低维保守性",
+      "source": "formal/59_v9_自由双范畴与相对三维生成.md",
+      "scope": "完整平行二维端点；新增轴的低维面退化",
+      "evidence": "paper proof and cross-review",
+      "implementation": "三维项形成与端点运输已实现；完整三胞商判等未实现"
+    },
+    {
+      "id": "N",
+      "claim": "任意有限阶相对自由扩张",
+      "source": "formal/66_v9_并排组合与任意有限阶.md",
+      "scope": "n>=3；严格多重范畴；完整平行顶维端点",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学证明；程序到三维"
+    },
+    {
+      "id": "S1-S2",
+      "claim": "Span(F) 正规余松与全部有限时间分组相干",
+      "source": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "scope": "有拉回范畴之间的任意函子",
+      "evidence": "paper proof and cross-review",
+      "implementation": "有限图式比较、单位、自然性与括号验证已实现"
+    },
+    {
+      "id": "S3",
+      "claim": "旧动态共界模型精确识别",
+      "source": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "scope": "状态为接缝图式，历史为其跨度",
+      "evidence": "paper proof and cross-review",
+      "implementation": "旧接口显式同构与比较对应已测试"
+    },
+    {
+      "id": "S4",
+      "claim": "当前像方图的拉回与 Beck-Chevalley 等价判据",
+      "source": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "scope": "该方图、所有集合族；有限带类型集合亦适用",
+      "evidence": "paper proof and cross-review",
+      "implementation": "实际 BC 纤维函数已实现"
+    },
+    {
+      "id": "S5",
+      "claim": "复合解释的比较因式分解",
+      "source": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "scope": "三个有拉回范畴与两个函子",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学证明；无任意范畴公共 API"
+    },
+    {
+      "id": "P",
+      "claim": "对称幺半并排与余松时间比较兼容",
+      "source": "formal/66_v9_并排组合与任意有限阶.md",
+      "scope": "有限带类型集合及图式；保留不交并标签",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学证明；独立并排公共 API 未实现"
+    },
+    {
+      "id": "I",
+      "claim": "路径求值比较与全部连续块宏展开相干",
+      "source": "formal/67_v9_生成历史的语法语义接口.md",
+      "scope": "已赋值的有限历史词；有限无递归连续分块",
+      "evidence": "paper proof and cross-review",
+      "implementation": "已赋值非空序列与二叉括号实现；一般宏和 Part(w) API 未实现"
+    },
+    {
+      "id": "O1",
+      "claim": "最小观察总变差误差",
+      "source": "formal/61_v9_基变换与观察保真.md",
+      "scope": "有限集合；局部来源非空；全函数；固定目标分布与观察",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学证明并连接已有有限概率代码；空来源单列"
+    },
+    {
+      "id": "O-refinement",
+      "claim": "分块细化时观察支持扩大及条件性误差单调",
+      "source": "formal/61_v9_基变换与观察保真.md",
+      "scope": "跨度顶点集合非空；相同最终观察与分布",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学推论；不表示物理历史更忠实"
+    },
+    {
+      "id": "variable-shape",
+      "claim": "有限可变形状图式的拉回和余极限语义",
+      "source": "formal/60_v9_动态共界的oplax语义与相干性.md",
+      "scope": "严格形状拉回与自然变换；非同伦/iso-comma 版本",
+      "evidence": "paper proof and cross-review",
+      "implementation": "数学构造；公共 API 尚固定形状"
+    }
+  ]
+}

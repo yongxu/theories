@@ -1,0 +1,823 @@
+{
+  "title": "文合化 v9：严格生成词谱",
+  "version": "9.0",
+  "date": "2026-11-24",
+  "language": "zh-CN",
+  "entry_count": 58,
+  "purpose": "用于思考、形成、验证和解释的术语索引；不是58个语法原语，也不主张穷尽全部数学或现实领域。",
+  "translation_policy": {
+    "double_category": "双向范畴（其他卷亦称双范畴）",
+    "bicategory": "弱二范畴",
+    "strict_2_category": "严格二范畴"
+  },
+  "composition_convention": "f;g 表示先 f 后 g；lax: F(f)⋆F(g)→F(f⋆g)，oplax: F(f⋆g)→F(f)⋆F(g)。",
+  "minimal_core": {
+    "declarations": "Σ=(O,H,V,A;∂)，完整有类型路径与四边界。",
+    "raw_2d_terms": "P ::= α | Ih(u) | Iv(f) | H(P,P) | V(P,P)，仅允许边界相容的实例。",
+    "equality": "结合、单位、交换和单位兼容的明确证书；与有向重写分型区分。",
+    "optional_3d_extension": "G3 的生成元连接同四界二维胞；1P、H3、V3、R3 及二维等式运输构成可执行片段。完整三维商在数学卷定义。",
+    "semantics": "目标结构与解释的保持条件单独指定；并排、复制、反馈等不默认为核心原语。"
+  },
+  "selection_criteria": [
+    "需要性：一个词应指向不能由相邻词悄悄替代的数学角色或实际证明义务。",
+    "分型性：说明对象、边界、维度和比较方向，能够据此判断构造是否合法。",
+    "生成性：可由已有构造得到的词保留为派生概念，不因常用而自动提升为原语。",
+    "保真性：区分结构保持、忠实、观察可实现与领域正确性；每个承诺写明假设。",
+    "扩展性：领域新操作以模块加入，明确形成规则与语义，而不改写核心词的含义。"
+  ],
+  "references": [
+    "../formal/59_v9_自由双范畴与相对三维生成.md",
+    "../formal/60_v9_动态共界的oplax语义与相干性.md",
+    "../formal/61_v9_基变换与观察保真.md",
+    "../formal/66_v9_并排组合与任意有限阶.md",
+    "../formal/67_v9_生成历史的语法语义接口.md",
+    "../sources/65_v9_原始文献与归属.md"
+  ],
+  "entries": [
+    {
+      "id": "V9-01",
+      "group": "一、思维用词",
+      "term": "界",
+      "english": "Boundary",
+      "role": "思维词",
+      "mathematical_correspondence": "源、靶及其他指定面；决定哪些项有资格连接。",
+      "type_and_dimension": "随胞腔层级变化；二维核使用四条有类型路径。",
+      "common_misreading": "接口形状匹配就已证明物理相容、资源足够或概率合法。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-02",
+      "group": "一、思维用词",
+      "term": "元",
+      "english": "Generator",
+      "role": "思维词",
+      "mathematical_correspondence": "签名中明确声明、尚未由本语言分解的生成元。",
+      "type_and_dimension": "可处于对象、边、方胞或更高胞层。",
+      "common_misreading": "生成元是宇宙中不可再分的实体，或已穷尽全部领域。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-03",
+      "group": "一、思维用词",
+      "term": "文",
+      "english": "Typed expression",
+      "role": "思维词",
+      "mathematical_correspondence": "由生成元与合法形成规则得到的有类型表达；需区分原始项与其结构同余类。",
+      "type_and_dimension": "不是固定维度；本轮重点为二维方胞项。",
+      "common_misreading": "两个表达同界、同名或同观察，就必定是同一个表达。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-04",
+      "group": "一、思维用词",
+      "term": "合",
+      "english": "Typed composition",
+      "role": "思维词",
+      "mathematical_correspondence": "沿明确方向、在相接边界匹配时定义的部分组合。",
+      "type_and_dimension": "同一胞腔层内可有多个组合方向。",
+      "common_misreading": "一个无类型的万能二元运算，或所有组合顺序都可交换。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-05",
+      "group": "一、思维用词",
+      "term": "化",
+      "english": "Directed transformation",
+      "role": "思维词",
+      "mathematical_correspondence": "具有源靶的有向变换见证；本轮三维生成元连接同四界的二维方胞。",
+      "type_and_dimension": "相对于被变换的层级定义；不恒等于某条坐标轴。",
+      "common_misreading": "端点已经相等、变换自动可逆，或行为必然保持。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-06",
+      "group": "一、思维用词",
+      "term": "则",
+      "english": "Law or constraint",
+      "role": "思维词",
+      "mathematical_correspondence": "明确列出的结构等式、领域关系或合法性条件；三者须分别标注。",
+      "type_and_dimension": "元语言中的声明；等式两端必须分型相容。",
+      "common_misreading": "所有规律都只是记号约定，可以任意加入而不影响语义。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-07",
+      "group": "一、思维用词",
+      "term": "证",
+      "english": "Typed evidence",
+      "role": "思维词",
+      "mathematical_correspondence": "对具体判断给出的证书或见证：等式推导、同构、模拟或有向比较等。",
+      "type_and_dimension": "证据有自己的源靶与命题类型。",
+      "common_misreading": "一个布尔通过标记；或存在比较箭头就证明两端相等。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-08",
+      "group": "一、思维用词",
+      "term": "观",
+      "english": "Interpretation or observation",
+      "role": "思维词",
+      "mathematical_correspondence": "把表达解释到指定模型，或再用指定观察映射读取其中的性质。",
+      "type_and_dimension": "解释函子与末端观察函数不是同一层。",
+      "common_misreading": "观察相同等于历史相同，或某一个模型已经穷尽现实。",
+      "references": [
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-09",
+      "group": "二、形式核心",
+      "term": "型",
+      "english": "Type",
+      "role": "底层数据",
+      "mathematical_correspondence": "约束项的合法边界、源靶与可用操作的分类数据。",
+      "type_and_dimension": "对象型、路径方向、方胞四界等均参与检查。",
+      "common_misreading": "运行时标签可以替代全部形成规则，或型正确就行为正确。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-10",
+      "group": "二、形式核心",
+      "term": "维",
+      "english": "Dimension",
+      "role": "结构索引",
+      "mathematical_correspondence": "胞腔的层级：对象为零胞，箭头为一胞，方胞为二胞，变化的变化可为三胞。",
+      "type_and_dimension": "索引胞腔阶数，不直接指物理空间维数。",
+      "common_misreading": "横向就是一维、纵向就是二维；把维度当作组合方向。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-11",
+      "group": "二、形式核心",
+      "term": "向",
+      "english": "Composition direction",
+      "role": "结构索引",
+      "mathematical_correspondence": "同一层胞腔可沿不同边界方向组合；例如 h、v，以及三维扩张中的 r。",
+      "type_and_dimension": "二维方胞已有两个方向；三胞可有三个方向。",
+      "common_misreading": "向与维是同义词，或横纵天然对应空间与时间。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-12",
+      "group": "二、形式核心",
+      "term": "签名",
+      "english": "Signature / double computad",
+      "role": "底层数据",
+      "mathematical_correspondence": "Σ=(O,H,V,A;∂)：对象、两类生成边、带四边界的生成方胞及边界赋值。",
+      "type_and_dimension": "边界可为生成边组成的路径，含带对象的空路径。",
+      "common_misreading": "把一张未检查四角与路径的图命名为 computad 就已完成定义。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../sources/65_v9_原始文献与归属.md"
+      ]
+    },
+    {
+      "id": "V9-13",
+      "group": "二、形式核心",
+      "term": "胞腔",
+      "english": "Cell",
+      "role": "结构类型",
+      "mathematical_correspondence": "具有规定维度和面数据的形式构造单元；可为生成元，也可为复合胞腔。",
+      "type_and_dimension": "需说明处于哪一类高阶结构及哪一维。",
+      "common_misreading": "任何几何小块、任何绘制的方框都自动是合法胞腔。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-14",
+      "group": "二、形式核心",
+      "term": "路径",
+      "english": "Typed path",
+      "role": "构造对象",
+      "mathematical_correspondence": "同向生成边组成的可连接有限序列；空序列携带其所在对象。",
+      "type_and_dimension": "横路径与纵路径属于不同自由路径范畴。",
+      "common_misreading": "所有空路径相同，或边的拼写相同就可以忽略方向和端点。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-15",
+      "group": "二、形式核心",
+      "term": "四界",
+      "english": "Square frame",
+      "role": "结构类型",
+      "mathematical_correspondence": "上、下两条横路径与左、右两条纵路径；四角必须一致。",
+      "type_and_dimension": "二维方胞的完整外边界。",
+      "common_misreading": "只比输入输出名称，或只比路径长度，就足以拼接方胞。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-16",
+      "group": "二、形式核心",
+      "term": "同界与平行",
+      "english": "Same boundary / parallel cells",
+      "role": "类型关系",
+      "mathematical_correspondence": "二维核中指完整四界相同；更高相对扩张要求两顶胞的全部指定低维面相同。",
+      "type_and_dimension": "是形成变换的条件，不是相等关系。",
+      "common_misreading": "仅共享一条边就叫平行，或同界项必定相等。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-17",
+      "group": "二、形式核心",
+      "term": "原始项",
+      "english": "Raw term",
+      "role": "构造对象",
+      "mathematical_correspondence": "保留生成元身份、括号与单位的有限表达树。",
+      "type_and_dimension": "二维核的 Atom、Ih、Iv、H、V 形成 AST。",
+      "common_misreading": "AST 字面不同就证明商后不等，或可删除所有原始构造记录。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-18",
+      "group": "二、形式核心",
+      "term": "自由生成",
+      "english": "Free generation",
+      "role": "元性质",
+      "mathematical_correspondence": "生成元赋值满足边界后，唯一延拓为相应结构保持映射的初始性质。",
+      "type_and_dimension": "必须说明自由于哪种结构、哪些生成数据之上。",
+      "common_misreading": "生成元数量绝对最少，或所有现实过程都自动可表示。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-19",
+      "group": "二、形式核心",
+      "term": "呈示",
+      "english": "Presentation",
+      "role": "元结构",
+      "mathematical_correspondence": "用生成数据加明确关系来指定结构；二维呈示由项对最小同余取商。",
+      "type_and_dimension": "关系只在分型相容的项之间加入。",
+      "common_misreading": "列出关系就自动获得终止算法、规范形或语义保真。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-20",
+      "group": "二、形式核心",
+      "term": "双向范畴",
+      "english": "Double category",
+      "role": "结构类型",
+      "mathematical_correspondence": "有对象、横纵两类一胞和方形二胞；严格版本是 Cat 中的内范畴。",
+      "type_and_dimension": "两类一胞；方胞有四界和两种组合。",
+      "common_misreading": "与 bicategory 混同，或只是把两个普通范畴并排写在一起。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../sources/65_v9_原始文献与归属.md"
+      ]
+    },
+    {
+      "id": "V9-21",
+      "group": "二、形式核心",
+      "term": "弱二范畴",
+      "english": "Bicategory",
+      "role": "结构类型",
+      "mathematical_correspondence": "有对象、一类一胞和二胞；一胞的结合、单位由相干同构表达。",
+      "type_and_dimension": "本轮跨度双向范畴的水平 bicategory 属此类。",
+      "common_misreading": "因为中文也常译“双范畴”，就当成有横纵两类一胞的 double category。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../sources/65_v9_原始文献与归属.md"
+      ]
+    },
+    {
+      "id": "V9-22",
+      "group": "二、形式核心",
+      "term": "严格二范畴",
+      "english": "Strict 2-category",
+      "role": "结构类型",
+      "mathematical_correspondence": "有一类一胞；一胞复合严格结合，二胞有水平与竖直组合且满足交换。",
+      "type_and_dimension": "与弱二范畴、双向范畴分别命名。",
+      "common_misreading": "二胞有两个组合方向就说明它有两类一胞。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../sources/65_v9_原始文献与归属.md"
+      ]
+    },
+    {
+      "id": "V9-23",
+      "group": "三、变化与相干",
+      "term": "结构相等",
+      "english": "Structural equality",
+      "role": "结构关系",
+      "mathematical_correspondence": "由结合、单位、交换及单位兼容生成的同余 P≡₂Q。",
+      "type_and_dimension": "作用于同一四界的二维原始项。",
+      "common_misreading": "某个单一观察给出同一值，或一次有向重写已经发生。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-24",
+      "group": "三、变化与相干",
+      "term": "有向重写",
+      "english": "Directed rewriting",
+      "role": "构造算子",
+      "mathematical_correspondence": "具名规则 P→Q 在合法上下文中的应用；本轮规则两端同四界。",
+      "type_and_dimension": "可作为三维生成变换；方向与实例位置均保留。",
+      "common_misreading": "默认允许反向使用，或可以直接充当二维等式证书。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-25",
+      "group": "三、变化与相干",
+      "term": "上下文",
+      "english": "Typed context",
+      "role": "构造对象",
+      "mathematical_correspondence": "含指定孔位的合法表达；把孔位替换为边界相容的项后仍可形成。",
+      "type_and_dimension": "本轮实现为横纵二元 AST 中的明确地址。",
+      "common_misreading": "任意文本替换，或忽略孔位类型的字符串匹配。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-26",
+      "group": "三、变化与相干",
+      "term": "横合",
+      "english": "Horizontal composition",
+      "role": "构造算子",
+      "mathematical_correspondence": "沿相同完整纵边界拼接方胞；上下路径连接，左右取外界。",
+      "type_and_dimension": "二维核记为 ⊙h；高层按相应方向提升。",
+      "common_misreading": "无条件独立并排，或所有模型中都表示空间装配。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-27",
+      "group": "三、变化与相干",
+      "term": "纵合",
+      "english": "Vertical composition",
+      "role": "构造算子",
+      "mathematical_correspondence": "沿相同完整横边界拼接方胞；左右路径连接，上下取外界。",
+      "type_and_dimension": "二维核记为 ⊙v；坐标约定需随模型说明。",
+      "common_misreading": "所有模型中都表示时间；标准 Span 的跨度时间复合通常放在横向。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-28",
+      "group": "三、变化与相干",
+      "term": "相干",
+      "english": "Coherence",
+      "role": "结构性质",
+      "mathematical_correspondence": "明确列出的合法复合路径产生一致的比较；需写明哪些图或路径相等。",
+      "type_and_dimension": "可发生在二维、三维或函子比较层。",
+      "common_misreading": "所有过程可交换，或少数成功测试证明任意高阶图都相干。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../formal/67_v9_生成历史的语法语义接口.md"
+      ]
+    },
+    {
+      "id": "V9-29",
+      "group": "三、变化与相干",
+      "term": "交换",
+      "english": "Interchange",
+      "role": "结构公理",
+      "mathematical_correspondence": "两方向组合的二维网格满足规定交换方程；弱模型可改由指定比较连接。",
+      "type_and_dimension": "严格核为等式；三维核列出三对交换。",
+      "common_misreading": "任意两个事件的顺序都能交换，或非可逆 χ 自动成为严格等式。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-30",
+      "group": "三、变化与相干",
+      "term": "运输",
+      "english": "Transport of representatives",
+      "role": "证据操作",
+      "mathematical_correspondence": "凭二维结构相等证书，把高维胞腔端点换为同一商类的另一个代表。",
+      "type_and_dimension": "改变表示与检查接口，不增加具名三维事件。",
+      "common_misreading": "另一次现实变化，或未经证明就可以更换端点。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-31",
+      "group": "三、变化与相干",
+      "term": "轨迹",
+      "english": "Rewrite trace",
+      "role": "构造对象",
+      "mathematical_correspondence": "依次可接的具名重写实例列表，记录发生位置和方向。",
+      "type_and_dimension": "是可执行历史；不等于完整三胞商的规范形。",
+      "common_misreading": "轨迹列表不同就证明高维不等，或具有同终点就应合并轨迹。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-32",
+      "group": "三、变化与相干",
+      "term": "三胞",
+      "english": "3-cell",
+      "role": "结构类型",
+      "mathematical_correspondence": "本轮为 Γ:P⇒Q，其中 P、Q 是固定二维底座中同四界方胞。",
+      "type_and_dimension": "可横合、纵合及沿新增方向序接；新增低维面退化。",
+      "common_misreading": "任意三维几何块，或给一个箭头就已经证明全部三维相干。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md"
+      ]
+    },
+    {
+      "id": "V9-33",
+      "group": "三、变化与相干",
+      "term": "低维保守",
+      "english": "Lower-dimensional conservativity",
+      "role": "元性质",
+      "mathematical_correspondence": "加入高维生成变换时不新增底座胞腔等式；本轮有 s∘e=id 的见证。",
+      "type_and_dimension": "保持固定二维或更一般 (n−1) 维底座。",
+      "common_misreading": "物理量守恒、程序行为保持，或高维变换没有效果。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-34",
+      "group": "三、变化与相干",
+      "term": "同构",
+      "english": "Isomorphism",
+      "role": "结构关系",
+      "mathematical_correspondence": "一个态射具有双边逆；在有限集合模型中是双射。",
+      "type_and_dimension": "须说明是路径、方胞、跨度顶点还是其他层的同构。",
+      "common_misreading": "字面相等，或只存在一个有向映射就已经可逆。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-35",
+      "group": "三、变化与相干",
+      "term": "自然性",
+      "english": "Naturality",
+      "role": "结构性质",
+      "mathematical_correspondence": "输入作兼容映射时，先比较后映射与先映射后比较相容。",
+      "type_and_dimension": "本轮 χ 的自然性对整张图式及中间对象映射成立。",
+      "common_misreading": "笼统的“自然合理”，或不必检查变量与边界的相容性。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-36",
+      "group": "四、语义与观察",
+      "term": "解释",
+      "english": "Interpretation",
+      "role": "语义定义",
+      "mathematical_correspondence": "为生成元指定模型数据，并按已证明的保持规则解释复合。",
+      "type_and_dimension": "可能严格、伪或余松；须声明所用层级与比较。",
+      "common_misreading": "任意求值函数都是严格函子，或解释一定忠实。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md",
+        "../formal/67_v9_生成历史的语法语义接口.md"
+      ]
+    },
+    {
+      "id": "V9-37",
+      "group": "四、语义与观察",
+      "term": "保结构",
+      "english": "Structure preservation",
+      "role": "语义性质",
+      "mathematical_correspondence": "明确保持哪些单位、复合、关系或比较；可严格保持，也可通过指定同构或单向比较保持。",
+      "type_and_dimension": "必须标注 strict、pseudo、lax 或 oplax 等强度。",
+      "common_misreading": "只因函数有名字就保结构，或保结构等于不丢信息。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-38",
+      "group": "四、语义与观察",
+      "term": "忠实",
+      "english": "Faithful",
+      "role": "语义性质",
+      "mathematical_correspondence": "在明确的 hom 集合或方胞四界纤维上，解释对态射/胞腔的映射为单射。",
+      "type_and_dimension": "必须指出在哪一层保留区别。",
+      "common_misreading": "解释保持公理、误差为零，或所有生成元都能求值。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-39",
+      "group": "四、语义与观察",
+      "term": "观察等价",
+      "english": "Observational equivalence",
+      "role": "观察关系",
+      "mathematical_correspondence": "在指定观察 q 下结果相同；对概率模型也可指观察分布相同。",
+      "type_and_dimension": "依赖观察的选择；若要用于任意上下文替换，另需相容性。",
+      "common_misreading": "无条件的结构相等、历史一致或可替换于所有环境。",
+      "references": [
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-40",
+      "group": "四、语义与观察",
+      "term": "跨度",
+      "english": "Span",
+      "role": "语义对象",
+      "mathematical_correspondence": "X←W→Y；中间 W 保存对应见证，时间复合由拉回形成。",
+      "type_and_dimension": "在 Span 模型中是横向一胞；两腿无需单射。",
+      "common_misreading": "见证必是持续存在的物理个体，或跨度就是余跨度。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-41",
+      "group": "四、语义与观察",
+      "term": "图式",
+      "english": "Diagram",
+      "role": "语义对象",
+      "mathematical_correspondence": "一个函子 D:J→C；J 指定部件、接缝及其关系形状。",
+      "type_and_dimension": "主模型取固定有限 J；函子性包含所有组合关系。",
+      "common_misreading": "任意节点连线图都已是有限范畴上的合法图式。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-42",
+      "group": "四、语义与观察",
+      "term": "余极限",
+      "english": "Colimit",
+      "role": "语义构造",
+      "mathematical_correspondence": "以泛性质聚合一张图式；本轮 Q=colim_J。",
+      "type_and_dimension": "是对图式对象及自然变换的函子。",
+      "common_misreading": "任意无标签合并，或 Q 自动保拉回与所有历史区别。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-43",
+      "group": "四、语义与观察",
+      "term": "推积",
+      "english": "Pushout",
+      "role": "语义构造",
+      "mathematical_correspondence": "对 X←S→Y 的共界粘合余极限 X⊔S Y。",
+      "type_and_dimension": "是 span 形状图式的余极限，不是原图式本身。",
+      "common_misreading": "原图式因此就是 cospan，或被识别的来源仍可无损恢复。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-44",
+      "group": "四、语义与观察",
+      "term": "拉回",
+      "english": "Pullback",
+      "role": "语义构造",
+      "mathematical_correspondence": "对 W→D←V 的匹配对象 W×D V，携带到两端的投影与泛性质。",
+      "type_and_dimension": "用于连续历史见证配对；有限集合中要求中间像相等。",
+      "common_misreading": "普通笛卡尔积，或只要最终端点相同就能配对。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-45",
+      "group": "四、语义与观察",
+      "term": "松函子",
+      "english": "Lax functor",
+      "role": "语义类型",
+      "mathematical_correspondence": "在本词谱的顺序约定下，复合比较方向为 F(f)⋆F(g)→F(f⋆g)。",
+      "type_and_dimension": "比较还需单位、自然性和相干条件。",
+      "common_misreading": "松表示随意、不精确，或与 oplax 的箭头方向无关。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../sources/65_v9_原始文献与归属.md"
+      ]
+    },
+    {
+      "id": "V9-46",
+      "group": "四、语义与观察",
+      "term": "余松函子",
+      "english": "Oplax functor",
+      "role": "语义类型",
+      "mathematical_correspondence": "复合比较方向为 F(f⋆g)→F(f)⋆F(g)；Span(Q) 的 χ 属此方向。",
+      "type_and_dimension": "本轮单位比较可取恒等，称正规；组合比较不必可逆。",
+      "common_misreading": "与 lax 混同，或非可逆比较仍可直接当作语义等式。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../formal/67_v9_生成历史的语法语义接口.md"
+      ]
+    },
+    {
+      "id": "V9-47",
+      "group": "四、语义与观察",
+      "term": "伪函子",
+      "english": "Pseudofunctor",
+      "role": "语义类型",
+      "mathematical_correspondence": "复合及单位由相干的可逆比较保持；正规情形严格保身份。",
+      "type_and_dimension": "路径的平坦拉回求值 L、先聚合原子的求值 E 属此类。",
+      "common_misreading": "“伪”表示不真实，或典范同构就是数据字面相同。",
+      "references": [
+        "../formal/67_v9_生成历史的语法语义接口.md"
+      ]
+    },
+    {
+      "id": "V9-48",
+      "group": "四、语义与观察",
+      "term": "基变换相容",
+      "english": "Beck–Chevalley condition",
+      "role": "语义判据",
+      "mathematical_correspondence": "对本轮由 Q 送出的具体拉回方图，BC 映射对所有集合族可逆，当且仅当 χ 可逆。",
+      "type_and_dimension": "判据依赖同一张指定方图；有限集合族采用重索引和沿纤维不交并。",
+      "common_misreading": "任意另一个 BC 方图都能代表 χ，或空集合族的通过已经足够。",
+      "references": [
+        "../formal/60_v9_动态共界的oplax语义与相干性.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-49",
+      "group": "四、语义与观察",
+      "term": "可实现",
+      "english": "Realizability of an observation",
+      "role": "观察性质",
+      "mathematical_correspondence": "给定 μ 与 q，存在局部概率 ν，使 (qχ)推前ν=q推前μ。",
+      "type_and_dimension": "有限概率模型；U 为空时没有局部概率分布。",
+      "common_misreading": "这种概率分配唯一、由真实机制产生，或 χ 忠实/双射。",
+      "references": [
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-50",
+      "group": "四、语义与观察",
+      "term": "观察误差",
+      "english": "Observation-indexed error",
+      "role": "观察量",
+      "mathematical_correspondence": "在有限且 U 非空时，最小 TV 误差是目标观察分布落在 im(qχ) 之外的质量。",
+      "type_and_dimension": "依赖指定 μ、q 及概率归一化，不是框架的无条件常数。",
+      "common_misreading": "零误差就保留全部历史，或空来源仍有一个误差为 1 的可行概率模型。",
+      "references": [
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-51",
+      "group": "五、可选扩展",
+      "term": "并排",
+      "english": "Symmetric monoidal juxtaposition",
+      "role": "可选模块",
+      "mathematical_correspondence": "在 FinSet/T 及固定 J 的图式模型中，以带外层标签的不交并 ⊕ 并置独立系统。",
+      "type_and_dimension": "需另给幺半结构；Span 层的兼容来自同标签拉回分配。",
+      "common_misreading": "二维横合的另一个名字，或任意复制与共享资源已被授权。",
+      "references": [
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-52",
+      "group": "五、可选扩展",
+      "term": "对称",
+      "english": "Symmetry",
+      "role": "可选模块",
+      "mathematical_correspondence": "并排结构中的典范标签换位，满足对称幺半相干；群作用则需另指定作用数据。",
+      "type_and_dimension": "作用于明确接口或模型，不能只说“具有对称性”。",
+      "common_misreading": "任意换序都无效应，或取轨道仍保留全部相对关系。",
+      "references": [
+        "../formal/66_v9_并排组合与任意有限阶.md",
+        "../formal/60_v9_动态共界的oplax语义与相干性.md"
+      ]
+    },
+    {
+      "id": "V9-53",
+      "group": "五、可选扩展",
+      "term": "资源律",
+      "english": "Resource discipline",
+      "role": "可选模块",
+      "mathematical_correspondence": "指定哪些资源可以复制、丢弃、共享、消耗，以及组合时必须满足的条件。",
+      "type_and_dimension": "领域签名与解释的附加限制。",
+      "common_misreading": "一般范畴公理自动包含数量、能量、权限等资源条件。",
+      "references": [
+        "../formal/61_v9_基变换与观察保真.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-54",
+      "group": "五、可选扩展",
+      "term": "复制与丢弃",
+      "english": "Copy and discard",
+      "role": "可选模块",
+      "mathematical_correspondence": "若模型提供张量 ⊗，需另声明 ΔX:X→X⊗X、!X:X→I 及应满足的规律。",
+      "type_and_dimension": "是具体语义中的额外结构；可在某些模型中由已有结构给出。",
+      "common_misreading": "写出 X⊕X 就已经产生两份物理实体，或任意类型都能复制。",
+      "references": [
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-55",
+      "group": "五、可选扩展",
+      "term": "反馈",
+      "english": "Feedback / trace",
+      "role": "可选模块",
+      "mathematical_correspondence": "需要明确的迹、紧结构或相应不动点语义，说明回路如何形成并解释。",
+      "type_and_dimension": "一般是对指定张量和可接接口的额外运算。",
+      "common_misreading": "把一条线画回输入端就证明存在、唯一、终止或稳定。",
+      "references": [
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    },
+    {
+      "id": "V9-56",
+      "group": "五、可选扩展",
+      "term": "宏",
+      "english": "Macro / abbreviation",
+      "role": "派生构造",
+      "mathematical_correspondence": "以一个名字代表有限连续历史词；局部求值可按典范同构与展开对应。",
+      "type_and_dimension": "不是必需原语；聚合前后展开由 κ 比较。",
+      "common_misreading": "局部缩写合法，就能把聚合后的宏展开无条件当作可逆等式。",
+      "references": [
+        "../formal/67_v9_生成历史的语法语义接口.md"
+      ]
+    },
+    {
+      "id": "V9-57",
+      "group": "五、可选扩展",
+      "term": "分块细化",
+      "english": "Refinement of a path partition",
+      "role": "派生构造",
+      "mathematical_correspondence": "给固定历史词增加切点；粗块到细块诱导规范跨度态射，并满足细化复合律。",
+      "type_and_dimension": "本轮覆盖有限、无递归环的连续块宏；不覆盖任意重写或反馈。",
+      "common_misreading": "细化比较总可逆，或更小观察误差就等于更真实的历史。",
+      "references": [
+        "../formal/67_v9_生成历史的语法语义接口.md",
+        "../formal/61_v9_基变换与观察保真.md"
+      ]
+    },
+    {
+      "id": "V9-58",
+      "group": "五、可选扩展",
+      "term": "有限阶扩张",
+      "english": "Relative finite-dimensional extension",
+      "role": "可选模块",
+      "mathematical_correspondence": "对每个 n≥3，固定严格 (n−1) 重范畴，在完整平行顶胞之间自由加入 n 胞。",
+      "type_and_dimension": "新方向所有低于 n 维的面退化；保持底座。",
+      "common_misreading": "已经构造任意弱无穷范畴，或覆盖所有一般立方体形状。",
+      "references": [
+        "../formal/59_v9_自由双范畴与相对三维生成.md",
+        "../formal/66_v9_并排组合与任意有限阶.md"
+      ]
+    }
+  ]
+}
