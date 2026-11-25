@@ -402,9 +402,9 @@ class TestProposalAuditGrammar(unittest.TestCase):
                 {
                     "kind": "observational_fidelity",
                     "fiber_split": {
-                        "states": ["ok", "bad"],
-                        "proj_map": {"ok": "m", "bad": "m"},
-                        "viable_pred": {"ok": True, "bad": "false"},
+                        "states": ["a_ok", "a_bad", "b_malformed"],
+                        "proj_map": {"a_ok": "m0", "a_bad": "m0", "b_malformed": "m1"},
+                        "viable_pred": {"a_ok": True, "a_bad": False, "b_malformed": "false"},
                     },
                 }
             )

@@ -494,24 +494,21 @@ def check_fiber_viability_split(
 ) -> FiberSplitReport:
     """Check for two states sharing a macro projection yet disagreeing on viability."""
     st_list = _dedup_tuple(states)
+    viable_flags: dict[Any, bool] = {}
     by_proj: dict[Any, list[Any]] = {}
     for s in st_list:
+        v_flag = _eval_map(viable_pred, s)
+        if not isinstance(v_flag, bool):
+            raise FidelityError(
+                f"viable_pred must return bool for state {s!r}, got {v_flag!r}"
+            )
+        viable_flags[s] = v_flag
         p = _eval_map(proj_map, s)
         by_proj.setdefault(p, []).append(s)
 
     for proj_val, fiber in by_proj.items():
-        viable: list[Any] = []
-        non_viable: list[Any] = []
-        for s in fiber:
-            v_flag = _eval_map(viable_pred, s)
-            if not isinstance(v_flag, bool):
-                raise FidelityError(
-                    f"viable_pred must return bool for state {s!r}, got {v_flag!r}"
-                )
-            if v_flag:
-                viable.append(s)
-            else:
-                non_viable.append(s)
+        viable = [s for s in fiber if viable_flags[s]]
+        non_viable = [s for s in fiber if not viable_flags[s]]
         if viable and non_viable:
             u_ok, u_bad = viable[0], non_viable[0]
             p_ok = dist_viable if dist_viable is not None else FinDist.dirac(st_list, u_ok)
