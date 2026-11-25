@@ -224,6 +224,10 @@ def run_b5_posthoc_controls(
 
 
 if __name__ == "__main__":
+    import argparse
     import json
 
-    print(json.dumps(run_b5_posthoc_controls(n_seeds=20), indent=2))
+    parser = argparse.ArgumentParser(description="Run post-hoc B5 anchor and heterogeneous-pool controls.")
+    parser.add_argument("--seeds", type=int, default=20, help="Number of deterministic seeds per arm (default: 20)")
+    args = parser.parse_args()
+    print(json.dumps(run_b5_posthoc_controls(n_seeds=args.seeds), indent=2))

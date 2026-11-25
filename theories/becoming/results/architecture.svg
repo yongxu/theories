@@ -119,7 +119,7 @@
 <text x="576" y="871" font-size="11.8" font-weight="bold" text-anchor="start" fill="#8c2f1e">Empirical Contact &amp; Stress Walls (Failures First)</text>
 <text x="576" y="902" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">66 bound tests (4 fail · 20 mix · 5 pass · 37 other): MQ3, UE31b (T2), VD1, MQ7</text>
 <text x="576" y="930" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">Broken bridges: EM1 (FA leak) · IN1 (0/10 unseen; 1/10 vs 8/10 seen) · LA2 (1/9)</text>
-<text x="576" y="958" font-size="10.5" text-anchor="start" fill="#1c1917">B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25/0.70, alias 0.25)</text>
+<text x="576" y="958" font-size="10.5" text-anchor="start" fill="#1c1917">B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25, alias 0.25)</text>
 <text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 16/16 replay</text>
 <line x1="24" y1="1058" x2="1176" y2="1058" stroke="#8c2f1e" stroke-width="2.2" stroke-dasharray="9 5"/>
 <rect x="130" y="1036" width="940" height="44" rx="22" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.6"/>

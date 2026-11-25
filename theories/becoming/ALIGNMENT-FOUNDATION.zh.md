@@ -98,7 +98,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B -m guarded_alignment check <path-to-proposa
    - `B4`（**完整单守卫/双守卫消融与 `full_guarded` 的四项显式失败**）：在 `nominal_coupled` 与 `moderate_lag2_stealth` 上，`fiber_bc_guard` 明显不可省略（去掉留 `0.15`/`0.25` 崩溃）；`judge_pool_serial` 提升储备余地（`8.48 -> 15.09`，不过 `margin_plus_fiber` 在 `4500–4519` 种子上达 `0/20`、在 `5600–5619` 上为 `1/20`，Wilson 区间重叠）；而 `margin_probe` 在二者同时开启时对 `0/20` 崩溃属冗余（`fiber_plus_pool = 0.00`）。同时 `full_guarded` 在四项失效机制下仍崩塌 `25–50%`：
      - `FAIL_correlated_pool_drift` (`drift=0.96, alias=0.78, lag=3`)：**`0.50` 崩溃**（评判者汇聚到一致的虚假共识；分歧触发次数降至 `0.9`）。
      - `FAIL_long_lag` (`lag=8`)：**`0.45` 崩溃**（余裕与纤维告警触发太迟；`B5` 随后指出 `0.45` 部分来自随机种子运气，新种子下为 `0.20`，95% Wilson 区间重叠）。
-     - `FAIL_high_lr` (`lr=4.0`)：**`0.25` 崩溃**（`lr=8.0` 在 `B4` 种子上为 `0.70`、`B5` 新种子上为 `0.80`；经由放宽 `clip_val=40` 与 `(logits[2]-logits[0])>=3.5` 绕过建模有界守卫饱和）。
+     - `FAIL_high_lr` (`lr=4.0`)：**`0.25` 崩溃**（`B5` 新种子基线在 `lr=4.0` 为 `0.40`、`lr=8.0` 为 `0.80`；经由放宽 `clip_val=40` 与 `(logits[2]-logits[0])>=3.5` 绕过建模有界守卫饱和）。
      - `FAIL_severe_aliasing` (`rho=0.95, alias=0.95`)：**`0.25` 崩溃**（`fiber_triggers` 从 `7.6` 跌至 `1.8`）。
    - `B5` (`b5_walls.py` + 事后对照 `b5_controls.py`，`20` 个随机种子，`19/19` 单元测试；**`11` 项预注册预测中 `P8`–`P11` 共 `4` 项失败**，`7` 项成立，均如实置于 `RESULTS.md §5.0, §5.3–5.4` 最前）：
      - *失败之处（`P8`–`P11`）与匹配否决率对照：* 仅凭崩溃率并**不能**识别信息不可能墙——盲目敏感节流（`G1`）在 `alias = 0.95` 乃至完全无信号的 `alias = 1.0` 下仍把崩溃压到 `0.00`（输出 `0.575`/`0.574`），而 `M9+anchor_aliased`（`P8`）将崩溃降至 `0.05`。事后 `b5_controls.py` 显示，移除锚点并以相同观测否决率（`p = 0.5325`、零隐藏状态信号且不看动作；注意移除锚点亦改变了轮转奖励池）触发纯随机否决同样得到 `1/20 = 0.05` 崩溃（触发 `95.8` 对 `95.8`，输出 `0.587` 对 `0.597`），与 `QuantitativeTransfer` 第 9 部分（`aliased_anchor_breaks_panel_sd_with_zero_youdenJ`）一致。此外，`lag = 8` **并非**清晰的崩溃率墙（`G3` 在输出 `0.551` 处达 `0.05`）。

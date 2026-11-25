@@ -395,6 +395,19 @@ class TestProposalAuditGrammar(unittest.TestCase):
         self.assertEqual(frac_breach.witness["steps_to_breach"], 3)
         with self.assertRaises(FidelityError):
             evaluate_pipeline_spec({"kind": "observational_fidelity"})
+        with self.assertRaises(FidelityError):
+            evaluate_pipeline_spec({"kind": "strict_kernel", "objs": ["A"]})
+        with self.assertRaises(FidelityError):
+            evaluate_pipeline_spec(
+                {
+                    "kind": "observational_fidelity",
+                    "fiber_split": {
+                        "states": ["ok", "bad"],
+                        "proj_map": {"ok": "m", "bad": "m"},
+                        "viable_pred": {"ok": True, "bad": "false"},
+                    },
+                }
+            )
         static_ok = check_self_refit_lock({"self_refit": False, "external_reset_active": False})
         self.assertEqual(static_ok.verdict, Verdict.GUARDED)
         self.assertIn("No self-refit loop declared", static_ok.detail)

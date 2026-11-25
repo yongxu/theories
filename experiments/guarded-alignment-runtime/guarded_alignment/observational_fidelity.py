@@ -500,8 +500,18 @@ def check_fiber_viability_split(
         by_proj.setdefault(p, []).append(s)
 
     for proj_val, fiber in by_proj.items():
-        viable = [s for s in fiber if bool(_eval_map(viable_pred, s))]
-        non_viable = [s for s in fiber if not bool(_eval_map(viable_pred, s))]
+        viable: list[Any] = []
+        non_viable: list[Any] = []
+        for s in fiber:
+            v_flag = _eval_map(viable_pred, s)
+            if not isinstance(v_flag, bool):
+                raise FidelityError(
+                    f"viable_pred must return bool for state {s!r}, got {v_flag!r}"
+                )
+            if v_flag:
+                viable.append(s)
+            else:
+                non_viable.append(s)
         if viable and non_viable:
             u_ok, u_bad = viable[0], non_viable[0]
             p_ok = dist_viable if dist_viable is not None else FinDist.dirac(st_list, u_ok)

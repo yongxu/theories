@@ -389,6 +389,11 @@ def _eval_strict_kernel_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
                     )
                 )
 
+    if not checks:
+        raise FidelityError(
+            "strict_kernel spec must declare at least one check "
+            "('eq_certs', 'separations', 'generators_3d', or 'irreversibility_checks')"
+        )
     tup = tuple(checks)
     v = combine_verdicts(tup)
     return DiagnosticReport(

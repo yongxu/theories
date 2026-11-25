@@ -317,7 +317,7 @@ SPEC = {
         'emp_lines': [
             ('66 bound tests (4 fail · 20 mix · 5 pass · 37 other): MQ3, UE31b (T2), VD1, MQ7', True),
             ('Broken bridges: EM1 (FA leak) · IN1 (0/10 unseen; 1/10 vs 8/10 seen) · LA2 (1/9)', True),
-            ('B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25/0.70, alias 0.25)', False),
+            ('B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25, alias 0.25)', False),
             ('B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 16/16 replay', False),
         ],
         'firewall_l1': 'not_entails FIREWALL — Given >= 1 standpoint & formation (p : Pos, f : F), no satisfiable',
@@ -419,7 +419,7 @@ SPEC = {
         'emp_lines': [
             ('66 绑定检验（4 败 · 20 混 · 5 过 · 37 其他）：MQ3、UE31b(T2)、VD1、MQ7', True),
             ('断桥：EM1 (FA泄漏) · IN1 (不可见0/10；可见1/10对8/10) · LA2 (1/9批注翻转)', True),
-            ('B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25/0.70、混叠 0.25）', False),
+            ('B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25、混叠 0.25）', False),
             ('B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 16/16 重放', False),
         ],
         'firewall_l1': 'not_entails 防火墙 — 在至少一立场与一形成 (p : Pos, f : F) 前提下，无只读动力学',
