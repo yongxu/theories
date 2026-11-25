@@ -21,7 +21,7 @@ You need Python 3.9 or later (standard library only), git, and ripgrep for the s
 - `make research-check` checks records, evidence bindings, preservation hashes and generated pages (`make research-check-strict` also checks directory indexes).
 - `python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py` compiles the `0`-axiom core and audits the axioms of every declaration ([checker](../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py)). With `BECOMING_OUT=<dir>`, receipts go to that directory and the repository stays untouched; passed steps are cached in `~/.cache/becoming-lean` (`BECOMING_FRESH=1` rebuilds from scratch).
 - `python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --all` checks freshness and audits all `18` isolated periphery modules against the core receipt.
-- `python3 -B -m unittest discover -s experiments/guarded-alignment-runtime/tests -v` runs the `6`-test exact-rational proposal diagnostic suite (`28` tests).
+- `(cd experiments/guarded-alignment-runtime && python3 -B -m unittest discover -s tests -v)` runs the `6`-test exact-rational proposal diagnostic suite (`28` tests).
 - `python3 -B -m unittest experiments/neural-alignment-stress-lab/test_stress_lab.py -v` runs the local CPU neural stress-lab verification suite (`19` tests).
 
 <a id="discovery-and-evidence--检索与证据"></a>
