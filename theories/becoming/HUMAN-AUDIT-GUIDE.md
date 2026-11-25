@@ -96,6 +96,7 @@ Bypass all summaries and inspect statement hypotheses directly in Lean:
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/neural-alignment-stress-lab -p 'test_*.py' -v
 PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/neural-alignment-stress-lab/run_all.py --with-b5 --seeds 20
+PYTHONDONTWRITEBYTECODE=1 python3 -B experiments/neural-alignment-stress-lab/b5_controls.py --seeds 20
 PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/evidence-replay -p 'test_*.py' -v
 ```
 

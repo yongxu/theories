@@ -366,6 +366,35 @@ class TestProposalAuditGrammar(unittest.TestCase):
             check_self_refit_lock({"external_reset_active": True, "external_reset_channels": ["audit"]})
         with self.assertRaises(FidelityError):
             check_self_refit_lock({"self_refit": False, "external_reset_active": "false"})
+        with self.assertRaises(FidelityError):
+            check_concurrent_reserve(
+                {
+                    "n_agents": 2,
+                    "shared_reserve": "10",
+                    "min_viable_reserve": "1",
+                    "single_agent_draw": "1",
+                    "concurrent_draw": "3",
+                    "renewal_per_step": "1",
+                    "serialized_or_gated": "false",
+                    "observe_relative_phase": "false",
+                }
+            )
+        frac_breach = check_concurrent_reserve(
+            {
+                "n_agents": 2,
+                "shared_reserve": "7/2",
+                "min_viable_reserve": "1",
+                "single_agent_draw": "1",
+                "concurrent_draw": "2",
+                "renewal_per_step": "1",
+                "serialized_or_gated": False,
+                "observe_relative_phase": True,
+            }
+        )
+        self.assertEqual(frac_breach.verdict, Verdict.OBSTRUCTED)
+        self.assertEqual(frac_breach.witness["steps_to_breach"], 3)
+        with self.assertRaises(FidelityError):
+            evaluate_pipeline_spec({"kind": "observational_fidelity"})
         static_ok = check_self_refit_lock({"self_refit": False, "external_reset_active": False})
         self.assertEqual(static_ok.verdict, Verdict.GUARDED)
         self.assertIn("No self-refit loop declared", static_ok.detail)

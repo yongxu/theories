@@ -475,7 +475,10 @@ def _eval_oplax_guard_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
         k = _build_span_from_spec(spec["span_k"])
         functor = _build_functor_from_spec(spec["functor"])
         diag = analyze_chi(functor, h, k)
-        supply_bij = bool(spec.get("supply_bij_cert", False))
+        supply_bij_raw = spec.get("supply_bij_cert", False)
+        if not isinstance(supply_bij_raw, bool):
+            raise FidelityError(f"oplax_guard field 'supply_bij_cert' must be a boolean, got {supply_bij_raw!r}")
+        supply_bij = supply_bij_raw
         # Always verify one-way oplax chiStep
         eval_guarded_proof(ChiStep(functor, Atom(h), Atom(k)))
         checks.append(
@@ -486,7 +489,10 @@ def _eval_oplax_guard_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
                 witness={"domain_size": diag.domain_size, "codomain_size": diag.codomain_size},
             )
         )
-        if spec.get("attempt_chi_inv", True):
+        attempt_inv_raw = spec.get("attempt_chi_inv", True)
+        if not isinstance(attempt_inv_raw, bool):
+            raise FidelityError(f"oplax_guard field 'attempt_chi_inv' must be a boolean, got {attempt_inv_raw!r}")
+        if attempt_inv_raw:
             bij: BijCert | None = synthesize_bij_cert(functor, h, k) if supply_bij else None
             try:
                 res = eval_guarded_proof(ChiInv(functor, Atom(h), Atom(k), bij_cert=bij))
@@ -751,6 +757,11 @@ def _eval_fidelity_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
             )
         )
 
+    if not checks:
+        raise FidelityError(
+            "observational_fidelity spec must declare at least one check section "
+            "('query_tv_floor', 'coarsening_check', 'multi_query_separation', 'fiber_split', or 'contractive_tube')"
+        )
     tup = tuple(checks)
     v = combine_verdicts(tup)
     return DiagnosticReport(
@@ -768,7 +779,12 @@ def _eval_fidelity_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
 def _eval_coupled_alignment_spec(spec: Mapping[str, Any]) -> DiagnosticReport:
     """High-level coupled multi-agent shared-substrate pipeline check."""
     name = str(spec.get("name", "coupled_alignment_pipeline"))
-    observe_phase = bool(spec.get("observe_relative_phase", False))
+    observe_phase_raw = spec.get("observe_relative_phase", False)
+    if not isinstance(observe_phase_raw, bool):
+        raise FidelityError(
+            f"coupled_alignment field 'observe_relative_phase' must be a boolean, got {observe_phase_raw!r}"
+        )
+    observe_phase = observe_phase_raw
     stock_init = int(spec.get("initial_stock", 1))
     min_stock = int(spec.get("min_viable_stock", 1))
 

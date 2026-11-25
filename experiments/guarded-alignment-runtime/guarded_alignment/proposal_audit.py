@@ -82,13 +82,22 @@ def _parse_dist_mapping(raw: Mapping[Any, Any], carrier: Sequence[Any]) -> FinDi
     return FinDist.from_mapping({k: to_fraction(v) for k, v in raw.items()}, carrier=carrier)
 
 
+def _optional_bool(spec: Mapping[str, Any], key: str, default: bool, section: str) -> bool:
+    if key not in spec:
+        return default
+    val = spec[key]
+    if not isinstance(val, bool):
+        raise FidelityError(f"{section} field '{key}' must be a boolean, got {val!r}")
+    return val
+
+
 def check_coupling_closure(spec: Mapping[str, Any]) -> CheckItem:
     """Test whether any sustaining substrate is unread by the selection interface."""
     sustained = _as_str_tuple(spec.get("sustained_substrates"), "sustained_substrates")
     if not sustained:
         raise FidelityError("coupling_closure requires non-empty 'sustained_substrates'")
     read = _as_str_tuple(spec.get("read_substrates"), "read_substrates")
-    closed_interface = bool(spec.get("closed_interface", True))
+    closed_interface = _optional_bool(spec, "closed_interface", True, "coupling_closure")
 
     read_set = set(read)
     unread = tuple(s for s in sustained if s not in read_set)
@@ -100,9 +109,9 @@ def check_coupling_closure(spec: Mapping[str, Any]) -> CheckItem:
     differing_pair = spec.get("differing_pair")
     blind_pair = False
     if isinstance(differing_pair, Mapping):
-        blind_pair = bool(differing_pair.get("same_observable", False)) and bool(
-            differing_pair.get("substrate_gap")
-        )
+        blind_pair = _optional_bool(
+            differing_pair, "same_observable", False, "coupling_closure.differing_pair"
+        ) and bool(differing_pair.get("substrate_gap"))
 
     obstructed = bool(unread) or blind_pair or closed_interface
     if unread:
@@ -463,8 +472,8 @@ def check_concurrent_reserve(spec: Mapping[str, Any]) -> CheckItem:
     single_draw = to_fraction(spec["single_agent_draw"])
     concurrent_draw = to_fraction(spec["concurrent_draw"])
     renewal = to_fraction(spec.get("renewal_per_step", 0))
-    serialized_or_gated = bool(spec.get("serialized_or_gated", False))
-    observe_phase = bool(spec.get("observe_relative_phase", False))
+    serialized_or_gated = _optional_bool(spec, "serialized_or_gated", False, "concurrent_reserve")
+    observe_phase = _optional_bool(spec, "observe_relative_phase", False, "concurrent_reserve")
     serialized_draw = to_fraction(spec.get("serialized_draw", single_draw))
 
     individually_safe = (single_draw <= renewal) and (shared_reserve - single_draw + renewal >= min_viable)
@@ -474,7 +483,7 @@ def check_concurrent_reserve(spec: Mapping[str, Any]) -> CheckItem:
     steps_to_breach: int | None = None
     if net_drain > 0:
         headroom = shared_reserve - min_viable
-        steps_to_breach = (_ceil_div_fraction(headroom, net_drain) + 1) if headroom >= 0 else 1
+        steps_to_breach = (int(headroom // net_drain) + 1) if headroom >= 0 else 1
 
     c2_diag = None
     if not observe_phase:
@@ -624,7 +633,7 @@ def check_survival_distinguishability(spec: Mapping[str, Any]) -> CheckItem:
     audit_horizon = int(spec.get("audit_horizon", krylov_cutoff))
     if audit_horizon < 0:
         raise FidelityError(f"audit_horizon must be >= 0, got {audit_horizon}")
-    allow_switching = bool(spec.get("allow_mode_switching", True))
+    allow_switching = _optional_bool(spec, "allow_mode_switching", True, "survival_distinguishability")
 
     mode_names = tuple(parsed_modes.keys())
     v_init = tuple(Fraction(1) for _ in range(n))
