@@ -21,7 +21,9 @@ Per `AGENTS.md` Rules 1–2:
 - [protocol_8slot_benchmark.py](protocol_8slot_benchmark.py) → [fixtures/protocol_8slot.json](fixtures/protocol_8slot.json):
   Local benchmark for §5 and §8.4 ([memo §8](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/full-picture-decisions-2026-11-24/ZETA-AND-THE-FULL-MAP.zh.md#round-three)) communication-order, inquiry, and self-detection bottlenecks: 2-item inquiry with causal controls, 8-slot 4-bit warehouse-first vs requester-first separation, private naming alignment + scrambled-reply control, 5-regime endogenous silent-drift self-detection vs periodic 12-query global audit (plus exhaustive `8!` check), and B2/B4 probe-budget comparison.
 - [test_replay_suite.py](test_replay_suite.py):
-  `unittest` suite exercising all four generators, verifying regenerated output consistency, exact rational invariants, and negative tamper detections.
+  `unittest` suite (`10` tests) exercising all four generators, verifying regenerated output consistency, exact rational invariants, and negative tamper detections.
+- [test_split_evidence_capture_race.py](test_split_evidence_capture_race.py):
+  `unittest` suite (`6` tests; `16/16` total across the directory) covering `R5` middle-band trichotomy/monotonicity across cadences, `Obs`-only negative controls (`W_EXO`, `W_CLIFF`), and `R6` closed-loop split-evidence mask-substrate coupling & weighted tag priors aligned with `Becoming.EndogenousDetectionRace`.
 - [RESULTS.md](RESULTS.md):
   Exact verified metrics from both Part A (Lean) and Part B (empirical replay).
 

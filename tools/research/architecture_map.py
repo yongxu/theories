@@ -541,7 +541,7 @@ def build_svg(lang: str) -> str:
     l1b_box = svg.rect(mx, l1b_y, inner_w, l1b_h, rx=8, fill=WHITE, stroke=FAINT, stroke_width=1.3, dash='6 4', peer_group='tiers', box_name='tier_b')
     svg.text(mx + 14, l1b_y + 21, s['l1b_head'], size=12.2, bold=True, fill=INK, box=l1b_box)
 
-    # Left subpanel: 16-module periphery
+    # Left subpanel: 18-module periphery
     periph_x = mx + law_pad
     periph_w = 720
     stand_x = periph_x + periph_w + 12

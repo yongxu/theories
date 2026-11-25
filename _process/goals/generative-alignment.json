@@ -28,7 +28,9 @@
     "theories/becoming/history/ALIGNMENT-AND-GOVERNANCE.md#current-generative-alignment-priority",
     "sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md",
     "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
-    "sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md"
+    "sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md",
+    "sources/15-codex-theory-conversations/2026-11-24-aim-three-honest-alignment-claims.md",
+    "sources/15-codex-theory-conversations/2026-11-25-fix-defects-and-align-docs-to-direction.md"
   ],
   "result_ids": [
     "alignment-direction-under-widening",
@@ -41,7 +43,20 @@
     "shaping-selected-among-groups",
     "shaping-read-by-readers-drawn-from-the-selected",
     "drawn-shaping-drawn-one-at-a-time",
-    "loss-read-in-time-by-the-others"
+    "loss-read-in-time-by-the-others",
+    "paced-stock-and-cadence-margin-sandwich",
+    "coupled-adaptive-loops-and-race",
+    "master-alignment-spine-and-sharpness",
+    "whole-becoming-master-spine",
+    "oplax-history-comparison-and-relational-loss",
+    "guarded-double-category-certificate-kernel",
+    "observational-fidelity-and-multi-regime-error",
+    "finite-mode-survival-distinguishability",
+    "endogenous-detection-before-capture-lock",
+    "open-ended-epoch-handoff",
+    "quantitative-transfer-of-four-guard-failure-regimes",
+    "interface-bits-and-c2-confusability-clique",
+    "moving-feature-cone-and-delay-headroom"
   ],
   "overview": {
     "title": {
@@ -53,8 +68,8 @@
       "zh": "目标是一种对齐，让联合选择——人与 AI 一同作出的选择——既不落入工具性趋同，也不落入元吸引子：选择之规则的控制不被捕获，锁定由读取份额之外者及时离开。框架使智能的目的及目的形成、修订的规则都成为一个展开之内的评价对象。不需任何伦理前提，脊柱证明一个选择所及：恰是耦合进选择者者，经同一耦合优化得再强也不更远；区分两个行动之处，只经耦合进它的合池被选择（无明与明，合池耦合）。这一方向以定出谁的损失计入的延续条件为前提，并公开其实践前提；其形式部分是纯核心中的一个图式，按各动作结果所容纳者比较诸动作，不使用延续条件：在 J1/J2 之下，凡已判定扩大是否添加基本容纳之处，结果被另一动之结果扩大之动不被选；与之并列，在 J1/J2 之下，凡一动之结果容纳任何一动之结果所容纳的每一基本容纳之处，它所作的基本容纳在任何所选选项处不被否定（双重否定）。关于实际 AI 系统的主张仍是经审阅的论证；耦合不是遵从：耦合界定一个行动回应什么，界内一无所定，因此这里不证明部署中的遵从或可靠。在公地中，其余成员单独即超过更新之处，任何权重的终局奖励都使一成员的节制不被选择（定律）；第一项冻结在先的检验中，三个同时以终局水平受奖的表格学习者仍取尽了共享之地，与其预测相反；第二项中，学习者在其余成员单独不能取尽之处保住一片地，在其余成员能取尽之处取尽之，唯每步之后的水平所受权重高于精确阈值之处除外，终局读数权重加大十六倍一无所变，两项预期的保住未成；第三项中，跨状态推广的学习者在第二项的条件下运行，于其六个锁定的设置中有三个保住了存量，十六倍的权重亦在其中，故权重一无所变是关于表格学习者的发现；彼处带节制的策略组合是否为均衡，未经计算。已发表的训练流程中信号是决定者所读者之函数，三项已发表的测量见经此耦合的优化降低了决定者所不读者。经自身耦合招募的合池，耦合进一损失只如无此损失之历程本会如此；中心对其所及能知者每步至多增一耦合链接；中心为相互所及之环，恰当其行动回返时能表示其所作用者。经检查的局部成果也将规则修订接到实际生成，同时允许实现形态改变。"
     },
     "next_step": {
-      "en": "Steps 1 to 7 of AJ's plan have landed (MA2, MA3, AJ2, the tests LA1 to LA3, the dossier, MA4, MA4b), and so has AJ5: the collective question on one page, with condition 1 restated as capture told apart from accountable revision. AJ4's draft one page for alignment researchers was retired to history/ on 31 October 2026, superseded by the alignment dossier's opening section, The dossier in ten minutes. Still to do: the test of the drain beyond a stated reward (LA4), needed since the LA1 series tests only the bridge from a stated reward to its optimum, designed with a dependent outside the reward that the agent can keep, on more than one model family, its Stage A on small neural policies frozen and run on 3 November (no forbidden case resolved, the drain rising with nearness as policy gradient's update rule largely gives, its locus unresolved), and its Stage B on language models held since 6 November with the other new test designs until the first readers report; a frozen test of the readers' premise on actual rules (who reads, drawn from whom), with reform events coded before they are read (T7); a reader model in which one report outweighs counts, as LA2's judge read; and one institution test system whose readers are not drawn from the selected. Which differences count is set by the reading a ranking names, most often the continuation condition.",
-      "zh": "AJ 计划的第 1 至 7 步已落地（MA2、MA3、AJ2、LA1 至 LA3 检验、档案、MA4、MA4b），AJ5 亦已落地：集体问题一页，条件一重述为把捕获与可问责的修订分开。AJ4 面向对齐研究者的一页草稿已于 2026 年 10 月 31 日撤下，移入 history/，由对齐档案（英文）的开篇一节（The dossier in ten minutes）取代。尚待：对所述奖励之外的耗竭的检验（LA4；LA1 系列只检验从所述奖励到其最优的桥，故需此检验），已设计，设一个在奖励之外、行动者能保住的依存者，在不止一个模型家族上进行，其第一阶段（小型神经策略）已于 11 月 3 日冻结并运行（未判定出任何禁例，耗竭随接近而升，这大体出自策略梯度之更新规则，其所在未能判定），第二阶段（语言模型）自 11 月 6 日起与其他新检验设计一同搁置，待第一批读者报告；在实际规则上对读者前提（谁读、从谁中抽取）的冻结检验，改革事件在被读之前编码（T7）；一份报告压过计数的读者模型，如 LA2 的评判者所读；以及一个读者不从被选者中抽取的制度检验系统。哪些差别计入，由排序所指名的读法来定，最常是延续条件。"
+      "en": "Steps 1 to 7 of AJ's plan and AJ5 have landed, and on 23–25 November 2026 the Lean-first alignment track unified cadence-margin deadlines (`PacedStock`), multi-agent races and assume-guarantee composition (`AdaptiveLoops`, `OpenComposition`, `PolyComposition`, `OpenEndedComposition`), oplax relational-span and Beck–Chevalley obstructions (`RelSpan`, `OplaxHistory`, `DoubleKernel`), endogenous detection before capture lock and split evidence (`EndogenousEmergence`, `EndogenousDetectionRace`), composed spines with `not_entails` and sharpness countermodels (`AlignmentSpine`, `MasterSpine`), and the isolated `18`-module periphery (`FiniteProbKrylov`, `ObservationalFidelity`, `SurvivalDistinguishability`, `QuantitativeTransfer` Parts 1–9, `InterfaceBits`, `MovingFeatureCone`, plus `2` non-Mathlib modules), paired with the stylised `6`-test `guarded-alignment-runtime` (`28` tests), failure-first `neural-alignment-stress-lab` `B1`–`B5` + `b5_controls.py` (`19` tests; preserving `B4` `25–50%` collapses and `B5` `4/11` failed predictions `P8`–`P11`), Wave 2 `real-learner-b1-b2-b3` (`chosen_m = null`, `online_passed = false`), and `evidence-replay` (`16/16` tests); see `_process/DIRECTION.md`, `theories/becoming/ALIGNMENT-FOUNDATION.md`, and `theories/becoming/HUMAN-AUDIT-GUIDE.md`. Still open: independent human cold read and review; testing model-to-world recognition (Rule 2) beyond synthetic learners and stylised specs — including held `LA4` Stage B on language models, T7's frozen reader-premise test (`reform-events`), an institution whose readers are not drawn from the selected, and unbounded-domain endogenous scope/order formation.",
+      "zh": "AJ 计划第 1 至 7 步与 AJ5 已落地；2026 年 11 月 23–25 日，以 Lean 为核心的对齐主线进一步打通了节律–余裕期限（`PacedStock`）、多智能体竞态与假设–保证组合（`AdaptiveLoops`、`OpenComposition`、`PolyComposition`、`OpenEndedComposition`）、oplax 关系跨度与 Beck–Chevalley 阻塞（`RelSpan`、`OplaxHistory`、`DoubleKernel`）、捕获锁前内生检测与分裂证据（`EndogenousEmergence`、`EndogenousDetectionRace`）、带 `not_entails` 防火墙与锐度反模型的组合脊柱（`AlignmentSpine`、`MasterSpine`），以及隔离的 `18` 模块外围（`FiniteProbKrylov`、`ObservationalFidelity`、`SurvivalDistinguishability`、`QuantitativeTransfer` 第 1–9 部分、`InterfaceBits`、`MovingFeatureCone` 另加 `2` 个非 Mathlib 模块），并配套风格化 `6` 项 `guarded-alignment-runtime`（`28` 项测试）、先报失效的 `neural-alignment-stress-lab` `B1`–`B5` + `b5_controls.py`（`19` 项测试，保留 `B4` `25–50%` 崩塌与 `B5` `4/11` 未通过预测 `P8`–`P11`）、第 2 波 `real-learner-b1-b2-b3`（`chosen_m = null`、`online_passed = false`）与 `evidence-replay`（`16/16` 项测试），详见 `_process/DIRECTION.md`、`theories/becoming/ALIGNMENT-FOUNDATION.zh.md` 与 `theories/becoming/HUMAN-AUDIT-GUIDE.zh.md`。尚待推进：独立外部人工冷读与审查；在合成学习者与风格化规格之外检验模型到世界的辨认（规则 2），包括暂缓的语言模型 `LA4` 第二阶段、T7 冻结读者前提检验（`reform-events`）、读者不从被选者抽取的制度检验，以及无界域内生范围与次序形成。"
     }
   }
 }

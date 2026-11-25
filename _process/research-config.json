@@ -222,8 +222,8 @@
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "title_zh": "生灭变化之论",
-    "description": "A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together. For alignment: the differences that make a difference to a selection, how what sustains it can run down while that makes no difference to it, and how it can go on the same way until that gives out, or turn early enough. Of wisdom: what traditions, sciences and philosophies have seen of these dynamics, read onto one account. Its theorems are proved on models and checked in Lean; the tests of its theses are frozen before scoring.",
-    "description_zh": "一张地图，画任何东西怎样形成、持续、变化和终结，首先为对齐而画，也是一张智慧的地图，好让人与 AI 能一起看见道路。作为对齐的地图：一个选择能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量。作为智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，与本论逐一对照，记录相合与分歧。其律在模型上证明，经 Lean 检验；其论题的检验在评分之前冻结。",
+    "description": "A Lean-first machine-checked map of how goings-on form, persist, adapt, and end within one relational unfolding, organized in three cooperating layers: coupled adaptive alignment theory, a 0-axiom relational core with an isolated 18-module applied periphery, and wisdom and the ethics of 生生 held beside dynamics via not_entails; empirical and stress tests are reported failures first.",
+    "description_zh": "一张以 Lean 4 形式化证明为核心、可在机器上独立核验的生灭变化地图，按三层协同架构展开：耦合适应系统对齐理论、零公理关系核心与隔离的 18 个应用外围模块，以及经 not_entails 防火墙与动力学并立的智慧与生生伦理；经验与压力检验一律先报失效。",
     "pages": [
       "README.zh.md",
       "MAP.md",
@@ -479,7 +479,7 @@
         "path": "theories/becoming/ALIGNMENT-FOUNDATION.md",
         "zh": "theories/becoming/ALIGNMENT-FOUNDATION.zh.md",
         "label": "Alignment foundation",
-        "text": "The three-layer convergence joining the 0-axiom core, 14+2 periphery, stylised runtime, and failure-first stress and real-learner bounds.",
+        "text": "The three-layer convergence joining the 0-axiom core, 16+2 periphery, stylised runtime, and failure-first stress and real-learner bounds.",
         "group": "Read"
       },
       {
@@ -549,7 +549,7 @@
         "path": "theories/becoming/HUMAN-AUDIT-GUIDE.md",
         "zh": "theories/becoming/HUMAN-AUDIT-GUIDE.zh.md",
         "label": "Human audit guide",
-        "text": "One-hour independent verification guide covering retained core hashes, the 14+2 periphery, stylised runtime checks, and failure-first empirical bounds.",
+        "text": "One-hour independent verification guide covering retained core hashes, the 16+2 periphery, stylised runtime checks, and failure-first empirical bounds.",
         "group": "Check"
       },
       {
@@ -557,7 +557,7 @@
         "zh": "theories/becoming/CANONICAL-MAP.zh.md",
         "label": "The canonical map",
         "group": "See",
-        "text": "One cold-read synthesis joining the 0-axiom core, 14+2 periphery, 66 bound tests (failures first), stylised runtime, stress lab, real-learner bounds, and wisdom/ethics boundaries."
+        "text": "One cold-read synthesis joining the 0-axiom core, 16+2 periphery, 66 bound tests (failures first), stylised runtime, stress lab, real-learner bounds, and wisdom/ethics boundaries."
       },
       {
         "path": "theories/becoming/results/atlas/PREMISE-FAMILIES.md",
