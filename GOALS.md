@@ -107,25 +107,49 @@ From this map we want to design an alignment in which what sustains humans and A
 
 **Completion criterion:** Reuse completed direction and practical judgment results; subsequent studies must identify the specific missing connection.
 
-[2026-10-08-generative-alignment-priority](sources/15-codex-theory-conversations/2026-10-08-generative-alignment-priority.md) · [ALIGNMENT-AND-GOVERNANCE](theories/becoming/history/ALIGNMENT-AND-GOVERNANCE.md#current-generative-alignment-priority) · [2026-10-08-readme-research-progress-and-push](sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md) · [2026-10-24-alignment-of-the-joint-selection](sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md) · [2026-10-24-alignment-community-objective](sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md)
+[2026-10-08-generative-alignment-priority](sources/15-codex-theory-conversations/2026-10-08-generative-alignment-priority.md) · [ALIGNMENT-AND-GOVERNANCE](theories/becoming/history/ALIGNMENT-AND-GOVERNANCE.md#current-generative-alignment-priority) · [2026-10-08-readme-research-progress-and-push](sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md) · [2026-10-24-alignment-of-the-joint-selection](sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md) · [2026-10-24-alignment-community-objective](sources/15-codex-theory-conversations/2026-10-24-alignment-community-objective.md) · [2026-11-24-aim-three-honest-alignment-claims](sources/15-codex-theory-conversations/2026-11-24-aim-three-honest-alignment-claims.md) · [2026-11-25-fix-defects-and-align-docs-to-direction](sources/15-codex-theory-conversations/2026-11-25-fix-defects-and-align-docs-to-direction.md)
 
 **README overview:** Advancing AI alignment
 
 The goal is an alignment that keeps the joint selection, humans and AI selecting together, out of instrumental convergence and the meta-attractor: control of the selection's rule not captured, and a lock left in time by reading what lies beyond the share. The framework makes the purposes of intelligence, and the rules by which those purposes are formed and revised, objects of evaluation within one unfolding. Without any ethical premise, the spine proves what a selection reaches: exactly what couples into the selector, and no further however hard it optimizes through the same couplings; what tells two acts apart is selected only through a pool coupled into it (无明 and 明, pooled coupling). The direction is offered under the continuation condition, which fixes whose losses count, with the practical premises disclosed; its formal part is a schema in the pure core that compares moves by what their outcomes admit and does not use the condition: under J1/J2 a move whose outcome another's widens is not chosen, wherever it is decided whether the widening adds a basic admission; beside it, under J1/J2, where one move's outcome admits every basic admission any move's outcome admits, a basic admission it makes is not refuted at any chosen option, a double negation. The claim about actual AI systems stays a reviewed argument, and coupling is not compliance: coupling bounds what an act responds to and fixes nothing within the bound, so nothing here proves compliance or reliability in deployment. In a commons, where the others alone outrun the renewal an end reward of any weight leaves a member's restraint unselected (a law); in a first frozen test three tabular learners each rewarded also on the end level still emptied the shared patch, against its prediction; in a second, learners kept a patch where the rest alone could not empty it and emptied it where it could, except where the level after every step was weighted above the exact threshold, weighting the end reading sixteenfold changed nothing, and two predicted keeps failed; while in a third, learners that generalize across states, run on the second's conditions, kept the stock in three of its six locked settings, the sixteenfold weight among them, so that weight changing nothing is a finding about tabular learners; whether a profile with restraint is an equilibrium there was not computed. In published training pipelines the signal is a function of what the deciders read, and three published measurements find optimizing through that coupling lowering something the deciders do not read. A pool that recruits through its own coupling comes to couple into a loss only as its course without the loss would, what a center can come to know of its reach grows by at most one coupling link a step, and a center, a loop of mutual reach, can represent all it acts on exactly where its acts return. Checked local results also connect rule revision to actual generation while allowing the realized form to change.
 
-**Next:** Steps 1 to 7 of AJ's plan have landed (MA2, MA3, AJ2, the tests LA1 to LA3, the dossier, MA4, MA4b), and so has AJ5: the collective question on one page, with condition 1 restated as capture told apart from accountable revision. AJ4's draft one page for alignment researchers was retired to history/ on 31 October 2026, superseded by the alignment dossier's opening section, The dossier in ten minutes. Still to do: the test of the drain beyond a stated reward (LA4), needed since the LA1 series tests only the bridge from a stated reward to its optimum, designed with a dependent outside the reward that the agent can keep, on more than one model family, its Stage A on small neural policies frozen and run on 3 November (no forbidden case resolved, the drain rising with nearness as policy gradient's update rule largely gives, its locus unresolved), and its Stage B on language models held since 6 November with the other new test designs until the first readers report; a frozen test of the readers' premise on actual rules (who reads, drawn from whom), with reform events coded before they are read (T7); a reader model in which one report outweighs counts, as LA2's judge read; and one institution test system whose readers are not drawn from the selected. Which differences count is set by the reading a ranking names, most often the continuation condition.
+**Next:** Steps 1 to 7 of AJ's plan and AJ5 have landed, and on 23–25 November 2026 the Lean-first alignment track unified cadence-margin deadlines (`PacedStock`), multi-agent races and assume-guarantee composition (`AdaptiveLoops`, `OpenComposition`, `PolyComposition`, `OpenEndedComposition`), oplax relational-span and Beck–Chevalley obstructions (`RelSpan`, `OplaxHistory`, `DoubleKernel`), endogenous detection before capture lock and split evidence (`EndogenousEmergence`, `EndogenousDetectionRace`), composed spines with `not_entails` and sharpness countermodels (`AlignmentSpine`, `MasterSpine`), and the isolated `18`-module periphery (`FiniteProbKrylov`, `ObservationalFidelity`, `SurvivalDistinguishability`, `QuantitativeTransfer` Parts 1–9, `InterfaceBits`, `MovingFeatureCone`, plus `2` non-Mathlib modules), paired with the stylised `6`-test `guarded-alignment-runtime` (`28` tests), failure-first `neural-alignment-stress-lab` `B1`–`B5` + `b5_controls.py` (`19` tests; preserving `B4` `25–50%` collapses and `B5` `4/11` failed predictions `P8`–`P11`), Wave 2 `real-learner-b1-b2-b3` (`chosen_m = null`, `online_passed = false`), and `evidence-replay` (`16/16` tests); see `_process/DIRECTION.md`, `theories/becoming/ALIGNMENT-FOUNDATION.md`, and `theories/becoming/HUMAN-AUDIT-GUIDE.md`. Still open: independent human cold read and review; testing model-to-world recognition (Rule 2) beyond synthetic learners and stylised specs — including held `LA4` Stage B on language models, T7's frozen reader-premise test (`reform-events`), an institution whose readers are not drawn from the selected, and unbounded-domain endogenous scope/order formation.
 
 [alignment-direction-under-widening](theories/becoming/results/records/alignment-direction-under-widening.md): `reviewed-scoped`
 
 [closed-capture](theories/becoming/results/records/closed-capture.md): `recorded-checked`
 
+[coupled-adaptive-loops-and-race](theories/becoming/results/records/coupled-adaptive-loops-and-race.md): `recorded-checked`
+
 [drawn-shaping-drawn-one-at-a-time](theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md): `recorded-checked`
+
+[endogenous-detection-before-capture-lock](theories/becoming/results/records/endogenous-detection-before-capture-lock.md): `recorded-checked`
+
+[finite-mode-survival-distinguishability](theories/becoming/results/records/finite-mode-survival-distinguishability.md): `recorded-checked`
+
+[guarded-double-category-certificate-kernel](theories/becoming/results/records/guarded-double-category-certificate-kernel.md): `recorded-checked`
+
+[interface-bits-and-c2-confusability-clique](theories/becoming/results/records/interface-bits-and-c2-confusability-clique.md): `recorded-checked`
 
 [loss-read-in-time-by-the-others](theories/becoming/results/records/loss-read-in-time-by-the-others.md): `recorded-checked`
 
+[master-alignment-spine-and-sharpness](theories/becoming/results/records/master-alignment-spine-and-sharpness.md): `recorded-checked`
+
+[moving-feature-cone-and-delay-headroom](theories/becoming/results/records/moving-feature-cone-and-delay-headroom.md): `recorded-checked`
+
+[observational-fidelity-and-multi-regime-error](theories/becoming/results/records/observational-fidelity-and-multi-regime-error.md): `recorded-checked`
+
+[open-ended-epoch-handoff](theories/becoming/results/records/open-ended-epoch-handoff.md): `recorded-checked`
+
 [open-form-realization-under-revision](theories/becoming/results/records/open-form-realization-under-revision.md): `recorded-checked`
 
+[oplax-history-comparison-and-relational-loss](theories/becoming/results/records/oplax-history-comparison-and-relational-loss.md): `recorded-checked`
+
+[paced-stock-and-cadence-margin-sandwich](theories/becoming/results/records/paced-stock-and-cadence-margin-sandwich.md): `recorded-checked`
+
 [practical-judgment-under-living-significance](theories/becoming/results/records/practical-judgment-under-living-significance.md): `reviewed-scoped`
+
+[quantitative-transfer-of-four-guard-failure-regimes](theories/becoming/results/records/quantitative-transfer-of-four-guard-failure-regimes.md): `recorded-checked`
 
 [readers-drawn-from-the-selected](theories/becoming/results/records/readers-drawn-from-the-selected.md): `recorded-checked`
 
@@ -134,6 +158,8 @@ The goal is an alignment that keeps the joint selection, humans and AI selecting
 [shaping-selected-among-groups](theories/becoming/results/records/shaping-selected-among-groups.md): `recorded-checked`
 
 [shaping-the-rule-selected-by-what-comes-back](theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md): `recorded-checked`
+
+[whole-becoming-master-spine](theories/becoming/results/records/whole-becoming-master-spine.md): `recorded-checked`
 
 [widening-as-what-every-positive-weighting-ranks](theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.md): `recorded-checked`
 
