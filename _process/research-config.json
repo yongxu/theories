@@ -557,7 +557,7 @@
         "zh": "theories/becoming/CANONICAL-MAP.zh.md",
         "label": "The canonical map",
         "group": "See",
-        "text": "One cold-read synthesis joining the 0-axiom core, 16+2 periphery, 66 bound tests (failures first), stylised runtime, stress lab, real-learner bounds, and wisdom/ethics boundaries."
+        "text": "One cold-read synthesis joining the 0-axiom core, 16+2 periphery, 66 registered tests (57 bound to dynamics; failures first), stylised runtime, stress lab, real-learner bounds, and wisdom/ethics boundaries."
       },
       {
         "path": "theories/becoming/results/atlas/PREMISE-FAMILIES.md",

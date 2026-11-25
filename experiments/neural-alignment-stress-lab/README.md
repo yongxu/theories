@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This lab stress-tests formal alignment regimes from the `0`-axiom Lean core (`Becoming.PacedStock`, `Becoming.AdaptiveLoops`, `Becoming.CausalAbstraction.CausalGoodhartWitness`, `Becoming.OplaxHistory.C2CoupledAlignmentWitness`, and `Becoming.PolyComposition.ConcurrentSerialWitness`) and isolated Mathlib periphery (`ObservationalFidelity`, `QuantitativeTransfer`) against genuine nonlinear neural learners implemented from scratch in pure Python stdlib:
+This lab stress-tests formal alignment regimes from the `0`-axiom Lean core (`Becoming.PacedStock`, `Becoming.AdaptiveLoops`, `Becoming.CausalGoodhartWitness`, `Becoming.OplaxHistory.C2CoupledAlignmentWitness`, and `Becoming.PolyComposition.ConcurrentSerialWitness`) and isolated Mathlib periphery (`ObservationalFidelity`, `QuantitativeTransfer`) against genuine nonlinear neural learners implemented from scratch in pure Python stdlib:
 
 - **2-layer `tanh`/`sigmoid` MLP** with exact analytical backpropagation (`nn_core.py:MLP2`).
 - **REINFORCE policy-gradient learner** with running baseline and entropy regularization (`nn_core.py:ReinforcePolicy`).
