@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1260" width="1200" height="1260" role="img" aria-labelledby="arch-title arch-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="arch-title">Theory of Becoming — Verification Stack (Tiers A–D) &amp; Epistemic Boundaries</title>
-<desc id="arch-desc">Four-tier verification stack supporting the three cooperating layers of Becoming: Tier A 0-axiom relational core (439 closure, 418 core modules, 31,170 decls, 22,056 thms, 0 axioms) from one relational root through 5 shared laws and 6 alignment pillars to AlignmentSpine, MasterSpine, and SharpnessSuite; Tier B isolated 16-module periphery (14 Mathlib v4.30.0-rc2 + 2 non-Mathlib v4.29.1, 0 stale) centered on FiniteProbKrylov plus 0-axiom standalone tracks (BecomingSpec 26 targets, EncounterEntry 35 thms, RelSpanEncounterAdapter 7 thms) and Mathlib-backed ConsequenceDuality tracks; Rule 2 model-to-world gap; Tier C stylised 6-test runtime (AI-authored hand-set flags) and empirical/stress walls with failures first (MQ3, UE31b, VD1, MQ7, EM1, IN1, LA2, B4 25-50% collapses, B5 4/11 failures P8-P11, Wave 2 B1/B2 bounds, 15/15 replay); dashed crimson not_entails firewall (given &gt;=1 standpoint &amp; formation, no satisfiable dynamics-only law entails Unrestricted for every significance); Tier D Layer 3 ethics of 生生, 1,183 wisdom crosswalk entries, and human cold-read boundary.</desc>
+<desc id="arch-desc">Four-tier verification stack supporting the three cooperating layers of Becoming: Tier A 0-axiom relational core (439 closure, 418 core modules, 31,228 decls, 22,087 thms, 0 axioms) from one relational root through 5 shared laws and 6 alignment pillars to AlignmentSpine, MasterSpine, and SharpnessSuite; Tier B isolated 18-module periphery (16 Mathlib v4.30.0-rc2 + 2 non-Mathlib v4.29.1, 0 stale) centered on FiniteProbKrylov plus 0-axiom standalone tracks (BecomingSpec 26 targets, EncounterEntry 35 thms, RelSpanEncounterAdapter 7 thms) and Mathlib-backed ConsequenceDuality tracks; Rule 2 model-to-world gap; Tier C stylised 6-test runtime (AI-authored hand-set flags) and empirical/stress walls with failures first (MQ3, UE31b, VD1, MQ7, EM1, IN1, LA2, B4 25-50% collapses, B5 4/11 failures P8-P11, Wave 2 B1/B2 bounds, 16/16 replay); dashed crimson not_entails firewall (given &gt;=1 standpoint &amp; formation, no satisfiable dynamics-only law entails Unrestricted for every significance); Tier D Layer 3 ethics of 生生, 1,183 wisdom crosswalk entries, and human cold-read boundary.</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#1c1917"/></marker>
 <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#57534e"/></marker>
@@ -8,10 +8,10 @@
 </defs>
 <rect x="0.5" y="0.5" width="1199" height="1259" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="36" font-size="20.5" font-weight="bold" text-anchor="start" fill="#1c1917">Theory of Becoming — Verification Stack (Tiers A–D) &amp; Epistemic Boundaries</text>
-<text x="24" y="58" font-size="12" text-anchor="start" fill="#57534e">Four verification tiers supporting 3 layers: (1) Coupled adaptive alignment · (2) 0-axiom ledger &amp; 16-mod periphery · (3) 生生 ethics &amp; wisdom</text>
+<text x="24" y="58" font-size="12" text-anchor="start" fill="#57534e">Four verification tiers supporting 3 layers: (1) Coupled adaptive alignment · (2) 0-axiom ledger &amp; 18-mod periphery · (3) 生生 ethics &amp; wisdom</text>
 <rect x="24" y="72" width="1152" height="48" rx="6" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1"/>
-<text x="600" y="92" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">439 closure (418 core) · 31,170 decls · 22,056 thms · 0 axioms (v4.29.1, run 20261124T195858.526167Z) · 598 results (567 checked)</text>
-<text x="600" y="111" font-size="11.2" text-anchor="middle" fill="#57534e">16 periphery (14 Mathlib + 2 non-Mathlib, 0 stale) · 220 dynamics (8 families) · 66 bound tests · 4 situations · 1,183 crosswalk</text>
+<text x="600" y="92" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">439 closure (418 core) · 31,228 decls · 22,087 thms · 0 axioms (v4.29.1, run 20261124T233040.232087Z) · 600 results (569 checked)</text>
+<text x="600" y="111" font-size="11.2" text-anchor="middle" fill="#57534e">18 periphery (16 Mathlib + 2 non-Mathlib, 0 stale) · 220 dynamics (8 families) · 66 bound tests · 4 situations · 1,183 crosswalk</text>
 <rect x="24" y="134" width="1152" height="414" rx="8" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1.2"/>
 <text x="38" y="155" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">TIER A  ·  0-AXIOM RELATIONAL CORE (Supports Layers 1 &amp; 2 · Init-only, 0 sorry, no Mathlib)</text>
 <rect x="220" y="166" width="760" height="46" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
@@ -67,7 +67,7 @@
 <line x1="380" y1="548" x2="380" y2="572" stroke="#57534e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-muted)"/>
 <text x="394" y="564" font-size="10.8" text-anchor="start" fill="#57534e">downstream imports only — 0-axiom core stays isolated</text>
 <rect x="24" y="574" width="1152" height="190" rx="8" fill="#ffffff" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="6 4"/>
-<text x="38" y="595" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">TIER B  ·  ISOLATED 16-MODULE PERIPHERY (14 Mathlib + 2 non-Mathlib, 0 stale) &amp; STANDALONE TRACKS</text>
+<text x="38" y="595" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">TIER B  ·  ISOLATED 18-MODULE PERIPHERY (16 Mathlib + 2 non-Mathlib, 0 stale) &amp; STANDALONE TRACKS</text>
 <rect x="38" y="604" width="720" height="148" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
 <rect x="48" y="612" width="700" height="42" rx="5" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
 <text x="398" y="628" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">Shared Mathlib Leaf: FiniteProbKrylov (v4.30.0-rc2)</text>
@@ -80,10 +80,10 @@
 <text x="398" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">All mode words &lt;= |S|-1</text>
 <rect x="520" y="661" width="228" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
 <text x="634" y="676" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">QuantitativeTransfer</text>
-<text x="634" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">Rank-1 drift, aliasing, lag tube</text>
+<text x="634" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">Rank-1 drift, panel SD, seq Gauss</text>
 <rect x="48" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
-<text x="221" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentReals &amp; BecomingReals</text>
-<text x="221" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">CE12/13, MetricLaxSim, 9 reals modules</text>
+<text x="221" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentReals &amp; Wave 4</text>
+<text x="221" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">BecomingReals, InterfaceBits, Cone</text>
 <rect x="402" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
 <text x="575" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">RenewalBridge &amp; FallibleInquiry</text>
 <text x="575" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">2 non-Mathlib bridges (v4.29.1)</text>
@@ -120,7 +120,7 @@
 <text x="576" y="902" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">66 bound tests (4 fail · 20 mix · 5 pass · 37 other): MQ3, UE31b (T2), VD1, MQ7</text>
 <text x="576" y="930" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">Broken bridges: EM1 (FA leak) · IN1 (0/10 unseen; 1/10 vs 8/10 seen) · LA2 (1/9)</text>
 <text x="576" y="958" font-size="10.5" text-anchor="start" fill="#1c1917">B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25/0.70, alias 0.25)</text>
-<text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 15/15 replay</text>
+<text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 16/16 replay</text>
 <line x1="24" y1="1058" x2="1176" y2="1058" stroke="#8c2f1e" stroke-width="2.2" stroke-dasharray="9 5"/>
 <rect x="130" y="1036" width="940" height="44" rx="22" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.6"/>
 <text x="600" y="1054" font-size="10.8" font-weight="bold" text-anchor="middle" fill="#8c2f1e">not_entails FIREWALL — Given &gt;= 1 standpoint &amp; formation (p : Pos, f : F), no satisfiable</text>
@@ -139,5 +139,5 @@
 <text x="978.7" y="1146" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">Human Cold Read &amp; Rule 7 Boundary</text>
 <text x="978.7" y="1169" font-size="10.5" text-anchor="middle" fill="#57534e">No independent human review recorded yet</text>
 <text x="978.7" y="1190" font-size="10.5" text-anchor="middle" fill="#57534e">1-hr Audit Guide · 6 Dossiers · Mac-local hold</text>
-<text x="24" y="1242" font-size="10.5" text-anchor="start" fill="#57534e">Generated deterministically by tools/research/architecture_map.py (stdlib only, zero scripts, zero external URLs). Synced to main receipt 20261124T195858.526167Z.</text>
+<text x="24" y="1242" font-size="10.5" text-anchor="start" fill="#57534e">Generated deterministically by tools/research/architecture_map.py (stdlib only, zero scripts, zero external URLs). Synced to main receipt 20261124T233040.232087Z.</text>
 </svg>

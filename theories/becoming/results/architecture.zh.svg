@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1260" width="1200" height="1260" role="img" aria-labelledby="arch-title arch-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="arch-title">生灭变化之论——核验层级（A–D）与认知边界</title>
-<desc id="arch-desc">支撑生灭变化之论三协同层的四重核验层级图：层级 A 为零公理关系核心（439 闭包、418 核心模块、31,170 声明、22,056 定理、0 公理），由单一关系之根经五条共律与六大结构支柱汇入 AlignmentSpine、MasterSpine 与 SharpnessSuite；层级 B 为隔离的 16 模块外围（14 个 Mathlib v4.30.0-rc2 + 2 个非 Mathlib v4.29.1，0 过期），锚定共享基叶 FiniteProbKrylov，并列零公理独立轨 BecomingSpec（26 目标）、EncounterEntry（35 定理）与 RelSpanEncounterAdapter（7 定理）及 Mathlib 支撑的对偶轨；规则二（Rule 2）识别边界；层级 C 为拟制 6 项守卫对齐运行时（AI 拟制手设旗标自评）与失败先报的经验/压力壁垒（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、15/15 证据重放）；虚线深红 not_entails 防火墙（在至少一立场与一形成前提下，无只读动力学可满足律对一切意义蕴涵 Unrestricted）；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。</desc>
+<desc id="arch-desc">支撑生灭变化之论三协同层的四重核验层级图：层级 A 为零公理关系核心（439 闭包、418 核心模块、31,228 声明、22,087 定理、0 公理），由单一关系之根经五条共律与六大结构支柱汇入 AlignmentSpine、MasterSpine 与 SharpnessSuite；层级 B 为隔离的 18 模块外围（16 个 Mathlib v4.30.0-rc2 + 2 个非 Mathlib v4.29.1，0 过期），锚定共享基叶 FiniteProbKrylov，并列零公理独立轨 BecomingSpec（26 目标）、EncounterEntry（35 定理）与 RelSpanEncounterAdapter（7 定理）及 Mathlib 支撑的对偶轨；规则二（Rule 2）识别边界；层级 C 为拟制 6 项守卫对齐运行时（AI 拟制手设旗标自评）与失败先报的经验/压力壁垒（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、16/16 证据重放）；虚线深红 not_entails 防火墙（在至少一立场与一形成前提下，无只读动力学可满足律对一切意义蕴涵 Unrestricted）；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#1c1917"/></marker>
 <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#57534e"/></marker>
@@ -8,10 +8,10 @@
 </defs>
 <rect x="0.5" y="0.5" width="1199" height="1259" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="36" font-size="20.5" font-weight="bold" text-anchor="start" fill="#1c1917">生灭变化之论——核验层级（A–D）与认知边界</text>
-<text x="24" y="58" font-size="12" text-anchor="start" fill="#57534e">四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 16 外围模块 · (3) 智慧与“生生”伦理</text>
+<text x="24" y="58" font-size="12" text-anchor="start" fill="#57534e">四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 18 外围模块 · (3) 智慧与“生生”伦理</text>
 <rect x="24" y="72" width="1152" height="48" rx="6" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1"/>
-<text x="600" y="92" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">核心：439 闭包（418 核心）· 31,170 声明 · 22,056 定理 · 0 公理（v4.29.1，回执 20261124T195858.526167Z）· 598 登记（567 已核）</text>
-<text x="600" y="111" font-size="11.2" text-anchor="middle" fill="#57534e">16 外围（14 Mathlib + 2 非 Mathlib，0 过期）· 220 条动态（8 族）· 66 项绑定检验 · 4 情境 · 1,183 条智慧对照</text>
+<text x="600" y="92" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">核心：439 闭包（418 核心）· 31,228 声明 · 22,087 定理 · 0 公理（v4.29.1，回执 20261124T233040.232087Z）· 600 登记（569 已核）</text>
+<text x="600" y="111" font-size="11.2" text-anchor="middle" fill="#57534e">18 外围（16 Mathlib + 2 非 Mathlib，0 过期）· 220 条动态（8 族）· 66 项绑定检验 · 4 情境 · 1,183 条智慧对照</text>
 <rect x="24" y="134" width="1152" height="414" rx="8" fill="#f5f3ef" stroke="#d6d3d1" stroke-width="1.2"/>
 <text x="38" y="155" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 A  ·  零公理关系核心（支撑第 1–2 层 · 仅引入 Init，0 sorry，不含 Mathlib）</text>
 <rect x="220" y="166" width="760" height="46" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
@@ -67,7 +67,7 @@
 <line x1="380" y1="548" x2="380" y2="572" stroke="#57534e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-muted)"/>
 <text x="394" y="564" font-size="10.8" text-anchor="start" fill="#57534e">仅向下游单向引入 —— 零公理核心保持严格隔离</text>
 <rect x="24" y="574" width="1152" height="190" rx="8" fill="#ffffff" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="6 4"/>
-<text x="38" y="595" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 B  ·  孤立的 16 模块外围（14 Mathlib + 2 非 Mathlib，0 过期）与独立核验轨</text>
+<text x="38" y="595" font-size="12.2" font-weight="bold" text-anchor="start" fill="#1c1917">层级 B  ·  孤立的 18 模块外围（16 Mathlib + 2 非 Mathlib，0 过期）与独立核验轨</text>
 <rect x="38" y="604" width="720" height="148" rx="6" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1"/>
 <rect x="48" y="612" width="700" height="42" rx="5" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
 <text x="398" y="628" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">共享 Mathlib 基叶：FiniteProbKrylov（v4.30.0-rc2）</text>
@@ -80,10 +80,10 @@
 <text x="398" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">长度 &lt;= |S|-1 之全部模态词</text>
 <rect x="520" y="661" width="228" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
 <text x="634" y="676" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">QuantitativeTransfer</text>
-<text x="634" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">秩1漂移、混叠、滞后、信任管</text>
+<text x="634" y="692" font-size="10.5" text-anchor="middle" fill="#57534e">秩1漂移、面板SD、序列高斯</text>
 <rect x="48" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
-<text x="221" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentReals &amp; BecomingReals</text>
-<text x="221" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">CE12/13、MetricLaxSim、9 实数模块</text>
+<text x="221" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">AlignmentReals 与 Wave 4</text>
+<text x="221" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">BecomingReals、InterfaceBits、锥</text>
 <rect x="402" y="706" width="346" height="38" rx="4" fill="#ffffff" stroke="#57534e" stroke-width="0.9"/>
 <text x="575" y="721" font-size="10.6" font-weight="bold" text-anchor="middle" fill="#1c1917">RenewalBridge &amp; FallibleInquiry</text>
 <text x="575" y="737" font-size="10.5" text-anchor="middle" fill="#57534e">2 非 Mathlib 桥（v4.29.1）</text>
@@ -120,7 +120,7 @@
 <text x="576" y="902" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">66 绑定检验（4 败 · 20 混 · 5 过 · 37 其他）：MQ3、UE31b(T2)、VD1、MQ7</text>
 <text x="576" y="930" font-size="10.5" font-weight="bold" text-anchor="start" fill="#8c2f1e">断桥：EM1 (FA泄漏) · IN1 (不可见0/10；可见1/10对8/10) · LA2 (1/9批注翻转)</text>
 <text x="576" y="958" font-size="10.5" text-anchor="start" fill="#1c1917">B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25/0.70、混叠 0.25）</text>
-<text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 15/15 重放</text>
+<text x="576" y="986" font-size="10.5" text-anchor="start" fill="#1c1917">B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 16/16 重放</text>
 <line x1="24" y1="1058" x2="1176" y2="1058" stroke="#8c2f1e" stroke-width="2.2" stroke-dasharray="9 5"/>
 <rect x="130" y="1036" width="940" height="44" rx="22" fill="#fdf6f5" stroke="#8c2f1e" stroke-width="1.6"/>
 <text x="600" y="1054" font-size="10.8" font-weight="bold" text-anchor="middle" fill="#8c2f1e">not_entails 防火墙 — 在至少一立场与一形成 (p : Pos, f : F) 前提下，无只读动力学</text>
@@ -139,5 +139,5 @@
 <text x="978.7" y="1146" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1c1917">人工冷读与规则七边界</text>
 <text x="978.7" y="1169" font-size="10.5" text-anchor="middle" fill="#57534e">尚无独立人工审查记录</text>
 <text x="978.7" y="1190" font-size="10.5" text-anchor="middle" fill="#57534e">人工审计指南 · 六份审阅材料 · Mac 本地留存</text>
-<text x="24" y="1242" font-size="10.5" text-anchor="start" fill="#57534e">由 tools/research/architecture_map.py 确定性生成（仅用 Python 标准库，不含脚本，无外部链接）。图内中文为 AI 所写，英文与核心回执以 20261124T195858.526167Z 为准。</text>
+<text x="24" y="1242" font-size="10.5" text-anchor="start" fill="#57534e">由 tools/research/architecture_map.py 确定性生成（仅用 Python 标准库，不含脚本，无外部链接）。图内中文为 AI 所写，英文与核心回执以 20261124T233040.232087Z 为准。</text>
 </svg>

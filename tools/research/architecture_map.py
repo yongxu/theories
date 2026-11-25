@@ -242,19 +242,19 @@ SPEC = {
         'title': 'Theory of Becoming — Verification Stack (Tiers A–D) & Epistemic Boundaries',
         'desc': (
             'Four-tier verification stack supporting the three cooperating layers of Becoming: '
-            'Tier A 0-axiom relational core (439 closure, 418 core modules, 31,170 decls, 22,056 thms, 0 axioms) '
+            'Tier A 0-axiom relational core (439 closure, 418 core modules, 31,228 decls, 22,087 thms, 0 axioms) '
             'from one relational root through 5 shared laws and 6 alignment pillars to AlignmentSpine, MasterSpine, and SharpnessSuite; '
-            'Tier B isolated 16-module periphery (14 Mathlib v4.30.0-rc2 + 2 non-Mathlib v4.29.1, 0 stale) centered on FiniteProbKrylov '
+            'Tier B isolated 18-module periphery (16 Mathlib v4.30.0-rc2 + 2 non-Mathlib v4.29.1, 0 stale) centered on FiniteProbKrylov '
             'plus 0-axiom standalone tracks (BecomingSpec 26 targets, EncounterEntry 35 thms, RelSpanEncounterAdapter 7 thms) and Mathlib-backed ConsequenceDuality tracks; '
             'Rule 2 model-to-world gap; '
             'Tier C stylised 6-test runtime (AI-authored hand-set flags) and empirical/stress walls with failures first '
-            '(MQ3, UE31b, VD1, MQ7, EM1, IN1, LA2, B4 25-50% collapses, B5 4/11 failures P8-P11, Wave 2 B1/B2 bounds, 15/15 replay); '
+            '(MQ3, UE31b, VD1, MQ7, EM1, IN1, LA2, B4 25-50% collapses, B5 4/11 failures P8-P11, Wave 2 B1/B2 bounds, 16/16 replay); '
             'dashed crimson not_entails firewall (given >=1 standpoint & formation, no satisfiable dynamics-only law entails Unrestricted for every significance); '
             'Tier D Layer 3 ethics of 生生, 1,183 wisdom crosswalk entries, and human cold-read boundary.'
         ),
-        'subtitle': 'Four verification tiers supporting 3 layers: (1) Coupled adaptive alignment · (2) 0-axiom ledger & 16-mod periphery · (3) 生生 ethics & wisdom',
-        'metrics_1': '439 closure (418 core) · 31,170 decls · 22,056 thms · 0 axioms (v4.29.1, run 20261124T195858.526167Z) · 598 results (567 checked)',
-        'metrics_2': '16 periphery (14 Mathlib + 2 non-Mathlib, 0 stale) · 220 dynamics (8 families) · 66 bound tests · 4 situations · 1,183 crosswalk',
+        'subtitle': 'Four verification tiers supporting 3 layers: (1) Coupled adaptive alignment · (2) 0-axiom ledger & 18-mod periphery · (3) 生生 ethics & wisdom',
+        'metrics_1': '439 closure (418 core) · 31,228 decls · 22,087 thms · 0 axioms (v4.29.1, run 20261124T233040.232087Z) · 600 results (569 checked)',
+        'metrics_2': '18 periphery (16 Mathlib + 2 non-Mathlib, 0 stale) · 220 dynamics (8 families) · 66 bound tests · 4 situations · 1,183 crosswalk',
         'l1a_head': 'TIER A  ·  0-AXIOM RELATIONAL CORE (Supports Layers 1 & 2 · Init-only, 0 sorry, no Mathlib)',
         'root_title': 'One Relational Root: Condition (缘) · Class (类) · Continuation (续)',
         'root_sub': 'Grammar · World · Web · Flow · WayUnderARule — what persists is re-made step by step',
@@ -282,14 +282,14 @@ SPEC = {
         'sharp_sub1': 'CE01–CE10, CE14, WaterTank, slackDist',
         'sharp_sub2': 'separate countermodels dropping individual safeguards',
         'bridge_note': 'downstream imports only — 0-axiom core stays isolated',
-        'l1b_head': 'TIER B  ·  ISOLATED 16-MODULE PERIPHERY (14 Mathlib + 2 non-Mathlib, 0 stale) & STANDALONE TRACKS',
+        'l1b_head': 'TIER B  ·  ISOLATED 18-MODULE PERIPHERY (16 Mathlib + 2 non-Mathlib, 0 stale) & STANDALONE TRACKS',
         'periph_leaf_title': 'Shared Mathlib Leaf: FiniteProbKrylov (v4.30.0-rc2)',
         'periph_leaf_sub': 'FinDist · TV metric · Krylov rank stabilization · FiberLumpable B1–B2 join',
         'periph_boxes': [
             ('ObservationalFidelity', 'TV floor, Dobrushin, 0-TV split'),
             ('SurvivalDistinguishability', 'All mode words <= |S|-1'),
-            ('QuantitativeTransfer', 'Rank-1 drift, aliasing, lag tube'),
-            ('AlignmentReals & BecomingReals', 'CE12/13, MetricLaxSim, 9 reals modules'),
+            ('QuantitativeTransfer', 'Rank-1 drift, panel SD, seq Gauss'),
+            ('AlignmentReals & Wave 4', 'BecomingReals, InterfaceBits, Cone'),
             ('RenewalBridge & FallibleInquiry', '2 non-Mathlib bridges (v4.29.1)'),
         ],
         'standalone_title': 'Standalone Checked Tracks',
@@ -318,7 +318,7 @@ SPEC = {
             ('66 bound tests (4 fail · 20 mix · 5 pass · 37 other): MQ3, UE31b (T2), VD1, MQ7', True),
             ('Broken bridges: EM1 (FA leak) · IN1 (0/10 unseen; 1/10 vs 8/10 seen) · LA2 (1/9)', True),
             ('B4 full_guarded crashes 25–50% (drift 0.50, lag 0.45[luck], lr 0.25/0.70, alias 0.25)', False),
-            ('B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 15/15 replay', False),
+            ('B5: 4/11 failed (P8–P11; lag=8 marginal) · Wave 2 B1/B2 bounds · 16/16 replay', False),
         ],
         'firewall_l1': 'not_entails FIREWALL — Given >= 1 standpoint & formation (p : Pos, f : F), no satisfiable',
         'firewall_l2': 'dynamics-only law entails Unrestricted sig for every significance assignment (free parameter)',
@@ -340,23 +340,23 @@ SPEC = {
                 '1-hr Audit Guide · 6 Dossiers · Mac-local hold',
             ),
         ],
-        'footer': 'Generated deterministically by tools/research/architecture_map.py (stdlib only, zero scripts, zero external URLs). Synced to main receipt 20261124T195858.526167Z.',
+        'footer': 'Generated deterministically by tools/research/architecture_map.py (stdlib only, zero scripts, zero external URLs). Synced to main receipt 20261124T233040.232087Z.',
     },
     'zh': {
         'title': '生灭变化之论——核验层级（A–D）与认知边界',
         'desc': (
             '支撑生灭变化之论三协同层的四重核验层级图：'
-            '层级 A 为零公理关系核心（439 闭包、418 核心模块、31,170 声明、22,056 定理、0 公理），'
+            '层级 A 为零公理关系核心（439 闭包、418 核心模块、31,228 声明、22,087 定理、0 公理），'
             '由单一关系之根经五条共律与六大结构支柱汇入 AlignmentSpine、MasterSpine 与 SharpnessSuite；'
-            '层级 B 为隔离的 16 模块外围（14 个 Mathlib v4.30.0-rc2 + 2 个非 Mathlib v4.29.1，0 过期），'
+            '层级 B 为隔离的 18 模块外围（16 个 Mathlib v4.30.0-rc2 + 2 个非 Mathlib v4.29.1，0 过期），'
             '锚定共享基叶 FiniteProbKrylov，并列零公理独立轨 BecomingSpec（26 目标）、EncounterEntry（35 定理）与 RelSpanEncounterAdapter（7 定理）及 Mathlib 支撑的对偶轨；'
             '规则二（Rule 2）识别边界；层级 C 为拟制 6 项守卫对齐运行时（AI 拟制手设旗标自评）与失败先报的经验/压力壁垒'
-            '（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、15/15 证据重放）；'
+            '（66 绑定检验中 4 败 20 混 5 过 37 其他、B4 25–50% 崩溃、B5 4/11 预测失败、Wave 2 B1/B2 边界、16/16 证据重放）；'
             '虚线深红 not_entails 防火墙（在至少一立场与一形成前提下，无只读动力学可满足律对一切意义蕴涵 Unrestricted）；层级 D 为第 3 层“生生”伦理、1,183 条智慧对照表与待人工冷读边界。'
         ),
-        'subtitle': '四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 16 外围模块 · (3) 智慧与“生生”伦理',
-        'metrics_1': '核心：439 闭包（418 核心）· 31,170 声明 · 22,056 定理 · 0 公理（v4.29.1，回执 20261124T195858.526167Z）· 598 登记（567 已核）',
-        'metrics_2': '16 外围（14 Mathlib + 2 非 Mathlib，0 过期）· 220 条动态（8 族）· 66 项绑定检验 · 4 情境 · 1,183 条智慧对照',
+        'subtitle': '四重核验层级支撑三协同层：(1) 耦合自适应对齐 · (2) 零公理台账与 18 外围模块 · (3) 智慧与“生生”伦理',
+        'metrics_1': '核心：439 闭包（418 核心）· 31,228 声明 · 22,087 定理 · 0 公理（v4.29.1，回执 20261124T233040.232087Z）· 600 登记（569 已核）',
+        'metrics_2': '18 外围（16 Mathlib + 2 非 Mathlib，0 过期）· 220 条动态（8 族）· 66 项绑定检验 · 4 情境 · 1,183 条智慧对照',
         'l1a_head': '层级 A  ·  零公理关系核心（支撑第 1–2 层 · 仅引入 Init，0 sorry，不含 Mathlib）',
         'root_title': '单一关系之根：缘（条件）· 类（同）· 续（延续）',
         'root_sub': 'Grammar · World · Web · Flow · WayUnderARule —— 凡持久者皆随步复造',
@@ -384,14 +384,14 @@ SPEC = {
         'sharp_sub1': 'CE01–CE10、CE14、WaterTank、slackDist',
         'sharp_sub2': '逐条拆去前提之分立具象反模型',
         'bridge_note': '仅向下游单向引入 —— 零公理核心保持严格隔离',
-        'l1b_head': '层级 B  ·  孤立的 16 模块外围（14 Mathlib + 2 非 Mathlib，0 过期）与独立核验轨',
+        'l1b_head': '层级 B  ·  孤立的 18 模块外围（16 Mathlib + 2 非 Mathlib，0 过期）与独立核验轨',
         'periph_leaf_title': '共享 Mathlib 基叶：FiniteProbKrylov（v4.30.0-rc2）',
         'periph_leaf_sub': 'FinDist · TV 度量 · Krylov 秩稳定 · FiberLumpable B1–B2 汇合',
         'periph_boxes': [
             ('ObservationalFidelity', 'TV 下界、Dobrushin、零TV分裂'),
             ('SurvivalDistinguishability', '长度 <= |S|-1 之全部模态词'),
-            ('QuantitativeTransfer', '秩1漂移、混叠、滞后、信任管'),
-            ('AlignmentReals & BecomingReals', 'CE12/13、MetricLaxSim、9 实数模块'),
+            ('QuantitativeTransfer', '秩1漂移、面板SD、序列高斯'),
+            ('AlignmentReals 与 Wave 4', 'BecomingReals、InterfaceBits、锥'),
             ('RenewalBridge & FallibleInquiry', '2 非 Mathlib 桥（v4.29.1）'),
         ],
         'standalone_title': '独立核验轨',
@@ -420,7 +420,7 @@ SPEC = {
             ('66 绑定检验（4 败 · 20 混 · 5 过 · 37 其他）：MQ3、UE31b(T2)、VD1、MQ7', True),
             ('断桥：EM1 (FA泄漏) · IN1 (不可见0/10；可见1/10对8/10) · LA2 (1/9批注翻转)', True),
             ('B4 full_guarded 崩溃 25–50%（漂移 0.50、滞后 0.45(含运)、lr 0.25/0.70、混叠 0.25）', False),
-            ('B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 15/15 重放', False),
+            ('B5：4/11 失败（P8–P11；lag=8 非净壁垒）· Wave 2 B1/B2 边界 · 16/16 重放', False),
         ],
         'firewall_l1': 'not_entails 防火墙 — 在至少一立场与一形成 (p : Pos, f : F) 前提下，无只读动力学',
         'firewall_l2': '的可满足律蕴涵对一切意义赋值成立的延续条件 Unrestricted（由自由参数构造成立）',
@@ -442,7 +442,7 @@ SPEC = {
                 '人工审计指南 · 六份审阅材料 · Mac 本地留存',
             ),
         ],
-        'footer': '由 tools/research/architecture_map.py 确定性生成（仅用 Python 标准库，不含脚本，无外部链接）。图内中文为 AI 所写，英文与核心回执以 20261124T195858.526167Z 为准。',
+        'footer': '由 tools/research/architecture_map.py 确定性生成（仅用 Python 标准库，不含脚本，无外部链接）。图内中文为 AI 所写，英文与核心回执以 20261124T233040.232087Z 为准。',
     },
 }
 

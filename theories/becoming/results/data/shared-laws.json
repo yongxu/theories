@@ -58,9 +58,9 @@
   ]
  },
  "counts": {
-  "laws": 4565,
+  "laws": 4566,
   "no_declarations": 9,
-  "outside": 430,
+  "outside": 431,
   "grammar": 1182,
   "balance, represented": 642,
   "anchor, not reached": 99,
@@ -41183,6 +41183,31 @@
      "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
      "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
      "QuantitativeTransfer.gaussian_seq_lab_witness"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "QuantitativeTransfer.poolMean_sub_shared_le",
+     "QuantitativeTransfer.augmentedPanelMean",
+     "QuantitativeTransfer.augmentedPanelVar",
+     "QuantitativeTransfer.augmentedPanelSD",
+     "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq",
+     "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap",
+     "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization",
+     "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
+     "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness"
+    ],
+    "outside": [
+     "QuantitativeTransfer.poolMean_sub_shared_le",
+     "QuantitativeTransfer.augmentedPanelMean",
+     "QuantitativeTransfer.augmentedPanelVar",
+     "QuantitativeTransfer.augmentedPanelSD",
+     "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq",
+     "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap",
+     "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization",
+     "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
+     "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness"
     ]
    }
   ],

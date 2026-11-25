@@ -14,7 +14,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 |---|---:|---:|
 | [Becoming pure core](lean-declarations/becoming-core.md) | 421 | 21,193 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
-| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 18 | 707 |
+| [Becoming active periphery](lean-declarations/becoming-periphery.md) | 18 | 713 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |

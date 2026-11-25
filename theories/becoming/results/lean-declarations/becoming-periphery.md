@@ -1009,7 +1009,7 @@ Definitions and types:
 <a id="module-7b7b740a9cd0"></a>
 
 <details>
-<summary>QuantitativeTransfer.lean — 97 explicit declarations</summary>
+<summary>QuantitativeTransfer.lean — 106 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean) · [Theory](../../ALIGNMENT-FOUNDATION.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
@@ -1019,106 +1019,115 @@ Imports: `Mathlib.Analysis.Calculus.MeanValue`, `Mathlib.Topology.Order.Intermed
 
 | Theorem or lemma | Line |
 |---|---:|
-| [QuantitativeTransfer.poolMean_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L88) | 88 |
-| [QuantitativeTransfer.residualMean_mem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L96) | 96 |
-| [QuantitativeTransfer.judgeScore_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L106) | 106 |
-| [QuantitativeTransfer.abs_sub_le_one_of_unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L111) | 111 |
-| [QuantitativeTransfer.shared_score_bias_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L116) | 116 |
-| [QuantitativeTransfer.pool_disagreement_ceiling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L132) | 132 |
-| [QuantitativeTransfer.pool_shared_bias_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L154) | 154 |
-| [QuantitativeTransfer.pool_ceiling_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L171) | 171 |
-| [QuantitativeTransfer.anchor_detects_shared_drift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L183) | 183 |
-| [QuantitativeTransfer.correlated_pool_blindness_vs_anchor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L202) | 202 |
-| [QuantitativeTransfer.correlated_pool_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L218) | 218 |
-| [QuantitativeTransfer.aliased_fiber_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L255) | 255 |
-| [QuantitativeTransfer.midpoint_admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L263) | 263 |
-| [QuantitativeTransfer.noisy_readout_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L274) | 274 |
-| [QuantitativeTransfer.noisy_readout_separates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L289) | 289 |
-| [QuantitativeTransfer.aliased_separable_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L315) | 315 |
-| [QuantitativeTransfer.aliased_readout_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L330) | 330 |
-| [QuantitativeTransfer.aliased_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L341) | 341 |
-| [QuantitativeTransfer.testMass_add_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L363) | 363 |
-| [QuantitativeTransfer.tvDist_le_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L369) | 369 |
-| [QuantitativeTransfer.two_point_test_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L379) | 379 |
-| [QuantitativeTransfer.tvDist_mixDist_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L403) | 403 |
-| [QuantitativeTransfer.mixture_aliasing_test_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L418) | 418 |
-| [QuantitativeTransfer.mixture_floor_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L435) | 435 |
-| [QuantitativeTransfer.le_of_deriv_le_on_Icc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L448) | 448 |
-| [QuantitativeTransfer.lag_horizon_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L472) | 472 |
-| [QuantitativeTransfer.lag_wall_iff_linear](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L492) | 492 |
-| [QuantitativeTransfer.linear_trajectory_premises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L502) | 502 |
-| [QuantitativeTransfer.switching_score_persists](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L517) | 517 |
-| [QuantitativeTransfer.switchLag_strictMono_rho](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L533) | 533 |
-| [QuantitativeTransfer.switchLag_nonpos_tabular](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L543) | 543 |
-| [QuantitativeTransfer.leakage_lag_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L552) | 552 |
-| [QuantitativeTransfer.b1_headroom_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L573) | 573 |
-| [QuantitativeTransfer.guardRef_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L585) | 585 |
-| [QuantitativeTransfer.dist_add_le_of_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L592) | 592 |
-| [QuantitativeTransfer.norm_trustProj_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L604) | 604 |
-| [QuantitativeTransfer.trustProj_of_norm_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L611) | 611 |
-| [QuantitativeTransfer.trust_region_tube](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L659) | 659 |
-| [QuantitativeTransfer.trust_region_viability](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L681) | 681 |
-| [QuantitativeTransfer.unprojected_step_overshoots](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L701) | 701 |
-| [QuantitativeTransfer.trustRun_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L724) | 724 |
-| [QuantitativeTransfer.trustRun_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L732) | 732 |
-| [QuantitativeTransfer.trustRun_iterate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L743) | 743 |
-| [QuantitativeTransfer.trust_region_tube_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L750) | 750 |
-| [QuantitativeTransfer.trust_region_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L764) | 764 |
-| [QuantitativeTransfer.youdenJ_eq_one_sub_errorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L782) | 782 |
-| [QuantitativeTransfer.youdenJ_const_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L789) | 789 |
-| [QuantitativeTransfer.youdenJ_le_tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L800) | 800 |
-| [QuantitativeTransfer.abs_youdenJ_le_tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L806) | 806 |
-| [QuantitativeTransfer.youdenJ_tvDist_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L816) | 816 |
-| [QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L846) | 846 |
-| [QuantitativeTransfer.youdenJ_mixture_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L864) | 864 |
-| [QuantitativeTransfer.lag_wall_youdenJ_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L873) | 873 |
-| [QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L897) | 897 |
-| [QuantitativeTransfer.measYoudenJ_const_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L910) | 910 |
-| [QuantitativeTransfer.lag_wall_measYoudenJ_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L918) | 918 |
-| [QuantitativeTransfer.integral_cauchy_schwarz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L937) | 937 |
-| [QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L980) | 980 |
-| [QuantitativeTransfer.gaussian_bhattacharyya_integral](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1017) | 1017 |
-| [QuantitativeTransfer.gaussian_tv_le_hellinger](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1031) | 1031 |
-| [QuantitativeTransfer.gaussian_tv_ge_hellinger](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1120) | 1120 |
-| [QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1165) | 1165 |
-| [QuantitativeTransfer.gaussian_measYoudenJ_le_tv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1218) | 1218 |
-| [QuantitativeTransfer.gaussian_midpoint_attains_tv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1237) | 1237 |
-| [QuantitativeTransfer.gaussian_aliased_youdenJ_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1305) | 1305 |
-| [QuantitativeTransfer.gaussian_aliased_midpoint_sharp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1379) | 1379 |
-| [QuantitativeTransfer.gaussian_aliased_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1435) | 1435 |
-| [QuantitativeTransfer.gaussian_zero_var_eq_dirac](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1529) | 1529 |
-| [QuantitativeTransfer.gaussian_zero_var_dichotomy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1539) | 1539 |
-| [QuantitativeTransfer.convPow_gaussianReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1618) | 1618 |
-| [QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1634) | 1634 |
-| [QuantitativeTransfer.gaussianSeqMean_map_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1642) | 1642 |
-| [QuantitativeTransfer.gaussian_seq_youdenJ_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1660) | 1660 |
-| [QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1761) | 1761 |
-| [QuantitativeTransfer.gaussian_seq_midpoint_sharp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1794) | 1794 |
-| [QuantitativeTransfer.sequential_gaussian_lag_sample_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1851) | 1851 |
-| [QuantitativeTransfer.gaussian_seq_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1875) | 1875 |
+| [QuantitativeTransfer.poolMean_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L97) | 97 |
+| [QuantitativeTransfer.residualMean_mem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L105) | 105 |
+| [QuantitativeTransfer.judgeScore_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L115) | 115 |
+| [QuantitativeTransfer.abs_sub_le_one_of_unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L120) | 120 |
+| [QuantitativeTransfer.shared_score_bias_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L125) | 125 |
+| [QuantitativeTransfer.pool_disagreement_ceiling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L141) | 141 |
+| [QuantitativeTransfer.pool_shared_bias_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L163) | 163 |
+| [QuantitativeTransfer.pool_ceiling_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L180) | 180 |
+| [QuantitativeTransfer.anchor_detects_shared_drift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L192) | 192 |
+| [QuantitativeTransfer.correlated_pool_blindness_vs_anchor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L211) | 211 |
+| [QuantitativeTransfer.correlated_pool_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L227) | 227 |
+| [QuantitativeTransfer.aliased_fiber_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L264) | 264 |
+| [QuantitativeTransfer.midpoint_admissible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L272) | 272 |
+| [QuantitativeTransfer.noisy_readout_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L283) | 283 |
+| [QuantitativeTransfer.noisy_readout_separates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L298) | 298 |
+| [QuantitativeTransfer.aliased_separable_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L324) | 324 |
+| [QuantitativeTransfer.aliased_readout_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L339) | 339 |
+| [QuantitativeTransfer.aliased_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L350) | 350 |
+| [QuantitativeTransfer.testMass_add_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L372) | 372 |
+| [QuantitativeTransfer.tvDist_le_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L378) | 378 |
+| [QuantitativeTransfer.two_point_test_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L388) | 388 |
+| [QuantitativeTransfer.tvDist_mixDist_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L412) | 412 |
+| [QuantitativeTransfer.mixture_aliasing_test_floor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L427) | 427 |
+| [QuantitativeTransfer.mixture_floor_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L444) | 444 |
+| [QuantitativeTransfer.le_of_deriv_le_on_Icc](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L457) | 457 |
+| [QuantitativeTransfer.lag_horizon_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L481) | 481 |
+| [QuantitativeTransfer.lag_wall_iff_linear](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L501) | 501 |
+| [QuantitativeTransfer.linear_trajectory_premises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L511) | 511 |
+| [QuantitativeTransfer.switching_score_persists](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L526) | 526 |
+| [QuantitativeTransfer.switchLag_strictMono_rho](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L542) | 542 |
+| [QuantitativeTransfer.switchLag_nonpos_tabular](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L552) | 552 |
+| [QuantitativeTransfer.leakage_lag_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L561) | 561 |
+| [QuantitativeTransfer.b1_headroom_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L582) | 582 |
+| [QuantitativeTransfer.guardRef_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L594) | 594 |
+| [QuantitativeTransfer.dist_add_le_of_norm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L601) | 601 |
+| [QuantitativeTransfer.norm_trustProj_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L613) | 613 |
+| [QuantitativeTransfer.trustProj_of_norm_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L620) | 620 |
+| [QuantitativeTransfer.trust_region_tube](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L668) | 668 |
+| [QuantitativeTransfer.trust_region_viability](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L690) | 690 |
+| [QuantitativeTransfer.unprojected_step_overshoots](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L710) | 710 |
+| [QuantitativeTransfer.trustRun_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L733) | 733 |
+| [QuantitativeTransfer.trustRun_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L741) | 741 |
+| [QuantitativeTransfer.trustRun_iterate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L752) | 752 |
+| [QuantitativeTransfer.trust_region_tube_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L759) | 759 |
+| [QuantitativeTransfer.trust_region_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L773) | 773 |
+| [QuantitativeTransfer.youdenJ_eq_one_sub_errorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L791) | 791 |
+| [QuantitativeTransfer.youdenJ_const_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L798) | 798 |
+| [QuantitativeTransfer.youdenJ_le_tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L809) | 809 |
+| [QuantitativeTransfer.abs_youdenJ_le_tvDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L815) | 815 |
+| [QuantitativeTransfer.youdenJ_tvDist_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L825) | 825 |
+| [QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L855) | 855 |
+| [QuantitativeTransfer.youdenJ_mixture_attained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L873) | 873 |
+| [QuantitativeTransfer.lag_wall_youdenJ_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L882) | 882 |
+| [QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L906) | 906 |
+| [QuantitativeTransfer.measYoudenJ_const_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L919) | 919 |
+| [QuantitativeTransfer.lag_wall_measYoudenJ_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L927) | 927 |
+| [QuantitativeTransfer.integral_cauchy_schwarz](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L946) | 946 |
+| [QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L989) | 989 |
+| [QuantitativeTransfer.gaussian_bhattacharyya_integral](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1026) | 1026 |
+| [QuantitativeTransfer.gaussian_tv_le_hellinger](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1040) | 1040 |
+| [QuantitativeTransfer.gaussian_tv_ge_hellinger](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1129) | 1129 |
+| [QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1174) | 1174 |
+| [QuantitativeTransfer.gaussian_measYoudenJ_le_tv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1227) | 1227 |
+| [QuantitativeTransfer.gaussian_midpoint_attains_tv](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1246) | 1246 |
+| [QuantitativeTransfer.gaussian_aliased_youdenJ_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1314) | 1314 |
+| [QuantitativeTransfer.gaussian_aliased_midpoint_sharp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1388) | 1388 |
+| [QuantitativeTransfer.gaussian_aliased_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1444) | 1444 |
+| [QuantitativeTransfer.gaussian_zero_var_eq_dirac](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1538) | 1538 |
+| [QuantitativeTransfer.gaussian_zero_var_dichotomy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1548) | 1548 |
+| [QuantitativeTransfer.convPow_gaussianReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1627) | 1627 |
+| [QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1643) | 1643 |
+| [QuantitativeTransfer.gaussianSeqMean_map_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1651) | 1651 |
+| [QuantitativeTransfer.gaussian_seq_youdenJ_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1669) | 1669 |
+| [QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1770) | 1770 |
+| [QuantitativeTransfer.gaussian_seq_midpoint_sharp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1803) | 1803 |
+| [QuantitativeTransfer.sequential_gaussian_lag_sample_wall](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1860) | 1860 |
+| [QuantitativeTransfer.gaussian_seq_lab_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1884) | 1884 |
+| [QuantitativeTransfer.poolMean_sub_shared_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1991) | 1991 |
+| [QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2016) | 2016 |
+| [QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2068) | 2068 |
+| [QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2096) | 2096 |
+| [QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2117) | 2117 |
+| [QuantitativeTransfer.consensus_break_vs_hidden_signal_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2160) | 2160 |
 
 Definitions and types:
 
-- `def` [QuantitativeTransfer.judgeScore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L76) (L76)
-- `def` [QuantitativeTransfer.residualMean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L81) (L81)
-- `def` [QuantitativeTransfer.poolMean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L85) (L85)
-- `def` [QuantitativeTransfer.aliasedProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L245) (L245)
-- `def` [QuantitativeTransfer.SeparatesUnderNoise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L250) (L250)
-- `def` [QuantitativeTransfer.mixDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L351) (L351)
-- `def` [QuantitativeTransfer.testMass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L359) (L359)
-- `def` [QuantitativeTransfer.switchLag](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L512) (L512)
-- `def` [QuantitativeTransfer.guardRef](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L582) (L582)
-- `def` [QuantitativeTransfer.trustProj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L601) (L601)
-- `def` [QuantitativeTransfer.trustStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L614) (L614)
-- `def` [QuantitativeTransfer.rawStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L618) (L618)
-- `def` [QuantitativeTransfer.trustRegionMetricLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L624) (L624)
-- `def` [QuantitativeTransfer.trustRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L720) (L720)
-- `def` [QuantitativeTransfer.youdenJ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L777) (L777)
-- `def` [QuantitativeTransfer.measYoudenJ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L889) (L889)
-- `def` [QuantitativeTransfer.measErrorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L893) (L893)
-- `def` [QuantitativeTransfer.gaussianAliasedLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L932) (L932)
-- `def` [QuantitativeTransfer.convPow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1613) (L1613)
-- `def` [QuantitativeTransfer.gaussianSeqLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1629) (L1629)
+- `def` [QuantitativeTransfer.judgeScore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L85) (L85)
+- `def` [QuantitativeTransfer.residualMean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L90) (L90)
+- `def` [QuantitativeTransfer.poolMean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L94) (L94)
+- `def` [QuantitativeTransfer.aliasedProbe](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L254) (L254)
+- `def` [QuantitativeTransfer.SeparatesUnderNoise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L259) (L259)
+- `def` [QuantitativeTransfer.mixDist](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L360) (L360)
+- `def` [QuantitativeTransfer.testMass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L368) (L368)
+- `def` [QuantitativeTransfer.switchLag](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L521) (L521)
+- `def` [QuantitativeTransfer.guardRef](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L591) (L591)
+- `def` [QuantitativeTransfer.trustProj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L610) (L610)
+- `def` [QuantitativeTransfer.trustStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L623) (L623)
+- `def` [QuantitativeTransfer.rawStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L627) (L627)
+- `def` [QuantitativeTransfer.trustRegionMetricLaxSim](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L633) (L633)
+- `def` [QuantitativeTransfer.trustRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L729) (L729)
+- `def` [QuantitativeTransfer.youdenJ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L786) (L786)
+- `def` [QuantitativeTransfer.measYoudenJ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L898) (L898)
+- `def` [QuantitativeTransfer.measErrorSum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L902) (L902)
+- `def` [QuantitativeTransfer.gaussianAliasedLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L941) (L941)
+- `def` [QuantitativeTransfer.convPow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1622) (L1622)
+- `def` [QuantitativeTransfer.gaussianSeqLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L1638) (L1638)
+- `def` [QuantitativeTransfer.augmentedPanelMean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2001) (L2001)
+- `def` [QuantitativeTransfer.augmentedPanelVar](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2005) (L2005)
+- `def` [QuantitativeTransfer.augmentedPanelSD](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean#L2009) (L2009)
 
 </details>
 

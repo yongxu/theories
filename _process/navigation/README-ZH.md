@@ -55,7 +55,7 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [规范地图](../../theories/becoming/CANONICAL-MAP.zh.md) | 全图通读综合（[英文版](../../theories/becoming/CANONICAL-MAP.md)）：零公理脊柱、16 个隔离外围模块、66 项已登记检验（57 项绑定动态）、4 个受检情境、压力测试与 `not_entails` 边界 | 英文版约 {{time:theories/becoming/CANONICAL-MAP.md}} |
+| [规范地图](../../theories/becoming/CANONICAL-MAP.zh.md) | 全图通读综合（[英文版](../../theories/becoming/CANONICAL-MAP.md)）：零公理脊柱、18 个隔离外围模块、66 项已登记检验（57 项绑定动态）、4 个受检情境、压力测试与 `not_entails` 边界 | 英文版约 {{time:theories/becoming/CANONICAL-MAP.md}} |
 | [对齐基础](../../theories/becoming/ALIGNMENT-FOUNDATION.zh.md) | 面向 AI 对齐的三项诚实主张（[英文版](../../theories/becoming/ALIGNMENT-FOUNDATION.md)）：Lean 结构核心、风格化 6 项[守卫对齐运行时](../../experiments/guarded-alignment-runtime/README.md)诊断与先报失效的压力边界 | 专题入口 |
 | [人工审计指南](../../theories/becoming/HUMAN-AUDIT-GUIDE.zh.md) | 给独立研究者的 1 小时可复核审计清单（[英文版](../../theories/becoming/HUMAN-AUDIT-GUIDE.md)），直接核验 Lean 回执、外围隔离与 `B1`–`B5` 失效 | 约 1 小时审计 |
 | [一页](../../theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：核心概念、诸律、各自看到了多远、什么会表明它错，以及三层对齐进展 | 约 {{time:theories/becoming/ONE-PAGE.zh.md}} |

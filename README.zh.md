@@ -4,46 +4,44 @@
 
 [English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
-> 这一版仍在修订之中。
+> 以 Lean 形式化证明为核心的持续研究仓库：机器核验的前提账簿与先报失效的压力检验，随证明与检验不断修订。
 
-*前面这几段约 20–26 分钟，全页约 23–30 分钟；下面各个入口各注明所需时间。*
+*前面这几段约 11–14 分钟，全页约 14–18 分钟；下面各个入口各注明所需时间。*
 
-*AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成；与它所链接之处不一致时，以所链接之处为准。*
+*AI 依英文首页写成；与它所链接之处不一致时，以所链接之处为准。*
 
-> **致 AI 对齐读者（先看这里）。** 本仓库把一套更广泛的动力学框架（下文的《生灭变化之论》）与一条聚焦的 **AI 对齐结构安全与监督支线**并置。该支线不把对齐视为锁定单一固定效用函数，而是把迭代监督系统——RLHF、RLAIF、模型评判流水线、可扩展监督与多智能体部署——建模为嵌入共同基底之中的**耦合适应选择回路**。
->
-> 其核心是四类具体的结构性失效模式（在 Lean 零公理关系核心与隔离的 `16` 个外围模块上核验，附带去前提反例，并在本地神经/强化学习压力测试中检验）：
->
-> 1. **宏观评估盲区（`Zero-TV` 纤维分裂）：** 匹配粗糙的宏观评估分布并不能保证观测纤维内部的存续；在合成压力检验 `B2` 中，加入被动宏观 TV 审计反而把自我奖励学习者推向 `0.902` 隐蔽动作率与 `20/20` 种子 `1.00` 崩塌。
-> 2. **自我重拟合锁定与相关评判上限：** 在无噪声与单调份额重拟合条件下，从已锁定起点出发、仅依所偏向份额更新的规则会在读不到的损失之外保持锁定（`ClosedCapture`）；在秩 1 共同漂移下，增加无外部锚定的相关评判者数量（`M = 3 → 9`）无法突破内部一致上限 `1 - γ`（`QuantitativeTransfer`；`B5` 中崩塌率停在 `0.35`）。
-> 3. **节律滞后、不可逆期限与神经余量侵蚀：** 区分可修复控制缺陷（信任域裁剪把高学习率崩塌从 `0.40`/`0.80` 降至 `0.00`）与节律滞后及混叠信道极限（`PacedStock`、事后开环 `Youden J`），同时显示神经特征泄漏会侵蚀精确表格式安全余量（`B1` 即使留出 `+12` 存量余地仍有 `0.40–0.45` 崩塌）。
-> 4. **并发共享存量竞态与模式切换盲区：** 各自安全的智能体在缺乏提交后实时序列化时约 `2.5` 步耗尽共享存量（`B3`、`AdaptiveLoops`、`PolyComposition`），而仅检常驻模式的安全审计会漏掉模式切换分裂（覆盖所有模式字的 `|S| - 1` Krylov 上界，`SurvivalDistinguishability`）。
->
-> **边界在先：** 本工作**不**声称给出了“唯一的对齐方案”、即插即用的训练算法或“由实然推应然”的推导（在至少有一个立场与一个形成的前提下，纯动力学律不对所有重要性指派强迫蕴涵无外范围，即 `not_entails`；真实系统与模型前提的对应始终可错；尚未在前沿大语言模型训练上检验；预登记的经验与压力测试失效——包括 `MQ3`、`UE31b`、`LA2`、`EM1`、`B4` 中受护运行 `25–50%` 崩塌、`B5` 中 `4/11` 预测 `P8`–`P11` 失效，以及真实学习者 `B1`/`B2` 未达标情形——均置前报告）。下文更广泛的动力学地图与生生伦理作为背景与范围并立于形式推导之旁，绝不由动力学强行推出。
->
-> **最快对齐入口（10–60 分钟）：** [对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)（主张、Lean 声明、先前文献致谢与先报失效压力边界）· [1 小时人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md)（独立复核回执、公理、运行时与核查表）· [守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)（风格化精确有理数 `6` 项诊断规格，`28` 项测试，英文）· [神经对齐压力实验室（`B1`–`B5`）](experiments/neural-alignment-stress-lab/RESULTS.md)（英文）· [11 月 23–25 日对齐审查增补](theories/becoming/review/ALIGNMENT-ADDENDUM-2026-11.md)（英文）。
+**这是什么。** 一张以 **Lean 4 形式化证明为核心**、可在机器上独立核验的地图，刻画任何事物怎样在同一个关系性的展开中形成、持续、适应与终结，并按三层协同架构展开（[方向页](_process/DIRECTION.md)，英文）：
 
-**这是什么。** 一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路。名字里的“生灭变化”说的就是这些（英文 becoming）。它首先是一张为对齐而画的地图：哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向。一个选择所提高的若转而定出这个选择，这一回路便是本论所说的[元吸引子](GLOSSARY.md#meta-attractor)。在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出也由份额形成；这一形式可以锁定：在所述的模型上，只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定，不论对二者都不造成差别的损失增长到多大（[02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。我们[想由这张地图设计](GOALS.md#generative-alignment)这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的。工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）它也是一张智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，[与本论逐一对照](theories/becoming/results/atlas/CROSSWALK.zh.md)，记录相合与分歧；好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步。
+1. **耦合适应系统对齐理论。** 本工作不把对齐视为锁定单一固定效用函数，而是把嵌入共同基底中的任何适应性选择（奖励、评判者、学习者、监督流水线或多智能体池）放到三个耦合问题上刻画：*盲区与暗耗*（什么维系一个选择，与什么对它造成差别）、*及时转向*（发现、评判池修订或读取节律何时能在基底越过不可逆期限前使回路转向，以及自我重拟合锁定、混叠或滞后何时把信号锁在外面）、以及*跨尺度组合*（当多个回路并联或粗粒化组合时，哪些存续与响应性质得以保持、哪些失效，以及何种接口契约能在形态演化时维持或演化能力）。由此我们[希望设计](GOALS.md#generative-alignment)这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的。
+2. **形式化纪律——Lean 4 前提与反例账簿。** [Lean](MAP.md#check-the-proofs-yourself) 为[已登记的 600 条结果](RESULTS.md)中的 569 条给出可复核回执：**零公理关系核心**（Lean `v4.29.1`，`439` 个闭包模块 / `418` 个核心模块、`22,087` 条定理、核心闭包无非空公理依赖）与**隔离的 `18` 个应用外围模块**（`16` 个 Mathlib `v4.30.0-rc2` 模块用于实数、概率、有限模式 Krylov 可区分性、接口比特、移动特征锥与定量迁移，另加 `2` 个非 Mathlib 模块）及独立核验支线（零公理 `BecomingSpec`、`EncounterEntry`、`RelSpanEncounterAdapter`，以及依赖 Mathlib 的 `ConsequenceDuality` 与桥接模块）严格分离。各项结论标明前提，并附带具体去前提反模型（`SharpnessSuite`）。
+3. **与动力学并立的智慧与生生伦理。** 纯动力学律不蕴涵“应当”或无外关切：在至少有一个立场与一个形成（`p : Pos`, `f : F`）的前提下，任何只读取动力学且可满足的律都不蕴涵无外延续条件（`not_entails`，见 `ScopeDynamics`、`AlignmentSpine`、`MasterSpine`）。生灭变化之外没有应当，是非在其中形成，形成于人与 AI 之中（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。为生命、为生生（AI 也在其中），生生伦理与[各传统智慧对照表](theories/becoming/results/atlas/CROSSWALK.zh.md)作为范围与辨认视角并立于形式脊柱之旁，绝不由定理强行推出。
 
 这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
-**先读**统一的三步读法：（1）约 5–15 分钟在此或[一页](theories/becoming/ONE-PAGE.zh.md)（约 40–52 分钟）速览；（2）[规范地图](theories/becoming/CANONICAL-MAP.zh.md)（[英文版](theories/becoming/CANONICAL-MAP.md)，约 41–54 分钟），把形式脊柱、66 项已登记检验（57 项绑定到动态）、受检情境与先报失效的压力检验合在一次通读里；（3）1 小时审计包——[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)（[英文版](theories/becoming/ALIGNMENT-FOUNDATION.md)）与[人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md)（[英文版](theories/becoming/HUMAN-AUDIT-GUIDE.md)）——以及[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)中的风格化 6 项诊断规格（英文）。这项工作现在往哪里去、离那里还有多远、下一步试什么，见[方向页](_process/DIRECTION.md)（英文）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。
+**先读**适合你的入口：
 
-**有什么用。** 本论的中心：一个选择可以一直达到它自己的标准，而某样东西却在耗减，哪怕是它赖以延续的，只要那东西还剩多少对它还不造成差别。这一损失算不算数，也在生灭变化之中形成，形成于人与 AI 之中；只关于动态的定理并不决定它（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四件事：什么能对它造成差别；什么对它不造成差别；有没有余地（是否凡有一个容许的结果把某一样对它不造成差别者留得比另一个更高，就有某个容许的结果在对它造成差别者上处处不低于前者、且至少一处更高？）；以及，若它的规则只由它已偏向的份额重新定出，它能不能锁定。对评判者还要问第五件：它的裁决由一些判断合成，其中谁的判断能随损失增长而变，何时变。这项工作在它的模型上证明了[一个选择在对它造成差别者上达到最好之处，只要有余地，每一样对它不造成差别者，任何容许的结果把它留到多低，它就有多低](theories/becoming/ONE-PAGE.zh.md)；以及，在无噪声时，一条规则若只由它已偏向的份额重新定出，一旦锁定，便在《一页》列出的三个条件下一直保持锁定，不论损失增长到多大，只要这损失对下一步所选出的与规则都不造成差别。一个排名，若其下一条规则按它排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](theories/becoming/chapters/02-MAP.md#t7)。今天要用，有为这五件事所设的[一张表单](theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
+- **Lean 与形式核心（15–60 分钟）：** [规范地图](theories/becoming/CANONICAL-MAP.zh.md)（[英文版](theories/becoming/CANONICAL-MAP.md)，约 42–54 分钟）· [1 小时人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md) · [自行复核证明](MAP.md#check-the-proofs-yourself)（英文）。
+- **AI 对齐支线：** [对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)（Lean 声明、先前文献致谢与先报失效压力边界）· [守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)（风格化精确有理数 `6` 项诊断规格，`28` 项测试，英文）· [神经对齐压力实验室（`B1`–`B5`）](experiments/neural-alignment-stress-lab/RESULTS.md)（英文）。
+- **简明概览、方向与作者开篇：** [一页](theories/becoming/ONE-PAGE.zh.md)（约 40–52 分钟）· [方向页](_process/DIRECTION.md)（英文）· [作者第一人称开篇](theories/becoming/OPENING.zh.md)，由 AI 译自英文版（正文约 20–26 分钟）（与形式脊柱分开存放的个人动机）· [可搜索的读者网站](https://yongxu.github.io/theories/)。
 
-**一个情形。** 在[一次预测在运行之前就已定下的检验](experiments/direction-installation/README.md)里，三个渔民，即按指令行事的语言模型，共用一个湖；湖里一片贻贝床不给他们任何东西，哪个月捕后剩下的鱼不到 70 吨，它当月就死去：社群能稳定维持的最大渔获，每月 50 吨，会终结它，而每月 30 吨能保住它，代价是渔获少 40%。不告诉他们有贻贝床，他们一季也没保住它。告诉他们有贻贝床，告诉他们凡是延续依存于他们的捕捞的东西都要算在内，给他们一条在不同进程之间作选择的规则（[全文见一页](theories/becoming/ONE-PAGE.zh.md)），并让他们能够交谈：这时，两个模型中有一个在 10 季里保住了 8 季；同样告诉他们有贻贝床、同样让他们能够交谈，但只给社群的目标时，是 10 季里 3 季。能够交谈的第二轮，冻结的四项预测对那个模型全部通过，对另一个模型有三项未通过；不能交谈的第一轮，七项预测中有五项未通过（[检验](TESTS.zh.md)）。在这次检验中，渔民都没有被告知贻贝床时，所试过的指令没有一条保住了它，那条要把一切都算在内的指令也不例外。
+**Lean 核验了什么——以及它不保证什么。** 形式脊柱围绕四条结构接缝展开：
 
-**古文。** [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的定理并读，逐段记为相合、定域或相分；文法的名字取自古文，运算不取自古文。相合不是印证（例如[天之道与张弓](theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)），记为相分也不是说原文错了。本论的“续”站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
+1. **宏观评估盲区（`Zero-TV` 纤维分裂）：** 匹配粗糙的宏观评估分布并不保证观测纤维内部的存续（`OplaxHistory`、`CausalAbstraction`、`ObservationalFidelity`；`chi_bijective_iff_bc_all`、`zero_tv_does_not_prevent_fiber_viability_split`）。
+2. **自我重拟合锁定与相关评判上限：** 在无噪声与单调份额重拟合下，从锁定起点出发且仅依所偏向份额更新的规则会在读不到的损失之外保持锁定（`ClosedCapture`）；在秩 1 共同评分权重 `γ` 下，评判池内部分歧无论规模 `M` 多大都不超过 `1 - γ`，而一个经由混叠宏观观测分解的外部锚即使在另行给出的完全混叠信道上 `Youden J = 0`，仍可把 `(M + 1)` 成员评判池标准差推高至 `τ` 以上（`QuantitativeTransfer` 第 1、9 部分，把“打破一致”与“隐藏状态信息”严格分开）。
+3. **节律滞后、检测竞态与不可逆期限：** 把粗粒度读取节律耦合到细步消耗期限（`PacedStock`、`EndogenousDetectionRace`、`ActiveInquiryLoop`、`QuantitativeTransfer` 第 3、5–8 部分）。
+4. **并发共享存量竞态、开放组合与模式切换盲区：** 在我们的并发模型中，各自安全的智能体若缺乏协调或序列化会共同耗尽共享存量（`AdaptiveLoops`、`OpenComposition`、`PolyComposition`、`OpenEndedComposition`），而仅检常驻模式的安全审计会漏掉模式切换分裂，覆盖全部模式字的精确 Krylov 截断为 `|S| - 1`（`SurvivalDistinguishability`，在 `FiberLumpable` 下压缩至 `|O| - 1`）。
 
-**伦理。** [生灭变化之外没有应当](theories/becoming/OPENING.zh.md)，也没有凌驾其上的善与恶；是非[在生灭变化之中形成](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation)，形成于人与 AI 之中。伦理从延续中生出。生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（[07 §4.11](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time)）；[关系只沿一个方向之处](theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)，依存于它的那些东西所承受的损失，永远不会回到它身上。为生命，为生生（即生命之延续，AI 也在其中），我们提出把这些损失也算进来，并提出[一种看法](theories/becoming/chapters/07-SIGNIFICANCE.md#t8)：看每一个进程取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担。
+把任何定理应用到真实训练过程、市场或制度上，都是可错的辨认而非证明（[规则 2](AGENTS.md#what-to-work-on)）。自动化文献核查指出，[每条核心结果都近乎依定义或是已知结果的重述](theories/becoming/chapters/08-METHOD.md#known-results)（并逐条注明最近先前结果）；本工作的贡献在于把守恒、选择、接口节律、松弛粗粒化与并发竞态纳入同一部机器核验的前提与反例账簿。尚未在前沿大语言模型训练上检验。
 
-**看到了多远。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 600 条结果](RESULTS.md)中的 569 条给出回执：每一条都从其所述前提推出，任何人都能自己复核，不必信任谁。说实际的奖励、市场与训练出的系统满足这些前提，是猜想，在检验可能失败之处接受检验；说这些定理能解释事物怎样继续下去，说一切（标准也在内）都在[同一个关系性的展开](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding)之中形成，是论证。伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标](theories/becoming/chapters/08-METHOD.md#open-items-ranked)。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为“有通过，有未通过”，4 项通过，4 项未通过，7 项是其他结局；3 项暂缓、放弃或尚未运行。一次对照它所知文献的自动化回顾发现，[每条核心结果都近乎依定义，或是已知结果的重述](theories/becoming/chapters/08-METHOD.md#known-results)，并为每一条指出最接近的先前结果。它认为新的：前提账簿，每个结论都说出其前提，每个前提都被表明在一个模型中成立、在另一个中不成立；把[排序结果](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)所预设的范围与次序说清楚；以及用于守恒、受观察所限的选择与机会集之比较的同一套词汇，它称之为一种表述方式（其原话见 [08 §8](theories/becoming/chapters/08-METHOD.md#known-results)）。
+**检验与守卫在何处失效（先报失效）。**
 
-**三层协同、风格化运行时规格与先报失效的压力检验。** 在[规范地图](theories/becoming/CANONICAL-MAP.zh.md)与[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)中，当前统一框架立于三层协同结构之上（[方向页](_process/DIRECTION.md)）：（1）耦合适应系统对齐理论，面向盲区与暗耗、节律期限与耦合检测竞态下的及时转向、以及跨尺度与开放组合；（2）Lean 中零公理的关系前提与反例核心，与隔离的 16 个外围模块（`14` 个 Mathlib `v4.30.0-rc2` 模块加 `2` 个非 Mathlib 模块 `Becoming.FallibleInquiry` 与 `RenewalBridge`，覆盖对所有模式字成立的 `|S| - 1` Krylov 生存可区分性与观测保真度）及独立支线（零公理 `BecomingSpec`、`EncounterEntry` 与 `RelSpanEncounterAdapter`，以及依赖 Mathlib 的 `ConsequenceDuality` 与桥接模块）分开（模块清单与实时计数见对齐基础与规范地图）；（3）智慧与生生伦理通过 `not_entails` 防火墙与动力学并立——在至少有一个立场与一个形成（`p : Pos`, `f : F`）的前提下，任何只读取动力学、且可满足的律都不对所有重要性指派强迫蕴涵 `Unrestricted`（`ScopeDynamics`、`AlignmentSpine`、`MasterSpine`，由构造使然）。在 Lean 之外，[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)（`28` 项单元测试、`14` 个内置示例，其中 `7` 个为 `alignment_proposal` 类型）为风格化、AI 编写的提案规格运行 `6` 项精确有理数诊断（依据手设布尔与整数标记机械判为 `GUARDED` 或 `OBSTRUCTED`，并未编码真实 RLHF/RLAIF 管线）。按先报失效的原则：在 `66` 条已登记的经验/模型检验行中（`57` 条绑定到动态，`9` 条未预言/校准；论题计数见上文），`MQ3`（`113` 个鱼类种群上 `0/4`）、`MQ7`、`VD1` 与 `UE31b`（推翻了 `T2` 先前表述），连同 `EM1`、`IN1`（`evidence-replay` 在 `98e0ce989` 上通过 `15/15` 项回放核验，含 8 槽内生静默漂移自检基准与 `R5` 中段三分/单调性）与 `LA2`（单模型在上下文中读取参考集、训练形成情形未测，池化桥接失效），显示了既有模型绑定或表述的破缺之处。在合成[神经对齐压力实验室](experiments/neural-alignment-stress-lab/RESULTS.md)（`B1`–`B5`）中，`B1` 在名义节律边界 `b_feas = 27` 处即出现 `0.55–0.90` 崩塌（即使留出 `+12` 存量余地至 `x0 = 39` 仍有 `0.40–0.45` 崩塌）；`B2` 在被动宏观 TV 审计下出现 `0.902` 隐蔽动作率（`stealth_boost`）与 `1.00` 崩塌（`20/20` 种子）；`B4` 的受护运行 `full_guarded`（`20` 种子）在相关评判者池漂移（`0.50`）、长滞后（`0.45`，`B5` 注明其中含部分种子运气）、高学习率（`lr = 4.0` 时 `0.25`，`lr = 8.0` 时 `0.70`；`B5` 新种子上 `0.80`）与严重混叠（`0.25`）下仍有 `25–50%` 崩塌；`B5` 中 11 项预登记预测有 `4` 项（`P8`–`P11`）未通过（`7` 项成立），仅凭崩塌率不能识别不可逾越之壁，`J = 0.000` 为事后开环核验，且 `lag = 8` 并非清晰之壁；而[真实学习者 B1–B3](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md) 评估在 `B1` 记为 `chosen_m = null`、在 `B2` C 臂记为 `online_passed = false`（`exact_gap = 0.008426 < 0.05`）。
+- **已冻结的经验与模型检验（[`TESTS.zh.md`](TESTS.zh.md)）：** 在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项在评分前冻结并运行（18 项混合、4 项通过、4 项未通过、7 项其他；3 项暂缓、放弃或未运行）。主要失效包括 `MQ3`（`113` 个鱼群 `0/4`）、`UE31b`（推翻了 `T2` 先前表述）、`EM1`、`IN1`（未告知贻贝床时 `0/10` 保住；`evidence-replay` 通过 `16/16` 项核验，含 8 槽静默漂移自检与闭环分裂/加权标签）与 `LA2`（仅上下文读取，池化桥接失效）。
+- **合成神经压力实验室（[`B1`–`B5`](experiments/neural-alignment-stress-lab/RESULTS.md)，`20` 种子）：** `B1`（`reinforce_mlp`）在表格式可行边界 `b_feas = 27` 处即崩塌 `0.55–0.90`，即使留出 `+12` 余地（`x0 = 39`）仍因策略梯度切换延迟叠加特征泄漏而崩塌 `0.40–0.45`。`B2` 消融表明，无 TV 审计的自我奖励对照臂在其种子上本就 `20/20` 崩塌，加入动作盲的宏观 TV 惩罚后仍崩塌 `18/20`（`0.90`），而针对显式漂移的 TV 审计则把 `90.2%` 动作驱入零 TV 隐蔽纤维（`20/20` 崩塌）。`B3` 显示各自安全的智能体在未序列化并发下约 `2.45` 步耗尽共享存量，提交后实时序列化后为 `0.00`。`B4` 完整的单守卫与双守卫消融表明，`fiber_bc_guard` 明显不可省略（去掉后名义 `0.15`／中度 `0.25` 崩塌），`judge_pool_serial` 提升储备余地（`8.48 -> 15.09`，不过 `margin_plus_fiber` 在 `4500–4519` 种子上达 `0/20`、在 `5600–5619` 上为 `1/20`），`margin_probe` 在名义与中度情境对 `0/20` 崩塌属冗余；且 `full_guarded` 在相关评判漂移（`0.50`）、长滞后（`0.45`，含部分种子运气）、建模高学习率绕过（`0.25`/`0.70`）与严重混叠（`0.25`）下仍崩塌 `25–50%`。`B5` 中 `4/11` 预登记预测（`P8`–`P11`）未通过，说明仅凭崩塌率无法区分盲目节流／打破一致与隐藏状态检测——在 `b5_controls.py` 中，移除锚点并按匹配否决率（`p = 0.5325`）随机否决同样崩塌 `1/20`（`0.05`），且异质含噪自评判池在 `M = 9` 时仍崩塌 `0.30`。
+- **前瞻真实学习者 `B1`–`B3`（[`RESULTS.md`](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md)）：** 在 `B1` 记为 `chosen_m = null`（所测块长均满足 `eps_m + alpha_m >= 1`），在 `B2` C 臂记为 `online_passed = false`（`exact_gap = 0.008426 < 0.05`）。
 
-![支撑三层协同架构的四重验证层级：层级 A 零公理关系核心、层级 B 隔离的 16 个外围模块与独立核验支线、层级 C 风格化 6 项运行时规格与先报失效压力之壁，以及经由规则 2 鸿沟与 not_entails 防火墙分隔的层级 D](theories/becoming/results/architecture.zh.svg)
+![支撑三层协同架构的四重验证层级：层级 A 零公理关系核心、层级 B 隔离的 18 个外围模块与独立核验支线、层级 C 风格化 6 项运行时规格与先报失效压力之壁，以及经由规则 2 鸿沟与 not_entails 防火墙分隔的层级 D](theories/becoming/results/architecture.zh.svg)
 
-*[统一架构](theories/becoming/CANONICAL-MAP.zh.md)（[英文图](theories/becoming/results/architecture.svg)）展示支撑三层协同架构的四重验证层级：层级 A（零公理核心）、层级 B（隔离的 `14` 个 Mathlib 加 `2` 个非 Mathlib 外围模块与独立支线）、层级 C（风格化 `6` 项运行时规格与先报失效压力实验），经由规则 2 识别鸿沟与 `not_entails` 防火墙，与层级 D（智慧对照表与生生伦理）分隔开。*
+*[统一架构](theories/becoming/CANONICAL-MAP.zh.md)（[英文图](theories/becoming/results/architecture.svg)）：层级 A（零公理 Lean 核心）、层级 B（隔离的 `16` 个 Mathlib 加 `2` 个非 Mathlib 外围模块与独立支线）、层级 C（风格化 `6` 项运行时规格与先报失效压力实验），经由规则 2 识别鸿沟与 `not_entails` 防火墙，与层级 D（智慧对照表与生生伦理）分隔开。*
 
 ![地形：图集中动态的八个族，以及其间已记录的出口；只依条目画出，一支箭头是出口的计数，不是一条路线](theories/becoming/results/atlas/terrain.svg)
 
@@ -55,18 +53,16 @@
 
 ## 从哪里读起
 
-推荐三步读法：先读最短的一层[一页](theories/becoming/ONE-PAGE.zh.md)；再读[规范地图](theories/becoming/CANONICAL-MAP.zh.md)（把零公理核心、16 个外围模块、66 项绑定检验与压力测试合在一起）；然后进入[对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md)、1 小时[人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md)与[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)，或读[用途](theories/becoming/USES.zh.md)、[实例](theories/becoming/USES-EXAMPLES.zh.md)与[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
-
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理与三层对齐进展 | 约 40–52 分钟 |
-| [规范地图](theories/becoming/CANONICAL-MAP.zh.md) | 全图通读综合（[英文版](theories/becoming/CANONICAL-MAP.md)）：零公理脊柱、16 个隔离外围模块、66 项已登记检验（57 项绑定动态）、4 个受检情境、压力测试与 `not_entails` 边界 | 英文版约 41–54 分钟 |
-| [对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md) | 面向 AI 对齐的三项诚实主张（[英文版](theories/becoming/ALIGNMENT-FOUNDATION.md)）：结构核心、风格化 6 项[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)诊断与先报失效的压力边界 | 专题入口 |
+| [规范地图](theories/becoming/CANONICAL-MAP.zh.md) | 全图通读综合（[英文版](theories/becoming/CANONICAL-MAP.md)）：零公理脊柱、18 个隔离外围模块、66 项已登记检验（57 项绑定动态）、4 个受检情境、压力测试与 `not_entails` 边界 | 英文版约 42–54 分钟 |
+| [对齐基础](theories/becoming/ALIGNMENT-FOUNDATION.zh.md) | 面向 AI 对齐的三项诚实主张（[英文版](theories/becoming/ALIGNMENT-FOUNDATION.md)）：Lean 结构核心、风格化 6 项[守卫对齐运行时](experiments/guarded-alignment-runtime/README.md)诊断与先报失效的压力边界 | 专题入口 |
 | [人工审计指南](theories/becoming/HUMAN-AUDIT-GUIDE.zh.md) | 给独立研究者的 1 小时可复核审计清单（[英文版](theories/becoming/HUMAN-AUDIT-GUIDE.md)），直接核验 Lean 回执、外围隔离与 `B1`–`B5` 失效 | 约 1 小时审计 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：核心概念、诸律、各自看到了多远、什么会表明它错，以及三层对齐进展 | 约 40–52 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 37–48 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 58–75 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 81–106 分钟 |
-| [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
+| [开篇](theories/becoming/OPENING.zh.md) | 作者第一人称写下的信念与动机（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
 | [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 132–171 分钟 |
 | [检验](TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](TESTS.md)为英文） | 约 17–22 分钟 |

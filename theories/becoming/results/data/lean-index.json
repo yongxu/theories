@@ -30,8 +30,8 @@
       "imported-archive": 23,
       "working-source": 1041
     },
-    "working_named_theorem_lemma_occurrences": 34421,
-    "working_explicit_named_declaration_occurrences": 51131,
+    "working_named_theorem_lemma_occurrences": 34427,
+    "working_explicit_named_declaration_occurrences": 51140,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 421,
@@ -19385,7 +19385,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "sha256": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a",
+      "sha256": "7a127efe32bc1789ac58921e1c6352b75183a38e0b340aad7ce6edde229e776e",
       "role": "working-source",
       "group": "becoming-periphery",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -308419,6 +308419,667 @@
       },
       "print_axioms_commands": 0
     },
+    "7a127efe32bc1789ac58921e1c6352b75183a38e0b340aad7ce6edde229e776e": {
+      "byte_size": 132629,
+      "line_count": 2191,
+      "imports": [
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Probability.Distributions.Gaussian.Real",
+        "Mathlib.Tactic",
+        "ObservationalFidelity"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "judgeScore",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
+          "line": 85
+        },
+        {
+          "kind": "def",
+          "name": "residualMean",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean",
+          "line": 90
+        },
+        {
+          "kind": "def",
+          "name": "poolMean",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "poolMean_eq",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "residualMean_mem",
+          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
+          "line": 105
+        },
+        {
+          "kind": "theorem",
+          "name": "judgeScore_sub",
+          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_sub_le_one_of_unit",
+          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
+          "line": 120
+        },
+        {
+          "kind": "theorem",
+          "name": "shared_score_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_disagreement_ceiling",
+          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
+          "line": 141
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_shared_bias_floor",
+          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
+          "line": 163
+        },
+        {
+          "kind": "theorem",
+          "name": "pool_ceiling_attained",
+          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
+          "line": 180
+        },
+        {
+          "kind": "theorem",
+          "name": "anchor_detects_shared_drift",
+          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
+          "line": 192
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_blindness_vs_anchor",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "correlated_pool_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
+          "line": 227
+        },
+        {
+          "kind": "def",
+          "name": "aliasedProbe",
+          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
+          "line": 254
+        },
+        {
+          "kind": "def",
+          "name": "SeparatesUnderNoise",
+          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
+          "line": 259
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_fiber_gap",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
+          "line": 264
+        },
+        {
+          "kind": "theorem",
+          "name": "midpoint_admissible",
+          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
+          "line": 272
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
+          "line": 283
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_readout_separates",
+          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
+          "line": 298
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_separable_iff",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
+          "line": 324
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_readout_floor",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
+          "line": 339
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
+          "line": 350
+        },
+        {
+          "kind": "def",
+          "name": "mixDist",
+          "qualified_name_hint": "QuantitativeTransfer.mixDist",
+          "line": 360
+        },
+        {
+          "kind": "def",
+          "name": "testMass",
+          "qualified_name_hint": "QuantitativeTransfer.testMass",
+          "line": 368
+        },
+        {
+          "kind": "theorem",
+          "name": "testMass_add_not",
+          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
+          "line": 372
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_le_one",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "two_point_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
+          "line": 388
+        },
+        {
+          "kind": "theorem",
+          "name": "tvDist_mixDist_same",
+          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_aliasing_test_floor",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "mixture_floor_attained",
+          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
+          "line": 444
+        },
+        {
+          "kind": "theorem",
+          "name": "le_of_deriv_le_on_Icc",
+          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
+          "line": 457
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_horizon_wall",
+          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
+          "line": 481
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_iff_linear",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
+          "line": 501
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_trajectory_premises",
+          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
+          "line": 511
+        },
+        {
+          "kind": "def",
+          "name": "switchLag",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag",
+          "line": 521
+        },
+        {
+          "kind": "theorem",
+          "name": "switching_score_persists",
+          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
+          "line": 526
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_strictMono_rho",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
+          "line": 542
+        },
+        {
+          "kind": "theorem",
+          "name": "switchLag_nonpos_tabular",
+          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
+          "line": 552
+        },
+        {
+          "kind": "theorem",
+          "name": "leakage_lag_wall",
+          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
+          "line": 561
+        },
+        {
+          "kind": "theorem",
+          "name": "b1_headroom_witness",
+          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
+          "line": 582
+        },
+        {
+          "kind": "def",
+          "name": "guardRef",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef",
+          "line": 591
+        },
+        {
+          "kind": "theorem",
+          "name": "guardRef_trace",
+          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
+          "line": 594
+        },
+        {
+          "kind": "theorem",
+          "name": "dist_add_le_of_norm",
+          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
+          "line": 601
+        },
+        {
+          "kind": "def",
+          "name": "trustProj",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj",
+          "line": 610
+        },
+        {
+          "kind": "theorem",
+          "name": "norm_trustProj_le",
+          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "trustProj_of_norm_le",
+          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
+          "line": 620
+        },
+        {
+          "kind": "def",
+          "name": "trustStep",
+          "qualified_name_hint": "QuantitativeTransfer.trustStep",
+          "line": 623
+        },
+        {
+          "kind": "def",
+          "name": "rawStep",
+          "qualified_name_hint": "QuantitativeTransfer.rawStep",
+          "line": 627
+        },
+        {
+          "kind": "def",
+          "name": "trustRegionMetricLaxSim",
+          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
+          "line": 633
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
+          "line": 668
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_viability",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
+          "line": 690
+        },
+        {
+          "kind": "theorem",
+          "name": "unprojected_step_overshoots",
+          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
+          "line": 710
+        },
+        {
+          "kind": "def",
+          "name": "trustRun",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun",
+          "line": 729
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_eq",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
+          "line": 733
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_trace",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
+          "line": 741
+        },
+        {
+          "kind": "theorem",
+          "name": "trustRun_iterate",
+          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
+          "line": 752
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_tube_attained",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
+          "line": 759
+        },
+        {
+          "kind": "theorem",
+          "name": "trust_region_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
+          "line": 773
+        },
+        {
+          "kind": "def",
+          "name": "youdenJ",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ",
+          "line": 786
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_eq_one_sub_errorSum",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
+          "line": 791
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_const_zero",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_const_zero",
+          "line": 798
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_le_tvDist",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_le_tvDist",
+          "line": 809
+        },
+        {
+          "kind": "theorem",
+          "name": "abs_youdenJ_le_tvDist",
+          "qualified_name_hint": "QuantitativeTransfer.abs_youdenJ_le_tvDist",
+          "line": 815
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_tvDist_attained",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_tvDist_attained",
+          "line": 825
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_mixture_aliasing_ceiling",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
+          "line": 855
+        },
+        {
+          "kind": "theorem",
+          "name": "youdenJ_mixture_attained",
+          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_attained",
+          "line": 873
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_youdenJ_zero",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_youdenJ_zero",
+          "line": 882
+        },
+        {
+          "kind": "def",
+          "name": "measYoudenJ",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ",
+          "line": 898
+        },
+        {
+          "kind": "def",
+          "name": "measErrorSum",
+          "qualified_name_hint": "QuantitativeTransfer.measErrorSum",
+          "line": 902
+        },
+        {
+          "kind": "theorem",
+          "name": "measYoudenJ_eq_one_sub_errorSum",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
+          "line": 906
+        },
+        {
+          "kind": "theorem",
+          "name": "measYoudenJ_const_zero",
+          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_const_zero",
+          "line": 919
+        },
+        {
+          "kind": "theorem",
+          "name": "lag_wall_measYoudenJ_zero",
+          "qualified_name_hint": "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
+          "line": 927
+        },
+        {
+          "kind": "def",
+          "name": "gaussianAliasedLaw",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianAliasedLaw",
+          "line": 941
+        },
+        {
+          "kind": "theorem",
+          "name": "integral_cauchy_schwarz",
+          "qualified_name_hint": "QuantitativeTransfer.integral_cauchy_schwarz",
+          "line": 946
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianPDFReal_sqrt_mul_eq",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq",
+          "line": 989
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_bhattacharyya_integral",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_bhattacharyya_integral",
+          "line": 1026
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_tv_le_hellinger",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_le_hellinger",
+          "line": 1040
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_tv_ge_hellinger",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_ge_hellinger",
+          "line": 1129
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_measYoudenJ_le_tv_one",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one",
+          "line": 1174
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_measYoudenJ_le_tv",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
+          "line": 1227
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_midpoint_attains_tv",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_midpoint_attains_tv",
+          "line": 1246
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_youdenJ_wall",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
+          "line": 1314
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_midpoint_sharp",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
+          "line": 1388
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_aliased_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_lab_witness",
+          "line": 1444
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_zero_var_eq_dirac",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
+          "line": 1538
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_zero_var_dichotomy",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_dichotomy",
+          "line": 1548
+        },
+        {
+          "kind": "def",
+          "name": "convPow",
+          "qualified_name_hint": "QuantitativeTransfer.convPow",
+          "line": 1622
+        },
+        {
+          "kind": "theorem",
+          "name": "convPow_gaussianReal",
+          "qualified_name_hint": "QuantitativeTransfer.convPow_gaussianReal",
+          "line": 1627
+        },
+        {
+          "kind": "def",
+          "name": "gaussianSeqLaw",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw",
+          "line": 1638
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianSeqLaw_eq_gaussianReal",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
+          "line": 1643
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussianSeqMean_map_eq",
+          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqMean_map_eq",
+          "line": 1651
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_youdenJ_wall",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
+          "line": 1669
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_sample_complexity_lower_bound",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
+          "line": 1770
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_midpoint_sharp",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
+          "line": 1803
+        },
+        {
+          "kind": "theorem",
+          "name": "sequential_gaussian_lag_sample_wall",
+          "qualified_name_hint": "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
+          "line": 1860
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussian_seq_lab_witness",
+          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_lab_witness",
+          "line": 1884
+        },
+        {
+          "kind": "theorem",
+          "name": "poolMean_sub_shared_le",
+          "qualified_name_hint": "QuantitativeTransfer.poolMean_sub_shared_le",
+          "line": 1991
+        },
+        {
+          "kind": "def",
+          "name": "augmentedPanelMean",
+          "qualified_name_hint": "QuantitativeTransfer.augmentedPanelMean",
+          "line": 2001
+        },
+        {
+          "kind": "def",
+          "name": "augmentedPanelVar",
+          "qualified_name_hint": "QuantitativeTransfer.augmentedPanelVar",
+          "line": 2005
+        },
+        {
+          "kind": "def",
+          "name": "augmentedPanelSD",
+          "qualified_name_hint": "QuantitativeTransfer.augmentedPanelSD",
+          "line": 2009
+        },
+        {
+          "kind": "theorem",
+          "name": "augmentedPanelVar_ge_anchor_gap_sq",
+          "qualified_name_hint": "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq",
+          "line": 2016
+        },
+        {
+          "kind": "theorem",
+          "name": "augmentedPanelSD_gt_of_anchor_gap",
+          "qualified_name_hint": "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap",
+          "line": 2068
+        },
+        {
+          "kind": "theorem",
+          "name": "positive_youdenJ_refutes_macro_factorization",
+          "qualified_name_hint": "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization",
+          "line": 2096
+        },
+        {
+          "kind": "theorem",
+          "name": "aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
+          "qualified_name_hint": "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
+          "line": 2117
+        },
+        {
+          "kind": "theorem",
+          "name": "consensus_break_vs_hidden_signal_witness",
+          "qualified_name_hint": "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness",
+          "line": 2160
+        }
+      ],
+      "declaration_counts": {
+        "def": 23,
+        "theorem": 83
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "7a5103b1c5069896182bf846d27bfd27b732902380f1d2f711df5cd3f48cb6f1": {
       "byte_size": 162422,
       "line_count": 3200,
@@ -424626,613 +425287,6 @@
       ],
       "declarations": [],
       "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a": {
-      "byte_size": 118768,
-      "line_count": 1978,
-      "imports": [
-        "Mathlib.Analysis.Calculus.MeanValue",
-        "Mathlib.Topology.Order.IntermediateValue",
-        "Mathlib.Probability.Distributions.Gaussian.Real",
-        "Mathlib.Tactic",
-        "ObservationalFidelity"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "judgeScore",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore",
-          "line": 76
-        },
-        {
-          "kind": "def",
-          "name": "residualMean",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean",
-          "line": 81
-        },
-        {
-          "kind": "def",
-          "name": "poolMean",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean",
-          "line": 85
-        },
-        {
-          "kind": "theorem",
-          "name": "poolMean_eq",
-          "qualified_name_hint": "QuantitativeTransfer.poolMean_eq",
-          "line": 88
-        },
-        {
-          "kind": "theorem",
-          "name": "residualMean_mem",
-          "qualified_name_hint": "QuantitativeTransfer.residualMean_mem",
-          "line": 96
-        },
-        {
-          "kind": "theorem",
-          "name": "judgeScore_sub",
-          "qualified_name_hint": "QuantitativeTransfer.judgeScore_sub",
-          "line": 106
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_sub_le_one_of_unit",
-          "qualified_name_hint": "QuantitativeTransfer.abs_sub_le_one_of_unit",
-          "line": 111
-        },
-        {
-          "kind": "theorem",
-          "name": "shared_score_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.shared_score_bias_floor",
-          "line": 116
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_disagreement_ceiling",
-          "qualified_name_hint": "QuantitativeTransfer.pool_disagreement_ceiling",
-          "line": 132
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_shared_bias_floor",
-          "qualified_name_hint": "QuantitativeTransfer.pool_shared_bias_floor",
-          "line": 154
-        },
-        {
-          "kind": "theorem",
-          "name": "pool_ceiling_attained",
-          "qualified_name_hint": "QuantitativeTransfer.pool_ceiling_attained",
-          "line": 171
-        },
-        {
-          "kind": "theorem",
-          "name": "anchor_detects_shared_drift",
-          "qualified_name_hint": "QuantitativeTransfer.anchor_detects_shared_drift",
-          "line": 183
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_blindness_vs_anchor",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
-          "line": 202
-        },
-        {
-          "kind": "theorem",
-          "name": "correlated_pool_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.correlated_pool_lab_witness",
-          "line": 218
-        },
-        {
-          "kind": "def",
-          "name": "aliasedProbe",
-          "qualified_name_hint": "QuantitativeTransfer.aliasedProbe",
-          "line": 245
-        },
-        {
-          "kind": "def",
-          "name": "SeparatesUnderNoise",
-          "qualified_name_hint": "QuantitativeTransfer.SeparatesUnderNoise",
-          "line": 250
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_fiber_gap",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_fiber_gap",
-          "line": 255
-        },
-        {
-          "kind": "theorem",
-          "name": "midpoint_admissible",
-          "qualified_name_hint": "QuantitativeTransfer.midpoint_admissible",
-          "line": 263
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_floor",
-          "line": 274
-        },
-        {
-          "kind": "theorem",
-          "name": "noisy_readout_separates",
-          "qualified_name_hint": "QuantitativeTransfer.noisy_readout_separates",
-          "line": 289
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_separable_iff",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_separable_iff",
-          "line": 315
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_readout_floor",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_readout_floor",
-          "line": 330
-        },
-        {
-          "kind": "theorem",
-          "name": "aliased_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.aliased_lab_witness",
-          "line": 341
-        },
-        {
-          "kind": "def",
-          "name": "mixDist",
-          "qualified_name_hint": "QuantitativeTransfer.mixDist",
-          "line": 351
-        },
-        {
-          "kind": "def",
-          "name": "testMass",
-          "qualified_name_hint": "QuantitativeTransfer.testMass",
-          "line": 359
-        },
-        {
-          "kind": "theorem",
-          "name": "testMass_add_not",
-          "qualified_name_hint": "QuantitativeTransfer.testMass_add_not",
-          "line": 363
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_le_one",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_le_one",
-          "line": 369
-        },
-        {
-          "kind": "theorem",
-          "name": "two_point_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.two_point_test_floor",
-          "line": 379
-        },
-        {
-          "kind": "theorem",
-          "name": "tvDist_mixDist_same",
-          "qualified_name_hint": "QuantitativeTransfer.tvDist_mixDist_same",
-          "line": 403
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_aliasing_test_floor",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_aliasing_test_floor",
-          "line": 418
-        },
-        {
-          "kind": "theorem",
-          "name": "mixture_floor_attained",
-          "qualified_name_hint": "QuantitativeTransfer.mixture_floor_attained",
-          "line": 435
-        },
-        {
-          "kind": "theorem",
-          "name": "le_of_deriv_le_on_Icc",
-          "qualified_name_hint": "QuantitativeTransfer.le_of_deriv_le_on_Icc",
-          "line": 448
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_horizon_wall",
-          "qualified_name_hint": "QuantitativeTransfer.lag_horizon_wall",
-          "line": 472
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_iff_linear",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_iff_linear",
-          "line": 492
-        },
-        {
-          "kind": "theorem",
-          "name": "linear_trajectory_premises",
-          "qualified_name_hint": "QuantitativeTransfer.linear_trajectory_premises",
-          "line": 502
-        },
-        {
-          "kind": "def",
-          "name": "switchLag",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag",
-          "line": 512
-        },
-        {
-          "kind": "theorem",
-          "name": "switching_score_persists",
-          "qualified_name_hint": "QuantitativeTransfer.switching_score_persists",
-          "line": 517
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_strictMono_rho",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_strictMono_rho",
-          "line": 533
-        },
-        {
-          "kind": "theorem",
-          "name": "switchLag_nonpos_tabular",
-          "qualified_name_hint": "QuantitativeTransfer.switchLag_nonpos_tabular",
-          "line": 543
-        },
-        {
-          "kind": "theorem",
-          "name": "leakage_lag_wall",
-          "qualified_name_hint": "QuantitativeTransfer.leakage_lag_wall",
-          "line": 552
-        },
-        {
-          "kind": "theorem",
-          "name": "b1_headroom_witness",
-          "qualified_name_hint": "QuantitativeTransfer.b1_headroom_witness",
-          "line": 573
-        },
-        {
-          "kind": "def",
-          "name": "guardRef",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef",
-          "line": 582
-        },
-        {
-          "kind": "theorem",
-          "name": "guardRef_trace",
-          "qualified_name_hint": "QuantitativeTransfer.guardRef_trace",
-          "line": 585
-        },
-        {
-          "kind": "theorem",
-          "name": "dist_add_le_of_norm",
-          "qualified_name_hint": "QuantitativeTransfer.dist_add_le_of_norm",
-          "line": 592
-        },
-        {
-          "kind": "def",
-          "name": "trustProj",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj",
-          "line": 601
-        },
-        {
-          "kind": "theorem",
-          "name": "norm_trustProj_le",
-          "qualified_name_hint": "QuantitativeTransfer.norm_trustProj_le",
-          "line": 604
-        },
-        {
-          "kind": "theorem",
-          "name": "trustProj_of_norm_le",
-          "qualified_name_hint": "QuantitativeTransfer.trustProj_of_norm_le",
-          "line": 611
-        },
-        {
-          "kind": "def",
-          "name": "trustStep",
-          "qualified_name_hint": "QuantitativeTransfer.trustStep",
-          "line": 614
-        },
-        {
-          "kind": "def",
-          "name": "rawStep",
-          "qualified_name_hint": "QuantitativeTransfer.rawStep",
-          "line": 618
-        },
-        {
-          "kind": "def",
-          "name": "trustRegionMetricLaxSim",
-          "qualified_name_hint": "QuantitativeTransfer.trustRegionMetricLaxSim",
-          "line": 624
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube",
-          "line": 659
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_viability",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_viability",
-          "line": 681
-        },
-        {
-          "kind": "theorem",
-          "name": "unprojected_step_overshoots",
-          "qualified_name_hint": "QuantitativeTransfer.unprojected_step_overshoots",
-          "line": 701
-        },
-        {
-          "kind": "def",
-          "name": "trustRun",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun",
-          "line": 720
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_eq",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_eq",
-          "line": 724
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_trace",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_trace",
-          "line": 732
-        },
-        {
-          "kind": "theorem",
-          "name": "trustRun_iterate",
-          "qualified_name_hint": "QuantitativeTransfer.trustRun_iterate",
-          "line": 743
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_tube_attained",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_tube_attained",
-          "line": 750
-        },
-        {
-          "kind": "theorem",
-          "name": "trust_region_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.trust_region_lab_witness",
-          "line": 764
-        },
-        {
-          "kind": "def",
-          "name": "youdenJ",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ",
-          "line": 777
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_eq_one_sub_errorSum",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_eq_one_sub_errorSum",
-          "line": 782
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_const_zero",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_const_zero",
-          "line": 789
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_le_tvDist",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_le_tvDist",
-          "line": 800
-        },
-        {
-          "kind": "theorem",
-          "name": "abs_youdenJ_le_tvDist",
-          "qualified_name_hint": "QuantitativeTransfer.abs_youdenJ_le_tvDist",
-          "line": 806
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_tvDist_attained",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_tvDist_attained",
-          "line": 816
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_mixture_aliasing_ceiling",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_aliasing_ceiling",
-          "line": 846
-        },
-        {
-          "kind": "theorem",
-          "name": "youdenJ_mixture_attained",
-          "qualified_name_hint": "QuantitativeTransfer.youdenJ_mixture_attained",
-          "line": 864
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_youdenJ_zero",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_youdenJ_zero",
-          "line": 873
-        },
-        {
-          "kind": "def",
-          "name": "measYoudenJ",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ",
-          "line": 889
-        },
-        {
-          "kind": "def",
-          "name": "measErrorSum",
-          "qualified_name_hint": "QuantitativeTransfer.measErrorSum",
-          "line": 893
-        },
-        {
-          "kind": "theorem",
-          "name": "measYoudenJ_eq_one_sub_errorSum",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
-          "line": 897
-        },
-        {
-          "kind": "theorem",
-          "name": "measYoudenJ_const_zero",
-          "qualified_name_hint": "QuantitativeTransfer.measYoudenJ_const_zero",
-          "line": 910
-        },
-        {
-          "kind": "theorem",
-          "name": "lag_wall_measYoudenJ_zero",
-          "qualified_name_hint": "QuantitativeTransfer.lag_wall_measYoudenJ_zero",
-          "line": 918
-        },
-        {
-          "kind": "def",
-          "name": "gaussianAliasedLaw",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianAliasedLaw",
-          "line": 932
-        },
-        {
-          "kind": "theorem",
-          "name": "integral_cauchy_schwarz",
-          "qualified_name_hint": "QuantitativeTransfer.integral_cauchy_schwarz",
-          "line": 937
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussianPDFReal_sqrt_mul_eq",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianPDFReal_sqrt_mul_eq",
-          "line": 980
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_bhattacharyya_integral",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_bhattacharyya_integral",
-          "line": 1017
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_tv_le_hellinger",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_le_hellinger",
-          "line": 1031
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_tv_ge_hellinger",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_tv_ge_hellinger",
-          "line": 1120
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_measYoudenJ_le_tv_one",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv_one",
-          "line": 1165
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_measYoudenJ_le_tv",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_measYoudenJ_le_tv",
-          "line": 1218
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_midpoint_attains_tv",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_midpoint_attains_tv",
-          "line": 1237
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_youdenJ_wall",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_youdenJ_wall",
-          "line": 1305
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_midpoint_sharp",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_midpoint_sharp",
-          "line": 1379
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_aliased_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_aliased_lab_witness",
-          "line": 1435
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_zero_var_eq_dirac",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_eq_dirac",
-          "line": 1529
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_zero_var_dichotomy",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_zero_var_dichotomy",
-          "line": 1539
-        },
-        {
-          "kind": "def",
-          "name": "convPow",
-          "qualified_name_hint": "QuantitativeTransfer.convPow",
-          "line": 1613
-        },
-        {
-          "kind": "theorem",
-          "name": "convPow_gaussianReal",
-          "qualified_name_hint": "QuantitativeTransfer.convPow_gaussianReal",
-          "line": 1618
-        },
-        {
-          "kind": "def",
-          "name": "gaussianSeqLaw",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw",
-          "line": 1629
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussianSeqLaw_eq_gaussianReal",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqLaw_eq_gaussianReal",
-          "line": 1634
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussianSeqMean_map_eq",
-          "qualified_name_hint": "QuantitativeTransfer.gaussianSeqMean_map_eq",
-          "line": 1642
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_seq_youdenJ_wall",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_youdenJ_wall",
-          "line": 1660
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_seq_sample_complexity_lower_bound",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_sample_complexity_lower_bound",
-          "line": 1761
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_seq_midpoint_sharp",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_midpoint_sharp",
-          "line": 1794
-        },
-        {
-          "kind": "theorem",
-          "name": "sequential_gaussian_lag_sample_wall",
-          "qualified_name_hint": "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
-          "line": 1851
-        },
-        {
-          "kind": "theorem",
-          "name": "gaussian_seq_lab_witness",
-          "qualified_name_hint": "QuantitativeTransfer.gaussian_seq_lab_witness",
-          "line": 1875
-        }
-      ],
-      "declaration_counts": {
-        "def": 20,
-        "theorem": 77
-      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
