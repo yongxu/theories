@@ -2,7 +2,7 @@
 
 *AI-written (`Wave U6 runtime`, 24 November 2026). Pure Python 3 standard library; no external packages or network calls.*
 
-An executable reference runtime mirroring the verified Lean 4 core in `Becoming.DoubleKernel`, `Becoming.OplaxHistory`, and `ObservationalFidelity`. It checks strict 2D/3D syntax certificates, diagnoses oplax relational-span loss and Beck–Chevalley obstructions, computes exact rational observational fidelity bounds, and audits declarative alignment pipelines with crisp `PROVED` / `GUARDED` / `OBSTRUCTED` verdicts.
+An executable reference runtime mirroring the verified Lean 4 core (`Becoming.DoubleKernel`, `Becoming.OplaxHistory`) and isolated applied periphery (`ObservationalFidelity`, `SurvivalDistinguishability`). It checks strict 2D/3D syntax certificates (which emit `PROVED` / `OBSTRUCTED`), diagnoses oplax relational-span loss and Beck–Chevalley obstructions, computes exact rational observational fidelity bounds, and audits declarative alignment proposals (`alignment_proposal` specs emit only `GUARDED` or `OBSTRUCTED`, never unconstrained `PROVED`).
 
 ## Modules & Lean Correspondence
 
@@ -41,4 +41,4 @@ python3 -m guarded_alignment check /tmp/spec.json
 
 ## Rule 2 Scope & Honesty Boundary
 
-Every verdict (`PROVED`, `GUARDED`, or `OBSTRUCTED`) holds strictly for the finite symbolic signature, relational span, functor action, or rational probability model supplied to the checker. Passing a check does **not** prove that an empirical multi-agent or RLHF deployment satisfies finite-state assumptions, exact Beck–Chevalley preservation, or the modeled transition laws; conversely, `Zero-TV` on a macro query never rules out a `FiberViabilitySplit` unless fiberwise viability consistency is explicitly verified.
+Every verdict (`PROVED` for exact symbolic 2D/3D equational certificates in `double_kernel.py`, and `GUARDED` or `OBSTRUCTED` for `alignment_proposal` and fidelity specs) holds strictly for the finite symbolic signature, relational span, functor action, or rational probability model supplied to the checker. Passing a check does **not** prove that an empirical multi-agent or RLHF deployment satisfies finite-state assumptions, exact Beck–Chevalley preservation, or the modeled transition laws; conversely, `Zero-TV` on a macro query never rules out a `FiberViabilitySplit` unless fiberwise viability consistency is explicitly verified.

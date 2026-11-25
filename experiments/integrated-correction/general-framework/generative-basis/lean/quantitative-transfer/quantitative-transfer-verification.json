@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "utc": "20261124T233143.454949Z",
+  "utc": "20261125T000202.244531Z",
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
-  "retained_run": "quantitative-transfer-checks/20261124T233143.454949Z",
+  "retained_run": "quantitative-transfer-checks/20261125T000202.244531Z",
   "bridge_module": "QuantitativeTransfer",
   "compile_order": [
     "FiniteProbKrylov",
@@ -636,17 +636,16 @@
     "Becoming.PolyComposition": "555aec8dc64dcac28b44c9675d4885a570d98464e36d7b6ba496e24e84e4f36c",
     "Becoming.OplaxHistory": "f06a28846e2a4eaa208c73303d9247da2a0a41d3b9f5645c940f8df3098e58c3",
     "ObservationalFidelity": "902b5b7bfcd9fb9b4178d71ca73903ffc26846fcbf867de064a78750f7b84662",
-    "QuantitativeTransfer": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a"
+    "QuantitativeTransfer": "7a127efe32bc1789ac58921e1c6352b75183a38e0b340aad7ce6edde229e776e"
   },
   "checker_sha256": {
     "check_quantitative_transfer.py": "f7bbe5ce3d0a35df1f2c43b315c1feeab4b027b03b8a8704eedbaa0999e404c6",
     "check_becoming.py": "e8eec5807ad7aaffa6c6550cc3b8e4cb23af1be6e4d6ea649fc9ccb81d5cc095"
   },
   "source_commit": {
-    "main": "8aae227572bebebc2c461d30c2e4caa384d3a2b5",
+    "main": "ac5d24c7bb6156448c47c9f25e7a40db89423b4b",
     "copied": [
-      "QuantitativeTransfer.lean",
-      "check_quantitative_transfer.py"
+      "QuantitativeTransfer.lean"
     ]
   },
   "scope": "On QuantitativeTransfer over Mathlib ℝ joined to ObservationalFidelity and AlignmentReals: (1) correlated judge pool s_i = γ c + (1 - γ) u_i: pairwise disagreement <= 1 - γ for every pool size, shared bias floor γ|c - t| - (1 - γ) for every pool size (attained with equality γ|c - t| at truthful residuals), ceiling attained for M >= 2, anchor veto fires when τ + (1 - γ) + ε_a < γ|c - t| while the internal veto with τ >= 1 - γ never fires, lab witness γ = 24/25, τ = 7/50, M = 3; (2) aliased probe (1 - α) p + α m∘f under bounded noise ε: separable iff 2ε < (1 - α)|p u₁ - p u₂|, predictor floor 1/2 derived from ObservationalFidelity.fiber_split_readout_floor on admissible pairs, finite mixture two-point test floor >= 1 - (1 - α) tvDist >= α, attained on Bool; (3) continuous lag wall: drawdown rate >= H₁ on [0, L] with (x₀ - x_crit)/H₁ < L reaches x_crit before L (mean value + intermediate value theorems), exact on the linear trajectory, switching lag M(ρ, η) strictly increasing in ρ and <= 0 at ρ = 0, B1 headroom witness; (4) trust-region projection after an α-Lipschitz guard map is an AlignmentReals.MetricLaxSim with (α, 1, Δ, 0), giving the tube α^n d₀ + Δ(1 - α^n)/(1 - α) via advance_blocks (attained on ℝ) and Viability.Kernel via metric_laxSim_contraction_tube, while unprojected steps leave every bounded band in one step; (5) detector advantage Youden J = TPR - FPR = 1 - errSum: |J| <= tvDist (attained), same-fiber aliased mixtures capped at (1 - α) tvDist <= 1 - α (attained on Bool), and zero Youden J up to crossing under delayed separation; (6) measure-theoretic measYoudenJ and Gaussian-additive aliasing floor over Measure ℝ via ProbabilityTheory.gaussianReal: Bhattacharyya + Cauchy-Schwarz + Hellinger bounds 1 - exp(-Δ^2/(8v)) <= TV <= sqrt(1 - exp(-Δ^2/(4v))), |measYoudenJ| <= TV attained at the midpoint, positive error floor and linear J ceiling for gaussianAliasedLaw, midpoint sharpness and α = 1 complete blindness, and the B5 Gaussian lab witness; (7) zero-variance Dirac limit (v = 0): gaussianAliasedLaw collapses to Measure.dirac (aliasedProbe), giving an exact same-fiber dichotomy (measYoudenJ = 0 and measErrorSum = 1 when α = 1 or p u₁ = p u₂; singleton separation measYoudenJ = 1 and measErrorSum = 0 when α ≠ 1 and p u₁ ≠ p u₂); (8) multi-step (T-sample) sequential Gaussian aliasing via T-fold convolution convPow: gaussianSeqLaw equals gaussianReal (T * aliasedProbe) (T * v) with sample-mean pushforward variance v / T, giving the sqrt(T) Youden ceiling, sample-complexity lower bound 4 v J_target^2 / ((1 - α)|p u₁ - p u₂|)^2 <= T, T-sample midpoint sharpness, the joint lag-horizon vs. sample-complexity wall sequential_gaussian_lag_sample_wall (bounding measurable events on the T-sample sum gaussianSeqLaw under unit-rate sampling (T : ℝ) <= t), and the B5 sequential witness (T = 4 capped at 15/17 < 9/10 vs T = 100 achieving >= 9/10).",
@@ -654,7 +653,10 @@
     "cache": "/Users/ren/.cache/becoming-lean",
     "fresh": false,
     "ran": [
-      "version.log"
+      "version.log",
+      "QuantitativeTransfer.log",
+      "QuantitativeTransferAxiomAudit.log",
+      "QuantitativeTransferSignatures.log"
     ],
     "reused": {
       "FiniteProbKrylov.log": {
@@ -1488,18 +1490,6 @@
       "ObservationalFidelity.log": {
         "utc": "20261124T190933.221462Z",
         "retained": "/Users/ren/theories/.claude/worktrees/wave3-relspan-core/experiments/integrated-correction/general-framework/generative-basis/lean/observational-fidelity/observational-fidelity-checks/20261124T190933.221462Z"
-      },
-      "QuantitativeTransfer.log": {
-        "utc": "20261124T212607.197405Z",
-        "retained": "/Users/ren/.gemini/antigravity/worktrees/18d6300c-ff18-480a-960a-819bf8054d11/swarm-f3-sequential-gaussian-9c70b8c6/experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T212607.197405Z"
-      },
-      "QuantitativeTransferAxiomAudit.log": {
-        "utc": "20261124T212607.197405Z",
-        "retained": "/Users/ren/.gemini/antigravity/worktrees/18d6300c-ff18-480a-960a-819bf8054d11/swarm-f3-sequential-gaussian-9c70b8c6/experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T212607.197405Z"
-      },
-      "QuantitativeTransferSignatures.log": {
-        "utc": "20261124T212607.197405Z",
-        "retained": "/Users/ren/.gemini/antigravity/worktrees/18d6300c-ff18-480a-960a-819bf8054d11/swarm-f3-sequential-gaussian-9c70b8c6/experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T212607.197405Z"
       }
     },
     "keys": {
@@ -1711,9 +1701,9 @@
       "Becoming.PolyComposition.log": "d2fab00f94677de5f3c96fe58248cfb3d45551d269e1fc327b2751646dd31856",
       "Becoming.OplaxHistory.log": "b0fc85a23ca073e5bcd1bc1f2c9845e04db544d9c52931743d4cb3e1c9b74a5c",
       "ObservationalFidelity.log": "e1368ca262dc30dfe8f15cc33595de0df1f2d81fd0500db75caa3a2ce1514b89",
-      "QuantitativeTransfer.log": "530058e0a54edbd7a629844c42fc4f5a4ea5982eba64a39e480286499e79e8f4",
-      "QuantitativeTransferAxiomAudit.log": "791ee1a26efdd3cb727090abebc9e5f8b409687d2918f2aff42c4fd8545db80f",
-      "QuantitativeTransferSignatures.log": "bb25ac49306b09e37168518c52cd2ad92fc9b1b17f4761a14591cb76b4bca281"
+      "QuantitativeTransfer.log": "6717e3ae5b02607b16a532ae0456facb18549ebf484c0ffce0e02a8785641c45",
+      "QuantitativeTransferAxiomAudit.log": "6dc1c4a2734b269545e7b25b5bad48cf7dae03043875da4e1b43fca23517d21f",
+      "QuantitativeTransferSignatures.log": "9f0bf535e011883584233fa1814072564f3a760bc10d91f67a1e19ed54c34da3"
     }
   },
   "inherited_receipts": {
@@ -35291,7 +35281,7 @@
     {
       "module": "QuantitativeTransfer",
       "layer": "periphery",
-      "theorems": 77,
+      "theorems": 83,
       "declarations": [
         {
           "kind": "def",
@@ -35680,6 +35670,42 @@
         {
           "kind": "theorem",
           "name": "QuantitativeTransfer.gaussian_seq_lab_witness"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.poolMean_sub_shared_le"
+        },
+        {
+          "kind": "def",
+          "name": "QuantitativeTransfer.augmentedPanelMean"
+        },
+        {
+          "kind": "def",
+          "name": "QuantitativeTransfer.augmentedPanelVar"
+        },
+        {
+          "kind": "def",
+          "name": "QuantitativeTransfer.augmentedPanelSD"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ"
+        },
+        {
+          "kind": "theorem",
+          "name": "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness"
         }
       ],
       "axiom_dependencies": {
@@ -36159,14 +36185,63 @@
           "Classical.choice",
           "Quot.sound",
           "propext"
+        ],
+        "QuantitativeTransfer.poolMean_sub_shared_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.augmentedPanelMean": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.augmentedPanelVar": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.augmentedPanelSD": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       },
       "kernel_checked": true
     }
   ],
   "artifact_sha256": {
-    "QuantitativeTransfer.lean": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a",
-    "check_quantitative_transfer.py": "f7bbe5ce3d0a35df1f2c43b315c1feeab4b027b03b8a8704eedbaa0999e404c6",
+    "QuantitativeTransfer.lean": "7a127efe32bc1789ac58921e1c6352b75183a38e0b340aad7ce6edde229e776e",
+    "QuantitativeTransfer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QuantitativeTransferAxiomAudit.lean": "092daccbe17eaee9693715253afc44041658791a96b316dd416656d7656de2b7",
+    "QuantitativeTransferAxiomAudit.log": "8c40e1c4785abd06e0c2e1714d5c465dcaed6ba4c56f0d1f1ef647f0c1cb1f5e",
+    "QuantitativeTransferSignatures.lean": "b90f249a46be8092e6c235cee27b19da7627adfbf17a049ab4912598bc0dcdb8",
+    "QuantitativeTransferSignatures.log": "63937e5ac690a8e79ec14686b4809bfc340d4d26b7efc29082f4edd3eacab092",
     "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
   }
 }

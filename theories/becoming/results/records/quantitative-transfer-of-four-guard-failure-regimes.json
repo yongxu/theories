@@ -107,6 +107,20 @@
         "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
         "QuantitativeTransfer.gaussian_seq_lab_witness"
       ]
+    },
+    {
+      "en": "Exact variance decomposition gives augmentedPanelVar >= M/(M+1)^2 * (a - poolMean)^2; an aliased anchor (f u1 = f u2, u1 != u2) can push (M+1)-panel SD > tau while separately supplied alpha = 1 channels have Youden J = 0; nonzero J refutes f-factorization.",
+      "declarations": [
+        "QuantitativeTransfer.poolMean_sub_shared_le",
+        "QuantitativeTransfer.augmentedPanelMean",
+        "QuantitativeTransfer.augmentedPanelVar",
+        "QuantitativeTransfer.augmentedPanelSD",
+        "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq",
+        "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap",
+        "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization",
+        "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
+        "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness"
+      ]
     }
   ],
   "hypotheses": [
@@ -136,7 +150,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261124T233143.454949Z): 97 declarations (77 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words; horizon-critic PASS. Compared against B5 (20 seeds; P1-P7 held, P8-P11 failed, kept)."
+    "en": "AI-written; machine-checked by the Lean 4.30.0-rc2 Mathlib checker (receipt 20261125T000202.244531Z): 106 declarations (83 theorems, 0 private) under standard axioms only, 0 sorryAx, 0 market words. Compared against B5 (20 seeds; P1-P7 held, P8-P11 failed, kept) and post-hoc b5_controls.py."
   },
   "next_delta": {
     "en": "Human read by Ren; investigate closed-loop adaptive sequential thresholding and non-iid or non-Gaussian channels."
@@ -164,7 +178,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T233143.454949Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261125T000202.244531Z/verification.json",
       "sha256_pointer": "/source_sha256/QuantitativeTransfer",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -182,22 +196,32 @@
     },
     {
       "en": "24 November 2026 UTC (Frontier 3 horizon): added Part 7 zero-variance Dirac dichotomy and Part 8 multi-step iid Gaussian convolution wall + sample complexity vs lag horizon (97 declarations, 77 theorems, receipt 20261124T233143.454949Z, horizon-critic PASS). AI-written."
+    },
+    {
+      "en": "25 November 2026 WIB: added Part 9 exact augmented-panel variance/SD decomposition separating aliased consensus breaking from hidden-state Youden J distinguishability (106 declarations, 83 theorems, receipt 20261125T000202.244531Z) and clarified score-weight gamma vs simulator update-coupling probability. AI-written."
     }
   ],
-  "reviewed_at_utc": "2026-11-24T23:34:00+00:00",
+  "reviewed_at_utc": "2026-11-25T00:04:00+00:00",
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/QuantitativeTransfer.lean",
       "role": "proof",
-      "sha256": "ac66aa7e59e846ab56380839243f1102b9971ad5c1882a85e9dc8eb8bd4de37a",
+      "sha256": "7a127efe32bc1789ac58921e1c6352b75183a38e0b340aad7ce6edde229e776e",
       "declarations": [
         "QuantitativeTransfer.abs_youdenJ_le_tvDist",
+        "QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ",
         "QuantitativeTransfer.aliased_fiber_gap",
         "QuantitativeTransfer.aliased_lab_witness",
         "QuantitativeTransfer.aliased_readout_floor",
         "QuantitativeTransfer.aliased_separable_iff",
         "QuantitativeTransfer.anchor_detects_shared_drift",
+        "QuantitativeTransfer.augmentedPanelMean",
+        "QuantitativeTransfer.augmentedPanelSD",
+        "QuantitativeTransfer.augmentedPanelSD_gt_of_anchor_gap",
+        "QuantitativeTransfer.augmentedPanelVar",
+        "QuantitativeTransfer.augmentedPanelVar_ge_anchor_gap_sq",
         "QuantitativeTransfer.b1_headroom_witness",
+        "QuantitativeTransfer.consensus_break_vs_hidden_signal_witness",
         "QuantitativeTransfer.convPow",
         "QuantitativeTransfer.convPow_gaussianReal",
         "QuantitativeTransfer.correlated_pool_blindness_vs_anchor",
@@ -232,9 +256,11 @@
         "QuantitativeTransfer.measYoudenJ_eq_one_sub_errorSum",
         "QuantitativeTransfer.mixture_aliasing_test_floor",
         "QuantitativeTransfer.mixture_floor_attained",
+        "QuantitativeTransfer.poolMean_sub_shared_le",
         "QuantitativeTransfer.pool_ceiling_attained",
         "QuantitativeTransfer.pool_disagreement_ceiling",
         "QuantitativeTransfer.pool_shared_bias_floor",
+        "QuantitativeTransfer.positive_youdenJ_refutes_macro_factorization",
         "QuantitativeTransfer.sequential_gaussian_lag_sample_wall",
         "QuantitativeTransfer.switchLag_nonpos_tabular",
         "QuantitativeTransfer.switchLag_strictMono_rho",
@@ -256,9 +282,9 @@
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261124T233143.454949Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/quantitative-transfer/quantitative-transfer-checks/20261125T000202.244531Z/verification.json",
       "role": "receipt",
-      "sha256": "f803e32685fe7903eef1287ec9add222e4dc99d5f64100cb8c2908fa390545cc",
+      "sha256": "0cd49393d0f4871768a8b86c5981c013040fec56e246dae9787378841515bb04",
       "declarations": []
     },
     {

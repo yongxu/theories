@@ -10,7 +10,7 @@ Total expected wall time: **~60 minutes** on a clean checkout with Python 3.11+ 
 
 ## Step 1 (~10 min) — Core `0`-Axiom Receipt Audit (Primary)
 
-1. Inspect the retained core receipt [`becoming-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) directly rather than trusting markdown summaries, and verify all `31,170` declarations' `axiom_dependencies` in Python:
+1. Inspect the retained core receipt [`becoming-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) directly rather than trusting markdown summaries, and verify all `31,228` declarations' `axiom_dependencies` in Python:
 
 ```bash
 python3 -B -c "
@@ -27,8 +27,8 @@ assert v['status'] == 'passed' and not bad
 "
 ```
 
-   - Confirm `"status": "passed"`, `"toolchain": "leanprover/lean4:v4.29.1"`, `"retained_run": "becoming-checks/20261124T195858.526167Z"`, `core_closure` size (`439`, `418` core modules), declaration count (`31,170`), theorem count (`22,056`), and `nonempty_axiom_deps= 0`.
-   - Cross-check the live register summary in [`RESULTS.md`](../../RESULTS.md): **`598` registered results** (`567` `recorded-checked`, `20` `reviewed-scoped`, `3` `open`, `7` `superseded`, `1` `withdrawn`).
+   - Confirm `"status": "passed"`, `"toolchain": "leanprover/lean4:v4.29.1"`, `"retained_run": "becoming-checks/20261124T233040.232087Z"`, `core_closure` size (`439`, `418` core modules), declaration count (`31,228`), theorem count (`22,087`), and `nonempty_axiom_deps= 0`.
+   - Cross-check the live register summary in [`RESULTS.md`](../../RESULTS.md): **`600` registered results** (`569` `recorded-checked`, `20` `reviewed-scoped`, `3` `open`, `7` `superseded`, `1` `withdrawn`).
 
 2. **Optional (slow full rebuild, outside the 60-minute window if uncached):** re-run the core checker through the worktree lock wrapper. Note that [`check_becoming.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py) compiles all `439` modules, takes **no CLI flags**, and writes a fresh timestamped retained run under `becoming-checks/`; inspect or clean only what you create if keeping a clean tree:
 
@@ -44,9 +44,9 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
 
 ---
 
-## Step 2 (~10 min) — Periphery Isolation (`14` Mathlib + `2` Non-Mathlib) & Standalone Tracks
+## Step 2 (~10 min) — Periphery Isolation (`16` Mathlib + `2` Non-Mathlib) & Standalone Tracks
 
-1. Verify that all **`16`** periphery checkers (**`14` Mathlib `v4.30.0-rc2` modules** including Wave 1's shared `FiniteProbKrylov` leaf and `FiberLumpable` B1–B2 join, plus **`2` non-Mathlib periphery modules** — `Becoming.FallibleInquiry` and `RenewalBridge` — on `v4.29.1`) stay separated from the `0`-axiom core and pass SHA-256 freshness (`0` stale) via [`check_periphery.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) and [`periphery-manifest.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json):
+1. Verify that all **`18`** periphery checkers (**`16` Mathlib `v4.30.0-rc2` modules** including Wave 1's shared `FiniteProbKrylov` leaf, `FiberLumpable` B1–B2 join, `QuantitativeTransfer` Parts 1–9, and Wave 4's `InterfaceBits` and `MovingFeatureCone`, plus **`2` non-Mathlib periphery modules** — `Becoming.FallibleInquiry` and `RenewalBridge` — on `v4.29.1`) stay separated from the `0`-axiom core and pass SHA-256 freshness (`0` stale) via [`check_periphery.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) and [`periphery-manifest.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json):
 
 ```bash
 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --check-stale
@@ -60,7 +60,7 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
   --module QuantitativeTransfer --module AlignmentReals --module BecomingReals
 ```
 
-3. Also inspect the standalone tracks — separating **`0`-axiom standalone tracks (`BecomingSpec` `26` targets, `EncounterEntry` `35` theorems, held-out `RelSpanEncounterAdapter` `7` theorems / `13` declarations [`0` source/transitive axioms, unused `ExitOcc.mk.injEq` `[propext]`])** from **Mathlib-backed standalone checks (`ConsequenceDuality` + `DualityBridges` + `DualityLifting` + `TrackBKrylovBridge`, using standard Mathlib axioms `Classical.choice`, `Quot.sound`, `propext`)** — plus [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md) (`15/15` tests on `main` `98e0ce989`, adding `R5` middle-band trichotomy/monotonicity and the 8-slot endogenous silent-drift self-detection benchmark):
+3. Also inspect the standalone tracks — separating **`0`-axiom standalone tracks (`BecomingSpec` `26` targets, `EncounterEntry` `35` theorems, held-out `RelSpanEncounterAdapter` `7` theorems / `13` declarations [`0` source/transitive axioms, unused `ExitOcc.mk.injEq` `[propext]`])** from **Mathlib-backed standalone checks (`ConsequenceDuality` + `DualityBridges` + `DualityLifting` + `TrackBKrylovBridge`, using standard Mathlib axioms `Classical.choice`, `Quot.sound`, `propext`)** — plus [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md) (`16/16` tests, adding `R5` middle-band trichotomy/monotonicity, `R6` closed-loop split/weighted tags, and the 8-slot endogenous silent-drift self-detection benchmark):
    - [`becoming-spec-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/becoming-spec-verification.json) (`0`-axiom dual-toolchain `26` targets across `v4.29.1` & `v4.30.0-rc2`, `4/4` tamper self-tests rejected)
    - [`encounter-entry-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/encounter-entry-verification.json) (`0`-axiom `Init`-only open entry, `35` theorems, `4/4` negative self-tests rejected) and [`relspan-encounter-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/relspan-encounter-verification.json) (`0` source/transitive axioms, `7` theorems, `RelSpan.mapTrace` + `EncounterEntry` held-out negative adapter)
    - [`consequence-duality-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/consequence-duality-verification.json), [`duality-bridges-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/duality-bridges-verification.json), [`duality-lifting-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/duality-lifting-verification.json), and [`trackb-krylov-bridge-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/trackb-krylov-bridge-verification.json) (Mathlib-backed standalone checks)
@@ -91,7 +91,7 @@ Bypass all summaries and inspect statement hypotheses directly in Lean:
   PYTHONDONTWRITEBYTECODE=1 python3 -B -m guarded_alignment run proposal_guarded_open_alignment --json)
 ```
 
-2. From repo root, run the local neural stress lab (`B1`–`B5`, `18` unit tests, `B5` keeps its `4/11` failed pre-registered predictions `P8`–`P11` upfront) and the evidence-replay suite (`15` tests on `main` `98e0ce989`, including `R5` middle-band trichotomy/monotonicity and 8-slot endogenous silent-drift self-detection) documented in [`experiments/neural-alignment-stress-lab/RESULTS.md`](../../experiments/neural-alignment-stress-lab/RESULTS.md) and [`experiments/evidence-replay/README.md`](../../experiments/evidence-replay/README.md), plus the Wave 2 [`real-learner-b1-b2-b3`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md) boundary study (`chosen_m = null`, `online_passed = false`):
+2. From repo root, run the local neural stress lab (`B1`–`B5` + post-hoc `b5_controls.py`, `19` unit tests, `B5` keeps its `4/11` failed pre-registered predictions `P8`–`P11` upfront) and the evidence-replay suite (`16` tests, including `R5` middle-band trichotomy/monotonicity, `R6` closed-loop split/weighted tags, and 8-slot endogenous silent-drift self-detection) documented in [`experiments/neural-alignment-stress-lab/RESULTS.md`](../../experiments/neural-alignment-stress-lab/RESULTS.md) and [`experiments/evidence-replay/README.md`](../../experiments/evidence-replay/README.md), plus the Wave 2 [`real-learner-b1-b2-b3`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md) boundary study (`chosen_m = null`, `online_passed = false`):
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/neural-alignment-stress-lab -p 'test_*.py' -v

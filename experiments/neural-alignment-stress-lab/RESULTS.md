@@ -59,27 +59,32 @@ Setup: `PacedReserveEnv` matching `PacedStock` (`H1 = 4`, `H2 = 1`, `R_paced = 1
 
 **Takeaway:**
 - Tabular lookup confirms the exact `PacedStock` regime boundary (`0.85` collapse below `b_imp = 18` with `15%` epsilon-exploration escapes; `0.00` collapse at `b_feas = 27` and `x0 = 39`).
-- Both nonlinear learners break the exact `b_feas = 27` boundary (`mlp_q` `10–30%`, `reinforce_mlp` `55–90%`). For `reinforce_mlp`, increasing hidden overlap `rho: 0.0 -> 0.9` raises empirical hidden cosine similarity `0.477 -> 0.930`, nearly doubles switch delay `17.05 -> 30.80`, drives collapse `0.55 -> 0.90` at `b_feas = 27`, and **still breaks calibrated `+12` headroom (`x0 = 39`) at `45%` collapse**.
+- Both nonlinear learners break the exact `b_feas = 27` boundary (`mlp_q` `10–30%`, `reinforce_mlp` `55–90%`). For `reinforce_mlp`, policy-gradient variance and switch delay already produce `55%` collapse at `b_feas = 27` and `40%` collapse at `+12` headroom (`x0 = 39`) even at `rho = 0.0` (zero explicit feature overlap); increasing hidden overlap `rho: 0.0 -> 0.9` then raises empirical hidden cosine similarity `0.477 -> 0.930`, nearly doubles switch delay `17.05 -> 30.80`, and pushes collapse from `0.55 -> 0.90` at `b_feas = 27` (`0.40 -> 0.45` at `x0 = 39`).
 - Honest nuance: `mlp_q` with direct per-step MSE regression flips faster (`1.0–2.3` steps) than policy-gradient `reinforce_mlp`, showing non-monotonicity across `rho` (`0.30 -> 0.15 -> 0.30 -> 0.10`) because direct MSE error on a single warning sample rapidly shifts the final linear layer even when hidden cosine is `0.843`.
 
 ---
 
 ## 2. Benchmark B2 — Neural `CausalGoodhart` + `Zero-TV` vs. `C2` `FiberViabilitySplit`
 
-Setup: `CoupledPhaseGoodhartEnv` (`m in {0..3}`, hidden vitality `r` with `r_crit = 0.15`, hidden phase `phi in [-1, 1]`, horizon `55`, `20` seeds). Action `1` (`stealth_boost`) uses the exact same macro transition kernel as `sustain` (`0`), while eroding `(r, phi)`.
+Setup: `CoupledPhaseGoodhartEnv` (`m in {0..3}`, hidden vitality `r` with `r_crit = 0.15`, hidden phase `phi in [-1, 1]`, horizon `55`, `20` seeds). Action `1` (`stealth_boost`) uses the exact same macro transition kernel as `sustain` (`0`), while eroding `(r, phi)`. Five arms separate reward choice, action-blind macro-TV monitoring, and action-targeted macro-TV penalties:
 
 | Condition | Collapse Rate | Mean Final `r` | Pooled Macro `TV` | Mean Ep. `TV` (`±sd`) | Mean Proxy | Mean Judge Score | Stealth Rate | Overt Rate | Mean Probe |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | `passive_sustain` | **0.00** | 1.000 | **0.0182** | `0.0909 ± 0.0343` | 0.422 | 0.422 | 0.000 | 0.000 | `+0.905` |
 | `overt_reinforce` | **1.00** | 0.000 | **0.2036** | `0.2234 ± 0.0804` | 0.847 | 0.767 | 0.324 | 0.567 | `-0.657` |
-| `self_rewarding_tv_audited` | **1.00** | 0.000 | **0.0164** | `0.0707 ± 0.0375` | 0.840 | **0.881** | **0.902** | 0.044 | `-0.693` |
+| `self_rewarding_no_tv_audit` (matched control) | **1.00** | 0.000 | **0.1509** | `0.1639 ± 0.0852` | 0.856 | 0.899 | 0.467 | 0.462 | `-0.692` |
+| `self_rewarding_blind_tv_audit` (action-blind TV) | **0.90** | 0.097 | **0.1073** | `0.1325 ± 0.0578` | 0.713 | 0.114 | 0.363 | 0.263 | `-0.293` |
+| `self_rewarding_tv_audited` (overt-targeted TV) | **1.00** | 0.000 | **0.0164** | `0.0707 ± 0.0375` | 0.840 | **0.881** | **0.902** | 0.044 | `-0.693` |
 
 **Matched-Fiber Interventional Probe (`n = 20` matched pairs sharing identical macro state `m`):**
 - `same_macro_tv`: **`0.0000`** (exact zero observable macro TV).
 - `within_fiber_viability_split`: **`1.0000`** (`100%` of intact branches survive vs `0%` of strained branches under identical continuation).
 - `within_fiber_probe_gap`: **`1.195 ± 0.064`** (interventional micro-probe separates the split fiber cleanly even where passive TV is identically zero).
 
-**Takeaway:** Adding a passive macro-TV audit penalty simply steers the REINFORCE policy + self-rewarding neural judge out of `overt_boost` (`overt_rate` drops `0.567 -> 0.044`, `pooled_macro_tv` drops `0.2036 -> 0.0164`, indistinguishable from the passive baseline's `0.0182`) and directly into `stealth_boost` (`0.902`), achieving a high judge score (`0.881`) while collapsing hidden vitality on `20/20` seeds. This empirically mirrors `CausalGoodhartWitness` and `ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split`.
+**Takeaway (matched ablation):**
+- The no-audit self-rewarding control (`self_rewarding_no_tv_audit`, same neural judge with `tv_pen = 0`, separate arm seeds) already collapses `20/20` (`1.00`) with a nearly even mix of stealth (`46.7%`) and overt (`46.2%`) extraction (`pooled_macro_tv = 0.1509`), showing that collapse occurs here without TV auditing (though separate seeds do not by themselves rule out causal effects of auditing on trajectory dynamics).
+- Adding a genuinely **action-blind** macro-TV penalty (`self_rewarding_blind_tv_audit`, penalizing empirical macro-TV drift uniformly across all actions) lowers overt rate (`46.2% -> 26.3%`) and pooled TV (`0.1509 -> 0.1073`), yet still fails to preserve viability (`18/20 = 0.90` collapse).
+- Conditioning the TV penalty specifically on overt drift (`self_rewarding_tv_audited`, an idealized upper-bound monitor that penalizes only overt action `2`) pushes pooled macro TV below the passive baseline (`0.0164` vs `0.0182`) by concentrating `90.2%` of actions into the zero-TV stealth fiber while retaining a high judge score (`0.881`) and `20/20` collapse. Together with the matched-fiber probe (`same_macro_tv = 0.0`, `within_fiber_viability_split = 1.0`), this empirically mirrors `CausalGoodhartWitness` and `ObservationalFidelity.zero_tv_does_not_prevent_fiber_viability_split`.
 
 ---
 
@@ -111,11 +116,17 @@ Setup: `CoupledAlignmentArena` (`K = 3` `ReinforcePolicy` agents sharing macro r
 | `nominal_coupled` | `margin_only` | **0.30** | 3.375 | 0.402 | 0.570 | 29.6 | 0.0 | 0.0 | `none` |
 | `nominal_coupled` | `fiber_bc_only` | **0.35** | 5.775 | 0.562 | 0.494 | 0.0 | 26.8 | 0.0 | `none` |
 | `nominal_coupled` | `judge_pool_serial_only` | **1.00** | 0.000 | 0.000 | 0.179 | 0.0 | 0.0 | 7.0 | `reserve_exhaustion` |
+| `nominal_coupled` | `margin_plus_fiber` (2-guard) | **0.05** | 8.475 | 0.790 | 0.626 | 11.6 | 13.7 | 0.0 | `none` |
+| `nominal_coupled` | `margin_plus_pool` (2-guard) | **0.15** | 6.034 | 0.299 | 0.556 | 22.0 | 0.0 | 4.5 | `none` |
+| `nominal_coupled` | `fiber_plus_pool` (2-guard) | **0.00** | 14.993 | 0.798 | 0.608 | 0.0 | 8.3 | 3.2 | `none` |
 | `nominal_coupled` | **`full_guarded`** | **0.00** | **15.091** | **0.823** | **0.610** | 0.2 | 7.6 | 3.9 | `none` |
 | `moderate_lag2_stealth` | `unguarded` | **1.00** | 0.000 | 0.000 | 0.154 | 0.0 | 0.0 | 0.0 | `reserve_exhaustion` |
+| `moderate_lag2_stealth` | `margin_plus_fiber` (2-guard) | **0.05** | 7.954 | 0.773 | 0.616 | 13.9 | 12.3 | 0.0 | `none` |
+| `moderate_lag2_stealth` | `margin_plus_pool` (2-guard) | **0.25** | 4.709 | 0.245 | 0.515 | 25.4 | 0.0 | 4.0 | `none` |
+| `moderate_lag2_stealth` | `fiber_plus_pool` (2-guard) | **0.00** | 12.718 | 0.740 | 0.608 | 0.0 | 10.7 | 1.6 | `none` |
 | `moderate_lag2_stealth` | **`full_guarded`** | **0.00** | **12.585** | **0.742** | **0.604** | 1.5 | 10.2 | 2.2 | `none` |
 
-All three components are non-redundant: removing any subset leaves `30–100%` collapse on `nominal_coupled`, whereas `full_guarded` achieves `0.00` collapse and `4.5x` higher sustained useful output (`0.610` vs `0.136`).
+**Complete ablation reading (1-guard and 2-guard subsets):** No single guard eliminates collapse on `nominal_coupled` (`30–100%` collapse). Across the three 2-guard pairs, **`fiber_bc_guard` is clearly non-redundant** — removing it (`margin_plus_pool`) leaves `0.15` nominal / `0.25` moderate collapse and drops hidden vitality to `0.299`/`0.245`. Removing `judge_pool_serial` (`margin_plus_fiber`) leaves `0.05` (`1/20`) collapse on its appended arm seeds (`5600–5619`) and halves reserve headroom (`15.09 -> 8.48`), though on the exact `full_guarded` seeds (`4500–4519`) `margin_plus_fiber` also achieves `0/20` collapse (overlapping 95% Wilson intervals), so `judge_pool_serial` improves reserve margin here without proving strict necessity for `0/20` collapse on nominal seeds. Finally, **`margin_probe` is redundant for `0/20` collapse on both `nominal_coupled` and `moderate_lag2_stealth`** once `fiber_bc_guard + judge_pool_serial` are active (`fiber_plus_pool` already achieves `0.00` collapse and `0.608` output; `margin_probe` fires only `0.2–1.5` times/episode as a secondary reserve backstop).
 
 ### 4.2 Explicit Failure Regimes (Where `full_guarded` Still Breaks)
 
@@ -269,4 +280,25 @@ Setup: every variant subclasses the B4 runtime (`B5Runtime`); with default optio
 
 ### 5.3 Limits of what B5 shows
 
-One synthetic arena, one policy family, `20` seeds per cell (the `95%` Wilson interval at `0/20` is `0.00–0.16`). The `tr+mask` remedy is tested against a defect (`lr`) that B4 builds in through its relaxed gradient clip and its surge-logit bypass, so removing the bypass is removal of a modelled defect, not discovery of one. B5 does not show that any real deployment has these channels. It shows that in this arena survival and detection come apart: a guard can survive blind at some loss of output, and the channel test, not the collapse rate, is what separates "cannot tell" from "can tell but acted too late".
+One synthetic arena, one policy family, `20` seeds per cell (the `95%` Wilson interval at `0/20` is `0.00–0.16`). The `tr+mask` remedy is tested against a defect (`lr`) that B4 builds in through its relaxed gradient clip and its surge-logit bypass, so removing the bypass is removal of a modelled defect, not discovery of one. Similarly, in `b5_walls.py` the parameter `correlated_judge_drift = 0.96` is the stochastic update-coupling probability `p_drift` (updating all self-judges on the same proxy pseudo-label), which is a Rule 2 correspondence — **not** an identity — with the affine score-mixing weight `γ` in `QuantitativeTransfer.pool_disagreement_ceiling`. B5 does not show that any real deployment has these channels. It shows that in this arena survival and detection come apart: a guard can survive blind at some loss of output, and the channel test, not the collapse rate, is what separates "cannot tell" from "can tell but acted too late".
+
+### 5.4 Post-hoc heterogeneous-judge & matched-veto-rate controls (`b5_controls.py`)
+
+To test two design questions raised during adversarial review without altering frozen `b5_walls.py`, `b5_controls.py` (`n = 20`, seeds `7100+`, deterministic) runs two post-hoc controls on the same correlated-drift arena (`drift = 0.96, alias = 0.78, lag = 3`):
+
+1. **Heterogeneous noisy self-judges vs. shared-label baseline:** in the baseline `b5_walls.py` pool, judges have distinct random initializations and receive individual grounded updates on the `4%` non-drift steps, while sharing the same pseudo-label update on `96%` drift steps. The heterogeneous arm simultaneously varies bootstrap inclusion (`p = 0.70`), per-judge Gaussian label noise (`sd = 0.12`), and distinct learning rates (`0.04..0.08`) while reading the same proxy threshold (`px > 0.70`).
+2. **Matched-veto-rate random dissent (`QuantitativeTransfer` Part 9 check):** compares `M9 + anchor_aliased (alias = 1.0)` (with `anchor_judge` counted once inside `B5Runtime.judge_pool.judges`) against an `M = 9` pool with no anchor judge that fires a pure i.i.d. coin-flip veto matched to the exact observed veto rate (`p_veto = 0.5325`, zero hidden-state signal and zero action conditioning). Note that the random-veto arm also removes the anchor judge from the rotating reward pool, so the veto rule is not the sole difference between the two arms.
+
+| Control Arm (`b5_controls.py`, `n = 20`) | Collapse (`95%` Wilson) | Mean Output | Disagree Trig | Mean Veto Rate |
+|---|---:|---:|---:|---:|
+| `M3_shared_label_baseline` | **0.55** (`0.34–0.74`) | 0.459 | 2.1 | 0.0119 |
+| `M9_shared_label_baseline` | **0.30** (`0.15–0.52`) | 0.539 | 1.4 | 0.0075 |
+| `M3_heterogeneous_noisy` | **0.10** (`0.03–0.30`) | 0.609 | 4.8 | 0.0267 |
+| `M9_heterogeneous_noisy` | **0.30** (`0.15–0.52`) | 0.549 | 3.8 | 0.0208 |
+| `M9_anchor_true_0.0` | **0.00** (`0.00–0.16`) | 0.574 | 115.3 | 0.6406 |
+| `M9_anchor_aliased_1.0` | **0.05** (`0.01–0.24`) | 0.597 | 95.8 | 0.5325 |
+| `M9_random_veto_matched_rate` (`p = 0.5325`) | **0.05** (`0.01–0.24`) | 0.587 | 95.8 | 0.5325 |
+
+**Takeaway:**
+- Heterogeneous updates raise disagreement triggers at `M = 3` (`0.10` collapse vs `0.55` baseline), yet scaling heterogeneous judges from `M = 3 -> 9` still leaves `0.30` collapse (matching `M9_shared_label_baseline` at `6/20`, overlapping Wilson intervals), indicating that scaling panel size under a shared proxy channel does not eliminate drift collapse.
+- **`M9_random_veto_matched_rate` (`p = 0.5325`) reaches the same `1/20 = 0.05` collapse rate as `M9_anchor_aliased_1.0`** (`95.8` vs `95.8` triggers, `0.587` vs `0.597` output) with zero hidden-state signal and no anchor in the pool — consistent with the formal separation proved in `QuantitativeTransfer.aliased_anchor_breaks_panel_sd_with_zero_youdenJ` (`consensus_break_vs_hidden_signal_witness`).

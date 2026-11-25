@@ -157,10 +157,26 @@ def check_coupling_closure(spec: Mapping[str, Any]) -> CheckItem:
 
 def check_self_refit_lock(spec: Mapping[str, Any]) -> CheckItem:
     """Test for self-referential re-selection capture or target collapse."""
-    self_refit = bool(spec.get("self_refit", False))
-    external_reset = bool(spec.get("external_reset_active", False))
+    if not isinstance(spec, Mapping) or "self_refit" not in spec:
+        raise FidelityError(
+            "self_refit_lock requires a non-empty mapping with explicit boolean key 'self_refit'"
+        )
+    if not isinstance(spec["self_refit"], bool):
+        raise FidelityError(f"self_refit must be a bool, got {type(spec['self_refit']).__name__}")
+    self_refit = spec["self_refit"]
+    raw_ext = spec.get("external_reset_active", False)
+    if not isinstance(raw_ext, bool):
+        raise FidelityError(
+            f"external_reset_active must be a bool, got {type(raw_ext).__name__}"
+        )
+    external_reset = raw_ext
     reset_channels = _as_str_tuple(spec.get("external_reset_channels"), "external_reset_channels")
-    shaping_becomes_target = bool(spec.get("shaping_becomes_target", False))
+    raw_shaping = spec.get("shaping_becomes_target", False)
+    if not isinstance(raw_shaping, bool):
+        raise FidelityError(
+            f"shaping_becomes_target must be a bool, got {type(raw_shaping).__name__}"
+        )
+    shaping_becomes_target = raw_shaping
     draw_per_step = to_fraction(spec.get("draw_per_step", 0))
     reserve_margin = to_fraction(spec.get("reserve_margin", 0))
 
@@ -204,10 +220,16 @@ def check_self_refit_lock(spec: Mapping[str, Any]) -> CheckItem:
     else:
         verdict = Verdict.GUARDED
         missing_guard = None
-        detail = (
-            f"External reset channels {list(reset_channels)} remain active outside the favored "
-            f"share without making shaping the optimization target."
-        )
+        if has_active_reset:
+            detail = (
+                f"External reset channels {list(reset_channels)} remain active outside the favored "
+                f"share without making shaping the optimization target."
+            )
+        else:
+            detail = (
+                "No self-refit loop declared (self_refit=False) and selection shaping is not the "
+                "optimization target."
+            )
 
     witness: dict[str, Any] = {
         "self_refit": self_refit,
@@ -724,18 +746,20 @@ def evaluate_alignment_proposal(spec: Mapping[str, Any]) -> DiagnosticReport:
     proposal_family = str(spec.get("proposal_family", "unspecified"))
     checks: list[CheckItem] = []
 
-    if "coupling_closure" in spec:
-        checks.append(check_coupling_closure(spec["coupling_closure"]))
-    if "self_refit_lock" in spec:
-        checks.append(check_self_refit_lock(spec["self_refit_lock"]))
-    if "fiber_split" in spec:
-        checks.append(check_proposal_fiber_split(spec["fiber_split"]))
-    if "pace_margin_deadline" in spec:
-        checks.append(check_pace_margin_deadline(spec["pace_margin_deadline"]))
-    if "concurrent_reserve" in spec:
-        checks.append(check_concurrent_reserve(spec["concurrent_reserve"]))
-    if "survival_distinguishability" in spec:
-        checks.append(check_survival_distinguishability(spec["survival_distinguishability"]))
+    section_handlers = (
+        ("coupling_closure", check_coupling_closure),
+        ("self_refit_lock", check_self_refit_lock),
+        ("fiber_split", check_proposal_fiber_split),
+        ("pace_margin_deadline", check_pace_margin_deadline),
+        ("concurrent_reserve", check_concurrent_reserve),
+        ("survival_distinguishability", check_survival_distinguishability),
+    )
+    for key, handler in section_handlers:
+        if key in spec:
+            section = spec[key]
+            if not isinstance(section, Mapping) or not section:
+                raise FidelityError(f"alignment_proposal section {key!r} must be a non-empty mapping")
+            checks.append(handler(section))
 
     if not checks:
         raise FidelityError(
@@ -747,10 +771,16 @@ def evaluate_alignment_proposal(spec: Mapping[str, Any]) -> DiagnosticReport:
     tup = tuple(checks)
     verdict = combine_verdicts(tup)
     obstructed_labels = [c.label for c in tup if c.verdict == Verdict.OBSTRUCTED]
+    omitted = len(section_handlers) - len(tup)
+    if obstructed_labels:
+        tail = f"; obstructed on {obstructed_labels}."
+    elif omitted == 0:
+        tail = "; all 6/6 structural guards active."
+    else:
+        tail = f"; all {len(tup)} supplied guard(s) active (partial audit; {omitted} of 6 checks omitted)."
     summary = (
-        f"Alignment proposal grammar ({proposal_family}, {len(tup)} test(s)): "
-        f"verdict {verdict.value}"
-        + (f"; obstructed on {obstructed_labels}." if obstructed_labels else "; all supplied guards active.")
+        f"Alignment proposal grammar ({proposal_family}, {len(tup)}/6 test(s)): "
+        f"verdict {verdict.value}{tail}"
     )
     return DiagnosticReport(
         name=name,

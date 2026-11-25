@@ -11,10 +11,10 @@
     "chain": "theories/becoming/results/GENERATIVITY-CHAIN.md",
     "sessions": "theories/becoming/history/SESSION-RESULTS-2026-10-08.md"
   },
-  "readme_opening": "theories/becoming/OPENING.md",
+  "readme_opening": null,
   "standard_boundaries": "theories/becoming/results/data/standard-boundaries.json",
   "record_snapshots": "_process/architecture/history",
-  "readme_status": "This version is still being revised.",
+  "readme_status": "Active Lean-first research repository: a machine-checked premise ledger and failure-first stress suite, evolving as proofs and tests revise the map.",
   "readme_first_screen": "_process/navigation/README-FIRST-SCREEN.md",
   "readme_lead": "_process/navigation/README-LEAD.md",
   "readme_repository": "_process/navigation/REPOSITORY.md",
@@ -317,8 +317,11 @@
         "pattern": " The pages for reading are also on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."
       },
       {
+        "pattern": " · \\[Reader's site with search\\]\\(https://yongxu\\.github\\.io/theories/\\)"
+      },
+      {
         "page": "README.zh.md",
-        "pattern": "供阅读的各页也在\\[读者网站\\]\\(https://yongxu\\.github\\.io/theories/\\)上，并可搜索。"
+        "pattern": " ?· \\[可搜索的读者网站\\]\\(https://yongxu\\.github\\.io/theories/\\)"
       },
       {
         "page": "MAP.md",

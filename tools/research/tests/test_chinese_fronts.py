@@ -262,83 +262,37 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn(f'| 正文约 {zh_fronts.zh_time(body)}，注释另计 |', landing)
 
     def test_the_template_says_the_aim_and_its_governing_clauses_as_the_english_screen(self):
-        """The Chinese screen's template, as the reader sees it (its note dropped): the aim as AGENTS.md states it (the
-        ninth pass, 10 November 2026; from the fourth pass to the eighth, as GOALS#generative-alignment and AJ's plan §1 state
-        condition 1, one of the goal's conditions; which wording is right is Ren's); the meta-attractor's closed form at
-        02 §9; and each governing clause once on the page (AG review, fourth pass, 9 November 2026)."""
+        """The Chinese screen's template, aligned to _process/DIRECTION.md (25 November 2026):
+        Lean-first core, three cooperating layers, AGENTS.md aim, not_entails firewall, Rule 2 boundary,
+        and each governing clause once on the page."""
         text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
-        self.assertIn('人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的', text)  # the fronts' one term (K10)
-        # AG-F's fix round (10 November 2026, its screens verifier): who selects together in AGENTS.md's words, as the
-        # canonical aligned state's Chinese says it, not 人、制度与训练出的系统
-        # DW (13 November 2026): the aim said again; the two names follow it as what happens when it does not hold
-        self.assertIn('这样一种对齐：', text)
-        self.assertIn('工具性趋同与元吸引子，是这一点不成立时所发生之事的名字', text)
-        self.assertNotIn('人、制度与训练出的系统', text)
-        self.assertNotIn('规则仍读取塑造者份额之外的东西', text)
-        self.assertIn('02-MAP.md#r-closed-capture', text)
-        self.assertNotIn('不在诸律之中', text)
+        self.assertIn('人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的', text)
+        for required in (
+            'Lean 4 形式化证明为核心',
+            '耦合适应系统对齐理论',
+            'Lean 4 前提与反例账簿',
+            '与动力学并立的智慧与生生伦理',
+            'not_entails',
+            '生灭变化之外没有应当',
+            '规则 2',
+            'b5_controls.py',
+        ):
+            self.assertIn(required, text)
         self.assertEqual(text.count('义以英文版为准'), 1)
         self.assertEqual(text.count('以所链接之处为准'), 1)
         self.assertEqual(text.count('尚无独立的人工审查记录'), 1)
 
     def test_the_template_says_the_ethics_as_the_english_screen(self):
-        """The Chinese screen's ethics mirrors the English, dynamics first, as AG-F placed it (10 November 2026, on round 6's
-        two high findings: the fronts' ethics turned on ranking by widening, 扩大 ten times on README.zh, and the chain was
-        said twice on the screen; Ren that day: "i think 'widening is better' is not the way to go - we need to make dynamics
-        connected, mapped, and 'unified'"): no should beyond becoming and no good and evil set over it (Ren, 9 November 2026,
-        message 9); the ethics emerging from continuation; where relations close and where they run one way; counting the
-        losses that never come back and T8's way of seeing offered for life. How far that has been seen is said once, in
-        看到了多远: the hinge on models on a finite listing, that a life forms such an order not shown, the open target named by
-        the dynamics. The fifth to ninth passes' fuller wording, the chain with its scope, stands only at 07 §4 and its records."""
+        """The Chinese screen's boundaries and AI-making disclosure mirror the English direction-aligned screen."""
         text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
-        self.assertIn('伦理从延续中生出', text)
-        self.assertIn('也没有凌驾其上的善与恶', text)
-        # AG-F's fix round (10 November 2026, astra's cold reading, its high finding): the closing relation read with every
-        # step's dependence and exchange in one relation, which does not make effects come back in time order (07 §4.11,
-        # `LatePair`); 那些东西, not a bare 那些 (Fable, L1)
-        self.assertIn('生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](../../theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-'
-                      'dependence-and-its-pace)（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干'
-                      '环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（[07 §4.11]'
-                      '(../../theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time)）', text)
-        self.assertNotIn('都可能隔着若干环节影响到它自身的延续', text)
-        self.assertIn('依存于它的那些东西所承受的损失，永远不会回到它身上', text)
-        self.assertIn('我们提出把这些损失也算进来，并提出[一种看法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#t8)：看每一个'
-                      '进程取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担。', text)
-        # AG-F's fix round: near-definitional, as 07 §4 says (Fable, M1); 又多出一些 (Fable, L1); 在模型上, its 其 having no
-        # antecedent (the screens verifier)
-        self.assertIn('伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](../../theories/becoming/chapters/07-SIGNIFICANCE.md#'
-                      'scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，'
-                      '就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合'
-                      '之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种'
-                      '次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标]('
-                      '../../theories/becoming/chapters/08-METHOD.md#open-items-ranked)。', text)
-        self.assertLess(text.index('**伦理。**'), text.index('**看到了多远。**'))
-        self.assertLess(text.index('**看到了多远。**'), text.index('伦理的枢纽'))
-        self.assertEqual(text.count('在一个有限列表上'), 1)
-        # widening stays at 07 §4.4 as a relation between two courses; the screen does not say it, and the review's find
-        # names the ranking results only by the link
-        self.assertEqual(text.count('扩大'), 0)
-        self.assertIn('把[排序结果](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)所预设的范围与次序说清楚', text)
-        self.assertIn('在这次检验中，渔民都没有被告知贻贝床时，所试过的指令没有一条保住了它', text)
-        # round 6, Q5.2: the predictions as the experiment's home and the tests page give them
-        self.assertIn('能够交谈的第二轮，冻结的四项预测对那个模型全部通过，对另一个模型有三项未通过；不能交谈的第一轮，七项预测中有五项未通过', text)
-        self.assertNotIn('多数没有通过', text)
-        # round 6, Q1.3: the making said right after 这是什么, where a reader sees it first
         paragraphs = text.split('\n\n')
         at = next(k for k, p in enumerate(paragraphs) if p.startswith('**这是什么。**'))
-        self.assertTrue(paragraphs[at + 1].startswith('这项工作借助 AI 做成'))
-        for old in ('两种读法', '扩大可形成者', '未奠定根据', '就会锁定', '所读之外的什么',
-                    '列出的进程', '尚未合为一条定理', '与之一同延续者', '渐渐', '一个继续下去的生命',
-                    '不计时间', '第二个前提', '有所值', '已论证', '达不到', '与之同提', '终会停止容纳', '尚未陈述为一条定理',
-                    '来持守', '在那里', '正的赋权', '别无他物', '这里把一种排序性质称为', '即更多的未来', '较广的进程',
-                    '看见它们是必要的', '依一种读法', '这一点尚未表明', '对所择者的过滤', '每一延续', '只在只有一个中心时成立',
-                    '谱系', '并没有形成一种次序', '在这种读法下说的正是这个', '什么会终结',
-                    '范围之内者', '容纳已判定', '只证明了这一个方向', '只从某一步起才成立', '都作用到其他每一个', '一道筛选',
-                    '每一个延续都可以', '续无外于后', '流在时间中', '它实际所走的进程从来',
-                    # AG-F: the chain and its scope, which 07 §4 and its records hold
-                    '水平路径', '（步，形成）对', '跨越所有步来读', '按时间来读', '在时间中相互依存', '直接组合', '没有尽头地延续',
-                    '论证路线', '延续条件', '大于零的权重', '另加前提', '未必把依存于它的那些也算进来'):
-            self.assertNotIn(old, text)
+        self.assertTrue(
+            any(p.startswith('这项工作借助 AI 做成') for p in paragraphs[at + 1:at + 3]),
+            'AI making disclosure must appear right after 这是什么。',
+        )
+        for stale in ('这一版仍在修订之中', 'v1.0', '两种读法', '扩大可形成者', '未奠定根据', '就会锁定'):
+            self.assertNotIn(stale, text)
 
     def test_a_stated_time_is_kept_whole_in_a_table(self):
         (self.root / 'theories/LINEAGE.zh.md').write_text('# 长成\n\n*全文约 9–12 分钟 | 另 3 分钟。*\n', encoding='utf-8')

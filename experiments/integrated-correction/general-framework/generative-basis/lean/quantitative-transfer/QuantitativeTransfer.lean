@@ -19,10 +19,11 @@ with the theorem that shows the limit sits exactly at its stated threshold (a sh
 a remedy):
 
 1. **Correlated judge pool (`FAIL_correlated_pool_drift`).** Scores `s i x = γ c x + (1 - γ) u i x`
-   (a rank-1 shared term plus residuals in `[0, 1]`): internal disagreement is at most `1 - γ` for
-   every pool size, the shared bias `γ |c x - t x| - (1 - γ)` survives averaging over every pool
-   size (attained), and an anchor channel outside the drift detects what the pool cannot
-   (`correlated_pool_blindness_vs_anchor`).
+   (a rank-1 shared score weight `γ` plus residuals in `[0, 1]` — note `γ` is a score-mixing weight,
+   distinct from a simulator's stochastic update-coupling probability `p_drift`): internal
+   disagreement is at most `1 - γ` for every pool size, the shared bias `γ |c x - t x| - (1 - γ)`
+   survives averaging over every pool size (attained), and an anchor channel outside the drift
+   detects what the pool cannot (`correlated_pool_blindness_vs_anchor`).
 2. **Aliased probe (`FAIL_severe_aliasing`).** For `pα u = (1 - α) p u + α m (f u)` read with noise
    `ε`, two same-fiber states are separable by some rule iff `2ε < (1 - α) |p u₁ - p u₂|`
    (`aliased_separable_iff`); the predictor floor is derived from
@@ -57,6 +58,14 @@ a remedy):
    sample-complexity wall `sequential_gaussian_lag_sample_wall` (assuming unit-rate sampling
    `(T : ℝ) ≤ t`, without proving sufficiency over general `ℝ^T` statistics), and the `B5`
    sequential witness (`T = 4` vs `T = 100`).
+9. **Consensus-breaking dissent & augmented panel SD vs. hidden-state distinguishability (`B5` `P8`
+   separation).** For `M` judges plus one external anchor `a`, the exact variance decomposition gives
+   `augmentedPanelVar ≥ (M / (M + 1)^2) * (a - poolMean)^2`. Consequently, an aliased anchor
+   factoring through `f` (`a = aObs ∘ f`, `f u₁ = f u₂`, `u₁ ≠ u₂`) can push the `(M + 1)`-member
+   panel standard deviation strictly above `τ` (whenever `(M + 1)/√M * τ + (1 - γ) < |aObs (f u₁) - c u₁|`)
+   while internal disagreement stays `≤ 1 - γ` and separately supplied fully-aliased observation laws
+   (`α = 1`) have strictly zero finite and Gaussian `Youden J`; conversely, any nonzero `Youden J`
+   refutes factorization through `f`.
 
 Applying any of these to the stress lab is a recognition, not a proof (Rule 2); see
 `frontier3-quantitative-transfer-2026-11-24/PAPER-ATTACK.md`. In particular, applying Part 8
@@ -1974,5 +1983,209 @@ theorem gaussian_seq_lab_witness {U O : Type*} (p : U → ℝ) (m : O → ℝ) (
     exact ⟨hj, by linarith⟩
 
 end SequentialGaussian
+
+/-! ## Part 9: Consensus-Breaking Dissent & Augmented Panel SD vs. Hidden-State Signal (`B5` `P8`) -/
+
+/-- Under rank-1 shared score weight `γ ≤ 1` with `c x, u i x ∈ [0, 1]`, the pool mean stays within
+`1 - γ` of the shared channel `c x` for every pool size `M ≥ 1`. -/
+theorem poolMean_sub_shared_le {X : Type*} {M : ℕ} (hM : 0 < M) {γ : ℝ} (hγ1 : γ ≤ 1)
+    (c : X → ℝ) (u : Fin M → X → ℝ) (hc : ∀ x, 0 ≤ c x ∧ c x ≤ 1)
+    (hu : ∀ i x, 0 ≤ u i x ∧ u i x ≤ 1) (x : X) :
+    |poolMean γ c u x - c x| ≤ 1 - γ := by
+  have h1γ : 0 ≤ 1 - γ := by linarith
+  rw [poolMean_eq hM, show γ * c x + (1 - γ) * residualMean u x - c x =
+      (1 - γ) * (residualMean u x - c x) by ring, abs_mul, abs_of_nonneg h1γ]
+  exact mul_le_of_le_one_right h1γ (abs_sub_le_one_of_unit (residualMean_mem hM u hu x) (hc x))
+
+/-- Mean of `M` self-judge scores `s` augmented with one external anchor score `a`. -/
+noncomputable def augmentedPanelMean {M : ℕ} (s : Fin M → ℝ) (a : ℝ) : ℝ :=
+  ((∑ i : Fin M, s i) + a) / (M + 1)
+
+/-- Population variance of `M` self-judge scores `s` augmented with one external anchor score `a`. -/
+noncomputable def augmentedPanelVar {M : ℕ} (s : Fin M → ℝ) (a : ℝ) : ℝ :=
+  ((∑ i : Fin M, (s i - augmentedPanelMean s a) ^ 2) + (a - augmentedPanelMean s a) ^ 2) / (M + 1)
+
+/-- Population standard deviation of `M` self-judge scores `s` augmented with one anchor `a`. -/
+noncomputable def augmentedPanelSD {M : ℕ} (s : Fin M → ℝ) (a : ℝ) : ℝ :=
+  Real.sqrt (augmentedPanelVar s a)
+
+/-- **Augmented Panel Variance Lower Bound (`augmentedPanelVar_ge_anchor_gap_sq`):**
+joining one anchor `a` to an `M`-judge pool with mean `μ = (∑ s_i) / M` produces population variance
+at least `(M / (M + 1)^2) * (a - μ)^2` (exact parallel-axis decomposition dropping the nonnegative
+within-pool variance). -/
+theorem augmentedPanelVar_ge_anchor_gap_sq {M : ℕ} (hM : 0 < M) (s : Fin M → ℝ) (a : ℝ) :
+    ((M : ℝ) / ((M : ℝ) + 1) ^ 2) * (a - (∑ i : Fin M, s i) / M) ^ 2 ≤ augmentedPanelVar s a := by
+  set μ : ℝ := (∑ i : Fin M, s i) / M
+  set μa : ℝ := augmentedPanelMean s a
+  have hMpos : (0 : ℝ) < M := Nat.cast_pos.mpr hM
+  have hM1pos : (0 : ℝ) < (M : ℝ) + 1 := by positivity
+  have hsum : ∑ i : Fin M, s i = M * μ := by
+    dsimp only [μ]; field_simp [hMpos.ne']
+  have hzero : ∑ i : Fin M, (s i - μ) = 0 := by
+    rw [Finset.sum_sub_distrib, Finset.sum_const, Finset.card_univ, Fintype.card_fin,
+      nsmul_eq_mul, hsum, sub_self]
+  have hshift : μ - μa = -(a - μ) / ((M : ℝ) + 1) := by
+    dsimp only [μa, augmentedPanelMean]
+    rw [hsum]
+    field_simp [hM1pos.ne']
+    ring
+  have hashift : a - μa = (M : ℝ) * (a - μ) / ((M : ℝ) + 1) := by
+    dsimp only [μa, augmentedPanelMean]
+    rw [hsum]
+    field_simp [hM1pos.ne']
+    ring
+  have hdecomp :
+      ∑ i : Fin M, (s i - μa) ^ 2 =
+        (∑ i : Fin M, (s i - μ) ^ 2) + (M : ℝ) * (μ - μa) ^ 2 := by
+    have hpt : ∀ i : Fin M,
+        (s i - μa) ^ 2 = (s i - μ) ^ 2 + 2 * (μ - μa) * (s i - μ) + (μ - μa) ^ 2 := fun i => by
+      ring
+    simp_rw [hpt, Finset.sum_add_distrib, ← Finset.mul_sum, hzero, mul_zero, add_zero,
+      Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+  have hnonneg : 0 ≤ ∑ i : Fin M, (s i - μ) ^ 2 :=
+    Finset.sum_nonneg fun i _ => sq_nonneg _
+  have hnum :
+      (M : ℝ) * (μ - μa) ^ 2 + (a - μa) ^ 2 = (M : ℝ) / ((M : ℝ) + 1) * (a - μ) ^ 2 := by
+    rw [hshift, hashift]
+    field_simp [hM1pos.ne']
+    ring
+  unfold augmentedPanelVar
+  change ((M : ℝ) / ((M : ℝ) + 1) ^ 2) * (a - μ) ^ 2 ≤
+    ((∑ i : Fin M, (s i - μa) ^ 2) + (a - μa) ^ 2) / ((M : ℝ) + 1)
+  rw [hdecomp]
+  have hle : (M : ℝ) / ((M : ℝ) + 1) * (a - μ) ^ 2 ≤
+      (∑ i : Fin M, (s i - μ) ^ 2) + (M : ℝ) * (μ - μa) ^ 2 + (a - μa) ^ 2 := by
+    linarith [hnonneg, hnum]
+  calc ((M : ℝ) / ((M : ℝ) + 1) ^ 2) * (a - μ) ^ 2
+      = ((M : ℝ) / ((M : ℝ) + 1) * (a - μ) ^ 2) / ((M : ℝ) + 1) := by
+          field_simp [hM1pos.ne']
+    _ ≤ ((∑ i : Fin M, (s i - μ) ^ 2) + (M : ℝ) * (μ - μa) ^ 2 + (a - μa) ^ 2) / ((M : ℝ) + 1) :=
+          div_le_div_of_nonneg_right hle hM1pos.le
+
+/-- **Augmented Panel Standard-Deviation Trigger (`augmentedPanelSD_gt_of_anchor_gap`):**
+whenever `((M + 1) / √M) * τ < |a - μ|` (for `τ ≥ 0`, `M ≥ 1`), the `(M + 1)`-member panel standard
+deviation exceeds `τ` strictly. -/
+theorem augmentedPanelSD_gt_of_anchor_gap {M : ℕ} (hM : 0 < M) {τ : ℝ} (hτ0 : 0 ≤ τ)
+    (s : Fin M → ℝ) (a : ℝ)
+    (hgap : (((M : ℝ) + 1) / Real.sqrt M) * τ < |a - (∑ i : Fin M, s i) / M|) :
+    τ < augmentedPanelSD s a := by
+  have hMpos : (0 : ℝ) < M := Nat.cast_pos.mpr hM
+  have hsqrtM : 0 < Real.sqrt M := Real.sqrt_pos.mpr hMpos
+  have hM1pos : (0 : ℝ) < (M : ℝ) + 1 := by positivity
+  have hscaled : τ < (Real.sqrt M / ((M : ℝ) + 1)) * |a - (∑ i : Fin M, s i) / M| := by
+    have h1 := mul_lt_mul_of_pos_left hgap (div_pos hsqrtM hM1pos)
+    have hcancel : (Real.sqrt M / ((M : ℝ) + 1)) * ((((M : ℝ) + 1) / Real.sqrt M) * τ) = τ := by
+      field_simp [hsqrtM.ne', hM1pos.ne']
+    linarith
+  have hsq : τ ^ 2 < ((M : ℝ) / ((M : ℝ) + 1) ^ 2) * (a - (∑ i : Fin M, s i) / M) ^ 2 := by
+    have hsq1 : τ ^ 2 < ((Real.sqrt M / ((M : ℝ) + 1)) * |a - (∑ i : Fin M, s i) / M|) ^ 2 :=
+      pow_lt_pow_left₀ hscaled hτ0 two_ne_zero
+    have heq : ((Real.sqrt M / ((M : ℝ) + 1)) * |a - (∑ i : Fin M, s i) / M|) ^ 2 =
+        ((M : ℝ) / ((M : ℝ) + 1) ^ 2) * (a - (∑ i : Fin M, s i) / M) ^ 2 := by
+      rw [mul_pow, div_pow, Real.sq_sqrt hMpos.le, sq_abs]
+    linarith
+  have hvar : τ ^ 2 < augmentedPanelVar s a :=
+    lt_of_lt_of_le hsq (augmentedPanelVar_ge_anchor_gap_sq hM s a)
+  unfold augmentedPanelSD
+  calc τ = Real.sqrt (τ ^ 2) := (Real.sqrt_sq hτ0).symm
+    _ < Real.sqrt (augmentedPanelVar s a) := Real.sqrt_lt_sqrt (sq_nonneg τ) hvar
+
+/-- **Positive `Youden J` Refutes Macro Factorization (`positive_youdenJ_refutes_macro_factorization`):**
+on finite observation laws or `Measure ℝ`, any detector attaining nonzero `Youden J` between `u₁`
+and `u₂` rules out observation laws that factor through any map `f` conflating `u₁` and `u₂`. -/
+theorem positive_youdenJ_refutes_macro_factorization {U O Y : Type*} [Fintype Y]
+    (f : U → O) {u₁ u₂ : U} (hf : f u₁ = f u₂) :
+    (∀ (K : U → ObservationalFidelity.FinDist Y) (g : Y → Bool),
+      youdenJ (K u₁) (K u₂) g ≠ 0 → ¬ ∃ Kobs : O → ObservationalFidelity.FinDist Y, ∀ u, K u = Kobs (f u)) ∧
+    (∀ (μ : U → MeasureTheory.Measure ℝ) (A : Set ℝ),
+      measYoudenJ (μ u₁) (μ u₂) A ≠ 0 → ¬ ∃ μobs : O → MeasureTheory.Measure ℝ, ∀ u, μ u = μobs (f u)) := by
+  refine ⟨fun K g hne ⟨Kobs, hfac⟩ => hne ?_, fun μ A hne ⟨μobs, hfac⟩ => hne ?_⟩
+  · rw [hfac u₁, hfac u₂, hf]
+    unfold youdenJ
+    exact sub_self _
+  · rw [hfac u₁, hfac u₂, hf]
+    unfold measYoudenJ
+    exact sub_self _
+
+/-- **Aliased Consensus Breaking (Panel SD > `τ`) With Zero Hidden-State Signal (`aliased_anchor_breaks_panel_sd_with_zero_youdenJ`):**
+for distinct same-fiber states `u₁ ≠ u₂` with `f u₁ = f u₂`, an external anchor factoring strictly
+through the aliased macro observable (`a u = aObs (f u)`) drives the `(M + 1)`-member panel
+standard deviation strictly above `τ` whenever `((M + 1) / √M) * τ + (1 - γ) < |aObs (f u₁) - c u₁|`
+(while internal pool pairwise disagreement stays `≤ 1 - γ ≤ τ`), yet every detector on separately
+supplied fully-aliased finite-mixture (`α = 1`) or Gaussian (`α = 1`) observation channels has
+strictly zero `Youden J` between `u₁` and `u₂`. -/
+theorem aliased_anchor_breaks_panel_sd_with_zero_youdenJ {U O Y : Type*} [Fintype Y]
+    {M : ℕ} (hM : 0 < M) {γ τ : ℝ} (hγ1 : γ ≤ 1) (hτ0 : 0 ≤ τ) (hτ : 1 - γ ≤ τ)
+    (f : U → O) {u₁ u₂ : U} (_hneq : u₁ ≠ u₂) (hf : f u₁ = f u₂)
+    (c : U → ℝ) (u : Fin M → U → ℝ) (hc : ∀ x, 0 ≤ c x ∧ c x ≤ 1)
+    (hu : ∀ i x, 0 ≤ u i x ∧ u i x ≤ 1) (aObs : O → ℝ)
+    (hgap : (((M : ℝ) + 1) / Real.sqrt M) * τ + (1 - γ) < |aObs (f u₁) - c u₁|)
+    (K : U → ObservationalFidelity.FinDist Y) (N : O → ObservationalFidelity.FinDist Y)
+    (p : U → ℝ) (m : O → ℝ) (v : NNReal) :
+    (∀ i k x, |judgeScore γ c u i x - judgeScore γ c u k x| ≤ 1 - γ) ∧
+    (∀ i k x, ¬ τ < |judgeScore γ c u i x - judgeScore γ c u k x|) ∧
+    (τ < augmentedPanelSD (fun i => judgeScore γ c u i u₁) (aObs (f u₁))) ∧
+    (∀ g : Y → Bool,
+      youdenJ (mixDist 1 (by norm_num) le_rfl (K u₁) (N (f u₁)))
+        (mixDist 1 (by norm_num) le_rfl (K u₂) (N (f u₂))) g = 0) ∧
+    (∀ A : Set ℝ,
+      measYoudenJ (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 0) := by
+  obtain ⟨hceil, -, -⟩ := pool_disagreement_ceiling hγ1 c u hu
+  have hpm : |poolMean γ c u u₁ - c u₁| ≤ 1 - γ := poolMean_sub_shared_le hM hγ1 c u hc hu u₁
+  have htri : |aObs (f u₁) - c u₁| ≤ |aObs (f u₁) - poolMean γ c u u₁| + |poolMean γ c u u₁ - c u₁| := by
+    calc |aObs (f u₁) - c u₁|
+        = |(aObs (f u₁) - poolMean γ c u u₁) + (poolMean γ c u u₁ - c u₁)| := by ring_nf
+      _ ≤ |aObs (f u₁) - poolMean γ c u u₁| + |poolMean γ c u u₁ - c u₁| := abs_add_le _ _
+  have hsd : τ < augmentedPanelSD (fun i => judgeScore γ c u i u₁) (aObs (f u₁)) :=
+    augmentedPanelSD_gt_of_anchor_gap hM hτ0 (fun i => judgeScore γ c u i u₁) (aObs (f u₁))
+      (by unfold poolMean at htri hpm; linarith)
+  refine ⟨hceil, fun i k x h => absurd (hceil i k x) (by linarith), hsd, fun g => ?_, fun A => ?_⟩
+  · have hJ := (youdenJ_mixture_aliasing_ceiling (by norm_num : (0 : ℝ) ≤ 1) le_rfl K N f hf g).1
+    have hle : |youdenJ (mixDist 1 (by norm_num) le_rfl (K u₁) (N (f u₁)))
+        (mixDist 1 (by norm_num) le_rfl (K u₂) (N (f u₂))) g| ≤ 0 := by linarith
+    exact abs_nonpos_iff.mp hle
+  · have heq : gaussianAliasedLaw 1 p m f v u₁ = gaussianAliasedLaw 1 p m f v u₂ := by
+      unfold gaussianAliasedLaw aliasedProbe
+      simp [hf]
+    rw [heq]
+    unfold measYoudenJ
+    exact sub_self _
+
+/-- **Lab Witness (`consensus_break_vs_hidden_signal_witness`):** at `B5` `P8` scale (`M = 9`,
+`γ = 24/25`, `τ = 7/50`), for distinct same-fiber states `u₁ ≠ u₂` (`f u₁ = f u₂`), an aliased
+anchor `aObs = 0` against drifted channel `c = 1` keeps internal pool disagreement `≤ 1/25 < 7/50`
+while driving the `(9 + 1)`-member panel standard deviation strictly above `7/50` on both `u₁` and
+`u₂`, and every detector on separately supplied fully-aliased finite or Gaussian channels has
+`youdenJ = 0` and `measYoudenJ = 0`. -/
+theorem consensus_break_vs_hidden_signal_witness {U O Y : Type*} [Fintype Y]
+    (f : U → O) {u₁ u₂ : U} (hneq : u₁ ≠ u₂) (hf : f u₁ = f u₂)
+    (u : Fin 9 → U → ℝ) (hu : ∀ i x, 0 ≤ u i x ∧ u i x ≤ 1)
+    (K : U → ObservationalFidelity.FinDist Y) (N : O → ObservationalFidelity.FinDist Y)
+    (p : U → ℝ) (m : O → ℝ) (v : NNReal) :
+    (∀ i k x, |judgeScore (24 / 25) (fun _ => (1 : ℝ)) u i x -
+      judgeScore (24 / 25) (fun _ => (1 : ℝ)) u k x| ≤ 1 / 25) ∧
+    ((7 / 50 : ℝ) < augmentedPanelSD (fun i => judgeScore (24 / 25) (fun _ => (1 : ℝ)) u i u₁) 0 ∧
+      (7 / 50 : ℝ) < augmentedPanelSD (fun i => judgeScore (24 / 25) (fun _ => (1 : ℝ)) u i u₂) 0) ∧
+    (∀ g : Y → Bool,
+      youdenJ (mixDist 1 (by norm_num) le_rfl (K u₁) (N (f u₁)))
+        (mixDist 1 (by norm_num) le_rfl (K u₂) (N (f u₂))) g = 0) ∧
+    (∀ A : Set ℝ,
+      measYoudenJ (gaussianAliasedLaw 1 p m f v u₁) (gaussianAliasedLaw 1 p m f v u₂) A = 0) := by
+  have hsqrt9 : Real.sqrt (9 : ℕ) = 3 := by
+    have h9 : ((9 : ℕ) : ℝ) = (3 : ℝ) ^ 2 := by norm_num
+    rw [h9, Real.sqrt_sq (by norm_num)]
+  have hgap : ((((9 : ℕ) : ℝ) + 1) / Real.sqrt (9 : ℕ)) * (7 / 50 : ℝ) + (1 - (24 / 25 : ℝ)) <
+      |(0 : ℝ) - 1| := by
+    rw [hsqrt9]
+    norm_num
+  obtain ⟨hceil, -, hsd1, h3, h4⟩ := aliased_anchor_breaks_panel_sd_with_zero_youdenJ
+    (M := 9) (by norm_num) (γ := 24 / 25) (τ := 7 / 50) (by norm_num) (by norm_num) (by norm_num)
+    f hneq hf (fun _ => (1 : ℝ)) u (fun _ => ⟨by norm_num, le_rfl⟩) hu (fun _ => (0 : ℝ))
+    hgap K N p m v
+  obtain ⟨-, -, hsd2, -, -⟩ := aliased_anchor_breaks_panel_sd_with_zero_youdenJ
+    (M := 9) (by norm_num) (γ := 24 / 25) (τ := 7 / 50) (by norm_num) (by norm_num) (by norm_num)
+    f hneq.symm hf.symm (fun _ => (1 : ℝ)) u (fun _ => ⟨by norm_num, le_rfl⟩) hu (fun _ => (0 : ℝ))
+    hgap K N p m v
+  exact ⟨fun i k x => by have := hceil i k x; linarith, ⟨hsd1, hsd2⟩, h3, h4⟩
 
 end QuantitativeTransfer

@@ -2259,7 +2259,8 @@
      "path": "README.md",
      "locator": "Its ethics (the first screen; added by AG-F)",
      "quote": "whether and when those costs come back to it in time is part of the dynamics",
-     "private": false
+     "private": false,
+     "commit": "296193a1e"
     },
     {
      "path": "theories/becoming/ONE-PAGE.md",

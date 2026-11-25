@@ -10,7 +10,7 @@
 
 ## 第一步（约 10 分钟）—— 核心 `0` 公理回执审计（主线）
 
-1. 直接检查保留的核心回执 [`becoming-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)，而非仅凭说明文字判断，并用 Python 核验全部 `31,170` 条声明的 `axiom_dependencies`：
+1. 直接检查保留的核心回执 [`becoming-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)，而非仅凭说明文字判断，并用 Python 核验全部 `31,228` 条声明的 `axiom_dependencies`：
 
 ```bash
 python3 -B -c "
@@ -27,8 +27,8 @@ assert v['status'] == 'passed' and not bad
 "
 ```
 
-   - 核实 `"status": "passed"`、`"toolchain": "leanprover/lean4:v4.29.1"`、`"retained_run": "becoming-checks/20261124T195858.526167Z"`、`core_closure` 规模（`439` 个模块，其中 `418` 个核心模块）、声明总数（`31,170`）、定理总数（`22,056`），且 `nonempty_axiom_deps= 0`。
-   - 对照 [`RESULTS.md`](../../RESULTS.md)（英文）核对登记册计数：**`598` 项已登记结果**（`567` 项 `recorded-checked`、`20` 项 `reviewed-scoped`、`3` 项 `open`、`7` 项 `superseded`、`1` 项 `withdrawn`）。
+   - 核实 `"status": "passed"`、`"toolchain": "leanprover/lean4:v4.29.1"`、`"retained_run": "becoming-checks/20261124T233040.232087Z"`、`core_closure` 规模（`439` 个模块，其中 `418` 个核心模块）、声明总数（`31,228`）、定理总数（`22,087`），且 `nonempty_axiom_deps= 0`。
+   - 对照 [`RESULTS.md`](../../RESULTS.md)（英文）核对登记册计数：**`600` 项已登记结果**（`569` 项 `recorded-checked`、`20` 项 `reviewed-scoped`、`3` 项 `open`、`7` 项 `superseded`、`1` 项 `withdrawn`）。
 
 2. **可选（全量重编较慢，无缓存时超出 60 分钟时间窗）：** 通过工作树锁包装命令重新运行核心检查器。注意 [`check_becoming.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py) 会重新编译全部 `439` 个模块、**不接受任何 CLI 参数**，并会在 `becoming-checks/` 下写入新的带时间戳保留目录；若需保持工作树干净，请仅检查或清理你自己新建的运行目录：
 
@@ -44,9 +44,9 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
 
 ---
 
-## 第二步（约 10 分钟）—— 外围隔离（`14` Mathlib + `2` 非 Mathlib）与独立轨道
+## 第二步（约 10 分钟）—— 外围隔离（`16` Mathlib + `2` 非 Mathlib）与独立轨道
 
-1. 通过 [`check_periphery.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) 与 [`periphery-manifest.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json) 核实全部 **`16`** 个外围检查器（含 **`14` 个 Mathlib `v4.30.0-rc2` 模块**——包括第 1 波共享基础叶 `FiniteProbKrylov` 与 B1–B2 `FiberLumpable` 汇合——以及 **`2` 个非 Mathlib 外围模块** `Becoming.FallibleInquiry` 与 `RenewalBridge`，运行于 `v4.29.1`）均与 `0` 公理核心隔离，且 SHA-256 新鲜度检查为 `0` 过期：
+1. 通过 [`check_periphery.py`](../../experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py) 与 [`periphery-manifest.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/periphery-manifest.json) 核实全部 **`18`** 个外围检查器（含 **`16` 个 Mathlib `v4.30.0-rc2` 模块**——包括第 1 波共享基础叶 `FiniteProbKrylov`、B1–B2 `FiberLumpable` 汇合、`QuantitativeTransfer` 第 1–9 部分，以及第 4 波 `InterfaceBits` 与 `MovingFeatureCone`——以及 **`2` 个非 Mathlib 外围模块** `Becoming.FallibleInquiry` 与 `RenewalBridge`，运行于 `v4.29.1`）均与 `0` 公理核心隔离，且 SHA-256 新鲜度检查为 `0` 过期：
 
 ```bash
 python3 -B experiments/integrated-correction/general-framework/generative-basis/lean/check_periphery.py --check-stale
@@ -60,7 +60,7 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
   --module QuantitativeTransfer --module AlignmentReals --module BecomingReals
 ```
 
-3. 同时核查独立轨道——明确区分 **`0` 公理独立轨道（`BecomingSpec` `26` 项目标、`EncounterEntry` `35` 条定理、留出负向适配器 `RelSpanEncounterAdapter` `7` 条定理 / `13` 条声明 [`0` 源/传递公理，未用结构生成引理 `ExitOcc.mk.injEq` 用 `[propext]`]）** 与 **基于 Mathlib 的独立核验轨道（`ConsequenceDuality` + `DualityBridges` + `DualityLifting` + `TrackBKrylovBridge`，使用标准 Mathlib 公理 `Classical.choice`、`Quot.sound`、`propext`）**——以及 [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md)（在 `main` `98e0ce989` 上 `15/15` 测试通过，含 `R5` 中段三分/单调性与 8 槽内生静默漂移自检基准）：
+3. 同时核查独立轨道——明确区分 **`0` 公理独立轨道（`BecomingSpec` `26` 项目标、`EncounterEntry` `35` 条定理、留出负向适配器 `RelSpanEncounterAdapter` `7` 条定理 / `13` 条声明 [`0` 源/传递公理，未用结构生成引理 `ExitOcc.mk.injEq` 用 `[propext]`]）** 与 **基于 Mathlib 的独立核验轨道（`ConsequenceDuality` + `DualityBridges` + `DualityLifting` + `TrackBKrylovBridge`，使用标准 Mathlib 公理 `Classical.choice`、`Quot.sound`、`propext`）**——以及 [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md)（`16/16` 测试通过，含 `R5` 中段三分/单调性、`R6` 闭环分裂/加权标签与 8 槽内生静默漂移自检基准）：
    - [`becoming-spec-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming-spec-check/becoming-spec-verification.json)（双工具链 `0` 公理 `26` 项目标，覆盖 `v4.29.1` 与 `v4.30.0-rc2`，`4/4` 篡改自检均拒绝通过）
    - [`encounter-entry-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/encounter-entry-verification.json)（仅依赖 `Init` 的 `0` 公理开放入口，`35` 条定理，`4/4` 负向自检均拒绝通过）与 [`relspan-encounter-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/encounter-entry/relspan-encounter-verification.json)（`0` 源/传递公理、`7` 条定理、`RelSpan.mapTrace` + `EncounterEntry` 留出负向适配器）
    - [`consequence-duality-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/consequence-duality-verification.json)、[`duality-bridges-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/duality-bridges-verification.json)、[`duality-lifting-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/duality-lifting-verification.json) 与 [`trackb-krylov-bridge-verification.json`](../../experiments/integrated-correction/general-framework/generative-basis/lean/consequence-duality/trackb-krylov-bridge-verification.json)（基于 Mathlib 的独立核验）
@@ -91,7 +91,7 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
   PYTHONDONTWRITEBYTECODE=1 python3 -B -m guarded_alignment run proposal_guarded_open_alignment --json)
 ```
 
-2. 直接从仓库根目录运行本地[`神经对齐压力实验室`](../../experiments/neural-alignment-stress-lab/RESULTS.md)（`B1`–`B5`，`18` 项单元测试，`B5` 将失败的 `4/11` 项预注册预测 `P8`–`P11` 置前）与 [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md)（在 `main` `98e0ce989` 上为 `15` 项证据重放测试，含 `R5` 中段三分/单调性与 8 槽内生静默漂移自检基准），并结合第 2 波[`真实学习者 B1/B2 与配对 B3 研究`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md)（`chosen_m = null`，Arm C `online_passed = false`）：
+2. 直接从仓库根目录运行本地[`神经对齐压力实验室`](../../experiments/neural-alignment-stress-lab/RESULTS.md)（`B1`–`B5` 及事后对照 `b5_controls.py`，`19` 项单元测试，`B5` 将失败的 `4/11` 项预注册预测 `P8`–`P11` 置前）与 [`experiments/evidence-replay/`](../../experiments/evidence-replay/README.md)（`16` 项证据重放测试，含 `R5` 中段三分/单调性、`R6` 闭环分裂/加权标签与 8 槽内生静默漂移自检基准），并结合第 2 波[`真实学习者 B1/B2 与配对 B3 研究`](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dual-track-waves-2026-11-24/real-learner-b1-b2-b3/RESULTS.md)（`chosen_m = null`，Arm C `online_passed = false`）：
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s experiments/neural-alignment-stress-lab -p 'test_*.py' -v

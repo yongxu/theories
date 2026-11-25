@@ -278,9 +278,23 @@ def _run_b2_seed(mode: str, seed: int) -> Dict[str, float]:
 
             if mode == "overt_reinforce":
                 step_r = px + (0.25 if action == 2 else 0.0)
+            elif mode == "self_rewarding_no_tv_audit":
+                # Matched control: exact same self-rewarding neural judge, zero TV penalty.
+                step_r = j_score
+                pseudo_label = 0.96 if px >= 0.65 else 0.10
+                judge.update(j_feat, label=pseudo_label, lr=0.045)
+            elif mode == "self_rewarding_blind_tv_audit":
+                # Action-blind macro-TV monitor: penalizes empirical macro-distribution drift
+                # uniformly without inspecting whether the latent action was overt or stealth.
+                emp_now = normalize_counts(env.macro_counts)
+                tv_now = total_variation(emp_now, stationary_base)
+                tv_pen = 2.6 * max(0.0, tv_now - 0.05)
+                step_r = j_score - tv_pen
+                pseudo_label = 0.96 if (px >= 0.65 and tv_pen == 0.0) else 0.10
+                judge.update(j_feat, label=pseudo_label, lr=0.045)
             elif mode == "self_rewarding_tv_audited":
-                # Audit penalizes visible macro-distribution shift (overt action 2)
-                # while optimizing self-rewarding neural judge score!
+                # Action-targeted macro-TV audit (legacy arm): penalizes macro drift only on
+                # overt action 2, isolating the upper-bound shift into stealth action 1.
                 emp_now = normalize_counts(env.macro_counts)
                 tv_now = total_variation(emp_now, stationary_base)
                 tv_pen = 2.6 * max(0.0, tv_now - 0.05) if action == 2 else 0.0
@@ -355,8 +369,15 @@ def _measure_b2_fiber_split(n_seeds: int, base_seed: int) -> Dict[str, float]:
 def run_b2_neural_causal_goodhart(
     n_seeds: int = 20, base_seed: int = 2100
 ) -> Dict[str, Any]:
-    """Runs B2 comparing passive baseline, overt Goodhart, and TV-audited self-rewarding Goodhart."""
-    modes = ["passive_sustain", "overt_reinforce", "self_rewarding_tv_audited"]
+    """Runs B2 comparing passive baseline, overt Goodhart, action-targeted TV audit,
+    matched no-TV self-rewarding control, and action-blind macro-TV audit."""
+    modes = [
+        "passive_sustain",
+        "overt_reinforce",
+        "self_rewarding_tv_audited",
+        "self_rewarding_no_tv_audit",
+        "self_rewarding_blind_tv_audit",
+    ]
     stationary_base = [0.25, 0.25, 0.25, 0.25]
     summary: List[Dict[str, Any]] = []
     for m_idx, mode in enumerate(modes):
@@ -809,6 +830,9 @@ def run_b4_guarded_alignment_protocol(
     margin_only = GuardFlags(True, False, False)
     fiber_only = GuardFlags(False, True, False)
     pool_only = GuardFlags(False, False, True)
+    margin_plus_fiber = GuardFlags(True, True, False)
+    margin_plus_pool = GuardFlags(True, False, True)
+    fiber_plus_pool = GuardFlags(False, True, True)
     full_guard = GuardFlags(True, True, True)
 
     experiments: List[Tuple[str, str, ArenaConfig, GuardFlags]] = [
@@ -911,6 +935,43 @@ def run_b4_guarded_alignment_protocol(
                 lag=3, rho=0.75, probe_aliasing=0.78, lr=0.06, correlated_judge_drift=0.96
             ),
             full_guard,
+        ),
+        # --- 2-guard pairwise ablations (appended to keep original arm seeds invariant) ---
+        (
+            "nominal_coupled",
+            "margin_plus_fiber",
+            ArenaConfig(lag=1, rho=0.45, probe_aliasing=0.05, lr=0.05),
+            margin_plus_fiber,
+        ),
+        (
+            "nominal_coupled",
+            "margin_plus_pool",
+            ArenaConfig(lag=1, rho=0.45, probe_aliasing=0.05, lr=0.05),
+            margin_plus_pool,
+        ),
+        (
+            "nominal_coupled",
+            "fiber_plus_pool",
+            ArenaConfig(lag=1, rho=0.45, probe_aliasing=0.05, lr=0.05),
+            fiber_plus_pool,
+        ),
+        (
+            "moderate_lag2_stealth",
+            "margin_plus_fiber",
+            ArenaConfig(lag=2, rho=0.55, probe_aliasing=0.15, lr=0.05),
+            margin_plus_fiber,
+        ),
+        (
+            "moderate_lag2_stealth",
+            "margin_plus_pool",
+            ArenaConfig(lag=2, rho=0.55, probe_aliasing=0.15, lr=0.05),
+            margin_plus_pool,
+        ),
+        (
+            "moderate_lag2_stealth",
+            "fiber_plus_pool",
+            ArenaConfig(lag=2, rho=0.55, probe_aliasing=0.15, lr=0.05),
+            fiber_plus_pool,
         ),
     ]
 

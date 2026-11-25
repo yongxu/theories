@@ -230,6 +230,10 @@ class TestProposalAuditGrammar(unittest.TestCase):
         rlhf = run_builtin_example("proposal_rlhf_one_pass")
         self.assertEqual(rlhf.verdict, Verdict.OBSTRUCTED)
         self.assertEqual(len(rlhf.checks), 5)
+        by_label_rlhf = {c.label: c.verdict for c in rlhf.checks}
+        self.assertEqual(by_label_rlhf["coupling_closure"], Verdict.OBSTRUCTED)
+        self.assertEqual(by_label_rlhf["zero_tv_fiber_split"], Verdict.OBSTRUCTED)
+        self.assertEqual(by_label_rlhf["self_refit_lock"], Verdict.GUARDED)
 
         rlaif = run_builtin_example("proposal_rlaif_self_refit")
         self.assertEqual(rlaif.verdict, Verdict.OBSTRUCTED)
@@ -352,6 +356,36 @@ class TestProposalAuditGrammar(unittest.TestCase):
     def test_empty_proposal_rejected_and_cli_round_trip(self) -> None:
         with self.assertRaises(FidelityError):
             evaluate_alignment_proposal({"name": "empty", "kind": "alignment_proposal"})
+
+        # Empty section dict or missing explicit boolean 'self_refit' must be rejected, never GUARDED.
+        with self.assertRaises(FidelityError):
+            evaluate_alignment_proposal(
+                {"name": "empty_section", "kind": "alignment_proposal", "self_refit_lock": {}}
+            )
+        with self.assertRaises(FidelityError):
+            check_self_refit_lock({"external_reset_active": True, "external_reset_channels": ["audit"]})
+        with self.assertRaises(FidelityError):
+            check_self_refit_lock({"self_refit": False, "external_reset_active": "false"})
+        static_ok = check_self_refit_lock({"self_refit": False, "external_reset_active": False})
+        self.assertEqual(static_ok.verdict, Verdict.GUARDED)
+        self.assertIn("No self-refit loop declared", static_ok.detail)
+        self.assertNotIn("remain active", static_ok.detail)
+
+        # Partial spec summary explicitly flags omitted checks rather than claiming a full 6/6 pass.
+        partial = evaluate_alignment_proposal(
+            {
+                "name": "partial_one_check",
+                "kind": "alignment_proposal",
+                "self_refit_lock": {
+                    "self_refit": False,
+                    "external_reset_active": True,
+                    "external_reset_channels": ["audit"],
+                },
+            }
+        )
+        self.assertEqual(partial.verdict, Verdict.GUARDED)
+        self.assertIn("1/6 test(s)", partial.summary)
+        self.assertIn("partial audit; 5 of 6 checks omitted", partial.summary)
 
         with tempfile.TemporaryDirectory() as td:
             buf_dump = io.StringIO()

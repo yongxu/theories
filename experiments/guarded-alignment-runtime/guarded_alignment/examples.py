@@ -228,10 +228,10 @@ def builtin_example_specs() -> dict[str, dict[str, Any]]:
                 },
             },
             "self_refit_lock": {
-                "self_refit": True,
+                "self_refit": False,
                 "external_reset_active": False,
                 "external_reset_channels": [],
-                "draw_per_step": "1",
+                "draw_per_step": "0",
                 "reserve_margin": "4",
                 "shaping_becomes_target": False,
             },

@@ -1138,7 +1138,7 @@ class RepositoryConfigTests(unittest.TestCase):
 
     def test_the_opening_is_timed_alike_on_its_card_and_in_start_with(self):
         card = next(w for w in site.site_config()['ways_in'] if w['label'] == 'The opening')
-        body = site.navigation.readme_opening().partition('\n### Notes\n')[0]  # what the first screen's {{time:opening}} times
+        body = site.navigation.readme_opening({'readme_opening': 'theories/becoming/OPENING.md'}).partition('\n### Notes\n')[0]
         self.assertEqual(site.card_time(card, ROOT, site.tracked_files()), site.navigation.reading_time(body) + ', without its notes')
 
     def test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself(self):
@@ -1146,7 +1146,7 @@ class RepositoryConfigTests(unittest.TestCase):
         page = (ROOT / 'theories/becoming/ONE-PAGE.md').read_text()
         said = site.navigation.reading_time(page)  # what README's {{time:theories/becoming/ONE-PAGE.md}} and the page's own line count
         self.assertTrue(site.card_time(card, ROOT, site.tracked_files()).startswith(said), (site.card_time(card, ROOT, site.tracked_files()), said))
-        self.assertIn(f'[the one page](theories/becoming/ONE-PAGE.md) ({said})', (ROOT / 'README.md').read_text())
+        self.assertIn(f'](theories/becoming/ONE-PAGE.md) ({said})', (ROOT / 'README.md').read_text())
 
     def test_generated_pages_state_the_time_of_the_page_as_written(self):
         import re as re_
@@ -1214,7 +1214,7 @@ class RepositoryConfigTests(unittest.TestCase):
         self.assertEqual(site.rewritten('README.md', home, rules), 'the opening (ten minutes).')
         where = "on its own; the same pages, with search, are on [the reader's site](https://yongxu.github.io/theories/):"
         self.assertEqual(site.rewritten('MAP.md', where, rules), 'on its own:')
-        zh = '（正文约十分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。'
+        zh = '（正文约十分钟）· [可搜索的读者网站](https://yongxu.github.io/theories/)。'
         self.assertEqual(site.rewritten('README.zh.md', zh, rules), '（正文约十分钟）。')
         caption = '要浏览同一份数据，可在[读者网站](https://yongxu.github.io/theories/connections.html)上打开[连接图](map.html)，也可在本地克隆中打开；GitHub 只显示它的源码。'
         zh_page = site.rewritten('theories/becoming/results/atlas/CROSSWALK.zh.md', '# 对照表\n\n' + caption, rules)  # its other rule needs the title

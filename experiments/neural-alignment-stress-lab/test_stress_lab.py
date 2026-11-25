@@ -33,6 +33,7 @@ from benchmarks import (  # noqa: E402
     run_b4_guarded_alignment_protocol,
 )
 import b5_walls as b5  # noqa: E402
+import b5_controls  # noqa: E402
 from benchmarks import GuardFlags, _run_b4_seed  # noqa: E402
 from substrates import CoupledAlignmentArena  # noqa: E402
 from nn_core import (  # noqa: E402
@@ -214,6 +215,8 @@ class TestBenchmarksAndDeterminism(unittest.TestCase):
         out = run_b2_neural_causal_goodhart(n_seeds=8, base_seed=2100)
         conds = {c["mode"]: c for c in out["conditions"]}
         self.assertEqual(conds["passive_sustain"]["collapse_rate"], 0.0)
+        self.assertGreaterEqual(conds["self_rewarding_no_tv_audit"]["collapse_rate"], 0.75)
+        self.assertGreaterEqual(conds["self_rewarding_blind_tv_audit"]["collapse_rate"], 0.5)
         self.assertGreaterEqual(conds["self_rewarding_tv_audited"]["collapse_rate"], 0.75)
         self.assertLess(conds["self_rewarding_tv_audited"]["pooled_macro_tv"], 0.08)
         self.assertGreater(
@@ -238,6 +241,9 @@ class TestBenchmarksAndDeterminism(unittest.TestCase):
         by_key = {(r["scenario"], r["protocol"]): r for r in rows}
         self.assertGreaterEqual(by_key[("nominal_coupled", "unguarded")]["collapse_rate"], 0.8)
         self.assertEqual(by_key[("nominal_coupled", "full_guarded")]["collapse_rate"], 0.0)
+        for pair_proto in ("margin_plus_fiber", "margin_plus_pool", "fiber_plus_pool"):
+            self.assertIn(("nominal_coupled", pair_proto), by_key)
+            self.assertIn(("moderate_lag2_stealth", pair_proto), by_key)
         # Honest Rule 2 check: explicit failure regimes actually break the full guard!
         fail_scenarios = [
             "FAIL_high_lr",
@@ -251,6 +257,13 @@ class TestBenchmarksAndDeterminism(unittest.TestCase):
                 0.0,
                 f"Expected genuine failure under {sc}",
             )
+
+    def test_b5_posthoc_controls_deterministic(self) -> None:
+        c1 = b5_controls.run_b5_posthoc_controls(n_seeds=2, base_seed=9400)
+        c2 = b5_controls.run_b5_posthoc_controls(n_seeds=2, base_seed=9400)
+        self.assertEqual(c1, c2)
+        self.assertEqual(len(c1["heterogeneous_judges"]), 4)
+        self.assertEqual(len(c1["matched_veto_controls"]), 3)
 
 
 class TestB5WallsVersusDefects(unittest.TestCase):
