@@ -15,9 +15,10 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-25",
-   "english": "e668cc25a235b387d23a78803b57e5f43f2b11dba929a949d061e02a451851f4",
+   "english": "ba266367a1b6b8db8b5f3893a495940e3e5f3eafbf4dc926b84855f050724caf",
    "chinese": "d1e7cfe4557b1d18c81c6d88355dbf45f308f6aeccf14bae1474ec0ea14d3a75",
-   "english_commit": "2e9fa7aea"
+   "english_commit": "1b58c2e64",
+   "unchanged": "English reading-time span adjusted to 37-49 minutes; Chinese span (40-52) unchanged"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
@@ -45,9 +46,10 @@
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-25",
-   "english": "86c3ef56c9758f2e2c0de7bd1d38705f313ba371d5a76edd3e981ef77f419c0e",
+   "english": "dfbe6f92f61f5cb6422e03e50bc0598977e306d2e7c7695e6925a6d7f4278d70",
    "chinese": "b1978f27a83ed030fbeefcf49ffd10580e4d97b440dc52f501b9849d1a810630",
-   "english_commit": "0d07e01ec"
+   "english_commit": "1b58c2e64",
+   "unchanged": "English reading-time span adjusted to 37-49 minutes; Chinese span (40-52) unchanged"
   }
  }
 }
